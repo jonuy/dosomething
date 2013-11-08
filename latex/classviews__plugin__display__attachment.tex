@@ -1,0 +1,121 @@
+\hypertarget{classviews__plugin__display__attachment}{
+\section{views\_\-plugin\_\-display\_\-attachment Class Reference}
+\label{classviews__plugin__display__attachment}\index{views\_\-plugin\_\-display\_\-attachment@{views\_\-plugin\_\-display\_\-attachment}}
+}
+Inheritance diagram for views\_\-plugin\_\-display\_\-attachment::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classviews__plugin__display__attachment}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__plugin__display__attachment_afd104a6bde92eab82cd1a8e1b654179f}{
+{\bfseries option\_\-definition} ()}
+\label{classviews__plugin__display__attachment_afd104a6bde92eab82cd1a8e1b654179f}
+
+\item 
+\hyperlink{classviews__plugin__display__attachment_a5ca7a4fec7907cd236d0f73ac21f4e1e}{execute} ()
+\item 
+\hypertarget{classviews__plugin__display__attachment_a3175bc94ea0fc7d796bec4670317ab23}{
+{\bfseries attachment\_\-positions} (\$position=NULL)}
+\label{classviews__plugin__display__attachment_a3175bc94ea0fc7d796bec4670317ab23}
+
+\item 
+\hyperlink{classviews__plugin__display__attachment_a0d54f6bd68c3ebba7af03cd7ac722fe0}{options\_\-summary} (\&\$categories, \&\$options)
+\item 
+\hyperlink{classviews__plugin__display__attachment_a82864b279fb83e8d9ebddc40bc2851fa}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__display__attachment_a63219dfd2bfed59bdf1840d704d11799}{options\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__display__attachment_ae8fcfc681cc9ff841ac5c0bdf1691b31}{attach\_\-to} (\$display\_\-id)
+\item 
+\hyperlink{classviews__plugin__display__attachment_af62963a58736c80a5750c87588fb093a}{uses\_\-exposed} ()
+\item 
+\hyperlink{classviews__plugin__display__attachment_aa047b05c7d1e48bd2ec6c98a27720ebf}{displays\_\-exposed} ()
+\item 
+\hyperlink{classviews__plugin__display__attachment_a0a08a465f715c107a2dfaf9bd5dd1538}{use\_\-pager} ()
+\item 
+\hyperlink{classviews__plugin__display__attachment_aecc79a155c6491a0c510568b07c97fb8}{render\_\-pager} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The plugin that handles an attachment display.
+
+Attachment displays are secondary displays that are 'attached' to a primary display. Effectively they are a simple way to get multiple views within the same \hyperlink{classview}{view}. They can share some information. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__plugin__display__attachment_ae8fcfc681cc9ff841ac5c0bdf1691b31}{
+\index{views\_\-plugin\_\-display\_\-attachment@{views\_\-plugin\_\-display\_\-attachment}!attach\_\-to@{attach\_\-to}}
+\index{attach\_\-to@{attach\_\-to}!views_plugin_display_attachment@{views\_\-plugin\_\-display\_\-attachment}}
+\subsubsection[{attach\_\-to}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-attachment::attach\_\-to (\$ {\em display\_\-id})}}
+\label{classviews__plugin__display__attachment_ae8fcfc681cc9ff841ac5c0bdf1691b31}
+Attach to another \hyperlink{classview}{view}. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_aa74683048bca4e740cb7e25ae4c527d4}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__attachment_aa047b05c7d1e48bd2ec6c98a27720ebf}{
+\index{views\_\-plugin\_\-display\_\-attachment@{views\_\-plugin\_\-display\_\-attachment}!displays\_\-exposed@{displays\_\-exposed}}
+\index{displays\_\-exposed@{displays\_\-exposed}!views_plugin_display_attachment@{views\_\-plugin\_\-display\_\-attachment}}
+\subsubsection[{displays\_\-exposed}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-attachment::displays\_\-exposed ()}}
+\label{classviews__plugin__display__attachment_aa047b05c7d1e48bd2ec6c98a27720ebf}
+If an attachment is set to inherit the exposed filter settings from its parent display, then don't render and display a second set of exposed filter widgets. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_a47058532874d0bc5448b53e0a98489cc}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__attachment_a5ca7a4fec7907cd236d0f73ac21f4e1e}{
+\index{views\_\-plugin\_\-display\_\-attachment@{views\_\-plugin\_\-display\_\-attachment}!execute@{execute}}
+\index{execute@{execute}!views_plugin_display_attachment@{views\_\-plugin\_\-display\_\-attachment}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-attachment::execute ()}}
+\label{classviews__plugin__display__attachment_a5ca7a4fec7907cd236d0f73ac21f4e1e}
+When used externally, this is how a \hyperlink{classview}{view} gets run and returns data in the format required.
+
+The base class cannot be executed. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_af99c4a303d3e409ab7b14c6cfcd3a1d8}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__attachment_a82864b279fb83e8d9ebddc40bc2851fa}{
+\index{views\_\-plugin\_\-display\_\-attachment@{views\_\-plugin\_\-display\_\-attachment}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_plugin_display_attachment@{views\_\-plugin\_\-display\_\-attachment}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-attachment::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__display__attachment_a82864b279fb83e8d9ebddc40bc2851fa}
+Provide the default form for setting options. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_ad9c69d91ea1165ff51dcd1f1f6d3a154}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__attachment_a63219dfd2bfed59bdf1840d704d11799}{
+\index{views\_\-plugin\_\-display\_\-attachment@{views\_\-plugin\_\-display\_\-attachment}!options\_\-submit@{options\_\-submit}}
+\index{options\_\-submit@{options\_\-submit}!views_plugin_display_attachment@{views\_\-plugin\_\-display\_\-attachment}}
+\subsubsection[{options\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-attachment::options\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__display__attachment_a63219dfd2bfed59bdf1840d704d11799}
+Perform any necessary changes to the form values prior to storage. There is no need for this function to actually store the data. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_a75f0b2d5587b365640fcb4d414daae36}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__attachment_a0d54f6bd68c3ebba7af03cd7ac722fe0}{
+\index{views\_\-plugin\_\-display\_\-attachment@{views\_\-plugin\_\-display\_\-attachment}!options\_\-summary@{options\_\-summary}}
+\index{options\_\-summary@{options\_\-summary}!views_plugin_display_attachment@{views\_\-plugin\_\-display\_\-attachment}}
+\subsubsection[{options\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-attachment::options\_\-summary (\&\$ {\em categories}, \/  \&\$ {\em options})}}
+\label{classviews__plugin__display__attachment_a0d54f6bd68c3ebba7af03cd7ac722fe0}
+Provide the summary for attachment options in the views UI.
+
+This output is returned as an array. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_a7a2f2aeedfc14816815e3ce65a61aedf}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__attachment_aecc79a155c6491a0c510568b07c97fb8}{
+\index{views\_\-plugin\_\-display\_\-attachment@{views\_\-plugin\_\-display\_\-attachment}!render\_\-pager@{render\_\-pager}}
+\index{render\_\-pager@{render\_\-pager}!views_plugin_display_attachment@{views\_\-plugin\_\-display\_\-attachment}}
+\subsubsection[{render\_\-pager}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-attachment::render\_\-pager ()}}
+\label{classviews__plugin__display__attachment_aecc79a155c6491a0c510568b07c97fb8}
+Not all display plugins will suppert pager rendering. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_a0594f29620ea589280dee099666623c3}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__attachment_a0a08a465f715c107a2dfaf9bd5dd1538}{
+\index{views\_\-plugin\_\-display\_\-attachment@{views\_\-plugin\_\-display\_\-attachment}!use\_\-pager@{use\_\-pager}}
+\index{use\_\-pager@{use\_\-pager}!views_plugin_display_attachment@{views\_\-plugin\_\-display\_\-attachment}}
+\subsubsection[{use\_\-pager}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-attachment::use\_\-pager ()}}
+\label{classviews__plugin__display__attachment_a0a08a465f715c107a2dfaf9bd5dd1538}
+Does the display have a pager enabled? 
+
+Reimplemented from \hyperlink{classviews__plugin__display_aaae358d9672426a81a1733a0236019b8}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__attachment_af62963a58736c80a5750c87588fb093a}{
+\index{views\_\-plugin\_\-display\_\-attachment@{views\_\-plugin\_\-display\_\-attachment}!uses\_\-exposed@{uses\_\-exposed}}
+\index{uses\_\-exposed@{uses\_\-exposed}!views_plugin_display_attachment@{views\_\-plugin\_\-display\_\-attachment}}
+\subsubsection[{uses\_\-exposed}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-attachment::uses\_\-exposed ()}}
+\label{classviews__plugin__display__attachment_af62963a58736c80a5750c87588fb093a}
+Attachment displays only use exposed widgets if they are set to inherit the exposed filter settings of their parent display. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_a5bfcb22187618f52bea9ea626aff18a4}{views\_\-plugin\_\-display}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/plugins/\hyperlink{views__plugin__display__attachment_8inc}{views\_\-plugin\_\-display\_\-attachment.inc}\end{DoxyCompactItemize}

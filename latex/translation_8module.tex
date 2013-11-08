@@ -1,0 +1,212 @@
+\hypertarget{translation_8module}{
+\section{html/modules/translation/translation.module File Reference}
+\label{translation_8module}\index{html/modules/translation/translation.module@{html/modules/translation/translation.module}}
+}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{translation_8module_acfb8a3bb59249a565d8de62ec82f947e}{TRANSLATION\_\-ENABLED} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{translation_8module_a37e15a4a5e6c4c30c73d066e80134e08}{translation\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{translation_8module_a31c2f0307fce1bcb4da69eda5131f4c5}{translation\_\-menu} ()
+\item 
+\hyperlink{translation_8module_a3c6c1a4fc789dc7d690e0d5c2ce96e36}{\_\-translation\_\-tab\_\-access} (\$node)
+\item 
+\hyperlink{translation_8module_ad12e430e331144bbab6b70034e2f1de8}{translation\_\-admin\_\-paths} ()
+\item 
+\hyperlink{translation_8module_a45f21da871a0b08fecaa736de409db16}{translation\_\-permission} ()
+\item 
+\hyperlink{translation_8module_a80c98d8d21852c466102ce1516de426c}{translation\_\-form\_\-node\_\-type\_\-form\_\-alter} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{translation_8module_a0af45118bec0e066f3f2fb6d93e5ecfb}{translation\_\-form\_\-node\_\-form\_\-alter} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{translation_8module_ad5700a0fbf2cbcc954aa8a6a01ffb4d3}{translation\_\-node\_\-view} (\$node, \$view\_\-mode)
+\item 
+\hyperlink{translation_8module_abc386666ed82cbde915c1e990c4184c4}{translation\_\-node\_\-prepare} (\$node)
+\item 
+\hyperlink{translation_8module_a990ccc695dc79527fcb3b5359e85d591}{translation\_\-node\_\-insert} (\$node)
+\item 
+\hyperlink{translation_8module_a37a29aeaa942629df85189e8ce71c6ec}{translation\_\-node\_\-update} (\$node)
+\item 
+\hyperlink{translation_8module_a91f395bd462e1dcf90a1def42948f5f4}{translation\_\-node\_\-validate} (\$node, \$form)
+\item 
+\hyperlink{translation_8module_a37691855a67b4d13490077dd814a7a56}{translation\_\-node\_\-delete} (\$node)
+\item 
+\hyperlink{translation_8module_ab01d39380356f99eee6f5ad5a30a07a4}{translation\_\-remove\_\-from\_\-set} (\$node)
+\item 
+\hyperlink{translation_8module_a9cd21a77e9349062baa9a7c861797204}{translation\_\-node\_\-get\_\-translations} (\$tnid)
+\item 
+\hyperlink{translation_8module_ad7a4f3a66afd7b392ae2c1ebd5854d7f}{translation\_\-supported\_\-type} (\$type)
+\item 
+\hyperlink{translation_8module_a383176f0527c7acf255135ff564bf642}{translation\_\-path\_\-get\_\-translations} (\$path)
+\item 
+\hyperlink{translation_8module_a8f1070c7d30772f67e0200555e94c53a}{translation\_\-language\_\-switch\_\-links\_\-alter} (array \&\$links, \$type, \$path)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages content translations.
+
+Translations are managed in sets of posts, which represent the same information in different languages. Only content types for which the administrator has explicitly enabled translations could have translations associated. Translations are managed in sets with exactly one source post per set. The source post is used to translate to different languages, so if the source post is significantly updated, the editor can decide to mark all translations outdated.
+
+The node table stores the values used by this module:
+\begin{DoxyItemize}
+\item tnid: Integer for the translation set ID, which equals the node ID of the source post.
+\item translate: Integer flag, either indicating that the translation is up to date (0) or needs to be updated (1). 
+\end{DoxyItemize}
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{translation_8module_acfb8a3bb59249a565d8de62ec82f947e}{
+\index{translation.module@{translation.module}!TRANSLATION\_\-ENABLED@{TRANSLATION\_\-ENABLED}}
+\index{TRANSLATION\_\-ENABLED@{TRANSLATION\_\-ENABLED}!translation.module@{translation.module}}
+\subsubsection[{TRANSLATION\_\-ENABLED}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf TRANSLATION\_\-ENABLED}}}
+\label{translation_8module_acfb8a3bb59249a565d8de62ec82f947e}
+Identifies a content type which has translation support enabled. 
+
+\subsection{Function Documentation}
+\hypertarget{translation_8module_a3c6c1a4fc789dc7d690e0d5c2ce96e36}{
+\index{translation.module@{translation.module}!\_\-translation\_\-tab\_\-access@{\_\-translation\_\-tab\_\-access}}
+\index{\_\-translation\_\-tab\_\-access@{\_\-translation\_\-tab\_\-access}!translation.module@{translation.module}}
+\subsubsection[{\_\-translation\_\-tab\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}\_\-translation\_\-tab\_\-access (\$ {\em node})}}
+\label{translation_8module_a3c6c1a4fc789dc7d690e0d5c2ce96e36}
+Access callback: Checks that the user has permission to 'translate content'.
+
+Only displays the translation tab for nodes that are not language-\/neutral of types that have translation enabled.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]A node object.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the translation tab should be displayed, FALSE otherwise.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{translation_8module_a31c2f0307fce1bcb4da69eda5131f4c5}{translation\_\-menu()} 
+\end{DoxySeeAlso}
+\hypertarget{translation_8module_ad12e430e331144bbab6b70034e2f1de8}{
+\index{translation.module@{translation.module}!translation\_\-admin\_\-paths@{translation\_\-admin\_\-paths}}
+\index{translation\_\-admin\_\-paths@{translation\_\-admin\_\-paths}!translation.module@{translation.module}}
+\subsubsection[{translation\_\-admin\_\-paths}]{\setlength{\rightskip}{0pt plus 5cm}translation\_\-admin\_\-paths ()}}
+\label{translation_8module_ad12e430e331144bbab6b70034e2f1de8}
+Implements \hyperlink{group__hooks_ga3fe6d93afc8bb04afbd9e3c326d1bdc1}{hook\_\-admin\_\-paths()}. \hypertarget{translation_8module_a0af45118bec0e066f3f2fb6d93e5ecfb}{
+\index{translation.module@{translation.module}!translation\_\-form\_\-node\_\-form\_\-alter@{translation\_\-form\_\-node\_\-form\_\-alter}}
+\index{translation\_\-form\_\-node\_\-form\_\-alter@{translation\_\-form\_\-node\_\-form\_\-alter}!translation.module@{translation.module}}
+\subsubsection[{translation\_\-form\_\-node\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}translation\_\-form\_\-node\_\-form\_\-alter (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{translation_8module_a0af45118bec0e066f3f2fb6d93e5ecfb}
+Implements \hyperlink{group__hooks_gaf0cfc224a88c8823da68856c30a4841a}{hook\_\-form\_\-BASE\_\-FORM\_\-ID\_\-alter()} for \hyperlink{group__forms_ga267299500e205db099ee4e8396769d3f}{node\_\-form()}.
+
+Alters language fields on node edit forms when a translation is about to be created.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__forms_ga267299500e205db099ee4e8396769d3f}{node\_\-form()} 
+\end{DoxySeeAlso}
+\hypertarget{translation_8module_a80c98d8d21852c466102ce1516de426c}{
+\index{translation.module@{translation.module}!translation\_\-form\_\-node\_\-type\_\-form\_\-alter@{translation\_\-form\_\-node\_\-type\_\-form\_\-alter}}
+\index{translation\_\-form\_\-node\_\-type\_\-form\_\-alter@{translation\_\-form\_\-node\_\-type\_\-form\_\-alter}!translation.module@{translation.module}}
+\subsubsection[{translation\_\-form\_\-node\_\-type\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}translation\_\-form\_\-node\_\-type\_\-form\_\-alter (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{translation_8module_a80c98d8d21852c466102ce1516de426c}
+Implements \hyperlink{group__hooks_ga8d4a4089551493d55911bd5c4f218264}{hook\_\-form\_\-FORM\_\-ID\_\-alter()} for \hyperlink{group__forms_ga488f2cb519f924aa0bd9579d9bb0db49}{node\_\-type\_\-form()}. \hypertarget{translation_8module_a37e15a4a5e6c4c30c73d066e80134e08}{
+\index{translation.module@{translation.module}!translation\_\-help@{translation\_\-help}}
+\index{translation\_\-help@{translation\_\-help}!translation.module@{translation.module}}
+\subsubsection[{translation\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}translation\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{translation_8module_a37e15a4a5e6c4c30c73d066e80134e08}
+Implements \hyperlink{group__hooks_ga5589c2714a782738e8851c4c90231f0e}{hook\_\-help()}. \hypertarget{translation_8module_a8f1070c7d30772f67e0200555e94c53a}{
+\index{translation.module@{translation.module}!translation\_\-language\_\-switch\_\-links\_\-alter@{translation\_\-language\_\-switch\_\-links\_\-alter}}
+\index{translation\_\-language\_\-switch\_\-links\_\-alter@{translation\_\-language\_\-switch\_\-links\_\-alter}!translation.module@{translation.module}}
+\subsubsection[{translation\_\-language\_\-switch\_\-links\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}translation\_\-language\_\-switch\_\-links\_\-alter (array \&\$ {\em links}, \/  \$ {\em type}, \/  \$ {\em path})}}
+\label{translation_8module_a8f1070c7d30772f67e0200555e94c53a}
+Implements \hyperlink{group__hooks_ga77186f4d805f77a8edc3bd8dd6041339}{hook\_\-language\_\-switch\_\-links\_\-alter()}.
+
+Replaces links with pointers to translated versions of the content. \hypertarget{translation_8module_a31c2f0307fce1bcb4da69eda5131f4c5}{
+\index{translation.module@{translation.module}!translation\_\-menu@{translation\_\-menu}}
+\index{translation\_\-menu@{translation\_\-menu}!translation.module@{translation.module}}
+\subsubsection[{translation\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}translation\_\-menu ()}}
+\label{translation_8module_a31c2f0307fce1bcb4da69eda5131f4c5}
+Implements \hyperlink{group__hooks_ga5c95244fea59b25666e409759e133ded}{hook\_\-menu()}. \hypertarget{translation_8module_a37691855a67b4d13490077dd814a7a56}{
+\index{translation.module@{translation.module}!translation\_\-node\_\-delete@{translation\_\-node\_\-delete}}
+\index{translation\_\-node\_\-delete@{translation\_\-node\_\-delete}!translation.module@{translation.module}}
+\subsubsection[{translation\_\-node\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}translation\_\-node\_\-delete (\$ {\em node})}}
+\label{translation_8module_a37691855a67b4d13490077dd814a7a56}
+Implements \hyperlink{group__node__api__hooks_ga66ea0473a9950dc961802e801e5042e9}{hook\_\-node\_\-delete()}. \hypertarget{translation_8module_a9cd21a77e9349062baa9a7c861797204}{
+\index{translation.module@{translation.module}!translation\_\-node\_\-get\_\-translations@{translation\_\-node\_\-get\_\-translations}}
+\index{translation\_\-node\_\-get\_\-translations@{translation\_\-node\_\-get\_\-translations}!translation.module@{translation.module}}
+\subsubsection[{translation\_\-node\_\-get\_\-translations}]{\setlength{\rightskip}{0pt plus 5cm}translation\_\-node\_\-get\_\-translations (\$ {\em tnid})}}
+\label{translation_8module_a9cd21a77e9349062baa9a7c861797204}
+Gets all nodes in a given translation set.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$tnid}]The translation source nid of the translation set, the identifier of the node used to derive all translations in the set.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array of partial node objects (nid, title, language) representing all nodes in the translation set, in effect all translations of node \$tnid, including node \$tnid itself. Because these are partial nodes, you need to \hyperlink{node_8module_a492ddfc12843e71242bb484a44e51a19}{node\_\-load()} the full node, if you need more properties. The array is indexed by language code. 
+\end{DoxyReturn}
+\hypertarget{translation_8module_a990ccc695dc79527fcb3b5359e85d591}{
+\index{translation.module@{translation.module}!translation\_\-node\_\-insert@{translation\_\-node\_\-insert}}
+\index{translation\_\-node\_\-insert@{translation\_\-node\_\-insert}!translation.module@{translation.module}}
+\subsubsection[{translation\_\-node\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}translation\_\-node\_\-insert (\$ {\em node})}}
+\label{translation_8module_a990ccc695dc79527fcb3b5359e85d591}
+Implements \hyperlink{group__node__api__hooks_ga8b40dc62e46e5055c205d2a723dc3548}{hook\_\-node\_\-insert()}. \hypertarget{translation_8module_abc386666ed82cbde915c1e990c4184c4}{
+\index{translation.module@{translation.module}!translation\_\-node\_\-prepare@{translation\_\-node\_\-prepare}}
+\index{translation\_\-node\_\-prepare@{translation\_\-node\_\-prepare}!translation.module@{translation.module}}
+\subsubsection[{translation\_\-node\_\-prepare}]{\setlength{\rightskip}{0pt plus 5cm}translation\_\-node\_\-prepare (\$ {\em node})}}
+\label{translation_8module_abc386666ed82cbde915c1e990c4184c4}
+Implements \hyperlink{group__node__api__hooks_ga4bbe7320bd52fc6183920c8be2d9d4f6}{hook\_\-node\_\-prepare()}. \hypertarget{translation_8module_a37a29aeaa942629df85189e8ce71c6ec}{
+\index{translation.module@{translation.module}!translation\_\-node\_\-update@{translation\_\-node\_\-update}}
+\index{translation\_\-node\_\-update@{translation\_\-node\_\-update}!translation.module@{translation.module}}
+\subsubsection[{translation\_\-node\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}translation\_\-node\_\-update (\$ {\em node})}}
+\label{translation_8module_a37a29aeaa942629df85189e8ce71c6ec}
+Implements \hyperlink{group__node__api__hooks_gac66c767cc922fcbfdaf17252e5d87d9d}{hook\_\-node\_\-update()}. \hypertarget{translation_8module_a91f395bd462e1dcf90a1def42948f5f4}{
+\index{translation.module@{translation.module}!translation\_\-node\_\-validate@{translation\_\-node\_\-validate}}
+\index{translation\_\-node\_\-validate@{translation\_\-node\_\-validate}!translation.module@{translation.module}}
+\subsubsection[{translation\_\-node\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}translation\_\-node\_\-validate (\$ {\em node}, \/  \$ {\em form})}}
+\label{translation_8module_a91f395bd462e1dcf90a1def42948f5f4}
+Implements \hyperlink{group__node__api__hooks_gad26227eaf0dd513134767a11be40ab1d}{hook\_\-node\_\-validate()}.
+
+Ensures that duplicate translations can't be created for the same source. \hypertarget{translation_8module_ad5700a0fbf2cbcc954aa8a6a01ffb4d3}{
+\index{translation.module@{translation.module}!translation\_\-node\_\-view@{translation\_\-node\_\-view}}
+\index{translation\_\-node\_\-view@{translation\_\-node\_\-view}!translation.module@{translation.module}}
+\subsubsection[{translation\_\-node\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}translation\_\-node\_\-view (\$ {\em node}, \/  \$ {\em view\_\-mode})}}
+\label{translation_8module_ad5700a0fbf2cbcc954aa8a6a01ffb4d3}
+Implements \hyperlink{group__node__api__hooks_ga475290ee8e81a2373ea17c512cc3f9a9}{hook\_\-node\_\-view()}.
+
+Displays translation links with language names if this node is part of a translation set. If no language provider is enabled, \char`\"{}fall back\char`\"{} to simple links built through the result of \hyperlink{translation_8module_a9cd21a77e9349062baa9a7c861797204}{translation\_\-node\_\-get\_\-translations()}. \hypertarget{translation_8module_a383176f0527c7acf255135ff564bf642}{
+\index{translation.module@{translation.module}!translation\_\-path\_\-get\_\-translations@{translation\_\-path\_\-get\_\-translations}}
+\index{translation\_\-path\_\-get\_\-translations@{translation\_\-path\_\-get\_\-translations}!translation.module@{translation.module}}
+\subsubsection[{translation\_\-path\_\-get\_\-translations}]{\setlength{\rightskip}{0pt plus 5cm}translation\_\-path\_\-get\_\-translations (\$ {\em path})}}
+\label{translation_8module_a383176f0527c7acf255135ff564bf642}
+Returns the paths of all translations of a node, based on its Drupal path.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$path}]A Drupal path, for example node/432.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of paths of translations of the node accessible to the current user, keyed with language codes. 
+\end{DoxyReturn}
+\hypertarget{translation_8module_a45f21da871a0b08fecaa736de409db16}{
+\index{translation.module@{translation.module}!translation\_\-permission@{translation\_\-permission}}
+\index{translation\_\-permission@{translation\_\-permission}!translation.module@{translation.module}}
+\subsubsection[{translation\_\-permission}]{\setlength{\rightskip}{0pt plus 5cm}translation\_\-permission ()}}
+\label{translation_8module_a45f21da871a0b08fecaa736de409db16}
+Implements \hyperlink{group__hooks_ga2b22b45f4925f2478412477bae329713}{hook\_\-permission()}. \hypertarget{translation_8module_ab01d39380356f99eee6f5ad5a30a07a4}{
+\index{translation.module@{translation.module}!translation\_\-remove\_\-from\_\-set@{translation\_\-remove\_\-from\_\-set}}
+\index{translation\_\-remove\_\-from\_\-set@{translation\_\-remove\_\-from\_\-set}!translation.module@{translation.module}}
+\subsubsection[{translation\_\-remove\_\-from\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}translation\_\-remove\_\-from\_\-set (\$ {\em node})}}
+\label{translation_8module_ab01d39380356f99eee6f5ad5a30a07a4}
+Removes a node from its translation set and updates accordingly.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]A node object. \end{DoxyParams}
+\hypertarget{translation_8module_ad7a4f3a66afd7b392ae2c1ebd5854d7f}{
+\index{translation.module@{translation.module}!translation\_\-supported\_\-type@{translation\_\-supported\_\-type}}
+\index{translation\_\-supported\_\-type@{translation\_\-supported\_\-type}!translation.module@{translation.module}}
+\subsubsection[{translation\_\-supported\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}translation\_\-supported\_\-type (\$ {\em type})}}
+\label{translation_8module_ad7a4f3a66afd7b392ae2c1ebd5854d7f}
+Returns whether the given content type has support for translations.
+
+\begin{DoxyReturn}{Returns}
+TRUE if translation is supported, and FALSE if not. 
+\end{DoxyReturn}

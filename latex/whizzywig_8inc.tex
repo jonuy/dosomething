@@ -1,0 +1,57 @@
+\hypertarget{whizzywig_8inc}{
+\section{html/profiles/dosomething/modules/contrib/wysiwyg/editors/whizzywig.inc File Reference}
+\label{whizzywig_8inc}\index{html/profiles/dosomething/modules/contrib/wysiwyg/editors/whizzywig.inc@{html/profiles/dosomething/modules/contrib/wysiwyg/editors/whizzywig.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{whizzywig_8inc_ab6a3e4d8afc5d0daef2ae850f08d965f}{wysiwyg\_\-whizzywig\_\-editor} ()
+\item 
+\hyperlink{whizzywig_8inc_a97c05de4cd3a5018b3556518f3439b94}{wysiwyg\_\-whizzywig\_\-version} (\$editor)
+\item 
+\hyperlink{whizzywig_8inc_a362242dd00c80df7688e7923bcc42ab9}{wysiwyg\_\-whizzywig\_\-settings} (\$editor, \$config, \$theme)
+\item 
+\hyperlink{whizzywig_8inc_a64bde943bdb256a00b6b26bb51fe2965}{wysiwyg\_\-whizzywig\_\-plugins} (\$editor)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Editor integration functions for Whizzywig. 
+
+\subsection{Function Documentation}
+\hypertarget{whizzywig_8inc_ab6a3e4d8afc5d0daef2ae850f08d965f}{
+\index{whizzywig.inc@{whizzywig.inc}!wysiwyg\_\-whizzywig\_\-editor@{wysiwyg\_\-whizzywig\_\-editor}}
+\index{wysiwyg\_\-whizzywig\_\-editor@{wysiwyg\_\-whizzywig\_\-editor}!whizzywig.inc@{whizzywig.inc}}
+\subsubsection[{wysiwyg\_\-whizzywig\_\-editor}]{\setlength{\rightskip}{0pt plus 5cm}wysiwyg\_\-whizzywig\_\-editor ()}}
+\label{whizzywig_8inc_ab6a3e4d8afc5d0daef2ae850f08d965f}
+Plugin implementation of hook\_\-editor(). \hypertarget{whizzywig_8inc_a64bde943bdb256a00b6b26bb51fe2965}{
+\index{whizzywig.inc@{whizzywig.inc}!wysiwyg\_\-whizzywig\_\-plugins@{wysiwyg\_\-whizzywig\_\-plugins}}
+\index{wysiwyg\_\-whizzywig\_\-plugins@{wysiwyg\_\-whizzywig\_\-plugins}!whizzywig.inc@{whizzywig.inc}}
+\subsubsection[{wysiwyg\_\-whizzywig\_\-plugins}]{\setlength{\rightskip}{0pt plus 5cm}wysiwyg\_\-whizzywig\_\-plugins (\$ {\em editor})}}
+\label{whizzywig_8inc_a64bde943bdb256a00b6b26bb51fe2965}
+Return internal plugins for this editor; semi-\/implementation of \hyperlink{wysiwyg_8api_8php_abad2b35b32be0b20d73006b73205045c}{hook\_\-wysiwyg\_\-plugin()}. \hypertarget{whizzywig_8inc_a362242dd00c80df7688e7923bcc42ab9}{
+\index{whizzywig.inc@{whizzywig.inc}!wysiwyg\_\-whizzywig\_\-settings@{wysiwyg\_\-whizzywig\_\-settings}}
+\index{wysiwyg\_\-whizzywig\_\-settings@{wysiwyg\_\-whizzywig\_\-settings}!whizzywig.inc@{whizzywig.inc}}
+\subsubsection[{wysiwyg\_\-whizzywig\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}wysiwyg\_\-whizzywig\_\-settings (\$ {\em editor}, \/  \$ {\em config}, \/  \$ {\em theme})}}
+\label{whizzywig_8inc_a362242dd00c80df7688e7923bcc42ab9}
+Return runtime editor settings for a given wysiwyg profile.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$editor}]A processed hook\_\-editor() array of editor properties. \item[{\em \$config}]An array containing wysiwyg editor profile settings. \item[{\em \$theme}]The name of a theme/GUI/skin to use.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A settings array to be populated in Drupal.settings.wysiwyg.configs.\{editor\} 
+\end{DoxyReturn}
+\hypertarget{whizzywig_8inc_a97c05de4cd3a5018b3556518f3439b94}{
+\index{whizzywig.inc@{whizzywig.inc}!wysiwyg\_\-whizzywig\_\-version@{wysiwyg\_\-whizzywig\_\-version}}
+\index{wysiwyg\_\-whizzywig\_\-version@{wysiwyg\_\-whizzywig\_\-version}!whizzywig.inc@{whizzywig.inc}}
+\subsubsection[{wysiwyg\_\-whizzywig\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}wysiwyg\_\-whizzywig\_\-version (\$ {\em editor})}}
+\label{whizzywig_8inc_a97c05de4cd3a5018b3556518f3439b94}
+Detect editor version.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$editor}]An array containing editor properties as returned from hook\_\-editor().\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The installed editor version. 
+\end{DoxyReturn}

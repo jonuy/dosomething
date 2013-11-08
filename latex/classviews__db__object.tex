@@ -1,0 +1,183 @@
+\hypertarget{classviews__db__object}{
+\section{views\_\-db\_\-object Class Reference}
+\label{classviews__db__object}\index{views\_\-db\_\-object@{views\_\-db\_\-object}}
+}
+Inheritance diagram for views\_\-db\_\-object::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classviews__db__object}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classviews__db__object_a5c50d8a10b9af37afa7c7c2bfde5e318}{init} (\$init=TRUE)
+\item 
+\hyperlink{classviews__db__object_a5e126880af73008d7ce245c24cfaebab}{save\_\-row} (\$update=NULL)
+\item 
+\hyperlink{classviews__db__object_a4c8b658c58eb3ae319616f73a2106324}{load\_\-row} (\$data)
+\item 
+\hyperlink{classviews__db__object_a0b0485d179ad553228534ae957e0ddc9}{export\_\-row} (\$identifier=NULL, \$indent= '')
+\item 
+\hyperlink{classviews__db__object_a6e9c2b7bb3d5670fefde14518a38de95}{add\_\-display} (\$type= 'page', \$title=NULL, \$id=NULL)
+\item 
+\hyperlink{classviews__db__object_ac768fb998e23528d06fcb139846094eb}{generate\_\-display\_\-id} (\$type)
+\item 
+\& \hyperlink{classviews__db__object_ab7a8ea5c81d0c335d8e0fb87443349a3}{new\_\-display} (\$type= 'page', \$title=NULL, \$id=NULL)
+\item 
+\hyperlink{classviews__db__object_a794e8375c5d243e52645675b31251ccc}{add\_\-item} (\$display\_\-id, \$type, \$table, \$field, \$options=array(), \$id=NULL)
+\item 
+\hyperlink{classviews__db__object_a20a7ac553af0e4e8ee6f676dce4b844b}{get\_\-items} (\$type, \$display\_\-id=NULL)
+\item 
+\hyperlink{classviews__db__object_a9c1010d4c58ebbda357940ac11c48ce1}{get\_\-item} (\$display\_\-id, \$type, \$id)
+\item 
+\hyperlink{classviews__db__object_a4ac5fda69733790427be9edd7c717568}{set\_\-item} (\$display\_\-id, \$type, \$id, \$item)
+\item 
+\hyperlink{classviews__db__object_a722d39805c26c9ae909e644f2f887a86}{set\_\-item\_\-option} (\$display\_\-id, \$type, \$id, \$option, \$value)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classviews__db__object_a0826c7652b5ef3e3cc9feec98e4fa445}{generate\_\-item\_\-id} (\$requested\_\-id, \$existing\_\-items)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__db__object_a9e797d94f9991f1294b962c70af351ae}{
+{\bfseries \$db\_\-table}}
+\label{classviews__db__object_a9e797d94f9991f1294b962c70af351ae}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for views' database objects. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__db__object_a6e9c2b7bb3d5670fefde14518a38de95}{
+\index{views\_\-db\_\-object@{views\_\-db\_\-object}!add\_\-display@{add\_\-display}}
+\index{add\_\-display@{add\_\-display}!views_db_object@{views\_\-db\_\-object}}
+\subsubsection[{add\_\-display}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-db\_\-object::add\_\-display (\$ {\em type} = {\ttfamily 'page'}, \/  \$ {\em title} = {\ttfamily NULL}, \/  \$ {\em id} = {\ttfamily NULL})}}
+\label{classviews__db__object_a6e9c2b7bb3d5670fefde14518a38de95}
+Add a new display handler to the \hyperlink{classview}{view}, automatically creating an id.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]The plugin type from the views plugin data. Defaults to 'page'. \item[{\em \$title}]The title of the display; optional, may be filled in from default. \item[{\em \$id}]The id to use. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The key to the display in \$view-\/$>$display, so that the new display can be easily located. 
+\end{DoxyReturn}
+\hypertarget{classviews__db__object_a794e8375c5d243e52645675b31251ccc}{
+\index{views\_\-db\_\-object@{views\_\-db\_\-object}!add\_\-item@{add\_\-item}}
+\index{add\_\-item@{add\_\-item}!views_db_object@{views\_\-db\_\-object}}
+\subsubsection[{add\_\-item}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-db\_\-object::add\_\-item (\$ {\em display\_\-id}, \/  \$ {\em type}, \/  \$ {\em table}, \/  \$ {\em field}, \/  \$ {\em options} = {\ttfamily array()}, \/  \$ {\em id} = {\ttfamily NULL})}}
+\label{classviews__db__object_a794e8375c5d243e52645675b31251ccc}
+Add an item with a handler to the \hyperlink{classview}{view}.
+
+These items may be fields, filters, sort criteria, or arguments. \hypertarget{classviews__db__object_a0b0485d179ad553228534ae957e0ddc9}{
+\index{views\_\-db\_\-object@{views\_\-db\_\-object}!export\_\-row@{export\_\-row}}
+\index{export\_\-row@{export\_\-row}!views_db_object@{views\_\-db\_\-object}}
+\subsubsection[{export\_\-row}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-db\_\-object::export\_\-row (\$ {\em identifier} = {\ttfamily NULL}, \/  \$ {\em indent} = {\ttfamily ''})}}
+\label{classviews__db__object_a0b0485d179ad553228534ae957e0ddc9}
+Export a loaded row, such as an argument, field or the \hyperlink{classview}{view} itself to PHP code.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$identifier}]The variable to assign the PHP code for this object to. \item[{\em \$indent}]An optional indentation for prettifying nested code. \end{DoxyParams}
+\hypertarget{classviews__db__object_ac768fb998e23528d06fcb139846094eb}{
+\index{views\_\-db\_\-object@{views\_\-db\_\-object}!generate\_\-display\_\-id@{generate\_\-display\_\-id}}
+\index{generate\_\-display\_\-id@{generate\_\-display\_\-id}!views_db_object@{views\_\-db\_\-object}}
+\subsubsection[{generate\_\-display\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-db\_\-object::generate\_\-display\_\-id (\$ {\em type})}}
+\label{classviews__db__object_ac768fb998e23528d06fcb139846094eb}
+Generate a display id of a certain plugin type.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]Which plugin should be used for the new display id. \end{DoxyParams}
+\hypertarget{classviews__db__object_a0826c7652b5ef3e3cc9feec98e4fa445}{
+\index{views\_\-db\_\-object@{views\_\-db\_\-object}!generate\_\-item\_\-id@{generate\_\-item\_\-id}}
+\index{generate\_\-item\_\-id@{generate\_\-item\_\-id}!views_db_object@{views\_\-db\_\-object}}
+\subsubsection[{generate\_\-item\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}static views\_\-db\_\-object::generate\_\-item\_\-id (\$ {\em requested\_\-id}, \/  \$ {\em existing\_\-items})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classviews__db__object_a0826c7652b5ef3e3cc9feec98e4fa445}
+Generates a unique ID for an item.
+
+These items are typically fields, filters, sort criteria, or arguments.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$requested\_\-id}]The requested ID for the item. \item[{\em \$existing\_\-items}]An array of existing items, keyed by their IDs.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A unique ID. This will be equal to \$requested\_\-id if no item with that ID already exists. Otherwise, it will be appended with an integer to make it unique, e.g. \char`\"{}\{\$requested\_\-id\}\_\-1\char`\"{}, \char`\"{}\{\$requested\_\-id\}\_\-2\char`\"{}, etc. 
+\end{DoxyReturn}
+\hypertarget{classviews__db__object_a9c1010d4c58ebbda357940ac11c48ce1}{
+\index{views\_\-db\_\-object@{views\_\-db\_\-object}!get\_\-item@{get\_\-item}}
+\index{get\_\-item@{get\_\-item}!views_db_object@{views\_\-db\_\-object}}
+\subsubsection[{get\_\-item}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-db\_\-object::get\_\-item (\$ {\em display\_\-id}, \/  \$ {\em type}, \/  \$ {\em id})}}
+\label{classviews__db__object_a9c1010d4c58ebbda357940ac11c48ce1}
+Get the configuration of an item (field/sort/filter/etc) on a given display. \hypertarget{classviews__db__object_a20a7ac553af0e4e8ee6f676dce4b844b}{
+\index{views\_\-db\_\-object@{views\_\-db\_\-object}!get\_\-items@{get\_\-items}}
+\index{get\_\-items@{get\_\-items}!views_db_object@{views\_\-db\_\-object}}
+\subsubsection[{get\_\-items}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-db\_\-object::get\_\-items (\$ {\em type}, \/  \$ {\em display\_\-id} = {\ttfamily NULL})}}
+\label{classviews__db__object_a20a7ac553af0e4e8ee6f676dce4b844b}
+Get an array of items for the current display. \hypertarget{classviews__db__object_a5c50d8a10b9af37afa7c7c2bfde5e318}{
+\index{views\_\-db\_\-object@{views\_\-db\_\-object}!init@{init}}
+\index{init@{init}!views_db_object@{views\_\-db\_\-object}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-db\_\-object::init (\$ {\em init} = {\ttfamily TRUE})}}
+\label{classviews__db__object_a5c50d8a10b9af37afa7c7c2bfde5e318}
+Initialize this object, setting values from schema defaults.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$init}]If an array, this is a set of values from db\_\-fetch\_\-object to load. Otherwse, if TRUE values will be filled in from schema defaults. \end{DoxyParams}
+\hypertarget{classviews__db__object_a4c8b658c58eb3ae319616f73a2106324}{
+\index{views\_\-db\_\-object@{views\_\-db\_\-object}!load\_\-row@{load\_\-row}}
+\index{load\_\-row@{load\_\-row}!views_db_object@{views\_\-db\_\-object}}
+\subsubsection[{load\_\-row}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-db\_\-object::load\_\-row (\$ {\em data})}}
+\label{classviews__db__object_a4c8b658c58eb3ae319616f73a2106324}
+Load the object with a row from the database.
+
+This method is separate from the constructor in order to give us more flexibility in terms of how the \hyperlink{classview}{view} object is built in different contexts.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$data}]An object from db\_\-fetch\_\-object. It should contain all of the fields that are in the schema. \end{DoxyParams}
+\hypertarget{classviews__db__object_ab7a8ea5c81d0c335d8e0fb87443349a3}{
+\index{views\_\-db\_\-object@{views\_\-db\_\-object}!new\_\-display@{new\_\-display}}
+\index{new\_\-display@{new\_\-display}!views_db_object@{views\_\-db\_\-object}}
+\subsubsection[{new\_\-display}]{\setlength{\rightskip}{0pt plus 5cm}\& views\_\-db\_\-object::new\_\-display (\$ {\em type} = {\ttfamily 'page'}, \/  \$ {\em title} = {\ttfamily NULL}, \/  \$ {\em id} = {\ttfamily NULL})}}
+\label{classviews__db__object_ab7a8ea5c81d0c335d8e0fb87443349a3}
+Create a new display and a display handler for it. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]The plugin type from the views plugin data. Defaults to 'page'. \item[{\em \$title}]The title of the display; optional, may be filled in from default. \item[{\em \$id}]The id to use. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classviews__plugin__display}{views\_\-plugin\_\-display} A reference to the new handler object. 
+\end{DoxyReturn}
+\hypertarget{classviews__db__object_a5e126880af73008d7ce245c24cfaebab}{
+\index{views\_\-db\_\-object@{views\_\-db\_\-object}!save\_\-row@{save\_\-row}}
+\index{save\_\-row@{save\_\-row}!views_db_object@{views\_\-db\_\-object}}
+\subsubsection[{save\_\-row}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-db\_\-object::save\_\-row (\$ {\em update} = {\ttfamily NULL})}}
+\label{classviews__db__object_a5e126880af73008d7ce245c24cfaebab}
+Write the row to the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$update}]If true this will be an UPDATE query. Otherwise it will be an INSERT. \end{DoxyParams}
+\hypertarget{classviews__db__object_a4ac5fda69733790427be9edd7c717568}{
+\index{views\_\-db\_\-object@{views\_\-db\_\-object}!set\_\-item@{set\_\-item}}
+\index{set\_\-item@{set\_\-item}!views_db_object@{views\_\-db\_\-object}}
+\subsubsection[{set\_\-item}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-db\_\-object::set\_\-item (\$ {\em display\_\-id}, \/  \$ {\em type}, \/  \$ {\em id}, \/  \$ {\em item})}}
+\label{classviews__db__object_a4ac5fda69733790427be9edd7c717568}
+Set the configuration of an item (field/sort/filter/etc) on a given display.
+
+Pass in NULL for the \$item to remove an item. \hypertarget{classviews__db__object_a722d39805c26c9ae909e644f2f887a86}{
+\index{views\_\-db\_\-object@{views\_\-db\_\-object}!set\_\-item\_\-option@{set\_\-item\_\-option}}
+\index{set\_\-item\_\-option@{set\_\-item\_\-option}!views_db_object@{views\_\-db\_\-object}}
+\subsubsection[{set\_\-item\_\-option}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-db\_\-object::set\_\-item\_\-option (\$ {\em display\_\-id}, \/  \$ {\em type}, \/  \$ {\em id}, \/  \$ {\em option}, \/  \$ {\em value})}}
+\label{classviews__db__object_a722d39805c26c9ae909e644f2f887a86}
+Set an option on an item.
+
+Use this only if you have just 1 or 2 options to set; if you have many, consider getting the item, adding the options and doing set\_\-item yourself. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/includes/\hyperlink{views_2includes_2view_8inc}{view.inc}\end{DoxyCompactItemize}

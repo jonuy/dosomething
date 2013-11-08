@@ -1,0 +1,81 @@
+\hypertarget{no__context__content__type_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/ctools\_\-plugin\_\-example/plugins/content\_\-types/no\_\-context\_\-content\_\-type.inc File Reference}
+\label{no__context__content__type_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/ctools\_\-plugin\_\-example/plugins/content\_\-types/no\_\-context\_\-content\_\-type.inc@{html/profiles/dosomething/modules/contrib/ctools/ctools\_\-plugin\_\-example/plugins/content\_\-types/no\_\-context\_\-content\_\-type.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{no__context__content__type_8inc_a1df607eb28200db7681b82557042d769}{no\_\-context\_\-content\_\-type\_\-render} (\$subtype, \$conf, \$args, \$context)
+\item 
+\hyperlink{no__context__content__type_8inc_ab5b78ebf59abdb3b6568ed492a1b162f}{no\_\-context\_\-content\_\-type\_\-edit\_\-form} (\$form, \&\$form\_\-state)
+\item 
+\hypertarget{no__context__content__type_8inc_ab4faec269fc2445bafdc93c3a15a7748}{
+{\bfseries no\_\-context\_\-content\_\-type\_\-edit\_\-form\_\-submit} (\$form, \&\$form\_\-state)}
+\label{no__context__content__type_8inc_ab4faec269fc2445bafdc93c3a15a7748}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{no__context__content__type_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\char`\"{}No context\char`\"{} sample content type. It operates with no context at all. It would be basically the same as a 'custom content' block, but it's not even that sophisticated. 
+
+\subsection{Function Documentation}
+\hypertarget{no__context__content__type_8inc_ab5b78ebf59abdb3b6568ed492a1b162f}{
+\index{no\_\-context\_\-content\_\-type.inc@{no\_\-context\_\-content\_\-type.inc}!no\_\-context\_\-content\_\-type\_\-edit\_\-form@{no\_\-context\_\-content\_\-type\_\-edit\_\-form}}
+\index{no\_\-context\_\-content\_\-type\_\-edit\_\-form@{no\_\-context\_\-content\_\-type\_\-edit\_\-form}!no_context_content_type.inc@{no\_\-context\_\-content\_\-type.inc}}
+\subsubsection[{no\_\-context\_\-content\_\-type\_\-edit\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}no\_\-context\_\-content\_\-type\_\-edit\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{no__context__content__type_8inc_ab5b78ebf59abdb3b6568ed492a1b162f}
+'Edit form' callback for the content type. This example just returns a form; validation and submission are standard drupal Note that if we had not provided an entry for this in hook\_\-content\_\-types, this could have had the default name ctools\_\-plugin\_\-example\_\-no\_\-context\_\-content\_\-type\_\-edit\_\-form. \hypertarget{no__context__content__type_8inc_a1df607eb28200db7681b82557042d769}{
+\index{no\_\-context\_\-content\_\-type.inc@{no\_\-context\_\-content\_\-type.inc}!no\_\-context\_\-content\_\-type\_\-render@{no\_\-context\_\-content\_\-type\_\-render}}
+\index{no\_\-context\_\-content\_\-type\_\-render@{no\_\-context\_\-content\_\-type\_\-render}!no_context_content_type.inc@{no\_\-context\_\-content\_\-type.inc}}
+\subsubsection[{no\_\-context\_\-content\_\-type\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}no\_\-context\_\-content\_\-type\_\-render (\$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em args}, \/  \$ {\em context})}}
+\label{no__context__content__type_8inc_a1df607eb28200db7681b82557042d769}
+Run-\/time rendering of the body of the block.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$subtype}]\item[{\em \$conf}]Configuration as done at admin time. \item[{\em \$args}]\item[{\em \$context}]Context -\/ in this case we don't have any.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An object with at least title and content members. 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\hypertarget{no__context__content__type_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{no\_\-context\_\-content\_\-type.inc@{no\_\-context\_\-content\_\-type.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!no_context_content_type.inc@{no\_\-context\_\-content\_\-type.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{no__context__content__type_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('CTools example no context content type'),
+  'description' => t('No context content type - requires and uses no context.'),
+
+  
+  'single' => TRUE,
+  
+  'content_types' => array('no_context_content_type'),
+  
+  'render callback' => 'no_context_content_type_render',
+  
+  'defaults' => array(),
+
+  
+  
+  'edit form' => 'no_context_content_type_edit_form',
+
+  
+  'icon' => 'icon_example.png',
+  'category' => array(t('CTools Examples'), -9),
+
+  
+  
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

@@ -1,0 +1,150 @@
+\hypertarget{classDrupalDatabaseCache}{
+\section{DrupalDatabaseCache Class Reference}
+\label{classDrupalDatabaseCache}\index{DrupalDatabaseCache@{DrupalDatabaseCache}}
+}
+Inheritance diagram for DrupalDatabaseCache::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classDrupalDatabaseCache}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDrupalDatabaseCache_aacdbd5ca89efaaa78ab8d66fca003cc4}{\_\-\_\-construct} (\$bin)
+\item 
+\hyperlink{classDrupalDatabaseCache_a66a573f6f3e13198b1e95fdc4bd14f8e}{get} (\$cid)
+\item 
+\hyperlink{classDrupalDatabaseCache_ad9f421906b15c039f1842cf8c14e8768}{getMultiple} (\&\$cids)
+\item 
+\hyperlink{classDrupalDatabaseCache_a8262bd7a36ca026f6b8c31c30c0f722d}{set} (\$cid, \$data, \$expire=\hyperlink{bootstrap_8inc_ad987330fff5fa7c75800762ddedf300c}{CACHE\_\-PERMANENT})
+\item 
+\hyperlink{classDrupalDatabaseCache_a07b7a236787af4e11615f26dd98f51f7}{clear} (\$cid=NULL, \$wildcard=FALSE)
+\item 
+\hyperlink{classDrupalDatabaseCache_addc129b38e3ffdda5a55f2f453ea5619}{isEmpty} ()
+\item 
+\hyperlink{classDrupalDatabaseCache_a3d9f8274f05d6c23515a15bad5e997a4}{isValidBin} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDrupalDatabaseCache_ab29683fb16e22bae9029912548ffa67b}{garbageCollection} ()
+\item 
+\hyperlink{classDrupalDatabaseCache_a63148b862b8b39426c50f45e1c7fe43d}{prepareItem} (\$cache)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDrupalDatabaseCache_a23ff82a8fccd935ca0f443ce94317898}{
+{\bfseries \$bin}}
+\label{classDrupalDatabaseCache_a23ff82a8fccd935ca0f443ce94317898}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines a default cache implementation.
+
+This is Drupal's default cache implementation. It uses the database to store cached data. Each cache bin corresponds to a database table by the same name. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDrupalDatabaseCache_aacdbd5ca89efaaa78ab8d66fca003cc4}{
+\index{DrupalDatabaseCache@{DrupalDatabaseCache}!\_\-\_\-construct@{\_\-\_\-construct}}
+\index{\_\-\_\-construct@{\_\-\_\-construct}!DrupalDatabaseCache@{DrupalDatabaseCache}}
+\subsubsection[{\_\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}DrupalDatabaseCache::\_\-\_\-construct (\$ {\em bin})}}
+\label{classDrupalDatabaseCache_aacdbd5ca89efaaa78ab8d66fca003cc4}
+Constructs a \hyperlink{classDrupalDatabaseCache}{DrupalDatabaseCache} object.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$bin}]The cache bin for which the object is created. \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDrupalDatabaseCache_a07b7a236787af4e11615f26dd98f51f7}{
+\index{DrupalDatabaseCache@{DrupalDatabaseCache}!clear@{clear}}
+\index{clear@{clear}!DrupalDatabaseCache@{DrupalDatabaseCache}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}DrupalDatabaseCache::clear (\$ {\em cid} = {\ttfamily NULL}, \/  \$ {\em wildcard} = {\ttfamily FALSE})}}
+\label{classDrupalDatabaseCache_a07b7a236787af4e11615f26dd98f51f7}
+Implements \hyperlink{interfaceDrupalCacheInterface_a5c8e341f653337185feff4ddc30c1b48}{DrupalCacheInterface::clear()}. 
+
+Implements \hyperlink{interfaceDrupalCacheInterface_a5c8e341f653337185feff4ddc30c1b48}{DrupalCacheInterface}.
+
+Reimplemented in \hyperlink{classDrupalFakeCache_a524fb90590bc66f8dd8960e6f93de943}{DrupalFakeCache}.\hypertarget{classDrupalDatabaseCache_ab29683fb16e22bae9029912548ffa67b}{
+\index{DrupalDatabaseCache@{DrupalDatabaseCache}!garbageCollection@{garbageCollection}}
+\index{garbageCollection@{garbageCollection}!DrupalDatabaseCache@{DrupalDatabaseCache}}
+\subsubsection[{garbageCollection}]{\setlength{\rightskip}{0pt plus 5cm}DrupalDatabaseCache::garbageCollection ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDrupalDatabaseCache_ab29683fb16e22bae9029912548ffa67b}
+Garbage collection for \hyperlink{classDrupalDatabaseCache_a66a573f6f3e13198b1e95fdc4bd14f8e}{get()} and \hyperlink{classDrupalDatabaseCache_ad9f421906b15c039f1842cf8c14e8768}{getMultiple()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$bin}]The bin being requested. \end{DoxyParams}
+\hypertarget{classDrupalDatabaseCache_a66a573f6f3e13198b1e95fdc4bd14f8e}{
+\index{DrupalDatabaseCache@{DrupalDatabaseCache}!get@{get}}
+\index{get@{get}!DrupalDatabaseCache@{DrupalDatabaseCache}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}DrupalDatabaseCache::get (\$ {\em cid})}}
+\label{classDrupalDatabaseCache_a66a573f6f3e13198b1e95fdc4bd14f8e}
+Implements \hyperlink{interfaceDrupalCacheInterface_ad5e2988b3cb4633f473ebf0f889d088f}{DrupalCacheInterface::get()}. 
+
+Implements \hyperlink{interfaceDrupalCacheInterface_ad5e2988b3cb4633f473ebf0f889d088f}{DrupalCacheInterface}.
+
+Reimplemented in \hyperlink{classDrupalFakeCache_aaab8fb6e1a78691e81e0f3d48d4edbad}{DrupalFakeCache}.\hypertarget{classDrupalDatabaseCache_ad9f421906b15c039f1842cf8c14e8768}{
+\index{DrupalDatabaseCache@{DrupalDatabaseCache}!getMultiple@{getMultiple}}
+\index{getMultiple@{getMultiple}!DrupalDatabaseCache@{DrupalDatabaseCache}}
+\subsubsection[{getMultiple}]{\setlength{\rightskip}{0pt plus 5cm}DrupalDatabaseCache::getMultiple (\&\$ {\em cids})}}
+\label{classDrupalDatabaseCache_ad9f421906b15c039f1842cf8c14e8768}
+Implements \hyperlink{interfaceDrupalCacheInterface_aee8c869921fff61654d12099237763dc}{DrupalCacheInterface::getMultiple()}. 
+
+Implements \hyperlink{interfaceDrupalCacheInterface_aee8c869921fff61654d12099237763dc}{DrupalCacheInterface}.
+
+Reimplemented in \hyperlink{classDrupalFakeCache_a9ca8ecb251e83f3d30beb2f6722ef746}{DrupalFakeCache}.\hypertarget{classDrupalDatabaseCache_addc129b38e3ffdda5a55f2f453ea5619}{
+\index{DrupalDatabaseCache@{DrupalDatabaseCache}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!DrupalDatabaseCache@{DrupalDatabaseCache}}
+\subsubsection[{isEmpty}]{\setlength{\rightskip}{0pt plus 5cm}DrupalDatabaseCache::isEmpty ()}}
+\label{classDrupalDatabaseCache_addc129b38e3ffdda5a55f2f453ea5619}
+Implements \hyperlink{interfaceDrupalCacheInterface_a54fa3e2f8e11cbb551d5168c9f22c720}{DrupalCacheInterface::isEmpty()}. 
+
+Implements \hyperlink{interfaceDrupalCacheInterface_a54fa3e2f8e11cbb551d5168c9f22c720}{DrupalCacheInterface}.
+
+Reimplemented in \hyperlink{classDrupalFakeCache_a78bf2c373a0204a24bd809c0f27e7a4e}{DrupalFakeCache}.\hypertarget{classDrupalDatabaseCache_a3d9f8274f05d6c23515a15bad5e997a4}{
+\index{DrupalDatabaseCache@{DrupalDatabaseCache}!isValidBin@{isValidBin}}
+\index{isValidBin@{isValidBin}!DrupalDatabaseCache@{DrupalDatabaseCache}}
+\subsubsection[{isValidBin}]{\setlength{\rightskip}{0pt plus 5cm}DrupalDatabaseCache::isValidBin ()}}
+\label{classDrupalDatabaseCache_a3d9f8274f05d6c23515a15bad5e997a4}
+Checks if \$this-\/$>$bin represents a valid cache table.
+
+This check is required to ensure that non-\/cache tables are not truncated accidentally when calling \hyperlink{includes_2cache_8inc_a409b34dd629640d791a11736a9de8125}{cache\_\-clear\_\-all()}.
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+\hypertarget{classDrupalDatabaseCache_a63148b862b8b39426c50f45e1c7fe43d}{
+\index{DrupalDatabaseCache@{DrupalDatabaseCache}!prepareItem@{prepareItem}}
+\index{prepareItem@{prepareItem}!DrupalDatabaseCache@{DrupalDatabaseCache}}
+\subsubsection[{prepareItem}]{\setlength{\rightskip}{0pt plus 5cm}DrupalDatabaseCache::prepareItem (\$ {\em cache})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDrupalDatabaseCache_a63148b862b8b39426c50f45e1c7fe43d}
+Prepares a cached item.
+
+Checks that items are either permanent or did not expire, and unserializes data as appropriate.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cache}]An item loaded from \hyperlink{includes_2cache_8inc_a9d873815c28909b61c3a6188b383f8a3}{cache\_\-get()} or \hyperlink{includes_2cache_8inc_a2c67628faec5b49aa0fdc987422540d4}{cache\_\-get\_\-multiple()}.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The item with data unserialized as appropriate or FALSE if there is no valid item to load. 
+\end{DoxyReturn}
+\hypertarget{classDrupalDatabaseCache_a8262bd7a36ca026f6b8c31c30c0f722d}{
+\index{DrupalDatabaseCache@{DrupalDatabaseCache}!set@{set}}
+\index{set@{set}!DrupalDatabaseCache@{DrupalDatabaseCache}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}DrupalDatabaseCache::set (\$ {\em cid}, \/  \$ {\em data}, \/  \$ {\em expire} = {\ttfamily {\bf CACHE\_\-PERMANENT}})}}
+\label{classDrupalDatabaseCache_a8262bd7a36ca026f6b8c31c30c0f722d}
+Implements \hyperlink{interfaceDrupalCacheInterface_ab9bbd1913d6747a74585f36b9282594c}{DrupalCacheInterface::set()}. 
+
+Implements \hyperlink{interfaceDrupalCacheInterface_ab9bbd1913d6747a74585f36b9282594c}{DrupalCacheInterface}.
+
+Reimplemented in \hyperlink{classDrupalFakeCache_a54b3264101045168404dc3cedcfce970}{DrupalFakeCache}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/\hyperlink{includes_2cache_8inc}{cache.inc}\end{DoxyCompactItemize}

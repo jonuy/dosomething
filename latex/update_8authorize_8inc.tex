@@ -1,0 +1,118 @@
+\hypertarget{update_8authorize_8inc}{
+\section{html/modules/update/update.authorize.inc File Reference}
+\label{update_8authorize_8inc}\index{html/modules/update/update.authorize.inc@{html/modules/update/update.authorize.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{update_8authorize_8inc_a640c629480dadbca39814ac8be63e21b}{update\_\-authorize\_\-run\_\-update} (\$filetransfer, \$projects)
+\item 
+\hyperlink{update_8authorize_8inc_a284ce6e21de87c3f0e39bbde1a1b6556}{update\_\-authorize\_\-run\_\-install} (\$filetransfer, \$project, \$updater\_\-name, \$local\_\-url)
+\item 
+\hyperlink{update_8authorize_8inc_ad3fccf701ff21f38940f28a72998d2b2}{update\_\-authorize\_\-batch\_\-copy\_\-project} (\$project, \$updater\_\-name, \$local\_\-url, \$filetransfer, \&\$context)
+\item 
+\hyperlink{update_8authorize_8inc_af57a6cf83861d59b3aa904b3d68c1f73}{update\_\-authorize\_\-update\_\-batch\_\-finished} (\$success, \$results)
+\item 
+\hyperlink{update_8authorize_8inc_a5fa685f8381c4bb3cd5e2a237e82e5a4}{update\_\-authorize\_\-install\_\-batch\_\-finished} (\$success, \$results)
+\item 
+\hyperlink{update_8authorize_8inc_a52e1e0077fe627d777ce1089da0c6b9d}{\_\-update\_\-batch\_\-create\_\-message} (\&\$project\_\-results, \$message, \$success=TRUE)
+\item 
+\hyperlink{update_8authorize_8inc_a040122d69ea274f33e081405f8f522ee}{\_\-update\_\-authorize\_\-clear\_\-update\_\-status} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Callbacks and related functions invoked by \hyperlink{authorize_8php}{authorize.php} to update projects.
+
+We use the Batch API to actually update each individual project on the site. All of the code in this file is run at a low bootstrap level (modules are not loaded), so these functions cannot assume access to the rest of the code of the Update Manager module. 
+
+\subsection{Function Documentation}
+\hypertarget{update_8authorize_8inc_a040122d69ea274f33e081405f8f522ee}{
+\index{update.authorize.inc@{update.authorize.inc}!\_\-update\_\-authorize\_\-clear\_\-update\_\-status@{\_\-update\_\-authorize\_\-clear\_\-update\_\-status}}
+\index{\_\-update\_\-authorize\_\-clear\_\-update\_\-status@{\_\-update\_\-authorize\_\-clear\_\-update\_\-status}!update.authorize.inc@{update.authorize.inc}}
+\subsubsection[{\_\-update\_\-authorize\_\-clear\_\-update\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}\_\-update\_\-authorize\_\-clear\_\-update\_\-status ()}}
+\label{update_8authorize_8inc_a040122d69ea274f33e081405f8f522ee}
+Clears cached available update status data.
+
+Since this function is run at such a low bootstrap level, the Update Manager module is not loaded. So, we can't just call \hyperlink{group__update__status__cache_ga45fc31b5f9949fc0081ed148a9f378dd}{\_\-update\_\-cache\_\-clear()}. However, the database is bootstrapped, so we can do a query ourselves to clear out what we want to clear.
+
+Note that we do not want to just truncate the table, since that would remove items related to currently pending fetch attempts.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{update_8authorize_8inc_af57a6cf83861d59b3aa904b3d68c1f73}{update\_\-authorize\_\-update\_\-batch\_\-finished()} 
+
+\hyperlink{group__update__status__cache_ga45fc31b5f9949fc0081ed148a9f378dd}{\_\-update\_\-cache\_\-clear()} 
+\end{DoxySeeAlso}
+\hypertarget{update_8authorize_8inc_a52e1e0077fe627d777ce1089da0c6b9d}{
+\index{update.authorize.inc@{update.authorize.inc}!\_\-update\_\-batch\_\-create\_\-message@{\_\-update\_\-batch\_\-create\_\-message}}
+\index{\_\-update\_\-batch\_\-create\_\-message@{\_\-update\_\-batch\_\-create\_\-message}!update.authorize.inc@{update.authorize.inc}}
+\subsubsection[{\_\-update\_\-batch\_\-create\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}\_\-update\_\-batch\_\-create\_\-message (\&\$ {\em project\_\-results}, \/  \$ {\em message}, \/  \$ {\em success} = {\ttfamily TRUE})}}
+\label{update_8authorize_8inc_a52e1e0077fe627d777ce1089da0c6b9d}
+Creates a structure of log messages.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$project\_\-results An associative array of results from the batch operation. \item[{\em string}]\$message A string containing a log message. \item[{\em bool}]\$success (optional) TRUE if the operation the message is about was a success, FALSE if there were errors. Defaults to TRUE. \end{DoxyParams}
+\hypertarget{update_8authorize_8inc_ad3fccf701ff21f38940f28a72998d2b2}{
+\index{update.authorize.inc@{update.authorize.inc}!update\_\-authorize\_\-batch\_\-copy\_\-project@{update\_\-authorize\_\-batch\_\-copy\_\-project}}
+\index{update\_\-authorize\_\-batch\_\-copy\_\-project@{update\_\-authorize\_\-batch\_\-copy\_\-project}!update.authorize.inc@{update.authorize.inc}}
+\subsubsection[{update\_\-authorize\_\-batch\_\-copy\_\-project}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-authorize\_\-batch\_\-copy\_\-project (\$ {\em project}, \/  \$ {\em updater\_\-name}, \/  \$ {\em local\_\-url}, \/  \$ {\em filetransfer}, \/  \&\$ {\em context})}}
+\label{update_8authorize_8inc_ad3fccf701ff21f38940f28a72998d2b2}
+Batch callback: Copies project to its proper place when authorized to do so.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$project The canonical short name of the project being installed. \item[{\em string}]\$updater\_\-name The name of the \hyperlink{classUpdater}{Updater} class to use for installing this project. \item[{\em string}]\$local\_\-url The URL to the locally installed temp directory where the project has already been downloaded and extracted into. \item[{\em \hyperlink{classFileTransfer}{FileTransfer}}]\$filetransfer The \hyperlink{classFileTransfer}{FileTransfer} object to use for performing this operation. \item[{\em array}]\$context Reference to an array used for Batch API storage. \end{DoxyParams}
+\hypertarget{update_8authorize_8inc_a5fa685f8381c4bb3cd5e2a237e82e5a4}{
+\index{update.authorize.inc@{update.authorize.inc}!update\_\-authorize\_\-install\_\-batch\_\-finished@{update\_\-authorize\_\-install\_\-batch\_\-finished}}
+\index{update\_\-authorize\_\-install\_\-batch\_\-finished@{update\_\-authorize\_\-install\_\-batch\_\-finished}!update.authorize.inc@{update.authorize.inc}}
+\subsubsection[{update\_\-authorize\_\-install\_\-batch\_\-finished}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-authorize\_\-install\_\-batch\_\-finished (\$ {\em success}, \/  \$ {\em results})}}
+\label{update_8authorize_8inc_a5fa685f8381c4bb3cd5e2a237e82e5a4}
+Batch callback: Performs actions when the authorized install batch is done.
+
+This processes the results and stashes them into SESSION such that \hyperlink{authorize_8php}{authorize.php} will render a report. Also responsible for putting the site back online after a successful install if necessary.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$success}]TRUE if the batch operation was a success; FALSE if there were errors. \item[{\em \$results}]An associative array of results from the batch operation. \end{DoxyParams}
+\hypertarget{update_8authorize_8inc_a284ce6e21de87c3f0e39bbde1a1b6556}{
+\index{update.authorize.inc@{update.authorize.inc}!update\_\-authorize\_\-run\_\-install@{update\_\-authorize\_\-run\_\-install}}
+\index{update\_\-authorize\_\-run\_\-install@{update\_\-authorize\_\-run\_\-install}!update.authorize.inc@{update.authorize.inc}}
+\subsubsection[{update\_\-authorize\_\-run\_\-install}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-authorize\_\-run\_\-install (\$ {\em filetransfer}, \/  \$ {\em project}, \/  \$ {\em updater\_\-name}, \/  \$ {\em local\_\-url})}}
+\label{update_8authorize_8inc_a284ce6e21de87c3f0e39bbde1a1b6556}
+Installs a new project when invoked by \hyperlink{authorize_8php}{authorize.php}.
+
+Callback for \hyperlink{group__authorize_ga17756b29805705dbea25798d6004d5dd}{system\_\-authorized\_\-init()} in \hyperlink{group__update__manager__install_ga52e9f2cddddddccf921284b01f9505b0}{update\_\-manager\_\-install\_\-form\_\-submit()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{classFileTransfer}{FileTransfer}}]\$filetransfer The \hyperlink{classFileTransfer}{FileTransfer} object created by \hyperlink{authorize_8php}{authorize.php} for use during this operation. \item[{\em string}]\$project The canonical project short name (e.g., \{system\}.name). \item[{\em string}]\$updater\_\-name The name of the \hyperlink{classUpdater}{Updater} class to use for installing this project. \item[{\em string}]\$local\_\-url The URL to the locally installed temp directory where the project has already been downloaded and extracted into. \end{DoxyParams}
+\hypertarget{update_8authorize_8inc_a640c629480dadbca39814ac8be63e21b}{
+\index{update.authorize.inc@{update.authorize.inc}!update\_\-authorize\_\-run\_\-update@{update\_\-authorize\_\-run\_\-update}}
+\index{update\_\-authorize\_\-run\_\-update@{update\_\-authorize\_\-run\_\-update}!update.authorize.inc@{update.authorize.inc}}
+\subsubsection[{update\_\-authorize\_\-run\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-authorize\_\-run\_\-update (\$ {\em filetransfer}, \/  \$ {\em projects})}}
+\label{update_8authorize_8inc_a640c629480dadbca39814ac8be63e21b}
+Updates existing projects when invoked by \hyperlink{authorize_8php}{authorize.php}.
+
+Callback for \hyperlink{group__authorize_ga17756b29805705dbea25798d6004d5dd}{system\_\-authorized\_\-init()} in \hyperlink{group__update__manager__update_gaeab4690bf95cb0d0b517a0b9161e5045}{update\_\-manager\_\-update\_\-ready\_\-form\_\-submit()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$filetransfer}]The \hyperlink{classFileTransfer}{FileTransfer} object created by \hyperlink{authorize_8php}{authorize.php} for use during this operation. \item[{\em \$projects}]A nested array of projects to install into the live webroot, keyed by project name. Each subarray contains the following keys:
+\begin{DoxyItemize}
+\item project: The canonical project short name.
+\item updater\_\-name: The name of the \hyperlink{classUpdater}{Updater} class to use for this project.
+\item local\_\-url: The locally installed location of new code to update with. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{update_8authorize_8inc_af57a6cf83861d59b3aa904b3d68c1f73}{
+\index{update.authorize.inc@{update.authorize.inc}!update\_\-authorize\_\-update\_\-batch\_\-finished@{update\_\-authorize\_\-update\_\-batch\_\-finished}}
+\index{update\_\-authorize\_\-update\_\-batch\_\-finished@{update\_\-authorize\_\-update\_\-batch\_\-finished}!update.authorize.inc@{update.authorize.inc}}
+\subsubsection[{update\_\-authorize\_\-update\_\-batch\_\-finished}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-authorize\_\-update\_\-batch\_\-finished (\$ {\em success}, \/  \$ {\em results})}}
+\label{update_8authorize_8inc_af57a6cf83861d59b3aa904b3d68c1f73}
+Batch callback: Performs actions when the authorized update batch is done.
+
+This processes the results and stashes them into SESSION such that \hyperlink{authorize_8php}{authorize.php} will render a report. Also responsible for putting the site back online and clearing the update status cache after a successful update.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$success}]TRUE if the batch operation was successful; FALSE if there were errors. \item[{\em \$results}]An associative array of results from the batch operation. \end{DoxyParams}

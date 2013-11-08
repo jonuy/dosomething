@@ -1,0 +1,140 @@
+\hypertarget{classPagerDefault}{
+\section{PagerDefault Class Reference}
+\label{classPagerDefault}\index{PagerDefault@{PagerDefault}}
+}
+Inheritance diagram for PagerDefault::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.21839cm]{classPagerDefault}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPagerDefault_a23e41437cab504907b91ea9a42a1a20d}{
+{\bfseries \_\-\_\-construct} (\hyperlink{interfaceSelectQueryInterface}{SelectQueryInterface} \$query, \hyperlink{classDatabaseConnection}{DatabaseConnection} \$connection)}
+\label{classPagerDefault_a23e41437cab504907b91ea9a42a1a20d}
+
+\item 
+\hyperlink{classPagerDefault_ae92935d692c4a7867132235818c3fe1a}{execute} ()
+\item 
+\hyperlink{classPagerDefault_abf3bd3639cde71ae6e85c74b9fbfd42c}{setCountQuery} (\hyperlink{interfaceSelectQueryInterface}{SelectQueryInterface} \$query)
+\item 
+\hyperlink{classPagerDefault_ab1fe3f648bad90c0bb9c1760fee20fed}{getCountQuery} ()
+\item 
+\hyperlink{classPagerDefault_a3765bcd78bdef3da178ee071113ec28d}{limit} (\$limit=10)
+\item 
+\hyperlink{classPagerDefault_a950e555daf95d3af4aeaf23209a183d0}{element} (\$element)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPagerDefault_a98773ffb92c70067ba49df6fdca0eb21}{
+static {\bfseries \$maxElement} = 0}
+\label{classPagerDefault_a98773ffb92c70067ba49df6fdca0eb21}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPagerDefault_a80aec4b474390695eded834e365d1b51}{ensureElement} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPagerDefault_aed0d63a76119245ab5fd4ecc06df2453}{
+{\bfseries \$limit} = 10}
+\label{classPagerDefault_aed0d63a76119245ab5fd4ecc06df2453}
+
+\item 
+\hypertarget{classPagerDefault_aec814784b161281d21bd45cf06b3f616}{
+{\bfseries \$element} = NULL}
+\label{classPagerDefault_aec814784b161281d21bd45cf06b3f616}
+
+\item 
+\hypertarget{classPagerDefault_ad4ee98e56947b9ed4791b6c9d742ed38}{
+{\bfseries \$customCountQuery} = FALSE}
+\label{classPagerDefault_ad4ee98e56947b9ed4791b6c9d742ed38}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classQuery}{Query} extender for pager queries.
+
+This is the \char`\"{}default\char`\"{} pager mechanism. It creates a paged query with a fixed number of entries per page. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classPagerDefault_a950e555daf95d3af4aeaf23209a183d0}{
+\index{PagerDefault@{PagerDefault}!element@{element}}
+\index{element@{element}!PagerDefault@{PagerDefault}}
+\subsubsection[{element}]{\setlength{\rightskip}{0pt plus 5cm}PagerDefault::element (\$ {\em element})}}
+\label{classPagerDefault_a950e555daf95d3af4aeaf23209a183d0}
+Specify the element ID for this pager query.
+
+The element is used to differentiate different pager queries on the same page so that they may be operated independently. If you do not specify an element, every pager query on the page will get a unique element. If for whatever reason you want to explicitly define an element for a given query, you may do so here.
+
+Setting the element here also increments the static \$maxElement counter, which is used for determining the \$element when there's none specified.
+
+Note that no collision detection is done when setting an element ID explicitly, so it is possible for two pagers to end up using the same ID if both are set explicitly.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$element}]\end{DoxyParams}
+\hypertarget{classPagerDefault_a80aec4b474390695eded834e365d1b51}{
+\index{PagerDefault@{PagerDefault}!ensureElement@{ensureElement}}
+\index{ensureElement@{ensureElement}!PagerDefault@{PagerDefault}}
+\subsubsection[{ensureElement}]{\setlength{\rightskip}{0pt plus 5cm}PagerDefault::ensureElement ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classPagerDefault_a80aec4b474390695eded834e365d1b51}
+Ensure that there is an element associated with this query. If an element was not specified previously, then the value of the \$maxElement counter is taken, after which the counter is incremented.
+
+After running this method, access \$this-\/$>$element to get the element for this query. \hypertarget{classPagerDefault_ae92935d692c4a7867132235818c3fe1a}{
+\index{PagerDefault@{PagerDefault}!execute@{execute}}
+\index{execute@{execute}!PagerDefault@{PagerDefault}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}PagerDefault::execute ()}}
+\label{classPagerDefault_ae92935d692c4a7867132235818c3fe1a}
+Override the execute method.
+
+Before we run the query, we need to add pager-\/based \hyperlink{classSelectQueryExtender_a83b472a48decf872faf61ded0c576697}{range()} instructions to it. 
+
+Reimplemented from \hyperlink{classSelectQueryExtender}{SelectQueryExtender}.\hypertarget{classPagerDefault_ab1fe3f648bad90c0bb9c1760fee20fed}{
+\index{PagerDefault@{PagerDefault}!getCountQuery@{getCountQuery}}
+\index{getCountQuery@{getCountQuery}!PagerDefault@{PagerDefault}}
+\subsubsection[{getCountQuery}]{\setlength{\rightskip}{0pt plus 5cm}PagerDefault::getCountQuery ()}}
+\label{classPagerDefault_ab1fe3f648bad90c0bb9c1760fee20fed}
+Retrieve the count query for this pager.
+
+The count query may be specified manually or, by default, taken from the query we are extending.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{interfaceSelectQueryInterface}{SelectQueryInterface} A count query object. 
+\end{DoxyReturn}
+\hypertarget{classPagerDefault_a3765bcd78bdef3da178ee071113ec28d}{
+\index{PagerDefault@{PagerDefault}!limit@{limit}}
+\index{limit@{limit}!PagerDefault@{PagerDefault}}
+\subsubsection[{limit}]{\setlength{\rightskip}{0pt plus 5cm}PagerDefault::limit (\$ {\em limit} = {\ttfamily 10})}}
+\label{classPagerDefault_a3765bcd78bdef3da178ee071113ec28d}
+Specify the maximum number of elements per page for this query.
+
+The default if not specified is 10 items per page.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$limit}]An integer specifying the number of elements per page. If passed a false value (FALSE, 0, NULL), the pager is disabled. \end{DoxyParams}
+\hypertarget{classPagerDefault_abf3bd3639cde71ae6e85c74b9fbfd42c}{
+\index{PagerDefault@{PagerDefault}!setCountQuery@{setCountQuery}}
+\index{setCountQuery@{setCountQuery}!PagerDefault@{PagerDefault}}
+\subsubsection[{setCountQuery}]{\setlength{\rightskip}{0pt plus 5cm}PagerDefault::setCountQuery ({\bf SelectQueryInterface} \$ {\em query})}}
+\label{classPagerDefault_abf3bd3639cde71ae6e85c74b9fbfd42c}
+Specify the count query object to use for this pager.
+
+You will rarely need to specify a count query directly. If not specified, one is generated off of the pager query itself.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{interfaceSelectQueryInterface}{SelectQueryInterface}}]\$query The count query object. It must return a single row with a single column, which is the total number of records. \end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/\hyperlink{pager_8inc}{pager.inc}\end{DoxyCompactItemize}

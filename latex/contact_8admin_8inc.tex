@@ -1,0 +1,71 @@
+\hypertarget{contact_8admin_8inc}{
+\section{html/modules/contact/contact.admin.inc File Reference}
+\label{contact_8admin_8inc}\index{html/modules/contact/contact.admin.inc@{html/modules/contact/contact.admin.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{contact_8admin_8inc_a4104e4a75baac7e93f42fec5fed43f64}{contact\_\-category\_\-list} ()
+\item 
+\hyperlink{group__forms_ga9283549b12df4a9a6cdb49202ae658ac}{contact\_\-category\_\-edit\_\-form} (\$form, \&\$form\_\-state, array \$category=array())
+\item 
+\hyperlink{contact_8admin_8inc_a6d89c84e8d85557599491e121adc0faa}{contact\_\-category\_\-edit\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{contact_8admin_8inc_a3bd710e3ce90722af2a776e664a0f813}{contact\_\-category\_\-edit\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{contact_8admin_8inc_a33918ea271cb307b297673f8ea1eaf58}{contact\_\-category\_\-delete\_\-form} (\$form, \&\$form\_\-state, array \$contact)
+\item 
+\hyperlink{contact_8admin_8inc_a970b9c33770826b0f0229ffc42c0e277}{contact\_\-category\_\-delete\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Admin page callbacks for the Contact module. 
+
+\subsection{Function Documentation}
+\hypertarget{contact_8admin_8inc_a33918ea271cb307b297673f8ea1eaf58}{
+\index{contact.admin.inc@{contact.admin.inc}!contact\_\-category\_\-delete\_\-form@{contact\_\-category\_\-delete\_\-form}}
+\index{contact\_\-category\_\-delete\_\-form@{contact\_\-category\_\-delete\_\-form}!contact.admin.inc@{contact.admin.inc}}
+\subsubsection[{contact\_\-category\_\-delete\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}contact\_\-category\_\-delete\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  array \$ {\em contact})}}
+\label{contact_8admin_8inc_a33918ea271cb307b297673f8ea1eaf58}
+Form constructor for the contact category deletion form.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$contact}]Array describing the contact category to be deleted. See the documentation of \hyperlink{group__forms_ga9283549b12df4a9a6cdb49202ae658ac}{contact\_\-category\_\-edit\_\-form()} for the recognized keys.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{contact_8module_aa553b7cf1c3901cce1c2a8c4a04c5212}{contact\_\-menu()} 
+
+\hyperlink{contact_8admin_8inc_a970b9c33770826b0f0229ffc42c0e277}{contact\_\-category\_\-delete\_\-form\_\-submit()} 
+\end{DoxySeeAlso}
+\hypertarget{contact_8admin_8inc_a970b9c33770826b0f0229ffc42c0e277}{
+\index{contact.admin.inc@{contact.admin.inc}!contact\_\-category\_\-delete\_\-form\_\-submit@{contact\_\-category\_\-delete\_\-form\_\-submit}}
+\index{contact\_\-category\_\-delete\_\-form\_\-submit@{contact\_\-category\_\-delete\_\-form\_\-submit}!contact.admin.inc@{contact.admin.inc}}
+\subsubsection[{contact\_\-category\_\-delete\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}contact\_\-category\_\-delete\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{contact_8admin_8inc_a970b9c33770826b0f0229ffc42c0e277}
+Form submission handler for \hyperlink{contact_8admin_8inc_a33918ea271cb307b297673f8ea1eaf58}{contact\_\-category\_\-delete\_\-form()}. \hypertarget{contact_8admin_8inc_a3bd710e3ce90722af2a776e664a0f813}{
+\index{contact.admin.inc@{contact.admin.inc}!contact\_\-category\_\-edit\_\-form\_\-submit@{contact\_\-category\_\-edit\_\-form\_\-submit}}
+\index{contact\_\-category\_\-edit\_\-form\_\-submit@{contact\_\-category\_\-edit\_\-form\_\-submit}!contact.admin.inc@{contact.admin.inc}}
+\subsubsection[{contact\_\-category\_\-edit\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}contact\_\-category\_\-edit\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{contact_8admin_8inc_a3bd710e3ce90722af2a776e664a0f813}
+Form submission handler for \hyperlink{group__forms_ga9283549b12df4a9a6cdb49202ae658ac}{contact\_\-category\_\-edit\_\-form()}.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{contact_8admin_8inc_a6d89c84e8d85557599491e121adc0faa}{contact\_\-category\_\-edit\_\-form\_\-validate()} 
+\end{DoxySeeAlso}
+\hypertarget{contact_8admin_8inc_a6d89c84e8d85557599491e121adc0faa}{
+\index{contact.admin.inc@{contact.admin.inc}!contact\_\-category\_\-edit\_\-form\_\-validate@{contact\_\-category\_\-edit\_\-form\_\-validate}}
+\index{contact\_\-category\_\-edit\_\-form\_\-validate@{contact\_\-category\_\-edit\_\-form\_\-validate}!contact.admin.inc@{contact.admin.inc}}
+\subsubsection[{contact\_\-category\_\-edit\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}contact\_\-category\_\-edit\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{contact_8admin_8inc_a6d89c84e8d85557599491e121adc0faa}
+Form validation handler for \hyperlink{group__forms_ga9283549b12df4a9a6cdb49202ae658ac}{contact\_\-category\_\-edit\_\-form()}.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{contact_8admin_8inc_a3bd710e3ce90722af2a776e664a0f813}{contact\_\-category\_\-edit\_\-form\_\-submit()} 
+\end{DoxySeeAlso}
+\hypertarget{contact_8admin_8inc_a4104e4a75baac7e93f42fec5fed43f64}{
+\index{contact.admin.inc@{contact.admin.inc}!contact\_\-category\_\-list@{contact\_\-category\_\-list}}
+\index{contact\_\-category\_\-list@{contact\_\-category\_\-list}!contact.admin.inc@{contact.admin.inc}}
+\subsubsection[{contact\_\-category\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}contact\_\-category\_\-list ()}}
+\label{contact_8admin_8inc_a4104e4a75baac7e93f42fec5fed43f64}
+Categories/list tab. 

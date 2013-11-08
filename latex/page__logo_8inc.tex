@@ -1,0 +1,47 @@
+\hypertarget{page__logo_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/content\_\-types/page/page\_\-logo.inc File Reference}
+\label{page__logo_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/content\_\-types/page/page\_\-logo.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/content\_\-types/page/page\_\-logo.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{page__logo_8inc_a90e0dff30eed87901ed4f9ea7537473a}{ctools\_\-page\_\-logo\_\-content\_\-type\_\-render} (\$subtype, \$conf, \$panel\_\-args)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{page__logo_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to handle the 'page\_\-logo' content type which allows the logo of the site to be embedded into a panel. 
+
+\subsection{Function Documentation}
+\hypertarget{page__logo_8inc_a90e0dff30eed87901ed4f9ea7537473a}{
+\index{page\_\-logo.inc@{page\_\-logo.inc}!ctools\_\-page\_\-logo\_\-content\_\-type\_\-render@{ctools\_\-page\_\-logo\_\-content\_\-type\_\-render}}
+\index{ctools\_\-page\_\-logo\_\-content\_\-type\_\-render@{ctools\_\-page\_\-logo\_\-content\_\-type\_\-render}!page_logo.inc@{page\_\-logo.inc}}
+\subsubsection[{ctools\_\-page\_\-logo\_\-content\_\-type\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-page\_\-logo\_\-content\_\-type\_\-render (\$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em panel\_\-args})}}
+\label{page__logo_8inc_a90e0dff30eed87901ed4f9ea7537473a}
+Output function for the 'page\_\-logo' content type.
+
+Outputs the logo for the current page. 
+
+\subsection{Variable Documentation}
+\hypertarget{page__logo_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{page\_\-logo.inc@{page\_\-logo.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!page_logo.inc@{page\_\-logo.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{page__logo_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('Site logo'),
+  'single' => TRUE,
+  'icon' => 'icon_page.png',
+  'description' => t('Add the logo trail as content.'),
+  'category' => t('Page elements'),
+  'render last' => TRUE,
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

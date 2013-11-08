@@ -1,0 +1,181 @@
+\hypertarget{field_8form_8inc}{
+\section{html/modules/field/field.form.inc File Reference}
+\label{field_8form_8inc}\index{html/modules/field/field.form.inc@{html/modules/field/field.form.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{field_8form_8inc_ac46022d7310dd8d6eb0409e4175e18c0}{field\_\-default\_\-form} (\$entity\_\-type, \$entity, \$field, \$instance, \$langcode, \$items, \&\$form, \&\$form\_\-state, \$get\_\-delta=NULL)
+\item 
+\hyperlink{field_8form_8inc_a46777a9ee9b54599b953ef7d6fd6b422}{field\_\-multiple\_\-value\_\-form} (\$field, \$instance, \$langcode, \$items, \&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__themeable_ga74b93c09d317f6348b32ad1e6695c61e}{theme\_\-field\_\-multiple\_\-value\_\-form} (\$variables)
+\item 
+\hyperlink{field_8form_8inc_acf98217acdd07f36d9fa45f6d6d92e0d}{field\_\-form\_\-element\_\-after\_\-build} (\$element, \&\$form\_\-state)
+\item 
+\hyperlink{field_8form_8inc_a0649a57b5581c7896bcd997aa0e3e172}{field\_\-default\_\-form\_\-errors} (\$entity\_\-type, \$entity, \$field, \$instance, \$langcode, \$items, \$form, \&\$form\_\-state)
+\item 
+\hyperlink{field_8form_8inc_a39c4e68fe7eac6f151f7c140854d50dc}{field\_\-add\_\-more\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{field_8form_8inc_a8e5c072d17551aa6112f4ea27328b9d6}{field\_\-add\_\-more\_\-js} (\$form, \$form\_\-state)
+\item 
+\hyperlink{field_8form_8inc_a84146d3d086bfc6b242f01c23e552435}{field\_\-form\_\-get\_\-state} (\$parents, \$field\_\-name, \$langcode, \&\$form\_\-state)
+\item 
+\hyperlink{field_8form_8inc_a8e21a8b058d1a84d91d1a326242e303e}{field\_\-form\_\-set\_\-state} (\$parents, \$field\_\-name, \$langcode, \&\$form\_\-state, \$field\_\-state)
+\item 
+\hyperlink{field_8form_8inc_aaf5ced1bff5c1580e84b9a7cfbf961c5}{\_\-field\_\-form\_\-state\_\-parents} (\$parents, \$field\_\-name, \$langcode)
+\item 
+\hyperlink{field_8form_8inc_a71dcef632fc59641eee5238c7c6b335c}{field\_\-widget\_\-field} (\$element, \$form\_\-state)
+\item 
+\hyperlink{field_8form_8inc_ac72e1f5dacbab488a337f79fe485429f}{field\_\-widget\_\-instance} (\$element, \$form\_\-state)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Field forms management. 
+
+\subsection{Function Documentation}
+\hypertarget{field_8form_8inc_aaf5ced1bff5c1580e84b9a7cfbf961c5}{
+\index{field.form.inc@{field.form.inc}!\_\-field\_\-form\_\-state\_\-parents@{\_\-field\_\-form\_\-state\_\-parents}}
+\index{\_\-field\_\-form\_\-state\_\-parents@{\_\-field\_\-form\_\-state\_\-parents}!field.form.inc@{field.form.inc}}
+\subsubsection[{\_\-field\_\-form\_\-state\_\-parents}]{\setlength{\rightskip}{0pt plus 5cm}\_\-field\_\-form\_\-state\_\-parents (\$ {\em parents}, \/  \$ {\em field\_\-name}, \/  \$ {\em langcode})}}
+\label{field_8form_8inc_aaf5ced1bff5c1580e84b9a7cfbf961c5}
+Returns the location of processing information within \$form\_\-state. \hypertarget{field_8form_8inc_a8e5c072d17551aa6112f4ea27328b9d6}{
+\index{field.form.inc@{field.form.inc}!field\_\-add\_\-more\_\-js@{field\_\-add\_\-more\_\-js}}
+\index{field\_\-add\_\-more\_\-js@{field\_\-add\_\-more\_\-js}!field.form.inc@{field.form.inc}}
+\subsubsection[{field\_\-add\_\-more\_\-js}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-add\_\-more\_\-js (\$ {\em form}, \/  \$ {\em form\_\-state})}}
+\label{field_8form_8inc_a8e5c072d17551aa6112f4ea27328b9d6}
+Ajax callback in response to a new empty widget being added to the form.
+
+This returns the new page content to replace the page content made obsolete by the form submission.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{field_8form_8inc_a39c4e68fe7eac6f151f7c140854d50dc}{field\_\-add\_\-more\_\-submit()} 
+\end{DoxySeeAlso}
+\hypertarget{field_8form_8inc_a39c4e68fe7eac6f151f7c140854d50dc}{
+\index{field.form.inc@{field.form.inc}!field\_\-add\_\-more\_\-submit@{field\_\-add\_\-more\_\-submit}}
+\index{field\_\-add\_\-more\_\-submit@{field\_\-add\_\-more\_\-submit}!field.form.inc@{field.form.inc}}
+\subsubsection[{field\_\-add\_\-more\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-add\_\-more\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{field_8form_8inc_a39c4e68fe7eac6f151f7c140854d50dc}
+Submit handler for the \char`\"{}Add another item\char`\"{} button of a field form.
+
+This handler is run regardless of whether JS is enabled or not. It makes changes to the form state. If the button was clicked with JS disabled, then the page is reloaded with the complete rebuilt form. If the button was clicked with JS enabled, then \hyperlink{group__ajax_gabe2739824006df057d291f6be49759ab}{ajax\_\-form\_\-callback()} calls \hyperlink{field_8form_8inc_a8e5c072d17551aa6112f4ea27328b9d6}{field\_\-add\_\-more\_\-js()} to return just the changed part of the form. \hypertarget{field_8form_8inc_ac46022d7310dd8d6eb0409e4175e18c0}{
+\index{field.form.inc@{field.form.inc}!field\_\-default\_\-form@{field\_\-default\_\-form}}
+\index{field\_\-default\_\-form@{field\_\-default\_\-form}!field.form.inc@{field.form.inc}}
+\subsubsection[{field\_\-default\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-default\_\-form (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode}, \/  \$ {\em items}, \/  \&\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em get\_\-delta} = {\ttfamily NULL})}}
+\label{field_8form_8inc_ac46022d7310dd8d6eb0409e4175e18c0}
+Creates a form element for a field and can populate it with a default value.
+
+If the form element is not associated with an entity (i.e., \$entity is NULL) field\_\-get\_\-default\_\-value will be called to supply the default value for the field. Also allows other modules to alter the form element by implementing their own hooks.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of entity (for example 'node' or 'user') that the field belongs to. \item[{\em \$entity}]The entity object that the field belongs to. This may be NULL if creating a form element with a default value. \item[{\em \$field}]An array representing the field whose editing element is being created. \item[{\em \$instance}]An array representing the structure for \$field in its current context. \item[{\em \$langcode}]The language associated with the field. \item[{\em \$items}]An array of the field values. When creating a new entity this may be NULL or an empty array to use default values. \item[{\em \$form}]An array representing the form that the editing element will be attached to. \item[{\em \$form\_\-state}]An array containing the current state of the form. \item[{\em \$get\_\-delta}]Used to get only a specific delta value of a multiple value field.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The form element array created for this field. 
+\end{DoxyReturn}
+\hypertarget{field_8form_8inc_a0649a57b5581c7896bcd997aa0e3e172}{
+\index{field.form.inc@{field.form.inc}!field\_\-default\_\-form\_\-errors@{field\_\-default\_\-form\_\-errors}}
+\index{field\_\-default\_\-form\_\-errors@{field\_\-default\_\-form\_\-errors}!field.form.inc@{field.form.inc}}
+\subsubsection[{field\_\-default\_\-form\_\-errors}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-default\_\-form\_\-errors (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode}, \/  \$ {\em items}, \/  \$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{field_8form_8inc_a0649a57b5581c7896bcd997aa0e3e172}
+Transfer field-\/level validation errors to widgets. \hypertarget{field_8form_8inc_acf98217acdd07f36d9fa45f6d6d92e0d}{
+\index{field.form.inc@{field.form.inc}!field\_\-form\_\-element\_\-after\_\-build@{field\_\-form\_\-element\_\-after\_\-build}}
+\index{field\_\-form\_\-element\_\-after\_\-build@{field\_\-form\_\-element\_\-after\_\-build}!field.form.inc@{field.form.inc}}
+\subsubsection[{field\_\-form\_\-element\_\-after\_\-build}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-form\_\-element\_\-after\_\-build (\$ {\em element}, \/  \&\$ {\em form\_\-state})}}
+\label{field_8form_8inc_acf98217acdd07f36d9fa45f6d6d92e0d}
+after\_\-build callback for field elements in a form.
+
+This stores the final location of the field within the form structure so that \hyperlink{field_8form_8inc_a0649a57b5581c7896bcd997aa0e3e172}{field\_\-default\_\-form\_\-errors()} can assign validation errors to the right form element.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{field_8form_8inc_a0649a57b5581c7896bcd997aa0e3e172}{field\_\-default\_\-form\_\-errors()} 
+\end{DoxySeeAlso}
+\hypertarget{field_8form_8inc_a84146d3d086bfc6b242f01c23e552435}{
+\index{field.form.inc@{field.form.inc}!field\_\-form\_\-get\_\-state@{field\_\-form\_\-get\_\-state}}
+\index{field\_\-form\_\-get\_\-state@{field\_\-form\_\-get\_\-state}!field.form.inc@{field.form.inc}}
+\subsubsection[{field\_\-form\_\-get\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-form\_\-get\_\-state (\$ {\em parents}, \/  \$ {\em field\_\-name}, \/  \$ {\em langcode}, \/  \&\$ {\em form\_\-state})}}
+\label{field_8form_8inc_a84146d3d086bfc6b242f01c23e552435}
+Retrieves processing information about a field from \$form\_\-state.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$parents}]The array of parents where the field lives in the form. \item[{\em \$field\_\-name}]The field name. \item[{\em \$langcode}]The language in which the field values are entered. \item[{\em \$form\_\-state}]The form state.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array with the following key/data pairs:
+\begin{DoxyItemize}
+\item field: the field definition array,
+\item instance: the field instance definition array,
+\item items\_\-count: the number of widgets to display for the field,
+\item array\_\-parents: the location of the field's widgets within the \$form structure. This entry is populated at 'after\_\-build' time.
+\item errors: the array of field validation errors reported on the field. This entry is populated at \hyperlink{group__field__attach_ga8c9a9775772774cefae4f6b9959d477e}{field\_\-attach\_\-form\_\-validate()} time.
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{field_8form_8inc_a8e21a8b058d1a84d91d1a326242e303e}{field\_\-form\_\-set\_\-state()} 
+\end{DoxySeeAlso}
+\hypertarget{field_8form_8inc_a8e21a8b058d1a84d91d1a326242e303e}{
+\index{field.form.inc@{field.form.inc}!field\_\-form\_\-set\_\-state@{field\_\-form\_\-set\_\-state}}
+\index{field\_\-form\_\-set\_\-state@{field\_\-form\_\-set\_\-state}!field.form.inc@{field.form.inc}}
+\subsubsection[{field\_\-form\_\-set\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-form\_\-set\_\-state (\$ {\em parents}, \/  \$ {\em field\_\-name}, \/  \$ {\em langcode}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em field\_\-state})}}
+\label{field_8form_8inc_a8e21a8b058d1a84d91d1a326242e303e}
+Stores processing information about a field in \$form\_\-state.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$parents}]The array of parents where the field lives in the form. \item[{\em \$field\_\-name}]The field name. \item[{\em \$langcode}]The language in which the field values are entered. \item[{\em \$form\_\-state}]The form state. \item[{\em \$field\_\-state}]The array of data to store. See \hyperlink{field_8form_8inc_a84146d3d086bfc6b242f01c23e552435}{field\_\-form\_\-get\_\-state()} for the structure and content of the array.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{field_8form_8inc_a84146d3d086bfc6b242f01c23e552435}{field\_\-form\_\-get\_\-state()} 
+\end{DoxySeeAlso}
+\hypertarget{field_8form_8inc_a46777a9ee9b54599b953ef7d6fd6b422}{
+\index{field.form.inc@{field.form.inc}!field\_\-multiple\_\-value\_\-form@{field\_\-multiple\_\-value\_\-form}}
+\index{field\_\-multiple\_\-value\_\-form@{field\_\-multiple\_\-value\_\-form}!field.form.inc@{field.form.inc}}
+\subsubsection[{field\_\-multiple\_\-value\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-multiple\_\-value\_\-form (\$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode}, \/  \$ {\em items}, \/  \&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{field_8form_8inc_a46777a9ee9b54599b953ef7d6fd6b422}
+Special handling to create form elements for multiple values.
+
+Handles generic features for multiple fields:
+\begin{DoxyItemize}
+\item number of widgets
+\item AHAH-\/'add more' button
+\item drag-\/n-\/drop value reordering 
+\end{DoxyItemize}\hypertarget{field_8form_8inc_a71dcef632fc59641eee5238c7c6b335c}{
+\index{field.form.inc@{field.form.inc}!field\_\-widget\_\-field@{field\_\-widget\_\-field}}
+\index{field\_\-widget\_\-field@{field\_\-widget\_\-field}!field.form.inc@{field.form.inc}}
+\subsubsection[{field\_\-widget\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-widget\_\-field (\$ {\em element}, \/  \$ {\em form\_\-state})}}
+\label{field_8form_8inc_a71dcef632fc59641eee5238c7c6b335c}
+Retrieves the field definition for a widget's helper callbacks.
+
+Widgets helper element callbacks (such as process, element\_\-validate, value\_\-callback, ...) should use \hyperlink{field_8form_8inc_a71dcef632fc59641eee5238c7c6b335c}{field\_\-widget\_\-field()} and \hyperlink{field_8form_8inc_ac72e1f5dacbab488a337f79fe485429f}{field\_\-widget\_\-instance()} instead of \hyperlink{group__field__info_ga74cfc942cd2baa5c49780b08c5d357d4}{field\_\-info\_\-field()} and \hyperlink{group__field__info_ga7d4361ece7a9a8be980e3fd4a6307564}{field\_\-info\_\-instance()} when they need to access field or instance properties. See \hyperlink{group__field__widget_gaa9b0e55fd0eb57ac0f9c7c30d251971b}{hook\_\-field\_\-widget\_\-form()} for more details.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$element}]The structured array for the widget. \item[{\em \$form\_\-state}]The form state.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \$field definition array for the current widget.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{field_8form_8inc_ac72e1f5dacbab488a337f79fe485429f}{field\_\-widget\_\-instance()} 
+
+\hyperlink{group__field__widget_gaa9b0e55fd0eb57ac0f9c7c30d251971b}{hook\_\-field\_\-widget\_\-form()} 
+\end{DoxySeeAlso}
+\hypertarget{field_8form_8inc_ac72e1f5dacbab488a337f79fe485429f}{
+\index{field.form.inc@{field.form.inc}!field\_\-widget\_\-instance@{field\_\-widget\_\-instance}}
+\index{field\_\-widget\_\-instance@{field\_\-widget\_\-instance}!field.form.inc@{field.form.inc}}
+\subsubsection[{field\_\-widget\_\-instance}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-widget\_\-instance (\$ {\em element}, \/  \$ {\em form\_\-state})}}
+\label{field_8form_8inc_ac72e1f5dacbab488a337f79fe485429f}
+Retrieves the instance definition array for a widget's helper callbacks.
+
+Widgets helper element callbacks (such as process, element\_\-validate, value\_\-callback, ...) should use \hyperlink{field_8form_8inc_a71dcef632fc59641eee5238c7c6b335c}{field\_\-widget\_\-field()} and \hyperlink{field_8form_8inc_ac72e1f5dacbab488a337f79fe485429f}{field\_\-widget\_\-instance()} instead of \hyperlink{group__field__info_ga74cfc942cd2baa5c49780b08c5d357d4}{field\_\-info\_\-field()} and \hyperlink{group__field__info_ga7d4361ece7a9a8be980e3fd4a6307564}{field\_\-info\_\-instance()} when they need to access field or instance properties. See \hyperlink{group__field__widget_gaa9b0e55fd0eb57ac0f9c7c30d251971b}{hook\_\-field\_\-widget\_\-form()} for more details.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$element}]The structured array for the widget. \item[{\em \$form\_\-state}]The form state.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \$instance definition array for the current widget.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{field_8form_8inc_a71dcef632fc59641eee5238c7c6b335c}{field\_\-widget\_\-field()} 
+
+\hyperlink{group__field__widget_gaa9b0e55fd0eb57ac0f9c7c30d251971b}{hook\_\-field\_\-widget\_\-form()} 
+\end{DoxySeeAlso}

@@ -1,0 +1,33 @@
+\hypertarget{group__queue}{
+\section{Queue operations}
+\label{group__queue}\index{Queue operations@{Queue operations}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDrupalQueue}{DrupalQueue}
+\item 
+interface \hyperlink{interfaceDrupalQueueInterface}{DrupalQueueInterface}
+\item 
+interface \hyperlink{interfaceDrupalReliableQueueInterface}{DrupalReliableQueueInterface}
+\item 
+class \hyperlink{classSystemQueue}{SystemQueue}
+\item 
+class \hyperlink{classMemoryQueue}{MemoryQueue}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Queue items to allow later processing.
+
+The queue system allows placing items in a queue and processing them later. The system tries to ensure that only one consumer can process an item.
+
+Before a queue can be used it needs to be created by \hyperlink{interfaceDrupalQueueInterface_a5a657d8c1d5bb429b3e594fa0c883ad3}{DrupalQueueInterface::createQueue()}.
+
+Items can be added to the queue by passing an arbitrary data object to \hyperlink{interfaceDrupalQueueInterface_a1bdef6341808aaf8b3de821b7b71f137}{DrupalQueueInterface::createItem()}.
+
+To process an item, call \hyperlink{interfaceDrupalQueueInterface_a2f0f2ccc1f4d55c0890897ea85e75954}{DrupalQueueInterface::claimItem()} and specify how long you want to have a lease for working on that item. When finished processing, the item needs to be deleted by calling \hyperlink{interfaceDrupalQueueInterface_aa61212089c1bcc410e8f87f8e619e351}{DrupalQueueInterface::deleteItem()}. If the consumer dies, the item will be made available again by the \hyperlink{interfaceDrupalQueueInterface}{DrupalQueueInterface} implementation once the lease expires. Another consumer will then be able to receive it when calling \hyperlink{interfaceDrupalQueueInterface_a2f0f2ccc1f4d55c0890897ea85e75954}{DrupalQueueInterface::claimItem()}. Due to this, the processing code should be aware that an item might be handed over for processing more than once.
+
+The \$item object used by the \hyperlink{interfaceDrupalQueueInterface}{DrupalQueueInterface} can contain arbitrary metadata depending on the implementation. Systems using the interface should only rely on the data property which will contain the information passed to \hyperlink{interfaceDrupalQueueInterface_a1bdef6341808aaf8b3de821b7b71f137}{DrupalQueueInterface::createItem()}. The full queue item returned by \hyperlink{interfaceDrupalQueueInterface_a2f0f2ccc1f4d55c0890897ea85e75954}{DrupalQueueInterface::claimItem()} needs to be passed to \hyperlink{interfaceDrupalQueueInterface_aa61212089c1bcc410e8f87f8e619e351}{DrupalQueueInterface::deleteItem()} once processing is completed.
+
+There are two kinds of queue backends available: reliable, which preserves the order of messages and guarantees that every item will be executed at least once. The non-\/reliable kind only does a best effort to preserve order in messages and to execute them at least once but there is a small chance that some items get lost. For example, some distributed back-\/ends like Amazon SQS will be managing jobs for a large set of producers and consumers where a strict FIFO ordering will likely not be preserved. Another example would be an in-\/memory queue backend which might lose items if it crashes. However, such a backend would be able to deal with significantly more writes than a reliable queue and for many tasks this is more important. See \hyperlink{aggregator_8module_adbe7d09140773c5485cda52dd03bdab5}{aggregator\_\-cron()} for an example of how to effectively utilize a non-\/reliable queue. Another example is doing Twitter statistics -\/-\/ the small possibility of losing a few items is insignificant next to power of the queue being able to keep up with writes. As described in the processing section, regardless of the queue being reliable or not, the processing code should be aware that an item might be handed over for processing more than once (because the processing code might time out before it finishes). 

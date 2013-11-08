@@ -1,0 +1,42 @@
+\hypertarget{classUpdateQuery__sqlite}{
+\section{UpdateQuery\_\-sqlite Class Reference}
+\label{classUpdateQuery__sqlite}\index{UpdateQuery\_\-sqlite@{UpdateQuery\_\-sqlite}}
+}
+Inheritance diagram for UpdateQuery\_\-sqlite::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classUpdateQuery__sqlite}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classUpdateQuery__sqlite_a7919e3bbb318f3dba23570dbdda80fd6}{execute} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+SQLite specific implementation of \hyperlink{classUpdateQuery}{UpdateQuery}.
+
+SQLite counts all the rows that match the conditions as modified, even if they will not be affected by the query. We workaround this by ensuring that we don't select those rows.
+
+A query like this one: UPDATE test SET col1 = 'newcol1', col2 = 'newcol2' WHERE tid = 1 will become: UPDATE test SET col1 = 'newcol1', col2 = 'newcol2' WHERE tid = 1 AND (col1 $<$$>$ 'newcol1' OR col2 $<$$>$ 'newcol2') 
+
+\subsection{Member Function Documentation}
+\hypertarget{classUpdateQuery__sqlite_a7919e3bbb318f3dba23570dbdda80fd6}{
+\index{UpdateQuery\_\-sqlite@{UpdateQuery\_\-sqlite}!execute@{execute}}
+\index{execute@{execute}!UpdateQuery_sqlite@{UpdateQuery\_\-sqlite}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}UpdateQuery\_\-sqlite::execute ()}}
+\label{classUpdateQuery__sqlite_a7919e3bbb318f3dba23570dbdda80fd6}
+Executes the UPDATE query.
+
+\begin{DoxyReturn}{Returns}
+The number of rows affected by the update. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classUpdateQuery_a8a90104d1f7aa75cda332b569fd566b9}{UpdateQuery}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/database/sqlite/\hyperlink{sqlite_2query_8inc}{query.inc}\end{DoxyCompactItemize}

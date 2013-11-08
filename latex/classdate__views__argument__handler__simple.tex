@@ -1,0 +1,141 @@
+\hypertarget{classdate__views__argument__handler__simple}{
+\section{date\_\-views\_\-argument\_\-handler\_\-simple Class Reference}
+\label{classdate__views__argument__handler__simple}\index{date\_\-views\_\-argument\_\-handler\_\-simple@{date\_\-views\_\-argument\_\-handler\_\-simple}}
+}
+Inheritance diagram for date\_\-views\_\-argument\_\-handler\_\-simple::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6cm]{classdate__views__argument__handler__simple}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdate__views__argument__handler__simple_afa0fa54cf00568c919af125b94c01ede}{init} (\&\$\hyperlink{classview}{view}, \&\$options)
+\item 
+\hypertarget{classdate__views__argument__handler__simple_a04a805693b80810785675bb2ede286ad}{
+{\bfseries format} ()}
+\label{classdate__views__argument__handler__simple_a04a805693b80810785675bb2ede286ad}
+
+\item 
+\hyperlink{classdate__views__argument__handler__simple_ad4843a30369e2de82db47c204167cbb0}{get\_\-default\_\-argument} (\$raw=FALSE)
+\item 
+\hyperlink{classdate__views__argument__handler__simple_a346c709c51b14ccaaf186c3651eba925}{option\_\-definition} ()
+\item 
+\hyperlink{classdate__views__argument__handler__simple_a5e0544a2cc996a45bca1ff1982da9fbc}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classdate__views__argument__handler__simple_a69e0df0155f42ffff2722fa1bc4b7f7b}{options\_\-validate} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classdate__views__argument__handler__simple_a012035138d65e75b0f70af0e2024aa29}{summary\_\-name} (\$data)
+\item 
+\hyperlink{classdate__views__argument__handler__simple_a127ac9f2d1d7a45088719cfbbfbbdf93}{title} ()
+\item 
+\hyperlink{classdate__views__argument__handler__simple_abf0949dba7eba44e72cb5f935285716e}{summary\_\-argument} (\$data)
+\item 
+\hyperlink{classdate__views__argument__handler__simple_abfe22d750f3ce21303be3343499757c1}{summary\_\-query} ()
+\item 
+\hyperlink{classdate__views__argument__handler__simple_a284da1e34334bd9086194eef7a803d27}{query} (\$group\_\-by=FALSE)
+\item 
+\hyperlink{classdate__views__argument__handler__simple_a76b7453056c55eb7b0947dbd7fb37526}{date\_\-forbid} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Date API argument handler. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classdate__views__argument__handler__simple_a76b7453056c55eb7b0947dbd7fb37526}{
+\index{date\_\-views\_\-argument\_\-handler\_\-simple@{date\_\-views\_\-argument\_\-handler\_\-simple}!date\_\-forbid@{date\_\-forbid}}
+\index{date\_\-forbid@{date\_\-forbid}!date_views_argument_handler_simple@{date\_\-views\_\-argument\_\-handler\_\-simple}}
+\subsubsection[{date\_\-forbid}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-views\_\-argument\_\-handler\_\-simple::date\_\-forbid ()}}
+\label{classdate__views__argument__handler__simple_a76b7453056c55eb7b0947dbd7fb37526}
+Add a callback to determine if we have moved outside the valid date range for this argument. \hypertarget{classdate__views__argument__handler__simple_ad4843a30369e2de82db47c204167cbb0}{
+\index{date\_\-views\_\-argument\_\-handler\_\-simple@{date\_\-views\_\-argument\_\-handler\_\-simple}!get\_\-default\_\-argument@{get\_\-default\_\-argument}}
+\index{get\_\-default\_\-argument@{get\_\-default\_\-argument}!date_views_argument_handler_simple@{date\_\-views\_\-argument\_\-handler\_\-simple}}
+\subsubsection[{get\_\-default\_\-argument}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-views\_\-argument\_\-handler\_\-simple::get\_\-default\_\-argument (\$ {\em raw} = {\ttfamily FALSE})}}
+\label{classdate__views__argument__handler__simple_ad4843a30369e2de82db47c204167cbb0}
+Set the empty argument value to the current date, formatted appropriately for this argument. 
+
+Reimplemented from \hyperlink{classviews__handler__argument__date_a1e5320e475b9e86ed9acc59c9a525610}{views\_\-handler\_\-argument\_\-date}.\hypertarget{classdate__views__argument__handler__simple_afa0fa54cf00568c919af125b94c01ede}{
+\index{date\_\-views\_\-argument\_\-handler\_\-simple@{date\_\-views\_\-argument\_\-handler\_\-simple}!init@{init}}
+\index{init@{init}!date_views_argument_handler_simple@{date\_\-views\_\-argument\_\-handler\_\-simple}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-views\_\-argument\_\-handler\_\-simple::init (\&\$ {\em view}, \/  \&\$ {\em options})}}
+\label{classdate__views__argument__handler__simple_afa0fa54cf00568c919af125b94c01ede}
+Get granularity and use it to create the formula and a format for the results. 
+
+Reimplemented from \hyperlink{classviews__handler__argument_a2c7e59a9df090d59d9d7d2827b6da85a}{views\_\-handler\_\-argument}.
+
+Reimplemented in \hyperlink{classdate__views__argument__handler_a8dd865de550c6c5d34ab8aea1d3ba204}{date\_\-views\_\-argument\_\-handler}.\hypertarget{classdate__views__argument__handler__simple_a346c709c51b14ccaaf186c3651eba925}{
+\index{date\_\-views\_\-argument\_\-handler\_\-simple@{date\_\-views\_\-argument\_\-handler\_\-simple}!option\_\-definition@{option\_\-definition}}
+\index{option\_\-definition@{option\_\-definition}!date_views_argument_handler_simple@{date\_\-views\_\-argument\_\-handler\_\-simple}}
+\subsubsection[{option\_\-definition}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-views\_\-argument\_\-handler\_\-simple::option\_\-definition ()}}
+\label{classdate__views__argument__handler__simple_a346c709c51b14ccaaf186c3651eba925}
+Default value for the date\_\-fields option. 
+
+Reimplemented from \hyperlink{classviews__handler__argument}{views\_\-handler\_\-argument}.
+
+Reimplemented in \hyperlink{classdate__views__argument__handler_adb343ee7cff6d4db4744cd7af723d03f}{date\_\-views\_\-argument\_\-handler}.\hypertarget{classdate__views__argument__handler__simple_a5e0544a2cc996a45bca1ff1982da9fbc}{
+\index{date\_\-views\_\-argument\_\-handler\_\-simple@{date\_\-views\_\-argument\_\-handler\_\-simple}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!date_views_argument_handler_simple@{date\_\-views\_\-argument\_\-handler\_\-simple}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-views\_\-argument\_\-handler\_\-simple::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classdate__views__argument__handler__simple_a5e0544a2cc996a45bca1ff1982da9fbc}
+Add a form element to select date\_\-fields for this argument. 
+
+Reimplemented from \hyperlink{classviews__handler__argument_a44f015a0d527983ae6df2689f66b2c24}{views\_\-handler\_\-argument}.
+
+Reimplemented in \hyperlink{classdate__views__argument__handler_a590b98bc076d465f778862b82c76f6e5}{date\_\-views\_\-argument\_\-handler}.\hypertarget{classdate__views__argument__handler__simple_a69e0df0155f42ffff2722fa1bc4b7f7b}{
+\index{date\_\-views\_\-argument\_\-handler\_\-simple@{date\_\-views\_\-argument\_\-handler\_\-simple}!options\_\-validate@{options\_\-validate}}
+\index{options\_\-validate@{options\_\-validate}!date_views_argument_handler_simple@{date\_\-views\_\-argument\_\-handler\_\-simple}}
+\subsubsection[{options\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-views\_\-argument\_\-handler\_\-simple::options\_\-validate (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classdate__views__argument__handler__simple_a69e0df0155f42ffff2722fa1bc4b7f7b}
+Validate the options form. 
+
+Reimplemented from \hyperlink{classviews__handler__argument_a0d5e9e31111cfc98588f59fc9d031cc6}{views\_\-handler\_\-argument}.
+
+Reimplemented in \hyperlink{classdate__views__argument__handler_ae970be5da3129fef9deaf4ccc2274e6c}{date\_\-views\_\-argument\_\-handler}.\hypertarget{classdate__views__argument__handler__simple_a284da1e34334bd9086194eef7a803d27}{
+\index{date\_\-views\_\-argument\_\-handler\_\-simple@{date\_\-views\_\-argument\_\-handler\_\-simple}!query@{query}}
+\index{query@{query}!date_views_argument_handler_simple@{date\_\-views\_\-argument\_\-handler\_\-simple}}
+\subsubsection[{query}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-views\_\-argument\_\-handler\_\-simple::query (\$ {\em group\_\-by} = {\ttfamily FALSE})}}
+\label{classdate__views__argument__handler__simple_a284da1e34334bd9086194eef7a803d27}
+Inject a test for valid date range before the regular query. Override the parent query to be able to control the \$group. 
+
+Reimplemented from \hyperlink{classviews__handler__argument__formula_aa8108173e62c8c7dfb17e734dce537b5}{views\_\-handler\_\-argument\_\-formula}.
+
+Reimplemented in \hyperlink{classdate__views__argument__handler_aa7df86c9e200ef7e797e1ba4f2fa1158}{date\_\-views\_\-argument\_\-handler}.\hypertarget{classdate__views__argument__handler__simple_abf0949dba7eba44e72cb5f935285716e}{
+\index{date\_\-views\_\-argument\_\-handler\_\-simple@{date\_\-views\_\-argument\_\-handler\_\-simple}!summary\_\-argument@{summary\_\-argument}}
+\index{summary\_\-argument@{summary\_\-argument}!date_views_argument_handler_simple@{date\_\-views\_\-argument\_\-handler\_\-simple}}
+\subsubsection[{summary\_\-argument}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-views\_\-argument\_\-handler\_\-simple::summary\_\-argument (\$ {\em data})}}
+\label{classdate__views__argument__handler__simple_abf0949dba7eba44e72cb5f935285716e}
+Provide the argument to use to link from the summary to the next level; this will be called once per row of a summary, and used as part of \$view-\/$>$get\_\-url().
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$data}]The query results for the row. \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classviews__handler__argument_aad03acefdb44288d7e6c7793bc33f66c}{views\_\-handler\_\-argument}.\hypertarget{classdate__views__argument__handler__simple_a012035138d65e75b0f70af0e2024aa29}{
+\index{date\_\-views\_\-argument\_\-handler\_\-simple@{date\_\-views\_\-argument\_\-handler\_\-simple}!summary\_\-name@{summary\_\-name}}
+\index{summary\_\-name@{summary\_\-name}!date_views_argument_handler_simple@{date\_\-views\_\-argument\_\-handler\_\-simple}}
+\subsubsection[{summary\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-views\_\-argument\_\-handler\_\-simple::summary\_\-name (\$ {\em data})}}
+\label{classdate__views__argument__handler__simple_a012035138d65e75b0f70af0e2024aa29}
+Provide a link to the next level of the \hyperlink{classview}{view} from the summary. 
+
+Reimplemented from \hyperlink{classviews__handler__argument_a4c55a340453eed4d35c69f7ac790cac1}{views\_\-handler\_\-argument}.\hypertarget{classdate__views__argument__handler__simple_abfe22d750f3ce21303be3343499757c1}{
+\index{date\_\-views\_\-argument\_\-handler\_\-simple@{date\_\-views\_\-argument\_\-handler\_\-simple}!summary\_\-query@{summary\_\-query}}
+\index{summary\_\-query@{summary\_\-query}!date_views_argument_handler_simple@{date\_\-views\_\-argument\_\-handler\_\-simple}}
+\subsubsection[{summary\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-views\_\-argument\_\-handler\_\-simple::summary\_\-query ()}}
+\label{classdate__views__argument__handler__simple_abfe22d750f3ce21303be3343499757c1}
+Inject a test for valid date range before the summary query. 
+
+Reimplemented from \hyperlink{classviews__handler__argument__formula_a377fd11d178f88a0bd68c2ec9d6f9e00}{views\_\-handler\_\-argument\_\-formula}.\hypertarget{classdate__views__argument__handler__simple_a127ac9f2d1d7a45088719cfbbfbbdf93}{
+\index{date\_\-views\_\-argument\_\-handler\_\-simple@{date\_\-views\_\-argument\_\-handler\_\-simple}!title@{title}}
+\index{title@{title}!date_views_argument_handler_simple@{date\_\-views\_\-argument\_\-handler\_\-simple}}
+\subsubsection[{title}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-views\_\-argument\_\-handler\_\-simple::title ()}}
+\label{classdate__views__argument__handler__simple_a127ac9f2d1d7a45088719cfbbfbbdf93}
+Provide a title for the \hyperlink{classview}{view} based on the argument value. 
+
+Reimplemented from \hyperlink{classviews__handler__argument_a76181ac24e7be4a09aaafc1fa5f15ea1}{views\_\-handler\_\-argument}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/date/date\_\-views/includes/\hyperlink{date__views__argument__handler__simple_8inc}{date\_\-views\_\-argument\_\-handler\_\-simple.inc}\end{DoxyCompactItemize}

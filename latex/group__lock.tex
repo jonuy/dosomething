@@ -1,0 +1,123 @@
+\hypertarget{group__lock}{
+\section{Locking mechanisms}
+\label{group__lock}\index{Locking mechanisms@{Locking mechanisms}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__lock_ga8e0cf09d86196c0a26b50df3567108a4}{lock\_\-initialize} ()
+\item 
+\hyperlink{group__lock_ga22f64c6b65bc54d5f8f981559b0cdf04}{\_\-lock\_\-id} ()
+\item 
+\hyperlink{group__lock_gac67a4b1061491f7a869646f47b66e998}{lock\_\-acquire} (\$name, \$timeout=30.0)
+\item 
+\hyperlink{group__lock_ga095b65838e63b109f52ff6d8c00d8963}{lock\_\-may\_\-be\_\-available} (\$name)
+\item 
+\hyperlink{group__lock_ga54c2ee771edac47614b8f12d949d3376}{lock\_\-wait} (\$name, \$delay=30)
+\item 
+\hyperlink{group__lock_ga73e1456861f9aff1a506a650f43aceb0}{lock\_\-release} (\$name)
+\item 
+\hyperlink{group__lock_ga290817e14e2a9ecc0bd34c6b7b0af031}{lock\_\-release\_\-all} (\$lock\_\-id=NULL)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions to coordinate long-\/running operations across requests.
+
+In most environments, multiple Drupal page requests (a.k.a. threads or processes) will execute in parallel. This leads to potential conflicts or race conditions when two requests execute the same code at the same time. A common example of this is a rebuild like \hyperlink{group__menu_gaf36dcb9d5491ef5e7d2cf22c1f5c69f4}{menu\_\-rebuild()} where we invoke many hook implementations to get and process data from all active modules, and then delete the current data in the database to insert the new afterwards.
+
+This is a cooperative, advisory lock system. Any long-\/running operation that could potentially be attempted in parallel by multiple requests should try to acquire a lock before proceeding. By obtaining a lock, one request notifies any other requests that a specific operation is in progress which must not be executed in parallel.
+
+To use this API, pick a unique name for the lock. A sensible choice is the name of the function performing the operation. A very simple example use of this API: 
+\begin{DoxyCode}
+ function mymodule_long_operation() {
+   if (lock_acquire('mymodule_long_operation')) {
+     // Do the long operation here.
+     // ...
+     lock_release('mymodule_long_operation');
+   }
+ }
+\end{DoxyCode}
+
+
+If a function acquires a lock it should always release it when the operation is complete by calling \hyperlink{group__lock_ga73e1456861f9aff1a506a650f43aceb0}{lock\_\-release()}, as in the example.
+
+A function that has acquired a lock may attempt to renew a lock (extend the duration of the lock) by calling \hyperlink{group__lock_gac67a4b1061491f7a869646f47b66e998}{lock\_\-acquire()} again during the operation. Failure to renew a lock is indicative that another request has acquired the lock, and that the current operation may need to be aborted.
+
+If a function fails to acquire a lock it may either immediately return, or it may call \hyperlink{group__lock_ga54c2ee771edac47614b8f12d949d3376}{lock\_\-wait()} if the rest of the current page request requires that the operation in question be complete. After \hyperlink{group__lock_ga54c2ee771edac47614b8f12d949d3376}{lock\_\-wait()} returns, the function may again attempt to acquire the lock, or may simply allow the page request to proceed on the assumption that a parallel request completed the operation.
+
+\hyperlink{group__lock_gac67a4b1061491f7a869646f47b66e998}{lock\_\-acquire()} and \hyperlink{group__lock_ga54c2ee771edac47614b8f12d949d3376}{lock\_\-wait()} will automatically break (delete) a lock whose duration has exceeded the timeout specified when it was acquired.
+
+Alternative implementations of this API (such as APC) may be substituted by setting the 'lock\_\-inc' variable to an alternate include filepath. Since this is an API intended to support alternative implementations, code using this API should never rely upon specific implementation details (for example no code should look for or directly modify a lock in the \{semaphore\} table). 
+
+\subsection{Function Documentation}
+\hypertarget{group__lock_ga22f64c6b65bc54d5f8f981559b0cdf04}{
+\index{lock@{lock}!\_\-lock\_\-id@{\_\-lock\_\-id}}
+\index{\_\-lock\_\-id@{\_\-lock\_\-id}!lock@{lock}}
+\subsubsection[{\_\-lock\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}\_\-lock\_\-id ()}}
+\label{group__lock_ga22f64c6b65bc54d5f8f981559b0cdf04}
+Helper function to get this request's unique id. \hypertarget{group__lock_gac67a4b1061491f7a869646f47b66e998}{
+\index{lock@{lock}!lock\_\-acquire@{lock\_\-acquire}}
+\index{lock\_\-acquire@{lock\_\-acquire}!lock@{lock}}
+\subsubsection[{lock\_\-acquire}]{\setlength{\rightskip}{0pt plus 5cm}lock\_\-acquire (\$ {\em name}, \/  \$ {\em timeout} = {\ttfamily 30.0})}}
+\label{group__lock_gac67a4b1061491f7a869646f47b66e998}
+Acquire (or renew) a lock, but do not block if it fails.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]The name of the lock. \item[{\em \$timeout}]A number of seconds (float) before the lock expires (minimum of 0.001).\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the lock was acquired, FALSE if it failed. 
+\end{DoxyReturn}
+\hypertarget{group__lock_ga8e0cf09d86196c0a26b50df3567108a4}{
+\index{lock@{lock}!lock\_\-initialize@{lock\_\-initialize}}
+\index{lock\_\-initialize@{lock\_\-initialize}!lock@{lock}}
+\subsubsection[{lock\_\-initialize}]{\setlength{\rightskip}{0pt plus 5cm}lock\_\-initialize ()}}
+\label{group__lock_ga8e0cf09d86196c0a26b50df3567108a4}
+Initialize the locking system. \hypertarget{group__lock_ga095b65838e63b109f52ff6d8c00d8963}{
+\index{lock@{lock}!lock\_\-may\_\-be\_\-available@{lock\_\-may\_\-be\_\-available}}
+\index{lock\_\-may\_\-be\_\-available@{lock\_\-may\_\-be\_\-available}!lock@{lock}}
+\subsubsection[{lock\_\-may\_\-be\_\-available}]{\setlength{\rightskip}{0pt plus 5cm}lock\_\-may\_\-be\_\-available (\$ {\em name})}}
+\label{group__lock_ga095b65838e63b109f52ff6d8c00d8963}
+Check if lock acquired by a different process may be available.
+
+If an existing lock has expired, it is removed.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]The name of the lock.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if there is no lock or it was removed, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{group__lock_ga73e1456861f9aff1a506a650f43aceb0}{
+\index{lock@{lock}!lock\_\-release@{lock\_\-release}}
+\index{lock\_\-release@{lock\_\-release}!lock@{lock}}
+\subsubsection[{lock\_\-release}]{\setlength{\rightskip}{0pt plus 5cm}lock\_\-release (\$ {\em name})}}
+\label{group__lock_ga73e1456861f9aff1a506a650f43aceb0}
+Release a lock previously acquired by \hyperlink{group__lock_gac67a4b1061491f7a869646f47b66e998}{lock\_\-acquire()}.
+
+This will release the named lock if it is still held by the current request.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]The name of the lock. \end{DoxyParams}
+\hypertarget{group__lock_ga290817e14e2a9ecc0bd34c6b7b0af031}{
+\index{lock@{lock}!lock\_\-release\_\-all@{lock\_\-release\_\-all}}
+\index{lock\_\-release\_\-all@{lock\_\-release\_\-all}!lock@{lock}}
+\subsubsection[{lock\_\-release\_\-all}]{\setlength{\rightskip}{0pt plus 5cm}lock\_\-release\_\-all (\$ {\em lock\_\-id} = {\ttfamily NULL})}}
+\label{group__lock_ga290817e14e2a9ecc0bd34c6b7b0af031}
+Release all previously acquired locks. \hypertarget{group__lock_ga54c2ee771edac47614b8f12d949d3376}{
+\index{lock@{lock}!lock\_\-wait@{lock\_\-wait}}
+\index{lock\_\-wait@{lock\_\-wait}!lock@{lock}}
+\subsubsection[{lock\_\-wait}]{\setlength{\rightskip}{0pt plus 5cm}lock\_\-wait (\$ {\em name}, \/  \$ {\em delay} = {\ttfamily 30})}}
+\label{group__lock_ga54c2ee771edac47614b8f12d949d3376}
+Wait for a lock to be available.
+
+This function may be called in a request that fails to acquire a desired lock. This will block further execution until the lock is available or the specified delay in seconds is reached. This should not be used with locks that are acquired very frequently, since the lock is likely to be acquired again by a different request while waiting.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]The name of the lock. \item[{\em \$delay}]The maximum number of seconds to wait, as an integer.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the lock holds, FALSE if it is available. 
+\end{DoxyReturn}

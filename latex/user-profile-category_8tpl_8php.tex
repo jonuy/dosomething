@@ -1,0 +1,44 @@
+\hypertarget{user-profile-category_8tpl_8php}{
+\section{html/modules/user/user-\/profile-\/category.tpl.php File Reference}
+\label{user-profile-category_8tpl_8php}\index{html/modules/user/user-\/profile-\/category.tpl.php@{html/modules/user/user-\/profile-\/category.tpl.php}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{user-profile-category_8tpl_8php_aa9240680e3cbd38bd81f4a04400b4b1a}{
+if(\$title) {\bfseries endif}}
+\label{user-profile-category_8tpl_8php_aa9240680e3cbd38bd81f4a04400b4b1a}
+
+\item 
+\hypertarget{user-profile-category_8tpl_8php_a9c88c4272fa40546577b45392a0b3cd3}{
+print {\bfseries \$attributes}}
+\label{user-profile-category_8tpl_8php_a9c88c4272fa40546577b45392a0b3cd3}
+
+\item 
+\hypertarget{user-profile-category_8tpl_8php_a4e552bb6a277c7ba559bc5d42be75b41}{
+print {\bfseries \$profile\_\-items}}
+\label{user-profile-category_8tpl_8php_a4e552bb6a277c7ba559bc5d42be75b41}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Default theme implementation to present profile categories (groups of profile items).
+
+Categories are defined when configuring user profile fields for the site. It can also be defined by modules. All profile items for a category will be output through the \$profile\_\-items variable.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user-profile-item_8tpl_8php}{user-\/profile-\/item.tpl.php} where each profile item is rendered. It is implemented as a definition list by default. 
+
+\hyperlink{user-profile_8tpl_8php}{user-\/profile.tpl.php} where all items and categories are collected and printed out.
+\end{DoxySeeAlso}
+Available variables:
+\begin{DoxyItemize}
+\item \$title: Category title for the group of items.
+\item \$profile\_\-items: All the items for the group rendered through \hyperlink{user-profile-item_8tpl_8php}{user-\/profile-\/item.tpl.php}.
+\item \$attributes: HTML attributes. Usually renders classes.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8pages_8inc_a0b8961894318ad623017b48569515d4a}{template\_\-preprocess\_\-user\_\-profile\_\-category()} 
+\end{DoxySeeAlso}

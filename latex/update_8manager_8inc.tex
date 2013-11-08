@@ -1,0 +1,49 @@
+\hypertarget{update_8manager_8inc}{
+\section{html/modules/update/update.manager.inc File Reference}
+\label{update_8manager_8inc}\index{html/modules/update/update.manager.inc@{html/modules/update/update.manager.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__forms_ga0fa2e185b0bcbac10f995d964a199c65}{update\_\-manager\_\-update\_\-form} (\$form, \$form\_\-state=array(), \$context)
+\item 
+\hyperlink{group__themeable_gabb2fc045b955c164831ddb609f8720c7}{theme\_\-update\_\-manager\_\-update\_\-form} (\$variables)
+\item 
+\hyperlink{group__update__manager__update_ga578871dbee92e6bcb2f48ba232554c27}{update\_\-manager\_\-update\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__update__manager__update_gaec3a60b324711da2e658cf10d9b85447}{update\_\-manager\_\-update\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__update__manager__update_ga50343ba82d02305076486ec30c543f1f}{update\_\-manager\_\-download\_\-batch\_\-finished} (\$success, \$results)
+\item 
+\hyperlink{group__forms_gab1105c1314e1bd8822eef3cb16f78b26}{update\_\-manager\_\-update\_\-ready\_\-form} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__update__manager__update_gaeab4690bf95cb0d0b517a0b9161e5045}{update\_\-manager\_\-update\_\-ready\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__forms_ga5905518e0d54228827271f90dcd8c5c3}{update\_\-manager\_\-install\_\-form} (\$form, \&\$form\_\-state, \$context)
+\item 
+\hyperlink{group__update__manager__install_gad9962bc5fd3a9c0eb86cb469d247d7dc}{\_\-update\_\-manager\_\-check\_\-backends} (\&\$form, \$operation)
+\item 
+\hyperlink{group__update__manager__install_ga56ab9860e1bc481b261a24c6ef480f75}{update\_\-manager\_\-install\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__update__manager__install_ga52e9f2cddddddccf921284b01f9505b0}{update\_\-manager\_\-install\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__update__manager__file_gaacbdc92035b1bb68dbb741a4917b8185}{update\_\-manager\_\-archive\_\-extract} (\$file, \$directory)
+\item 
+\hyperlink{group__update__manager__file_ga8c352241e56ce6de6b1064725d84801b}{update\_\-manager\_\-archive\_\-verify} (\$project, \$archive\_\-file, \$directory)
+\item 
+\hyperlink{group__update__manager__file_gaef701662a2b3a2bfff2c0b819860a547}{update\_\-manager\_\-file\_\-get} (\$url)
+\item 
+\hyperlink{group__update__manager__file_gad7fdbc7766b87956b181eb5fbec9a609}{update\_\-manager\_\-batch\_\-project\_\-get} (\$project, \$url, \&\$context)
+\item 
+\hyperlink{group__update__manager__file_ga88ed61885931bd3df617ca78b4fadb6c}{update\_\-manager\_\-local\_\-transfers\_\-allowed} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Administrative screens and processing functions of the Update Manager module.
+
+This allows site administrators with the 'administer software updates' permission to either upgrade existing projects, or download and install new ones, so long as the killswitch setting ('allow\_\-authorize\_\-operations') is still TRUE.
+
+To install new code, the administrator is prompted for either the URL of an archive file, or to directly upload the archive file. The archive is loaded into a temporary location, extracted, and verified. If everything is successful, the user is redirected to \hyperlink{authorize_8php}{authorize.php} to type in file transfer credentials and authorize the installation to proceed with elevated privileges, such that the extracted files can be copied out of the temporary location and into the live web root.
+
+Updating existing code is a more elaborate process. The first step is a selection form where the user is presented with a table of installed projects that are missing newer releases. The user selects which projects they wish to update, and presses the \char`\"{}Download updates\char`\"{} button to continue. This sets up a batch to fetch all the selected releases, and redirects to admin/update/download to display the batch progress bar as it runs. Each batch operation is responsible for downloading a single file, extracting the archive, and verifying the contents. If there are any errors, the user is redirected back to the first page with the error messages. If all downloads were extacted and verified, the user is instead redirected to admin/update/ready, a landing page which reminds them to backup their database and asks if they want to put the site offline during the update. Once the user presses the \char`\"{}Install updates\char`\"{} button, they are redirected to \hyperlink{authorize_8php}{authorize.php} to supply their web root file access credentials. The authorized operation (which lives in \hyperlink{update_8authorize_8inc}{update.authorize.inc}) sets up a batch to copy each extracted update from the temporary location into the live web root. 

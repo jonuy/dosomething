@@ -1,0 +1,200 @@
+\hypertarget{image_8effects_8inc}{
+\section{html/modules/image/image.effects.inc File Reference}
+\label{image_8effects_8inc}\index{html/modules/image/image.effects.inc@{html/modules/image/image.effects.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{image_8effects_8inc_afb803d9c3a66defed06662a85be09dd7}{image\_\-image\_\-effect\_\-info} ()
+\item 
+\hyperlink{image_8effects_8inc_a51bdcc43e0a3213fa4255254583e0cc8}{image\_\-resize\_\-effect} (\&\$image, \$data)
+\item 
+\hyperlink{image_8effects_8inc_a1bfdf4f818750949e3c1665b8dab8635}{image\_\-resize\_\-dimensions} (array \&\$dimensions, array \$data)
+\item 
+\hyperlink{image_8effects_8inc_a8884cec5b6adcc1c0728ff82043cc87a}{image\_\-scale\_\-effect} (\&\$image, \$data)
+\item 
+\hyperlink{image_8effects_8inc_ae48bbf6c76176bbda1608536ac46f125}{image\_\-scale\_\-dimensions} (array \&\$dimensions, array \$data)
+\item 
+\hyperlink{image_8effects_8inc_a90a017a1639d3d79a9e76b492079279f}{image\_\-crop\_\-effect} (\&\$image, \$data)
+\item 
+\hyperlink{image_8effects_8inc_a5280c11ad64a5dc2a5e3bb30e68f1bff}{image\_\-scale\_\-and\_\-crop\_\-effect} (\&\$image, \$data)
+\item 
+\hyperlink{image_8effects_8inc_a7952d1a3347f2974385677b80325256e}{image\_\-desaturate\_\-effect} (\&\$image, \$data)
+\item 
+\hyperlink{image_8effects_8inc_ad9acbcdd3e9f925b5e6f005c5f292283}{image\_\-rotate\_\-effect} (\&\$image, \$data)
+\item 
+\hyperlink{image_8effects_8inc_ac0eea036cc6c90cf7e96934462dad22f}{image\_\-rotate\_\-dimensions} (array \&\$dimensions, array \$data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions needed to execute image effects provided by Image module. 
+
+\subsection{Function Documentation}
+\hypertarget{image_8effects_8inc_a90a017a1639d3d79a9e76b492079279f}{
+\index{image.effects.inc@{image.effects.inc}!image\_\-crop\_\-effect@{image\_\-crop\_\-effect}}
+\index{image\_\-crop\_\-effect@{image\_\-crop\_\-effect}!image.effects.inc@{image.effects.inc}}
+\subsubsection[{image\_\-crop\_\-effect}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-crop\_\-effect (\&\$ {\em image}, \/  \$ {\em data})}}
+\label{image_8effects_8inc_a90a017a1639d3d79a9e76b492079279f}
+Image effect callback; Crop an image resource.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object returned by \hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()}. \item[{\em \$data}]An array of attributes to use when performing the crop effect with the following items:
+\begin{DoxyItemize}
+\item \char`\"{}width\char`\"{}: An integer representing the desired width in pixels.
+\item \char`\"{}height\char`\"{}: An integer representing the desired height in pixels.
+\item \char`\"{}anchor\char`\"{}: A string describing where the crop should originate in the form of \char`\"{}XOFFSET-\/YOFFSET\char`\"{}. XOFFSET is either a number of pixels or \char`\"{}left\char`\"{}, \char`\"{}center\char`\"{}, \char`\"{}right\char`\"{} and YOFFSET is either a number of pixels or \char`\"{}top\char`\"{}, \char`\"{}center\char`\"{}, \char`\"{}bottom\char`\"{}. 
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success. FALSE on failure to crop image. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_gaaf7d382a8ec190f746478848ed309fe7}{image\_\-crop()} 
+\end{DoxySeeAlso}
+\hypertarget{image_8effects_8inc_a7952d1a3347f2974385677b80325256e}{
+\index{image.effects.inc@{image.effects.inc}!image\_\-desaturate\_\-effect@{image\_\-desaturate\_\-effect}}
+\index{image\_\-desaturate\_\-effect@{image\_\-desaturate\_\-effect}!image.effects.inc@{image.effects.inc}}
+\subsubsection[{image\_\-desaturate\_\-effect}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-desaturate\_\-effect (\&\$ {\em image}, \/  \$ {\em data})}}
+\label{image_8effects_8inc_a7952d1a3347f2974385677b80325256e}
+Image effect callback; Desaturate (grayscale) an image resource.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object returned by \hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()}. \item[{\em \$data}]An array of attributes to use when performing the desaturate effect. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success. FALSE on failure to desaturate image. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_gadfcfdfcf1521b26ec790fc017c151aff}{image\_\-desaturate()} 
+\end{DoxySeeAlso}
+\hypertarget{image_8effects_8inc_afb803d9c3a66defed06662a85be09dd7}{
+\index{image.effects.inc@{image.effects.inc}!image\_\-image\_\-effect\_\-info@{image\_\-image\_\-effect\_\-info}}
+\index{image\_\-image\_\-effect\_\-info@{image\_\-image\_\-effect\_\-info}!image.effects.inc@{image.effects.inc}}
+\subsubsection[{image\_\-image\_\-effect\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-image\_\-effect\_\-info ()}}
+\label{image_8effects_8inc_afb803d9c3a66defed06662a85be09dd7}
+Implements \hyperlink{group__hooks_ga9681816aeb01a316e98457b40a01f8ed}{hook\_\-image\_\-effect\_\-info()}. \hypertarget{image_8effects_8inc_a1bfdf4f818750949e3c1665b8dab8635}{
+\index{image.effects.inc@{image.effects.inc}!image\_\-resize\_\-dimensions@{image\_\-resize\_\-dimensions}}
+\index{image\_\-resize\_\-dimensions@{image\_\-resize\_\-dimensions}!image.effects.inc@{image.effects.inc}}
+\subsubsection[{image\_\-resize\_\-dimensions}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-resize\_\-dimensions (array \&\$ {\em dimensions}, \/  array \$ {\em data})}}
+\label{image_8effects_8inc_a1bfdf4f818750949e3c1665b8dab8635}
+Image dimensions callback; Resize.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$dimensions}]Dimensions to be modified -\/ an array with components width and height, in pixels. \item[{\em \$data}]An array of attributes to use when performing the resize effect with the following items:
+\begin{DoxyItemize}
+\item \char`\"{}width\char`\"{}: An integer representing the desired width in pixels.
+\item \char`\"{}height\char`\"{}: An integer representing the desired height in pixels. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{image_8effects_8inc_a51bdcc43e0a3213fa4255254583e0cc8}{
+\index{image.effects.inc@{image.effects.inc}!image\_\-resize\_\-effect@{image\_\-resize\_\-effect}}
+\index{image\_\-resize\_\-effect@{image\_\-resize\_\-effect}!image.effects.inc@{image.effects.inc}}
+\subsubsection[{image\_\-resize\_\-effect}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-resize\_\-effect (\&\$ {\em image}, \/  \$ {\em data})}}
+\label{image_8effects_8inc_a51bdcc43e0a3213fa4255254583e0cc8}
+Image effect callback; Resize an image resource.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object returned by \hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()}. \item[{\em \$data}]An array of attributes to use when performing the resize effect with the following items:
+\begin{DoxyItemize}
+\item \char`\"{}width\char`\"{}: An integer representing the desired width in pixels.
+\item \char`\"{}height\char`\"{}: An integer representing the desired height in pixels.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success. FALSE on failure to resize image.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_ga991594ed9388b740bc98a162b6bbc449}{image\_\-resize()} 
+\end{DoxySeeAlso}
+\hypertarget{image_8effects_8inc_ac0eea036cc6c90cf7e96934462dad22f}{
+\index{image.effects.inc@{image.effects.inc}!image\_\-rotate\_\-dimensions@{image\_\-rotate\_\-dimensions}}
+\index{image\_\-rotate\_\-dimensions@{image\_\-rotate\_\-dimensions}!image.effects.inc@{image.effects.inc}}
+\subsubsection[{image\_\-rotate\_\-dimensions}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-rotate\_\-dimensions (array \&\$ {\em dimensions}, \/  array \$ {\em data})}}
+\label{image_8effects_8inc_ac0eea036cc6c90cf7e96934462dad22f}
+Image dimensions callback; Rotate.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$dimensions}]Dimensions to be modified -\/ an array with components width and height, in pixels. \item[{\em \$data}]An array of attributes to use when performing the rotate effect containing the following items:
+\begin{DoxyItemize}
+\item \char`\"{}degrees\char`\"{}: The number of (clockwise) degrees to rotate the image.
+\item \char`\"{}random\char`\"{}: A boolean indicating that a random rotation angle should be used for this image. The angle specified in \char`\"{}degrees\char`\"{} is used as a positive and negative maximum. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{image_8effects_8inc_ad9acbcdd3e9f925b5e6f005c5f292283}{
+\index{image.effects.inc@{image.effects.inc}!image\_\-rotate\_\-effect@{image\_\-rotate\_\-effect}}
+\index{image\_\-rotate\_\-effect@{image\_\-rotate\_\-effect}!image.effects.inc@{image.effects.inc}}
+\subsubsection[{image\_\-rotate\_\-effect}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-rotate\_\-effect (\&\$ {\em image}, \/  \$ {\em data})}}
+\label{image_8effects_8inc_ad9acbcdd3e9f925b5e6f005c5f292283}
+Image effect callback; Rotate an image resource.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object returned by \hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()}. \item[{\em \$data}]An array of attributes to use when performing the rotate effect containing the following items:
+\begin{DoxyItemize}
+\item \char`\"{}degrees\char`\"{}: The number of (clockwise) degrees to rotate the image.
+\item \char`\"{}random\char`\"{}: A boolean indicating that a random rotation angle should be used for this image. The angle specified in \char`\"{}degrees\char`\"{} is used as a positive and negative maximum.
+\item \char`\"{}bgcolor\char`\"{}: The background color to use for exposed areas of the image. Use web-\/style hex colors (FFFFFF for white, \#000000 for black). Leave blank for transparency on image types that support it. 
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success. FALSE on failure to rotate image. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_gaccf6671cd3ed866c6463ef6ae6436dc3}{image\_\-rotate()}. 
+\end{DoxySeeAlso}
+\hypertarget{image_8effects_8inc_a5280c11ad64a5dc2a5e3bb30e68f1bff}{
+\index{image.effects.inc@{image.effects.inc}!image\_\-scale\_\-and\_\-crop\_\-effect@{image\_\-scale\_\-and\_\-crop\_\-effect}}
+\index{image\_\-scale\_\-and\_\-crop\_\-effect@{image\_\-scale\_\-and\_\-crop\_\-effect}!image.effects.inc@{image.effects.inc}}
+\subsubsection[{image\_\-scale\_\-and\_\-crop\_\-effect}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-scale\_\-and\_\-crop\_\-effect (\&\$ {\em image}, \/  \$ {\em data})}}
+\label{image_8effects_8inc_a5280c11ad64a5dc2a5e3bb30e68f1bff}
+Image effect callback; Scale and crop an image resource.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object returned by \hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()}. \item[{\em \$data}]An array of attributes to use when performing the scale and crop effect with the following items:
+\begin{DoxyItemize}
+\item \char`\"{}width\char`\"{}: An integer representing the desired width in pixels.
+\item \char`\"{}height\char`\"{}: An integer representing the desired height in pixels. 
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success. FALSE on failure to scale and crop image. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_ga8d6850eecb498cf1683808eb66b74465}{image\_\-scale\_\-and\_\-crop()} 
+\end{DoxySeeAlso}
+\hypertarget{image_8effects_8inc_ae48bbf6c76176bbda1608536ac46f125}{
+\index{image.effects.inc@{image.effects.inc}!image\_\-scale\_\-dimensions@{image\_\-scale\_\-dimensions}}
+\index{image\_\-scale\_\-dimensions@{image\_\-scale\_\-dimensions}!image.effects.inc@{image.effects.inc}}
+\subsubsection[{image\_\-scale\_\-dimensions}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-scale\_\-dimensions (array \&\$ {\em dimensions}, \/  array \$ {\em data})}}
+\label{image_8effects_8inc_ae48bbf6c76176bbda1608536ac46f125}
+Image dimensions callback; Scale.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$dimensions}]Dimensions to be modified -\/ an array with components width and height, in pixels. \item[{\em \$data}]An array of attributes to use when performing the scale effect with the following items:
+\begin{DoxyItemize}
+\item \char`\"{}width\char`\"{}: An integer representing the desired width in pixels.
+\item \char`\"{}height\char`\"{}: An integer representing the desired height in pixels.
+\item \char`\"{}upscale\char`\"{}: A boolean indicating that the image should be upscaled if the dimensions are larger than the original image. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{image_8effects_8inc_a8884cec5b6adcc1c0728ff82043cc87a}{
+\index{image.effects.inc@{image.effects.inc}!image\_\-scale\_\-effect@{image\_\-scale\_\-effect}}
+\index{image\_\-scale\_\-effect@{image\_\-scale\_\-effect}!image.effects.inc@{image.effects.inc}}
+\subsubsection[{image\_\-scale\_\-effect}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-scale\_\-effect (\&\$ {\em image}, \/  \$ {\em data})}}
+\label{image_8effects_8inc_a8884cec5b6adcc1c0728ff82043cc87a}
+Image effect callback; Scale an image resource.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object returned by \hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()}. \item[{\em \$data}]An array of attributes to use when performing the scale effect with the following items:
+\begin{DoxyItemize}
+\item \char`\"{}width\char`\"{}: An integer representing the desired width in pixels.
+\item \char`\"{}height\char`\"{}: An integer representing the desired height in pixels.
+\item \char`\"{}upscale\char`\"{}: A boolean indicating that the image should be upscaled if the dimensions are larger than the original image.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success. FALSE on failure to scale image.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_ga2eac147bb70d14d9439d6b0d54023ce3}{image\_\-scale()} 
+\end{DoxySeeAlso}

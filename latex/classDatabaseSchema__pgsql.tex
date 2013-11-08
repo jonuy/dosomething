@@ -1,0 +1,422 @@
+\hypertarget{classDatabaseSchema__pgsql}{
+\section{DatabaseSchema\_\-pgsql Class Reference}
+\label{classDatabaseSchema__pgsql}\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}}
+}
+Inheritance diagram for DatabaseSchema\_\-pgsql::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classDatabaseSchema__pgsql}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDatabaseSchema__pgsql_a5daa813b30b1ae806afb0831782c7d9c}{queryTableInformation} (\$table)
+\item 
+\hyperlink{classDatabaseSchema__pgsql_a696ce531f8a2cc71aa295353a0240d7b}{queryFieldInformation} (\$table, \$field)
+\item 
+\hyperlink{classDatabaseSchema__pgsql_a918cab53fb09222d7b017c527bb9534e}{getFieldTypeMap} ()
+\item 
+\hyperlink{classDatabaseSchema__pgsql_a899f676d802888ded3f6d4a171794f53}{renameTable} (\$table, \$new\_\-name)
+\item 
+\hyperlink{classDatabaseSchema__pgsql_a7d84e7dde7dfcf415b5732eb6f97fbe0}{dropTable} (\$table)
+\item 
+\hyperlink{classDatabaseSchema__pgsql_ad2dad402ce094b71c40136b02c70bc3f}{addField} (\$table, \$field, \$spec, \$new\_\-keys=array())
+\item 
+\hyperlink{classDatabaseSchema__pgsql_a08e3aef1903dc40b2f0c75d4f18507bf}{dropField} (\$table, \$field)
+\item 
+\hyperlink{classDatabaseSchema__pgsql_a2f17e2a4831ccba761ff37080acad92b}{fieldSetDefault} (\$table, \$field, \$default)
+\item 
+\hyperlink{classDatabaseSchema__pgsql_ab2d9f824a7b01c5b6ed218cd6beae1cb}{fieldSetNoDefault} (\$table, \$field)
+\item 
+\hyperlink{classDatabaseSchema__pgsql_aee7c3f672034280888fd9533a7c98835}{indexExists} (\$table, \$name)
+\item 
+\hyperlink{classDatabaseSchema__pgsql_ad6f1224f726c193393c134c975a0cd50}{addPrimaryKey} (\$table, \$fields)
+\item 
+\hyperlink{classDatabaseSchema__pgsql_ae1548317341c45c01e0c67f9ebd9a057}{dropPrimaryKey} (\$table)
+\item 
+\hyperlink{classDatabaseSchema__pgsql_a950dbc66389f5bf5028dfd6b310e4092}{addUniqueKey} (\$table, \$name, \$fields)
+\item 
+\hyperlink{classDatabaseSchema__pgsql_a1fd8f4f016bf0b242448dc60506ab6cf}{dropUniqueKey} (\$table, \$name)
+\item 
+\hyperlink{classDatabaseSchema__pgsql_afced2f073c4a42004d74b6feb1f3f46e}{addIndex} (\$table, \$name, \$fields)
+\item 
+\hyperlink{classDatabaseSchema__pgsql_a6c04b76c95ca7f68995baae8b0fe5b08}{dropIndex} (\$table, \$name)
+\item 
+\hyperlink{classDatabaseSchema__pgsql_adae800c8871e30a70f3896b730c12ed3}{changeField} (\$table, \$field, \$field\_\-new, \$spec, \$new\_\-keys=array())
+\item 
+\hyperlink{classDatabaseSchema__pgsql_aa500999b6f0ce930ece44f98659a7243}{getComment} (\$table, \$column=NULL)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDatabaseSchema__pgsql_a71a8f78d8cabb3ad4a1db0e9f058e740}{createTableSql} (\$name, \$table)
+\item 
+\hyperlink{classDatabaseSchema__pgsql_a77e847ece697a97079c2ecf0fb7eda47}{createFieldSql} (\$name, \$spec)
+\item 
+\hyperlink{classDatabaseSchema__pgsql_ac951ca95de7746ddd930e8678f0d7f33}{processField} (\$field)
+\item 
+\hypertarget{classDatabaseSchema__pgsql_aa95db8ae9b2d37011dd39345db866863}{
+{\bfseries \_\-createKeySql} (\$fields)}
+\label{classDatabaseSchema__pgsql_aa95db8ae9b2d37011dd39345db866863}
+
+\item 
+\hyperlink{classDatabaseSchema__pgsql_ae795d8b318af21e0e57bb6ba9ea7ad93}{constraintExists} (\$table, \$name)
+\item 
+\hypertarget{classDatabaseSchema__pgsql_a2a6231ce69a44e05c2109a2107800db3}{
+{\bfseries \_\-createIndexSql} (\$table, \$name, \$fields)}
+\label{classDatabaseSchema__pgsql_a2a6231ce69a44e05c2109a2107800db3}
+
+\item 
+\hypertarget{classDatabaseSchema__pgsql_aee38f09de28ea80d6fc4a8daf6c2598c}{
+{\bfseries \_\-createKeys} (\$table, \$new\_\-keys)}
+\label{classDatabaseSchema__pgsql_aee38f09de28ea80d6fc4a8daf6c2598c}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDatabaseSchema__pgsql_ab0d08fd2610abec3e3afd1c71b6a23fe}{
+{\bfseries \$tableInformation} = array()}
+\label{classDatabaseSchema__pgsql_ab0d08fd2610abec3e3afd1c71b6a23fe}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDatabaseSchema__pgsql_ad2dad402ce094b71c40136b02c70bc3f}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!addField@{addField}}
+\index{addField@{addField}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{addField}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::addField (\$ {\em table}, \/  \$ {\em field}, \/  \$ {\em spec}, \/  \$ {\em keys\_\-new} = {\ttfamily array()})}}
+\label{classDatabaseSchema__pgsql_ad2dad402ce094b71c40136b02c70bc3f}
+Add a new field to a table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]Name of the table to be altered. \item[{\em \$field}]Name of the field to be added. \item[{\em \$spec}]The field specification array, as taken from a schema definition. The specification may also contain the key 'initial', the newly created field will be set to the value of the key in all rows. This is most useful for creating NOT NULL columns with no default value in existing tables. \item[{\em \$keys\_\-new}]Optional keys and indexes specification to be created on the table along with adding the field. The format is the same as a table specification but without the 'fields' element. If you are adding a type 'serial' field, you MUST specify at least one key or index including it in this array. See \hyperlink{group__schemaapi_ga9e0a4211eb8137e187d5f3f4fa716cea}{db\_\-change\_\-field()} for more explanation why.\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseSchemaObjectDoesNotExistException}{DatabaseSchemaObjectDoesNotExistException}}]If the specified table doesn't exist. \item[{\em \hyperlink{classDatabaseSchemaObjectExistsException}{DatabaseSchemaObjectExistsException}}]If the specified table already has a field by that name. \end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_a54800af6c4094cea196e1c66b5106c99}{DatabaseSchema}.\hypertarget{classDatabaseSchema__pgsql_afced2f073c4a42004d74b6feb1f3f46e}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!addIndex@{addIndex}}
+\index{addIndex@{addIndex}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{addIndex}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::addIndex (\$ {\em table}, \/  \$ {\em name}, \/  \$ {\em fields})}}
+\label{classDatabaseSchema__pgsql_afced2f073c4a42004d74b6feb1f3f46e}
+Add an index.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$name}]The name of the index. \item[{\em \$fields}]An array of field names.\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseSchemaObjectDoesNotExistException}{DatabaseSchemaObjectDoesNotExistException}}]If the specified table doesn't exist. \item[{\em \hyperlink{classDatabaseSchemaObjectExistsException}{DatabaseSchemaObjectExistsException}}]If the specified table already has an index by that name. \end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_a12f4b519abe55aaef3e4d736dbb27ab7}{DatabaseSchema}.\hypertarget{classDatabaseSchema__pgsql_ad6f1224f726c193393c134c975a0cd50}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!addPrimaryKey@{addPrimaryKey}}
+\index{addPrimaryKey@{addPrimaryKey}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{addPrimaryKey}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::addPrimaryKey (\$ {\em table}, \/  \$ {\em fields})}}
+\label{classDatabaseSchema__pgsql_ad6f1224f726c193393c134c975a0cd50}
+Add a primary key.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$fields}]Fields for the primary key.\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseSchemaObjectDoesNotExistException}{DatabaseSchemaObjectDoesNotExistException}}]If the specified table doesn't exist. \item[{\em \hyperlink{classDatabaseSchemaObjectExistsException}{DatabaseSchemaObjectExistsException}}]If the specified table already has a primary key. \end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_abe9490392e8408eb3847256aeb15bba0}{DatabaseSchema}.\hypertarget{classDatabaseSchema__pgsql_a950dbc66389f5bf5028dfd6b310e4092}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!addUniqueKey@{addUniqueKey}}
+\index{addUniqueKey@{addUniqueKey}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{addUniqueKey}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::addUniqueKey (\$ {\em table}, \/  \$ {\em name}, \/  \$ {\em fields})}}
+\label{classDatabaseSchema__pgsql_a950dbc66389f5bf5028dfd6b310e4092}
+Add a unique key.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$name}]The name of the key. \item[{\em \$fields}]An array of field names.\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseSchemaObjectDoesNotExistException}{DatabaseSchemaObjectDoesNotExistException}}]If the specified table doesn't exist. \item[{\em \hyperlink{classDatabaseSchemaObjectExistsException}{DatabaseSchemaObjectExistsException}}]If the specified table already has a key by that name. \end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_ac2e6358da1c2d38fe6a1a1d003dac8ca}{DatabaseSchema}.\hypertarget{classDatabaseSchema__pgsql_adae800c8871e30a70f3896b730c12ed3}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!changeField@{changeField}}
+\index{changeField@{changeField}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{changeField}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::changeField (\$ {\em table}, \/  \$ {\em field}, \/  \$ {\em field\_\-new}, \/  \$ {\em spec}, \/  \$ {\em keys\_\-new} = {\ttfamily array()})}}
+\label{classDatabaseSchema__pgsql_adae800c8871e30a70f3896b730c12ed3}
+Change a field definition.
+
+IMPORTANT NOTE: To maintain database portability, you have to explicitly recreate all indices and primary keys that are using the changed field.
+
+That means that you have to drop all affected keys and indexes with db\_\-drop\_\-\{primary\_\-key,unique\_\-key,index\}() before calling \hyperlink{group__schemaapi_ga9e0a4211eb8137e187d5f3f4fa716cea}{db\_\-change\_\-field()}. To recreate the keys and indices, pass the key definitions as the optional \$keys\_\-new argument directly to \hyperlink{group__schemaapi_ga9e0a4211eb8137e187d5f3f4fa716cea}{db\_\-change\_\-field()}.
+
+For example, suppose you have: 
+\begin{DoxyCode}
+ $schema['foo'] = array(
+   'fields' => array(
+     'bar' => array('type' => 'int', 'not null' => TRUE)
+   ),
+   'primary key' => array('bar')
+ );
+\end{DoxyCode}
+ and you want to change foo.bar to be type serial, leaving it as the primary key. The correct sequence is: 
+\begin{DoxyCode}
+ db_drop_primary_key('foo');
+ db_change_field('foo', 'bar', 'bar',
+   array('type' => 'serial', 'not null' => TRUE),
+   array('primary key' => array('bar')));
+\end{DoxyCode}
+
+
+The reasons for this are due to the different database engines:
+
+On PostgreSQL, changing a field definition involves adding a new field and dropping an old one which$\ast$ causes any indices, primary keys and sequences (from serial-\/type fields) that use the changed field to be dropped.
+
+On MySQL, all type 'serial' fields must be part of at least one key or index as soon as they are created. You cannot use db\_\-add\_\-\{primary\_\-key,unique\_\-key,index\}() for this purpose because the ALTER TABLE command will fail to add the column without a key or index specification. The solution is to use the optional \$keys\_\-new argument to create the key or index at the same time as field.
+
+You could use db\_\-add\_\-\{primary\_\-key,unique\_\-key,index\}() in all cases unless you are converting a field to be type serial. You can use the \$keys\_\-new argument in all cases.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]Name of the table. \item[{\em \$field}]Name of the field to change. \item[{\em \$field\_\-new}]New name for the field (set to the same as \$field if you don't want to change the name). \item[{\em \$spec}]The field specification for the new field. \item[{\em \$keys\_\-new}]Optional keys and indexes specification to be created on the table along with changing the field. The format is the same as a table specification but without the 'fields' element.\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseSchemaObjectDoesNotExistException}{DatabaseSchemaObjectDoesNotExistException}}]If the specified table or source field doesn't exist. \item[{\em \hyperlink{classDatabaseSchemaObjectExistsException}{DatabaseSchemaObjectExistsException}}]If the specified destination field already exists. \end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_ab2470d34145fdbb413dd952baf7067be}{DatabaseSchema}.\hypertarget{classDatabaseSchema__pgsql_ae795d8b318af21e0e57bb6ba9ea7ad93}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!constraintExists@{constraintExists}}
+\index{constraintExists@{constraintExists}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{constraintExists}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::constraintExists (\$ {\em table}, \/  \$ {\em name})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseSchema__pgsql_ae795d8b318af21e0e57bb6ba9ea7ad93}
+Helper function: check if a constraint (PK, FK, UK) exists.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The name of the table. \item[{\em \$name}]The name of the constraint (typically 'pkey' or '\mbox{[}constraint\mbox{]}\_\-key'). \end{DoxyParams}
+\hypertarget{classDatabaseSchema__pgsql_a77e847ece697a97079c2ecf0fb7eda47}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!createFieldSql@{createFieldSql}}
+\index{createFieldSql@{createFieldSql}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{createFieldSql}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::createFieldSql (\$ {\em name}, \/  \$ {\em spec})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseSchema__pgsql_a77e847ece697a97079c2ecf0fb7eda47}
+Create an SQL string for a field to be used in table creation or alteration.
+
+Before passing a field out of a schema definition into this function it has to be processed by \_\-db\_\-process\_\-field().
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]Name of the field. \item[{\em \$spec}]The field specification, as per the schema data structure format. \end{DoxyParams}
+\hypertarget{classDatabaseSchema__pgsql_a71a8f78d8cabb3ad4a1db0e9f058e740}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!createTableSql@{createTableSql}}
+\index{createTableSql@{createTableSql}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{createTableSql}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::createTableSql (\$ {\em name}, \/  \$ {\em table})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseSchema__pgsql_a71a8f78d8cabb3ad4a1db0e9f058e740}
+Generate SQL to create a new table from a Drupal schema definition.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]The name of the table to create. \item[{\em \$table}]A Schema API table definition array. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of SQL statements to create the table. 
+\end{DoxyReturn}
+\hypertarget{classDatabaseSchema__pgsql_a08e3aef1903dc40b2f0c75d4f18507bf}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!dropField@{dropField}}
+\index{dropField@{dropField}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{dropField}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::dropField (\$ {\em table}, \/  \$ {\em field})}}
+\label{classDatabaseSchema__pgsql_a08e3aef1903dc40b2f0c75d4f18507bf}
+Drop a field.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$field}]The field to be dropped.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the field was successfully dropped, FALSE if there was no field by that name to begin with. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_a9eee3ae81e40bba206015a83450e1d56}{DatabaseSchema}.\hypertarget{classDatabaseSchema__pgsql_a6c04b76c95ca7f68995baae8b0fe5b08}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!dropIndex@{dropIndex}}
+\index{dropIndex@{dropIndex}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{dropIndex}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::dropIndex (\$ {\em table}, \/  \$ {\em name})}}
+\label{classDatabaseSchema__pgsql_a6c04b76c95ca7f68995baae8b0fe5b08}
+Drop an index.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$name}]The name of the index.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the index was successfully dropped, FALSE if there was no index by that name to begin with. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_adf5467aa59e462857527d8f1a5988a81}{DatabaseSchema}.\hypertarget{classDatabaseSchema__pgsql_ae1548317341c45c01e0c67f9ebd9a057}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!dropPrimaryKey@{dropPrimaryKey}}
+\index{dropPrimaryKey@{dropPrimaryKey}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{dropPrimaryKey}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::dropPrimaryKey (\$ {\em table})}}
+\label{classDatabaseSchema__pgsql_ae1548317341c45c01e0c67f9ebd9a057}
+Drop the primary key.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the primary key was successfully dropped, FALSE if there was no primary key on this table to begin with. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_a08057609758a32c13c4d1863da54b63e}{DatabaseSchema}.\hypertarget{classDatabaseSchema__pgsql_a7d84e7dde7dfcf415b5732eb6f97fbe0}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!dropTable@{dropTable}}
+\index{dropTable@{dropTable}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{dropTable}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::dropTable (\$ {\em table})}}
+\label{classDatabaseSchema__pgsql_a7d84e7dde7dfcf415b5732eb6f97fbe0}
+Drop a table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be dropped.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the table was successfully dropped, FALSE if there was no table by that name to begin with. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_a61a37e713374b88d28161e0ade1a5c78}{DatabaseSchema}.\hypertarget{classDatabaseSchema__pgsql_a1fd8f4f016bf0b242448dc60506ab6cf}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!dropUniqueKey@{dropUniqueKey}}
+\index{dropUniqueKey@{dropUniqueKey}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{dropUniqueKey}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::dropUniqueKey (\$ {\em table}, \/  \$ {\em name})}}
+\label{classDatabaseSchema__pgsql_a1fd8f4f016bf0b242448dc60506ab6cf}
+Drop a unique key.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$name}]The name of the key.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the key was successfully dropped, FALSE if there was no key by that name to begin with. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_a40519a35f27d1bfe0f2eb0e759df1afd}{DatabaseSchema}.\hypertarget{classDatabaseSchema__pgsql_a2f17e2a4831ccba761ff37080acad92b}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!fieldSetDefault@{fieldSetDefault}}
+\index{fieldSetDefault@{fieldSetDefault}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{fieldSetDefault}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::fieldSetDefault (\$ {\em table}, \/  \$ {\em field}, \/  \$ {\em default})}}
+\label{classDatabaseSchema__pgsql_a2f17e2a4831ccba761ff37080acad92b}
+Set the default value for a field.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$field}]The field to be altered. \item[{\em \$default}]Default value to be set. NULL for 'default NULL'.\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseSchemaObjectDoesNotExistException}{DatabaseSchemaObjectDoesNotExistException}}]If the specified table or field doesn't exist. \end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_a0e7b9c13344b59584bf6e1ddea009592}{DatabaseSchema}.\hypertarget{classDatabaseSchema__pgsql_ab2d9f824a7b01c5b6ed218cd6beae1cb}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!fieldSetNoDefault@{fieldSetNoDefault}}
+\index{fieldSetNoDefault@{fieldSetNoDefault}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{fieldSetNoDefault}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::fieldSetNoDefault (\$ {\em table}, \/  \$ {\em field})}}
+\label{classDatabaseSchema__pgsql_ab2d9f824a7b01c5b6ed218cd6beae1cb}
+Set a field to have no default value.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$field}]The field to be altered.\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseSchemaObjectDoesNotExistException}{DatabaseSchemaObjectDoesNotExistException}}]If the specified table or field doesn't exist. \end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_ae4de35c98eed09a4c38d82e3f17ed8a6}{DatabaseSchema}.\hypertarget{classDatabaseSchema__pgsql_aa500999b6f0ce930ece44f98659a7243}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!getComment@{getComment}}
+\index{getComment@{getComment}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{getComment}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::getComment (\$ {\em table}, \/  \$ {\em column} = {\ttfamily NULL})}}
+\label{classDatabaseSchema__pgsql_aa500999b6f0ce930ece44f98659a7243}
+Retrieve a table or column comment. \hypertarget{classDatabaseSchema__pgsql_a918cab53fb09222d7b017c527bb9534e}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!getFieldTypeMap@{getFieldTypeMap}}
+\index{getFieldTypeMap@{getFieldTypeMap}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{getFieldTypeMap}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::getFieldTypeMap ()}}
+\label{classDatabaseSchema__pgsql_a918cab53fb09222d7b017c527bb9534e}
+This maps a generic data type in combination with its data size to the engine-\/specific data type. 
+
+Reimplemented from \hyperlink{classDatabaseSchema_a82022c76c3131c4d745736d08321b788}{DatabaseSchema}.\hypertarget{classDatabaseSchema__pgsql_aee7c3f672034280888fd9533a7c98835}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!indexExists@{indexExists}}
+\index{indexExists@{indexExists}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{indexExists}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::indexExists (\$ {\em table}, \/  \$ {\em name})}}
+\label{classDatabaseSchema__pgsql_aee7c3f672034280888fd9533a7c98835}
+Checks if an index exists in the given table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The name of the table in drupal (no prefixing). \item[{\em \$name}]The name of the index in drupal (no prefixing).\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the given index exists, otherwise FALSE. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_ae343d2fd453d51d9df43d439af0a22e2}{DatabaseSchema}.\hypertarget{classDatabaseSchema__pgsql_ac951ca95de7746ddd930e8678f0d7f33}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!processField@{processField}}
+\index{processField@{processField}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{processField}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::processField (\$ {\em field})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseSchema__pgsql_ac951ca95de7746ddd930e8678f0d7f33}
+Set database-\/engine specific properties for a field.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field}]A field description array, as specified in the schema documentation. \end{DoxyParams}
+\hypertarget{classDatabaseSchema__pgsql_a696ce531f8a2cc71aa295353a0240d7b}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!queryFieldInformation@{queryFieldInformation}}
+\index{queryFieldInformation@{queryFieldInformation}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{queryFieldInformation}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::queryFieldInformation (\$ {\em table}, \/  \$ {\em field})}}
+\label{classDatabaseSchema__pgsql_a696ce531f8a2cc71aa295353a0240d7b}
+Fetch the list of CHECK constraints used on a field.
+
+We introspect the database to collect the information required by field alteration.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The non-\/prefixed name of the table. \item[{\em \$field}]The name of the field. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of all the checks for the field. 
+\end{DoxyReturn}
+\hypertarget{classDatabaseSchema__pgsql_a5daa813b30b1ae806afb0831782c7d9c}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!queryTableInformation@{queryTableInformation}}
+\index{queryTableInformation@{queryTableInformation}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{queryTableInformation}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::queryTableInformation (\$ {\em table})}}
+\label{classDatabaseSchema__pgsql_a5daa813b30b1ae806afb0831782c7d9c}
+Fetch the list of blobs and sequences used on a table.
+
+We introspect the database to collect the information required by insert and update queries.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table\_\-name}]The non-\/prefixed name of the table. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An object with two member variables:
+\begin{DoxyItemize}
+\item 'blob\_\-fields' that lists all the blob fields in the table.
+\item 'sequences' that lists the sequences used in that table. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{classDatabaseSchema__pgsql_a899f676d802888ded3f6d4a171794f53}{
+\index{DatabaseSchema\_\-pgsql@{DatabaseSchema\_\-pgsql}!renameTable@{renameTable}}
+\index{renameTable@{renameTable}!DatabaseSchema_pgsql@{DatabaseSchema\_\-pgsql}}
+\subsubsection[{renameTable}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-pgsql::renameTable (\$ {\em table}, \/  \$ {\em new\_\-name})}}
+\label{classDatabaseSchema__pgsql_a899f676d802888ded3f6d4a171794f53}
+Rename a table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be renamed. \item[{\em \$new\_\-name}]The new name for the table.\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseSchemaObjectDoesNotExistException}{DatabaseSchemaObjectDoesNotExistException}}]If the specified table doesn't exist. \item[{\em \hyperlink{classDatabaseSchemaObjectExistsException}{DatabaseSchemaObjectExistsException}}]If a table with the specified new name already exists. \end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_aaa0b6f32797505bdfc9ed953e10a486e}{DatabaseSchema}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/database/pgsql/\hyperlink{pgsql_2schema_8inc}{schema.inc}\end{DoxyCompactItemize}

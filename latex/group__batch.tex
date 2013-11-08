@@ -1,0 +1,223 @@
+\hypertarget{group__batch}{
+\section{Batch operations}
+\label{group__batch}\index{Batch operations@{Batch operations}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__batch_ga9ff3f18b3bdd1d62ab7ac681a22a7170}{batch\_\-set} (\$batch\_\-definition)
+\item 
+\hyperlink{group__batch_gab17f59692632a482cee4f65f27d082f7}{batch\_\-process} (\$redirect=NULL, \$url= 'batch', \$redirect\_\-callback= 'drupal\_\-goto')
+\item 
+\& \hyperlink{group__batch_ga971f5246c6e8e536d0b20529fb2e2638}{batch\_\-get} ()
+\item 
+\hyperlink{group__batch_gaac34897148f5ea89ce15f4f95c34557e}{\_\-batch\_\-populate\_\-queue} (\&\$batch, \$set\_\-id)
+\item 
+\hyperlink{group__batch_ga93c80df7641ba3be8bc535a9c1fd13c2}{\_\-batch\_\-queue} (\$batch\_\-set)
+\item 
+\hyperlink{group__batch_ga135f2f5d27bc51f905cf9f36bde06a2e}{hook\_\-batch\_\-alter} (\&\$batch)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+End of \char`\"{}defgroup form\_\-api\char`\"{}.
+
+Creates and processes batch operations.
+
+Functions allowing forms processing to be spread out over several page requests, thus ensuring that the processing does not get interrupted because of a PHP timeout, while allowing the user to receive feedback on the progress of the ongoing operations.
+
+The API is primarily designed to integrate nicely with the Form API workflow, but can also be used by non-\/Form API scripts (like \hyperlink{update_8php}{update.php}) or even simple page callbacks (which should probably be used sparingly).
+
+Example: 
+\begin{DoxyCode}
+ $batch = array(
+   'title' => t('Exporting'),
+   'operations' => array(
+     array('my_function_1', array($account->uid, 'story')),
+     array('my_function_2', array()),
+   ),
+   'finished' => 'my_finished_callback',
+   'file' => 'path_to_file_containing_myfunctions',
+ );
+ batch_set($batch);
+ // Only needed if not inside a form _submit handler.
+ // Setting redirect in batch_process.
+ batch_process('node/1');
+\end{DoxyCode}
+
+
+Note: if the batch 'title', 'init\_\-message', 'progress\_\-message', or 'error\_\-message' could contain any user input, it is the responsibility of the code calling \hyperlink{group__batch_ga9ff3f18b3bdd1d62ab7ac681a22a7170}{batch\_\-set()} to sanitize them first with a function like \hyperlink{group__sanitization_ga76fc67a30fd8d75ddd80565e6e65a13d}{check\_\-plain()} or \hyperlink{group__sanitization_ga8864a29ffa8de5c9f8dc9e417060660d}{filter\_\-xss()}. Furthermore, if the batch operation returns any user input in the 'results' or 'message' keys of \$context, it must also sanitize them first.
+
+Sample batch operations: 
+\begin{DoxyCode}
+ // Simple and artificial: load a node of a given type for a given user
+ function my_function_1($uid, $type, &$context) {
+   // The $context array gathers batch context information about the execution (r
+      ead),
+   // as well as 'return values' for the current operation (write)
+   // The following keys are provided :
+   // 'results' (read / write): The array of results gathered so far by
+   //   the batch processing, for the current operation to append its own.
+   // 'message' (write): A text message displayed in the progress page.
+   // The following keys allow for multi-step operations :
+   // 'sandbox' (read / write): An array that can be freely used to
+   //   store persistent data between iterations. It is recommended to
+   //   use this instead of $_SESSION, which is unsafe if the user
+   //   continues browsing in a separate window while the batch is processing.
+   // 'finished' (write): A float number between 0 and 1 informing
+   //   the processing engine of the completion level for the operation.
+   //   1 (or no value explicitly set) means the operation is finished
+   //   and the batch processing can continue to the next operation.
+
+   $node = node_load(array('uid' => $uid, 'type' => $type));
+   $context['results'][] = $node->nid . ' : ' . check_plain($node->title);
+   $context['message'] = check_plain($node->title);
+ }
+
+ // More advanced example: multi-step operation - load all nodes, five by five
+ function my_function_2(&$context) {
+   if (empty($context['sandbox'])) {
+     $context['sandbox']['progress'] = 0;
+     $context['sandbox']['current_node'] = 0;
+     $context['sandbox']['max'] = db_query('SELECT COUNT(DISTINCT nid) FROM {node
+      }')->fetchField();
+   }
+   $limit = 5;
+   $result = db_select('node')
+     ->fields('node', array('nid'))
+     ->condition('nid', $context['sandbox']['current_node'], '>')
+     ->orderBy('nid')
+     ->range(0, $limit)
+     ->execute();
+   foreach ($result as $row) {
+     $node = node_load($row->nid, NULL, TRUE);
+     $context['results'][] = $node->nid . ' : ' . check_plain($node->title);
+     $context['sandbox']['progress']++;
+     $context['sandbox']['current_node'] = $node->nid;
+     $context['message'] = check_plain($node->title);
+   }
+   if ($context['sandbox']['progress'] != $context['sandbox']['max']) {
+     $context['finished'] = $context['sandbox']['progress'] / $context['sandbox']
+      ['max'];
+   }
+ }
+\end{DoxyCode}
+
+
+Sample 'finished' callback: 
+\begin{DoxyCode}
+ function batch_test_finished($success, $results, $operations) {
+   // The 'success' parameter means no fatal PHP errors were detected. All
+   // other error management should be handled using 'results'.
+   if ($success) {
+     $message = format_plural(count($results), 'One post processed.', '@count pos
+      ts processed.');
+   }
+   else {
+     $message = t('Finished with an error.');
+   }
+   drupal_set_message($message);
+   // Providing data for the redirected page is done through $_SESSION.
+   foreach ($results as $result) {
+     $items[] = t('Loaded node %title.', array('%title' => $result));
+   }
+   $_SESSION['my_batch_results'] = $items;
+ }
+\end{DoxyCode}
+ 
+
+\subsection{Function Documentation}
+\hypertarget{group__batch_gaac34897148f5ea89ce15f4f95c34557e}{
+\index{batch@{batch}!\_\-batch\_\-populate\_\-queue@{\_\-batch\_\-populate\_\-queue}}
+\index{\_\-batch\_\-populate\_\-queue@{\_\-batch\_\-populate\_\-queue}!batch@{batch}}
+\subsubsection[{\_\-batch\_\-populate\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}\_\-batch\_\-populate\_\-queue (\&\$ {\em batch}, \/  \$ {\em set\_\-id})}}
+\label{group__batch_gaac34897148f5ea89ce15f4f95c34557e}
+Populates a job queue with the operations of a batch set.
+
+Depending on whether the batch is progressive or not, the \hyperlink{classBatchQueue}{BatchQueue} or \hyperlink{classBatchMemoryQueue}{BatchMemoryQueue} handler classes will be used.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$batch}]The batch array. \item[{\em \$set\_\-id}]The id of the set to process.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name and class of the queue are added by reference to the batch set. 
+\end{DoxyReturn}
+\hypertarget{group__batch_ga93c80df7641ba3be8bc535a9c1fd13c2}{
+\index{batch@{batch}!\_\-batch\_\-queue@{\_\-batch\_\-queue}}
+\index{\_\-batch\_\-queue@{\_\-batch\_\-queue}!batch@{batch}}
+\subsubsection[{\_\-batch\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}\_\-batch\_\-queue (\$ {\em batch\_\-set})}}
+\label{group__batch_ga93c80df7641ba3be8bc535a9c1fd13c2}
+Returns a queue object for a batch set.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$batch\_\-set}]The batch set.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The queue object. 
+\end{DoxyReturn}
+\hypertarget{group__batch_ga971f5246c6e8e536d0b20529fb2e2638}{
+\index{batch@{batch}!batch\_\-get@{batch\_\-get}}
+\index{batch\_\-get@{batch\_\-get}!batch@{batch}}
+\subsubsection[{batch\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}\& batch\_\-get ()}}
+\label{group__batch_ga971f5246c6e8e536d0b20529fb2e2638}
+Retrieves the current batch. \hypertarget{group__batch_gab17f59692632a482cee4f65f27d082f7}{
+\index{batch@{batch}!batch\_\-process@{batch\_\-process}}
+\index{batch\_\-process@{batch\_\-process}!batch@{batch}}
+\subsubsection[{batch\_\-process}]{\setlength{\rightskip}{0pt plus 5cm}batch\_\-process (\$ {\em redirect} = {\ttfamily NULL}, \/  \$ {\em url} = {\ttfamily 'batch'}, \/  \$ {\em redirect\_\-callback} = {\ttfamily 'drupal\_\-goto'})}}
+\label{group__batch_gab17f59692632a482cee4f65f27d082f7}
+Processes the batch.
+
+Unless the batch has been marked with 'progressive' = FALSE, the function issues a drupal\_\-goto and thus ends page execution.
+
+This function is generally not needed in form submit handlers; Form API takes care of batches that were set during form submission.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$redirect}](optional) Path to redirect to when the batch has finished processing. \item[{\em \$url}](optional -\/ should only be used for separate scripts like \hyperlink{update_8php}{update.php}) URL of the batch processing page. \item[{\em \$redirect\_\-callback}](optional) Specify a function to be called to redirect to the progressive processing page. By default \hyperlink{group__http__handling_ga5b68d7a934713d1d623b2b32a732235d}{drupal\_\-goto()} will be used to redirect to a page which will do the progressive page. Specifying another function will allow the progressive processing to be processed differently. \end{DoxyParams}
+\hypertarget{group__batch_ga9ff3f18b3bdd1d62ab7ac681a22a7170}{
+\index{batch@{batch}!batch\_\-set@{batch\_\-set}}
+\index{batch\_\-set@{batch\_\-set}!batch@{batch}}
+\subsubsection[{batch\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}batch\_\-set (\$ {\em batch\_\-definition})}}
+\label{group__batch_ga9ff3f18b3bdd1d62ab7ac681a22a7170}
+Adds a new batch.
+
+Batch operations are added as new batch sets. Batch sets are used to spread processing (primarily, but not exclusively, forms processing) over several page requests. This helps to ensure that the processing is not interrupted due to PHP timeouts, while users are still able to receive feedback on the progress of the ongoing operations. Combining related operations into distinct batch sets provides clean code independence for each batch set, ensuring that two or more batches, submitted independently, can be processed without mutual interference. Each batch set may specify its own set of operations and results, produce its own UI messages, and trigger its own 'finished' callback. Batch sets are processed sequentially, with the progress bar starting afresh for each new set.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$batch\_\-definition}]An associative array defining the batch, with the following elements (all are optional except as noted):
+\begin{DoxyItemize}
+\item operations: (required) Array of function calls to be performed. Example: 
+\begin{DoxyCode}
+     array(
+       array('my_function_1', array($arg1)),
+       array('my_function_2', array($arg2_1, $arg2_2)),
+     )
+\end{DoxyCode}
+
+\item title: A safe, translated string to use as the title for the progress page. Defaults to t('Processing').
+\item init\_\-message: Message displayed while the processing is initialized. Defaults to t('Initializing.').
+\item progress\_\-message: Message displayed while processing the batch. Available placeholders are , , , ,  and . Defaults to t('Completed  of .').
+\item error\_\-message: Message displayed if an error occurred while processing the batch. Defaults to t('An error has occurred.').
+\item finished: Name of a function to be executed after the batch has completed. This should be used to perform any result massaging that may be needed, and possibly save data in \$\_\-SESSION for display after final page redirection.
+\item file: Path to the file containing the definitions of the 'operations' and 'finished' functions, for instance if they don't reside in the main .module file. The path should be relative to \hyperlink{common_8inc_ae227697e9c239f09fd7e36f71afde771}{base\_\-path()}, and thus should be built using \hyperlink{common_8inc_ae3bbe8f97bf07bb0eaf4580c98f9bf94}{drupal\_\-get\_\-path()}.
+\item css: Array of paths to CSS files to be used on the progress page.
+\item url\_\-options: options passed to \hyperlink{common_8inc_a43b2a0594431556db49df980801d8807}{url()} when constructing redirect URLs for the batch. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{group__batch_ga135f2f5d27bc51f905cf9f36bde06a2e}{
+\index{batch@{batch}!hook\_\-batch\_\-alter@{hook\_\-batch\_\-alter}}
+\index{hook\_\-batch\_\-alter@{hook\_\-batch\_\-alter}!batch@{batch}}
+\subsubsection[{hook\_\-batch\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-batch\_\-alter (\&\$ {\em batch})}}
+\label{group__batch_ga135f2f5d27bc51f905cf9f36bde06a2e}
+Alter batch information before a batch is processed.
+
+Called by \hyperlink{group__batch_gab17f59692632a482cee4f65f27d082f7}{batch\_\-process()} to allow modules to alter a batch before it is processed.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$batch}]The associative array of batch information. See \hyperlink{group__batch_ga9ff3f18b3bdd1d62ab7ac681a22a7170}{batch\_\-set()} for details on what this could contain.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__batch_ga9ff3f18b3bdd1d62ab7ac681a22a7170}{batch\_\-set()} 
+
+\hyperlink{group__batch_gab17f59692632a482cee4f65f27d082f7}{batch\_\-process()} 
+\end{DoxySeeAlso}

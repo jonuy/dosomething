@@ -1,0 +1,1445 @@
+\hypertarget{user_8module}{
+\section{html/modules/user/user.module File Reference}
+\label{user_8module}\index{html/modules/user/user.module@{html/modules/user/user.module}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classUserController}{UserController}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{user_8module_ab5066e0a1cb5ba39be9389bdb7341e9c}{USERNAME\_\-MAX\_\-LENGTH} 
+\item 
+enum \hyperlink{user_8module_ace0e892f6bacb71d3660bc875ce80a96}{EMAIL\_\-MAX\_\-LENGTH} 
+\item 
+enum \hyperlink{user_8module_a86e7d065e288fde0300970e27f3f9438}{USER\_\-REGISTER\_\-ADMINISTRATORS\_\-ONLY} 
+\item 
+enum \hyperlink{user_8module_aad1e83ffc252c482267461bde962d19f}{USER\_\-REGISTER\_\-VISITORS} 
+\item 
+enum \hyperlink{user_8module_a46063390f086e98c8db7e380c0fa1fd5}{USER\_\-REGISTER\_\-VISITORS\_\-ADMINISTRATIVE\_\-APPROVAL} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{user_8module_a7c042ca4fed4db807b9073d19269f760}{user\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{user_8module_ab34c18f082e7d1c927b157da487c75b3}{user\_\-module\_\-invoke} (\$type, \&\$edit, \$account, \$category=NULL)
+\item 
+\hyperlink{user_8module_a4ca455e4035589f0235f705d376f38c7}{user\_\-theme} ()
+\item 
+\hyperlink{user_8module_a1dd64aa2b09d172ccab380135acb6af4}{user\_\-entity\_\-info} ()
+\item 
+\hyperlink{user_8module_aa9b0c1a8792930f545bda1c85a085e19}{user\_\-uri} (\$user)
+\item 
+\hyperlink{user_8module_ae2c0ec71e6b747b92374db56ec39a559}{user\_\-field\_\-info\_\-alter} (\&\$info)
+\item 
+\hyperlink{user_8module_a63f13e48d71e123e4e0a893b5dce6748}{user\_\-field\_\-extra\_\-fields} ()
+\item 
+\hyperlink{user_8module_a52fec3f0dbb0e33fed3d88a58453b0f4}{user\_\-external\_\-load} (\$authname)
+\item 
+\hyperlink{user_8module_a9f73ad4a543faed0e38e8ea170bff32e}{user\_\-load\_\-multiple} (\$uids=array(), \$conditions=array(), \$reset=FALSE)
+\item 
+\hyperlink{user_8module_a0f7e67c4e909ca691f57889dd5a72a07}{user\_\-load} (\$uid, \$reset=FALSE)
+\item 
+\hyperlink{user_8module_a68a9c7c15776d0ad6d0f7eb85e294c2d}{user\_\-load\_\-by\_\-mail} (\$mail)
+\item 
+\hyperlink{user_8module_a2abc1fc7de4cd56af7658688c3614f86}{user\_\-load\_\-by\_\-name} (\$name)
+\item 
+\hyperlink{user_8module_a857b652072abb243e0b44b02c3746a99}{user\_\-save} (\$account, \$edit=array(), \$category= 'account')
+\item 
+\hyperlink{user_8module_ad0830924747ece1dd3f35b0d0f4dd0f9}{user\_\-validate\_\-name} (\$name)
+\item 
+\hyperlink{user_8module_abe55c980b2faeab65d0a9942f99916dd}{user\_\-validate\_\-mail} (\$mail)
+\item 
+\hyperlink{user_8module_aa8b7bc791c72d8484dd8462440d41b3a}{user\_\-validate\_\-picture} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{user_8module_a74cfb0a6ae36efdbd637792b37257931}{user\_\-password} (\$length=10)
+\item 
+\hyperlink{user_8module_a52111bf669fd6850eb3580e5f62d9236}{user\_\-role\_\-permissions} (\$roles=array())
+\item 
+\hyperlink{user_8module_a8daa9d898b1e84225b519ee0c7fb57e0}{user\_\-access} (\$string, \$account=NULL)
+\item 
+\hyperlink{user_8module_ac55b4d1a61adfcd30acc1b51eaa5f741}{user\_\-is\_\-blocked} (\$name)
+\item 
+\hyperlink{user_8module_a0eb71b2d8881ca75248f3ed384f8b253}{user\_\-permission} ()
+\item 
+\hyperlink{user_8module_a639df304dacc79e74a34de493586a198}{user\_\-file\_\-download} (\$uri)
+\item 
+\hyperlink{user_8module_a911b761d015b504f3e545b17f1403957}{user\_\-file\_\-move} (\$file, \$source)
+\item 
+\hyperlink{user_8module_a37b2007aaeed8fe1c1210dbc30ae2a5d}{user\_\-file\_\-delete} (\$file)
+\item 
+\hyperlink{user_8module_afe2b64d026bd65a294788c4abe9b4861}{user\_\-search\_\-info} ()
+\item 
+\hyperlink{user_8module_ac25873e619ada5dcb08431674667e7ee}{user\_\-search\_\-access} ()
+\item 
+\hyperlink{user_8module_a04e2120f38c081b16387b631602cc47f}{user\_\-search\_\-execute} (\$keys=NULL, \$conditions=NULL)
+\item 
+\hyperlink{user_8module_a39be89fedb1ce14ba1c97852daa0f7f7}{user\_\-element\_\-info} ()
+\item 
+\hyperlink{user_8module_a81bc32004c6a3e32a3cb0b86875b41d5}{user\_\-user\_\-view} (\$account)
+\item 
+\hyperlink{user_8module_ab51965add9fd8ee2915e65d39213d05c}{user\_\-account\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{user_8module_a129d5503ac6de8cdf01d11b18e2c7298}{user\_\-validate\_\-current\_\-pass} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{user_8module_a168c461ed4da4e6a48458e68e7a85042}{user\_\-account\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{user_8module_ab5fa3254072a5402b713090641898e65}{user\_\-user\_\-presave} (\&\$edit, \$account, \$category)
+\item 
+\hyperlink{user_8module_a7c04b1a53be3ea791a529a14d8f129b7}{user\_\-user\_\-categories} ()
+\item 
+\hypertarget{user_8module_a43678d00194ac39f759e1948405e15a2}{
+{\bfseries user\_\-login\_\-block} (\$form)}
+\label{user_8module_a43678d00194ac39f759e1948405e15a2}
+
+\item 
+\hyperlink{user_8module_ace25ccf18bbb198c6f2f3f60735f1b3d}{user\_\-block\_\-info} ()
+\item 
+\hyperlink{user_8module_a5494cdcda6f0d2930656ed704d9fbfa8}{user\_\-block\_\-configure} (\$delta= '')
+\item 
+\hyperlink{user_8module_adeeb8b22b27c97b3e3aff38487c03f4c}{user\_\-block\_\-save} (\$delta= '', \$edit=array())
+\item 
+\hyperlink{user_8module_ac06f7fc22561ebb4ad7130564bb7526e}{user\_\-block\_\-view} (\$delta= '')
+\item 
+\hyperlink{user_8module_aa1d7397dce93911938b4edbfee69ceb4}{template\_\-preprocess\_\-user\_\-picture} (\&\$variables)
+\item 
+\hyperlink{group__themeable_ga0c401997f59cbc4603fbd353e27eac2d}{theme\_\-user\_\-list} (\$variables)
+\item 
+\hyperlink{user_8module_af00464c62c20062112b8a25500719f69}{user\_\-is\_\-anonymous} ()
+\item 
+\hyperlink{user_8module_aafa6d7d07cbcb26b6728ee30122fb1b0}{user\_\-is\_\-logged\_\-in} ()
+\item 
+\hyperlink{user_8module_aeefc598398af2604fed325d4cb9f2577}{user\_\-register\_\-access} ()
+\item 
+\hyperlink{user_8module_a49c65cc4c7b0512c787fb8e822d7dd4d}{user\_\-view\_\-access} (\$account)
+\item 
+\hyperlink{user_8module_a9d988b07d458af21fe4e11868052b345}{user\_\-edit\_\-access} (\$account)
+\item 
+\hyperlink{user_8module_a1a179fa6a35c42c0c9234b7f67e3715f}{user\_\-cancel\_\-access} (\$account)
+\item 
+\hyperlink{user_8module_a48f90f1bf0f523df93ab31bd5b200573}{user\_\-menu} ()
+\item 
+\hyperlink{user_8module_ac2ced46ecfe66b365084a2b70acf2247}{user\_\-menu\_\-site\_\-status\_\-alter} (\&\$menu\_\-site\_\-status, \$path)
+\item 
+\hyperlink{user_8module_a2d32cfeed1c6c5f774ccd27c3e51308e}{user\_\-menu\_\-link\_\-alter} (\&\$link)
+\item 
+\hyperlink{user_8module_adfd500d7a85faa0058757c6b66fdabda}{user\_\-translated\_\-menu\_\-link\_\-alter} (\&\$link)
+\item 
+\hyperlink{user_8module_a9896eb1c67550e111cd5aa5198a1abc0}{user\_\-admin\_\-paths} ()
+\item 
+\hyperlink{user_8module_acafbef09764866dee15f8cf2b184aafc}{user\_\-uid\_\-only\_\-optional\_\-to\_\-arg} (\$arg)
+\item 
+\hyperlink{user_8module_adcdb22ab09fce9b389fb10ac76e13b07}{user\_\-uid\_\-optional\_\-load} (\$uid=NULL)
+\item 
+\hyperlink{user_8module_ad5ee67e73aa6eba6ce29186eea51e6d5}{user\_\-category\_\-load} (\$uid, \&\$map, \$index)
+\item 
+\hyperlink{user_8module_a802368ee732e9da8f756d69b0830225b}{user\_\-uid\_\-optional\_\-to\_\-arg} (\$arg)
+\item 
+\hyperlink{user_8module_ad14ec01a9c57ce03d8e8ab16c2e0a400}{user\_\-menu\_\-title} ()
+\item 
+\hyperlink{user_8module_ae37fe690b0461ac2b81b25fa3d51ecc8}{user\_\-page\_\-title} (\$account)
+\item 
+\hyperlink{user_8module_a71f0c8ed86c79dc3000478b2c62ec31c}{user\_\-get\_\-authmaps} (\$authname=NULL)
+\item 
+\hyperlink{user_8module_a343e11a6324c7b4036be888e61412ceb}{user\_\-set\_\-authmaps} (\$account, \$authmaps)
+\item 
+\hyperlink{group__forms_gac2d24ff71cebbfa81b8324ac1d9edfe2}{user\_\-login} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{user_8module_ad839942de106a39384979b02221f64fb}{user\_\-login\_\-default\_\-validators} ()
+\item 
+\hyperlink{user_8module_a8f96305420b1d860053ed6eaa50b8b34}{user\_\-login\_\-name\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{user_8module_a87098bdd1eef6b45820e23c53f8d8988}{user\_\-login\_\-authenticate\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{user_8module_aff194b554e3138ee149f97ed459d7d92}{user\_\-login\_\-final\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{user_8module_a741745e553ff115eb51b4dcc8af1ffbc}{user\_\-authenticate} (\$name, \$password)
+\item 
+\hyperlink{user_8module_af487aea9565f1a6c896c493c3df9c0b2}{user\_\-login\_\-finalize} (\&\$edit=array())
+\item 
+\hyperlink{user_8module_a84bba9d490507784160b5f3fc3d73f2f}{user\_\-login\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{user_8module_af4a2f1223554e9d79172c92273b81f2b}{user\_\-external\_\-login\_\-register} (\$name, \$module)
+\item 
+\hyperlink{user_8module_a99c0536278528e2b7d4fc0b9f7e2809d}{user\_\-pass\_\-reset\_\-url} (\$account)
+\item 
+\hyperlink{user_8module_afdf3514e3f6d0c8de3f68ff5e98452c2}{user\_\-cancel\_\-url} (\$account)
+\item 
+\hyperlink{user_8module_a1d3ca7bcffa02f5785618cd86efeac7d}{user\_\-pass\_\-rehash} (\$password, \$timestamp, \$login)
+\item 
+\hyperlink{user_8module_af6ef747e6353edaecc43f55dc85eff9e}{user\_\-cancel} (\$edit, \$uid, \$method)
+\item 
+\hyperlink{user_8module_afc9203f67609047039df65af5de60739}{\_\-user\_\-cancel} (\$edit, \$account, \$method)
+\item 
+\hyperlink{user_8module_ade553a108fdbcf811513ee0539aeebbe}{\_\-user\_\-cancel\_\-session\_\-regenerate} ()
+\item 
+\hyperlink{user_8module_aeed10f2e053a5b6ccb57e22937961c77}{user\_\-delete} (\$uid)
+\item 
+\hyperlink{user_8module_a3c8aa34b1ef0c113327f7151cb6f2e35}{user\_\-delete\_\-multiple} (array \$uids)
+\item 
+\hyperlink{user_8module_a93954fceea22b31ffafb20cd45d81c94}{user\_\-view\_\-page} (\$account)
+\item 
+\hyperlink{user_8module_aa5b236a0e9e2aad7ff06f23bc5046914}{user\_\-view} (\$account, \$view\_\-mode= 'full', \$langcode=NULL)
+\item 
+\hyperlink{user_8module_ab37696ec0ec393751b7cfb06146963f1}{user\_\-build\_\-content} (\$account, \$view\_\-mode= 'full', \$langcode=NULL)
+\item 
+\hyperlink{user_8module_a1398b4fdee5dad70d6da89ce5be6c43d}{user\_\-mail} (\$key, \&\$message, \$params)
+\item 
+\hyperlink{user_8module_afeb35780400f149e307cd4b4f1d358a1}{\_\-user\_\-mail\_\-text} (\$key, \$language=NULL, \$variables=array(), \$replace=TRUE)
+\item 
+\hyperlink{user_8module_a0685343e7877f453320a935cb2d9c5d1}{user\_\-mail\_\-tokens} (\&\$replacements, \$data, \$options)
+\item 
+\hyperlink{user_8module_a2c97e1595e6af351e0ab7d60da180017}{user\_\-roles} (\$membersonly=FALSE, \$permission=NULL)
+\item 
+\hyperlink{user_8module_a523043011b1e6d3f168ee7a5e8674734}{user\_\-role\_\-load} (\$rid)
+\item 
+\hyperlink{user_8module_a46775f7a4d73479dd21569ef97cb77ec}{user\_\-role\_\-load\_\-by\_\-name} (\$role\_\-name)
+\item 
+\hyperlink{user_8module_a4585f9898ea037730af8f3e6289c158d}{user\_\-role\_\-save} (\$role)
+\item 
+\hyperlink{user_8module_a024c3e56a5d80847b3796565df75299f}{user\_\-role\_\-delete} (\$role)
+\item 
+\hyperlink{user_8module_a41a44a0043d57e6c56c651fd9060b4af}{user\_\-role\_\-edit\_\-access} (\$role)
+\item 
+\hyperlink{user_8module_a3f574091c39e067721fe6afbb5898bfd}{user\_\-permission\_\-get\_\-modules} ()
+\item 
+\hyperlink{user_8module_a99fd9206a99c083a3f7ee09ba0c4a9ea}{user\_\-role\_\-change\_\-permissions} (\$rid, array \$permissions=array())
+\item 
+\hyperlink{user_8module_aee75b0b96b7cec455cb0245275469aaf}{user\_\-role\_\-grant\_\-permissions} (\$rid, array \$permissions=array())
+\item 
+\hyperlink{user_8module_a5b4cb135247dfac81c93c8da05bcd514}{user\_\-role\_\-revoke\_\-permissions} (\$rid, array \$permissions=array())
+\item 
+\hyperlink{user_8module_a06d9d99e165bcd0da93901cee90158f5}{user\_\-user\_\-operations} (\$form=array(), \$form\_\-state=array())
+\item 
+\hyperlink{user_8module_aea3e4264e414a703905c12725a8fee3f}{user\_\-user\_\-operations\_\-unblock} (\$accounts)
+\item 
+\hyperlink{user_8module_a956597acb38e2078f714d140fe54443c}{user\_\-user\_\-operations\_\-block} (\$accounts)
+\item 
+\hyperlink{user_8module_ad0fd9700bee0f36a9f873deb2c80c534}{user\_\-multiple\_\-role\_\-edit} (\$accounts, \$operation, \$rid)
+\item 
+\hypertarget{user_8module_ac3423adc6ef44b75e0a20c0f733847f1}{
+{\bfseries user\_\-multiple\_\-cancel\_\-confirm} (\$form, \&\$form\_\-state)}
+\label{user_8module_ac3423adc6ef44b75e0a20c0f733847f1}
+
+\item 
+\hyperlink{user_8module_a7c21efb11cd202cddd82b3dc87fdd0a7}{user\_\-multiple\_\-cancel\_\-confirm\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{user_8module_a92dbc7c3bb262cecba5f28bbf93a5175}{\_\-user\_\-categories} ()
+\item 
+\hypertarget{user_8module_af1ac17818fc892a3caaf6e737df72e53}{
+{\bfseries \_\-user\_\-sort} (\$a, \$b)}
+\label{user_8module_af1ac17818fc892a3caaf6e737df72e53}
+
+\item 
+\hyperlink{user_8module_a898a8a080e136ca20a94b1f3e3e04fd5}{user\_\-filters} ()
+\item 
+\hyperlink{user_8module_ae862ab5b636280ab3c4376eb2c00f049}{user\_\-build\_\-filter\_\-query} (\hyperlink{classSelectQuery}{SelectQuery} \$query)
+\item 
+\hyperlink{user_8module_a7f41acc702ef2d8c2161f79a709fae81}{user\_\-comment\_\-view} (\$comment)
+\item 
+\hyperlink{group__themeable_gabbd05d2d793e3f9ab99fee965bc3bbc2}{theme\_\-user\_\-signature} (\$variables)
+\item 
+\hyperlink{user_8module_a0122ed84b87c9b23dbd3be7ff563bc49}{user\_\-preferred\_\-language} (\$account, \$default=NULL)
+\item 
+\hyperlink{user_8module_a97bde917b48465820689f7d8dc437884}{\_\-user\_\-mail\_\-notify} (\$op, \$account, \$language=NULL)
+\item 
+\hyperlink{user_8module_ae2f4fd0c6769e59e37bf1a13e5f2a4cd}{user\_\-form\_\-process\_\-password\_\-confirm} (\$element)
+\item 
+\hyperlink{user_8module_adc38581bf39fce0ac244033595207933}{user\_\-node\_\-load} (\$nodes, \$types)
+\item 
+\hyperlink{user_8module_a8a773378fc4c0afa38865bbee2e88419}{user\_\-image\_\-style\_\-delete} (\$style)
+\item 
+\hyperlink{user_8module_ab3fec9538f68340d18a8c9b204e38f49}{user\_\-image\_\-style\_\-save} (\$style)
+\item 
+\hyperlink{user_8module_a804c5206067117643c1853f3e28bb208}{user\_\-action\_\-info} ()
+\item 
+\hyperlink{group__actions_gaaebd8bde2e44d7b334ba57e716fce110}{user\_\-block\_\-user\_\-action} (\&\$entity, \$context=array())
+\item 
+\hyperlink{user_8module_ab71e2dd6088fa2ef32b2e8a71e85fbbe}{user\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-alter} (\&\$form, \&\$form\_\-state, \$form\_\-id)
+\item 
+\hyperlink{user_8module_a965286b291d94cac41246d7f350d4214}{user\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__forms_ga6dc04f116a25059727b3cf9e15205be8}{user\_\-register\_\-form} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{user_8module_a68ab440bc157b212a53dbe9a42a18107}{user\_\-register\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{user_8module_ad104f5427b9f52630164ef58808ad037}{user\_\-register\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{user_8module_ab57c127a7196e57c6858e8ebac02e8f2}{user\_\-modules\_\-installed} (\$modules)
+\item 
+\hyperlink{user_8module_a2eeb0c76aaabb3e178ab069c4f88fc1f}{user\_\-modules\_\-uninstalled} (\$modules)
+\item 
+\hyperlink{user_8module_ae7cf007030b2bfa8f13d0b18b142a154}{user\_\-login\_\-destination} ()
+\item 
+\hyperlink{user_8module_a530af19399abbe704a0ebe37a3cc13e4}{user\_\-cookie\_\-save} (array \$values)
+\item 
+\hyperlink{user_8module_a9a5f709dee676b6395c7e0c2c17c2512}{user\_\-cookie\_\-delete} (\$cookie\_\-name)
+\item 
+\hyperlink{user_8module_a8c78debb117144a12195c59dc76d7f01}{user\_\-rdf\_\-mapping} ()
+\item 
+\hyperlink{user_8module_a60c0db0f629d04f71229798339e155fb}{user\_\-file\_\-download\_\-access} (\$field, \$entity\_\-type, \$entity)
+\item 
+\hyperlink{user_8module_a4fc928f2162969ae4331773ff226e3ec}{user\_\-system\_\-info\_\-alter} (\&\$info, \$file, \$type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Enables the user registration and login system. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{user_8module_ace0e892f6bacb71d3660bc875ce80a96}{
+\index{user.module@{user.module}!EMAIL\_\-MAX\_\-LENGTH@{EMAIL\_\-MAX\_\-LENGTH}}
+\index{EMAIL\_\-MAX\_\-LENGTH@{EMAIL\_\-MAX\_\-LENGTH}!user.module@{user.module}}
+\subsubsection[{EMAIL\_\-MAX\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf EMAIL\_\-MAX\_\-LENGTH}}}
+\label{user_8module_ace0e892f6bacb71d3660bc875ce80a96}
+Maximum length of user e-\/mail text field. \hypertarget{user_8module_a86e7d065e288fde0300970e27f3f9438}{
+\index{user.module@{user.module}!USER\_\-REGISTER\_\-ADMINISTRATORS\_\-ONLY@{USER\_\-REGISTER\_\-ADMINISTRATORS\_\-ONLY}}
+\index{USER\_\-REGISTER\_\-ADMINISTRATORS\_\-ONLY@{USER\_\-REGISTER\_\-ADMINISTRATORS\_\-ONLY}!user.module@{user.module}}
+\subsubsection[{USER\_\-REGISTER\_\-ADMINISTRATORS\_\-ONLY}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf USER\_\-REGISTER\_\-ADMINISTRATORS\_\-ONLY}}}
+\label{user_8module_a86e7d065e288fde0300970e27f3f9438}
+Only administrators can create user accounts. \hypertarget{user_8module_aad1e83ffc252c482267461bde962d19f}{
+\index{user.module@{user.module}!USER\_\-REGISTER\_\-VISITORS@{USER\_\-REGISTER\_\-VISITORS}}
+\index{USER\_\-REGISTER\_\-VISITORS@{USER\_\-REGISTER\_\-VISITORS}!user.module@{user.module}}
+\subsubsection[{USER\_\-REGISTER\_\-VISITORS}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf USER\_\-REGISTER\_\-VISITORS}}}
+\label{user_8module_aad1e83ffc252c482267461bde962d19f}
+Visitors can create their own accounts. \hypertarget{user_8module_a46063390f086e98c8db7e380c0fa1fd5}{
+\index{user.module@{user.module}!USER\_\-REGISTER\_\-VISITORS\_\-ADMINISTRATIVE\_\-APPROVAL@{USER\_\-REGISTER\_\-VISITORS\_\-ADMINISTRATIVE\_\-APPROVAL}}
+\index{USER\_\-REGISTER\_\-VISITORS\_\-ADMINISTRATIVE\_\-APPROVAL@{USER\_\-REGISTER\_\-VISITORS\_\-ADMINISTRATIVE\_\-APPROVAL}!user.module@{user.module}}
+\subsubsection[{USER\_\-REGISTER\_\-VISITORS\_\-ADMINISTRATIVE\_\-APPROVAL}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf USER\_\-REGISTER\_\-VISITORS\_\-ADMINISTRATIVE\_\-APPROVAL}}}
+\label{user_8module_a46063390f086e98c8db7e380c0fa1fd5}
+Visitors can create accounts, but they don't become active without administrative approval. \hypertarget{user_8module_ab5066e0a1cb5ba39be9389bdb7341e9c}{
+\index{user.module@{user.module}!USERNAME\_\-MAX\_\-LENGTH@{USERNAME\_\-MAX\_\-LENGTH}}
+\index{USERNAME\_\-MAX\_\-LENGTH@{USERNAME\_\-MAX\_\-LENGTH}!user.module@{user.module}}
+\subsubsection[{USERNAME\_\-MAX\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf USERNAME\_\-MAX\_\-LENGTH}}}
+\label{user_8module_ab5066e0a1cb5ba39be9389bdb7341e9c}
+Maximum length of username text field. 
+
+\subsection{Function Documentation}
+\hypertarget{user_8module_afc9203f67609047039df65af5de60739}{
+\index{user.module@{user.module}!\_\-user\_\-cancel@{\_\-user\_\-cancel}}
+\index{\_\-user\_\-cancel@{\_\-user\_\-cancel}!user.module@{user.module}}
+\subsubsection[{\_\-user\_\-cancel}]{\setlength{\rightskip}{0pt plus 5cm}\_\-user\_\-cancel (\$ {\em edit}, \/  \$ {\em account}, \/  \$ {\em method})}}
+\label{user_8module_afc9203f67609047039df65af5de60739}
+Last batch processing step for cancelling a user account.
+
+Since batch and session API require a valid user account, the actual cancellation of a user account needs to happen last.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_af6ef747e6353edaecc43f55dc85eff9e}{user\_\-cancel()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_ade553a108fdbcf811513ee0539aeebbe}{
+\index{user.module@{user.module}!\_\-user\_\-cancel\_\-session\_\-regenerate@{\_\-user\_\-cancel\_\-session\_\-regenerate}}
+\index{\_\-user\_\-cancel\_\-session\_\-regenerate@{\_\-user\_\-cancel\_\-session\_\-regenerate}!user.module@{user.module}}
+\subsubsection[{\_\-user\_\-cancel\_\-session\_\-regenerate}]{\setlength{\rightskip}{0pt plus 5cm}\_\-user\_\-cancel\_\-session\_\-regenerate ()}}
+\label{user_8module_ade553a108fdbcf811513ee0539aeebbe}
+Finished batch processing callback for cancelling a user account.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_af6ef747e6353edaecc43f55dc85eff9e}{user\_\-cancel()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_a92dbc7c3bb262cecba5f28bbf93a5175}{
+\index{user.module@{user.module}!\_\-user\_\-categories@{\_\-user\_\-categories}}
+\index{\_\-user\_\-categories@{\_\-user\_\-categories}!user.module@{user.module}}
+\subsubsection[{\_\-user\_\-categories}]{\setlength{\rightskip}{0pt plus 5cm}\_\-user\_\-categories ()}}
+\label{user_8module_a92dbc7c3bb262cecba5f28bbf93a5175}
+Retrieve a list of all user setting/information categories and sort them by weight. \hypertarget{user_8module_a97bde917b48465820689f7d8dc437884}{
+\index{user.module@{user.module}!\_\-user\_\-mail\_\-notify@{\_\-user\_\-mail\_\-notify}}
+\index{\_\-user\_\-mail\_\-notify@{\_\-user\_\-mail\_\-notify}!user.module@{user.module}}
+\subsubsection[{\_\-user\_\-mail\_\-notify}]{\setlength{\rightskip}{0pt plus 5cm}\_\-user\_\-mail\_\-notify (\$ {\em op}, \/  \$ {\em account}, \/  \$ {\em language} = {\ttfamily NULL})}}
+\label{user_8module_a97bde917b48465820689f7d8dc437884}
+Conditionally create and send a notification email when a certain operation happens on the given user account.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_a0685343e7877f453320a935cb2d9c5d1}{user\_\-mail\_\-tokens()} 
+
+\hyperlink{mail_8inc_ab80781fd7273975a77cbbd13300eddbf}{drupal\_\-mail()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$op}]The operation being performed on the account. Possible values:
+\begin{DoxyItemize}
+\item 'register\_\-admin\_\-created': Welcome message for user created by the admin.
+\item 'register\_\-no\_\-approval\_\-required': Welcome message when user self-\/registers.
+\item 'register\_\-pending\_\-approval': Welcome message, user pending admin approval.
+\item 'password\_\-reset': Password recovery request.
+\item 'status\_\-activated': Account activated.
+\item 'status\_\-blocked': Account blocked.
+\item 'cancel\_\-confirm': Account cancellation request.
+\item 'status\_\-canceled': Account canceled.
+\end{DoxyItemize}\item[{\em \$account}]The user object of the account being notified. Must contain at least the fields 'uid', 'name', and 'mail'. \item[{\em \$language}]Optional language to use for the notification, overriding account language.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The return value from \hyperlink{mail_8inc_a6ba240b2e368447935c9bcb114f59a1a}{drupal\_\-mail\_\-system()}-\/$>$mail(), if ends up being called. 
+\end{DoxyReturn}
+\hypertarget{user_8module_afeb35780400f149e307cd4b4f1d358a1}{
+\index{user.module@{user.module}!\_\-user\_\-mail\_\-text@{\_\-user\_\-mail\_\-text}}
+\index{\_\-user\_\-mail\_\-text@{\_\-user\_\-mail\_\-text}!user.module@{user.module}}
+\subsubsection[{\_\-user\_\-mail\_\-text}]{\setlength{\rightskip}{0pt plus 5cm}\_\-user\_\-mail\_\-text (\$ {\em key}, \/  \$ {\em language} = {\ttfamily NULL}, \/  \$ {\em variables} = {\ttfamily array()}, \/  \$ {\em replace} = {\ttfamily TRUE})}}
+\label{user_8module_afeb35780400f149e307cd4b4f1d358a1}
+Returns a mail string for a variable name.
+
+Used by \hyperlink{user_8module_a1398b4fdee5dad70d6da89ce5be6c43d}{user\_\-mail()} and the settings forms to retrieve strings. \hypertarget{user_8module_aa1d7397dce93911938b4edbfee69ceb4}{
+\index{user.module@{user.module}!template\_\-preprocess\_\-user\_\-picture@{template\_\-preprocess\_\-user\_\-picture}}
+\index{template\_\-preprocess\_\-user\_\-picture@{template\_\-preprocess\_\-user\_\-picture}!user.module@{user.module}}
+\subsubsection[{template\_\-preprocess\_\-user\_\-picture}]{\setlength{\rightskip}{0pt plus 5cm}template\_\-preprocess\_\-user\_\-picture (\&\$ {\em variables})}}
+\label{user_8module_aa1d7397dce93911938b4edbfee69ceb4}
+Process variables for \hyperlink{user-picture_8tpl_8php}{user-\/picture.tpl.php}.
+
+The \$variables array contains the following arguments:
+\begin{DoxyItemize}
+\item \$account: A user, node or comment object with 'name', 'uid' and 'picture' fields.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user-picture_8tpl_8php}{user-\/picture.tpl.php} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_a8daa9d898b1e84225b519ee0c7fb57e0}{
+\index{user.module@{user.module}!user\_\-access@{user\_\-access}}
+\index{user\_\-access@{user\_\-access}!user.module@{user.module}}
+\subsubsection[{user\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-access (\$ {\em string}, \/  \$ {\em account} = {\ttfamily NULL})}}
+\label{user_8module_a8daa9d898b1e84225b519ee0c7fb57e0}
+Determine whether the user has a given privilege.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$string}]The permission, such as \char`\"{}administer nodes\char`\"{}, being checked for. \item[{\em \$account}](optional) The account to check, if not given use currently logged in user.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean TRUE if the current user has the requested permission.
+\end{DoxyReturn}
+All permission checks in Drupal should go through this function. This way, we guarantee consistent behavior, and ensure that the superuser can perform all actions. \hypertarget{user_8module_ab51965add9fd8ee2915e65d39213d05c}{
+\index{user.module@{user.module}!user\_\-account\_\-form@{user\_\-account\_\-form}}
+\index{user\_\-account\_\-form@{user\_\-account\_\-form}!user.module@{user.module}}
+\subsubsection[{user\_\-account\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-account\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8module_ab51965add9fd8ee2915e65d39213d05c}
+Helper function to add default user account fields to user registration and edit form.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_a168c461ed4da4e6a48458e68e7a85042}{user\_\-account\_\-form\_\-validate()} 
+
+\hyperlink{user_8module_a129d5503ac6de8cdf01d11b18e2c7298}{user\_\-validate\_\-current\_\-pass()} 
+
+\hyperlink{user_8module_aa8b7bc791c72d8484dd8462440d41b3a}{user\_\-validate\_\-picture()} 
+
+\hyperlink{user_8module_abe55c980b2faeab65d0a9942f99916dd}{user\_\-validate\_\-mail()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_a168c461ed4da4e6a48458e68e7a85042}{
+\index{user.module@{user.module}!user\_\-account\_\-form\_\-validate@{user\_\-account\_\-form\_\-validate}}
+\index{user\_\-account\_\-form\_\-validate@{user\_\-account\_\-form\_\-validate}!user.module@{user.module}}
+\subsubsection[{user\_\-account\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-account\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8module_a168c461ed4da4e6a48458e68e7a85042}
+Form validation handler for \hyperlink{user_8module_ab51965add9fd8ee2915e65d39213d05c}{user\_\-account\_\-form()}.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_ab51965add9fd8ee2915e65d39213d05c}{user\_\-account\_\-form()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_a804c5206067117643c1853f3e28bb208}{
+\index{user.module@{user.module}!user\_\-action\_\-info@{user\_\-action\_\-info}}
+\index{user\_\-action\_\-info@{user\_\-action\_\-info}!user.module@{user.module}}
+\subsubsection[{user\_\-action\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-action\_\-info ()}}
+\label{user_8module_a804c5206067117643c1853f3e28bb208}
+Implements \hyperlink{group__actions_ga3df26c5d6496c91fcd0edd8648023fb4}{hook\_\-action\_\-info()}. \hypertarget{user_8module_a9896eb1c67550e111cd5aa5198a1abc0}{
+\index{user.module@{user.module}!user\_\-admin\_\-paths@{user\_\-admin\_\-paths}}
+\index{user\_\-admin\_\-paths@{user\_\-admin\_\-paths}!user.module@{user.module}}
+\subsubsection[{user\_\-admin\_\-paths}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-admin\_\-paths ()}}
+\label{user_8module_a9896eb1c67550e111cd5aa5198a1abc0}
+Implements \hyperlink{group__hooks_ga3fe6d93afc8bb04afbd9e3c326d1bdc1}{hook\_\-admin\_\-paths()}. \hypertarget{user_8module_a741745e553ff115eb51b4dcc8af1ffbc}{
+\index{user.module@{user.module}!user\_\-authenticate@{user\_\-authenticate}}
+\index{user\_\-authenticate@{user\_\-authenticate}!user.module@{user.module}}
+\subsubsection[{user\_\-authenticate}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-authenticate (\$ {\em name}, \/  \$ {\em password})}}
+\label{user_8module_a741745e553ff115eb51b4dcc8af1ffbc}
+Try to validate the user's login credentials locally.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]User name to authenticate. \item[{\em \$password}]A plain-\/text password, such as trimmed text from form values. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The user's uid on success, or FALSE on failure to authenticate. 
+\end{DoxyReturn}
+\hypertarget{user_8module_a5494cdcda6f0d2930656ed704d9fbfa8}{
+\index{user.module@{user.module}!user\_\-block\_\-configure@{user\_\-block\_\-configure}}
+\index{user\_\-block\_\-configure@{user\_\-block\_\-configure}!user.module@{user.module}}
+\subsubsection[{user\_\-block\_\-configure}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-block\_\-configure (\$ {\em delta} = {\ttfamily ''})}}
+\label{user_8module_a5494cdcda6f0d2930656ed704d9fbfa8}
+Implements \hyperlink{group__hooks_gacc86fefd1e0299f387f79a37dd1a48b7}{hook\_\-block\_\-configure()}. \hypertarget{user_8module_ace25ccf18bbb198c6f2f3f60735f1b3d}{
+\index{user.module@{user.module}!user\_\-block\_\-info@{user\_\-block\_\-info}}
+\index{user\_\-block\_\-info@{user\_\-block\_\-info}!user.module@{user.module}}
+\subsubsection[{user\_\-block\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-block\_\-info ()}}
+\label{user_8module_ace25ccf18bbb198c6f2f3f60735f1b3d}
+Implements \hyperlink{group__hooks_ga2bd926c3e90deeba0c3ba64fb3c64d73}{hook\_\-block\_\-info()}. \hypertarget{user_8module_adeeb8b22b27c97b3e3aff38487c03f4c}{
+\index{user.module@{user.module}!user\_\-block\_\-save@{user\_\-block\_\-save}}
+\index{user\_\-block\_\-save@{user\_\-block\_\-save}!user.module@{user.module}}
+\subsubsection[{user\_\-block\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-block\_\-save (\$ {\em delta} = {\ttfamily ''}, \/  \$ {\em edit} = {\ttfamily array()})}}
+\label{user_8module_adeeb8b22b27c97b3e3aff38487c03f4c}
+Implements \hyperlink{group__hooks_ga622024ce4f818c241ca7a765e829f928}{hook\_\-block\_\-save()}. \hypertarget{user_8module_ac06f7fc22561ebb4ad7130564bb7526e}{
+\index{user.module@{user.module}!user\_\-block\_\-view@{user\_\-block\_\-view}}
+\index{user\_\-block\_\-view@{user\_\-block\_\-view}!user.module@{user.module}}
+\subsubsection[{user\_\-block\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-block\_\-view (\$ {\em delta} = {\ttfamily ''})}}
+\label{user_8module_ac06f7fc22561ebb4ad7130564bb7526e}
+Implements \hyperlink{group__hooks_gaa14092a3e74cdc57aa295100cfd6860d}{hook\_\-block\_\-view()}. \hypertarget{user_8module_ab37696ec0ec393751b7cfb06146963f1}{
+\index{user.module@{user.module}!user\_\-build\_\-content@{user\_\-build\_\-content}}
+\index{user\_\-build\_\-content@{user\_\-build\_\-content}!user.module@{user.module}}
+\subsubsection[{user\_\-build\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-build\_\-content (\$ {\em account}, \/  \$ {\em view\_\-mode} = {\ttfamily 'full'}, \/  \$ {\em langcode} = {\ttfamily NULL})}}
+\label{user_8module_ab37696ec0ec393751b7cfb06146963f1}
+Builds a structured array representing the profile content.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$account}]A user object. \item[{\em \$view\_\-mode}]View mode, e.g. 'full'. \item[{\em \$langcode}](optional) A language code to use for rendering. Defaults to the global content language of the current request. \end{DoxyParams}
+\hypertarget{user_8module_ae862ab5b636280ab3c4376eb2c00f049}{
+\index{user.module@{user.module}!user\_\-build\_\-filter\_\-query@{user\_\-build\_\-filter\_\-query}}
+\index{user\_\-build\_\-filter\_\-query@{user\_\-build\_\-filter\_\-query}!user.module@{user.module}}
+\subsubsection[{user\_\-build\_\-filter\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-build\_\-filter\_\-query ({\bf SelectQuery} \$ {\em query})}}
+\label{user_8module_ae862ab5b636280ab3c4376eb2c00f049}
+Extends a query object for user administration filters based on session.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$query}]\hyperlink{classQuery}{Query} object that should be filtered. \end{DoxyParams}
+\hypertarget{user_8module_af6ef747e6353edaecc43f55dc85eff9e}{
+\index{user.module@{user.module}!user\_\-cancel@{user\_\-cancel}}
+\index{user\_\-cancel@{user\_\-cancel}!user.module@{user.module}}
+\subsubsection[{user\_\-cancel}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-cancel (\$ {\em edit}, \/  \$ {\em uid}, \/  \$ {\em method})}}
+\label{user_8module_af6ef747e6353edaecc43f55dc85eff9e}
+Cancel a user account.
+
+Since the user cancellation process needs to be run in a batch, either Form API will invoke it, or \hyperlink{group__batch_gab17f59692632a482cee4f65f27d082f7}{batch\_\-process()} needs to be invoked after calling this function and should define the path to redirect to.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$edit}]An array of submitted form values. \item[{\em \$uid}]The user ID of the user account to cancel. \item[{\em \$method}]The account cancellation method to use.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_afc9203f67609047039df65af5de60739}{\_\-user\_\-cancel()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_a1a179fa6a35c42c0c9234b7f67e3715f}{
+\index{user.module@{user.module}!user\_\-cancel\_\-access@{user\_\-cancel\_\-access}}
+\index{user\_\-cancel\_\-access@{user\_\-cancel\_\-access}!user.module@{user.module}}
+\subsubsection[{user\_\-cancel\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-cancel\_\-access (\$ {\em account})}}
+\label{user_8module_a1a179fa6a35c42c0c9234b7f67e3715f}
+Menu access callback; limit access to account cancellation pages.
+
+Limit access to users with the 'cancel account' permission or administrative users, and prevent the anonymous user from cancelling the account. \hypertarget{user_8module_afdf3514e3f6d0c8de3f68ff5e98452c2}{
+\index{user.module@{user.module}!user\_\-cancel\_\-url@{user\_\-cancel\_\-url}}
+\index{user\_\-cancel\_\-url@{user\_\-cancel\_\-url}!user.module@{user.module}}
+\subsubsection[{user\_\-cancel\_\-url}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-cancel\_\-url (\$ {\em account})}}
+\label{user_8module_afdf3514e3f6d0c8de3f68ff5e98452c2}
+Generates a URL to confirm an account cancellation request.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em object}]\$account The user account object, which must contain at least the following properties:
+\begin{DoxyItemize}
+\item uid: The user uid number.
+\item pass: The hashed user password string.
+\item login: The user login name.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A unique URL that may be used to confirm the cancellation of the user account.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_a0685343e7877f453320a935cb2d9c5d1}{user\_\-mail\_\-tokens()} 
+
+\hyperlink{user_8pages_8inc_ac3ab92d15edab48212f460e0eabaafb6}{user\_\-cancel\_\-confirm()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_ad5ee67e73aa6eba6ce29186eea51e6d5}{
+\index{user.module@{user.module}!user\_\-category\_\-load@{user\_\-category\_\-load}}
+\index{user\_\-category\_\-load@{user\_\-category\_\-load}!user.module@{user.module}}
+\subsubsection[{user\_\-category\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-category\_\-load (\$ {\em uid}, \/  \&\$ {\em map}, \/  \$ {\em index})}}
+\label{user_8module_ad5ee67e73aa6eba6ce29186eea51e6d5}
+Return a user object after checking if any profile category in the path exists. \hypertarget{user_8module_a7f41acc702ef2d8c2161f79a709fae81}{
+\index{user.module@{user.module}!user\_\-comment\_\-view@{user\_\-comment\_\-view}}
+\index{user\_\-comment\_\-view@{user\_\-comment\_\-view}!user.module@{user.module}}
+\subsubsection[{user\_\-comment\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-comment\_\-view (\$ {\em comment})}}
+\label{user_8module_a7f41acc702ef2d8c2161f79a709fae81}
+Implements \hyperlink{group__hooks_gab162cbd3dc1b0395011df47ca3f98aa3}{hook\_\-comment\_\-view()}. \hypertarget{user_8module_a9a5f709dee676b6395c7e0c2c17c2512}{
+\index{user.module@{user.module}!user\_\-cookie\_\-delete@{user\_\-cookie\_\-delete}}
+\index{user\_\-cookie\_\-delete@{user\_\-cookie\_\-delete}!user.module@{user.module}}
+\subsubsection[{user\_\-cookie\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-cookie\_\-delete (\$ {\em cookie\_\-name})}}
+\label{user_8module_a9a5f709dee676b6395c7e0c2c17c2512}
+Delete a visitor information cookie.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cookie\_\-name}]A cookie name such as 'homepage'. \end{DoxyParams}
+\hypertarget{user_8module_a530af19399abbe704a0ebe37a3cc13e4}{
+\index{user.module@{user.module}!user\_\-cookie\_\-save@{user\_\-cookie\_\-save}}
+\index{user\_\-cookie\_\-save@{user\_\-cookie\_\-save}!user.module@{user.module}}
+\subsubsection[{user\_\-cookie\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-cookie\_\-save (array \$ {\em values})}}
+\label{user_8module_a530af19399abbe704a0ebe37a3cc13e4}
+Saves visitor information as a cookie so it can be reused.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$values}]An array of key/value pairs to be saved into a cookie. \end{DoxyParams}
+\hypertarget{user_8module_aeed10f2e053a5b6ccb57e22937961c77}{
+\index{user.module@{user.module}!user\_\-delete@{user\_\-delete}}
+\index{user\_\-delete@{user\_\-delete}!user.module@{user.module}}
+\subsubsection[{user\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-delete (\$ {\em uid})}}
+\label{user_8module_aeed10f2e053a5b6ccb57e22937961c77}
+Delete a user.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$uid}]A user ID. \end{DoxyParams}
+\hypertarget{user_8module_a3c8aa34b1ef0c113327f7151cb6f2e35}{
+\index{user.module@{user.module}!user\_\-delete\_\-multiple@{user\_\-delete\_\-multiple}}
+\index{user\_\-delete\_\-multiple@{user\_\-delete\_\-multiple}!user.module@{user.module}}
+\subsubsection[{user\_\-delete\_\-multiple}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-delete\_\-multiple (array \$ {\em uids})}}
+\label{user_8module_a3c8aa34b1ef0c113327f7151cb6f2e35}
+Delete multiple user accounts.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$uids}]An array of user IDs. \end{DoxyParams}
+\hypertarget{user_8module_a9d988b07d458af21fe4e11868052b345}{
+\index{user.module@{user.module}!user\_\-edit\_\-access@{user\_\-edit\_\-access}}
+\index{user\_\-edit\_\-access@{user\_\-edit\_\-access}!user.module@{user.module}}
+\subsubsection[{user\_\-edit\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-edit\_\-access (\$ {\em account})}}
+\label{user_8module_a9d988b07d458af21fe4e11868052b345}
+Access callback for user account editing. \hypertarget{user_8module_a39be89fedb1ce14ba1c97852daa0f7f7}{
+\index{user.module@{user.module}!user\_\-element\_\-info@{user\_\-element\_\-info}}
+\index{user\_\-element\_\-info@{user\_\-element\_\-info}!user.module@{user.module}}
+\subsubsection[{user\_\-element\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-element\_\-info ()}}
+\label{user_8module_a39be89fedb1ce14ba1c97852daa0f7f7}
+Implements \hyperlink{group__hooks_ga3c5182432eddc82f8b7845e66a365d51}{hook\_\-element\_\-info()}. \hypertarget{user_8module_a1dd64aa2b09d172ccab380135acb6af4}{
+\index{user.module@{user.module}!user\_\-entity\_\-info@{user\_\-entity\_\-info}}
+\index{user\_\-entity\_\-info@{user\_\-entity\_\-info}!user.module@{user.module}}
+\subsubsection[{user\_\-entity\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-entity\_\-info ()}}
+\label{user_8module_a1dd64aa2b09d172ccab380135acb6af4}
+Implements \hyperlink{group__hooks_gaf02318e9d0e8cdbf6d187b271b9969a8}{hook\_\-entity\_\-info()}. \hypertarget{user_8module_a52fec3f0dbb0e33fed3d88a58453b0f4}{
+\index{user.module@{user.module}!user\_\-external\_\-load@{user\_\-external\_\-load}}
+\index{user\_\-external\_\-load@{user\_\-external\_\-load}!user.module@{user.module}}
+\subsubsection[{user\_\-external\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-external\_\-load (\$ {\em authname})}}
+\label{user_8module_a52fec3f0dbb0e33fed3d88a58453b0f4}
+Fetches a user object based on an external authentication source.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$authname The external authentication username.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A fully-\/loaded user object if the user is found or FALSE if not found. 
+\end{DoxyReturn}
+\hypertarget{user_8module_af4a2f1223554e9d79172c92273b81f2b}{
+\index{user.module@{user.module}!user\_\-external\_\-login\_\-register@{user\_\-external\_\-login\_\-register}}
+\index{user\_\-external\_\-login\_\-register@{user\_\-external\_\-login\_\-register}!user.module@{user.module}}
+\subsubsection[{user\_\-external\_\-login\_\-register}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-external\_\-login\_\-register (\$ {\em name}, \/  \$ {\em module})}}
+\label{user_8module_af4a2f1223554e9d79172c92273b81f2b}
+Helper function for authentication modules. Either logs in or registers the current user, based on username. Either way, the global \$user object is populated and login tasks are performed. \hypertarget{user_8module_a63f13e48d71e123e4e0a893b5dce6748}{
+\index{user.module@{user.module}!user\_\-field\_\-extra\_\-fields@{user\_\-field\_\-extra\_\-fields}}
+\index{user\_\-field\_\-extra\_\-fields@{user\_\-field\_\-extra\_\-fields}!user.module@{user.module}}
+\subsubsection[{user\_\-field\_\-extra\_\-fields}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-field\_\-extra\_\-fields ()}}
+\label{user_8module_a63f13e48d71e123e4e0a893b5dce6748}
+Implements \hyperlink{group__hooks_ga7100332aa5b4d5f6ba72534599d133e5}{hook\_\-field\_\-extra\_\-fields()}. \hypertarget{user_8module_ae2c0ec71e6b747b92374db56ec39a559}{
+\index{user.module@{user.module}!user\_\-field\_\-info\_\-alter@{user\_\-field\_\-info\_\-alter}}
+\index{user\_\-field\_\-info\_\-alter@{user\_\-field\_\-info\_\-alter}!user.module@{user.module}}
+\subsubsection[{user\_\-field\_\-info\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-field\_\-info\_\-alter (\&\$ {\em info})}}
+\label{user_8module_ae2c0ec71e6b747b92374db56ec39a559}
+Implements \hyperlink{group__field__types_ga62d5e308d07e62b096d13714ae42335f}{hook\_\-field\_\-info\_\-alter()}. \hypertarget{user_8module_a37b2007aaeed8fe1c1210dbc30ae2a5d}{
+\index{user.module@{user.module}!user\_\-file\_\-delete@{user\_\-file\_\-delete}}
+\index{user\_\-file\_\-delete@{user\_\-file\_\-delete}!user.module@{user.module}}
+\subsubsection[{user\_\-file\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-file\_\-delete (\$ {\em file})}}
+\label{user_8module_a37b2007aaeed8fe1c1210dbc30ae2a5d}
+Implements \hyperlink{group__hooks_gafa88683ad014451b3fbc9ca9bb80afdd}{hook\_\-file\_\-delete()}. \hypertarget{user_8module_a639df304dacc79e74a34de493586a198}{
+\index{user.module@{user.module}!user\_\-file\_\-download@{user\_\-file\_\-download}}
+\index{user\_\-file\_\-download@{user\_\-file\_\-download}!user.module@{user.module}}
+\subsubsection[{user\_\-file\_\-download}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-file\_\-download (\$ {\em uri})}}
+\label{user_8module_a639df304dacc79e74a34de493586a198}
+Implements \hyperlink{group__hooks_gab73f0e658d6630220ba7836ccd011ecc}{hook\_\-file\_\-download()}.
+
+Ensure that user pictures (avatars) are always downloadable. \hypertarget{user_8module_a60c0db0f629d04f71229798339e155fb}{
+\index{user.module@{user.module}!user\_\-file\_\-download\_\-access@{user\_\-file\_\-download\_\-access}}
+\index{user\_\-file\_\-download\_\-access@{user\_\-file\_\-download\_\-access}!user.module@{user.module}}
+\subsubsection[{user\_\-file\_\-download\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-file\_\-download\_\-access (\$ {\em field}, \/  \$ {\em entity\_\-type}, \/  \$ {\em entity})}}
+\label{user_8module_a60c0db0f629d04f71229798339e155fb}
+Implements \hyperlink{file_8api_8php_ae72c8feceec1072762bffc3ba020aa2a}{hook\_\-file\_\-download\_\-access()}. \hypertarget{user_8module_a911b761d015b504f3e545b17f1403957}{
+\index{user.module@{user.module}!user\_\-file\_\-move@{user\_\-file\_\-move}}
+\index{user\_\-file\_\-move@{user\_\-file\_\-move}!user.module@{user.module}}
+\subsubsection[{user\_\-file\_\-move}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-file\_\-move (\$ {\em file}, \/  \$ {\em source})}}
+\label{user_8module_a911b761d015b504f3e545b17f1403957}
+Implements \hyperlink{group__hooks_ga7053514a7a923b43960b31cacfa9ce95}{hook\_\-file\_\-move()}. \hypertarget{user_8module_a898a8a080e136ca20a94b1f3e3e04fd5}{
+\index{user.module@{user.module}!user\_\-filters@{user\_\-filters}}
+\index{user\_\-filters@{user\_\-filters}!user.module@{user.module}}
+\subsubsection[{user\_\-filters}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-filters ()}}
+\label{user_8module_a898a8a080e136ca20a94b1f3e3e04fd5}
+List user administration filters that can be applied. \hypertarget{user_8module_ab71e2dd6088fa2ef32b2e8a71e85fbbe}{
+\index{user.module@{user.module}!user\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-alter@{user\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-alter}}
+\index{user\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-alter@{user\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-alter}!user.module@{user.module}}
+\subsubsection[{user\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-alter (\&\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em form\_\-id})}}
+\label{user_8module_ab71e2dd6088fa2ef32b2e8a71e85fbbe}
+Implements \hyperlink{group__hooks_ga8d4a4089551493d55911bd5c4f218264}{hook\_\-form\_\-FORM\_\-ID\_\-alter()}.
+
+Add a checkbox for the 'user\_\-register\_\-form' instance settings on the 'Edit field instance' form. \hypertarget{user_8module_a965286b291d94cac41246d7f350d4214}{
+\index{user.module@{user.module}!user\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-submit@{user\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-submit}}
+\index{user\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-submit@{user\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-submit}!user.module@{user.module}}
+\subsubsection[{user\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8module_a965286b291d94cac41246d7f350d4214}
+Additional submit handler for the 'Edit field instance' form.
+
+Make sure the 'user\_\-register\_\-form' setting is set for required fields. \hypertarget{user_8module_ae2f4fd0c6769e59e37bf1a13e5f2a4cd}{
+\index{user.module@{user.module}!user\_\-form\_\-process\_\-password\_\-confirm@{user\_\-form\_\-process\_\-password\_\-confirm}}
+\index{user\_\-form\_\-process\_\-password\_\-confirm@{user\_\-form\_\-process\_\-password\_\-confirm}!user.module@{user.module}}
+\subsubsection[{user\_\-form\_\-process\_\-password\_\-confirm}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-form\_\-process\_\-password\_\-confirm (\$ {\em element})}}
+\label{user_8module_ae2f4fd0c6769e59e37bf1a13e5f2a4cd}
+Form element process handler for client-\/side password validation.
+
+This process handler is automatically invoked for 'password\_\-confirm' form elements to add the JavaScript and string translations for dynamic password validation.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{system_8module_a39faa9a5430a70bb37a3c8af72460a14}{system\_\-element\_\-info()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_a71f0c8ed86c79dc3000478b2c62ec31c}{
+\index{user.module@{user.module}!user\_\-get\_\-authmaps@{user\_\-get\_\-authmaps}}
+\index{user\_\-get\_\-authmaps@{user\_\-get\_\-authmaps}!user.module@{user.module}}
+\subsubsection[{user\_\-get\_\-authmaps}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-get\_\-authmaps (\$ {\em authname} = {\ttfamily NULL})}}
+\label{user_8module_a71f0c8ed86c79dc3000478b2c62ec31c}
+Discover which external authentication module(s) authenticated a username.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$authname}]A username used by an external authentication module. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An associative array with module as key and username as value. 
+\end{DoxyReturn}
+\hypertarget{user_8module_a7c042ca4fed4db807b9073d19269f760}{
+\index{user.module@{user.module}!user\_\-help@{user\_\-help}}
+\index{user\_\-help@{user\_\-help}!user.module@{user.module}}
+\subsubsection[{user\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{user_8module_a7c042ca4fed4db807b9073d19269f760}
+Implement \hyperlink{group__hooks_ga5589c2714a782738e8851c4c90231f0e}{hook\_\-help()}. \hypertarget{user_8module_a8a773378fc4c0afa38865bbee2e88419}{
+\index{user.module@{user.module}!user\_\-image\_\-style\_\-delete@{user\_\-image\_\-style\_\-delete}}
+\index{user\_\-image\_\-style\_\-delete@{user\_\-image\_\-style\_\-delete}!user.module@{user.module}}
+\subsubsection[{user\_\-image\_\-style\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-image\_\-style\_\-delete (\$ {\em style})}}
+\label{user_8module_a8a773378fc4c0afa38865bbee2e88419}
+Implements \hyperlink{group__hooks_ga376a3d4a9427d6a8dad73d68bdd140dc}{hook\_\-image\_\-style\_\-delete()}. \hypertarget{user_8module_ab3fec9538f68340d18a8c9b204e38f49}{
+\index{user.module@{user.module}!user\_\-image\_\-style\_\-save@{user\_\-image\_\-style\_\-save}}
+\index{user\_\-image\_\-style\_\-save@{user\_\-image\_\-style\_\-save}!user.module@{user.module}}
+\subsubsection[{user\_\-image\_\-style\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-image\_\-style\_\-save (\$ {\em style})}}
+\label{user_8module_ab3fec9538f68340d18a8c9b204e38f49}
+Implements \hyperlink{group__hooks_gad403dde0a7859e160772ae696ab35cea}{hook\_\-image\_\-style\_\-save()}. \hypertarget{user_8module_af00464c62c20062112b8a25500719f69}{
+\index{user.module@{user.module}!user\_\-is\_\-anonymous@{user\_\-is\_\-anonymous}}
+\index{user\_\-is\_\-anonymous@{user\_\-is\_\-anonymous}!user.module@{user.module}}
+\subsubsection[{user\_\-is\_\-anonymous}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-is\_\-anonymous ()}}
+\label{user_8module_af00464c62c20062112b8a25500719f69}
+Determines if the current user is anonymous.
+
+\begin{DoxyReturn}{Returns}
+bool TRUE if the user is anonymous, FALSE if the user is authenticated. 
+\end{DoxyReturn}
+\hypertarget{user_8module_ac55b4d1a61adfcd30acc1b51eaa5f741}{
+\index{user.module@{user.module}!user\_\-is\_\-blocked@{user\_\-is\_\-blocked}}
+\index{user\_\-is\_\-blocked@{user\_\-is\_\-blocked}!user.module@{user.module}}
+\subsubsection[{user\_\-is\_\-blocked}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-is\_\-blocked (\$ {\em name})}}
+\label{user_8module_ac55b4d1a61adfcd30acc1b51eaa5f741}
+Checks for usernames blocked by user administration.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]A string containing a name of the user.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Object with property 'name' (the user name), if the user is blocked; FALSE if the user is not blocked. 
+\end{DoxyReturn}
+\hypertarget{user_8module_aafa6d7d07cbcb26b6728ee30122fb1b0}{
+\index{user.module@{user.module}!user\_\-is\_\-logged\_\-in@{user\_\-is\_\-logged\_\-in}}
+\index{user\_\-is\_\-logged\_\-in@{user\_\-is\_\-logged\_\-in}!user.module@{user.module}}
+\subsubsection[{user\_\-is\_\-logged\_\-in}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-is\_\-logged\_\-in ()}}
+\label{user_8module_aafa6d7d07cbcb26b6728ee30122fb1b0}
+Determines if the current user is logged in.
+
+\begin{DoxyReturn}{Returns}
+bool TRUE if the user is logged in, FALSE if the user is anonymous. 
+\end{DoxyReturn}
+\hypertarget{user_8module_a0f7e67c4e909ca691f57889dd5a72a07}{
+\index{user.module@{user.module}!user\_\-load@{user\_\-load}}
+\index{user\_\-load@{user\_\-load}!user.module@{user.module}}
+\subsubsection[{user\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-load (\$ {\em uid}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{user_8module_a0f7e67c4e909ca691f57889dd5a72a07}
+Loads a user object.
+
+Drupal has a global \$user object, which represents the currently-\/logged-\/in user. So to avoid confusion and to avoid clobbering the global \$user object, it is a good idea to assign the result of this function to a different local variable, generally \$account. If you actually do want to act as the user you are loading, it is essential to call drupal\_\-save\_\-session(FALSE); first. See \hyperlink{}{Safely impersonating another user } for more information.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$uid}]Integer specifying the user ID to load. \item[{\em \$reset}]TRUE to reset the internal cache and load from the database; FALSE (default) to load from the internal cache, if set.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A fully-\/loaded user object upon successful user load, or FALSE if the user cannot be loaded.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_a9f73ad4a543faed0e38e8ea170bff32e}{user\_\-load\_\-multiple()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_a68a9c7c15776d0ad6d0f7eb85e294c2d}{
+\index{user.module@{user.module}!user\_\-load\_\-by\_\-mail@{user\_\-load\_\-by\_\-mail}}
+\index{user\_\-load\_\-by\_\-mail@{user\_\-load\_\-by\_\-mail}!user.module@{user.module}}
+\subsubsection[{user\_\-load\_\-by\_\-mail}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-load\_\-by\_\-mail (\$ {\em mail})}}
+\label{user_8module_a68a9c7c15776d0ad6d0f7eb85e294c2d}
+Fetch a user object by email address.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$mail}]String with the account's e-\/mail address. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A fully-\/loaded \$user object upon successful user load or FALSE if user cannot be loaded.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_a9f73ad4a543faed0e38e8ea170bff32e}{user\_\-load\_\-multiple()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_a2abc1fc7de4cd56af7658688c3614f86}{
+\index{user.module@{user.module}!user\_\-load\_\-by\_\-name@{user\_\-load\_\-by\_\-name}}
+\index{user\_\-load\_\-by\_\-name@{user\_\-load\_\-by\_\-name}!user.module@{user.module}}
+\subsubsection[{user\_\-load\_\-by\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-load\_\-by\_\-name (\$ {\em name})}}
+\label{user_8module_a2abc1fc7de4cd56af7658688c3614f86}
+Fetch a user object by account name.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]String with the account's user name. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A fully-\/loaded \$user object upon successful user load or FALSE if user cannot be loaded.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_a9f73ad4a543faed0e38e8ea170bff32e}{user\_\-load\_\-multiple()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_a9f73ad4a543faed0e38e8ea170bff32e}{
+\index{user.module@{user.module}!user\_\-load\_\-multiple@{user\_\-load\_\-multiple}}
+\index{user\_\-load\_\-multiple@{user\_\-load\_\-multiple}!user.module@{user.module}}
+\subsubsection[{user\_\-load\_\-multiple}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-load\_\-multiple (\$ {\em uids} = {\ttfamily array()}, \/  \$ {\em conditions} = {\ttfamily array()}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{user_8module_a9f73ad4a543faed0e38e8ea170bff32e}
+Load multiple users based on certain conditions.
+
+This function should be used whenever you need to load more than one user from the database. Users are loaded into memory and will not require database access if loaded again during the same page request.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$uids}]An array of user IDs. \item[{\em \$conditions}](deprecated) An associative array of conditions on the \{users\} table, where the keys are the database fields and the values are the values those fields must have. Instead, it is preferable to use \hyperlink{classEntityFieldQuery}{EntityFieldQuery} to retrieve a list of entity IDs loadable by this function. \item[{\em \$reset}]A boolean indicating that the internal cache should be reset. Use this if loading a user object which has been altered during the page request.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of user objects, indexed by uid.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{common_8inc_a78b89cf93f9710a68d02f86adccf1898}{entity\_\-load()} 
+
+\hyperlink{user_8module_a0f7e67c4e909ca691f57889dd5a72a07}{user\_\-load()} 
+
+\hyperlink{user_8module_a68a9c7c15776d0ad6d0f7eb85e294c2d}{user\_\-load\_\-by\_\-mail()} 
+
+\hyperlink{user_8module_a2abc1fc7de4cd56af7658688c3614f86}{user\_\-load\_\-by\_\-name()} 
+
+\hyperlink{classEntityFieldQuery}{EntityFieldQuery}
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[\hyperlink{todo__todo000023}{Todo}]Remove \$conditions in Drupal 8. \end{Desc}
+\hypertarget{user_8module_a87098bdd1eef6b45820e23c53f8d8988}{
+\index{user.module@{user.module}!user\_\-login\_\-authenticate\_\-validate@{user\_\-login\_\-authenticate\_\-validate}}
+\index{user\_\-login\_\-authenticate\_\-validate@{user\_\-login\_\-authenticate\_\-validate}!user.module@{user.module}}
+\subsubsection[{user\_\-login\_\-authenticate\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-login\_\-authenticate\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8module_a87098bdd1eef6b45820e23c53f8d8988}
+A validate handler on the login form. Check supplied username/password against local users table. If successful, \$form\_\-state\mbox{[}'uid'\mbox{]} is set to the matching user ID. \hypertarget{user_8module_ad839942de106a39384979b02221f64fb}{
+\index{user.module@{user.module}!user\_\-login\_\-default\_\-validators@{user\_\-login\_\-default\_\-validators}}
+\index{user\_\-login\_\-default\_\-validators@{user\_\-login\_\-default\_\-validators}!user.module@{user.module}}
+\subsubsection[{user\_\-login\_\-default\_\-validators}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-login\_\-default\_\-validators ()}}
+\label{user_8module_ad839942de106a39384979b02221f64fb}
+Set up a series for validators which check for blocked users, then authenticate against local database, then return an error if authentication fails. Distributed authentication modules are welcome to use \hyperlink{group__hooks_ga6df3cea27ae1407aeef4eae5444cb213}{hook\_\-form\_\-alter()} to change this series in order to authenticate against their user database instead of the local users table. If a distributed authentication module is successful, it should set \$form\_\-state\mbox{[}'uid'\mbox{]} to a user ID.
+
+We use three validators instead of one since external authentication modules usually only need to alter the second validator.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_a8f96305420b1d860053ed6eaa50b8b34}{user\_\-login\_\-name\_\-validate()} 
+
+\hyperlink{user_8module_a87098bdd1eef6b45820e23c53f8d8988}{user\_\-login\_\-authenticate\_\-validate()} 
+
+\hyperlink{user_8module_aff194b554e3138ee149f97ed459d7d92}{user\_\-login\_\-final\_\-validate()} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+array A simple list of validate functions. 
+\end{DoxyReturn}
+\hypertarget{user_8module_ae7cf007030b2bfa8f13d0b18b142a154}{
+\index{user.module@{user.module}!user\_\-login\_\-destination@{user\_\-login\_\-destination}}
+\index{user\_\-login\_\-destination@{user\_\-login\_\-destination}!user.module@{user.module}}
+\subsubsection[{user\_\-login\_\-destination}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-login\_\-destination ()}}
+\label{user_8module_ae7cf007030b2bfa8f13d0b18b142a154}
+Helper function to rewrite the destination to avoid redirecting to login page after login.
+
+Third-\/party authentication modules may use this function to determine the proper destination after a user has been properly logged in. \hypertarget{user_8module_aff194b554e3138ee149f97ed459d7d92}{
+\index{user.module@{user.module}!user\_\-login\_\-final\_\-validate@{user\_\-login\_\-final\_\-validate}}
+\index{user\_\-login\_\-final\_\-validate@{user\_\-login\_\-final\_\-validate}!user.module@{user.module}}
+\subsubsection[{user\_\-login\_\-final\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-login\_\-final\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8module_aff194b554e3138ee149f97ed459d7d92}
+The final validation handler on the login form.
+
+Sets a form error if user has not been authenticated, or if too many logins have been attempted. This validation function should always be the last one. \hypertarget{user_8module_af487aea9565f1a6c896c493c3df9c0b2}{
+\index{user.module@{user.module}!user\_\-login\_\-finalize@{user\_\-login\_\-finalize}}
+\index{user\_\-login\_\-finalize@{user\_\-login\_\-finalize}!user.module@{user.module}}
+\subsubsection[{user\_\-login\_\-finalize}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-login\_\-finalize (\&\$ {\em edit} = {\ttfamily array()})}}
+\label{user_8module_af487aea9565f1a6c896c493c3df9c0b2}
+Finalize the login process. Must be called when logging in a user.
+
+The function records a watchdog message about the new session, saves the login timestamp, calls \hyperlink{group__hooks_ga8cce712a39ee6e57bd506b5a0c457d09}{hook\_\-user\_\-login()}, and generates a new session.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$edit The array of form values submitted by the user.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__hooks_ga8cce712a39ee6e57bd506b5a0c457d09}{hook\_\-user\_\-login()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_a8f96305420b1d860053ed6eaa50b8b34}{
+\index{user.module@{user.module}!user\_\-login\_\-name\_\-validate@{user\_\-login\_\-name\_\-validate}}
+\index{user\_\-login\_\-name\_\-validate@{user\_\-login\_\-name\_\-validate}!user.module@{user.module}}
+\subsubsection[{user\_\-login\_\-name\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-login\_\-name\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8module_a8f96305420b1d860053ed6eaa50b8b34}
+A FAPI validate handler. Sets an error if supplied username has been blocked. \hypertarget{user_8module_a84bba9d490507784160b5f3fc3d73f2f}{
+\index{user.module@{user.module}!user\_\-login\_\-submit@{user\_\-login\_\-submit}}
+\index{user\_\-login\_\-submit@{user\_\-login\_\-submit}!user.module@{user.module}}
+\subsubsection[{user\_\-login\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-login\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8module_a84bba9d490507784160b5f3fc3d73f2f}
+Submit handler for the login form. Load \$user object and perform standard login tasks. The user is then redirected to the My Account page. Setting the destination in the query string overrides the redirect. \hypertarget{user_8module_a1398b4fdee5dad70d6da89ce5be6c43d}{
+\index{user.module@{user.module}!user\_\-mail@{user\_\-mail}}
+\index{user\_\-mail@{user\_\-mail}!user.module@{user.module}}
+\subsubsection[{user\_\-mail}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-mail (\$ {\em key}, \/  \&\$ {\em message}, \/  \$ {\em params})}}
+\label{user_8module_a1398b4fdee5dad70d6da89ce5be6c43d}
+Implements \hyperlink{group__hooks_gacdeb1cba0d0a86ac4de3fff7d4765777}{hook\_\-mail()}. \hypertarget{user_8module_a0685343e7877f453320a935cb2d9c5d1}{
+\index{user.module@{user.module}!user\_\-mail\_\-tokens@{user\_\-mail\_\-tokens}}
+\index{user\_\-mail\_\-tokens@{user\_\-mail\_\-tokens}!user.module@{user.module}}
+\subsubsection[{user\_\-mail\_\-tokens}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-mail\_\-tokens (\&\$ {\em replacements}, \/  \$ {\em data}, \/  \$ {\em options})}}
+\label{user_8module_a0685343e7877f453320a935cb2d9c5d1}
+Token callback to add unsafe tokens for user mails.
+
+This function is used by the \hyperlink{includes_2token_8inc_a47eb294b05ca8d04439a9a82ccc4d82a}{token\_\-replace()} call at the end of \hyperlink{user_8module_afeb35780400f149e307cd4b4f1d358a1}{\_\-user\_\-mail\_\-text()} to set up some additional tokens that can be used in email messages generated by \hyperlink{user_8module_a1398b4fdee5dad70d6da89ce5be6c43d}{user\_\-mail()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$replacements}]An associative array variable containing mappings from token names to values (for use with strtr()). \item[{\em \$data}]An associative array of token replacement values. If the 'user' element exists, it must contain a user account object with the following properties:
+\begin{DoxyItemize}
+\item login: The account login name.
+\item pass: The hashed account login password. 
+\end{DoxyItemize}\item[{\em \$options}]Unused parameter required by the \hyperlink{includes_2token_8inc_a47eb294b05ca8d04439a9a82ccc4d82a}{token\_\-replace()} function. \end{DoxyParams}
+\hypertarget{user_8module_a48f90f1bf0f523df93ab31bd5b200573}{
+\index{user.module@{user.module}!user\_\-menu@{user\_\-menu}}
+\index{user\_\-menu@{user\_\-menu}!user.module@{user.module}}
+\subsubsection[{user\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-menu ()}}
+\label{user_8module_a48f90f1bf0f523df93ab31bd5b200573}
+Implements \hyperlink{group__hooks_ga5c95244fea59b25666e409759e133ded}{hook\_\-menu()}. \hypertarget{user_8module_a2d32cfeed1c6c5f774ccd27c3e51308e}{
+\index{user.module@{user.module}!user\_\-menu\_\-link\_\-alter@{user\_\-menu\_\-link\_\-alter}}
+\index{user\_\-menu\_\-link\_\-alter@{user\_\-menu\_\-link\_\-alter}!user.module@{user.module}}
+\subsubsection[{user\_\-menu\_\-link\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-menu\_\-link\_\-alter (\&\$ {\em link})}}
+\label{user_8module_a2d32cfeed1c6c5f774ccd27c3e51308e}
+Implements \hyperlink{group__hooks_ga53f6d87f599e7f585ca84a7e0874df81}{hook\_\-menu\_\-link\_\-alter()}. \hypertarget{user_8module_ac2ced46ecfe66b365084a2b70acf2247}{
+\index{user.module@{user.module}!user\_\-menu\_\-site\_\-status\_\-alter@{user\_\-menu\_\-site\_\-status\_\-alter}}
+\index{user\_\-menu\_\-site\_\-status\_\-alter@{user\_\-menu\_\-site\_\-status\_\-alter}!user.module@{user.module}}
+\subsubsection[{user\_\-menu\_\-site\_\-status\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-menu\_\-site\_\-status\_\-alter (\&\$ {\em menu\_\-site\_\-status}, \/  \$ {\em path})}}
+\label{user_8module_ac2ced46ecfe66b365084a2b70acf2247}
+Implements \hyperlink{group__hooks_ga3096be11aad61c8b342ade94789f6137}{hook\_\-menu\_\-site\_\-status\_\-alter()}. \hypertarget{user_8module_ad14ec01a9c57ce03d8e8ab16c2e0a400}{
+\index{user.module@{user.module}!user\_\-menu\_\-title@{user\_\-menu\_\-title}}
+\index{user\_\-menu\_\-title@{user\_\-menu\_\-title}!user.module@{user.module}}
+\subsubsection[{user\_\-menu\_\-title}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-menu\_\-title ()}}
+\label{user_8module_ad14ec01a9c57ce03d8e8ab16c2e0a400}
+Menu item title callback for the 'user' path.
+
+Anonymous users should see \char`\"{}User account\char`\"{}, but authenticated users are expected to see \char`\"{}My account\char`\"{}. \hypertarget{user_8module_ab34c18f082e7d1c927b157da487c75b3}{
+\index{user.module@{user.module}!user\_\-module\_\-invoke@{user\_\-module\_\-invoke}}
+\index{user\_\-module\_\-invoke@{user\_\-module\_\-invoke}!user.module@{user.module}}
+\subsubsection[{user\_\-module\_\-invoke}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-module\_\-invoke (\$ {\em type}, \/  \&\$ {\em edit}, \/  \$ {\em account}, \/  \$ {\em category} = {\ttfamily NULL})}}
+\label{user_8module_ab34c18f082e7d1c927b157da487c75b3}
+Invokes a user hook in every module.
+
+We cannot use \hyperlink{group__hooks_ga7547905cff161d057f9e71088ec67f05}{module\_\-invoke()} for this, because the arguments need to be passed by reference.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]A text string that controls which user hook to invoke. Valid choices are:
+\begin{DoxyItemize}
+\item cancel: Invokes \hyperlink{group__hooks_gad6223ddd2f0f52c331df8a3315d9a41e}{hook\_\-user\_\-cancel()}.
+\item insert: Invokes \hyperlink{group__hooks_gaa3e2c4c972ee796d216b15da7aaf9c2c}{hook\_\-user\_\-insert()}.
+\item login: Invokes \hyperlink{group__hooks_ga8cce712a39ee6e57bd506b5a0c457d09}{hook\_\-user\_\-login()}.
+\item presave: Invokes \hyperlink{group__hooks_gab6b224c35d7d97259d4350a7849f1e56}{hook\_\-user\_\-presave()}.
+\item update: Invokes \hyperlink{group__hooks_gab71262402336071ef7c3d08f4c36e887}{hook\_\-user\_\-update()}. 
+\end{DoxyItemize}\item[{\em \$edit}]An associative array variable containing form values to be passed as the first parameter of the hook function. \item[{\em \$account}]The user account object to be passed as the second parameter of the hook function. \item[{\em \$category}]The category of user information being acted upon. \end{DoxyParams}
+\hypertarget{user_8module_ab57c127a7196e57c6858e8ebac02e8f2}{
+\index{user.module@{user.module}!user\_\-modules\_\-installed@{user\_\-modules\_\-installed}}
+\index{user\_\-modules\_\-installed@{user\_\-modules\_\-installed}!user.module@{user.module}}
+\subsubsection[{user\_\-modules\_\-installed}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-modules\_\-installed (\$ {\em modules})}}
+\label{user_8module_ab57c127a7196e57c6858e8ebac02e8f2}
+Implements \hyperlink{group__hooks_ga71b7268520567cac1a2f296c205e5227}{hook\_\-modules\_\-installed()}. \hypertarget{user_8module_a2eeb0c76aaabb3e178ab069c4f88fc1f}{
+\index{user.module@{user.module}!user\_\-modules\_\-uninstalled@{user\_\-modules\_\-uninstalled}}
+\index{user\_\-modules\_\-uninstalled@{user\_\-modules\_\-uninstalled}!user.module@{user.module}}
+\subsubsection[{user\_\-modules\_\-uninstalled}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-modules\_\-uninstalled (\$ {\em modules})}}
+\label{user_8module_a2eeb0c76aaabb3e178ab069c4f88fc1f}
+Implements \hyperlink{group__hooks_ga4f29c7343438068a922459cbe0810279}{hook\_\-modules\_\-uninstalled()}. \hypertarget{user_8module_a7c21efb11cd202cddd82b3dc87fdd0a7}{
+\index{user.module@{user.module}!user\_\-multiple\_\-cancel\_\-confirm\_\-submit@{user\_\-multiple\_\-cancel\_\-confirm\_\-submit}}
+\index{user\_\-multiple\_\-cancel\_\-confirm\_\-submit@{user\_\-multiple\_\-cancel\_\-confirm\_\-submit}!user.module@{user.module}}
+\subsubsection[{user\_\-multiple\_\-cancel\_\-confirm\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-multiple\_\-cancel\_\-confirm\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8module_a7c21efb11cd202cddd82b3dc87fdd0a7}
+Submit handler for mass-\/account cancellation form.
+
+\begin{DoxySeeAlso}{See also}
+user\_\-multiple\_\-cancel\_\-confirm() 
+
+\hyperlink{user_8pages_8inc_a44992d6b5034c5e58010d46316368308}{user\_\-cancel\_\-confirm\_\-form\_\-submit()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_ad0fd9700bee0f36a9f873deb2c80c534}{
+\index{user.module@{user.module}!user\_\-multiple\_\-role\_\-edit@{user\_\-multiple\_\-role\_\-edit}}
+\index{user\_\-multiple\_\-role\_\-edit@{user\_\-multiple\_\-role\_\-edit}!user.module@{user.module}}
+\subsubsection[{user\_\-multiple\_\-role\_\-edit}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-multiple\_\-role\_\-edit (\$ {\em accounts}, \/  \$ {\em operation}, \/  \$ {\em rid})}}
+\label{user_8module_ad0fd9700bee0f36a9f873deb2c80c534}
+Callback function for admin mass adding/deleting a user role. \hypertarget{user_8module_adc38581bf39fce0ac244033595207933}{
+\index{user.module@{user.module}!user\_\-node\_\-load@{user\_\-node\_\-load}}
+\index{user\_\-node\_\-load@{user\_\-node\_\-load}!user.module@{user.module}}
+\subsubsection[{user\_\-node\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-node\_\-load (\$ {\em nodes}, \/  \$ {\em types})}}
+\label{user_8module_adc38581bf39fce0ac244033595207933}
+Implements \hyperlink{group__node__api__hooks_gad48bb14b68ed38526029d1f7ac2d2de4}{hook\_\-node\_\-load()}. \hypertarget{user_8module_ae37fe690b0461ac2b81b25fa3d51ecc8}{
+\index{user.module@{user.module}!user\_\-page\_\-title@{user\_\-page\_\-title}}
+\index{user\_\-page\_\-title@{user\_\-page\_\-title}!user.module@{user.module}}
+\subsubsection[{user\_\-page\_\-title}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-page\_\-title (\$ {\em account})}}
+\label{user_8module_ae37fe690b0461ac2b81b25fa3d51ecc8}
+Menu item title callback -\/ use the user name. \hypertarget{user_8module_a1d3ca7bcffa02f5785618cd86efeac7d}{
+\index{user.module@{user.module}!user\_\-pass\_\-rehash@{user\_\-pass\_\-rehash}}
+\index{user\_\-pass\_\-rehash@{user\_\-pass\_\-rehash}!user.module@{user.module}}
+\subsubsection[{user\_\-pass\_\-rehash}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-pass\_\-rehash (\$ {\em password}, \/  \$ {\em timestamp}, \/  \$ {\em login})}}
+\label{user_8module_a1d3ca7bcffa02f5785618cd86efeac7d}
+Creates a unique hash value for use in time-\/dependent per-\/user URLs.
+
+This hash is normally used to build a unique and secure URL that is sent to the user by email for purposes such as resetting the user's password. In order to validate the URL, the same hash can be generated again, from the same information, and compared to the hash value from the URL. The URL normally contains both the time stamp and the numeric user ID. The login name and hashed password are retrieved from the database as necessary. For a usage example, see \hyperlink{user_8module_afdf3514e3f6d0c8de3f68ff5e98452c2}{user\_\-cancel\_\-url()} and \hyperlink{user_8pages_8inc_ac3ab92d15edab48212f460e0eabaafb6}{user\_\-cancel\_\-confirm()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$password}]The hashed user account password value. \item[{\em \$timestamp}]A unix timestamp. \item[{\em \$login}]The user account login name.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string that is safe for use in URLs and SQL statements. 
+\end{DoxyReturn}
+\hypertarget{user_8module_a99c0536278528e2b7d4fc0b9f7e2809d}{
+\index{user.module@{user.module}!user\_\-pass\_\-reset\_\-url@{user\_\-pass\_\-reset\_\-url}}
+\index{user\_\-pass\_\-reset\_\-url@{user\_\-pass\_\-reset\_\-url}!user.module@{user.module}}
+\subsubsection[{user\_\-pass\_\-reset\_\-url}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-pass\_\-reset\_\-url (\$ {\em account})}}
+\label{user_8module_a99c0536278528e2b7d4fc0b9f7e2809d}
+Generates a unique URL for a user to login and reset their password.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em object}]\$account An object containing the user account.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A unique URL that provides a one-\/time log in for the user, from which they can change their password. 
+\end{DoxyReturn}
+\hypertarget{user_8module_a74cfb0a6ae36efdbd637792b37257931}{
+\index{user.module@{user.module}!user\_\-password@{user\_\-password}}
+\index{user\_\-password@{user\_\-password}!user.module@{user.module}}
+\subsubsection[{user\_\-password}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-password (\$ {\em length} = {\ttfamily 10})}}
+\label{user_8module_a74cfb0a6ae36efdbd637792b37257931}
+Generate a random alphanumeric password. \hypertarget{user_8module_a0eb71b2d8881ca75248f3ed384f8b253}{
+\index{user.module@{user.module}!user\_\-permission@{user\_\-permission}}
+\index{user\_\-permission@{user\_\-permission}!user.module@{user.module}}
+\subsubsection[{user\_\-permission}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-permission ()}}
+\label{user_8module_a0eb71b2d8881ca75248f3ed384f8b253}
+Implements \hyperlink{group__hooks_ga2b22b45f4925f2478412477bae329713}{hook\_\-permission()}. \hypertarget{user_8module_a3f574091c39e067721fe6afbb5898bfd}{
+\index{user.module@{user.module}!user\_\-permission\_\-get\_\-modules@{user\_\-permission\_\-get\_\-modules}}
+\index{user\_\-permission\_\-get\_\-modules@{user\_\-permission\_\-get\_\-modules}!user.module@{user.module}}
+\subsubsection[{user\_\-permission\_\-get\_\-modules}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-permission\_\-get\_\-modules ()}}
+\label{user_8module_a3f574091c39e067721fe6afbb5898bfd}
+Determine the modules that permissions belong to.
+
+\begin{DoxyReturn}{Returns}
+An associative array in the format \$permission =$>$ \$module. 
+\end{DoxyReturn}
+\hypertarget{user_8module_a0122ed84b87c9b23dbd3be7ff563bc49}{
+\index{user.module@{user.module}!user\_\-preferred\_\-language@{user\_\-preferred\_\-language}}
+\index{user\_\-preferred\_\-language@{user\_\-preferred\_\-language}!user.module@{user.module}}
+\subsubsection[{user\_\-preferred\_\-language}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-preferred\_\-language (\$ {\em account}, \/  \$ {\em default} = {\ttfamily NULL})}}
+\label{user_8module_a0122ed84b87c9b23dbd3be7ff563bc49}
+Get the language object preferred by the user. This user preference can be set on the user account editing page, and is only available if there are more than one languages enabled on the site. If the user did not choose a preferred language, or is the anonymous user, the \$default value, or if it is not set, the site default language will be returned.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$account}]User account to look up language for. \item[{\em \$default}]Optional default language object to return if the account has no valid language. \end{DoxyParams}
+\hypertarget{user_8module_a8c78debb117144a12195c59dc76d7f01}{
+\index{user.module@{user.module}!user\_\-rdf\_\-mapping@{user\_\-rdf\_\-mapping}}
+\index{user\_\-rdf\_\-mapping@{user\_\-rdf\_\-mapping}!user.module@{user.module}}
+\subsubsection[{user\_\-rdf\_\-mapping}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-rdf\_\-mapping ()}}
+\label{user_8module_a8c78debb117144a12195c59dc76d7f01}
+Implements \hyperlink{group__rdf_gae3e7f047bdcb9309b323e2af09966765}{hook\_\-rdf\_\-mapping()}. \hypertarget{user_8module_aeefc598398af2604fed325d4cb9f2577}{
+\index{user.module@{user.module}!user\_\-register\_\-access@{user\_\-register\_\-access}}
+\index{user\_\-register\_\-access@{user\_\-register\_\-access}!user.module@{user.module}}
+\subsubsection[{user\_\-register\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-register\_\-access ()}}
+\label{user_8module_aeefc598398af2604fed325d4cb9f2577}
+Determines if the current user has access to the user registration page.
+
+\begin{DoxyReturn}{Returns}
+bool TRUE if the user is not already logged in and can register for an account. 
+\end{DoxyReturn}
+\hypertarget{user_8module_ad104f5427b9f52630164ef58808ad037}{
+\index{user.module@{user.module}!user\_\-register\_\-submit@{user\_\-register\_\-submit}}
+\index{user\_\-register\_\-submit@{user\_\-register\_\-submit}!user.module@{user.module}}
+\subsubsection[{user\_\-register\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-register\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8module_ad104f5427b9f52630164ef58808ad037}
+Submit handler for the user registration form.
+
+This function is shared by the installation form and the normal registration form, which is why it can't be in the \hyperlink{user_8pages_8inc}{user.pages.inc} file.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__forms_ga6dc04f116a25059727b3cf9e15205be8}{user\_\-register\_\-form()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_a68ab440bc157b212a53dbe9a42a18107}{
+\index{user.module@{user.module}!user\_\-register\_\-validate@{user\_\-register\_\-validate}}
+\index{user\_\-register\_\-validate@{user\_\-register\_\-validate}!user.module@{user.module}}
+\subsubsection[{user\_\-register\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-register\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8module_a68ab440bc157b212a53dbe9a42a18107}
+Validation function for the user registration form. \hypertarget{user_8module_a99fd9206a99c083a3f7ee09ba0c4a9ea}{
+\index{user.module@{user.module}!user\_\-role\_\-change\_\-permissions@{user\_\-role\_\-change\_\-permissions}}
+\index{user\_\-role\_\-change\_\-permissions@{user\_\-role\_\-change\_\-permissions}!user.module@{user.module}}
+\subsubsection[{user\_\-role\_\-change\_\-permissions}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-role\_\-change\_\-permissions (\$ {\em rid}, \/  array \$ {\em permissions} = {\ttfamily array()})}}
+\label{user_8module_a99fd9206a99c083a3f7ee09ba0c4a9ea}
+Change permissions for a user role.
+
+This function may be used to grant and revoke multiple permissions at once. For example, when a form exposes checkboxes to configure permissions for a role, the form submit handler may directly pass the submitted values for the checkboxes form element to this function.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$rid}]The ID of a user role to alter. \item[{\em \$permissions}]An associative array, where the key holds the permission name and the value determines whether to grant or revoke that permission. Any value that evaluates to TRUE will cause the permission to be granted. Any value that evaluates to FALSE will cause the permission to be revoked. 
+\begin{DoxyCode}
+     array(
+       'administer nodes' => 0,                // Revoke 'administer nodes'
+       'administer blocks' => FALSE,           // Revoke 'administer blocks'
+       'access user profiles' => 1,            // Grant 'access user profiles'
+       'access content' => TRUE,               // Grant 'access content'
+       'access comments' => 'access comments', // Grant 'access comments'
+     )
+\end{DoxyCode}
+ Existing permissions are not changed, unless specified in \$permissions.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_aee75b0b96b7cec455cb0245275469aaf}{user\_\-role\_\-grant\_\-permissions()} 
+
+\hyperlink{user_8module_a5b4cb135247dfac81c93c8da05bcd514}{user\_\-role\_\-revoke\_\-permissions()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_a024c3e56a5d80847b3796565df75299f}{
+\index{user.module@{user.module}!user\_\-role\_\-delete@{user\_\-role\_\-delete}}
+\index{user\_\-role\_\-delete@{user\_\-role\_\-delete}!user.module@{user.module}}
+\subsubsection[{user\_\-role\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-role\_\-delete (\$ {\em role})}}
+\label{user_8module_a024c3e56a5d80847b3796565df75299f}
+Delete a user role from database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$role}]A string with the role name, or an integer with the role ID. \end{DoxyParams}
+\hypertarget{user_8module_a41a44a0043d57e6c56c651fd9060b4af}{
+\index{user.module@{user.module}!user\_\-role\_\-edit\_\-access@{user\_\-role\_\-edit\_\-access}}
+\index{user\_\-role\_\-edit\_\-access@{user\_\-role\_\-edit\_\-access}!user.module@{user.module}}
+\subsubsection[{user\_\-role\_\-edit\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-role\_\-edit\_\-access (\$ {\em role})}}
+\label{user_8module_a41a44a0043d57e6c56c651fd9060b4af}
+Menu access callback for user role editing. \hypertarget{user_8module_aee75b0b96b7cec455cb0245275469aaf}{
+\index{user.module@{user.module}!user\_\-role\_\-grant\_\-permissions@{user\_\-role\_\-grant\_\-permissions}}
+\index{user\_\-role\_\-grant\_\-permissions@{user\_\-role\_\-grant\_\-permissions}!user.module@{user.module}}
+\subsubsection[{user\_\-role\_\-grant\_\-permissions}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-role\_\-grant\_\-permissions (\$ {\em rid}, \/  array \$ {\em permissions} = {\ttfamily array()})}}
+\label{user_8module_aee75b0b96b7cec455cb0245275469aaf}
+Grant permissions to a user role.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$rid}]The ID of a user role to alter. \item[{\em \$permissions}]A list of permission names to grant.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_a99fd9206a99c083a3f7ee09ba0c4a9ea}{user\_\-role\_\-change\_\-permissions()} 
+
+\hyperlink{user_8module_a5b4cb135247dfac81c93c8da05bcd514}{user\_\-role\_\-revoke\_\-permissions()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_a523043011b1e6d3f168ee7a5e8674734}{
+\index{user.module@{user.module}!user\_\-role\_\-load@{user\_\-role\_\-load}}
+\index{user\_\-role\_\-load@{user\_\-role\_\-load}!user.module@{user.module}}
+\subsubsection[{user\_\-role\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-role\_\-load (\$ {\em rid})}}
+\label{user_8module_a523043011b1e6d3f168ee7a5e8674734}
+Fetches a user role by role ID.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$rid}]An integer representing the role ID.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A fully-\/loaded role object if a role with the given ID exists, or FALSE otherwise.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_a46775f7a4d73479dd21569ef97cb77ec}{user\_\-role\_\-load\_\-by\_\-name()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_a46775f7a4d73479dd21569ef97cb77ec}{
+\index{user.module@{user.module}!user\_\-role\_\-load\_\-by\_\-name@{user\_\-role\_\-load\_\-by\_\-name}}
+\index{user\_\-role\_\-load\_\-by\_\-name@{user\_\-role\_\-load\_\-by\_\-name}!user.module@{user.module}}
+\subsubsection[{user\_\-role\_\-load\_\-by\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-role\_\-load\_\-by\_\-name (\$ {\em role\_\-name})}}
+\label{user_8module_a46775f7a4d73479dd21569ef97cb77ec}
+Fetches a user role by role name.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$role\_\-name}]A string representing the role name.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A fully-\/loaded role object if a role with the given name exists, or FALSE otherwise.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_a523043011b1e6d3f168ee7a5e8674734}{user\_\-role\_\-load()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_a52111bf669fd6850eb3580e5f62d9236}{
+\index{user.module@{user.module}!user\_\-role\_\-permissions@{user\_\-role\_\-permissions}}
+\index{user\_\-role\_\-permissions@{user\_\-role\_\-permissions}!user.module@{user.module}}
+\subsubsection[{user\_\-role\_\-permissions}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-role\_\-permissions (\$ {\em roles} = {\ttfamily array()})}}
+\label{user_8module_a52111bf669fd6850eb3580e5f62d9236}
+Determine the permissions for one or more roles.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$roles}]An array whose keys are the role IDs of interest, such as \$user-\/$>$roles.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array indexed by role ID. Each value is an array whose keys are the permission strings for the given role ID. 
+\end{DoxyReturn}
+\hypertarget{user_8module_a5b4cb135247dfac81c93c8da05bcd514}{
+\index{user.module@{user.module}!user\_\-role\_\-revoke\_\-permissions@{user\_\-role\_\-revoke\_\-permissions}}
+\index{user\_\-role\_\-revoke\_\-permissions@{user\_\-role\_\-revoke\_\-permissions}!user.module@{user.module}}
+\subsubsection[{user\_\-role\_\-revoke\_\-permissions}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-role\_\-revoke\_\-permissions (\$ {\em rid}, \/  array \$ {\em permissions} = {\ttfamily array()})}}
+\label{user_8module_a5b4cb135247dfac81c93c8da05bcd514}
+Revoke permissions from a user role.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$rid}]The ID of a user role to alter. \item[{\em \$permissions}]A list of permission names to revoke.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_a99fd9206a99c083a3f7ee09ba0c4a9ea}{user\_\-role\_\-change\_\-permissions()} 
+
+\hyperlink{user_8module_aee75b0b96b7cec455cb0245275469aaf}{user\_\-role\_\-grant\_\-permissions()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_a4585f9898ea037730af8f3e6289c158d}{
+\index{user.module@{user.module}!user\_\-role\_\-save@{user\_\-role\_\-save}}
+\index{user\_\-role\_\-save@{user\_\-role\_\-save}!user.module@{user.module}}
+\subsubsection[{user\_\-role\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-role\_\-save (\$ {\em role})}}
+\label{user_8module_a4585f9898ea037730af8f3e6289c158d}
+Save a user role to the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$role}]A role object to modify or add. If \$role-\/$>$rid is not specified, a new role will be created. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status constant indicating if role was created or updated. Failure to write the user role record will return FALSE. Otherwise. SAVED\_\-NEW or SAVED\_\-UPDATED is returned depending on the operation performed. 
+\end{DoxyReturn}
+\hypertarget{user_8module_a2c97e1595e6af351e0ab7d60da180017}{
+\index{user.module@{user.module}!user\_\-roles@{user\_\-roles}}
+\index{user\_\-roles@{user\_\-roles}!user.module@{user.module}}
+\subsubsection[{user\_\-roles}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-roles (\$ {\em membersonly} = {\ttfamily FALSE}, \/  \$ {\em permission} = {\ttfamily NULL})}}
+\label{user_8module_a2c97e1595e6af351e0ab7d60da180017}
+Retrieve an array of roles matching specified conditions.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$membersonly}]Set this to TRUE to exclude the 'anonymous' role. \item[{\em \$permission}]A string containing a permission. If set, only roles containing that permission are returned.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An associative array with the role id as the key and the role name as value. 
+\end{DoxyReturn}
+\hypertarget{user_8module_a857b652072abb243e0b44b02c3746a99}{
+\index{user.module@{user.module}!user\_\-save@{user\_\-save}}
+\index{user\_\-save@{user\_\-save}!user.module@{user.module}}
+\subsubsection[{user\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-save (\$ {\em account}, \/  \$ {\em edit} = {\ttfamily array()}, \/  \$ {\em category} = {\ttfamily 'account'})}}
+\label{user_8module_a857b652072abb243e0b44b02c3746a99}
+Save changes to a user account or add a new user.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$account}](optional) The user object to modify or add. If you want to modify an existing user account, you will need to ensure that (a) \$account is an object, and (b) you have set \$account-\/$>$uid to the numeric user ID of the user account you wish to modify. If you want to create a new user account, you can set \$account-\/$>$is\_\-new to TRUE or omit the \$account-\/$>$uid field. \item[{\em \$edit}]An array of fields and values to save. For example array('name' =$>$ 'My name'). Key / value pairs added to the \$edit\mbox{[}'data'\mbox{]} will be serialized and saved in the \{users.data\} column. \item[{\em \$category}](optional) The category for storing profile information in.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A fully-\/loaded \$user object upon successful save or FALSE if the save failed.
+\end{DoxyReturn}
+\begin{Desc}
+\item[\hyperlink{todo__todo000024}{Todo}]D8: Drop \$edit and fix \hyperlink{user_8module_a857b652072abb243e0b44b02c3746a99}{user\_\-save()} to be consistent with others. \end{Desc}
+\hypertarget{user_8module_ac25873e619ada5dcb08431674667e7ee}{
+\index{user.module@{user.module}!user\_\-search\_\-access@{user\_\-search\_\-access}}
+\index{user\_\-search\_\-access@{user\_\-search\_\-access}!user.module@{user.module}}
+\subsubsection[{user\_\-search\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-search\_\-access ()}}
+\label{user_8module_ac25873e619ada5dcb08431674667e7ee}
+Implements \hyperlink{group__search_gac49e6fd7370e65efeaf484ec992de1f0}{hook\_\-search\_\-access()}. \hypertarget{user_8module_a04e2120f38c081b16387b631602cc47f}{
+\index{user.module@{user.module}!user\_\-search\_\-execute@{user\_\-search\_\-execute}}
+\index{user\_\-search\_\-execute@{user\_\-search\_\-execute}!user.module@{user.module}}
+\subsubsection[{user\_\-search\_\-execute}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-search\_\-execute (\$ {\em keys} = {\ttfamily NULL}, \/  \$ {\em conditions} = {\ttfamily NULL})}}
+\label{user_8module_a04e2120f38c081b16387b631602cc47f}
+Implements \hyperlink{group__search_ga00be3e4a3b64ad73f8ad1304a450cee5}{hook\_\-search\_\-execute()}. \hypertarget{user_8module_afe2b64d026bd65a294788c4abe9b4861}{
+\index{user.module@{user.module}!user\_\-search\_\-info@{user\_\-search\_\-info}}
+\index{user\_\-search\_\-info@{user\_\-search\_\-info}!user.module@{user.module}}
+\subsubsection[{user\_\-search\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-search\_\-info ()}}
+\label{user_8module_afe2b64d026bd65a294788c4abe9b4861}
+Implements \hyperlink{group__search_ga37b761616f2cad4796891008f2b374f3}{hook\_\-search\_\-info()}. \hypertarget{user_8module_a343e11a6324c7b4036be888e61412ceb}{
+\index{user.module@{user.module}!user\_\-set\_\-authmaps@{user\_\-set\_\-authmaps}}
+\index{user\_\-set\_\-authmaps@{user\_\-set\_\-authmaps}!user.module@{user.module}}
+\subsubsection[{user\_\-set\_\-authmaps}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-set\_\-authmaps (\$ {\em account}, \/  \$ {\em authmaps})}}
+\label{user_8module_a343e11a6324c7b4036be888e61412ceb}
+Save mappings of which external authentication module(s) authenticated a user. Maps external usernames to user ids in the users table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$account}]A user object. \item[{\em \$authmaps}]An associative array with a compound key and the username as the value. The key is made up of 'authname\_\-' plus the name of the external authentication module. \end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_af4a2f1223554e9d79172c92273b81f2b}{user\_\-external\_\-login\_\-register()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_a4fc928f2162969ae4331773ff226e3ec}{
+\index{user.module@{user.module}!user\_\-system\_\-info\_\-alter@{user\_\-system\_\-info\_\-alter}}
+\index{user\_\-system\_\-info\_\-alter@{user\_\-system\_\-info\_\-alter}!user.module@{user.module}}
+\subsubsection[{user\_\-system\_\-info\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-system\_\-info\_\-alter (\&\$ {\em info}, \/  \$ {\em file}, \/  \$ {\em type})}}
+\label{user_8module_a4fc928f2162969ae4331773ff226e3ec}
+Implements \hyperlink{group__hooks_ga7dd7f887131916d5bbbb02ae87a9113e}{hook\_\-system\_\-info\_\-alter()}.
+
+Drupal 7 ships with two methods to add additional fields to users: Profile module, a legacy module dating back from 2002, and Field API integration with users. While Field API support for users currently provides less end user features, the inefficient data storage mechanism of Profile module, as well as its lack of consistency with the rest of the entity / field based systems in Drupal 7, make this a sub-\/optimal solution to those who were not using it in previous releases of Drupal.
+
+To prevent new Drupal 7 sites from installing Profile module, and unwittingly ending up with two completely different and incompatible methods of extending users, only make the Profile module available if the profile\_\-$\ast$ tables are present.
+
+\begin{Desc}
+\item[\hyperlink{todo__todo000028}{Todo}]: Remove in D8, pending upgrade path. \end{Desc}
+\hypertarget{user_8module_a4ca455e4035589f0235f705d376f38c7}{
+\index{user.module@{user.module}!user\_\-theme@{user\_\-theme}}
+\index{user\_\-theme@{user\_\-theme}!user.module@{user.module}}
+\subsubsection[{user\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-theme ()}}
+\label{user_8module_a4ca455e4035589f0235f705d376f38c7}
+Implements \hyperlink{group__hooks_ga013ccb45c7aaab1c16cf9691428c910d}{hook\_\-theme()}. \hypertarget{user_8module_adfd500d7a85faa0058757c6b66fdabda}{
+\index{user.module@{user.module}!user\_\-translated\_\-menu\_\-link\_\-alter@{user\_\-translated\_\-menu\_\-link\_\-alter}}
+\index{user\_\-translated\_\-menu\_\-link\_\-alter@{user\_\-translated\_\-menu\_\-link\_\-alter}!user.module@{user.module}}
+\subsubsection[{user\_\-translated\_\-menu\_\-link\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-translated\_\-menu\_\-link\_\-alter (\&\$ {\em link})}}
+\label{user_8module_adfd500d7a85faa0058757c6b66fdabda}
+Implements \hyperlink{group__hooks_ga5b5395b90c4987e29c6f6430fc066e8c}{hook\_\-translated\_\-menu\_\-link\_\-alter()}. \hypertarget{user_8module_acafbef09764866dee15f8cf2b184aafc}{
+\index{user.module@{user.module}!user\_\-uid\_\-only\_\-optional\_\-to\_\-arg@{user\_\-uid\_\-only\_\-optional\_\-to\_\-arg}}
+\index{user\_\-uid\_\-only\_\-optional\_\-to\_\-arg@{user\_\-uid\_\-only\_\-optional\_\-to\_\-arg}!user.module@{user.module}}
+\subsubsection[{user\_\-uid\_\-only\_\-optional\_\-to\_\-arg}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-uid\_\-only\_\-optional\_\-to\_\-arg (\$ {\em arg})}}
+\label{user_8module_acafbef09764866dee15f8cf2b184aafc}
+Returns \$arg or the user ID of the current user if \$arg is '' or empty.
+
+Deprecated. Use user\_\-uid\_\-optional instead.
+
+\begin{Desc}
+\item[\hyperlink{todo__todo000025}{Todo}]D8: Remove. \end{Desc}
+\hypertarget{user_8module_adcdb22ab09fce9b389fb10ac76e13b07}{
+\index{user.module@{user.module}!user\_\-uid\_\-optional\_\-load@{user\_\-uid\_\-optional\_\-load}}
+\index{user\_\-uid\_\-optional\_\-load@{user\_\-uid\_\-optional\_\-load}!user.module@{user.module}}
+\subsubsection[{user\_\-uid\_\-optional\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-uid\_\-optional\_\-load (\$ {\em uid} = {\ttfamily NULL})}}
+\label{user_8module_adcdb22ab09fce9b389fb10ac76e13b07}
+Load either a specified or the current user account.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$uid}]An optional user ID of the user to load. If not provided, the current user's ID will be used. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A fully-\/loaded \$user object upon successful user load, FALSE if user cannot be loaded.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_a0f7e67c4e909ca691f57889dd5a72a07}{user\_\-load()} 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[\hyperlink{todo__todo000026}{Todo}]rethink the naming of this in Drupal 8. \end{Desc}
+\hypertarget{user_8module_a802368ee732e9da8f756d69b0830225b}{
+\index{user.module@{user.module}!user\_\-uid\_\-optional\_\-to\_\-arg@{user\_\-uid\_\-optional\_\-to\_\-arg}}
+\index{user\_\-uid\_\-optional\_\-to\_\-arg@{user\_\-uid\_\-optional\_\-to\_\-arg}!user.module@{user.module}}
+\subsubsection[{user\_\-uid\_\-optional\_\-to\_\-arg}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-uid\_\-optional\_\-to\_\-arg (\$ {\em arg})}}
+\label{user_8module_a802368ee732e9da8f756d69b0830225b}
+Returns \$arg or the user ID of the current user if \$arg is '' or empty.
+
+\begin{Desc}
+\item[\hyperlink{todo__todo000027}{Todo}]rethink the naming of this in Drupal 8. \end{Desc}
+\hypertarget{user_8module_aa9b0c1a8792930f545bda1c85a085e19}{
+\index{user.module@{user.module}!user\_\-uri@{user\_\-uri}}
+\index{user\_\-uri@{user\_\-uri}!user.module@{user.module}}
+\subsubsection[{user\_\-uri}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-uri (\$ {\em user})}}
+\label{user_8module_aa9b0c1a8792930f545bda1c85a085e19}
+Implements \hyperlink{group__callbacks_ga42bf4e69ee32b2bc99d0d774d4917254}{callback\_\-entity\_\-info\_\-uri()}. \hypertarget{user_8module_a7c04b1a53be3ea791a529a14d8f129b7}{
+\index{user.module@{user.module}!user\_\-user\_\-categories@{user\_\-user\_\-categories}}
+\index{user\_\-user\_\-categories@{user\_\-user\_\-categories}!user.module@{user.module}}
+\subsubsection[{user\_\-user\_\-categories}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-user\_\-categories ()}}
+\label{user_8module_a7c04b1a53be3ea791a529a14d8f129b7}
+Implements \hyperlink{group__hooks_ga166a3fe9d203a99560d10413a880ed08}{hook\_\-user\_\-categories()}. \hypertarget{user_8module_a06d9d99e165bcd0da93901cee90158f5}{
+\index{user.module@{user.module}!user\_\-user\_\-operations@{user\_\-user\_\-operations}}
+\index{user\_\-user\_\-operations@{user\_\-user\_\-operations}!user.module@{user.module}}
+\subsubsection[{user\_\-user\_\-operations}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-user\_\-operations (\$ {\em form} = {\ttfamily array()}, \/  \$ {\em form\_\-state} = {\ttfamily array()})}}
+\label{user_8module_a06d9d99e165bcd0da93901cee90158f5}
+Implements \hyperlink{group__hooks_ga1b2c2630f79b64b0673d0a9a0983f447}{hook\_\-user\_\-operations()}. \hypertarget{user_8module_a956597acb38e2078f714d140fe54443c}{
+\index{user.module@{user.module}!user\_\-user\_\-operations\_\-block@{user\_\-user\_\-operations\_\-block}}
+\index{user\_\-user\_\-operations\_\-block@{user\_\-user\_\-operations\_\-block}!user.module@{user.module}}
+\subsubsection[{user\_\-user\_\-operations\_\-block}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-user\_\-operations\_\-block (\$ {\em accounts})}}
+\label{user_8module_a956597acb38e2078f714d140fe54443c}
+Callback function for admin mass blocking users. \hypertarget{user_8module_aea3e4264e414a703905c12725a8fee3f}{
+\index{user.module@{user.module}!user\_\-user\_\-operations\_\-unblock@{user\_\-user\_\-operations\_\-unblock}}
+\index{user\_\-user\_\-operations\_\-unblock@{user\_\-user\_\-operations\_\-unblock}!user.module@{user.module}}
+\subsubsection[{user\_\-user\_\-operations\_\-unblock}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-user\_\-operations\_\-unblock (\$ {\em accounts})}}
+\label{user_8module_aea3e4264e414a703905c12725a8fee3f}
+Callback function for admin mass unblocking users. \hypertarget{user_8module_ab5fa3254072a5402b713090641898e65}{
+\index{user.module@{user.module}!user\_\-user\_\-presave@{user\_\-user\_\-presave}}
+\index{user\_\-user\_\-presave@{user\_\-user\_\-presave}!user.module@{user.module}}
+\subsubsection[{user\_\-user\_\-presave}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-user\_\-presave (\&\$ {\em edit}, \/  \$ {\em account}, \/  \$ {\em category})}}
+\label{user_8module_ab5fa3254072a5402b713090641898e65}
+Implements \hyperlink{group__hooks_gab6b224c35d7d97259d4350a7849f1e56}{hook\_\-user\_\-presave()}. \hypertarget{user_8module_a81bc32004c6a3e32a3cb0b86875b41d5}{
+\index{user.module@{user.module}!user\_\-user\_\-view@{user\_\-user\_\-view}}
+\index{user\_\-user\_\-view@{user\_\-user\_\-view}!user.module@{user.module}}
+\subsubsection[{user\_\-user\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-user\_\-view (\$ {\em account})}}
+\label{user_8module_a81bc32004c6a3e32a3cb0b86875b41d5}
+Implements \hyperlink{group__hooks_gaafb9e35d1f82a33918437ad7acf29541}{hook\_\-user\_\-view()}. \hypertarget{user_8module_a129d5503ac6de8cdf01d11b18e2c7298}{
+\index{user.module@{user.module}!user\_\-validate\_\-current\_\-pass@{user\_\-validate\_\-current\_\-pass}}
+\index{user\_\-validate\_\-current\_\-pass@{user\_\-validate\_\-current\_\-pass}!user.module@{user.module}}
+\subsubsection[{user\_\-validate\_\-current\_\-pass}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-validate\_\-current\_\-pass (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8module_a129d5503ac6de8cdf01d11b18e2c7298}
+Form validation handler for the current password on the \hyperlink{user_8module_ab51965add9fd8ee2915e65d39213d05c}{user\_\-account\_\-form()}.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_ab51965add9fd8ee2915e65d39213d05c}{user\_\-account\_\-form()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_abe55c980b2faeab65d0a9942f99916dd}{
+\index{user.module@{user.module}!user\_\-validate\_\-mail@{user\_\-validate\_\-mail}}
+\index{user\_\-validate\_\-mail@{user\_\-validate\_\-mail}!user.module@{user.module}}
+\subsubsection[{user\_\-validate\_\-mail}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-validate\_\-mail (\$ {\em mail})}}
+\label{user_8module_abe55c980b2faeab65d0a9942f99916dd}
+Validates a user's email address.
+
+Checks that a user's email address exists and follows all standard validation rules. Returns error messages when the address is invalid.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$mail}]A user's email address.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the address is invalid, a human-\/readable error message is returned. If the address is valid, nothing is returned. 
+\end{DoxyReturn}
+\hypertarget{user_8module_ad0830924747ece1dd3f35b0d0f4dd0f9}{
+\index{user.module@{user.module}!user\_\-validate\_\-name@{user\_\-validate\_\-name}}
+\index{user\_\-validate\_\-name@{user\_\-validate\_\-name}!user.module@{user.module}}
+\subsubsection[{user\_\-validate\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-validate\_\-name (\$ {\em name})}}
+\label{user_8module_ad0830924747ece1dd3f35b0d0f4dd0f9}
+Verify the syntax of the given name. \hypertarget{user_8module_aa8b7bc791c72d8484dd8462440d41b3a}{
+\index{user.module@{user.module}!user\_\-validate\_\-picture@{user\_\-validate\_\-picture}}
+\index{user\_\-validate\_\-picture@{user\_\-validate\_\-picture}!user.module@{user.module}}
+\subsubsection[{user\_\-validate\_\-picture}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-validate\_\-picture (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8module_aa8b7bc791c72d8484dd8462440d41b3a}
+Validates an image uploaded by a user.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{user_8module_ab51965add9fd8ee2915e65d39213d05c}{user\_\-account\_\-form()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8module_aa5b236a0e9e2aad7ff06f23bc5046914}{
+\index{user.module@{user.module}!user\_\-view@{user\_\-view}}
+\index{user\_\-view@{user\_\-view}!user.module@{user.module}}
+\subsubsection[{user\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-view (\$ {\em account}, \/  \$ {\em view\_\-mode} = {\ttfamily 'full'}, \/  \$ {\em langcode} = {\ttfamily NULL})}}
+\label{user_8module_aa5b236a0e9e2aad7ff06f23bc5046914}
+Generate an array for rendering the given user.
+
+When viewing a user profile, the \$page array contains:
+
+
+\begin{DoxyItemize}
+\item \$page\mbox{[}'content'\mbox{]}\mbox{[}'Profile Category'\mbox{]}: Profile categories keyed by their human-\/readable names.
+\item \$page\mbox{[}'content'\mbox{]}\mbox{[}'Profile Category'\mbox{]}\mbox{[}'profile\_\-machine\_\-name'\mbox{]}: Profile fields keyed by their machine-\/readable names.
+\item \$page\mbox{[}'content'\mbox{]}\mbox{[}'user\_\-picture'\mbox{]}: User's rendered picture.
+\item \$page\mbox{[}'content'\mbox{]}\mbox{[}'summary'\mbox{]}: Contains the default \char`\"{}History\char`\"{} profile data for a user.
+\item \$page\mbox{[}'content'\mbox{]}\mbox{[}'account'\mbox{]}: The user account of the profile being viewed.
+\end{DoxyItemize}
+
+To theme user profiles, copy \hyperlink{user-profile_8tpl_8php}{modules/user/user-\/profile.tpl.php} to your theme directory, and edit it as instructed in that file's comments.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$account}]A user object. \item[{\em \$view\_\-mode}]View mode, e.g. 'full'. \item[{\em \$langcode}](optional) A language code to use for rendering. Defaults to the global content language of the current request.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array as expected by \hyperlink{common_8inc_a05798b44e8d6c496d4bee5cc32fa7851}{drupal\_\-render()}. 
+\end{DoxyReturn}
+\hypertarget{user_8module_a49c65cc4c7b0512c787fb8e822d7dd4d}{
+\index{user.module@{user.module}!user\_\-view\_\-access@{user\_\-view\_\-access}}
+\index{user\_\-view\_\-access@{user\_\-view\_\-access}!user.module@{user.module}}
+\subsubsection[{user\_\-view\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-view\_\-access (\$ {\em account})}}
+\label{user_8module_a49c65cc4c7b0512c787fb8e822d7dd4d}
+User \hyperlink{classview}{view} access callback.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$account}]Can either be a full user object or a \$uid. \end{DoxyParams}
+\hypertarget{user_8module_a93954fceea22b31ffafb20cd45d81c94}{
+\index{user.module@{user.module}!user\_\-view\_\-page@{user\_\-view\_\-page}}
+\index{user\_\-view\_\-page@{user\_\-view\_\-page}!user.module@{user.module}}
+\subsubsection[{user\_\-view\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-view\_\-page (\$ {\em account})}}
+\label{user_8module_a93954fceea22b31ffafb20cd45d81c94}
+Page callback wrapper for \hyperlink{user_8module_aa5b236a0e9e2aad7ff06f23bc5046914}{user\_\-view()}. 

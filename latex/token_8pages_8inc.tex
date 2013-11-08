@@ -1,0 +1,82 @@
+\hypertarget{token_8pages_8inc}{
+\section{html/profiles/dosomething/modules/contrib/token/token.pages.inc File Reference}
+\label{token_8pages_8inc}\index{html/profiles/dosomething/modules/contrib/token/token.pages.inc@{html/profiles/dosomething/modules/contrib/token/token.pages.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{token_8pages_8inc_a111e8ee04e4553f7c6bd04732a175435}{theme\_\-token\_\-tree\_\-link} (\$variables)
+\item 
+\hyperlink{token_8pages_8inc_ac61826267ce539194039a1e0d1b1c85d}{token\_\-page\_\-output\_\-tree} ()
+\item 
+\hyperlink{group__themeable_ga27af1c0cde4fa8fd2b1ac04f516e2ca6}{theme\_\-tree\_\-table} (\$variables)
+\item 
+\hyperlink{group__themeable_ga134bf969c587784a30834201a24284e2}{theme\_\-token\_\-tree} (\$variables)
+\item 
+\hyperlink{token_8pages_8inc_ad7895827dd47b9617320c5a9de747ee7}{\_\-token\_\-token\_\-tree\_\-format\_\-row} (\$token, array \$token\_\-info, \$is\_\-group=FALSE)
+\item 
+\hyperlink{token_8pages_8inc_ae945ed316363ca5b9c9b56c6554c493c}{\_\-token\_\-clean\_\-css\_\-identifier} (\$id)
+\item 
+\hyperlink{token_8pages_8inc_a2bdee1bca10e805d74679a6e50c6c7d8}{token\_\-devel\_\-token\_\-object} (\$entity\_\-type, \$entity, \$token\_\-type=NULL)
+\item 
+\hyperlink{token_8pages_8inc_ad77cea030ce3c4aa50e43d5b93d91908}{token\_\-flush\_\-cache\_\-callback} ()
+\item 
+\hypertarget{token_8pages_8inc_a2ad4879ecb5e0cdf76baf2a1230635e6}{
+{\bfseries token\_\-autocomplete} ()}
+\label{token_8pages_8inc_a2ad4879ecb5e0cdf76baf2a1230635e6}
+
+\item 
+\hypertarget{token_8pages_8inc_aba64386bdb78d49a36ab22bd146a83f7}{
+{\bfseries token\_\-autocomplete\_\-type} (\$string= '')}
+\label{token_8pages_8inc_aba64386bdb78d49a36ab22bd146a83f7}
+
+\item 
+\hypertarget{token_8pages_8inc_a81eb5e4efc6c1690d6ab4b726bcfd84d}{
+{\bfseries token\_\-autocomplete\_\-token} (\$token\_\-type)}
+\label{token_8pages_8inc_a81eb5e4efc6c1690d6ab4b726bcfd84d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+User page callbacks for the token module. 
+
+\subsection{Function Documentation}
+\hypertarget{token_8pages_8inc_ae945ed316363ca5b9c9b56c6554c493c}{
+\index{token.pages.inc@{token.pages.inc}!\_\-token\_\-clean\_\-css\_\-identifier@{\_\-token\_\-clean\_\-css\_\-identifier}}
+\index{\_\-token\_\-clean\_\-css\_\-identifier@{\_\-token\_\-clean\_\-css\_\-identifier}!token.pages.inc@{token.pages.inc}}
+\subsubsection[{\_\-token\_\-clean\_\-css\_\-identifier}]{\setlength{\rightskip}{0pt plus 5cm}\_\-token\_\-clean\_\-css\_\-identifier (\$ {\em id})}}
+\label{token_8pages_8inc_ae945ed316363ca5b9c9b56c6554c493c}
+Wrapper function for \hyperlink{common_8inc_a71bc20ece521646a633b65868a441d26}{drupal\_\-clean\_\-css\_\-identifier()} for use with tokens.
+
+This trims any brackets from the token and also cleans the colon character to a hyphen.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{common_8inc_a71bc20ece521646a633b65868a441d26}{drupal\_\-clean\_\-css\_\-identifier()} 
+\end{DoxySeeAlso}
+\hypertarget{token_8pages_8inc_ad7895827dd47b9617320c5a9de747ee7}{
+\index{token.pages.inc@{token.pages.inc}!\_\-token\_\-token\_\-tree\_\-format\_\-row@{\_\-token\_\-token\_\-tree\_\-format\_\-row}}
+\index{\_\-token\_\-token\_\-tree\_\-format\_\-row@{\_\-token\_\-token\_\-tree\_\-format\_\-row}!token.pages.inc@{token.pages.inc}}
+\subsubsection[{\_\-token\_\-token\_\-tree\_\-format\_\-row}]{\setlength{\rightskip}{0pt plus 5cm}\_\-token\_\-token\_\-tree\_\-format\_\-row (\$ {\em token}, \/  array \$ {\em token\_\-info}, \/  \$ {\em is\_\-group} = {\ttfamily FALSE})}}
+\label{token_8pages_8inc_ad7895827dd47b9617320c5a9de747ee7}
+Build a row in the token tree. \hypertarget{token_8pages_8inc_a111e8ee04e4553f7c6bd04732a175435}{
+\index{token.pages.inc@{token.pages.inc}!theme\_\-token\_\-tree\_\-link@{theme\_\-token\_\-tree\_\-link}}
+\index{theme\_\-token\_\-tree\_\-link@{theme\_\-token\_\-tree\_\-link}!token.pages.inc@{token.pages.inc}}
+\subsubsection[{theme\_\-token\_\-tree\_\-link}]{\setlength{\rightskip}{0pt plus 5cm}theme\_\-token\_\-tree\_\-link (\$ {\em variables})}}
+\label{token_8pages_8inc_a111e8ee04e4553f7c6bd04732a175435}
+Theme a link to a token tree either as a regular link or a dialog. \hypertarget{token_8pages_8inc_a2bdee1bca10e805d74679a6e50c6c7d8}{
+\index{token.pages.inc@{token.pages.inc}!token\_\-devel\_\-token\_\-object@{token\_\-devel\_\-token\_\-object}}
+\index{token\_\-devel\_\-token\_\-object@{token\_\-devel\_\-token\_\-object}!token.pages.inc@{token.pages.inc}}
+\subsubsection[{token\_\-devel\_\-token\_\-object}]{\setlength{\rightskip}{0pt plus 5cm}token\_\-devel\_\-token\_\-object (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em token\_\-type} = {\ttfamily NULL})}}
+\label{token_8pages_8inc_a2bdee1bca10e805d74679a6e50c6c7d8}
+Menu callback; prints the available tokens and values for an object. \hypertarget{token_8pages_8inc_ad77cea030ce3c4aa50e43d5b93d91908}{
+\index{token.pages.inc@{token.pages.inc}!token\_\-flush\_\-cache\_\-callback@{token\_\-flush\_\-cache\_\-callback}}
+\index{token\_\-flush\_\-cache\_\-callback@{token\_\-flush\_\-cache\_\-callback}!token.pages.inc@{token.pages.inc}}
+\subsubsection[{token\_\-flush\_\-cache\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}token\_\-flush\_\-cache\_\-callback ()}}
+\label{token_8pages_8inc_ad77cea030ce3c4aa50e43d5b93d91908}
+Page callback to clear the token registry caches. \hypertarget{token_8pages_8inc_ac61826267ce539194039a1e0d1b1c85d}{
+\index{token.pages.inc@{token.pages.inc}!token\_\-page\_\-output\_\-tree@{token\_\-page\_\-output\_\-tree}}
+\index{token\_\-page\_\-output\_\-tree@{token\_\-page\_\-output\_\-tree}!token.pages.inc@{token.pages.inc}}
+\subsubsection[{token\_\-page\_\-output\_\-tree}]{\setlength{\rightskip}{0pt plus 5cm}token\_\-page\_\-output\_\-tree ()}}
+\label{token_8pages_8inc_ac61826267ce539194039a1e0d1b1c85d}
+Page callback to output a token tree as an empty page. 

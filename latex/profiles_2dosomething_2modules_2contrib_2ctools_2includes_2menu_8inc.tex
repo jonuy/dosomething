@@ -1,0 +1,53 @@
+\hypertarget{profiles_2dosomething_2modules_2contrib_2ctools_2includes_2menu_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/includes/menu.inc File Reference}
+\label{profiles_2dosomething_2modules_2contrib_2ctools_2includes_2menu_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/includes/menu.inc@{html/profiles/dosomething/modules/contrib/ctools/includes/menu.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{profiles_2dosomething_2modules_2contrib_2ctools_2includes_2menu_8inc_abe055cbfacd9bdd8c0ecb45bfa2bf304}{ctools\_\-menu\_\-add\_\-tab} (\$link=NULL)
+\item 
+\hyperlink{profiles_2dosomething_2modules_2contrib_2ctools_2includes_2menu_8inc_a4175eeb345ac720cbe0f27042cce1fa6}{ctools\_\-menu\_\-sort} (\$a, \$b)
+\item 
+\hypertarget{profiles_2dosomething_2modules_2contrib_2ctools_2includes_2menu_8inc_a5541c20154547ef71f8eb3dfcc1cc564}{
+{\bfseries \_\-ctools\_\-menu\_\-add\_\-dynamic\_\-items} (\&\$data, \&\$router\_\-item, \&\$root\_\-path)}
+\label{profiles_2dosomething_2modules_2contrib_2ctools_2includes_2menu_8inc_a5541c20154547ef71f8eb3dfcc1cc564}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+General menu helper functions. 
+
+\subsection{Function Documentation}
+\hypertarget{profiles_2dosomething_2modules_2contrib_2ctools_2includes_2menu_8inc_abe055cbfacd9bdd8c0ecb45bfa2bf304}{
+\index{profiles/dosomething/modules/contrib/ctools/includes/menu.inc@{profiles/dosomething/modules/contrib/ctools/includes/menu.inc}!ctools\_\-menu\_\-add\_\-tab@{ctools\_\-menu\_\-add\_\-tab}}
+\index{ctools\_\-menu\_\-add\_\-tab@{ctools\_\-menu\_\-add\_\-tab}!profiles/dosomething/modules/contrib/ctools/includes/menu.inc@{profiles/dosomething/modules/contrib/ctools/includes/menu.inc}}
+\subsubsection[{ctools\_\-menu\_\-add\_\-tab}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-menu\_\-add\_\-tab (\$ {\em link} = {\ttfamily NULL})}}
+\label{profiles_2dosomething_2modules_2contrib_2ctools_2includes_2menu_8inc_abe055cbfacd9bdd8c0ecb45bfa2bf304}
+Dynamically add a tab to the current path.
+
+This function is a simplified interface for adding tabs to the current path. Some considerations when doing this:
+
+
+\begin{DoxyItemize}
+\item First, if there is only 1 tab, Drupal will not show it. Therefore, if you are only adding one tab, you should find a way to make sure there is already tab, or instead add 2.
+\item Second, the caller is responsible for providing access control to these links.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$link}]An array describing this link. It must contain:
+\begin{DoxyItemize}
+\item 'title': The printed title of the link.
+\item 'href': The path of the link. This is an argument to \hyperlink{common_8inc_ad3b36c06dc46250b8d22b8d0d2e7bd97}{l()} so it has all of those features and limitations.
+\item 'options': Any options that go to l, including query, fragment and html options necessary.
+\item 'weight': The weight to use in ordering the tabs.
+\item 'type': Optional. If set to MENU\_\-DEFAULT\_\-LOCAL\_\-TASK this can be used to add a fake 'default' local task, which is useful if you have to add tabs to a page that has none. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{profiles_2dosomething_2modules_2contrib_2ctools_2includes_2menu_8inc_a4175eeb345ac720cbe0f27042cce1fa6}{
+\index{profiles/dosomething/modules/contrib/ctools/includes/menu.inc@{profiles/dosomething/modules/contrib/ctools/includes/menu.inc}!ctools\_\-menu\_\-sort@{ctools\_\-menu\_\-sort}}
+\index{ctools\_\-menu\_\-sort@{ctools\_\-menu\_\-sort}!profiles/dosomething/modules/contrib/ctools/includes/menu.inc@{profiles/dosomething/modules/contrib/ctools/includes/menu.inc}}
+\subsubsection[{ctools\_\-menu\_\-sort}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-menu\_\-sort (\$ {\em a}, \/  \$ {\em b})}}
+\label{profiles_2dosomething_2modules_2contrib_2ctools_2includes_2menu_8inc_a4175eeb345ac720cbe0f27042cce1fa6}
+Re-\/sort menu items after we have modified them. 

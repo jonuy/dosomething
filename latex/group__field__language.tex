@@ -1,0 +1,162 @@
+\hypertarget{group__field__language}{
+\section{Field Language API}
+\label{group__field__language}\index{Field Language API@{Field Language API}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__field__language_gafbd7a022815887d2aadf983656571e98}{field\_\-multilingual\_\-settings\_\-changed} ()
+\item 
+\hyperlink{group__field__language_ga3dbd9611836d9bba15c15f0a8ae83c9b}{field\_\-available\_\-languages} (\$entity\_\-type, \$field)
+\item 
+\hyperlink{group__field__language_gaf7105831bb68e11809f92c990b50fb6c}{\_\-field\_\-language\_\-suggestion} (\$available\_\-languages, \$language\_\-suggestion, \$field\_\-name)
+\item 
+\hyperlink{group__field__language_ga78c369e7b76edbb662d8f2e04bc82ad4}{field\_\-content\_\-languages} ()
+\item 
+\hyperlink{group__field__language_gae2315cbfa6724de32eeea9e06a1811a7}{field\_\-is\_\-translatable} (\$entity\_\-type, \$field)
+\item 
+\hyperlink{group__field__language_ga56d98c14a956746f91373b68b404a66b}{field\_\-has\_\-translation\_\-handler} (\$entity\_\-type, \$handler=NULL)
+\item 
+\hyperlink{group__field__language_ga3c8ddbf445782a8ac352279c606aa30c}{field\_\-valid\_\-language} (\$langcode, \$default=TRUE)
+\item 
+\hyperlink{group__field__language_gaff79088cd3951d2127adad1a2c13ad3e}{field\_\-language} (\$entity\_\-type, \$entity, \$field\_\-name=NULL, \$langcode=NULL)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handling of multilingual fields.
+
+Fields natively implement multilingual support, and all fields use the following structure: 
+\begin{DoxyCode}
+ $entity->{$field_name}[$langcode][$delta][$column_name]
+\end{DoxyCode}
+ Every field can hold a single or multiple value for each language belonging to the available languages set:
+\begin{DoxyItemize}
+\item For untranslatable fields this set only contains LANGUAGE\_\-NONE.
+\item For translatable fields this set can contain any language code. By default it is the list returned by \hyperlink{group__field__language_ga78c369e7b76edbb662d8f2e04bc82ad4}{field\_\-content\_\-languages()}, which contains all installed languages with the addition of LANGUAGE\_\-NONE. This default can be altered by modules implementing \hyperlink{group__field__attach_gaea2e719de3ad070e161d0d386dd18303}{hook\_\-field\_\-available\_\-languages\_\-alter()}.
+\end{DoxyItemize}
+
+The available languages for a particular field are returned by \hyperlink{group__field__language_ga3dbd9611836d9bba15c15f0a8ae83c9b}{field\_\-available\_\-languages()}. Whether a field is translatable is determined by calling \hyperlink{group__field__language_gae2315cbfa6724de32eeea9e06a1811a7}{field\_\-is\_\-translatable()}, which checks the \$field\mbox{[}'translatable'\mbox{]} property returned by \hyperlink{group__field__info_ga74cfc942cd2baa5c49780b08c5d357d4}{field\_\-info\_\-field()}, and whether there is at least one translation handler available for the field. A translation handler is a module registering itself via \hyperlink{group__hooks_gaf02318e9d0e8cdbf6d187b271b9969a8}{hook\_\-entity\_\-info()} to handle field translations.
+
+By default, \hyperlink{group__field__attach_ga65f891a5eea6513f8505f5cfc5894896}{\_\-field\_\-invoke()} and \hyperlink{group__field__attach_ga791aeba11e29038daf3e798dbea0df60}{\_\-field\_\-invoke\_\-multiple()} are processing a field in all available languages, unless they are given a language suggestion. Based on that suggestion, \hyperlink{group__field__language_gaf7105831bb68e11809f92c990b50fb6c}{\_\-field\_\-language\_\-suggestion()} determines the languages to act on.
+
+Most field\_\-attach\_\-$\ast$() functions act on all available languages, except for the following:
+\begin{DoxyItemize}
+\item \hyperlink{group__field__attach_gac5bd0213dae78f7c1b3235f3acdde2c6}{field\_\-attach\_\-form()} only takes a single language code, specifying which language the field values will be submitted in.
+\item \hyperlink{group__field__attach_gaa752a8fd31173fd2308d71eb059e00c7}{field\_\-attach\_\-view()} requires the language the entity will be displayed in. Since it is unknown whether a field translation exists for the requested language, the translation handler is responsible for performing one of the following actions:
+\begin{DoxyItemize}
+\item Ignore missing translations, i.e. do not show any field values for the requested language. For example, see \hyperlink{locale_8module_a2e2bf06bf347a63df595c58aad152428}{locale\_\-field\_\-language\_\-alter()}.
+\item Provide a value in a different language as fallback. By default, the fallback logic is applied separately to each field to ensure that there is a value for each field to display. The field language fallback logic relies on the global language fallback configuration. Therefore, the displayed field values can be in the requested language, but may be different if no values for the requested language are available. The default language fallback rules inspect all the enabled languages ordered by their weight. This behavior can be altered or even disabled by modules implementing \hyperlink{group__field__attach_ga6411d5b5a528850a6e53c87ff899cabc}{hook\_\-field\_\-language\_\-alter()}, making it possible to choose the first approach. The display language for each field is returned by \hyperlink{group__field__language_gaff79088cd3951d2127adad1a2c13ad3e}{field\_\-language()}.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+See \hyperlink{group__field}{Field API } for information about the other parts of the Field API. 
+
+\subsection{Function Documentation}
+\hypertarget{group__field__language_gaf7105831bb68e11809f92c990b50fb6c}{
+\index{field\_\-language@{field\_\-language}!\_\-field\_\-language\_\-suggestion@{\_\-field\_\-language\_\-suggestion}}
+\index{\_\-field\_\-language\_\-suggestion@{\_\-field\_\-language\_\-suggestion}!field_language@{field\_\-language}}
+\subsubsection[{\_\-field\_\-language\_\-suggestion}]{\setlength{\rightskip}{0pt plus 5cm}\_\-field\_\-language\_\-suggestion (\$ {\em available\_\-languages}, \/  \$ {\em language\_\-suggestion}, \/  \$ {\em field\_\-name})}}
+\label{group__field__language_gaf7105831bb68e11809f92c990b50fb6c}
+Process the given language suggestion based on the available languages.
+
+If a non-\/empty language suggestion is provided it must appear among the available languages, otherwise it will be ignored.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$available\_\-languages}]An array of valid language codes. \item[{\em \$language\_\-suggestion}]A language code or an array of language codes keyed by field name. \item[{\em \$field\_\-name}]The name of the field being processed.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of valid language codes. 
+\end{DoxyReturn}
+\hypertarget{group__field__language_ga3dbd9611836d9bba15c15f0a8ae83c9b}{
+\index{field\_\-language@{field\_\-language}!field\_\-available\_\-languages@{field\_\-available\_\-languages}}
+\index{field\_\-available\_\-languages@{field\_\-available\_\-languages}!field_language@{field\_\-language}}
+\subsubsection[{field\_\-available\_\-languages}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-available\_\-languages (\$ {\em entity\_\-type}, \/  \$ {\em field})}}
+\label{group__field__language_ga3dbd9611836d9bba15c15f0a8ae83c9b}
+Collects the available languages for the given entity type and field.
+
+If the given field has language support enabled, an array of available languages will be returned, otherwise only LANGUAGE\_\-NONE will be returned. Since the default value for a 'translatable' entity property is FALSE, we ensure that only entities that are able to handle translations actually get translatable fields.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of the entity the field is attached to, e.g. 'node' or 'user'. \item[{\em \$field}]A field structure.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of valid language codes. 
+\end{DoxyReturn}
+\hypertarget{group__field__language_ga78c369e7b76edbb662d8f2e04bc82ad4}{
+\index{field\_\-language@{field\_\-language}!field\_\-content\_\-languages@{field\_\-content\_\-languages}}
+\index{field\_\-content\_\-languages@{field\_\-content\_\-languages}!field_language@{field\_\-language}}
+\subsubsection[{field\_\-content\_\-languages}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-content\_\-languages ()}}
+\label{group__field__language_ga78c369e7b76edbb662d8f2e04bc82ad4}
+Returns available content languages.
+
+The languages that may be associated to fields include LANGUAGE\_\-NONE.
+
+\begin{DoxyReturn}{Returns}
+An array of language codes. 
+\end{DoxyReturn}
+\hypertarget{group__field__language_ga56d98c14a956746f91373b68b404a66b}{
+\index{field\_\-language@{field\_\-language}!field\_\-has\_\-translation\_\-handler@{field\_\-has\_\-translation\_\-handler}}
+\index{field\_\-has\_\-translation\_\-handler@{field\_\-has\_\-translation\_\-handler}!field_language@{field\_\-language}}
+\subsubsection[{field\_\-has\_\-translation\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-has\_\-translation\_\-handler (\$ {\em entity\_\-type}, \/  \$ {\em handler} = {\ttfamily NULL})}}
+\label{group__field__language_ga56d98c14a956746f91373b68b404a66b}
+Checks if a module is registered as a translation handler for a given entity.
+
+If no handler is passed, simply check if there is any translation handler enabled for the given entity type.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of the entity whose fields are to be translated. \item[{\em \$handler}](optional) The name of the handler to be checked. Defaults to NULL.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE, if the given handler is allowed to manage field translations. If no handler is passed, TRUE means there is at least one registered translation handler. 
+\end{DoxyReturn}
+\hypertarget{group__field__language_gae2315cbfa6724de32eeea9e06a1811a7}{
+\index{field\_\-language@{field\_\-language}!field\_\-is\_\-translatable@{field\_\-is\_\-translatable}}
+\index{field\_\-is\_\-translatable@{field\_\-is\_\-translatable}!field_language@{field\_\-language}}
+\subsubsection[{field\_\-is\_\-translatable}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-is\_\-translatable (\$ {\em entity\_\-type}, \/  \$ {\em field})}}
+\label{group__field__language_gae2315cbfa6724de32eeea9e06a1811a7}
+Checks whether a field has language support.
+
+A field has language support enabled if its 'translatable' property is set to TRUE, and its entity type has at least one translation handler registered.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of the entity the field is attached to. \item[{\em \$field}]A field data structure.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the field can be translated. 
+\end{DoxyReturn}
+\hypertarget{group__field__language_gaff79088cd3951d2127adad1a2c13ad3e}{
+\index{field\_\-language@{field\_\-language}!field\_\-language@{field\_\-language}}
+\index{field\_\-language@{field\_\-language}!field_language@{field\_\-language}}
+\subsubsection[{field\_\-language}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-language (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field\_\-name} = {\ttfamily NULL}, \/  \$ {\em langcode} = {\ttfamily NULL})}}
+\label{group__field__language_gaff79088cd3951d2127adad1a2c13ad3e}
+Returns the display language for the fields attached to the given entity.
+
+The actual language for each given field is determined based on the requested language and the actual data available in the fields themselves. If there is no registered translation handler for the given entity type, the display language to be used is just LANGUAGE\_\-NONE, as no other language code is allowed by \hyperlink{group__field__language_ga3dbd9611836d9bba15c15f0a8ae83c9b}{field\_\-available\_\-languages()}. If translation handlers are found, we let modules provide alternative display languages for fields not having the requested language available. Core language fallback rules are provided by \hyperlink{locale_8module_a434eb64757d6496331a45365258fbecc}{locale\_\-field\_\-language\_\-fallback()} which is called by \hyperlink{locale_8module_a2e2bf06bf347a63df595c58aad152428}{locale\_\-field\_\-language\_\-alter()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of \$entity. \item[{\em \$entity}]The entity to be displayed. \item[{\em \$field\_\-name}](optional) The name of the field to be displayed. Defaults to NULL. If no value is specified, the display languages for every field attached to the given entity will be returned. \item[{\em \$langcode}](optional) The language code \$entity has to be displayed in. Defaults to NULL. If no value is given the current language will be used.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A language code if a field name is specified, an array of language codes keyed by field name otherwise. 
+\end{DoxyReturn}
+\hypertarget{group__field__language_gafbd7a022815887d2aadf983656571e98}{
+\index{field\_\-language@{field\_\-language}!field\_\-multilingual\_\-settings\_\-changed@{field\_\-multilingual\_\-settings\_\-changed}}
+\index{field\_\-multilingual\_\-settings\_\-changed@{field\_\-multilingual\_\-settings\_\-changed}!field_language@{field\_\-language}}
+\subsubsection[{field\_\-multilingual\_\-settings\_\-changed}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-multilingual\_\-settings\_\-changed ()}}
+\label{group__field__language_gafbd7a022815887d2aadf983656571e98}
+Implements \hyperlink{group__hooks_ga87a996b741bb1787b2451a2b842e20e8}{hook\_\-multilingual\_\-settings\_\-changed()}. \hypertarget{group__field__language_ga3c8ddbf445782a8ac352279c606aa30c}{
+\index{field\_\-language@{field\_\-language}!field\_\-valid\_\-language@{field\_\-valid\_\-language}}
+\index{field\_\-valid\_\-language@{field\_\-valid\_\-language}!field_language@{field\_\-language}}
+\subsubsection[{field\_\-valid\_\-language}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-valid\_\-language (\$ {\em langcode}, \/  \$ {\em default} = {\ttfamily TRUE})}}
+\label{group__field__language_ga3c8ddbf445782a8ac352279c606aa30c}
+Ensures that a given language code is valid.
+
+Checks whether the given language is one of the enabled languages. Otherwise, it returns the current, global language; or the site's default language, if the additional parameter \$default is TRUE.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$langcode}]The language code to validate. \item[{\em \$default}]Whether to return the default language code or the current language code in case \$langcode is invalid. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A valid language code. 
+\end{DoxyReturn}

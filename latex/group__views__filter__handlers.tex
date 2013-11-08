@@ -1,0 +1,121 @@
+\hypertarget{group__views__filter__handlers}{
+\section{Views filter handlers}
+\label{group__views__filter__handlers}\index{Views filter handlers@{Views filter handlers}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classviews__handler__filter}{views\_\-handler\_\-filter}
+\item 
+class \hyperlink{classviews__handler__filter__broken}{views\_\-handler\_\-filter\_\-broken}
+\item 
+class \hyperlink{classviews__handler__filter__boolean__operator}{views\_\-handler\_\-filter\_\-boolean\_\-operator}
+\item 
+class \hyperlink{classviews__handler__filter__boolean__operator__string}{views\_\-handler\_\-filter\_\-boolean\_\-operator\_\-string}
+\item 
+class \hyperlink{classviews__handler__filter__date}{views\_\-handler\_\-filter\_\-date}
+\item 
+class \hyperlink{classviews__handler__filter__entity__bundle}{views\_\-handler\_\-filter\_\-entity\_\-bundle}
+\item 
+class \hyperlink{classviews__handler__filter__equality}{views\_\-handler\_\-filter\_\-equality}
+\item 
+class \hyperlink{classviews__handler__filter__group__by__numeric}{views\_\-handler\_\-filter\_\-group\_\-by\_\-numeric}
+\item 
+class \hyperlink{classviews__handler__filter__in__operator}{views\_\-handler\_\-filter\_\-in\_\-operator}
+\item 
+class \hyperlink{classviews__handler__filter__many__to__one}{views\_\-handler\_\-filter\_\-many\_\-to\_\-one}
+\item 
+class \hyperlink{classviews__handler__filter__numeric}{views\_\-handler\_\-filter\_\-numeric}
+\item 
+class \hyperlink{classviews__handler__filter__string}{views\_\-handler\_\-filter\_\-string}
+\item 
+class \hyperlink{classviews__handler__filter__aggregator__category__cid}{views\_\-handler\_\-filter\_\-aggregator\_\-category\_\-cid}
+\item 
+class \hyperlink{classviews__handler__filter__comment__user__uid}{views\_\-handler\_\-filter\_\-comment\_\-user\_\-uid}
+\item 
+class \hyperlink{classviews__handler__filter__ncs__last__updated}{views\_\-handler\_\-filter\_\-ncs\_\-last\_\-updated}
+\item 
+class \hyperlink{classviews__handler__filter__node__comment}{views\_\-handler\_\-filter\_\-node\_\-comment}
+\item 
+class \hyperlink{classviews__handler__filter__field__list}{views\_\-handler\_\-filter\_\-field\_\-list}
+\item 
+class \hyperlink{classviews__handler__filter__locale__group}{views\_\-handler\_\-filter\_\-locale\_\-group}
+\item 
+class \hyperlink{classviews__handler__filter__locale__language}{views\_\-handler\_\-filter\_\-locale\_\-language}
+\item 
+class \hyperlink{classviews__handler__filter__locale__version}{views\_\-handler\_\-filter\_\-locale\_\-version}
+\item 
+class \hyperlink{classviews__handler__filter__node__language}{views\_\-handler\_\-filter\_\-node\_\-language}
+\item 
+class \hyperlink{classviews__handler__filter__history__user__timestamp}{views\_\-handler\_\-filter\_\-history\_\-user\_\-timestamp}
+\item 
+class \hyperlink{classviews__handler__filter__node__access}{views\_\-handler\_\-filter\_\-node\_\-access}
+\item 
+class \hyperlink{classviews__handler__filter__node__status}{views\_\-handler\_\-filter\_\-node\_\-status}
+\item 
+class \hyperlink{classviews__handler__filter__node__type}{views\_\-handler\_\-filter\_\-node\_\-type}
+\item 
+class \hyperlink{classviews__handler__filter__node__uid__revision}{views\_\-handler\_\-filter\_\-node\_\-uid\_\-revision}
+\item 
+class \hyperlink{classviews__handler__filter__profile__selection}{views\_\-handler\_\-filter\_\-profile\_\-selection}
+\item 
+class \hyperlink{classviews__handler__filter__search}{views\_\-handler\_\-filter\_\-search}
+\item 
+class \hyperlink{classviews__handler__filter__file__status}{views\_\-handler\_\-filter\_\-file\_\-status}
+\item 
+class \hyperlink{classviews__handler__filter__term__node__tid}{views\_\-handler\_\-filter\_\-term\_\-node\_\-tid}
+\item 
+class \hyperlink{classviews__handler__filter__term__node__tid__depth}{views\_\-handler\_\-filter\_\-term\_\-node\_\-tid\_\-depth}
+\item 
+class \hyperlink{classviews__handler__filter__vocabulary__machine__name}{views\_\-handler\_\-filter\_\-vocabulary\_\-machine\_\-name}
+\item 
+class \hyperlink{classviews__handler__filter__vocabulary__vid}{views\_\-handler\_\-filter\_\-vocabulary\_\-vid}
+\item 
+class \hyperlink{classviews__handler__filter__node__tnid}{views\_\-handler\_\-filter\_\-node\_\-tnid}
+\item 
+class \hyperlink{classviews__handler__filter__node__tnid__child}{views\_\-handler\_\-filter\_\-node\_\-tnid\_\-child}
+\item 
+class \hyperlink{classviews__handler__filter__user__current}{views\_\-handler\_\-filter\_\-user\_\-current}
+\item 
+class \hyperlink{classviews__handler__filter__user__name}{views\_\-handler\_\-filter\_\-user\_\-name}
+\item 
+class \hyperlink{classviews__handler__filter__user__permissions}{views\_\-handler\_\-filter\_\-user\_\-permissions}
+\item 
+class \hyperlink{classviews__handler__filter__user__roles}{views\_\-handler\_\-filter\_\-user\_\-roles}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__views__filter__handlers_ga4877cb7e6a7e3cda21438608fa979cbb}{\_\-views\_\-array\_\-filter\_\-zero} (\$var)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handlers to tell Views how to filter queries.
+
+Definition items:
+\begin{DoxyItemize}
+\item allow empty: If true, the 'IS NULL' and 'IS NOT NULL' operators become available as standard operators.
+\end{DoxyItemize}
+
+Object flags: You can set some specific behavior by setting up the following flags on your custom class.
+
+
+\begin{DoxyItemize}
+\item always\_\-multiple: Disable the possibility to force a single value.
+\item no\_\-operator: Disable the possibility to use operators.
+\item always\_\-required: Disable the possibility to allow a exposed input to be optional. 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\hypertarget{group__views__filter__handlers_ga4877cb7e6a7e3cda21438608fa979cbb}{
+\index{views\_\-filter\_\-handlers@{views\_\-filter\_\-handlers}!\_\-views\_\-array\_\-filter\_\-zero@{\_\-views\_\-array\_\-filter\_\-zero}}
+\index{\_\-views\_\-array\_\-filter\_\-zero@{\_\-views\_\-array\_\-filter\_\-zero}!views_filter_handlers@{views\_\-filter\_\-handlers}}
+\subsubsection[{\_\-views\_\-array\_\-filter\_\-zero}]{\setlength{\rightskip}{0pt plus 5cm}\_\-views\_\-array\_\-filter\_\-zero (\$ {\em var})}}
+\label{group__views__filter__handlers_ga4877cb7e6a7e3cda21438608fa979cbb}
+Filter by no empty values, though allow to use \char`\"{}0\char`\"{}. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \$var}]\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}

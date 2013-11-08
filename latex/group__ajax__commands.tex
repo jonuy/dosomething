@@ -1,0 +1,326 @@
+\hypertarget{group__ajax__commands}{
+\section{Ajax framework commands}
+\label{group__ajax__commands}\index{Ajax framework commands@{Ajax framework commands}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__ajax__commands_gae4fdd3ece45cf6469c7492f16219b337}{ajax\_\-command\_\-alert} (\$text)
+\item 
+\hyperlink{group__ajax__commands_ga6c3bb9fd1958e286e6e1330c182952a1}{ajax\_\-command\_\-insert} (\$selector, \$html, \$settings=NULL)
+\item 
+\hyperlink{group__ajax__commands_ga558989ae457ca293bfb8ea19070ed334}{ajax\_\-command\_\-replace} (\$selector, \$html, \$settings=NULL)
+\item 
+\hyperlink{group__ajax__commands_ga37b14987e96029b64247d750a5d4ed79}{ajax\_\-command\_\-html} (\$selector, \$html, \$settings=NULL)
+\item 
+\hyperlink{group__ajax__commands_gaafaae3874d173618f88c0baa1fdab12b}{ajax\_\-command\_\-prepend} (\$selector, \$html, \$settings=NULL)
+\item 
+\hyperlink{group__ajax__commands_ga861a6cb3b7347211edce388a2b446f91}{ajax\_\-command\_\-append} (\$selector, \$html, \$settings=NULL)
+\item 
+\hyperlink{group__ajax__commands_ga530d78ba7ea73497567e401a42fbbf94}{ajax\_\-command\_\-after} (\$selector, \$html, \$settings=NULL)
+\item 
+\hyperlink{group__ajax__commands_gafb261431270ce894d69e58a051ee9ead}{ajax\_\-command\_\-before} (\$selector, \$html, \$settings=NULL)
+\item 
+\hyperlink{group__ajax__commands_gadd65f6f231cc96812c810c54e36d9011}{ajax\_\-command\_\-remove} (\$selector)
+\item 
+\hyperlink{group__ajax__commands_ga64ba8a2e560b17e4fc8ca090a37314a0}{ajax\_\-command\_\-changed} (\$selector, \$asterisk= '')
+\item 
+\hyperlink{group__ajax__commands_gafb1f836e8545dad1a4a391e21404fb86}{ajax\_\-command\_\-css} (\$selector, \$argument)
+\item 
+\hyperlink{group__ajax__commands_ga3e41169f97184258a213d512cef81131}{ajax\_\-command\_\-settings} (\$argument, \$merge=FALSE)
+\item 
+\hyperlink{group__ajax__commands_gad092aa7cd3258f6ed7f18f9f2f8cb8db}{ajax\_\-command\_\-data} (\$selector, \$name, \$value)
+\item 
+\hyperlink{group__ajax__commands_gac49706a740d78d75f6a55bd2dba21c80}{ajax\_\-command\_\-invoke} (\$selector, \$method, array \$arguments=array())
+\item 
+\hyperlink{group__ajax__commands_ga59f78e53dfd51237ccedfaa0266b7f37}{ajax\_\-command\_\-restripe} (\$selector)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+End of \char`\"{}defgroup ajax\char`\"{}.
+
+Functions to create various Ajax commands.
+
+These functions can be used to create arrays for use with the \hyperlink{group__ajax_ga241c2426bdde049c55b05b7bf5d714a2}{ajax\_\-render()} function. 
+
+\subsection{Function Documentation}
+\hypertarget{group__ajax__commands_ga530d78ba7ea73497567e401a42fbbf94}{
+\index{ajax\_\-commands@{ajax\_\-commands}!ajax\_\-command\_\-after@{ajax\_\-command\_\-after}}
+\index{ajax\_\-command\_\-after@{ajax\_\-command\_\-after}!ajax_commands@{ajax\_\-commands}}
+\subsubsection[{ajax\_\-command\_\-after}]{\setlength{\rightskip}{0pt plus 5cm}ajax\_\-command\_\-after (\$ {\em selector}, \/  \$ {\em html}, \/  \$ {\em settings} = {\ttfamily NULL})}}
+\label{group__ajax__commands_ga530d78ba7ea73497567e401a42fbbf94}
+Creates a Drupal Ajax 'insert/after' command.
+
+The 'insert/after' command instructs the client to use jQuery's after() method to insert the given HTML content after each element matched by the given selector.
+
+This command is implemented by Drupal.ajax.prototype.commands.insert() defined in misc/ajax.js.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$selector}]A jQuery selector string. If the command is a response to a request from an ajax form element then this value can be NULL. \item[{\em \$html}]The data to use with the jQuery after() method. \item[{\em \$settings}]An optional array of settings that will be used for this command only.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the \hyperlink{group__ajax_ga241c2426bdde049c55b05b7bf5d714a2}{ajax\_\-render()} function.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{http://docs.jquery.com/Manipulation/after#content}{\tt http://docs.jquery.com/Manipulation/after\#content} 
+\end{DoxySeeAlso}
+\hypertarget{group__ajax__commands_gae4fdd3ece45cf6469c7492f16219b337}{
+\index{ajax\_\-commands@{ajax\_\-commands}!ajax\_\-command\_\-alert@{ajax\_\-command\_\-alert}}
+\index{ajax\_\-command\_\-alert@{ajax\_\-command\_\-alert}!ajax_commands@{ajax\_\-commands}}
+\subsubsection[{ajax\_\-command\_\-alert}]{\setlength{\rightskip}{0pt plus 5cm}ajax\_\-command\_\-alert (\$ {\em text})}}
+\label{group__ajax__commands_gae4fdd3ece45cf6469c7492f16219b337}
+Creates a Drupal Ajax 'alert' command.
+
+The 'alert' command instructs the client to display a JavaScript alert dialog box.
+
+This command is implemented by Drupal.ajax.prototype.commands.alert() defined in misc/ajax.js.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$text}]The message string to display to the user.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the \hyperlink{group__ajax_ga241c2426bdde049c55b05b7bf5d714a2}{ajax\_\-render()} function. 
+\end{DoxyReturn}
+\hypertarget{group__ajax__commands_ga861a6cb3b7347211edce388a2b446f91}{
+\index{ajax\_\-commands@{ajax\_\-commands}!ajax\_\-command\_\-append@{ajax\_\-command\_\-append}}
+\index{ajax\_\-command\_\-append@{ajax\_\-command\_\-append}!ajax_commands@{ajax\_\-commands}}
+\subsubsection[{ajax\_\-command\_\-append}]{\setlength{\rightskip}{0pt plus 5cm}ajax\_\-command\_\-append (\$ {\em selector}, \/  \$ {\em html}, \/  \$ {\em settings} = {\ttfamily NULL})}}
+\label{group__ajax__commands_ga861a6cb3b7347211edce388a2b446f91}
+Creates a Drupal Ajax 'insert/append' command.
+
+The 'insert/append' command instructs the client to use jQuery's append() method to append the given HTML content to the inside of each element matched by the given selector.
+
+This command is implemented by Drupal.ajax.prototype.commands.insert() defined in misc/ajax.js.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$selector}]A jQuery selector string. If the command is a response to a request from an ajax form element then this value can be NULL. \item[{\em \$html}]The data to use with the jQuery append() method. \item[{\em \$settings}]An optional array of settings that will be used for this command only.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the \hyperlink{group__ajax_ga241c2426bdde049c55b05b7bf5d714a2}{ajax\_\-render()} function.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{http://docs.jquery.com/Manipulation/append#content}{\tt http://docs.jquery.com/Manipulation/append\#content} 
+\end{DoxySeeAlso}
+\hypertarget{group__ajax__commands_gafb261431270ce894d69e58a051ee9ead}{
+\index{ajax\_\-commands@{ajax\_\-commands}!ajax\_\-command\_\-before@{ajax\_\-command\_\-before}}
+\index{ajax\_\-command\_\-before@{ajax\_\-command\_\-before}!ajax_commands@{ajax\_\-commands}}
+\subsubsection[{ajax\_\-command\_\-before}]{\setlength{\rightskip}{0pt plus 5cm}ajax\_\-command\_\-before (\$ {\em selector}, \/  \$ {\em html}, \/  \$ {\em settings} = {\ttfamily NULL})}}
+\label{group__ajax__commands_gafb261431270ce894d69e58a051ee9ead}
+Creates a Drupal Ajax 'insert/before' command.
+
+The 'insert/before' command instructs the client to use jQuery's before() method to insert the given HTML content before each of elements matched by the given selector.
+
+This command is implemented by Drupal.ajax.prototype.commands.insert() defined in misc/ajax.js.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$selector}]A jQuery selector string. If the command is a response to a request from an ajax form element then this value can be NULL. \item[{\em \$html}]The data to use with the jQuery before() method. \item[{\em \$settings}]An optional array of settings that will be used for this command only.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the \hyperlink{group__ajax_ga241c2426bdde049c55b05b7bf5d714a2}{ajax\_\-render()} function.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{http://docs.jquery.com/Manipulation/before#content}{\tt http://docs.jquery.com/Manipulation/before\#content} 
+\end{DoxySeeAlso}
+\hypertarget{group__ajax__commands_ga64ba8a2e560b17e4fc8ca090a37314a0}{
+\index{ajax\_\-commands@{ajax\_\-commands}!ajax\_\-command\_\-changed@{ajax\_\-command\_\-changed}}
+\index{ajax\_\-command\_\-changed@{ajax\_\-command\_\-changed}!ajax_commands@{ajax\_\-commands}}
+\subsubsection[{ajax\_\-command\_\-changed}]{\setlength{\rightskip}{0pt plus 5cm}ajax\_\-command\_\-changed (\$ {\em selector}, \/  \$ {\em asterisk} = {\ttfamily ''})}}
+\label{group__ajax__commands_ga64ba8a2e560b17e4fc8ca090a37314a0}
+Creates a Drupal Ajax 'changed' command.
+
+This command instructs the client to mark each of the elements matched by the given selector as 'ajax-\/changed'.
+
+This command is implemented by Drupal.ajax.prototype.commands.changed() defined in misc/ajax.js.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$selector}]A jQuery selector string. If the command is a response to a request from an ajax form element then this value can be NULL. \item[{\em \$asterisk}]An optional CSS selector which must be inside \$selector. If specified, an asterisk will be appended to the HTML inside the \$asterisk selector.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the \hyperlink{group__ajax_ga241c2426bdde049c55b05b7bf5d714a2}{ajax\_\-render()} function. 
+\end{DoxyReturn}
+\hypertarget{group__ajax__commands_gafb1f836e8545dad1a4a391e21404fb86}{
+\index{ajax\_\-commands@{ajax\_\-commands}!ajax\_\-command\_\-css@{ajax\_\-command\_\-css}}
+\index{ajax\_\-command\_\-css@{ajax\_\-command\_\-css}!ajax_commands@{ajax\_\-commands}}
+\subsubsection[{ajax\_\-command\_\-css}]{\setlength{\rightskip}{0pt plus 5cm}ajax\_\-command\_\-css (\$ {\em selector}, \/  \$ {\em argument})}}
+\label{group__ajax__commands_gafb1f836e8545dad1a4a391e21404fb86}
+Creates a Drupal Ajax 'css' command.
+
+The 'css' command will instruct the client to use the jQuery css() method to apply the CSS arguments to elements matched by the given selector.
+
+This command is implemented by Drupal.ajax.prototype.commands.css() defined in misc/ajax.js.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$selector}]A jQuery selector string. If the command is a response to a request from an ajax form element then this value can be NULL. \item[{\em \$argument}]An array of key/value pairs to set in the CSS for the selector.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the \hyperlink{group__ajax_ga241c2426bdde049c55b05b7bf5d714a2}{ajax\_\-render()} function.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{http://docs.jquery.com/CSS/css#properties}{\tt http://docs.jquery.com/CSS/css\#properties} 
+\end{DoxySeeAlso}
+\hypertarget{group__ajax__commands_gad092aa7cd3258f6ed7f18f9f2f8cb8db}{
+\index{ajax\_\-commands@{ajax\_\-commands}!ajax\_\-command\_\-data@{ajax\_\-command\_\-data}}
+\index{ajax\_\-command\_\-data@{ajax\_\-command\_\-data}!ajax_commands@{ajax\_\-commands}}
+\subsubsection[{ajax\_\-command\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}ajax\_\-command\_\-data (\$ {\em selector}, \/  \$ {\em name}, \/  \$ {\em value})}}
+\label{group__ajax__commands_gad092aa7cd3258f6ed7f18f9f2f8cb8db}
+Creates a Drupal Ajax 'data' command.
+
+The 'data' command instructs the client to attach the name=value pair of data to the selector via jQuery's data cache.
+
+This command is implemented by Drupal.ajax.prototype.commands.data() defined in misc/ajax.js.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$selector}]A jQuery selector string. If the command is a response to a request from an ajax form element then this value can be NULL. \item[{\em \$name}]The name or key (in the key value pair) of the data attached to this selector. \item[{\em \$value}]The value of the data. Not just limited to strings can be any format.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the \hyperlink{group__ajax_ga241c2426bdde049c55b05b7bf5d714a2}{ajax\_\-render()} function.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{http://docs.jquery.com/Core/data#namevalue}{\tt http://docs.jquery.com/Core/data\#namevalue} 
+\end{DoxySeeAlso}
+\hypertarget{group__ajax__commands_ga37b14987e96029b64247d750a5d4ed79}{
+\index{ajax\_\-commands@{ajax\_\-commands}!ajax\_\-command\_\-html@{ajax\_\-command\_\-html}}
+\index{ajax\_\-command\_\-html@{ajax\_\-command\_\-html}!ajax_commands@{ajax\_\-commands}}
+\subsubsection[{ajax\_\-command\_\-html}]{\setlength{\rightskip}{0pt plus 5cm}ajax\_\-command\_\-html (\$ {\em selector}, \/  \$ {\em html}, \/  \$ {\em settings} = {\ttfamily NULL})}}
+\label{group__ajax__commands_ga37b14987e96029b64247d750a5d4ed79}
+Creates a Drupal Ajax 'insert/html' command.
+
+The 'insert/html' command instructs the client to use jQuery's html() method to set the HTML content of each element matched by the given selector while leaving the outer tags intact.
+
+This command is implemented by Drupal.ajax.prototype.commands.insert() defined in misc/ajax.js.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$selector}]A jQuery selector string. If the command is a response to a request from an ajax form element then this value can be NULL. \item[{\em \$html}]The data to use with the jQuery html() method. \item[{\em \$settings}]An optional array of settings that will be used for this command only.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the \hyperlink{group__ajax_ga241c2426bdde049c55b05b7bf5d714a2}{ajax\_\-render()} function.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{http://docs.jquery.com/Attributes/html#val}{\tt http://docs.jquery.com/Attributes/html\#val} 
+\end{DoxySeeAlso}
+\hypertarget{group__ajax__commands_ga6c3bb9fd1958e286e6e1330c182952a1}{
+\index{ajax\_\-commands@{ajax\_\-commands}!ajax\_\-command\_\-insert@{ajax\_\-command\_\-insert}}
+\index{ajax\_\-command\_\-insert@{ajax\_\-command\_\-insert}!ajax_commands@{ajax\_\-commands}}
+\subsubsection[{ajax\_\-command\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}ajax\_\-command\_\-insert (\$ {\em selector}, \/  \$ {\em html}, \/  \$ {\em settings} = {\ttfamily NULL})}}
+\label{group__ajax__commands_ga6c3bb9fd1958e286e6e1330c182952a1}
+Creates a Drupal Ajax 'insert' command using the method in ajax\mbox{[}'method'\mbox{]}.
+
+This command instructs the client to insert the given HTML using whichever jQuery DOM manipulation method has been specified in the ajax\mbox{[}'method'\mbox{]} variable of the element that triggered the request.
+
+This command is implemented by Drupal.ajax.prototype.commands.insert() defined in misc/ajax.js.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$selector}]A jQuery selector string. If the command is a response to a request from an ajax form element then this value can be NULL. \item[{\em \$html}]The data to use with the jQuery method. \item[{\em \$settings}]An optional array of settings that will be used for this command only.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the \hyperlink{group__ajax_ga241c2426bdde049c55b05b7bf5d714a2}{ajax\_\-render()} function. 
+\end{DoxyReturn}
+\hypertarget{group__ajax__commands_gac49706a740d78d75f6a55bd2dba21c80}{
+\index{ajax\_\-commands@{ajax\_\-commands}!ajax\_\-command\_\-invoke@{ajax\_\-command\_\-invoke}}
+\index{ajax\_\-command\_\-invoke@{ajax\_\-command\_\-invoke}!ajax_commands@{ajax\_\-commands}}
+\subsubsection[{ajax\_\-command\_\-invoke}]{\setlength{\rightskip}{0pt plus 5cm}ajax\_\-command\_\-invoke (\$ {\em selector}, \/  \$ {\em method}, \/  array \$ {\em arguments} = {\ttfamily array()})}}
+\label{group__ajax__commands_gac49706a740d78d75f6a55bd2dba21c80}
+Creates a Drupal Ajax 'invoke' command.
+
+The 'invoke' command will instruct the client to invoke the given jQuery method with the supplied arguments on the elements matched by the given selector. Intended for simple jQuery commands, such as attr(), addClass(), removeClass(), toggleClass(), etc.
+
+This command is implemented by Drupal.ajax.prototype.commands.invoke() defined in misc/ajax.js.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$selector}]A jQuery selector string. If the command is a response to a request from an ajax form element then this value can be NULL. \item[{\em \$method}]The jQuery method to invoke. \item[{\em \$arguments}](optional) A list of arguments to the jQuery \$method, if any.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the \hyperlink{group__ajax_ga241c2426bdde049c55b05b7bf5d714a2}{ajax\_\-render()} function. 
+\end{DoxyReturn}
+\hypertarget{group__ajax__commands_gaafaae3874d173618f88c0baa1fdab12b}{
+\index{ajax\_\-commands@{ajax\_\-commands}!ajax\_\-command\_\-prepend@{ajax\_\-command\_\-prepend}}
+\index{ajax\_\-command\_\-prepend@{ajax\_\-command\_\-prepend}!ajax_commands@{ajax\_\-commands}}
+\subsubsection[{ajax\_\-command\_\-prepend}]{\setlength{\rightskip}{0pt plus 5cm}ajax\_\-command\_\-prepend (\$ {\em selector}, \/  \$ {\em html}, \/  \$ {\em settings} = {\ttfamily NULL})}}
+\label{group__ajax__commands_gaafaae3874d173618f88c0baa1fdab12b}
+Creates a Drupal Ajax 'insert/prepend' command.
+
+The 'insert/prepend' command instructs the client to use jQuery's prepend() method to prepend the given HTML content to the inside each element matched by the given selector.
+
+This command is implemented by Drupal.ajax.prototype.commands.insert() defined in misc/ajax.js.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$selector}]A jQuery selector string. If the command is a response to a request from an ajax form element then this value can be NULL. \item[{\em \$html}]The data to use with the jQuery prepend() method. \item[{\em \$settings}]An optional array of settings that will be used for this command only.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the \hyperlink{group__ajax_ga241c2426bdde049c55b05b7bf5d714a2}{ajax\_\-render()} function.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{http://docs.jquery.com/Manipulation/prepend#content}{\tt http://docs.jquery.com/Manipulation/prepend\#content} 
+\end{DoxySeeAlso}
+\hypertarget{group__ajax__commands_gadd65f6f231cc96812c810c54e36d9011}{
+\index{ajax\_\-commands@{ajax\_\-commands}!ajax\_\-command\_\-remove@{ajax\_\-command\_\-remove}}
+\index{ajax\_\-command\_\-remove@{ajax\_\-command\_\-remove}!ajax_commands@{ajax\_\-commands}}
+\subsubsection[{ajax\_\-command\_\-remove}]{\setlength{\rightskip}{0pt plus 5cm}ajax\_\-command\_\-remove (\$ {\em selector})}}
+\label{group__ajax__commands_gadd65f6f231cc96812c810c54e36d9011}
+Creates a Drupal Ajax 'remove' command.
+
+The 'remove' command instructs the client to use jQuery's remove() method to remove each of elements matched by the given selector, and everything within them.
+
+This command is implemented by Drupal.ajax.prototype.commands.remove() defined in misc/ajax.js.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$selector}]A jQuery selector string. If the command is a response to a request from an ajax form element then this value can be NULL.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the \hyperlink{group__ajax_ga241c2426bdde049c55b05b7bf5d714a2}{ajax\_\-render()} function.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{http://docs.jquery.com/Manipulation/remove#expr}{\tt http://docs.jquery.com/Manipulation/remove\#expr} 
+\end{DoxySeeAlso}
+\hypertarget{group__ajax__commands_ga558989ae457ca293bfb8ea19070ed334}{
+\index{ajax\_\-commands@{ajax\_\-commands}!ajax\_\-command\_\-replace@{ajax\_\-command\_\-replace}}
+\index{ajax\_\-command\_\-replace@{ajax\_\-command\_\-replace}!ajax_commands@{ajax\_\-commands}}
+\subsubsection[{ajax\_\-command\_\-replace}]{\setlength{\rightskip}{0pt plus 5cm}ajax\_\-command\_\-replace (\$ {\em selector}, \/  \$ {\em html}, \/  \$ {\em settings} = {\ttfamily NULL})}}
+\label{group__ajax__commands_ga558989ae457ca293bfb8ea19070ed334}
+Creates a Drupal Ajax 'insert/replaceWith' command.
+
+The 'insert/replaceWith' command instructs the client to use jQuery's replaceWith() method to replace each element matched matched by the given selector with the given HTML.
+
+This command is implemented by Drupal.ajax.prototype.commands.insert() defined in misc/ajax.js.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$selector}]A jQuery selector string. If the command is a response to a request from an ajax form element then this value can be NULL. \item[{\em \$html}]The data to use with the jQuery replaceWith() method. \item[{\em \$settings}]An optional array of settings that will be used for this command only.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the \hyperlink{group__ajax_ga241c2426bdde049c55b05b7bf5d714a2}{ajax\_\-render()} function.
+\end{DoxyReturn}
+See \hyperlink{}{jQuery replaceWith command } \hypertarget{group__ajax__commands_ga59f78e53dfd51237ccedfaa0266b7f37}{
+\index{ajax\_\-commands@{ajax\_\-commands}!ajax\_\-command\_\-restripe@{ajax\_\-command\_\-restripe}}
+\index{ajax\_\-command\_\-restripe@{ajax\_\-command\_\-restripe}!ajax_commands@{ajax\_\-commands}}
+\subsubsection[{ajax\_\-command\_\-restripe}]{\setlength{\rightskip}{0pt plus 5cm}ajax\_\-command\_\-restripe (\$ {\em selector})}}
+\label{group__ajax__commands_ga59f78e53dfd51237ccedfaa0266b7f37}
+Creates a Drupal Ajax 'restripe' command.
+
+The 'restripe' command instructs the client to restripe a table. This is usually used after a table has been modified by a replace or append command.
+
+This command is implemented by Drupal.ajax.prototype.commands.restripe() defined in misc/ajax.js.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$selector}]A jQuery selector string.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the \hyperlink{group__ajax_ga241c2426bdde049c55b05b7bf5d714a2}{ajax\_\-render()} function. 
+\end{DoxyReturn}
+\hypertarget{group__ajax__commands_ga3e41169f97184258a213d512cef81131}{
+\index{ajax\_\-commands@{ajax\_\-commands}!ajax\_\-command\_\-settings@{ajax\_\-command\_\-settings}}
+\index{ajax\_\-command\_\-settings@{ajax\_\-command\_\-settings}!ajax_commands@{ajax\_\-commands}}
+\subsubsection[{ajax\_\-command\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}ajax\_\-command\_\-settings (\$ {\em argument}, \/  \$ {\em merge} = {\ttfamily FALSE})}}
+\label{group__ajax__commands_ga3e41169f97184258a213d512cef81131}
+Creates a Drupal Ajax 'settings' command.
+
+The 'settings' command instructs the client either to use the given array as the settings for ajax-\/loaded content or to extend Drupal.settings with the given array, depending on the value of the \$merge parameter.
+
+This command is implemented by Drupal.ajax.prototype.commands.settings() defined in misc/ajax.js.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$argument}]An array of key/value pairs to add to the settings. This will be utilized for all commands after this if they do not include their own settings array. \item[{\em \$merge}]Whether or not the passed settings in \$argument should be merged into the global Drupal.settings on the page. By default (FALSE), the settings that are passed to Drupal.attachBehaviors will not include the global Drupal.settings.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the \hyperlink{group__ajax_ga241c2426bdde049c55b05b7bf5d714a2}{ajax\_\-render()} function. 
+\end{DoxyReturn}

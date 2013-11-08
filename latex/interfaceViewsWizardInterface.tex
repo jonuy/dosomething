@@ -1,0 +1,69 @@
+\hypertarget{interfaceViewsWizardInterface}{
+\section{ViewsWizardInterface Interface Reference}
+\label{interfaceViewsWizardInterface}\index{ViewsWizardInterface@{ViewsWizardInterface}}
+}
+Inheritance diagram for ViewsWizardInterface::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.00897cm]{interfaceViewsWizardInterface}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interfaceViewsWizardInterface_a2026ccc52816ad35531642e6845cba7b}{
+{\bfseries \_\-\_\-construct} (\$plugin)}
+\label{interfaceViewsWizardInterface_a2026ccc52816ad35531642e6845cba7b}
+
+\item 
+\hyperlink{interfaceViewsWizardInterface_a9ae787c3f3e1d59fb1850c491ff24bcb}{build\_\-form} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{interfaceViewsWizardInterface_af5be7d965ec92b27da1eb1a01f5bfc61}{validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{interfaceViewsWizardInterface_a29dcb9af9b511509bba69e55b643edc0}{create\_\-view} (\$form, \&\$form\_\-state)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines a common interface for Views Wizard plugins. 
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceViewsWizardInterface_a9ae787c3f3e1d59fb1850c491ff24bcb}{
+\index{ViewsWizardInterface@{ViewsWizardInterface}!build\_\-form@{build\_\-form}}
+\index{build\_\-form@{build\_\-form}!ViewsWizardInterface@{ViewsWizardInterface}}
+\subsubsection[{build\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}ViewsWizardInterface::build\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{interfaceViewsWizardInterface_a9ae787c3f3e1d59fb1850c491ff24bcb}
+For AJAX callbacks to build other elements in the \char`\"{}show\char`\"{} form. 
+
+Implemented in \hyperlink{classViewsUiBaseViewsWizard_aca015cf9fee6dd3ee556b18405f4dfe4}{ViewsUiBaseViewsWizard}.\hypertarget{interfaceViewsWizardInterface_a29dcb9af9b511509bba69e55b643edc0}{
+\index{ViewsWizardInterface@{ViewsWizardInterface}!create\_\-view@{create\_\-view}}
+\index{create\_\-view@{create\_\-view}!ViewsWizardInterface@{ViewsWizardInterface}}
+\subsubsection[{create\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}ViewsWizardInterface::create\_\-view (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{interfaceViewsWizardInterface_a29dcb9af9b511509bba69e55b643edc0}
+Create a new View from form values.
+
+\begin{DoxyReturn}{Returns}
+a \hyperlink{classview}{view} object.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classViewsWizardException}{ViewsWizardException}}]in the event of a problem. \end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classViewsUiBaseViewsWizard_aef86de986b8438fc1b301d8413e69f00}{ViewsUiBaseViewsWizard}.\hypertarget{interfaceViewsWizardInterface_af5be7d965ec92b27da1eb1a01f5bfc61}{
+\index{ViewsWizardInterface@{ViewsWizardInterface}!validate@{validate}}
+\index{validate@{validate}!ViewsWizardInterface@{ViewsWizardInterface}}
+\subsubsection[{validate}]{\setlength{\rightskip}{0pt plus 5cm}ViewsWizardInterface::validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{interfaceViewsWizardInterface_af5be7d965ec92b27da1eb1a01f5bfc61}
+Validate form and values.
+
+\begin{DoxyReturn}{Returns}
+an array of form errors. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classViewsUiBaseViewsWizard_a894ab06673721a26809f0a662241641b}{ViewsUiBaseViewsWizard}.
+
+The documentation for this interface was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/plugins/views\_\-wizard/\hyperlink{views__ui__base__views__wizard_8class_8php}{views\_\-ui\_\-base\_\-views\_\-wizard.class.php}\end{DoxyCompactItemize}

@@ -1,0 +1,216 @@
+\hypertarget{date_8module}{
+\section{html/profiles/dosomething/modules/contrib/date/date.module File Reference}
+\label{date_8module}\index{html/profiles/dosomething/modules/contrib/date/date.module@{html/profiles/dosomething/modules/contrib/date/date.module}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{date_8module_a6ae854a04f35eae5dc91b242802728d0}{date\_\-get\_\-entity\_\-bundle} (\$entity\_\-type, \$entity)
+\item 
+\hyperlink{date_8module_a02c7a9a9c79c730064240ea129f062fc}{date\_\-default\_\-format} (\$type)
+\item 
+\hyperlink{date_8module_a7b44720b330f4318eb971537b64a27ad}{date\_\-input\_\-date} (\$field, \$instance, \$element, \$input)
+\item 
+\hyperlink{date_8module_a9f95819df33aab94d18f4461985d1028}{date\_\-theme} ()
+\item 
+\hyperlink{date_8module_a9e7c70efb10524fbd6c19512b08e697b}{date\_\-element\_\-info} ()
+\item 
+\hyperlink{date_8module_a4b019297d5d8f388aa2252ad62b3bfde}{date\_\-formatter\_\-process} (\$formatter, \$entity\_\-type, \$entity, \$field, \$instance, \$langcode, \$item, \$display)
+\item 
+\hyperlink{date_8module_a524c8837d65b4e1b512a7ea3ae33d016}{date\_\-granularity} (\$field)
+\item 
+\hyperlink{date_8module_a32f61cf4fd59beedd48c7a7be04c1693}{date\_\-process\_\-values} (\$field)
+\item 
+\hyperlink{date_8module_aa03c845a994be25b8d52c0ed091deebc}{date\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-alter} (\&\$form, \&\$form\_\-state, \$form\_\-id)
+\item 
+\hyperlink{date_8module_aa7dfa6775921c3fbf7f8ceae70f6f519}{date\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-pre\_\-render} (\$form)
+\item 
+\hyperlink{date_8module_a227ffb57a05af9ccef60099ad0915228}{date\_\-field\_\-widget\_\-error} (\$element, \$error, \$form, \&\$form\_\-state)
+\item 
+\hyperlink{date_8module_a1fc73aa4ebc3a08f155eec42918f32c6}{date\_\-formatter\_\-format} (\$formatter, \$settings, \$granularity=array(), \$langcode=NULL)
+\item 
+\hyperlink{date_8module_a312afe2762238ca96afc11ea85b88dfd}{date\_\-format\_\-type\_\-format} (\$format\_\-type, \$langcode=NULL)
+\item 
+\hyperlink{date_8module_a39cd033956c5dc51331bad9eb2cebd81}{date\_\-prepare\_\-entity} (\$formatter, \$entity\_\-type, \$entity, \$field, \$instance, \$langcode, \$item, \$display)
+\item 
+\hyperlink{date_8module_a16e6d6583949a1efc1c2bd37dec9dd4c}{date\_\-entity\_\-metadata\_\-property\_\-info\_\-alter} (\&\$info, \$entity\_\-type, \$field, \$instance, \$field\_\-type)
+\item 
+\hyperlink{date_8module_a8cceacd7fa3a46c19a8daae0dd3379a7}{date\_\-entity\_\-metadata\_\-field\_\-getter} (\$entity, array \$options, \$name, \$entity\_\-type, \&\$context)
+\item 
+\hyperlink{date_8module_a59fadd336a80f44f79cab03888e72950}{date\_\-entity\_\-metadata\_\-struct\_\-getter} (\$item, array \$options, \$name, \$type, \$info)
+\item 
+\hyperlink{date_8module_ac9eff22b4b527da84cfdc74552130fe2}{date\_\-entity\_\-metadata\_\-duration\_\-getter} (\$item, array \$options, \$name, \$type, \$info)
+\item 
+\hyperlink{date_8module_ab72347a0a3b46235078025636bcabc78}{date\_\-entity\_\-metadata\_\-field\_\-setter} (\&\$entity, \$name, \$value, \$langcode, \$entity\_\-type, \$info)
+\item 
+\hyperlink{date_8module_a0f666620a7ddc90ff3480c637fda8f30}{date\_\-entity\_\-metadata\_\-struct\_\-setter} (\&\$item, \$name, \$value, \$langcode, \$type, \$info)
+\item 
+\hyperlink{date_8module_a4432aec91a1a568280bd83cc206656c7}{date\_\-field\_\-all\_\-day} (\$field, \$instance, \$date1, \$date2=NULL)
+\item 
+\hyperlink{date_8module_add73c8c0d356b03c045b53a19283df11}{date\_\-field\_\-get\_\-sql\_\-handler} (\$field, \$compare\_\-tz=NULL)
+\item 
+\hyperlink{date_8module_afe34456f5b7c190e42133c211d76b42e}{date\_\-field\_\-widget\_\-properties\_\-alter} (\&\$widget, \$context)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines date/time field types. 
+
+\subsection{Function Documentation}
+\hypertarget{date_8module_a02c7a9a9c79c730064240ea129f062fc}{
+\index{date.module@{date.module}!date\_\-default\_\-format@{date\_\-default\_\-format}}
+\index{date\_\-default\_\-format@{date\_\-default\_\-format}!date.module@{date.module}}
+\subsubsection[{date\_\-default\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-default\_\-format (\$ {\em type})}}
+\label{date_8module_a02c7a9a9c79c730064240ea129f062fc}
+Gets the default date format for the given field widget. \hypertarget{date_8module_a9e7c70efb10524fbd6c19512b08e697b}{
+\index{date.module@{date.module}!date\_\-element\_\-info@{date\_\-element\_\-info}}
+\index{date\_\-element\_\-info@{date\_\-element\_\-info}!date.module@{date.module}}
+\subsubsection[{date\_\-element\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-element\_\-info ()}}
+\label{date_8module_a9e7c70efb10524fbd6c19512b08e697b}
+Implements \hyperlink{group__hooks_ga3c5182432eddc82f8b7845e66a365d51}{hook\_\-element\_\-info()}.
+
+date\_\-combo will create a 'start' and optional 'end' date, along with an optional 'timezone' column for date-\/specific timezones. Each 'start' and 'end' date will be constructed from date\_\-select or date\_\-text. \hypertarget{date_8module_ac9eff22b4b527da84cfdc74552130fe2}{
+\index{date.module@{date.module}!date\_\-entity\_\-metadata\_\-duration\_\-getter@{date\_\-entity\_\-metadata\_\-duration\_\-getter}}
+\index{date\_\-entity\_\-metadata\_\-duration\_\-getter@{date\_\-entity\_\-metadata\_\-duration\_\-getter}!date.module@{date.module}}
+\subsubsection[{date\_\-entity\_\-metadata\_\-duration\_\-getter}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-entity\_\-metadata\_\-duration\_\-getter (\$ {\em item}, \/  array \$ {\em options}, \/  \$ {\em name}, \/  \$ {\em type}, \/  \$ {\em info})}}
+\label{date_8module_ac9eff22b4b527da84cfdc74552130fe2}
+Getter callback to return the duration of the time period given by the dates. \hypertarget{date_8module_a8cceacd7fa3a46c19a8daae0dd3379a7}{
+\index{date.module@{date.module}!date\_\-entity\_\-metadata\_\-field\_\-getter@{date\_\-entity\_\-metadata\_\-field\_\-getter}}
+\index{date\_\-entity\_\-metadata\_\-field\_\-getter@{date\_\-entity\_\-metadata\_\-field\_\-getter}!date.module@{date.module}}
+\subsubsection[{date\_\-entity\_\-metadata\_\-field\_\-getter}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-entity\_\-metadata\_\-field\_\-getter (\$ {\em entity}, \/  array \$ {\em options}, \/  \$ {\em name}, \/  \$ {\em entity\_\-type}, \/  \&\$ {\em context})}}
+\label{date_8module_a8cceacd7fa3a46c19a8daae0dd3379a7}
+Getter callback to return date values as datestamp in UTC from the field. \hypertarget{date_8module_ab72347a0a3b46235078025636bcabc78}{
+\index{date.module@{date.module}!date\_\-entity\_\-metadata\_\-field\_\-setter@{date\_\-entity\_\-metadata\_\-field\_\-setter}}
+\index{date\_\-entity\_\-metadata\_\-field\_\-setter@{date\_\-entity\_\-metadata\_\-field\_\-setter}!date.module@{date.module}}
+\subsubsection[{date\_\-entity\_\-metadata\_\-field\_\-setter}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-entity\_\-metadata\_\-field\_\-setter (\&\$ {\em entity}, \/  \$ {\em name}, \/  \$ {\em value}, \/  \$ {\em langcode}, \/  \$ {\em entity\_\-type}, \/  \$ {\em info})}}
+\label{date_8module_ab72347a0a3b46235078025636bcabc78}
+Callback for setting field property values.
+
+Based on entity\_\-metadata\_\-field\_\-property\_\-set(), the original property setter, adapted to transform non-\/timestamp date values to timestamps. \hypertarget{date_8module_a16e6d6583949a1efc1c2bd37dec9dd4c}{
+\index{date.module@{date.module}!date\_\-entity\_\-metadata\_\-property\_\-info\_\-alter@{date\_\-entity\_\-metadata\_\-property\_\-info\_\-alter}}
+\index{date\_\-entity\_\-metadata\_\-property\_\-info\_\-alter@{date\_\-entity\_\-metadata\_\-property\_\-info\_\-alter}!date.module@{date.module}}
+\subsubsection[{date\_\-entity\_\-metadata\_\-property\_\-info\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-entity\_\-metadata\_\-property\_\-info\_\-alter (\&\$ {\em info}, \/  \$ {\em entity\_\-type}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em field\_\-type})}}
+\label{date_8module_a16e6d6583949a1efc1c2bd37dec9dd4c}
+Callback to alter the property info of date fields.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{date_8field_8inc_a225438cc0aa0654ee5b8c196f0566eaf}{date\_\-field\_\-info()} 
+\end{DoxySeeAlso}
+\hypertarget{date_8module_a59fadd336a80f44f79cab03888e72950}{
+\index{date.module@{date.module}!date\_\-entity\_\-metadata\_\-struct\_\-getter@{date\_\-entity\_\-metadata\_\-struct\_\-getter}}
+\index{date\_\-entity\_\-metadata\_\-struct\_\-getter@{date\_\-entity\_\-metadata\_\-struct\_\-getter}!date.module@{date.module}}
+\subsubsection[{date\_\-entity\_\-metadata\_\-struct\_\-getter}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-entity\_\-metadata\_\-struct\_\-getter (\$ {\em item}, \/  array \$ {\em options}, \/  \$ {\em name}, \/  \$ {\em type}, \/  \$ {\em info})}}
+\label{date_8module_a59fadd336a80f44f79cab03888e72950}
+Getter callback to return date values as datestamp in UTC. \hypertarget{date_8module_a0f666620a7ddc90ff3480c637fda8f30}{
+\index{date.module@{date.module}!date\_\-entity\_\-metadata\_\-struct\_\-setter@{date\_\-entity\_\-metadata\_\-struct\_\-setter}}
+\index{date\_\-entity\_\-metadata\_\-struct\_\-setter@{date\_\-entity\_\-metadata\_\-struct\_\-setter}!date.module@{date.module}}
+\subsubsection[{date\_\-entity\_\-metadata\_\-struct\_\-setter}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-entity\_\-metadata\_\-struct\_\-setter (\&\$ {\em item}, \/  \$ {\em name}, \/  \$ {\em value}, \/  \$ {\em langcode}, \/  \$ {\em type}, \/  \$ {\em info})}}
+\label{date_8module_a0f666620a7ddc90ff3480c637fda8f30}
+Callback for setting an individual field value if a to-\/date may be there too. Based on entity\_\-property\_\-verbatim\_\-set().
+
+The passed in unix timestamp (UTC) is converted to the right value and format dependent on the field.
+
+\$name is either 'value' or 'value2'. \hypertarget{date_8module_a4432aec91a1a568280bd83cc206656c7}{
+\index{date.module@{date.module}!date\_\-field\_\-all\_\-day@{date\_\-field\_\-all\_\-day}}
+\index{date\_\-field\_\-all\_\-day@{date\_\-field\_\-all\_\-day}!date.module@{date.module}}
+\subsubsection[{date\_\-field\_\-all\_\-day}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-field\_\-all\_\-day (\$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em date1}, \/  \$ {\em date2} = {\ttfamily NULL})}}
+\label{date_8module_a4432aec91a1a568280bd83cc206656c7}
+Duplicate functionality of what is now \hyperlink{date__all__day_8module_ac20133ba5eee4f790d2a29eed85b1a91}{date\_\-all\_\-day\_\-field()} in the Date All Day module. Copy left here to avoid breaking other modules that use this function.
+
+DEPRECATED!, will be removed at some time in the future. \hypertarget{date_8module_add73c8c0d356b03c045b53a19283df11}{
+\index{date.module@{date.module}!date\_\-field\_\-get\_\-sql\_\-handler@{date\_\-field\_\-get\_\-sql\_\-handler}}
+\index{date\_\-field\_\-get\_\-sql\_\-handler@{date\_\-field\_\-get\_\-sql\_\-handler}!date.module@{date.module}}
+\subsubsection[{date\_\-field\_\-get\_\-sql\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-field\_\-get\_\-sql\_\-handler (\$ {\em field}, \/  \$ {\em compare\_\-tz} = {\ttfamily NULL})}}
+\label{date_8module_add73c8c0d356b03c045b53a19283df11}
+Generates a Date API SQL handler for the given date field.
+
+The handler will be set up to make the correct timezone adjustments for the field settings.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$field The \$field array. \item[{\em string}]\$compare\_\-tz The timezone used for comparison values in the SQL.\end{DoxyParams}
+DEPRECATED!, will be removed at some time in the future. \hypertarget{date_8module_aa7dfa6775921c3fbf7f8ceae70f6f519}{
+\index{date.module@{date.module}!date\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-pre\_\-render@{date\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-pre\_\-render}}
+\index{date\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-pre\_\-render@{date\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-pre\_\-render}!date.module@{date.module}}
+\subsubsection[{date\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-pre\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-pre\_\-render (\$ {\em form})}}
+\label{date_8module_aa7dfa6775921c3fbf7f8ceae70f6f519}
+Rearrange form elements into fieldsets for presentation only. \hypertarget{date_8module_a227ffb57a05af9ccef60099ad0915228}{
+\index{date.module@{date.module}!date\_\-field\_\-widget\_\-error@{date\_\-field\_\-widget\_\-error}}
+\index{date\_\-field\_\-widget\_\-error@{date\_\-field\_\-widget\_\-error}!date.module@{date.module}}
+\subsubsection[{date\_\-field\_\-widget\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-field\_\-widget\_\-error (\$ {\em element}, \/  \$ {\em error}, \/  \$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{date_8module_a227ffb57a05af9ccef60099ad0915228}
+Implements \hyperlink{group__field__widget_ga9a2031578542fef9e296d79c946431fd}{hook\_\-field\_\-widget\_\-error()}. \hypertarget{date_8module_afe34456f5b7c190e42133c211d76b42e}{
+\index{date.module@{date.module}!date\_\-field\_\-widget\_\-properties\_\-alter@{date\_\-field\_\-widget\_\-properties\_\-alter}}
+\index{date\_\-field\_\-widget\_\-properties\_\-alter@{date\_\-field\_\-widget\_\-properties\_\-alter}!date.module@{date.module}}
+\subsubsection[{date\_\-field\_\-widget\_\-properties\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-field\_\-widget\_\-properties\_\-alter (\&\$ {\em widget}, \/  \$ {\em context})}}
+\label{date_8module_afe34456f5b7c190e42133c211d76b42e}
+Implements \hyperlink{group__field__widget_gaa88988bce1ffbec1f481ec7a3ba87e51}{hook\_\-field\_\-widget\_\-properties\_\-alter()}.
+
+Alters the widget properties of a field instance before it gets displayed. Used here to flag new entities so we can later tell if they need default values. \hypertarget{date_8module_aa03c845a994be25b8d52c0ed091deebc}{
+\index{date.module@{date.module}!date\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-alter@{date\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-alter}}
+\index{date\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-alter@{date\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-alter}!date.module@{date.module}}
+\subsubsection[{date\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-form\_\-field\_\-ui\_\-field\_\-edit\_\-form\_\-alter (\&\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em form\_\-id})}}
+\label{date_8module_aa03c845a994be25b8d52c0ed091deebc}
+Implements \hyperlink{group__hooks_ga8d4a4089551493d55911bd5c4f218264}{hook\_\-form\_\-FORM\_\-ID\_\-alter()} for \hyperlink{group__forms_ga11660e91b3649ff30bf665c00f1a9af2}{field\_\-ui\_\-field\_\-edit\_\-form()}. \hypertarget{date_8module_a312afe2762238ca96afc11ea85b88dfd}{
+\index{date.module@{date.module}!date\_\-format\_\-type\_\-format@{date\_\-format\_\-type\_\-format}}
+\index{date\_\-format\_\-type\_\-format@{date\_\-format\_\-type\_\-format}!date.module@{date.module}}
+\subsubsection[{date\_\-format\_\-type\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-format\_\-type\_\-format (\$ {\em format\_\-type}, \/  \$ {\em langcode} = {\ttfamily NULL})}}
+\label{date_8module_a312afe2762238ca96afc11ea85b88dfd}
+Helper function to get the right format for a format type. Checks for locale-\/based format first. \hypertarget{date_8module_a1fc73aa4ebc3a08f155eec42918f32c6}{
+\index{date.module@{date.module}!date\_\-formatter\_\-format@{date\_\-formatter\_\-format}}
+\index{date\_\-formatter\_\-format@{date\_\-formatter\_\-format}!date.module@{date.module}}
+\subsubsection[{date\_\-formatter\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-formatter\_\-format (\$ {\em formatter}, \/  \$ {\em settings}, \/  \$ {\em granularity} = {\ttfamily array()}, \/  \$ {\em langcode} = {\ttfamily NULL})}}
+\label{date_8module_a1fc73aa4ebc3a08f155eec42918f32c6}
+Retrieve a date format string from formatter settings. \hypertarget{date_8module_a4b019297d5d8f388aa2252ad62b3bfde}{
+\index{date.module@{date.module}!date\_\-formatter\_\-process@{date\_\-formatter\_\-process}}
+\index{date\_\-formatter\_\-process@{date\_\-formatter\_\-process}!date.module@{date.module}}
+\subsubsection[{date\_\-formatter\_\-process}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-formatter\_\-process (\$ {\em formatter}, \/  \$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode}, \/  \$ {\em item}, \/  \$ {\em display})}}
+\label{date_8module_a4b019297d5d8f388aa2252ad62b3bfde}
+Helper function for creating formatted date arrays from a formatter.
+
+Use the Date API to get an object representation of a date field.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$formatter The date formatter. \item[{\em string}]\$entity\_\-type The entity\_\-type for the instance \item[{\em object}]\$entity The entity object. \item[{\em array}]\$field The field info array. \item[{\em array}]\$instance The field instance array. \item[{\em string}]\$langcode The language code used by this field. \item[{\em array}]\$item An entity field item, like \$entity-\/$>$myfield\mbox{[}0\mbox{]}. \item[{\em array}]\$display The instance display settings.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array that holds the Start and End date objects. Each date object looks like: date \mbox{[}value\mbox{]} =$>$ array ( \mbox{[}db\mbox{]} =$>$ array ( // the value stored in the database \mbox{[}object\mbox{]} =$>$ the datetime object \mbox{[}datetime\mbox{]} =$>$ 2007-\/02-\/15 20:00:00 ) \mbox{[}local\mbox{]} =$>$ array ( // the local representation of that value \mbox{[}object\mbox{]} =$>$ the datetime object \mbox{[}datetime\mbox{]} =$>$ 2007-\/02-\/15 14:00:00 \mbox{[}timezone\mbox{]} =$>$ US/Central \mbox{[}offset\mbox{]} =$>$ -\/21600 ) ) 
+\end{DoxyReturn}
+\hypertarget{date_8module_a6ae854a04f35eae5dc91b242802728d0}{
+\index{date.module@{date.module}!date\_\-get\_\-entity\_\-bundle@{date\_\-get\_\-entity\_\-bundle}}
+\index{date\_\-get\_\-entity\_\-bundle@{date\_\-get\_\-entity\_\-bundle}!date.module@{date.module}}
+\subsubsection[{date\_\-get\_\-entity\_\-bundle}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-get\_\-entity\_\-bundle (\$ {\em entity\_\-type}, \/  \$ {\em entity})}}
+\label{date_8module_a6ae854a04f35eae5dc91b242802728d0}
+Helper function to figure out the bundle name for an entity. \hypertarget{date_8module_a524c8837d65b4e1b512a7ea3ae33d016}{
+\index{date.module@{date.module}!date\_\-granularity@{date\_\-granularity}}
+\index{date\_\-granularity@{date\_\-granularity}!date.module@{date.module}}
+\subsubsection[{date\_\-granularity}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-granularity (\$ {\em field})}}
+\label{date_8module_a524c8837d65b4e1b512a7ea3ae33d016}
+Retrieves the granularity for a field.
+
+\$field\mbox{[}'settings'\mbox{]}\mbox{[}'granularity'\mbox{]} will contain an array like ('hour' =$>$ 'hour', 'month' =$>$ 0) where the values turned on return their own names and the values turned off return a zero need to reconfigure this into simple array of the turned on values
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$field The field array. \end{DoxyParams}
+\hypertarget{date_8module_a7b44720b330f4318eb971537b64a27ad}{
+\index{date.module@{date.module}!date\_\-input\_\-date@{date\_\-input\_\-date}}
+\index{date\_\-input\_\-date@{date\_\-input\_\-date}!date.module@{date.module}}
+\subsubsection[{date\_\-input\_\-date}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-input\_\-date (\$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em element}, \/  \$ {\em input})}}
+\label{date_8module_a7b44720b330f4318eb971537b64a27ad}
+Wrapper function around each of the widget types for creating a date object. \hypertarget{date_8module_a39cd033956c5dc51331bad9eb2cebd81}{
+\index{date.module@{date.module}!date\_\-prepare\_\-entity@{date\_\-prepare\_\-entity}}
+\index{date\_\-prepare\_\-entity@{date\_\-prepare\_\-entity}!date.module@{date.module}}
+\subsubsection[{date\_\-prepare\_\-entity}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-prepare\_\-entity (\$ {\em formatter}, \/  \$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode}, \/  \$ {\em item}, \/  \$ {\em display})}}
+\label{date_8module_a39cd033956c5dc51331bad9eb2cebd81}
+Helper function to adapt entity date fields to formatter settings. \hypertarget{date_8module_a32f61cf4fd59beedd48c7a7be04c1693}{
+\index{date.module@{date.module}!date\_\-process\_\-values@{date\_\-process\_\-values}}
+\index{date\_\-process\_\-values@{date\_\-process\_\-values}!date.module@{date.module}}
+\subsubsection[{date\_\-process\_\-values}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-process\_\-values (\$ {\em field})}}
+\label{date_8module_a32f61cf4fd59beedd48c7a7be04c1693}
+Helper function to create an array of the date values in a field that need to be processed. \hypertarget{date_8module_a9f95819df33aab94d18f4461985d1028}{
+\index{date.module@{date.module}!date\_\-theme@{date\_\-theme}}
+\index{date\_\-theme@{date\_\-theme}!date.module@{date.module}}
+\subsubsection[{date\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-theme ()}}
+\label{date_8module_a9f95819df33aab94d18f4461985d1028}
+Implements \hyperlink{group__hooks_ga013ccb45c7aaab1c16cf9691428c910d}{hook\_\-theme()}. 

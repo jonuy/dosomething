@@ -1,0 +1,84 @@
+\hypertarget{contexts_2term_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/contexts/term.inc File Reference}
+\label{contexts_2term_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/contexts/term.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/contexts/term.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{contexts_2term_8inc_a687904b87d69e56ea41aeb94a7f56eaf}{ctools\_\-context\_\-create\_\-term} (\$empty, \$data=NULL, \$conf=FALSE)
+\item 
+\hypertarget{contexts_2term_8inc_a422bd50b0a877b6320eee9cbf894621d}{
+{\bfseries ctools\_\-context\_\-term\_\-settings\_\-form} (\$form, \&\$form\_\-state)}
+\label{contexts_2term_8inc_a422bd50b0a877b6320eee9cbf894621d}
+
+\item 
+\hyperlink{contexts_2term_8inc_a6d959df67d6875af2d0e98098375ac92}{ctools\_\-context\_\-term\_\-settings\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hypertarget{contexts_2term_8inc_ad38049177058c140d9bb79c40f3d785d}{
+{\bfseries ctools\_\-context\_\-term\_\-settings\_\-form\_\-submit} (\$form, \&\$form\_\-state)}
+\label{contexts_2term_8inc_ad38049177058c140d9bb79c40f3d785d}
+
+\item 
+\hyperlink{contexts_2term_8inc_a5ce57bd056a6a2b577fd612fae21b04f}{ctools\_\-context\_\-term\_\-convert} (\$context, \$type)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{contexts_2term_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide a term context 
+
+\subsection{Function Documentation}
+\hypertarget{contexts_2term_8inc_a687904b87d69e56ea41aeb94a7f56eaf}{
+\index{contexts/term.inc@{contexts/term.inc}!ctools\_\-context\_\-create\_\-term@{ctools\_\-context\_\-create\_\-term}}
+\index{ctools\_\-context\_\-create\_\-term@{ctools\_\-context\_\-create\_\-term}!contexts/term.inc@{contexts/term.inc}}
+\subsubsection[{ctools\_\-context\_\-create\_\-term}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-create\_\-term (\$ {\em empty}, \/  \$ {\em data} = {\ttfamily NULL}, \/  \$ {\em conf} = {\ttfamily FALSE})}}
+\label{contexts_2term_8inc_a687904b87d69e56ea41aeb94a7f56eaf}
+It's important to remember that \$conf is optional here, because contexts are not always created from the UI. \hypertarget{contexts_2term_8inc_a5ce57bd056a6a2b577fd612fae21b04f}{
+\index{contexts/term.inc@{contexts/term.inc}!ctools\_\-context\_\-term\_\-convert@{ctools\_\-context\_\-term\_\-convert}}
+\index{ctools\_\-context\_\-term\_\-convert@{ctools\_\-context\_\-term\_\-convert}!contexts/term.inc@{contexts/term.inc}}
+\subsubsection[{ctools\_\-context\_\-term\_\-convert}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-term\_\-convert (\$ {\em context}, \/  \$ {\em type})}}
+\label{contexts_2term_8inc_a5ce57bd056a6a2b577fd612fae21b04f}
+Convert a context into a string. \hypertarget{contexts_2term_8inc_a6d959df67d6875af2d0e98098375ac92}{
+\index{contexts/term.inc@{contexts/term.inc}!ctools\_\-context\_\-term\_\-settings\_\-form\_\-validate@{ctools\_\-context\_\-term\_\-settings\_\-form\_\-validate}}
+\index{ctools\_\-context\_\-term\_\-settings\_\-form\_\-validate@{ctools\_\-context\_\-term\_\-settings\_\-form\_\-validate}!contexts/term.inc@{contexts/term.inc}}
+\subsubsection[{ctools\_\-context\_\-term\_\-settings\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-term\_\-settings\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{contexts_2term_8inc_a6d959df67d6875af2d0e98098375ac92}
+Validate a term. 
+
+\subsection{Variable Documentation}
+\hypertarget{contexts_2term_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{contexts/term.inc@{contexts/term.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!contexts/term.inc@{contexts/term.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{contexts_2term_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t("Taxonomy term"),
+  'description' => t('A single taxonomy term object.'),
+  'context' => 'ctools_context_create_term',
+  'edit form' => 'ctools_context_term_settings_form',
+  'defaults' => array(
+    'vid' => '',
+    'tid' => '',
+  ),
+  'keyword' => 'term',
+  'context name' => 'term',
+  'convert list' => array(
+    'tid' => t('Term ID'),
+    'name' => t('Term name'),
+    'name_dashed' => t('Term name, lowercased and spaces converted to dashes'),
+    'description' => t('Term Description'),
+    'vid' => t('Vocabulary ID'),
+  ),
+  'convert' => 'ctools_context_term_convert',
+  
+  'no ui' => TRUE,
+  'no required context ui' => TRUE,
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

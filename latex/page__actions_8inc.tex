@@ -1,0 +1,47 @@
+\hypertarget{page__actions_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/content\_\-types/page/page\_\-actions.inc File Reference}
+\label{page__actions_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/content\_\-types/page/page\_\-actions.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/content\_\-types/page/page\_\-actions.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{page__actions_8inc_a2aca273a63e6070c74bfa374a5377502}{ctools\_\-page\_\-actions\_\-content\_\-type\_\-render} (\$subtype, \$conf, \$panel\_\-args)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{page__actions_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to handle the 'page\_\-actions' content type which allows the local actions template variables to be embedded into a panel. 
+
+\subsection{Function Documentation}
+\hypertarget{page__actions_8inc_a2aca273a63e6070c74bfa374a5377502}{
+\index{page\_\-actions.inc@{page\_\-actions.inc}!ctools\_\-page\_\-actions\_\-content\_\-type\_\-render@{ctools\_\-page\_\-actions\_\-content\_\-type\_\-render}}
+\index{ctools\_\-page\_\-actions\_\-content\_\-type\_\-render@{ctools\_\-page\_\-actions\_\-content\_\-type\_\-render}!page_actions.inc@{page\_\-actions.inc}}
+\subsubsection[{ctools\_\-page\_\-actions\_\-content\_\-type\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-page\_\-actions\_\-content\_\-type\_\-render (\$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em panel\_\-args})}}
+\label{page__actions_8inc_a2aca273a63e6070c74bfa374a5377502}
+Output function for the 'page\_\-actions' content type.
+
+Outputs the actions (local tasks) of the current page. 
+
+\subsection{Variable Documentation}
+\hypertarget{page__actions_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{page\_\-actions.inc@{page\_\-actions.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!page_actions.inc@{page\_\-actions.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{page__actions_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('Actions'),
+  'single' => TRUE,
+  'icon' => 'icon_page.png',
+  'description' => t('Add the action links (local tasks) as content.'),
+  'category' => t('Page elements'),
+  'render last' => TRUE,
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

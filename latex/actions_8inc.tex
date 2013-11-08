@@ -1,0 +1,139 @@
+\hypertarget{actions_8inc}{
+\section{html/includes/actions.inc File Reference}
+\label{actions_8inc}\index{html/includes/actions.inc@{html/includes/actions.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__actions_gacfece93b3453da7c572057dde3453122}{actions\_\-do} (\$action\_\-ids, \$object=NULL, \$context=NULL, \$a1=NULL, \$a2=NULL)
+\item 
+\hyperlink{actions_8inc_ad0dbf276d4ca1834760cffc7e1b1be53}{actions\_\-list} (\$reset=FALSE)
+\item 
+\hyperlink{actions_8inc_a4275e9fee609ba6e85b03278a681436c}{actions\_\-get\_\-all\_\-actions} ()
+\item 
+\hyperlink{actions_8inc_ad943b3f497c80809d895ecc01490d10f}{actions\_\-actions\_\-map} (\$actions)
+\item 
+\hyperlink{actions_8inc_a4a0e35c01b48d1a413889948c061a6f0}{actions\_\-function\_\-lookup} (\$hash)
+\item 
+\hyperlink{actions_8inc_a139190d8981f8e48be78b24d2adaab1c}{actions\_\-synchronize} (\$delete\_\-orphans=FALSE)
+\item 
+\hyperlink{actions_8inc_ad57cade4c548a0d8fe2e6902d7292ad8}{actions\_\-save} (\$function, \$type, \$params, \$label, \$aid=NULL)
+\item 
+\hyperlink{actions_8inc_a1e953639945d342b20fe51b8d21095cc}{actions\_\-load} (\$aid)
+\item 
+\hyperlink{actions_8inc_a857468911c3dd6f839cbdb14c6ed80ac}{actions\_\-delete} (\$aid)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the actions engine for executing stored actions. 
+
+\subsection{Function Documentation}
+\hypertarget{actions_8inc_ad943b3f497c80809d895ecc01490d10f}{
+\index{actions.inc@{actions.inc}!actions\_\-actions\_\-map@{actions\_\-actions\_\-map}}
+\index{actions\_\-actions\_\-map@{actions\_\-actions\_\-map}!actions.inc@{actions.inc}}
+\subsubsection[{actions\_\-actions\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}actions\_\-actions\_\-map (\$ {\em actions})}}
+\label{actions_8inc_ad943b3f497c80809d895ecc01490d10f}
+Creates an associative array keyed by hashes of function names or IDs.
+
+Hashes are used to prevent actual function names from going out into HTML forms and coming back.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$actions}]An associative array with function names or action IDs as keys and associative arrays with keys 'label', 'type', etc. as values. This is usually the output of \hyperlink{actions_8inc_ad0dbf276d4ca1834760cffc7e1b1be53}{actions\_\-list()} or \hyperlink{actions_8inc_a4275e9fee609ba6e85b03278a681436c}{actions\_\-get\_\-all\_\-actions()}.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An associative array whose keys are hashes of the input array keys, and whose corresponding values are associative arrays with components 'callback', 'label', 'type', and 'configurable' from the input array. 
+\end{DoxyReturn}
+\hypertarget{actions_8inc_a857468911c3dd6f839cbdb14c6ed80ac}{
+\index{actions.inc@{actions.inc}!actions\_\-delete@{actions\_\-delete}}
+\index{actions\_\-delete@{actions\_\-delete}!actions.inc@{actions.inc}}
+\subsubsection[{actions\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}actions\_\-delete (\$ {\em aid})}}
+\label{actions_8inc_a857468911c3dd6f839cbdb14c6ed80ac}
+Deletes a single action from the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$aid}]The ID of the action to delete. \end{DoxyParams}
+\hypertarget{actions_8inc_a4a0e35c01b48d1a413889948c061a6f0}{
+\index{actions.inc@{actions.inc}!actions\_\-function\_\-lookup@{actions\_\-function\_\-lookup}}
+\index{actions\_\-function\_\-lookup@{actions\_\-function\_\-lookup}!actions.inc@{actions.inc}}
+\subsubsection[{actions\_\-function\_\-lookup}]{\setlength{\rightskip}{0pt plus 5cm}actions\_\-function\_\-lookup (\$ {\em hash})}}
+\label{actions_8inc_a4a0e35c01b48d1a413889948c061a6f0}
+Returns an action array key (function or ID), given its hash.
+
+Faster than \hyperlink{actions_8inc_ad943b3f497c80809d895ecc01490d10f}{actions\_\-actions\_\-map()} when you only need the function name or ID.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$hash}]Hash of a function name or action ID array key. The array key is a key into the return value of \hyperlink{actions_8inc_ad0dbf276d4ca1834760cffc7e1b1be53}{actions\_\-list()} (array key is the action function name) or \hyperlink{actions_8inc_a4275e9fee609ba6e85b03278a681436c}{actions\_\-get\_\-all\_\-actions()} (array key is the action ID).\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding array key, or FALSE if no match is found. 
+\end{DoxyReturn}
+\hypertarget{actions_8inc_a4275e9fee609ba6e85b03278a681436c}{
+\index{actions.inc@{actions.inc}!actions\_\-get\_\-all\_\-actions@{actions\_\-get\_\-all\_\-actions}}
+\index{actions\_\-get\_\-all\_\-actions@{actions\_\-get\_\-all\_\-actions}!actions.inc@{actions.inc}}
+\subsubsection[{actions\_\-get\_\-all\_\-actions}]{\setlength{\rightskip}{0pt plus 5cm}actions\_\-get\_\-all\_\-actions ()}}
+\label{actions_8inc_a4275e9fee609ba6e85b03278a681436c}
+Retrieves all action instances from the database.
+
+This function differs from the \hyperlink{actions_8inc_ad0dbf276d4ca1834760cffc7e1b1be53}{actions\_\-list()} function, which gathers actions by invoking \hyperlink{group__actions_ga3df26c5d6496c91fcd0edd8648023fb4}{hook\_\-action\_\-info()}. The actions returned by this function and the actions returned by \hyperlink{actions_8inc_ad0dbf276d4ca1834760cffc7e1b1be53}{actions\_\-list()} are partially synchronized. Non-\/configurable actions from \hyperlink{group__actions_ga3df26c5d6496c91fcd0edd8648023fb4}{hook\_\-action\_\-info()} implementations are put into the database when \hyperlink{actions_8inc_a139190d8981f8e48be78b24d2adaab1c}{actions\_\-synchronize()} is called, which happens when admin/config/system/actions is visited. Configurable actions are not added to the database until they are configured in the user interface, in which case a database row is created for each configuration of each action.
+
+\begin{DoxyReturn}{Returns}
+Associative array keyed by numeric action ID. Each value is an associative array with keys 'callback', 'label', 'type' and 'configurable'. 
+\end{DoxyReturn}
+\hypertarget{actions_8inc_ad0dbf276d4ca1834760cffc7e1b1be53}{
+\index{actions.inc@{actions.inc}!actions\_\-list@{actions\_\-list}}
+\index{actions\_\-list@{actions\_\-list}!actions.inc@{actions.inc}}
+\subsubsection[{actions\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}actions\_\-list (\$ {\em reset} = {\ttfamily FALSE})}}
+\label{actions_8inc_ad0dbf276d4ca1834760cffc7e1b1be53}
+Discovers all available actions by invoking \hyperlink{group__actions_ga3df26c5d6496c91fcd0edd8648023fb4}{hook\_\-action\_\-info()}.
+
+This function contrasts with \hyperlink{actions_8inc_a4275e9fee609ba6e85b03278a681436c}{actions\_\-get\_\-all\_\-actions()}; see the documentation of \hyperlink{actions_8inc_a4275e9fee609ba6e85b03278a681436c}{actions\_\-get\_\-all\_\-actions()} for an explanation.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$reset}]Reset the action info static cache.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An associative array keyed on action function name, with the same format as the return value of \hyperlink{group__actions_ga3df26c5d6496c91fcd0edd8648023fb4}{hook\_\-action\_\-info()}, containing all modules' \hyperlink{group__actions_ga3df26c5d6496c91fcd0edd8648023fb4}{hook\_\-action\_\-info()} return values as modified by any \hyperlink{group__hooks_ga141677d430a340c375bea9e1098a7a82}{hook\_\-action\_\-info\_\-alter()} implementations.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__actions_ga3df26c5d6496c91fcd0edd8648023fb4}{hook\_\-action\_\-info()} 
+\end{DoxySeeAlso}
+\hypertarget{actions_8inc_a1e953639945d342b20fe51b8d21095cc}{
+\index{actions.inc@{actions.inc}!actions\_\-load@{actions\_\-load}}
+\index{actions\_\-load@{actions\_\-load}!actions.inc@{actions.inc}}
+\subsubsection[{actions\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}actions\_\-load (\$ {\em aid})}}
+\label{actions_8inc_a1e953639945d342b20fe51b8d21095cc}
+Retrieves a single action from the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$aid}]The ID of the action to retrieve.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The appropriate action row from the database as an object. 
+\end{DoxyReturn}
+\hypertarget{actions_8inc_ad57cade4c548a0d8fe2e6902d7292ad8}{
+\index{actions.inc@{actions.inc}!actions\_\-save@{actions\_\-save}}
+\index{actions\_\-save@{actions\_\-save}!actions.inc@{actions.inc}}
+\subsubsection[{actions\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}actions\_\-save (\$ {\em function}, \/  \$ {\em type}, \/  \$ {\em params}, \/  \$ {\em label}, \/  \$ {\em aid} = {\ttfamily NULL})}}
+\label{actions_8inc_ad57cade4c548a0d8fe2e6902d7292ad8}
+Saves an action and its user-\/supplied parameter values to the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$function}]The name of the function to be called when this action is performed. \item[{\em \$type}]The type of action, to describe grouping and/or context, e.g., 'node', 'user', 'comment', or 'system'. \item[{\em \$params}]An associative array with parameter names as keys and parameter values as values. \item[{\em \$label}]A user-\/supplied label of this particular action, e.g., 'Send e-\/mail to Jim'. \item[{\em \$aid}]The ID of this action. If omitted, a new action is created.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The ID of the action. 
+\end{DoxyReturn}
+\hypertarget{actions_8inc_a139190d8981f8e48be78b24d2adaab1c}{
+\index{actions.inc@{actions.inc}!actions\_\-synchronize@{actions\_\-synchronize}}
+\index{actions\_\-synchronize@{actions\_\-synchronize}!actions.inc@{actions.inc}}
+\subsubsection[{actions\_\-synchronize}]{\setlength{\rightskip}{0pt plus 5cm}actions\_\-synchronize (\$ {\em delete\_\-orphans} = {\ttfamily FALSE})}}
+\label{actions_8inc_a139190d8981f8e48be78b24d2adaab1c}
+Synchronizes actions that are provided by modules in \hyperlink{group__actions_ga3df26c5d6496c91fcd0edd8648023fb4}{hook\_\-action\_\-info()}.
+
+Actions provided by modules in \hyperlink{group__actions_ga3df26c5d6496c91fcd0edd8648023fb4}{hook\_\-action\_\-info()} implementations are synchronized with actions that are stored in the actions database table. This is necessary so that actions that do not require configuration can receive action IDs.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$delete\_\-orphans}]If TRUE, any actions that exist in the database but are no longer found in the code (for example, because the module that provides them has been disabled) will be deleted. \end{DoxyParams}

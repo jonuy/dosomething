@@ -1,0 +1,104 @@
+\hypertarget{classviews__handler__field__prerender__list}{
+\section{views\_\-handler\_\-field\_\-prerender\_\-list Class Reference}
+\label{classviews__handler__field__prerender__list}\index{views\_\-handler\_\-field\_\-prerender\_\-list@{views\_\-handler\_\-field\_\-prerender\_\-list}}
+}
+Inheritance diagram for views\_\-handler\_\-field\_\-prerender\_\-list::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.35294cm]{classviews__handler__field__prerender__list}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__handler__field__prerender__list_a3787d1e3974a37c72f71c062eee52b3d}{
+{\bfseries option\_\-definition} ()}
+\label{classviews__handler__field__prerender__list_a3787d1e3974a37c72f71c062eee52b3d}
+
+\item 
+\hyperlink{classviews__handler__field__prerender__list_a6a88df29dbdd11aefc5d108dca6530e0}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__handler__field__prerender__list_ae29a9fc47e5a83e9a8eb314dc46e68cf}{render} (\$values)
+\item 
+\hyperlink{classviews__handler__field__prerender__list_a7034bf6badaa12c750ac451f4435ce0a}{render\_\-items} (\$items)
+\item 
+\hyperlink{classviews__handler__field__prerender__list_a69ff2ab99e152c72dc16bdcb4610c2f0}{get\_\-items} (\$values)
+\item 
+\hyperlink{classviews__handler__field__prerender__list_a40b68b3c09274438c4910b882acdb6f8}{get\_\-value} (\$values, \$field=NULL, \$raw=FALSE)
+\item 
+\hyperlink{classviews__handler__field__prerender__list_a341b000d2b0e13c3819e47165ca33ec9}{allow\_\-advanced\_\-render} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__handler__field__prerender__list_a1f9ad248c3d8e6888a1fd570c159d821}{
+{\bfseries \$items} = array()}
+\label{classviews__handler__field__prerender__list_a1f9ad248c3d8e6888a1fd570c159d821}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Field handler to provide a list of items.
+
+The items are expected to be loaded by a child object during pre\_\-render, and 'my field' is expected to be the pointer to the items in the list.
+
+Items to render should be in a list in \$this-\/$>$items 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__handler__field__prerender__list_a341b000d2b0e13c3819e47165ca33ec9}{
+\index{views\_\-handler\_\-field\_\-prerender\_\-list@{views\_\-handler\_\-field\_\-prerender\_\-list}!allow\_\-advanced\_\-render@{allow\_\-advanced\_\-render}}
+\index{allow\_\-advanced\_\-render@{allow\_\-advanced\_\-render}!views_handler_field_prerender_list@{views\_\-handler\_\-field\_\-prerender\_\-list}}
+\subsubsection[{allow\_\-advanced\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-field\_\-prerender\_\-list::allow\_\-advanced\_\-render ()}}
+\label{classviews__handler__field__prerender__list_a341b000d2b0e13c3819e47165ca33ec9}
+Determine if advanced rendering is allowed.
+
+By default, advanced rendering will NOT be allowed if the class inheriting from this does not implement a 'render\_\-items' method. 
+
+Reimplemented from \hyperlink{classviews__handler__field_acdeb45612be43c2d58814726b35e55aa}{views\_\-handler\_\-field}.\hypertarget{classviews__handler__field__prerender__list_a69ff2ab99e152c72dc16bdcb4610c2f0}{
+\index{views\_\-handler\_\-field\_\-prerender\_\-list@{views\_\-handler\_\-field\_\-prerender\_\-list}!get\_\-items@{get\_\-items}}
+\index{get\_\-items@{get\_\-items}!views_handler_field_prerender_list@{views\_\-handler\_\-field\_\-prerender\_\-list}}
+\subsubsection[{get\_\-items}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-field\_\-prerender\_\-list::get\_\-items (\$ {\em values})}}
+\label{classviews__handler__field__prerender__list_a69ff2ab99e152c72dc16bdcb4610c2f0}
+Return an array of items for the field.
+
+Items should be stored in the result array, if possible, as an array with 'value' as the actual displayable value of the item, plus any items that might be found in the 'alter' options array for creating links, such as 'path', 'fragment', 'query' etc, such a thing is to be made. Additionally, items that might be turned into tokens should also be in this array. \hypertarget{classviews__handler__field__prerender__list_a40b68b3c09274438c4910b882acdb6f8}{
+\index{views\_\-handler\_\-field\_\-prerender\_\-list@{views\_\-handler\_\-field\_\-prerender\_\-list}!get\_\-value@{get\_\-value}}
+\index{get\_\-value@{get\_\-value}!views_handler_field_prerender_list@{views\_\-handler\_\-field\_\-prerender\_\-list}}
+\subsubsection[{get\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-field\_\-prerender\_\-list::get\_\-value (\$ {\em values}, \/  \$ {\em field} = {\ttfamily NULL}, \/  \$ {\em raw} = {\ttfamily FALSE})}}
+\label{classviews__handler__field__prerender__list_a40b68b3c09274438c4910b882acdb6f8}
+Get the value that's supposed to be rendered.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$values}]An object containing all retrieved values. \item[{\em \$field}]Optional name of the field where the value is stored. \item[{\em \$raw}]Use the raw data and not the data defined in pre\_\-render \end{DoxyParams}
+\hypertarget{classviews__handler__field__prerender__list_a6a88df29dbdd11aefc5d108dca6530e0}{
+\index{views\_\-handler\_\-field\_\-prerender\_\-list@{views\_\-handler\_\-field\_\-prerender\_\-list}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_handler_field_prerender_list@{views\_\-handler\_\-field\_\-prerender\_\-list}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-field\_\-prerender\_\-list::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__handler__field__prerender__list_a6a88df29dbdd11aefc5d108dca6530e0}
+Default options form that provides the label widget that all fields should have. 
+
+Reimplemented from \hyperlink{classviews__handler__field_a0435d161922b7b4b84f02a2e79bb947a}{views\_\-handler\_\-field}.
+
+Reimplemented in \hyperlink{classviews__handler__field__term__node__tid_a0f0641c036e0a2498abd497cba1161a5}{views\_\-handler\_\-field\_\-term\_\-node\_\-tid}.\hypertarget{classviews__handler__field__prerender__list_ae29a9fc47e5a83e9a8eb314dc46e68cf}{
+\index{views\_\-handler\_\-field\_\-prerender\_\-list@{views\_\-handler\_\-field\_\-prerender\_\-list}!render@{render}}
+\index{render@{render}!views_handler_field_prerender_list@{views\_\-handler\_\-field\_\-prerender\_\-list}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-field\_\-prerender\_\-list::render (\$ {\em values})}}
+\label{classviews__handler__field__prerender__list_ae29a9fc47e5a83e9a8eb314dc46e68cf}
+Render the field.
+
+This function is deprecated, but left in for older systems that have not yet or won't update their prerender list fields. If a render\_\-item method exists, this will not get used by advanced\_\-render. 
+
+Reimplemented from \hyperlink{classviews__handler__field_a82ff951c5e9ceb97b2eab86f880cbc1e}{views\_\-handler\_\-field}.\hypertarget{classviews__handler__field__prerender__list_a7034bf6badaa12c750ac451f4435ce0a}{
+\index{views\_\-handler\_\-field\_\-prerender\_\-list@{views\_\-handler\_\-field\_\-prerender\_\-list}!render\_\-items@{render\_\-items}}
+\index{render\_\-items@{render\_\-items}!views_handler_field_prerender_list@{views\_\-handler\_\-field\_\-prerender\_\-list}}
+\subsubsection[{render\_\-items}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-field\_\-prerender\_\-list::render\_\-items (\$ {\em items})}}
+\label{classviews__handler__field__prerender__list_a7034bf6badaa12c750ac451f4435ce0a}
+Render all items in this field together.
+
+When using advanced render, each possible item in the list is rendered individually. Then the items are all pasted together. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/handlers/\hyperlink{views__handler__field__prerender__list_8inc}{views\_\-handler\_\-field\_\-prerender\_\-list.inc}\end{DoxyCompactItemize}

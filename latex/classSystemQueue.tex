@@ -1,0 +1,142 @@
+\hypertarget{classSystemQueue}{
+\section{SystemQueue Class Reference}
+\label{classSystemQueue}\index{SystemQueue@{SystemQueue}}
+}
+Inheritance diagram for SystemQueue::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classSystemQueue}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSystemQueue_add089667e3ee829e1ae3bd8c50167fb4}{
+{\bfseries \_\-\_\-construct} (\$name)}
+\label{classSystemQueue_add089667e3ee829e1ae3bd8c50167fb4}
+
+\item 
+\hyperlink{classSystemQueue_abf9ce9dc71e435f3fc0471e2187730a3}{createItem} (\$data)
+\item 
+\hyperlink{classSystemQueue_af5df5ad6fbfde21170f2e03115a7f7da}{numberOfItems} ()
+\item 
+\hyperlink{classSystemQueue_aa5f774d4ef4b31f1318751d9b9872071}{claimItem} (\$lease\_\-time=30)
+\item 
+\hyperlink{classSystemQueue_aac7e2e13e33ebba60d4594b3de6a22df}{releaseItem} (\$item)
+\item 
+\hyperlink{classSystemQueue_a868c037c23889db59acfeadc5d30c6f9}{deleteItem} (\$item)
+\item 
+\hyperlink{classSystemQueue_a92bade740b59032aced46cfcbfaaeed6}{createQueue} ()
+\item 
+\hyperlink{classSystemQueue_a28faefc0b81477b2dbfa1434236f3bb5}{deleteQueue} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSystemQueue_ab4d1830d006026ae87b4d6604cc1e4e1}{
+{\bfseries \$name}}
+\label{classSystemQueue_ab4d1830d006026ae87b4d6604cc1e4e1}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Default queue implementation. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classSystemQueue_aa5f774d4ef4b31f1318751d9b9872071}{
+\index{SystemQueue@{SystemQueue}!claimItem@{claimItem}}
+\index{claimItem@{claimItem}!SystemQueue@{SystemQueue}}
+\subsubsection[{claimItem}]{\setlength{\rightskip}{0pt plus 5cm}SystemQueue::claimItem (\$ {\em lease\_\-time} = {\ttfamily 30})}}
+\label{classSystemQueue_aa5f774d4ef4b31f1318751d9b9872071}
+Claim an item in the queue for processing.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$lease\_\-time}]How long the processing is expected to take in seconds, defaults to an hour. After this lease expires, the item will be reset and another consumer can claim the item. For idempotent tasks (which can be run multiple times without side effects), shorter lease times would result in lower latency in case a consumer fails. For tasks that should not be run more than once (non-\/idempotent), a larger lease time will make it more rare for a given task to run multiple times in cases of failure, at the cost of higher latency. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+On success we return an item object. If the queue is unable to claim an item it returns false. This implies a best effort to retrieve an item and either the queue is empty or there is some other non-\/recoverable problem. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceDrupalQueueInterface_a2f0f2ccc1f4d55c0890897ea85e75954}{DrupalQueueInterface}.
+
+Reimplemented in \hyperlink{classBatchQueue_a489fb34e9fe09e9434d81a3fba605d97}{BatchQueue}.\hypertarget{classSystemQueue_abf9ce9dc71e435f3fc0471e2187730a3}{
+\index{SystemQueue@{SystemQueue}!createItem@{createItem}}
+\index{createItem@{createItem}!SystemQueue@{SystemQueue}}
+\subsubsection[{createItem}]{\setlength{\rightskip}{0pt plus 5cm}SystemQueue::createItem (\$ {\em data})}}
+\label{classSystemQueue_abf9ce9dc71e435f3fc0471e2187730a3}
+Add a queue item and store it directly to the queue.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$data}]Arbitrary data to be associated with the new task in the queue. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the item was successfully created and was (best effort) added to the queue, otherwise FALSE. We don't guarantee the item was committed to disk etc, but as far as we know, the item is now in the queue. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceDrupalQueueInterface_a1bdef6341808aaf8b3de821b7b71f137}{DrupalQueueInterface}.\hypertarget{classSystemQueue_a92bade740b59032aced46cfcbfaaeed6}{
+\index{SystemQueue@{SystemQueue}!createQueue@{createQueue}}
+\index{createQueue@{createQueue}!SystemQueue@{SystemQueue}}
+\subsubsection[{createQueue}]{\setlength{\rightskip}{0pt plus 5cm}SystemQueue::createQueue ()}}
+\label{classSystemQueue_a92bade740b59032aced46cfcbfaaeed6}
+Create a queue.
+
+Called during installation and should be used to perform any necessary initialization operations. This should not be confused with the constructor for these objects, which is called every time an object is instantiated to operate on a queue. This operation is only needed the first time a given queue is going to be initialized (for example, to make a new database table or directory to hold tasks for the queue -\/-\/ it depends on the queue implementation if this is necessary at all). 
+
+Implements \hyperlink{interfaceDrupalQueueInterface_a5a657d8c1d5bb429b3e594fa0c883ad3}{DrupalQueueInterface}.\hypertarget{classSystemQueue_a868c037c23889db59acfeadc5d30c6f9}{
+\index{SystemQueue@{SystemQueue}!deleteItem@{deleteItem}}
+\index{deleteItem@{deleteItem}!SystemQueue@{SystemQueue}}
+\subsubsection[{deleteItem}]{\setlength{\rightskip}{0pt plus 5cm}SystemQueue::deleteItem (\$ {\em item})}}
+\label{classSystemQueue_a868c037c23889db59acfeadc5d30c6f9}
+Delete a finished item from the queue.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$item}]The item returned by \hyperlink{interfaceDrupalQueueInterface_a2f0f2ccc1f4d55c0890897ea85e75954}{DrupalQueueInterface::claimItem()}. \end{DoxyParams}
+
+
+Implements \hyperlink{interfaceDrupalQueueInterface_aa61212089c1bcc410e8f87f8e619e351}{DrupalQueueInterface}.\hypertarget{classSystemQueue_a28faefc0b81477b2dbfa1434236f3bb5}{
+\index{SystemQueue@{SystemQueue}!deleteQueue@{deleteQueue}}
+\index{deleteQueue@{deleteQueue}!SystemQueue@{SystemQueue}}
+\subsubsection[{deleteQueue}]{\setlength{\rightskip}{0pt plus 5cm}SystemQueue::deleteQueue ()}}
+\label{classSystemQueue_a28faefc0b81477b2dbfa1434236f3bb5}
+Delete a queue and every item in the queue. 
+
+Implements \hyperlink{interfaceDrupalQueueInterface_ad403fed96dbd86e64a8a48c33fe5f2bc}{DrupalQueueInterface}.\hypertarget{classSystemQueue_af5df5ad6fbfde21170f2e03115a7f7da}{
+\index{SystemQueue@{SystemQueue}!numberOfItems@{numberOfItems}}
+\index{numberOfItems@{numberOfItems}!SystemQueue@{SystemQueue}}
+\subsubsection[{numberOfItems}]{\setlength{\rightskip}{0pt plus 5cm}SystemQueue::numberOfItems ()}}
+\label{classSystemQueue_af5df5ad6fbfde21170f2e03115a7f7da}
+Retrieve the number of items in the queue.
+
+This is intended to provide a \char`\"{}best guess\char`\"{} count of the number of items in the queue. Depending on the implementation and the setup, the accuracy of the results of this function may vary.
+
+e.g. On a busy system with a large number of consumers and items, the result might only be valid for a fraction of a second and not provide an accurate representation.
+
+\begin{DoxyReturn}{Returns}
+An integer estimate of the number of items in the queue. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceDrupalQueueInterface_aee5a22d355c9e6246690d0ed79fe306b}{DrupalQueueInterface}.\hypertarget{classSystemQueue_aac7e2e13e33ebba60d4594b3de6a22df}{
+\index{SystemQueue@{SystemQueue}!releaseItem@{releaseItem}}
+\index{releaseItem@{releaseItem}!SystemQueue@{SystemQueue}}
+\subsubsection[{releaseItem}]{\setlength{\rightskip}{0pt plus 5cm}SystemQueue::releaseItem (\$ {\em item})}}
+\label{classSystemQueue_aac7e2e13e33ebba60d4594b3de6a22df}
+Release an item that the worker could not process, so another worker can come in and process it before the timeout expires.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$item}]\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceDrupalQueueInterface_a7f4ce9d592779327cd24dbf90566da67}{DrupalQueueInterface}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/modules/system/\hyperlink{system_8queue_8inc}{system.queue.inc}\end{DoxyCompactItemize}

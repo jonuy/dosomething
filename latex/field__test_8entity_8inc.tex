@@ -1,0 +1,174 @@
+\hypertarget{field__test_8entity_8inc}{
+\section{html/modules/field/tests/field\_\-test.entity.inc File Reference}
+\label{field__test_8entity_8inc}\index{html/modules/field/tests/field\_\-test.entity.inc@{html/modules/field/tests/field\_\-test.entity.inc}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classTestEntityBundleController}{TestEntityBundleController}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{field__test_8entity_8inc_a51bbbb4d2a09faac17afe13915e29225}{field\_\-test\_\-entity\_\-info} ()
+\item 
+\hyperlink{field__test_8entity_8inc_a67703b2e4cd5f075eb297ffe91a23529}{field\_\-test\_\-entity\_\-info\_\-alter} (\&\$entity\_\-info)
+\item 
+\hyperlink{field__test_8entity_8inc_aa6b63bbc32987ee1c530fcdbfa61a193}{field\_\-test\_\-entity\_\-info\_\-translatable} (\$entity\_\-type=NULL, \$translatable=NULL)
+\item 
+\hyperlink{field__test_8entity_8inc_ab01b42bea066a819706c3034fffa5f7b}{field\_\-test\_\-create\_\-bundle} (\$bundle, \$text=NULL)
+\item 
+\hyperlink{field__test_8entity_8inc_a06a99d57d5a95dab9eb045b50aca418b}{field\_\-test\_\-rename\_\-bundle} (\$bundle\_\-old, \$bundle\_\-new)
+\item 
+\hyperlink{field__test_8entity_8inc_a1095cd674ad8f3ff03d9654f5d458209}{field\_\-test\_\-delete\_\-bundle} (\$bundle)
+\item 
+\hyperlink{field__test_8entity_8inc_af6eb00d8f9f9587e732a1be8b2b784c2}{field\_\-test\_\-create\_\-stub\_\-entity} (\$id=1, \$vid=1, \$bundle= 'test\_\-bundle', \$label= '')
+\item 
+\hyperlink{field__test_8entity_8inc_a5930250cf03c656cee13f8aaf849cf22}{field\_\-test\_\-entity\_\-test\_\-load} (\$ftid, \$ftvid=NULL)
+\item 
+\hyperlink{field__test_8entity_8inc_adb618b84348fcca91f26a3ba5900405a}{field\_\-test\_\-entity\_\-save} (\&\$entity)
+\item 
+\hyperlink{field__test_8entity_8inc_ab180fd4929a5b01119359b9dcf6da27e}{field\_\-test\_\-entity\_\-add} (\$fttype)
+\item 
+\hyperlink{field__test_8entity_8inc_acb9406030a9bf8851f1de5b8169996ca}{field\_\-test\_\-entity\_\-edit} (\$entity)
+\item 
+\hyperlink{field__test_8entity_8inc_a85a2c69ad395d255d448d7f3d72ba9f3}{field\_\-test\_\-entity\_\-form} (\$form, \&\$form\_\-state, \$entity, \$add=FALSE)
+\item 
+\hyperlink{field__test_8entity_8inc_a223ebb8c79571c498638f329fdefac54}{field\_\-test\_\-entity\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{field__test_8entity_8inc_afd81eae9834f97ca915796f2e9240ef5}{field\_\-test\_\-entity\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{field__test_8entity_8inc_aee4f6831ba19841da21548d86406db01}{field\_\-test\_\-entity\_\-form\_\-submit\_\-build\_\-test\_\-entity} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{field__test_8entity_8inc_a8161d4c3065234379c6d6379ad71afbd}{field\_\-test\_\-entity\_\-nested\_\-form} (\$form, \&\$form\_\-state, \$entity\_\-1, \$entity\_\-2)
+\item 
+\hyperlink{field__test_8entity_8inc_a526966c6b74e25b6a5aa0b283f6a35a7}{field\_\-test\_\-entity\_\-nested\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{field__test_8entity_8inc_a2610999ccc4c08b9dc7c4ab45d1db366}{field\_\-test\_\-entity\_\-nested\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines an entity type. 
+
+\subsection{Function Documentation}
+\hypertarget{field__test_8entity_8inc_ab01b42bea066a819706c3034fffa5f7b}{
+\index{field\_\-test.entity.inc@{field\_\-test.entity.inc}!field\_\-test\_\-create\_\-bundle@{field\_\-test\_\-create\_\-bundle}}
+\index{field\_\-test\_\-create\_\-bundle@{field\_\-test\_\-create\_\-bundle}!field_test.entity.inc@{field\_\-test.entity.inc}}
+\subsubsection[{field\_\-test\_\-create\_\-bundle}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-create\_\-bundle (\$ {\em bundle}, \/  \$ {\em text} = {\ttfamily NULL})}}
+\label{field__test_8entity_8inc_ab01b42bea066a819706c3034fffa5f7b}
+Creates a new bundle for test\_\-entity entities.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$bundle}]The machine-\/readable name of the bundle. \item[{\em \$text}]The human-\/readable name of the bundle. If none is provided, the machine name will be used. \end{DoxyParams}
+\hypertarget{field__test_8entity_8inc_af6eb00d8f9f9587e732a1be8b2b784c2}{
+\index{field\_\-test.entity.inc@{field\_\-test.entity.inc}!field\_\-test\_\-create\_\-stub\_\-entity@{field\_\-test\_\-create\_\-stub\_\-entity}}
+\index{field\_\-test\_\-create\_\-stub\_\-entity@{field\_\-test\_\-create\_\-stub\_\-entity}!field_test.entity.inc@{field\_\-test.entity.inc}}
+\subsubsection[{field\_\-test\_\-create\_\-stub\_\-entity}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-create\_\-stub\_\-entity (\$ {\em id} = {\ttfamily 1}, \/  \$ {\em vid} = {\ttfamily 1}, \/  \$ {\em bundle} = {\ttfamily 'test\_\-bundle'}, \/  \$ {\em label} = {\ttfamily ''})}}
+\label{field__test_8entity_8inc_af6eb00d8f9f9587e732a1be8b2b784c2}
+Creates a basic test\_\-entity entity. \hypertarget{field__test_8entity_8inc_a1095cd674ad8f3ff03d9654f5d458209}{
+\index{field\_\-test.entity.inc@{field\_\-test.entity.inc}!field\_\-test\_\-delete\_\-bundle@{field\_\-test\_\-delete\_\-bundle}}
+\index{field\_\-test\_\-delete\_\-bundle@{field\_\-test\_\-delete\_\-bundle}!field_test.entity.inc@{field\_\-test.entity.inc}}
+\subsubsection[{field\_\-test\_\-delete\_\-bundle}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-delete\_\-bundle (\$ {\em bundle})}}
+\label{field__test_8entity_8inc_a1095cd674ad8f3ff03d9654f5d458209}
+Deletes a bundle for test\_\-entity objects.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$bundle}]The machine-\/readable name of the bundle to delete. \end{DoxyParams}
+\hypertarget{field__test_8entity_8inc_ab180fd4929a5b01119359b9dcf6da27e}{
+\index{field\_\-test.entity.inc@{field\_\-test.entity.inc}!field\_\-test\_\-entity\_\-add@{field\_\-test\_\-entity\_\-add}}
+\index{field\_\-test\_\-entity\_\-add@{field\_\-test\_\-entity\_\-add}!field_test.entity.inc@{field\_\-test.entity.inc}}
+\subsubsection[{field\_\-test\_\-entity\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-entity\_\-add (\$ {\em fttype})}}
+\label{field__test_8entity_8inc_ab180fd4929a5b01119359b9dcf6da27e}
+Menu callback: displays the 'Add new test\_\-entity' form. \hypertarget{field__test_8entity_8inc_acb9406030a9bf8851f1de5b8169996ca}{
+\index{field\_\-test.entity.inc@{field\_\-test.entity.inc}!field\_\-test\_\-entity\_\-edit@{field\_\-test\_\-entity\_\-edit}}
+\index{field\_\-test\_\-entity\_\-edit@{field\_\-test\_\-entity\_\-edit}!field_test.entity.inc@{field\_\-test.entity.inc}}
+\subsubsection[{field\_\-test\_\-entity\_\-edit}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-entity\_\-edit (\$ {\em entity})}}
+\label{field__test_8entity_8inc_acb9406030a9bf8851f1de5b8169996ca}
+Menu callback: displays the 'Edit exiisting test\_\-entity' form. \hypertarget{field__test_8entity_8inc_a85a2c69ad395d255d448d7f3d72ba9f3}{
+\index{field\_\-test.entity.inc@{field\_\-test.entity.inc}!field\_\-test\_\-entity\_\-form@{field\_\-test\_\-entity\_\-form}}
+\index{field\_\-test\_\-entity\_\-form@{field\_\-test\_\-entity\_\-form}!field_test.entity.inc@{field\_\-test.entity.inc}}
+\subsubsection[{field\_\-test\_\-entity\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-entity\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em entity}, \/  \$ {\em add} = {\ttfamily FALSE})}}
+\label{field__test_8entity_8inc_a85a2c69ad395d255d448d7f3d72ba9f3}
+Test\_\-entity form. \hypertarget{field__test_8entity_8inc_afd81eae9834f97ca915796f2e9240ef5}{
+\index{field\_\-test.entity.inc@{field\_\-test.entity.inc}!field\_\-test\_\-entity\_\-form\_\-submit@{field\_\-test\_\-entity\_\-form\_\-submit}}
+\index{field\_\-test\_\-entity\_\-form\_\-submit@{field\_\-test\_\-entity\_\-form\_\-submit}!field_test.entity.inc@{field\_\-test.entity.inc}}
+\subsubsection[{field\_\-test\_\-entity\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-entity\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{field__test_8entity_8inc_afd81eae9834f97ca915796f2e9240ef5}
+Submit handler for \hyperlink{field__test_8entity_8inc_a85a2c69ad395d255d448d7f3d72ba9f3}{field\_\-test\_\-entity\_\-form()}. \hypertarget{field__test_8entity_8inc_aee4f6831ba19841da21548d86406db01}{
+\index{field\_\-test.entity.inc@{field\_\-test.entity.inc}!field\_\-test\_\-entity\_\-form\_\-submit\_\-build\_\-test\_\-entity@{field\_\-test\_\-entity\_\-form\_\-submit\_\-build\_\-test\_\-entity}}
+\index{field\_\-test\_\-entity\_\-form\_\-submit\_\-build\_\-test\_\-entity@{field\_\-test\_\-entity\_\-form\_\-submit\_\-build\_\-test\_\-entity}!field_test.entity.inc@{field\_\-test.entity.inc}}
+\subsubsection[{field\_\-test\_\-entity\_\-form\_\-submit\_\-build\_\-test\_\-entity}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-entity\_\-form\_\-submit\_\-build\_\-test\_\-entity (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{field__test_8entity_8inc_aee4f6831ba19841da21548d86406db01}
+Updates the form state's entity by processing this submission's values. \hypertarget{field__test_8entity_8inc_a223ebb8c79571c498638f329fdefac54}{
+\index{field\_\-test.entity.inc@{field\_\-test.entity.inc}!field\_\-test\_\-entity\_\-form\_\-validate@{field\_\-test\_\-entity\_\-form\_\-validate}}
+\index{field\_\-test\_\-entity\_\-form\_\-validate@{field\_\-test\_\-entity\_\-form\_\-validate}!field_test.entity.inc@{field\_\-test.entity.inc}}
+\subsubsection[{field\_\-test\_\-entity\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-entity\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{field__test_8entity_8inc_a223ebb8c79571c498638f329fdefac54}
+Validate handler for \hyperlink{field__test_8entity_8inc_a85a2c69ad395d255d448d7f3d72ba9f3}{field\_\-test\_\-entity\_\-form()}. \hypertarget{field__test_8entity_8inc_a51bbbb4d2a09faac17afe13915e29225}{
+\index{field\_\-test.entity.inc@{field\_\-test.entity.inc}!field\_\-test\_\-entity\_\-info@{field\_\-test\_\-entity\_\-info}}
+\index{field\_\-test\_\-entity\_\-info@{field\_\-test\_\-entity\_\-info}!field_test.entity.inc@{field\_\-test.entity.inc}}
+\subsubsection[{field\_\-test\_\-entity\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-entity\_\-info ()}}
+\label{field__test_8entity_8inc_a51bbbb4d2a09faac17afe13915e29225}
+Implements \hyperlink{group__hooks_gaf02318e9d0e8cdbf6d187b271b9969a8}{hook\_\-entity\_\-info()}. \hypertarget{field__test_8entity_8inc_a67703b2e4cd5f075eb297ffe91a23529}{
+\index{field\_\-test.entity.inc@{field\_\-test.entity.inc}!field\_\-test\_\-entity\_\-info\_\-alter@{field\_\-test\_\-entity\_\-info\_\-alter}}
+\index{field\_\-test\_\-entity\_\-info\_\-alter@{field\_\-test\_\-entity\_\-info\_\-alter}!field_test.entity.inc@{field\_\-test.entity.inc}}
+\subsubsection[{field\_\-test\_\-entity\_\-info\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-entity\_\-info\_\-alter (\&\$ {\em entity\_\-info})}}
+\label{field__test_8entity_8inc_a67703b2e4cd5f075eb297ffe91a23529}
+Implements \hyperlink{group__hooks_ga0394a72e4872603e91ce22440195ab45}{hook\_\-entity\_\-info\_\-alter()}. \hypertarget{field__test_8entity_8inc_aa6b63bbc32987ee1c530fcdbfa61a193}{
+\index{field\_\-test.entity.inc@{field\_\-test.entity.inc}!field\_\-test\_\-entity\_\-info\_\-translatable@{field\_\-test\_\-entity\_\-info\_\-translatable}}
+\index{field\_\-test\_\-entity\_\-info\_\-translatable@{field\_\-test\_\-entity\_\-info\_\-translatable}!field_test.entity.inc@{field\_\-test.entity.inc}}
+\subsubsection[{field\_\-test\_\-entity\_\-info\_\-translatable}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-entity\_\-info\_\-translatable (\$ {\em entity\_\-type} = {\ttfamily NULL}, \/  \$ {\em translatable} = {\ttfamily NULL})}}
+\label{field__test_8entity_8inc_aa6b63bbc32987ee1c530fcdbfa61a193}
+Helper function to enable entity translations. \hypertarget{field__test_8entity_8inc_a8161d4c3065234379c6d6379ad71afbd}{
+\index{field\_\-test.entity.inc@{field\_\-test.entity.inc}!field\_\-test\_\-entity\_\-nested\_\-form@{field\_\-test\_\-entity\_\-nested\_\-form}}
+\index{field\_\-test\_\-entity\_\-nested\_\-form@{field\_\-test\_\-entity\_\-nested\_\-form}!field_test.entity.inc@{field\_\-test.entity.inc}}
+\subsubsection[{field\_\-test\_\-entity\_\-nested\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-entity\_\-nested\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em entity\_\-1}, \/  \$ {\em entity\_\-2})}}
+\label{field__test_8entity_8inc_a8161d4c3065234379c6d6379ad71afbd}
+Form combining two separate entities. \hypertarget{field__test_8entity_8inc_a2610999ccc4c08b9dc7c4ab45d1db366}{
+\index{field\_\-test.entity.inc@{field\_\-test.entity.inc}!field\_\-test\_\-entity\_\-nested\_\-form\_\-submit@{field\_\-test\_\-entity\_\-nested\_\-form\_\-submit}}
+\index{field\_\-test\_\-entity\_\-nested\_\-form\_\-submit@{field\_\-test\_\-entity\_\-nested\_\-form\_\-submit}!field_test.entity.inc@{field\_\-test.entity.inc}}
+\subsubsection[{field\_\-test\_\-entity\_\-nested\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-entity\_\-nested\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{field__test_8entity_8inc_a2610999ccc4c08b9dc7c4ab45d1db366}
+Submit handler for \hyperlink{field__test_8entity_8inc_a8161d4c3065234379c6d6379ad71afbd}{field\_\-test\_\-entity\_\-nested\_\-form()}. \hypertarget{field__test_8entity_8inc_a526966c6b74e25b6a5aa0b283f6a35a7}{
+\index{field\_\-test.entity.inc@{field\_\-test.entity.inc}!field\_\-test\_\-entity\_\-nested\_\-form\_\-validate@{field\_\-test\_\-entity\_\-nested\_\-form\_\-validate}}
+\index{field\_\-test\_\-entity\_\-nested\_\-form\_\-validate@{field\_\-test\_\-entity\_\-nested\_\-form\_\-validate}!field_test.entity.inc@{field\_\-test.entity.inc}}
+\subsubsection[{field\_\-test\_\-entity\_\-nested\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-entity\_\-nested\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{field__test_8entity_8inc_a526966c6b74e25b6a5aa0b283f6a35a7}
+Validate handler for \hyperlink{field__test_8entity_8inc_a8161d4c3065234379c6d6379ad71afbd}{field\_\-test\_\-entity\_\-nested\_\-form()}. \hypertarget{field__test_8entity_8inc_adb618b84348fcca91f26a3ba5900405a}{
+\index{field\_\-test.entity.inc@{field\_\-test.entity.inc}!field\_\-test\_\-entity\_\-save@{field\_\-test\_\-entity\_\-save}}
+\index{field\_\-test\_\-entity\_\-save@{field\_\-test\_\-entity\_\-save}!field_test.entity.inc@{field\_\-test.entity.inc}}
+\subsubsection[{field\_\-test\_\-entity\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-entity\_\-save (\&\$ {\em entity})}}
+\label{field__test_8entity_8inc_adb618b84348fcca91f26a3ba5900405a}
+Saves a test\_\-entity.
+
+A new entity is created if \$entity-\/$>$ftid and \$entity-\/$>$is\_\-new are both empty. A new revision is created if \$entity-\/$>$revision is not empty.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity}]The entity to save. \end{DoxyParams}
+\hypertarget{field__test_8entity_8inc_a5930250cf03c656cee13f8aaf849cf22}{
+\index{field\_\-test.entity.inc@{field\_\-test.entity.inc}!field\_\-test\_\-entity\_\-test\_\-load@{field\_\-test\_\-entity\_\-test\_\-load}}
+\index{field\_\-test\_\-entity\_\-test\_\-load@{field\_\-test\_\-entity\_\-test\_\-load}!field_test.entity.inc@{field\_\-test.entity.inc}}
+\subsubsection[{field\_\-test\_\-entity\_\-test\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-entity\_\-test\_\-load (\$ {\em ftid}, \/  \$ {\em ftvid} = {\ttfamily NULL})}}
+\label{field__test_8entity_8inc_a5930250cf03c656cee13f8aaf849cf22}
+Loads a test\_\-entity.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$ftid}]The id of the entity to load. \item[{\em \$ftvid}](Optional) The revision id of the entity to load. If not specified, the current revision will be used. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded entity. 
+\end{DoxyReturn}
+\hypertarget{field__test_8entity_8inc_a06a99d57d5a95dab9eb045b50aca418b}{
+\index{field\_\-test.entity.inc@{field\_\-test.entity.inc}!field\_\-test\_\-rename\_\-bundle@{field\_\-test\_\-rename\_\-bundle}}
+\index{field\_\-test\_\-rename\_\-bundle@{field\_\-test\_\-rename\_\-bundle}!field_test.entity.inc@{field\_\-test.entity.inc}}
+\subsubsection[{field\_\-test\_\-rename\_\-bundle}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-rename\_\-bundle (\$ {\em bundle\_\-old}, \/  \$ {\em bundle\_\-new})}}
+\label{field__test_8entity_8inc_a06a99d57d5a95dab9eb045b50aca418b}
+Renames a bundle for test\_\-entity entities.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$bundle\_\-old}]The machine-\/readable name of the bundle to rename. \item[{\em \$bundle\_\-new}]The new machine-\/readable name of the bundle. \end{DoxyParams}

@@ -1,0 +1,124 @@
+\hypertarget{themes_2bartik_2templates_2page_8tpl_8php}{
+\section{html/themes/bartik/templates/page.tpl.php File Reference}
+\label{themes_2bartik_2templates_2page_8tpl_8php}\index{html/themes/bartik/templates/page.tpl.php@{html/themes/bartik/templates/page.tpl.php}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{themes_2bartik_2templates_2page_8tpl_8php_a466351d4b2da3c2d711e6155a45bbb2a}{
+print {\bfseries \$secondary\_\-menu}}
+\label{themes_2bartik_2templates_2page_8tpl_8php_a466351d4b2da3c2d711e6155a45bbb2a}
+
+\item 
+\hypertarget{themes_2bartik_2templates_2page_8tpl_8php_a0fa695c12e5240657bb07a7742cf8391}{
+print {\bfseries \$logo}}
+\label{themes_2bartik_2templates_2page_8tpl_8php_a0fa695c12e5240657bb07a7742cf8391}
+
+\item 
+\hypertarget{themes_2bartik_2templates_2page_8tpl_8php_a82cd33ca97ff99f2fcc5e9c81d65251b}{
+{\bfseries endif}}
+\label{themes_2bartik_2templates_2page_8tpl_8php_a82cd33ca97ff99f2fcc5e9c81d65251b}
+
+\item 
+\hypertarget{themes_2bartik_2templates_2page_8tpl_8php_aa5f46209c2b5c2478826789ee8cfcdc3}{
+if(\$site\_\-name$|$$|$\$site\_\-slogan)(\$hide\_\-site\_\-name \&\&\$hide\_\-site\_\-slogan) if(\$site\_\-name)(\$title)(\$hide\_\-site\_\-name) print {\bfseries \$front\_\-page}}
+\label{themes_2bartik_2templates_2page_8tpl_8php_aa5f46209c2b5c2478826789ee8cfcdc3}
+
+\item 
+\hypertarget{themes_2bartik_2templates_2page_8tpl_8php_ad500e3900e86a2e78f15afbe44b1f849}{
+print {\bfseries \$site\_\-name}}
+\label{themes_2bartik_2templates_2page_8tpl_8php_ad500e3900e86a2e78f15afbe44b1f849}
+
+\item 
+\hypertarget{themes_2bartik_2templates_2page_8tpl_8php_a8e01dcc96c43199448ee66f7c2ae8ea6}{
+else {\bfseries \_\-\_\-pad0\_\-\_\-}}
+\label{themes_2bartik_2templates_2page_8tpl_8php_a8e01dcc96c43199448ee66f7c2ae8ea6}
+
+\item 
+\hypertarget{themes_2bartik_2templates_2page_8tpl_8php_a66d61f077bc746b3c164c574d28b3b8f}{
+if(\$site\_\-slogan)(\$hide\_\-site\_\-slogan) print {\bfseries \$site\_\-slogan}}
+\label{themes_2bartik_2templates_2page_8tpl_8php_a66d61f077bc746b3c164c574d28b3b8f}
+
+\item 
+\hypertarget{themes_2bartik_2templates_2page_8tpl_8php_ab467b853777a9bfda790f67537c97eca}{
+print {\bfseries \$feed\_\-icons}}
+\label{themes_2bartik_2templates_2page_8tpl_8php_ab467b853777a9bfda790f67537c97eca}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Bartik's theme implementation to display a single Drupal page.
+
+The doctype, html, head and body tags are not in this template. Instead they can be found in the \hyperlink{html_8tpl_8php}{html.tpl.php} template normally located in the modules/system directory.
+
+Available variables:
+
+General utility variables:
+\begin{DoxyItemize}
+\item \$base\_\-path: The base URL path of the Drupal installation. At the very least, this will always default to /.
+\item \$directory: The directory the template is located in, e.g. modules/system or themes/bartik.
+\item \$is\_\-front: TRUE if the current page is the front page.
+\item \$logged\_\-in: TRUE if the user is registered and signed in.
+\item \$is\_\-admin: TRUE if the user has permission to access administration pages.
+\end{DoxyItemize}
+
+Site identity:
+\begin{DoxyItemize}
+\item front\_\-page}
+The URL of the front page. Use this instead of base\_\-path, when linking to the front page. This includes the language domain or prefix.
+\item \$logo: The path to the logo image, as defined in theme configuration.
+\item \$site\_\-name: The name of the site, empty when display has been disabled in theme settings.
+\item \$site\_\-slogan: The slogan of the site, empty when display has been disabled in theme settings.
+\item \$hide\_\-site\_\-name: TRUE if the site name has been toggled off on the theme settings page. If hidden, the \char`\"{}element-\/invisible\char`\"{} class is added to make the site name visually hidden, but still accessible.
+\item \$hide\_\-site\_\-slogan: TRUE if the site slogan has been toggled off on the theme settings page. If hidden, the \char`\"{}element-\/invisible\char`\"{} class is added to make the site slogan visually hidden, but still accessible.
+\end{DoxyItemize}
+
+Navigation:
+\begin{DoxyItemize}
+\item \$main\_\-menu (array): An array containing the Main menu links for the site, if they have been configured.
+\item \$secondary\_\-menu (array): An array containing the Secondary menu links for the site, if they have been configured.
+\item \$breadcrumb: The breadcrumb trail for the current page.
+\end{DoxyItemize}
+
+Page content (in order of occurrence in the default page.tpl.php):
+\begin{DoxyItemize}
+\item \$title\_\-prefix (array): An array containing additional output populated by modules, intended to be displayed in front of the main title tag that appears in the template.
+\item \$title: The page title, for use in the actual HTML content.
+\item \$title\_\-suffix (array): An array containing additional output populated by modules, intended to be displayed after the main title tag that appears in the template.
+\item \$messages: HTML for status and error messages. Should be displayed prominently.
+\item \$tabs (array): Tabs linking to any sub-\/pages beneath the current page (e.g., the \hyperlink{classview}{view} and edit tabs when displaying a node).
+\item \$action\_\-links (array): Actions local to the page, such as 'Add menu' on the menu administration interface.
+\item \$feed\_\-icons: A string of all feed icons for the current page.
+\item \$node: The node object, if there is an automatically-\/loaded node associated with the page, and the node ID is the second argument in the page's path (e.g. node/12345 and node/12345/revisions, but not comment/reply/12345).
+\end{DoxyItemize}
+
+Regions:
+\begin{DoxyItemize}
+\item \$page\mbox{[}'header'\mbox{]}: Items for the header region.
+\item \$page\mbox{[}'featured'\mbox{]}: Items for the featured region.
+\item \$page\mbox{[}'highlighted'\mbox{]}: Items for the highlighted content region.
+\item \$page\mbox{[}'help'\mbox{]}: Dynamic help text, mostly for admin pages.
+\item \$page\mbox{[}'content'\mbox{]}: The main content of the current page.
+\item \$page\mbox{[}'sidebar\_\-first'\mbox{]}: Items for the first sidebar.
+\item \$page\mbox{[}'triptych\_\-first'\mbox{]}: Items for the first triptych.
+\item \$page\mbox{[}'triptych\_\-middle'\mbox{]}: Items for the middle triptych.
+\item \$page\mbox{[}'triptych\_\-last'\mbox{]}: Items for the last triptych.
+\item \$page\mbox{[}'footer\_\-firstcolumn'\mbox{]}: Items for the first footer column.
+\item \$page\mbox{[}'footer\_\-secondcolumn'\mbox{]}: Items for the second footer column.
+\item \$page\mbox{[}'footer\_\-thirdcolumn'\mbox{]}: Items for the third footer column.
+\item \$page\mbox{[}'footer\_\-fourthcolumn'\mbox{]}: Items for the fourth footer column.
+\item \$page\mbox{[}'footer'\mbox{]}: Items for the footer region.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{includes_2theme_8inc_a3eeb7bcdba7ef4859f99586da264d347}{template\_\-preprocess()} 
+
+\hyperlink{includes_2theme_8inc_a128dae24f990d8ba4710ac78b0584c11}{template\_\-preprocess\_\-page()} 
+
+\hyperlink{includes_2theme_8inc_a9b4d56c55dab2c59b7af6f71d6b1a940}{template\_\-process()} 
+
+bartik\_\-process\_\-page() 
+
+\hyperlink{html_8tpl_8php}{html.tpl.php} 
+\end{DoxySeeAlso}

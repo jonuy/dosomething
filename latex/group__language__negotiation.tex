@@ -1,0 +1,380 @@
+\hypertarget{group__language__negotiation}{
+\section{Language Negotiation API functionality}
+\label{group__language__negotiation}\index{Language Negotiation API functionality@{Language Negotiation API functionality}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__language__negotiation_gadf6422ee7cb14204e01311f85a8c8b18}{language\_\-types\_\-info} ()
+\item 
+\hyperlink{group__language__negotiation_gaa05284e85de23a8a8ab54adbd8548cb4}{language\_\-types\_\-configurable} (\$stored=TRUE)
+\item 
+\hyperlink{group__language__negotiation_ga04fd94cbb41f6b24ef9d3b4c37df86c1}{language\_\-types\_\-disable} (\$types)
+\item 
+\hyperlink{group__language__negotiation_ga6f6a0814332d6232293b84b38de5d4d0}{language\_\-types\_\-set} ()
+\item 
+\hyperlink{group__language__negotiation_ga041066fd7d9ca70def383225d104c431}{language\_\-negotiation\_\-get} (\$type, \$provider\_\-id=NULL)
+\item 
+\hyperlink{group__language__negotiation_gadee487a44c0202fa55b74ea1541055d0}{language\_\-negotiation\_\-get\_\-any} (\$provider\_\-id)
+\item 
+\hyperlink{group__language__negotiation_gab97e8b88791a7487449a1a1e4eec871c}{language\_\-negotiation\_\-get\_\-switch\_\-links} (\$type, \$path)
+\item 
+\hyperlink{group__language__negotiation_ga3a0f894378f49038dbbaf35909a8e215}{language\_\-negotiation\_\-purge} ()
+\item 
+\hyperlink{group__language__negotiation_ga3a4f8df0ad1b5fef7399929111bab35a}{language\_\-negotiation\_\-set} (\$type, \$language\_\-providers)
+\item 
+\hyperlink{group__language__negotiation_ga5e41e506c539a01a4ee945857c526e78}{language\_\-negotiation\_\-info} ()
+\item 
+\hyperlink{group__language__negotiation_ga031f4e0102fa2365a45709ff6935fee2}{language\_\-provider\_\-invoke} (\$provider\_\-id, \$provider=NULL)
+\item 
+\hyperlink{group__language__negotiation_ga6ab68f6fac82e1ae755c06787b042a39}{language\_\-provider\_\-weight} (\$provider)
+\item 
+\hyperlink{group__language__negotiation_ga483a318f6485628cbe7bdbf53bf80c5e}{language\_\-initialize} (\$type)
+\item 
+\hyperlink{group__language__negotiation_ga643666b0e37987d93ab75235bb7729b5}{language\_\-from\_\-default} ()
+\item 
+\hyperlink{group__language__negotiation_gab8ad64d53e83cae459c25341e564968d}{language\_\-url\_\-split\_\-prefix} (\$path, \$languages)
+\item 
+\hyperlink{group__language__negotiation_gaaea53d7377445168a1e71bf982d59f11}{language\_\-fallback\_\-get\_\-candidates} (\$type=\hyperlink{bootstrap_8inc_a40466aefcfc6ea9766f1fedf53cb3a6d}{LANGUAGE\_\-TYPE\_\-CONTENT})
+\item 
+\hyperlink{group__language__negotiation_ga8932d2167557c18966cd033cfbe0f37e}{hook\_\-language\_\-types\_\-info} ()
+\item 
+\hyperlink{group__language__negotiation_ga9752378ca7c389892fea3fb2960263dd}{hook\_\-language\_\-types\_\-info\_\-alter} (array \&\$language\_\-types)
+\item 
+\hyperlink{group__language__negotiation_gabcac4b239272ba30c6320a0af2fab46e}{hook\_\-language\_\-negotiation\_\-info} ()
+\item 
+\hyperlink{group__language__negotiation_gacaed046505a0a8470514731b86910089}{hook\_\-language\_\-negotiation\_\-info\_\-alter} (array \&\$language\_\-providers)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions to customize the language types and the negotiation process.
+
+The language negotiation API is based on two major concepts:
+\begin{DoxyItemize}
+\item Language types: types of translatable data (the types of data that a user can \hyperlink{classview}{view} or request).
+\item Language negotiation providers: functions for determining which language to use to present a particular piece of data to the user. Both language types and language negotiation providers are customizable.
+\end{DoxyItemize}
+
+Drupal defines three built-\/in language types:
+\begin{DoxyItemize}
+\item Interface language: The page's main language, used to present translated user interface elements such as titles, labels, help text, and messages.
+\item Content language: The language used to present content that is available in more than one language (see \hyperlink{group__field__language}{Field Language API } for details).
+\item URL language: The language associated with URLs. When generating a URL, this value will be used by \hyperlink{common_8inc_a43b2a0594431556db49df980801d8807}{url()} as a default if no explicit preference is provided. Modules can define additional language types through \hyperlink{group__language__negotiation_ga8932d2167557c18966cd033cfbe0f37e}{hook\_\-language\_\-types\_\-info()}, and alter existing language type definitions through \hyperlink{group__language__negotiation_ga9752378ca7c389892fea3fb2960263dd}{hook\_\-language\_\-types\_\-info\_\-alter()}.
+\end{DoxyItemize}
+
+Language types may be configurable or fixed. The language negotiation providers associated with a configurable language type can be explicitly set through the user interface. A fixed language type has predetermined (module-\/defined) language negotiation settings and, thus, does not appear in the configuration page. Here is a code snippet that makes the content language (which by default inherits the interface language's values) configurable: 
+\begin{DoxyCode}
+ function mymodule_language_types_info_alter(&$language_types) {
+   unset($language_types[LANGUAGE_TYPE_CONTENT]['fixed']);
+ }
+\end{DoxyCode}
+
+
+Every language type can have a different set of language negotiation providers assigned to it. Different language types often share the same language negotiation settings, but they can have independent settings if needed. If two language types are configured the same way, their language switcher configuration will be functionally identical and the same settings will act on both language types.
+
+Drupal defines the following built-\/in language negotiation providers:
+\begin{DoxyItemize}
+\item URL: Determine the language from the URL (path prefix or domain).
+\item Session: Determine the language from a request/session parameter.
+\item User: Follow the user's language preference.
+\item Browser: Determine the language from the browser's language settings.
+\item Default language: Use the default site language. Language negotiation providers are simple callback functions that implement a particular logic to return a language code. For instance, the URL provider searches for a valid path prefix or domain name in the current request URL. If a language negotiation provider does not return a valid language code, the next provider associated to the language type (based on provider weight) is invoked.
+\end{DoxyItemize}
+
+Modules can define additional language negotiation providers through \hyperlink{group__language__negotiation_gabcac4b239272ba30c6320a0af2fab46e}{hook\_\-language\_\-negotiation\_\-info()}, and alter existing providers through \hyperlink{group__language__negotiation_gacaed046505a0a8470514731b86910089}{hook\_\-language\_\-negotiation\_\-info\_\-alter()}. Here is an example snippet that lets path prefixes be ignored for administrative paths: 
+\begin{DoxyCode}
+ function mymodule_language_negotiation_info_alter(&$negotiation_info) {
+   // Replace the core function with our own function.
+   module_load_include('language', 'inc', 'language.negotiation');
+   $negotiation_info[LANGUAGE_NEGOTIATION_URL]['callbacks']['negotiation'] = 'mym
+      odule_from_url';
+   $negotiation_info[LANGUAGE_NEGOTIATION_URL]['file'] = drupal_get_path('module'
+      , 'mymodule') . '/mymodule.module';
+ }
+
+ function mymodule_from_url($languages) {
+   // Use the core URL language negotiation provider to get a valid language
+   // code.
+   module_load_include('language', 'inc', 'language.negotiation');
+   $langcode = language_from_url($languages);
+
+   // If we are on an administrative path, override with the default language.
+   if (isset($_GET['q']) && strtok($_GET['q'], '/') == 'admin') {
+     return language_default()->langcode;
+   }
+   return $langcode;
+ }
+ ?>
+\end{DoxyCode}
+
+
+For more information, see \hyperlink{}{Language Negotiation API } 
+
+\subsection{Function Documentation}
+\hypertarget{group__language__negotiation_gabcac4b239272ba30c6320a0af2fab46e}{
+\index{language\_\-negotiation@{language\_\-negotiation}!hook\_\-language\_\-negotiation\_\-info@{hook\_\-language\_\-negotiation\_\-info}}
+\index{hook\_\-language\_\-negotiation\_\-info@{hook\_\-language\_\-negotiation\_\-info}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{hook\_\-language\_\-negotiation\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-language\_\-negotiation\_\-info ()}}
+\label{group__language__negotiation_gabcac4b239272ba30c6320a0af2fab46e}
+Define language negotiation providers.
+
+\begin{DoxyReturn}{Returns}
+An associative array of language negotiation provider definitions. The keys are provider identifiers, and the values are associative arrays definining each provider, with the following elements:
+\begin{DoxyItemize}
+\item types: An array of allowed language types. If a language negotiation provider does not specify which language types it should be used with, it will be available for all the configurable language types.
+\item callbacks: An associative array of functions that will be called to perform various tasks. Possible elements are:
+\begin{DoxyItemize}
+\item negotiation: (required) Name of the callback function that determines the language value.
+\item language\_\-switch: (optional) Name of the callback function that determines links for a language switcher block associated with this provider. See language\_\-switcher\_\-url() for an example.
+\item url\_\-rewrite: (optional) Name of the callback function that provides URL rewriting, if needed by this provider.
+\end{DoxyItemize}
+\item file: The file where callback functions are defined (this file will be included before the callbacks are invoked).
+\item weight: The default weight of the provider.
+\item name: The translated human-\/readable name for the provider.
+\item description: A translated longer description of the provider.
+\item config: An internal path pointing to the provider's configuration page.
+\item cache: The value Drupal's page cache should be set to for the current provider to be invoked.
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__language__negotiation_gacaed046505a0a8470514731b86910089}{hook\_\-language\_\-negotiation\_\-info\_\-alter()} 
+\end{DoxySeeAlso}
+\hypertarget{group__language__negotiation_gacaed046505a0a8470514731b86910089}{
+\index{language\_\-negotiation@{language\_\-negotiation}!hook\_\-language\_\-negotiation\_\-info\_\-alter@{hook\_\-language\_\-negotiation\_\-info\_\-alter}}
+\index{hook\_\-language\_\-negotiation\_\-info\_\-alter@{hook\_\-language\_\-negotiation\_\-info\_\-alter}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{hook\_\-language\_\-negotiation\_\-info\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-language\_\-negotiation\_\-info\_\-alter (array \&\$ {\em language\_\-providers})}}
+\label{group__language__negotiation_gacaed046505a0a8470514731b86910089}
+Perform alterations on language negoiation providers.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$language\_\-providers}]Array of language negotiation provider definitions.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__language__negotiation_gabcac4b239272ba30c6320a0af2fab46e}{hook\_\-language\_\-negotiation\_\-info()} 
+\end{DoxySeeAlso}
+\hypertarget{group__language__negotiation_ga8932d2167557c18966cd033cfbe0f37e}{
+\index{language\_\-negotiation@{language\_\-negotiation}!hook\_\-language\_\-types\_\-info@{hook\_\-language\_\-types\_\-info}}
+\index{hook\_\-language\_\-types\_\-info@{hook\_\-language\_\-types\_\-info}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{hook\_\-language\_\-types\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-language\_\-types\_\-info ()}}
+\label{group__language__negotiation_ga8932d2167557c18966cd033cfbe0f37e}
+Define language types.
+
+\begin{DoxyReturn}{Returns}
+An associative array of language type definitions. The keys are the identifiers, which are also used as names for global variables representing the types in the bootstrap phase. The values are associative arrays that may contain the following elements:
+\begin{DoxyItemize}
+\item name: The human-\/readable language type identifier.
+\item description: A description of the language type.
+\item fixed: A fixed array of language negotiation provider identifiers to use to initialize this language. Defining this key makes the language type non-\/configurable, so it will always use the specified providers in the given priority order. Omit to make the language type configurable.
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__language__negotiation_ga9752378ca7c389892fea3fb2960263dd}{hook\_\-language\_\-types\_\-info\_\-alter()} 
+\end{DoxySeeAlso}
+\hypertarget{group__language__negotiation_ga9752378ca7c389892fea3fb2960263dd}{
+\index{language\_\-negotiation@{language\_\-negotiation}!hook\_\-language\_\-types\_\-info\_\-alter@{hook\_\-language\_\-types\_\-info\_\-alter}}
+\index{hook\_\-language\_\-types\_\-info\_\-alter@{hook\_\-language\_\-types\_\-info\_\-alter}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{hook\_\-language\_\-types\_\-info\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-language\_\-types\_\-info\_\-alter (array \&\$ {\em language\_\-types})}}
+\label{group__language__negotiation_ga9752378ca7c389892fea3fb2960263dd}
+Perform alterations on language types.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$language\_\-types}]Array of language type definitions.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__language__negotiation_ga8932d2167557c18966cd033cfbe0f37e}{hook\_\-language\_\-types\_\-info()} 
+\end{DoxySeeAlso}
+\hypertarget{group__language__negotiation_gaaea53d7377445168a1e71bf982d59f11}{
+\index{language\_\-negotiation@{language\_\-negotiation}!language\_\-fallback\_\-get\_\-candidates@{language\_\-fallback\_\-get\_\-candidates}}
+\index{language\_\-fallback\_\-get\_\-candidates@{language\_\-fallback\_\-get\_\-candidates}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{language\_\-fallback\_\-get\_\-candidates}]{\setlength{\rightskip}{0pt plus 5cm}language\_\-fallback\_\-get\_\-candidates (\$ {\em type} = {\ttfamily {\bf LANGUAGE\_\-TYPE\_\-CONTENT}})}}
+\label{group__language__negotiation_gaaea53d7377445168a1e71bf982d59f11}
+Returns the possible fallback languages ordered by language weight.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em (optional)}]The language type. Defaults to LANGUAGE\_\-TYPE\_\-CONTENT.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of language codes. 
+\end{DoxyReturn}
+\hypertarget{group__language__negotiation_ga643666b0e37987d93ab75235bb7729b5}{
+\index{language\_\-negotiation@{language\_\-negotiation}!language\_\-from\_\-default@{language\_\-from\_\-default}}
+\index{language\_\-from\_\-default@{language\_\-from\_\-default}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{language\_\-from\_\-default}]{\setlength{\rightskip}{0pt plus 5cm}language\_\-from\_\-default ()}}
+\label{group__language__negotiation_ga643666b0e37987d93ab75235bb7729b5}
+Returns the default language negotiation provider.
+
+\begin{DoxyReturn}{Returns}
+The default language code. 
+\end{DoxyReturn}
+\hypertarget{group__language__negotiation_ga483a318f6485628cbe7bdbf53bf80c5e}{
+\index{language\_\-negotiation@{language\_\-negotiation}!language\_\-initialize@{language\_\-initialize}}
+\index{language\_\-initialize@{language\_\-initialize}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{language\_\-initialize}]{\setlength{\rightskip}{0pt plus 5cm}language\_\-initialize (\$ {\em type})}}
+\label{group__language__negotiation_ga483a318f6485628cbe7bdbf53bf80c5e}
+Chooses a language based on language negotiation provider settings.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]The language type key to find the language for.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The negotiated language object. 
+\end{DoxyReturn}
+\hypertarget{group__language__negotiation_ga041066fd7d9ca70def383225d104c431}{
+\index{language\_\-negotiation@{language\_\-negotiation}!language\_\-negotiation\_\-get@{language\_\-negotiation\_\-get}}
+\index{language\_\-negotiation\_\-get@{language\_\-negotiation\_\-get}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{language\_\-negotiation\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}language\_\-negotiation\_\-get (\$ {\em type}, \/  \$ {\em provider\_\-id} = {\ttfamily NULL})}}
+\label{group__language__negotiation_ga041066fd7d9ca70def383225d104c431}
+Checks whether a language negotiation provider is enabled for a language type.
+
+This has two possible behaviors:
+\begin{DoxyItemize}
+\item If \$provider\_\-id is given return its ID if enabled, FALSE otherwise.
+\item If no ID is passed the first enabled language negotiation provider is returned.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]The language negotiation provider type. \item[{\em \$provider\_\-id}]The language negotiation provider ID.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The provider ID if it is enabled, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{group__language__negotiation_gadee487a44c0202fa55b74ea1541055d0}{
+\index{language\_\-negotiation@{language\_\-negotiation}!language\_\-negotiation\_\-get\_\-any@{language\_\-negotiation\_\-get\_\-any}}
+\index{language\_\-negotiation\_\-get\_\-any@{language\_\-negotiation\_\-get\_\-any}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{language\_\-negotiation\_\-get\_\-any}]{\setlength{\rightskip}{0pt plus 5cm}language\_\-negotiation\_\-get\_\-any (\$ {\em provider\_\-id})}}
+\label{group__language__negotiation_gadee487a44c0202fa55b74ea1541055d0}
+Checks if the language negotiation provider is enabled for any language type.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$provider\_\-id}]The language negotiation provider ID.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if there is at least one language type for which the given language provider is enabled, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{group__language__negotiation_gab97e8b88791a7487449a1a1e4eec871c}{
+\index{language\_\-negotiation@{language\_\-negotiation}!language\_\-negotiation\_\-get\_\-switch\_\-links@{language\_\-negotiation\_\-get\_\-switch\_\-links}}
+\index{language\_\-negotiation\_\-get\_\-switch\_\-links@{language\_\-negotiation\_\-get\_\-switch\_\-links}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{language\_\-negotiation\_\-get\_\-switch\_\-links}]{\setlength{\rightskip}{0pt plus 5cm}language\_\-negotiation\_\-get\_\-switch\_\-links (\$ {\em type}, \/  \$ {\em path})}}
+\label{group__language__negotiation_gab97e8b88791a7487449a1a1e4eec871c}
+Returns the language switch links for the given language.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]The language negotiation type. \item[{\em \$path}]The internal path the switch links will be relative to.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A keyed array of links ready to be themed. 
+\end{DoxyReturn}
+\hypertarget{group__language__negotiation_ga5e41e506c539a01a4ee945857c526e78}{
+\index{language\_\-negotiation@{language\_\-negotiation}!language\_\-negotiation\_\-info@{language\_\-negotiation\_\-info}}
+\index{language\_\-negotiation\_\-info@{language\_\-negotiation\_\-info}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{language\_\-negotiation\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}language\_\-negotiation\_\-info ()}}
+\label{group__language__negotiation_ga5e41e506c539a01a4ee945857c526e78}
+Returns all the defined language negotiation providers.
+
+\begin{DoxyReturn}{Returns}
+An array of language negotiation providers. 
+\end{DoxyReturn}
+\hypertarget{group__language__negotiation_ga3a0f894378f49038dbbaf35909a8e215}{
+\index{language\_\-negotiation@{language\_\-negotiation}!language\_\-negotiation\_\-purge@{language\_\-negotiation\_\-purge}}
+\index{language\_\-negotiation\_\-purge@{language\_\-negotiation\_\-purge}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{language\_\-negotiation\_\-purge}]{\setlength{\rightskip}{0pt plus 5cm}language\_\-negotiation\_\-purge ()}}
+\label{group__language__negotiation_ga3a0f894378f49038dbbaf35909a8e215}
+Removes any unused language negotation providers from the configuration. \hypertarget{group__language__negotiation_ga3a4f8df0ad1b5fef7399929111bab35a}{
+\index{language\_\-negotiation@{language\_\-negotiation}!language\_\-negotiation\_\-set@{language\_\-negotiation\_\-set}}
+\index{language\_\-negotiation\_\-set@{language\_\-negotiation\_\-set}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{language\_\-negotiation\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}language\_\-negotiation\_\-set (\$ {\em type}, \/  \$ {\em language\_\-providers})}}
+\label{group__language__negotiation_ga3a4f8df0ad1b5fef7399929111bab35a}
+Saves a list of language negotiation providers.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]The language negotiation type. \item[{\em \$language\_\-providers}]An array of language negotiation provider weights keyed by provider ID. \end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__language__negotiation_ga6ab68f6fac82e1ae755c06787b042a39}{language\_\-provider\_\-weight()} 
+\end{DoxySeeAlso}
+\hypertarget{group__language__negotiation_ga031f4e0102fa2365a45709ff6935fee2}{
+\index{language\_\-negotiation@{language\_\-negotiation}!language\_\-provider\_\-invoke@{language\_\-provider\_\-invoke}}
+\index{language\_\-provider\_\-invoke@{language\_\-provider\_\-invoke}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{language\_\-provider\_\-invoke}]{\setlength{\rightskip}{0pt plus 5cm}language\_\-provider\_\-invoke (\$ {\em provider\_\-id}, \/  \$ {\em provider} = {\ttfamily NULL})}}
+\label{group__language__negotiation_ga031f4e0102fa2365a45709ff6935fee2}
+Helper function used to cache the language negotiation providers results.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$provider\_\-id}]The language negotiation provider's identifier. \item[{\em \$provider}](optional) An associative array of information about the provider to be invoked (see \hyperlink{group__language__negotiation_gabcac4b239272ba30c6320a0af2fab46e}{hook\_\-language\_\-negotiation\_\-info()} for details). If not passed in, it will be loaded through \hyperlink{group__language__negotiation_ga5e41e506c539a01a4ee945857c526e78}{language\_\-negotiation\_\-info()}.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A language object representing the language chosen by the provider. 
+\end{DoxyReturn}
+\hypertarget{group__language__negotiation_ga6ab68f6fac82e1ae755c06787b042a39}{
+\index{language\_\-negotiation@{language\_\-negotiation}!language\_\-provider\_\-weight@{language\_\-provider\_\-weight}}
+\index{language\_\-provider\_\-weight@{language\_\-provider\_\-weight}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{language\_\-provider\_\-weight}]{\setlength{\rightskip}{0pt plus 5cm}language\_\-provider\_\-weight (\$ {\em provider})}}
+\label{group__language__negotiation_ga6ab68f6fac82e1ae755c06787b042a39}
+Returns the passed language negotiation provider weight or a default value.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$provider}]A language negotiation provider data structure.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A numeric weight. 
+\end{DoxyReturn}
+\hypertarget{group__language__negotiation_gaa05284e85de23a8a8ab54adbd8548cb4}{
+\index{language\_\-negotiation@{language\_\-negotiation}!language\_\-types\_\-configurable@{language\_\-types\_\-configurable}}
+\index{language\_\-types\_\-configurable@{language\_\-types\_\-configurable}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{language\_\-types\_\-configurable}]{\setlength{\rightskip}{0pt plus 5cm}language\_\-types\_\-configurable (\$ {\em stored} = {\ttfamily TRUE})}}
+\label{group__language__negotiation_gaa05284e85de23a8a8ab54adbd8548cb4}
+Returns only the configurable language types.
+
+A language type maybe configurable or fixed. A fixed language type is a type whose language negotiation providers are module-\/defined and not altered through the user interface.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$stored}]Optional. By default retrieves values from the 'language\_\-types' variable to avoid unnecessary hook invocations. If set to FALSE retrieves values from the actual language type definitions. This allows to react to alterations performed on the definitions by modules installed after the 'language\_\-types' variable is set.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of language type names. 
+\end{DoxyReturn}
+\hypertarget{group__language__negotiation_ga04fd94cbb41f6b24ef9d3b4c37df86c1}{
+\index{language\_\-negotiation@{language\_\-negotiation}!language\_\-types\_\-disable@{language\_\-types\_\-disable}}
+\index{language\_\-types\_\-disable@{language\_\-types\_\-disable}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{language\_\-types\_\-disable}]{\setlength{\rightskip}{0pt plus 5cm}language\_\-types\_\-disable (\$ {\em types})}}
+\label{group__language__negotiation_ga04fd94cbb41f6b24ef9d3b4c37df86c1}
+Disables the given language types.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$types}]An array of language types. \end{DoxyParams}
+\hypertarget{group__language__negotiation_gadf6422ee7cb14204e01311f85a8c8b18}{
+\index{language\_\-negotiation@{language\_\-negotiation}!language\_\-types\_\-info@{language\_\-types\_\-info}}
+\index{language\_\-types\_\-info@{language\_\-types\_\-info}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{language\_\-types\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}language\_\-types\_\-info ()}}
+\label{group__language__negotiation_gadf6422ee7cb14204e01311f85a8c8b18}
+Returns all the defined language types.
+
+\begin{DoxyReturn}{Returns}
+An array of language type names. The name will be used as the global variable name the language value will be stored in. 
+\end{DoxyReturn}
+\hypertarget{group__language__negotiation_ga6f6a0814332d6232293b84b38de5d4d0}{
+\index{language\_\-negotiation@{language\_\-negotiation}!language\_\-types\_\-set@{language\_\-types\_\-set}}
+\index{language\_\-types\_\-set@{language\_\-types\_\-set}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{language\_\-types\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}language\_\-types\_\-set ()}}
+\label{group__language__negotiation_ga6f6a0814332d6232293b84b38de5d4d0}
+Updates the language type configuration. \hypertarget{group__language__negotiation_gab8ad64d53e83cae459c25341e564968d}{
+\index{language\_\-negotiation@{language\_\-negotiation}!language\_\-url\_\-split\_\-prefix@{language\_\-url\_\-split\_\-prefix}}
+\index{language\_\-url\_\-split\_\-prefix@{language\_\-url\_\-split\_\-prefix}!language_negotiation@{language\_\-negotiation}}
+\subsubsection[{language\_\-url\_\-split\_\-prefix}]{\setlength{\rightskip}{0pt plus 5cm}language\_\-url\_\-split\_\-prefix (\$ {\em path}, \/  \$ {\em languages})}}
+\label{group__language__negotiation_gab8ad64d53e83cae459c25341e564968d}
+Splits the given path into prefix and actual path.
+
+Parse the given path and return the language object identified by the prefix and the actual path.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$path}]The path to split. \item[{\em \$languages}]An array of valid languages.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array composed of:
+\begin{DoxyItemize}
+\item A language object corresponding to the identified prefix on success, FALSE otherwise.
+\item The path without the prefix on success, the given path otherwise. 
+\end{DoxyItemize}
+\end{DoxyReturn}

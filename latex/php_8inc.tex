@@ -1,0 +1,64 @@
+\hypertarget{php_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/access/php.inc File Reference}
+\label{php_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/access/php.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/access/php.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{php_8inc_ad173cf9e9891ef70924fad63a89396fa}{ctools\_\-php\_\-ctools\_\-access\_\-settings} (\$form, \&\$form\_\-state, \$conf)
+\item 
+\hyperlink{php_8inc_a7acb817afdb0c9ef7b1c6fa6cc71674f}{ctools\_\-php\_\-ctools\_\-access\_\-check} (\$\_\-\_\-conf, \$contexts)
+\item 
+\hyperlink{php_8inc_ad017dbac9fb627e7fb7cb9ac4cd95147}{ctools\_\-php\_\-ctools\_\-access\_\-summary} (\$conf, \$contexts)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{php_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide access control based on evaluated PHP. 
+
+\subsection{Function Documentation}
+\hypertarget{php_8inc_a7acb817afdb0c9ef7b1c6fa6cc71674f}{
+\index{php.inc@{php.inc}!ctools\_\-php\_\-ctools\_\-access\_\-check@{ctools\_\-php\_\-ctools\_\-access\_\-check}}
+\index{ctools\_\-php\_\-ctools\_\-access\_\-check@{ctools\_\-php\_\-ctools\_\-access\_\-check}!php.inc@{php.inc}}
+\subsubsection[{ctools\_\-php\_\-ctools\_\-access\_\-check}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-php\_\-ctools\_\-access\_\-check (\$ {\em \_\-\_\-conf}, \/  \$ {\em contexts})}}
+\label{php_8inc_a7acb817afdb0c9ef7b1c6fa6cc71674f}
+Check for access. \hypertarget{php_8inc_ad173cf9e9891ef70924fad63a89396fa}{
+\index{php.inc@{php.inc}!ctools\_\-php\_\-ctools\_\-access\_\-settings@{ctools\_\-php\_\-ctools\_\-access\_\-settings}}
+\index{ctools\_\-php\_\-ctools\_\-access\_\-settings@{ctools\_\-php\_\-ctools\_\-access\_\-settings}!php.inc@{php.inc}}
+\subsubsection[{ctools\_\-php\_\-ctools\_\-access\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-php\_\-ctools\_\-access\_\-settings (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em conf})}}
+\label{php_8inc_ad173cf9e9891ef70924fad63a89396fa}
+Settings form for the 'by perm' access plugin
+
+\begin{Desc}
+\item[\hyperlink{todo__todo000043}{Todo}]Need a way to provide a list of all available contexts to be used by the eval-\/ed PHP. \end{Desc}
+\hypertarget{php_8inc_ad017dbac9fb627e7fb7cb9ac4cd95147}{
+\index{php.inc@{php.inc}!ctools\_\-php\_\-ctools\_\-access\_\-summary@{ctools\_\-php\_\-ctools\_\-access\_\-summary}}
+\index{ctools\_\-php\_\-ctools\_\-access\_\-summary@{ctools\_\-php\_\-ctools\_\-access\_\-summary}!php.inc@{php.inc}}
+\subsubsection[{ctools\_\-php\_\-ctools\_\-access\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-php\_\-ctools\_\-access\_\-summary (\$ {\em conf}, \/  \$ {\em contexts})}}
+\label{php_8inc_ad017dbac9fb627e7fb7cb9ac4cd95147}
+Provide a summary description based upon the checked roles. 
+
+\subsection{Variable Documentation}
+\hypertarget{php_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{php.inc@{php.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!php.inc@{php.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{php_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t("PHP Code"),
+  'description' => t('Control access through arbitrary PHP code.'),
+  'callback' => 'ctools_php_ctools_access_check',
+  'default' => array('description' => '', 'php' => ''),
+  'settings form' => 'ctools_php_ctools_access_settings',
+  'summary' => 'ctools_php_ctools_access_summary',
+  'all contexts' => TRUE,
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

@@ -1,0 +1,228 @@
+\hypertarget{dashboard_8module}{
+\section{html/modules/dashboard/dashboard.module File Reference}
+\label{dashboard_8module}\index{html/modules/dashboard/dashboard.module@{html/modules/dashboard/dashboard.module}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{dashboard_8module_a5156a3b29dbbd20299db17270ca1376f}{dashboard\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{dashboard_8module_a68af4d617d1fce11a414953a1f78f80b}{dashboard\_\-menu} ()
+\item 
+\hyperlink{dashboard_8module_ae4348345274280e037d81be3211df773}{dashboard\_\-permission} ()
+\item 
+\hyperlink{dashboard_8module_a3078195deddafd6b6054bf7f3928207a}{dashboard\_\-block\_\-info\_\-alter} (\&\$blocks, \$theme, \$code\_\-blocks)
+\item 
+\hyperlink{dashboard_8module_a8eb99c8e9edd83aab44177f65e1c78b1}{dashboard\_\-block\_\-list\_\-alter} (\&\$blocks)
+\item 
+\hyperlink{dashboard_8module_a2fb8f282cd5d5c75158550690d39dc5d}{dashboard\_\-page\_\-build} (\&\$page)
+\item 
+\hyperlink{dashboard_8module_aaa46ea0b9298c11e6e2f4113dd1e6037}{dashboard\_\-system\_\-info\_\-alter} (\&\$info, \$file, \$type)
+\item 
+\hyperlink{dashboard_8module_a5eb2465436208886f8f72abfb1c7a540}{dashboard\_\-theme} ()
+\item 
+\hyperlink{dashboard_8module_ac9d916ce89f60f399c96ace265743115}{dashboard\_\-forms} ()
+\item 
+\hyperlink{dashboard_8module_ac7e281708902d92b286b4f5d31d3edad}{dashboard\_\-admin} (\$launch\_\-customize=FALSE)
+\item 
+\hyperlink{dashboard_8module_a65f41fb117c7c340bcea3b03d8a03086}{dashboard\_\-admin\_\-blocks} ()
+\item 
+\hyperlink{dashboard_8module_a27b951de6a5c0b090a3415492c9e15c7}{dashboard\_\-form\_\-block\_\-admin\_\-display\_\-form\_\-alter} (\&\$form, \&\$form\_\-state, \$form\_\-id)
+\item 
+\hyperlink{dashboard_8module_a51045bc5f407b9e76a6dfb9b182bad12}{dashboard\_\-form\_\-dashboard\_\-admin\_\-display\_\-form\_\-alter} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{dashboard_8module_abc9f64b9c3b100c4e0e4450cc8c50bf0}{dashboard\_\-form\_\-block\_\-admin\_\-configure\_\-alter} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{dashboard_8module_a36ed992fdf3f66ca72b06a219ff42100}{dashboard\_\-form\_\-block\_\-add\_\-block\_\-form\_\-alter} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{dashboard_8module_addaee36bd5501ed3c8fbefa12a866f22}{template\_\-preprocess\_\-dashboard\_\-admin\_\-display\_\-form} (\&\$variables)
+\item 
+\hyperlink{dashboard_8module_ac63a42b45d92441592f7945f320cbd52}{dashboard\_\-is\_\-visible} ()
+\item 
+\hyperlink{dashboard_8module_a23d85f4c4aadbcc16a39bc7267689dea}{dashboard\_\-region\_\-descriptions} ()
+\item 
+\hyperlink{dashboard_8module_aa1609a0c67095a8c58a242d2a7e470bd}{dashboard\_\-regions} ()
+\item 
+\hyperlink{dashboard_8module_ad0e0798be026863f02c9b4e316fc1286}{dashboard\_\-dashboard\_\-regions} ()
+\item 
+\hyperlink{dashboard_8module_a4daa6ec664ef4e666918635c4fcb2002}{dashboard\_\-show\_\-disabled} ()
+\item 
+\hyperlink{dashboard_8module_a801487bbf9658e337fe3b1b434979420}{dashboard\_\-show\_\-block\_\-content} (\$module, \$delta)
+\item 
+\hyperlink{dashboard_8module_a9e4047a9a86d0c8ae438a3f4e61c9a81}{dashboard\_\-update} ()
+\item 
+\hyperlink{group__themeable_ga6c02d8ffcbb05e9a3b8a6159588ea756}{theme\_\-dashboard} (\$variables)
+\item 
+\hyperlink{group__themeable_gaa23f321cda9a9681189b56dde889c5be}{theme\_\-dashboard\_\-admin} (\$variables)
+\item 
+\hyperlink{group__themeable_ga2f5b5b4f1677e2768387c88b6532164c}{theme\_\-dashboard\_\-region} (\$variables)
+\item 
+\hyperlink{group__themeable_ga8ac4d0963e51b469850301e4c1e85cb6}{theme\_\-dashboard\_\-disabled\_\-blocks} (\$variables)
+\item 
+\hyperlink{group__themeable_ga4a956aaf4c079a8d60542ed1ad9f3b9e}{theme\_\-dashboard\_\-disabled\_\-block} (\$variables)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides a dashboard page in the administrative interface. 
+
+\subsection{Function Documentation}
+\hypertarget{dashboard_8module_ac7e281708902d92b286b4f5d31d3edad}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-admin@{dashboard\_\-admin}}
+\index{dashboard\_\-admin@{dashboard\_\-admin}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-admin}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-admin (\$ {\em launch\_\-customize} = {\ttfamily FALSE})}}
+\label{dashboard_8module_ac7e281708902d92b286b4f5d31d3edad}
+Page callback: Displays the dashboard.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$launch\_\-customize}]Whether to launch in customization mode right away. TRUE or FALSE. \end{DoxyParams}
+\hypertarget{dashboard_8module_a65f41fb117c7c340bcea3b03d8a03086}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-admin\_\-blocks@{dashboard\_\-admin\_\-blocks}}
+\index{dashboard\_\-admin\_\-blocks@{dashboard\_\-admin\_\-blocks}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-admin\_\-blocks}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-admin\_\-blocks ()}}
+\label{dashboard_8module_a65f41fb117c7c340bcea3b03d8a03086}
+Page callback: Builds the page for administering dashboard blocks.
+
+This page reuses the Block module's administration form but limits editing to blocks that are available to appear on the dashboard.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{block_8admin_8inc_a46d186397b98e4faf46681f7f9cd86a1}{block\_\-admin\_\-display()} 
+
+\hyperlink{group__forms_ga19dc9d98e83e7e7c9574298100752ba7}{block\_\-admin\_\-display\_\-form()} 
+
+\hyperlink{dashboard_8module_a51045bc5f407b9e76a6dfb9b182bad12}{dashboard\_\-form\_\-dashboard\_\-admin\_\-display\_\-form\_\-alter()} 
+
+\hyperlink{dashboard_8module_addaee36bd5501ed3c8fbefa12a866f22}{template\_\-preprocess\_\-dashboard\_\-admin\_\-display\_\-form()} 
+\end{DoxySeeAlso}
+\hypertarget{dashboard_8module_a3078195deddafd6b6054bf7f3928207a}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-block\_\-info\_\-alter@{dashboard\_\-block\_\-info\_\-alter}}
+\index{dashboard\_\-block\_\-info\_\-alter@{dashboard\_\-block\_\-info\_\-alter}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-block\_\-info\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-block\_\-info\_\-alter (\&\$ {\em blocks}, \/  \$ {\em theme}, \/  \$ {\em code\_\-blocks})}}
+\label{dashboard_8module_a3078195deddafd6b6054bf7f3928207a}
+Implements \hyperlink{group__hooks_ga6a57bda0a2640ccadef4d7c8b6d2a26f}{hook\_\-block\_\-info\_\-alter()}. \hypertarget{dashboard_8module_a8eb99c8e9edd83aab44177f65e1c78b1}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-block\_\-list\_\-alter@{dashboard\_\-block\_\-list\_\-alter}}
+\index{dashboard\_\-block\_\-list\_\-alter@{dashboard\_\-block\_\-list\_\-alter}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-block\_\-list\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-block\_\-list\_\-alter (\&\$ {\em blocks})}}
+\label{dashboard_8module_a8eb99c8e9edd83aab44177f65e1c78b1}
+Implements \hyperlink{group__hooks_gaf38c7633b52b18831e3ec0459d8e9f41}{hook\_\-block\_\-list\_\-alter()}.
+
+Skip rendering dashboard blocks when not on the dashboard page itself. This prevents expensive dashboard blocks from causing performance issues on pages where they will never be displayed. \hypertarget{dashboard_8module_ad0e0798be026863f02c9b4e316fc1286}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-dashboard\_\-regions@{dashboard\_\-dashboard\_\-regions}}
+\index{dashboard\_\-dashboard\_\-regions@{dashboard\_\-dashboard\_\-regions}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-dashboard\_\-regions}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-dashboard\_\-regions ()}}
+\label{dashboard_8module_ad0e0798be026863f02c9b4e316fc1286}
+Implements \hyperlink{group__hooks_ga533120daedea0c0bfd332400aab41ae2}{hook\_\-dashboard\_\-regions()}. \hypertarget{dashboard_8module_a36ed992fdf3f66ca72b06a219ff42100}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-form\_\-block\_\-add\_\-block\_\-form\_\-alter@{dashboard\_\-form\_\-block\_\-add\_\-block\_\-form\_\-alter}}
+\index{dashboard\_\-form\_\-block\_\-add\_\-block\_\-form\_\-alter@{dashboard\_\-form\_\-block\_\-add\_\-block\_\-form\_\-alter}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-form\_\-block\_\-add\_\-block\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-form\_\-block\_\-add\_\-block\_\-form\_\-alter (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{dashboard_8module_a36ed992fdf3f66ca72b06a219ff42100}
+Implements \hyperlink{group__hooks_ga8d4a4089551493d55911bd5c4f218264}{hook\_\-form\_\-FORM\_\-ID\_\-alter()}. \hypertarget{dashboard_8module_abc9f64b9c3b100c4e0e4450cc8c50bf0}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-form\_\-block\_\-admin\_\-configure\_\-alter@{dashboard\_\-form\_\-block\_\-admin\_\-configure\_\-alter}}
+\index{dashboard\_\-form\_\-block\_\-admin\_\-configure\_\-alter@{dashboard\_\-form\_\-block\_\-admin\_\-configure\_\-alter}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-form\_\-block\_\-admin\_\-configure\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-form\_\-block\_\-admin\_\-configure\_\-alter (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{dashboard_8module_abc9f64b9c3b100c4e0e4450cc8c50bf0}
+Implements \hyperlink{group__hooks_ga8d4a4089551493d55911bd5c4f218264}{hook\_\-form\_\-FORM\_\-ID\_\-alter()}. \hypertarget{dashboard_8module_a27b951de6a5c0b090a3415492c9e15c7}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-form\_\-block\_\-admin\_\-display\_\-form\_\-alter@{dashboard\_\-form\_\-block\_\-admin\_\-display\_\-form\_\-alter}}
+\index{dashboard\_\-form\_\-block\_\-admin\_\-display\_\-form\_\-alter@{dashboard\_\-form\_\-block\_\-admin\_\-display\_\-form\_\-alter}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-form\_\-block\_\-admin\_\-display\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-form\_\-block\_\-admin\_\-display\_\-form\_\-alter (\&\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em form\_\-id})}}
+\label{dashboard_8module_a27b951de6a5c0b090a3415492c9e15c7}
+Implements \hyperlink{group__hooks_ga8d4a4089551493d55911bd5c4f218264}{hook\_\-form\_\-FORM\_\-ID\_\-alter()}. \hypertarget{dashboard_8module_a51045bc5f407b9e76a6dfb9b182bad12}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-form\_\-dashboard\_\-admin\_\-display\_\-form\_\-alter@{dashboard\_\-form\_\-dashboard\_\-admin\_\-display\_\-form\_\-alter}}
+\index{dashboard\_\-form\_\-dashboard\_\-admin\_\-display\_\-form\_\-alter@{dashboard\_\-form\_\-dashboard\_\-admin\_\-display\_\-form\_\-alter}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-form\_\-dashboard\_\-admin\_\-display\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-form\_\-dashboard\_\-admin\_\-display\_\-form\_\-alter (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{dashboard_8module_a51045bc5f407b9e76a6dfb9b182bad12}
+Implements \hyperlink{group__hooks_ga8d4a4089551493d55911bd5c4f218264}{hook\_\-form\_\-FORM\_\-ID\_\-alter()}. \hypertarget{dashboard_8module_ac9d916ce89f60f399c96ace265743115}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-forms@{dashboard\_\-forms}}
+\index{dashboard\_\-forms@{dashboard\_\-forms}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-forms}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-forms ()}}
+\label{dashboard_8module_ac9d916ce89f60f399c96ace265743115}
+Implements \hyperlink{group__hooks_gaa764fee74b85797f75c0c923cad628d5}{hook\_\-forms()}. \hypertarget{dashboard_8module_a5156a3b29dbbd20299db17270ca1376f}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-help@{dashboard\_\-help}}
+\index{dashboard\_\-help@{dashboard\_\-help}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{dashboard_8module_a5156a3b29dbbd20299db17270ca1376f}
+Implements \hyperlink{group__hooks_ga5589c2714a782738e8851c4c90231f0e}{hook\_\-help()}. \hypertarget{dashboard_8module_ac63a42b45d92441592f7945f320cbd52}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-is\_\-visible@{dashboard\_\-is\_\-visible}}
+\index{dashboard\_\-is\_\-visible@{dashboard\_\-is\_\-visible}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-is\_\-visible}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-is\_\-visible ()}}
+\label{dashboard_8module_ac63a42b45d92441592f7945f320cbd52}
+Determines if the dashboard should be displayed on the current page.
+
+This function checks if the user is currently viewing the dashboard and has access to see it. It is used by other functions in the dashboard module to decide whether or not the dashboard content should be displayed to the current user.
+
+Although the menu system normally handles the above tasks, it only does so for the main page content. However, the dashboard is not part of the main page content, but rather is displayed in special regions of the page (so it can interface with the Block module's method of managing page regions). We therefore need to maintain this separate function to check the menu item for us.
+
+\begin{DoxyReturn}{Returns}
+TRUE if the dashboard should be visible on the current page, FALSE otherwise.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{dashboard_8module_a8eb99c8e9edd83aab44177f65e1c78b1}{dashboard\_\-block\_\-list\_\-alter()} 
+
+\hyperlink{dashboard_8module_a2fb8f282cd5d5c75158550690d39dc5d}{dashboard\_\-page\_\-build()} 
+\end{DoxySeeAlso}
+\hypertarget{dashboard_8module_a68af4d617d1fce11a414953a1f78f80b}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-menu@{dashboard\_\-menu}}
+\index{dashboard\_\-menu@{dashboard\_\-menu}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-menu ()}}
+\label{dashboard_8module_a68af4d617d1fce11a414953a1f78f80b}
+Implements \hyperlink{group__hooks_ga5c95244fea59b25666e409759e133ded}{hook\_\-menu()}. \hypertarget{dashboard_8module_a2fb8f282cd5d5c75158550690d39dc5d}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-page\_\-build@{dashboard\_\-page\_\-build}}
+\index{dashboard\_\-page\_\-build@{dashboard\_\-page\_\-build}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-page\_\-build}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-page\_\-build (\&\$ {\em page})}}
+\label{dashboard_8module_a2fb8f282cd5d5c75158550690d39dc5d}
+Implements \hyperlink{group__hooks_ga16d8d8ae818dc759bbe539e16ff5b93b}{hook\_\-page\_\-build()}.
+
+Display dashboard blocks in the main content region. \hypertarget{dashboard_8module_ae4348345274280e037d81be3211df773}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-permission@{dashboard\_\-permission}}
+\index{dashboard\_\-permission@{dashboard\_\-permission}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-permission}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-permission ()}}
+\label{dashboard_8module_ae4348345274280e037d81be3211df773}
+Implements \hyperlink{group__hooks_ga2b22b45f4925f2478412477bae329713}{hook\_\-permission()}. \hypertarget{dashboard_8module_a23d85f4c4aadbcc16a39bc7267689dea}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-region\_\-descriptions@{dashboard\_\-region\_\-descriptions}}
+\index{dashboard\_\-region\_\-descriptions@{dashboard\_\-region\_\-descriptions}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-region\_\-descriptions}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-region\_\-descriptions ()}}
+\label{dashboard_8module_a23d85f4c4aadbcc16a39bc7267689dea}
+Returns an array of dashboard region descriptions, keyed by region name. \hypertarget{dashboard_8module_aa1609a0c67095a8c58a242d2a7e470bd}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-regions@{dashboard\_\-regions}}
+\index{dashboard\_\-regions@{dashboard\_\-regions}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-regions}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-regions ()}}
+\label{dashboard_8module_aa1609a0c67095a8c58a242d2a7e470bd}
+Returns an array of dashboard region names. \hypertarget{dashboard_8module_a801487bbf9658e337fe3b1b434979420}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-show\_\-block\_\-content@{dashboard\_\-show\_\-block\_\-content}}
+\index{dashboard\_\-show\_\-block\_\-content@{dashboard\_\-show\_\-block\_\-content}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-show\_\-block\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-show\_\-block\_\-content (\$ {\em module}, \/  \$ {\em delta})}}
+\label{dashboard_8module_a801487bbf9658e337fe3b1b434979420}
+Ajax callback: Displays the rendered contents of a specific block.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$module}]The block's module name. \item[{\em \$delta}]The block's delta. \end{DoxyParams}
+\hypertarget{dashboard_8module_a4daa6ec664ef4e666918635c4fcb2002}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-show\_\-disabled@{dashboard\_\-show\_\-disabled}}
+\index{dashboard\_\-show\_\-disabled@{dashboard\_\-show\_\-disabled}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-show\_\-disabled}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-show\_\-disabled ()}}
+\label{dashboard_8module_a4daa6ec664ef4e666918635c4fcb2002}
+Ajax callback: Shows disabled blocks in the dashboard customization mode. \hypertarget{dashboard_8module_aaa46ea0b9298c11e6e2f4113dd1e6037}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-system\_\-info\_\-alter@{dashboard\_\-system\_\-info\_\-alter}}
+\index{dashboard\_\-system\_\-info\_\-alter@{dashboard\_\-system\_\-info\_\-alter}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-system\_\-info\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-system\_\-info\_\-alter (\&\$ {\em info}, \/  \$ {\em file}, \/  \$ {\em type})}}
+\label{dashboard_8module_aaa46ea0b9298c11e6e2f4113dd1e6037}
+Implements \hyperlink{group__hooks_ga7dd7f887131916d5bbbb02ae87a9113e}{hook\_\-system\_\-info\_\-alter()}.
+
+Add regions to each theme to store the dashboard blocks. \hypertarget{dashboard_8module_a5eb2465436208886f8f72abfb1c7a540}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-theme@{dashboard\_\-theme}}
+\index{dashboard\_\-theme@{dashboard\_\-theme}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-theme ()}}
+\label{dashboard_8module_a5eb2465436208886f8f72abfb1c7a540}
+Implements \hyperlink{group__hooks_ga013ccb45c7aaab1c16cf9691428c910d}{hook\_\-theme()}. \hypertarget{dashboard_8module_a9e4047a9a86d0c8ae438a3f4e61c9a81}{
+\index{dashboard.module@{dashboard.module}!dashboard\_\-update@{dashboard\_\-update}}
+\index{dashboard\_\-update@{dashboard\_\-update}!dashboard.module@{dashboard.module}}
+\subsubsection[{dashboard\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}dashboard\_\-update ()}}
+\label{dashboard_8module_a9e4047a9a86d0c8ae438a3f4e61c9a81}
+Sets the new weight of each region according to the drag-\/and-\/drop order. \hypertarget{dashboard_8module_addaee36bd5501ed3c8fbefa12a866f22}{
+\index{dashboard.module@{dashboard.module}!template\_\-preprocess\_\-dashboard\_\-admin\_\-display\_\-form@{template\_\-preprocess\_\-dashboard\_\-admin\_\-display\_\-form}}
+\index{template\_\-preprocess\_\-dashboard\_\-admin\_\-display\_\-form@{template\_\-preprocess\_\-dashboard\_\-admin\_\-display\_\-form}!dashboard.module@{dashboard.module}}
+\subsubsection[{template\_\-preprocess\_\-dashboard\_\-admin\_\-display\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}template\_\-preprocess\_\-dashboard\_\-admin\_\-display\_\-form (\&\$ {\em variables})}}
+\label{dashboard_8module_addaee36bd5501ed3c8fbefa12a866f22}
+Preprocesses variables for \hyperlink{block-admin-display-form_8tpl_8php}{block-\/admin-\/display-\/form.tpl.php}. 

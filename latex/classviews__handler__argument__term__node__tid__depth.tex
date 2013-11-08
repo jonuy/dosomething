@@ -1,0 +1,82 @@
+\hypertarget{classviews__handler__argument__term__node__tid__depth}{
+\section{views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth Class Reference}
+\label{classviews__handler__argument__term__node__tid__depth}\index{views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth@{views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth}}
+}
+Inheritance diagram for views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classviews__handler__argument__term__node__tid__depth}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__handler__argument__term__node__tid__depth_ae285fe11521bfb9a6cd4f79b498a28a7}{
+{\bfseries option\_\-definition} ()}
+\label{classviews__handler__argument__term__node__tid__depth_ae285fe11521bfb9a6cd4f79b498a28a7}
+
+\item 
+\hyperlink{classviews__handler__argument__term__node__tid__depth_adb15b091303182e330a162d384676e50}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__handler__argument__term__node__tid__depth_a4cbf578a06b12655b9a5aa8fcee4097d}{set\_\-breadcrumb} (\&\$breadcrumb)
+\item 
+\hyperlink{classviews__handler__argument__term__node__tid__depth_a507f5facd0421728d2d0a5f350839dfc}{default\_\-actions} (\$which=NULL)
+\item 
+\hyperlink{classviews__handler__argument__term__node__tid__depth_a0e537f160d9c8da21a844133ded89672}{query} (\$group\_\-by=FALSE)
+\item 
+\hyperlink{classviews__handler__argument__term__node__tid__depth_ad5a2ca190b4b164a810f84f808faa586}{title} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Argument handler for taxonomy terms with depth.
+
+This handler is actually part of the node table and has some restrictions, because it uses a subquery to find nodes with. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__handler__argument__term__node__tid__depth_a507f5facd0421728d2d0a5f350839dfc}{
+\index{views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth@{views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth}!default\_\-actions@{default\_\-actions}}
+\index{default\_\-actions@{default\_\-actions}!views_handler_argument_term_node_tid_depth@{views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth}}
+\subsubsection[{default\_\-actions}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth::default\_\-actions (\$ {\em which} = {\ttfamily NULL})}}
+\label{classviews__handler__argument__term__node__tid__depth_a507f5facd0421728d2d0a5f350839dfc}
+Override \hyperlink{classviews__handler__argument__term__node__tid__depth_a507f5facd0421728d2d0a5f350839dfc}{default\_\-actions()} to remove summary actions. 
+
+Reimplemented from \hyperlink{classviews__handler__argument_abf38ef334b6e18e0aa43e5a829e3ce33}{views\_\-handler\_\-argument}.\hypertarget{classviews__handler__argument__term__node__tid__depth_adb15b091303182e330a162d384676e50}{
+\index{views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth@{views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_handler_argument_term_node_tid_depth@{views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__handler__argument__term__node__tid__depth_adb15b091303182e330a162d384676e50}
+Build the options form. 
+
+Reimplemented from \hyperlink{classviews__handler__argument_a44f015a0d527983ae6df2689f66b2c24}{views\_\-handler\_\-argument}.\hypertarget{classviews__handler__argument__term__node__tid__depth_a0e537f160d9c8da21a844133ded89672}{
+\index{views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth@{views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth}!query@{query}}
+\index{query@{query}!views_handler_argument_term_node_tid_depth@{views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth}}
+\subsubsection[{query}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth::query (\$ {\em group\_\-by} = {\ttfamily FALSE})}}
+\label{classviews__handler__argument__term__node__tid__depth_a0e537f160d9c8da21a844133ded89672}
+Set up the query for this argument.
+
+The argument sent may be found at \$this-\/$>$argument. 
+
+Reimplemented from \hyperlink{classviews__handler__argument_af9ddabf5d386782c8ffc5785b7ae4263}{views\_\-handler\_\-argument}.\hypertarget{classviews__handler__argument__term__node__tid__depth_a4cbf578a06b12655b9a5aa8fcee4097d}{
+\index{views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth@{views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth}!set\_\-breadcrumb@{set\_\-breadcrumb}}
+\index{set\_\-breadcrumb@{set\_\-breadcrumb}!views_handler_argument_term_node_tid_depth@{views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth}}
+\subsubsection[{set\_\-breadcrumb}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth::set\_\-breadcrumb (\&\$ {\em breadcrumb})}}
+\label{classviews__handler__argument__term__node__tid__depth_a4cbf578a06b12655b9a5aa8fcee4097d}
+Give an argument the opportunity to modify the breadcrumb, if it wants. This only gets called on displays where a breadcrumb is actually used.
+
+The breadcrumb will be in the form of an array, with the keys being the path and the value being the already sanitized title of the path. 
+
+Reimplemented from \hyperlink{classviews__handler__argument_a06263489052be463efd3c4afdf73851d}{views\_\-handler\_\-argument}.\hypertarget{classviews__handler__argument__term__node__tid__depth_ad5a2ca190b4b164a810f84f808faa586}{
+\index{views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth@{views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth}!title@{title}}
+\index{title@{title}!views_handler_argument_term_node_tid_depth@{views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth}}
+\subsubsection[{title}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth::title ()}}
+\label{classviews__handler__argument__term__node__tid__depth_ad5a2ca190b4b164a810f84f808faa586}
+Get the title this argument will assign the \hyperlink{classview}{view}, given the argument.
+
+This usually needs to be overridden to provide a proper title. 
+
+Reimplemented from \hyperlink{classviews__handler__argument_a76181ac24e7be4a09aaafc1fa5f15ea1}{views\_\-handler\_\-argument}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/modules/taxonomy/\hyperlink{views__handler__argument__term__node__tid__depth_8inc}{views\_\-handler\_\-argument\_\-term\_\-node\_\-tid\_\-depth.inc}\end{DoxyCompactItemize}

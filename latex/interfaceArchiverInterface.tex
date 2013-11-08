@@ -1,0 +1,104 @@
+\hypertarget{interfaceArchiverInterface}{
+\section{ArchiverInterface Interface Reference}
+\label{interfaceArchiverInterface}\index{ArchiverInterface@{ArchiverInterface}}
+}
+Inheritance diagram for ArchiverInterface::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{interfaceArchiverInterface}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfaceArchiverInterface_aa380cf3e1bcf80763ccd6c790b50aee5}{\_\-\_\-construct} (\$file\_\-path)
+\item 
+\hyperlink{interfaceArchiverInterface_aedd1c39f36b45e2f12381003d83ee4bf}{add} (\$file\_\-path)
+\item 
+\hyperlink{interfaceArchiverInterface_adf87dd4d31b2af7c9a90617436683edc}{remove} (\$path)
+\item 
+\hyperlink{interfaceArchiverInterface_a6537e95c432eeedfdc5c72342a40eab2}{extract} (\$path, array \$files=array())
+\item 
+\hyperlink{interfaceArchiverInterface_a0be527152061af9bfd22a525fc29d78d}{listContents} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines the common interface for all Archiver classes. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{interfaceArchiverInterface_aa380cf3e1bcf80763ccd6c790b50aee5}{
+\index{ArchiverInterface@{ArchiverInterface}!\_\-\_\-construct@{\_\-\_\-construct}}
+\index{\_\-\_\-construct@{\_\-\_\-construct}!ArchiverInterface@{ArchiverInterface}}
+\subsubsection[{\_\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}ArchiverInterface::\_\-\_\-construct (\$ {\em file\_\-path})}}
+\label{interfaceArchiverInterface_aa380cf3e1bcf80763ccd6c790b50aee5}
+Constructs a new archiver instance.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$file\_\-path}]The full system path of the archive to manipulate. Only local files are supported. If the file does not yet exist, it will be created if appropriate. \end{DoxyParams}
+
+
+Implemented in \hyperlink{classArchiverTar_af3727d4c5fa466d4aabde81bb9d4c7df}{ArchiverTar}, and \hyperlink{classArchiverZip_adfe750d331bb6910529f1326bdab2947}{ArchiverZip}.
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceArchiverInterface_aedd1c39f36b45e2f12381003d83ee4bf}{
+\index{ArchiverInterface@{ArchiverInterface}!add@{add}}
+\index{add@{add}!ArchiverInterface@{ArchiverInterface}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}ArchiverInterface::add (\$ {\em file\_\-path})}}
+\label{interfaceArchiverInterface_aedd1c39f36b45e2f12381003d83ee4bf}
+Adds the specified file or directory to the archive.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$file\_\-path}]The full system path of the file or directory to add. Only local files and directories are supported.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{interfaceArchiverInterface}{ArchiverInterface} The called object. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classArchiverTar_a23c343bebf4ba3a61fc8087427406bbe}{ArchiverTar}, and \hyperlink{classArchiverZip_a9f16632d5096932af9b0483f678c192c}{ArchiverZip}.\hypertarget{interfaceArchiverInterface_a6537e95c432eeedfdc5c72342a40eab2}{
+\index{ArchiverInterface@{ArchiverInterface}!extract@{extract}}
+\index{extract@{extract}!ArchiverInterface@{ArchiverInterface}}
+\subsubsection[{extract}]{\setlength{\rightskip}{0pt plus 5cm}ArchiverInterface::extract (\$ {\em path}, \/  array \$ {\em files} = {\ttfamily array()})}}
+\label{interfaceArchiverInterface_a6537e95c432eeedfdc5c72342a40eab2}
+Extracts multiple files in the archive to the specified path.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$path}]A full system path of the directory to which to extract files. \item[{\em \$files}]Optionally specify a list of files to be extracted. Files are relative to the root of the archive. If not specified, all files in the archive will be extracted.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{interfaceArchiverInterface}{ArchiverInterface} The called object. 
+\end{DoxyReturn}
+\hypertarget{interfaceArchiverInterface_a0be527152061af9bfd22a525fc29d78d}{
+\index{ArchiverInterface@{ArchiverInterface}!listContents@{listContents}}
+\index{listContents@{listContents}!ArchiverInterface@{ArchiverInterface}}
+\subsubsection[{listContents}]{\setlength{\rightskip}{0pt plus 5cm}ArchiverInterface::listContents ()}}
+\label{interfaceArchiverInterface_a0be527152061af9bfd22a525fc29d78d}
+Lists all files in the archive.
+
+\begin{DoxyReturn}{Returns}
+An array of file names relative to the root of the archive. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classArchiverTar_a6293cb8fd0519ae617a789ea08799914}{ArchiverTar}, and \hyperlink{classArchiverZip_ad4d1065b4609b607195c87d432f440f7}{ArchiverZip}.\hypertarget{interfaceArchiverInterface_adf87dd4d31b2af7c9a90617436683edc}{
+\index{ArchiverInterface@{ArchiverInterface}!remove@{remove}}
+\index{remove@{remove}!ArchiverInterface@{ArchiverInterface}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}ArchiverInterface::remove (\$ {\em path})}}
+\label{interfaceArchiverInterface_adf87dd4d31b2af7c9a90617436683edc}
+Removes the specified file from the archive.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$path}]The file name relative to the root of the archive to remove.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{interfaceArchiverInterface}{ArchiverInterface} The called object. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classArchiverTar_a7e3e6cc10110d77b1411074f7e65c2e0}{ArchiverTar}, and \hyperlink{classArchiverZip_af19c19d199c96acfd65a08ccfb7ea406}{ArchiverZip}.
+
+The documentation for this interface was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/\hyperlink{archiver_8inc}{archiver.inc}\end{DoxyCompactItemize}

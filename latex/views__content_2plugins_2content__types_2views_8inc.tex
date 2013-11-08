@@ -1,0 +1,103 @@
+\hypertarget{views__content_2plugins_2content__types_2views_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/content\_\-types/views.inc File Reference}
+\label{views__content_2plugins_2content__types_2views_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/content\_\-types/views.inc@{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/content\_\-types/views.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+if(variable\_\-get('ctools\_\-content\_\-all\_\-views', TRUE)) \hyperlink{views__content_2plugins_2content__types_2views_8inc_a234ce12ad0884bd3818873ff5f9fbe89}{views\_\-content\_\-views\_\-content\_\-type\_\-content\_\-types} (\$plugin)
+\item 
+\hyperlink{views__content_2plugins_2content__types_2views_8inc_a6bfd28abb7482709261e1ccfcd1a7868}{views\_\-content\_\-views\_\-content\_\-type\_\-content\_\-type} (\$subtype, \$plugin)
+\item 
+\hyperlink{views__content_2plugins_2content__types_2views_8inc_ae650c241a17a33342ecaf29e21bc7e16}{\_\-views\_\-content\_\-views\_\-content\_\-type} (\$\hyperlink{classview}{view})
+\item 
+\hyperlink{views__content_2plugins_2content__types_2views_8inc_aefa426d99ad7d486e065540660f27d6f}{views\_\-content\_\-views\_\-content\_\-type\_\-render} (\$subtype, \$conf, \$panel\_\-args, \$contexts)
+\item 
+\hyperlink{views__content_2plugins_2content__types_2views_8inc_a846334132f0794ebac175d78df1e80bf}{views\_\-content\_\-views\_\-select\_\-display} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{views__content_2plugins_2content__types_2views_8inc_a5e2e282d12372207e80bb6a9606133ac}{views\_\-content\_\-views\_\-select\_\-display\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{views__content_2plugins_2content__types_2views_8inc_a5547efddaf36e1e7edc9b97ddd2986de}{views\_\-content\_\-views\_\-content\_\-type\_\-edit\_\-form} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{views__content_2plugins_2content__types_2views_8inc_a42df6649c77e401fd112e736dfb7a172}{views\_\-content\_\-views\_\-content\_\-type\_\-edit\_\-form\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{views__content_2plugins_2content__types_2views_8inc_a33c06994371d4cc130507549e7f546ba}{views\_\-content\_\-views\_\-content\_\-type\_\-admin\_\-title} (\$subtype, \$conf)
+\item 
+\hyperlink{views__content_2plugins_2content__types_2views_8inc_a91d97e1d609d2c4b68e45802a759d4e1}{views\_\-content\_\-views\_\-content\_\-type\_\-admin\_\-info} (\$subtype, \$conf, \$contexts)
+\item 
+\hyperlink{views__content_2plugins_2content__types_2views_8inc_a9a08e01f08760b563d3cfc98cc4aa9dc}{\_\-views\_\-content\_\-views\_\-update\_\-conf} (\&\$conf, \$subtype)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Content type plugin to expose all views as content. 
+
+\subsection{Function Documentation}
+\hypertarget{views__content_2plugins_2content__types_2views_8inc_ae650c241a17a33342ecaf29e21bc7e16}{
+\index{views\_\-content/plugins/content\_\-types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}!\_\-views\_\-content\_\-views\_\-content\_\-type@{\_\-views\_\-content\_\-views\_\-content\_\-type}}
+\index{\_\-views\_\-content\_\-views\_\-content\_\-type@{\_\-views\_\-content\_\-views\_\-content\_\-type}!views_content/plugins/content_types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}}
+\subsubsection[{\_\-views\_\-content\_\-views\_\-content\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}\_\-views\_\-content\_\-views\_\-content\_\-type (\$ {\em view})}}
+\label{views__content_2plugins_2content__types_2views_8inc_ae650c241a17a33342ecaf29e21bc7e16}
+Create the content type info array to give back to ctools for a given display. \hypertarget{views__content_2plugins_2content__types_2views_8inc_a9a08e01f08760b563d3cfc98cc4aa9dc}{
+\index{views\_\-content/plugins/content\_\-types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}!\_\-views\_\-content\_\-views\_\-update\_\-conf@{\_\-views\_\-content\_\-views\_\-update\_\-conf}}
+\index{\_\-views\_\-content\_\-views\_\-update\_\-conf@{\_\-views\_\-content\_\-views\_\-update\_\-conf}!views_content/plugins/content_types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}}
+\subsubsection[{\_\-views\_\-content\_\-views\_\-update\_\-conf}]{\setlength{\rightskip}{0pt plus 5cm}\_\-views\_\-content\_\-views\_\-update\_\-conf (\&\$ {\em conf}, \/  \$ {\em subtype})}}
+\label{views__content_2plugins_2content__types_2views_8inc_a9a08e01f08760b563d3cfc98cc4aa9dc}
+Update the \$conf to deal with updates from Drupal 5.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \&\$conf}]The \$conf array to modify. \item[{\em \$subtype}]The subtype in use. This should just be the \hyperlink{classview}{view} name, but in older versions it was the \hyperlink{classview}{view} name with a dash and the display ID. If this is the case, we can use it to correct the 'display' setting in the \$conf. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \$view with the initialized display. If the \$view could not be loaded, the name attempted will be loaded for use in errors. Correct error checking on this function checks against is\_\-object(). 
+\end{DoxyReturn}
+\hypertarget{views__content_2plugins_2content__types_2views_8inc_a91d97e1d609d2c4b68e45802a759d4e1}{
+\index{views\_\-content/plugins/content\_\-types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}!views\_\-content\_\-views\_\-content\_\-type\_\-admin\_\-info@{views\_\-content\_\-views\_\-content\_\-type\_\-admin\_\-info}}
+\index{views\_\-content\_\-views\_\-content\_\-type\_\-admin\_\-info@{views\_\-content\_\-views\_\-content\_\-type\_\-admin\_\-info}!views_content/plugins/content_types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-content\_\-type\_\-admin\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-content\_\-type\_\-admin\_\-info (\$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em contexts})}}
+\label{views__content_2plugins_2content__types_2views_8inc_a91d97e1d609d2c4b68e45802a759d4e1}
+Returns the administrative title for a type. \hypertarget{views__content_2plugins_2content__types_2views_8inc_a33c06994371d4cc130507549e7f546ba}{
+\index{views\_\-content/plugins/content\_\-types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}!views\_\-content\_\-views\_\-content\_\-type\_\-admin\_\-title@{views\_\-content\_\-views\_\-content\_\-type\_\-admin\_\-title}}
+\index{views\_\-content\_\-views\_\-content\_\-type\_\-admin\_\-title@{views\_\-content\_\-views\_\-content\_\-type\_\-admin\_\-title}!views_content/plugins/content_types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-content\_\-type\_\-admin\_\-title}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-content\_\-type\_\-admin\_\-title (\$ {\em subtype}, \/  \$ {\em conf})}}
+\label{views__content_2plugins_2content__types_2views_8inc_a33c06994371d4cc130507549e7f546ba}
+Returns the administrative title for a type. \hypertarget{views__content_2plugins_2content__types_2views_8inc_a6bfd28abb7482709261e1ccfcd1a7868}{
+\index{views\_\-content/plugins/content\_\-types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}!views\_\-content\_\-views\_\-content\_\-type\_\-content\_\-type@{views\_\-content\_\-views\_\-content\_\-type\_\-content\_\-type}}
+\index{views\_\-content\_\-views\_\-content\_\-type\_\-content\_\-type@{views\_\-content\_\-views\_\-content\_\-type\_\-content\_\-type}!views_content/plugins/content_types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-content\_\-type\_\-content\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-content\_\-type\_\-content\_\-type (\$ {\em subtype}, \/  \$ {\em plugin})}}
+\label{views__content_2plugins_2content__types_2views_8inc_a6bfd28abb7482709261e1ccfcd1a7868}
+Return a single content type. \hypertarget{views__content_2plugins_2content__types_2views_8inc_a234ce12ad0884bd3818873ff5f9fbe89}{
+\index{views\_\-content/plugins/content\_\-types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}!views\_\-content\_\-views\_\-content\_\-type\_\-content\_\-types@{views\_\-content\_\-views\_\-content\_\-type\_\-content\_\-types}}
+\index{views\_\-content\_\-views\_\-content\_\-type\_\-content\_\-types@{views\_\-content\_\-views\_\-content\_\-type\_\-content\_\-types}!views_content/plugins/content_types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-content\_\-type\_\-content\_\-types}]{\setlength{\rightskip}{0pt plus 5cm}if (variable\_\-get('ctools\_\-content\_\-all\_\-views', TRUE)) views\_\-content\_\-views\_\-content\_\-type\_\-content\_\-types (\$ {\em plugin})}}
+\label{views__content_2plugins_2content__types_2views_8inc_a234ce12ad0884bd3818873ff5f9fbe89}
+Return all content types available. \hypertarget{views__content_2plugins_2content__types_2views_8inc_a5547efddaf36e1e7edc9b97ddd2986de}{
+\index{views\_\-content/plugins/content\_\-types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}!views\_\-content\_\-views\_\-content\_\-type\_\-edit\_\-form@{views\_\-content\_\-views\_\-content\_\-type\_\-edit\_\-form}}
+\index{views\_\-content\_\-views\_\-content\_\-type\_\-edit\_\-form@{views\_\-content\_\-views\_\-content\_\-type\_\-edit\_\-form}!views_content/plugins/content_types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-content\_\-type\_\-edit\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-content\_\-type\_\-edit\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{views__content_2plugins_2content__types_2views_8inc_a5547efddaf36e1e7edc9b97ddd2986de}
+Returns an edit form for a block. \hypertarget{views__content_2plugins_2content__types_2views_8inc_a42df6649c77e401fd112e736dfb7a172}{
+\index{views\_\-content/plugins/content\_\-types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}!views\_\-content\_\-views\_\-content\_\-type\_\-edit\_\-form\_\-submit@{views\_\-content\_\-views\_\-content\_\-type\_\-edit\_\-form\_\-submit}}
+\index{views\_\-content\_\-views\_\-content\_\-type\_\-edit\_\-form\_\-submit@{views\_\-content\_\-views\_\-content\_\-type\_\-edit\_\-form\_\-submit}!views_content/plugins/content_types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-content\_\-type\_\-edit\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-content\_\-type\_\-edit\_\-form\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{views__content_2plugins_2content__types_2views_8inc_a42df6649c77e401fd112e736dfb7a172}
+Store form values in \$conf. \hypertarget{views__content_2plugins_2content__types_2views_8inc_aefa426d99ad7d486e065540660f27d6f}{
+\index{views\_\-content/plugins/content\_\-types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}!views\_\-content\_\-views\_\-content\_\-type\_\-render@{views\_\-content\_\-views\_\-content\_\-type\_\-render}}
+\index{views\_\-content\_\-views\_\-content\_\-type\_\-render@{views\_\-content\_\-views\_\-content\_\-type\_\-render}!views_content/plugins/content_types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-content\_\-type\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-content\_\-type\_\-render (\$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em panel\_\-args}, \/  \$ {\em contexts})}}
+\label{views__content_2plugins_2content__types_2views_8inc_aefa426d99ad7d486e065540660f27d6f}
+Output function for the 'views' content type.
+
+Outputs a \hyperlink{classview}{view} based on the module and delta supplied in the configuration. \hypertarget{views__content_2plugins_2content__types_2views_8inc_a846334132f0794ebac175d78df1e80bf}{
+\index{views\_\-content/plugins/content\_\-types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}!views\_\-content\_\-views\_\-select\_\-display@{views\_\-content\_\-views\_\-select\_\-display}}
+\index{views\_\-content\_\-views\_\-select\_\-display@{views\_\-content\_\-views\_\-select\_\-display}!views_content/plugins/content_types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-select\_\-display}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-select\_\-display (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{views__content_2plugins_2content__types_2views_8inc_a846334132f0794ebac175d78df1e80bf}
+Returns an edit form for a block. \hypertarget{views__content_2plugins_2content__types_2views_8inc_a5e2e282d12372207e80bb6a9606133ac}{
+\index{views\_\-content/plugins/content\_\-types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}!views\_\-content\_\-views\_\-select\_\-display\_\-submit@{views\_\-content\_\-views\_\-select\_\-display\_\-submit}}
+\index{views\_\-content\_\-views\_\-select\_\-display\_\-submit@{views\_\-content\_\-views\_\-select\_\-display\_\-submit}!views_content/plugins/content_types/views.inc@{views\_\-content/plugins/content\_\-types/views.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-select\_\-display\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-select\_\-display\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{views__content_2plugins_2content__types_2views_8inc_a5e2e282d12372207e80bb6a9606133ac}
+Submit the basic \hyperlink{classview}{view} edit form.
+
+This just dumps everything into the \$conf array. 

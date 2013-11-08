@@ -1,0 +1,66 @@
+\hypertarget{classDevelMailLog}{
+\section{DevelMailLog Class Reference}
+\label{classDevelMailLog}\index{DevelMailLog@{DevelMailLog}}
+}
+Inheritance diagram for DevelMailLog::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classDevelMailLog}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDevelMailLog_a7fc38d7076f8fc369f4a9fc59acd8fb2}{
+{\bfseries composeMessage} (\$message)}
+\label{classDevelMailLog_a7fc38d7076f8fc369f4a9fc59acd8fb2}
+
+\item 
+\hypertarget{classDevelMailLog_ac8750ec41508031f9dee0193e814d87a}{
+{\bfseries getFileName} (\$message)}
+\label{classDevelMailLog_ac8750ec41508031f9dee0193e814d87a}
+
+\item 
+\hyperlink{classDevelMailLog_a1179208e4b2b37addefcc9f8ed9be0b0}{mail} (array \$message)
+\item 
+\hypertarget{classDevelMailLog_a9fb9e9177ca1ce0e8af9bf8ea33513df}{
+{\bfseries getOutputDirectory} ()}
+\label{classDevelMailLog_a9fb9e9177ca1ce0e8af9bf8ea33513df}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDevelMailLog_ab1adcc72358ae5771bec2a0a2af0c008}{
+{\bfseries makeOutputDirectory} (\$output\_\-directory)}
+\label{classDevelMailLog_ab1adcc72358ae5771bec2a0a2af0c008}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDevelMailLog_a1179208e4b2b37addefcc9f8ed9be0b0}{
+\index{DevelMailLog@{DevelMailLog}!mail@{mail}}
+\index{mail@{mail}!DevelMailLog@{DevelMailLog}}
+\subsubsection[{mail}]{\setlength{\rightskip}{0pt plus 5cm}DevelMailLog::mail (array \$ {\em message})}}
+\label{classDevelMailLog_a1179208e4b2b37addefcc9f8ed9be0b0}
+Save an e-\/mail message to a file, using Drupal variables and default settings.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://php.net/manual/en/function.mail.php}{\tt http://php.net/manual/en/function.mail.php} 
+
+\hyperlink{mail_8inc_ab80781fd7273975a77cbbd13300eddbf}{drupal\_\-mail()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$message}]A message array, as described in \hyperlink{group__hooks_gaad1d55a8e7b359933f462a9ca5b2ede0}{hook\_\-mail\_\-alter()}. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the mail was successfully accepted, otherwise FALSE. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDefaultMailSystem_a77a30a4f7b330e8fc811d8030004bb29}{DefaultMailSystem}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/devel/\hyperlink{devel_8mail_8inc}{devel.mail.inc}\end{DoxyCompactItemize}

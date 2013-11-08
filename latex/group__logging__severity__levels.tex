@@ -1,0 +1,138 @@
+\hypertarget{group__logging__severity__levels}{
+\section{Logging severity levels}
+\label{group__logging__severity__levels}\index{Logging severity levels@{Logging severity levels}}
+}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__logging__severity__levels_ga467e941228edf3b033b5ef460e1bfcf7}{WATCHDOG\_\-EMERGENCY} 
+\item 
+enum \hyperlink{group__logging__severity__levels_ga9fdd40d55b14109f09f091f401f237c0}{WATCHDOG\_\-ALERT} 
+\item 
+enum \hyperlink{group__logging__severity__levels_gab4129b98c8480bea3cbcd62083ae81e3}{WATCHDOG\_\-CRITICAL} 
+\item 
+enum \hyperlink{group__logging__severity__levels_ga174c9df2936096e11986fcf184d48576}{WATCHDOG\_\-ERROR} 
+\item 
+enum \hyperlink{group__logging__severity__levels_ga5361f835e10b39b553ee73c1b9414bf1}{WATCHDOG\_\-WARNING} 
+\item 
+enum \hyperlink{group__logging__severity__levels_ga757a33416683e8c44636a8799f60b477}{WATCHDOG\_\-NOTICE} 
+\item 
+enum \hyperlink{group__logging__severity__levels_ga9629ff808fd20ce4abb297db5976af4d}{WATCHDOG\_\-INFO} 
+\item 
+enum \hyperlink{group__logging__severity__levels_gaf672cd38d5654f8a4a12e32d9b9e749d}{WATCHDOG\_\-DEBUG} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__logging__severity__levels_gafb5d4b58ec7e483153644c0f664e0ca4}{watchdog\_\-severity\_\-levels} ()
+\item 
+\hyperlink{group__logging__severity__levels_gaa3c430d607b6666eb39e5df2937f0f03}{drupal\_\-error\_\-levels} ()
+\item 
+\hyperlink{group__logging__severity__levels_ga3b74d083df84c683ed01c7a5468eee12}{dblog\_\-overview} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Logging severity levels as defined in RFC 3164.
+
+The WATCHDOG\_\-$\ast$ constant definitions correspond to the logging severity levels defined in RFC 3164, section 4.1.1. PHP supplies predefined LOG\_\-$\ast$ constants for use in the syslog() function, but their values on Windows builds do not correspond to RFC 3164. The associated PHP bug report was closed with the comment, \char`\"{}And it's also not a bug, as Windows just have less log levels,\char`\"{} and \char`\"{}So the behavior you're seeing is perfectly normal.\char`\"{}
+
+\begin{DoxySeeAlso}{See also}
+\href{http://www.faqs.org/rfcs/rfc3164.html}{\tt http://www.faqs.org/rfcs/rfc3164.html} 
+
+\href{http://bugs.php.net/bug.php?id=18090}{\tt http://bugs.php.net/bug.php?id=18090} 
+
+\href{http://php.net/manual/function.syslog.php}{\tt http://php.net/manual/function.syslog.php} 
+
+\href{http://php.net/manual/network.constants.php}{\tt http://php.net/manual/network.constants.php} 
+
+\hyperlink{bootstrap_8inc_acb7338e6740302727043d64e3ae1257b}{watchdog()} 
+
+\hyperlink{group__logging__severity__levels_gafb5d4b58ec7e483153644c0f664e0ca4}{watchdog\_\-severity\_\-levels()} 
+\end{DoxySeeAlso}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__logging__severity__levels_ga9fdd40d55b14109f09f091f401f237c0}{
+\index{logging\_\-severity\_\-levels@{logging\_\-severity\_\-levels}!WATCHDOG\_\-ALERT@{WATCHDOG\_\-ALERT}}
+\index{WATCHDOG\_\-ALERT@{WATCHDOG\_\-ALERT}!logging_severity_levels@{logging\_\-severity\_\-levels}}
+\subsubsection[{WATCHDOG\_\-ALERT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf WATCHDOG\_\-ALERT}}}
+\label{group__logging__severity__levels_ga9fdd40d55b14109f09f091f401f237c0}
+Log message severity -\/-\/ Alert: action must be taken immediately. \hypertarget{group__logging__severity__levels_gab4129b98c8480bea3cbcd62083ae81e3}{
+\index{logging\_\-severity\_\-levels@{logging\_\-severity\_\-levels}!WATCHDOG\_\-CRITICAL@{WATCHDOG\_\-CRITICAL}}
+\index{WATCHDOG\_\-CRITICAL@{WATCHDOG\_\-CRITICAL}!logging_severity_levels@{logging\_\-severity\_\-levels}}
+\subsubsection[{WATCHDOG\_\-CRITICAL}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf WATCHDOG\_\-CRITICAL}}}
+\label{group__logging__severity__levels_gab4129b98c8480bea3cbcd62083ae81e3}
+Log message severity -\/-\/ Critical conditions. \hypertarget{group__logging__severity__levels_gaf672cd38d5654f8a4a12e32d9b9e749d}{
+\index{logging\_\-severity\_\-levels@{logging\_\-severity\_\-levels}!WATCHDOG\_\-DEBUG@{WATCHDOG\_\-DEBUG}}
+\index{WATCHDOG\_\-DEBUG@{WATCHDOG\_\-DEBUG}!logging_severity_levels@{logging\_\-severity\_\-levels}}
+\subsubsection[{WATCHDOG\_\-DEBUG}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf WATCHDOG\_\-DEBUG}}}
+\label{group__logging__severity__levels_gaf672cd38d5654f8a4a12e32d9b9e749d}
+Log message severity -\/-\/ Debug-\/level messages. \hypertarget{group__logging__severity__levels_ga467e941228edf3b033b5ef460e1bfcf7}{
+\index{logging\_\-severity\_\-levels@{logging\_\-severity\_\-levels}!WATCHDOG\_\-EMERGENCY@{WATCHDOG\_\-EMERGENCY}}
+\index{WATCHDOG\_\-EMERGENCY@{WATCHDOG\_\-EMERGENCY}!logging_severity_levels@{logging\_\-severity\_\-levels}}
+\subsubsection[{WATCHDOG\_\-EMERGENCY}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf WATCHDOG\_\-EMERGENCY}}}
+\label{group__logging__severity__levels_ga467e941228edf3b033b5ef460e1bfcf7}
+Log message severity -\/-\/ Emergency: system is unusable. \hypertarget{group__logging__severity__levels_ga174c9df2936096e11986fcf184d48576}{
+\index{logging\_\-severity\_\-levels@{logging\_\-severity\_\-levels}!WATCHDOG\_\-ERROR@{WATCHDOG\_\-ERROR}}
+\index{WATCHDOG\_\-ERROR@{WATCHDOG\_\-ERROR}!logging_severity_levels@{logging\_\-severity\_\-levels}}
+\subsubsection[{WATCHDOG\_\-ERROR}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf WATCHDOG\_\-ERROR}}}
+\label{group__logging__severity__levels_ga174c9df2936096e11986fcf184d48576}
+Log message severity -\/-\/ Error conditions. \hypertarget{group__logging__severity__levels_ga9629ff808fd20ce4abb297db5976af4d}{
+\index{logging\_\-severity\_\-levels@{logging\_\-severity\_\-levels}!WATCHDOG\_\-INFO@{WATCHDOG\_\-INFO}}
+\index{WATCHDOG\_\-INFO@{WATCHDOG\_\-INFO}!logging_severity_levels@{logging\_\-severity\_\-levels}}
+\subsubsection[{WATCHDOG\_\-INFO}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf WATCHDOG\_\-INFO}}}
+\label{group__logging__severity__levels_ga9629ff808fd20ce4abb297db5976af4d}
+Log message severity -\/-\/ Informational messages. \hypertarget{group__logging__severity__levels_ga757a33416683e8c44636a8799f60b477}{
+\index{logging\_\-severity\_\-levels@{logging\_\-severity\_\-levels}!WATCHDOG\_\-NOTICE@{WATCHDOG\_\-NOTICE}}
+\index{WATCHDOG\_\-NOTICE@{WATCHDOG\_\-NOTICE}!logging_severity_levels@{logging\_\-severity\_\-levels}}
+\subsubsection[{WATCHDOG\_\-NOTICE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf WATCHDOG\_\-NOTICE}}}
+\label{group__logging__severity__levels_ga757a33416683e8c44636a8799f60b477}
+Log message severity -\/-\/ Normal but significant conditions. \hypertarget{group__logging__severity__levels_ga5361f835e10b39b553ee73c1b9414bf1}{
+\index{logging\_\-severity\_\-levels@{logging\_\-severity\_\-levels}!WATCHDOG\_\-WARNING@{WATCHDOG\_\-WARNING}}
+\index{WATCHDOG\_\-WARNING@{WATCHDOG\_\-WARNING}!logging_severity_levels@{logging\_\-severity\_\-levels}}
+\subsubsection[{WATCHDOG\_\-WARNING}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf WATCHDOG\_\-WARNING}}}
+\label{group__logging__severity__levels_ga5361f835e10b39b553ee73c1b9414bf1}
+Log message severity -\/-\/ Warning conditions. 
+
+\subsection{Function Documentation}
+\hypertarget{group__logging__severity__levels_ga3b74d083df84c683ed01c7a5468eee12}{
+\index{logging\_\-severity\_\-levels@{logging\_\-severity\_\-levels}!dblog\_\-overview@{dblog\_\-overview}}
+\index{dblog\_\-overview@{dblog\_\-overview}!logging_severity_levels@{logging\_\-severity\_\-levels}}
+\subsubsection[{dblog\_\-overview}]{\setlength{\rightskip}{0pt plus 5cm}dblog\_\-overview ()}}
+\label{group__logging__severity__levels_ga3b74d083df84c683ed01c7a5468eee12}
+Page callback: Displays a listing of database log messages.
+
+Messages are truncated at 56 chars. Full-\/length messages can be viewed on the message details page.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__forms_gad4ec60fb6fd40f5ae8691709f2b9affb}{dblog\_\-clear\_\-log\_\-form()} 
+
+\hyperlink{dblog_8admin_8inc_a044370b32b7cc5cace449cb62bf6c007}{dblog\_\-event()} 
+
+\hyperlink{group__forms_ga1baa51b833eb4a3831b4319d4c20ad19}{dblog\_\-filter\_\-form()} 
+
+\hyperlink{dblog_8module_ac599cb2337e45bf5268f593e84039684}{dblog\_\-menu()} 
+\end{DoxySeeAlso}
+\hypertarget{group__logging__severity__levels_gaa3c430d607b6666eb39e5df2937f0f03}{
+\index{logging\_\-severity\_\-levels@{logging\_\-severity\_\-levels}!drupal\_\-error\_\-levels@{drupal\_\-error\_\-levels}}
+\index{drupal\_\-error\_\-levels@{drupal\_\-error\_\-levels}!logging_severity_levels@{logging\_\-severity\_\-levels}}
+\subsubsection[{drupal\_\-error\_\-levels}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-error\_\-levels ()}}
+\label{group__logging__severity__levels_gaa3c430d607b6666eb39e5df2937f0f03}
+Maps PHP error constants to watchdog severity levels.
+
+The error constants are documented at \href{http://php.net/manual/en/errorfunc.constants.php}{\tt http://php.net/manual/en/errorfunc.constants.php} \hypertarget{group__logging__severity__levels_gafb5d4b58ec7e483153644c0f664e0ca4}{
+\index{logging\_\-severity\_\-levels@{logging\_\-severity\_\-levels}!watchdog\_\-severity\_\-levels@{watchdog\_\-severity\_\-levels}}
+\index{watchdog\_\-severity\_\-levels@{watchdog\_\-severity\_\-levels}!logging_severity_levels@{logging\_\-severity\_\-levels}}
+\subsubsection[{watchdog\_\-severity\_\-levels}]{\setlength{\rightskip}{0pt plus 5cm}watchdog\_\-severity\_\-levels ()}}
+\label{group__logging__severity__levels_gafb5d4b58ec7e483153644c0f664e0ca4}
+Returns a list of severity levels, as defined in RFC 3164.
+
+\begin{DoxyReturn}{Returns}
+Array of the possible severity levels for log messages.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.ietf.org/rfc/rfc3164.txt}{\tt http://www.ietf.org/rfc/rfc3164.txt} 
+
+\hyperlink{bootstrap_8inc_acb7338e6740302727043d64e3ae1257b}{watchdog()} 
+\end{DoxySeeAlso}

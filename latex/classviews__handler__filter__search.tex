@@ -1,0 +1,113 @@
+\hypertarget{classviews__handler__filter__search}{
+\section{views\_\-handler\_\-filter\_\-search Class Reference}
+\label{classviews__handler__filter__search}\index{views\_\-handler\_\-filter\_\-search@{views\_\-handler\_\-filter\_\-search}}
+}
+Inheritance diagram for views\_\-handler\_\-filter\_\-search::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classviews__handler__filter__search}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__handler__filter__search_af41b61b9dc7a676fbe0110c1d7ffcfdb}{
+{\bfseries option\_\-definition} ()}
+\label{classviews__handler__filter__search_af41b61b9dc7a676fbe0110c1d7ffcfdb}
+
+\item 
+\hyperlink{classviews__handler__filter__search_ada5367d9347c96ba96de10ed22ab7ea0}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__handler__filter__search_a126abdcf04c59fd3e4be404ffd9969cf}{operator\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__handler__filter__search_a60e1cc17477e80f07c703ae29348b329}{value\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__handler__filter__search_a4cdb0b399fcbd1e4a5643924b706dddd}{exposed\_\-validate} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__handler__filter__search_a9904194e766321793c3b75f57526547b}{query\_\-parse\_\-search\_\-expression} (\$input)
+\item 
+\hyperlink{classviews__handler__filter__search_af972f15bdc716b36d04d9a9d4f20b6f5}{query} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__handler__filter__search_a595b4ee1b1480ff0b41798ebd3778ac2}{
+{\bfseries \$always\_\-multiple} = TRUE}
+\label{classviews__handler__filter__search_a595b4ee1b1480ff0b41798ebd3778ac2}
+
+\item 
+\hypertarget{classviews__handler__filter__search_ae8b3c02ef993560784deb77dbe7fbe07}{
+{\bfseries \$search\_\-query} = NULL}
+\label{classviews__handler__filter__search_ae8b3c02ef993560784deb77dbe7fbe07}
+
+\item 
+\hyperlink{classviews__handler__filter__search_ac2691a5da99694cf3cc5fd1f6c771a7a}{\$parsed} = FALSE
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Field handler to provide simple renderer that allows linking to a node. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__handler__filter__search_a4cdb0b399fcbd1e4a5643924b706dddd}{
+\index{views\_\-handler\_\-filter\_\-search@{views\_\-handler\_\-filter\_\-search}!exposed\_\-validate@{exposed\_\-validate}}
+\index{exposed\_\-validate@{exposed\_\-validate}!views_handler_filter_search@{views\_\-handler\_\-filter\_\-search}}
+\subsubsection[{exposed\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-filter\_\-search::exposed\_\-validate (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__handler__filter__search_a4cdb0b399fcbd1e4a5643924b706dddd}
+Validate the options form. 
+
+Reimplemented from \hyperlink{classviews__handler_a2dd536754e4764cc82ffe7c864f54b16}{views\_\-handler}.\hypertarget{classviews__handler__filter__search_a126abdcf04c59fd3e4be404ffd9969cf}{
+\index{views\_\-handler\_\-filter\_\-search@{views\_\-handler\_\-filter\_\-search}!operator\_\-form@{operator\_\-form}}
+\index{operator\_\-form@{operator\_\-form}!views_handler_filter_search@{views\_\-handler\_\-filter\_\-search}}
+\subsubsection[{operator\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-filter\_\-search::operator\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__handler__filter__search_a126abdcf04c59fd3e4be404ffd9969cf}
+Provide simple equality operator 
+
+Reimplemented from \hyperlink{classviews__handler__filter_a8c77c0a8bba8c3ceceae8950fc7b1121}{views\_\-handler\_\-filter}.\hypertarget{classviews__handler__filter__search_ada5367d9347c96ba96de10ed22ab7ea0}{
+\index{views\_\-handler\_\-filter\_\-search@{views\_\-handler\_\-filter\_\-search}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_handler_filter_search@{views\_\-handler\_\-filter\_\-search}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-filter\_\-search::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__handler__filter__search_ada5367d9347c96ba96de10ed22ab7ea0}
+Overrides \hyperlink{classviews__handler__filter_af14c69367162057a32709a6340de0988}{views\_\-handler\_\-filter::options\_\-form()}.
+
+Add an option to remove search scores from the query. 
+
+Reimplemented from \hyperlink{classviews__handler__filter_af14c69367162057a32709a6340de0988}{views\_\-handler\_\-filter}.\hypertarget{classviews__handler__filter__search_af972f15bdc716b36d04d9a9d4f20b6f5}{
+\index{views\_\-handler\_\-filter\_\-search@{views\_\-handler\_\-filter\_\-search}!query@{query}}
+\index{query@{query}!views_handler_filter_search@{views\_\-handler\_\-filter\_\-search}}
+\subsubsection[{query}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-filter\_\-search::query ()}}
+\label{classviews__handler__filter__search_af972f15bdc716b36d04d9a9d4f20b6f5}
+Add this filter to the query.
+
+Due to the nature of fapi, the value and the operator have an unintended level of indirection. You will find them in \$this-\/$>$operator and \$this-\/$>$value respectively. 
+
+Reimplemented from \hyperlink{classviews__handler__filter_a8e513b3abbc2559f37b550ca4957b4ae}{views\_\-handler\_\-filter}.\hypertarget{classviews__handler__filter__search_a9904194e766321793c3b75f57526547b}{
+\index{views\_\-handler\_\-filter\_\-search@{views\_\-handler\_\-filter\_\-search}!query\_\-parse\_\-search\_\-expression@{query\_\-parse\_\-search\_\-expression}}
+\index{query\_\-parse\_\-search\_\-expression@{query\_\-parse\_\-search\_\-expression}!views_handler_filter_search@{views\_\-handler\_\-filter\_\-search}}
+\subsubsection[{query\_\-parse\_\-search\_\-expression}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-filter\_\-search::query\_\-parse\_\-search\_\-expression (\$ {\em input})}}
+\label{classviews__handler__filter__search_a9904194e766321793c3b75f57526547b}
+Take sure that parseSearchExpression is runned and everything is set up for it.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$input}]The search phrase which was input by the user. \end{DoxyParams}
+\hypertarget{classviews__handler__filter__search_a60e1cc17477e80f07c703ae29348b329}{
+\index{views\_\-handler\_\-filter\_\-search@{views\_\-handler\_\-filter\_\-search}!value\_\-form@{value\_\-form}}
+\index{value\_\-form@{value\_\-form}!views_handler_filter_search@{views\_\-handler\_\-filter\_\-search}}
+\subsubsection[{value\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-filter\_\-search::value\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__handler__filter__search_a60e1cc17477e80f07c703ae29348b329}
+Provide a simple textfield for equality 
+
+Reimplemented from \hyperlink{classviews__handler__filter_a9168b39edae84b20e01a3fd0d810ba66}{views\_\-handler\_\-filter}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classviews__handler__filter__search_ac2691a5da99694cf3cc5fd1f6c771a7a}{
+\index{views\_\-handler\_\-filter\_\-search@{views\_\-handler\_\-filter\_\-search}!\$parsed@{\$parsed}}
+\index{\$parsed@{\$parsed}!views_handler_filter_search@{views\_\-handler\_\-filter\_\-search}}
+\subsubsection[{\$parsed}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-filter\_\-search::\$parsed = FALSE}}
+\label{classviews__handler__filter__search_ac2691a5da99694cf3cc5fd1f6c771a7a}
+Checks if the search query has been parsed. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/modules/search/\hyperlink{views__handler__filter__search_8inc}{views\_\-handler\_\-filter\_\-search.inc}\end{DoxyCompactItemize}

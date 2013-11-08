@@ -1,0 +1,140 @@
+\hypertarget{field__test_8storage_8inc}{
+\section{html/modules/field/tests/field\_\-test.storage.inc File Reference}
+\label{field__test_8storage_8inc}\index{html/modules/field/tests/field\_\-test.storage.inc@{html/modules/field/tests/field\_\-test.storage.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{field__test_8storage_8inc_a8467eb75b6a3cacbcd4a29fa23940e88}{field\_\-test\_\-field\_\-storage\_\-info} ()
+\item 
+\hyperlink{field__test_8storage_8inc_a13b21ea3b360341839b6082c2836e5eb}{field\_\-test\_\-field\_\-storage\_\-details} (\$field)
+\item 
+\hyperlink{field__test_8storage_8inc_a7aadff122767aac99f03d92e52d891cd}{field\_\-test\_\-field\_\-storage\_\-details\_\-alter} (\&\$details, \$field)
+\item 
+\hyperlink{field__test_8storage_8inc_aaf0cca5b16dd0669144dc5b3c8b1a2ba}{\_\-field\_\-test\_\-storage\_\-data} (\$data=NULL)
+\item 
+\hyperlink{field__test_8storage_8inc_a10f9c00a27624829625018699df8debf}{field\_\-test\_\-field\_\-storage\_\-load} (\$entity\_\-type, \$entities, \$age, \$fields, \$options)
+\item 
+\hyperlink{field__test_8storage_8inc_aa7f37b08fb61d3dc31226c409cb9a1ac}{field\_\-test\_\-field\_\-storage\_\-write} (\$entity\_\-type, \$entity, \$op, \$fields)
+\item 
+\hyperlink{field__test_8storage_8inc_a724f6b8c3ae75b4e9ace35cbe8981e83}{field\_\-test\_\-field\_\-storage\_\-delete} (\$entity\_\-type, \$entity, \$fields)
+\item 
+\hyperlink{field__test_8storage_8inc_a5faac556f945fdb5366f0a6034aa5360}{field\_\-test\_\-field\_\-storage\_\-purge} (\$entity\_\-type, \$entity, \$field, \$instance)
+\item 
+\hyperlink{field__test_8storage_8inc_a2bbfdc99551c6d326bb28324a88a0ffc}{field\_\-test\_\-field\_\-storage\_\-delete\_\-revision} (\$entity\_\-type, \$entity, \$fields)
+\item 
+\hyperlink{field__test_8storage_8inc_af02cd305f81f7d4059a81aab41d13b4c}{field\_\-test\_\-field\_\-storage\_\-query} (\$field\_\-id, \$conditions, \$count, \&\$cursor=NULL, \$age)
+\item 
+\hyperlink{field__test_8storage_8inc_aab2952ce75621878ed21f4ebbb8eeb55}{\_\-field\_\-test\_\-field\_\-storage\_\-query\_\-sort\_\-helper} (\$a, \$b)
+\item 
+\hyperlink{field__test_8storage_8inc_a40793876a6a577af289bfcc98d4d3b17}{field\_\-test\_\-field\_\-storage\_\-create\_\-field} (\$field)
+\item 
+\hyperlink{field__test_8storage_8inc_a3f9bebc0bc8a81e2a751383cc7d40e32}{field\_\-test\_\-field\_\-storage\_\-delete\_\-field} (\$field)
+\item 
+\hyperlink{field__test_8storage_8inc_a27f07a8c8348e9818bb59b29f1c3f6a0}{field\_\-test\_\-field\_\-storage\_\-delete\_\-instance} (\$instance)
+\item 
+\hyperlink{field__test_8storage_8inc_a3581120282b508adec7dddc2f0fabf86}{field\_\-test\_\-field\_\-attach\_\-create\_\-bundle} (\$bundle)
+\item 
+\hyperlink{field__test_8storage_8inc_a77f0715aaf93ca0aa9bc787d4ebafa06}{field\_\-test\_\-field\_\-attach\_\-rename\_\-bundle} (\$bundle\_\-old, \$bundle\_\-new)
+\item 
+\hyperlink{field__test_8storage_8inc_aa5c9edad9e400853b20018ed13eca602}{field\_\-test\_\-field\_\-attach\_\-delete\_\-bundle} (\$entity\_\-type, \$bundle, \$instances)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines a field storage backend. 
+
+\subsection{Function Documentation}
+\hypertarget{field__test_8storage_8inc_aab2952ce75621878ed21f4ebbb8eeb55}{
+\index{field\_\-test.storage.inc@{field\_\-test.storage.inc}!\_\-field\_\-test\_\-field\_\-storage\_\-query\_\-sort\_\-helper@{\_\-field\_\-test\_\-field\_\-storage\_\-query\_\-sort\_\-helper}}
+\index{\_\-field\_\-test\_\-field\_\-storage\_\-query\_\-sort\_\-helper@{\_\-field\_\-test\_\-field\_\-storage\_\-query\_\-sort\_\-helper}!field_test.storage.inc@{field\_\-test.storage.inc}}
+\subsubsection[{\_\-field\_\-test\_\-field\_\-storage\_\-query\_\-sort\_\-helper}]{\setlength{\rightskip}{0pt plus 5cm}\_\-field\_\-test\_\-field\_\-storage\_\-query\_\-sort\_\-helper (\$ {\em a}, \/  \$ {\em b})}}
+\label{field__test_8storage_8inc_aab2952ce75621878ed21f4ebbb8eeb55}
+Sort helper for \hyperlink{field__test_8storage_8inc_af02cd305f81f7d4059a81aab41d13b4c}{field\_\-test\_\-field\_\-storage\_\-query()}.
+
+Sorts by entity type and entity id. \hypertarget{field__test_8storage_8inc_aaf0cca5b16dd0669144dc5b3c8b1a2ba}{
+\index{field\_\-test.storage.inc@{field\_\-test.storage.inc}!\_\-field\_\-test\_\-storage\_\-data@{\_\-field\_\-test\_\-storage\_\-data}}
+\index{\_\-field\_\-test\_\-storage\_\-data@{\_\-field\_\-test\_\-storage\_\-data}!field_test.storage.inc@{field\_\-test.storage.inc}}
+\subsubsection[{\_\-field\_\-test\_\-storage\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}\_\-field\_\-test\_\-storage\_\-data (\$ {\em data} = {\ttfamily NULL})}}
+\label{field__test_8storage_8inc_aaf0cca5b16dd0669144dc5b3c8b1a2ba}
+Helper function: stores or retrieves data from the 'storage backend'. \hypertarget{field__test_8storage_8inc_a3581120282b508adec7dddc2f0fabf86}{
+\index{field\_\-test.storage.inc@{field\_\-test.storage.inc}!field\_\-test\_\-field\_\-attach\_\-create\_\-bundle@{field\_\-test\_\-field\_\-attach\_\-create\_\-bundle}}
+\index{field\_\-test\_\-field\_\-attach\_\-create\_\-bundle@{field\_\-test\_\-field\_\-attach\_\-create\_\-bundle}!field_test.storage.inc@{field\_\-test.storage.inc}}
+\subsubsection[{field\_\-test\_\-field\_\-attach\_\-create\_\-bundle}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-attach\_\-create\_\-bundle (\$ {\em bundle})}}
+\label{field__test_8storage_8inc_a3581120282b508adec7dddc2f0fabf86}
+Implements \hyperlink{group__field__attach_gad2e99b8b55c106c289a8241db00f0f30}{hook\_\-field\_\-attach\_\-create\_\-bundle()}. \hypertarget{field__test_8storage_8inc_aa5c9edad9e400853b20018ed13eca602}{
+\index{field\_\-test.storage.inc@{field\_\-test.storage.inc}!field\_\-test\_\-field\_\-attach\_\-delete\_\-bundle@{field\_\-test\_\-field\_\-attach\_\-delete\_\-bundle}}
+\index{field\_\-test\_\-field\_\-attach\_\-delete\_\-bundle@{field\_\-test\_\-field\_\-attach\_\-delete\_\-bundle}!field_test.storage.inc@{field\_\-test.storage.inc}}
+\subsubsection[{field\_\-test\_\-field\_\-attach\_\-delete\_\-bundle}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-attach\_\-delete\_\-bundle (\$ {\em entity\_\-type}, \/  \$ {\em bundle}, \/  \$ {\em instances})}}
+\label{field__test_8storage_8inc_aa5c9edad9e400853b20018ed13eca602}
+Implements \hyperlink{group__field__attach_gac2aac33854dd18a2037a13b133c26481}{hook\_\-field\_\-attach\_\-delete\_\-bundle()}. \hypertarget{field__test_8storage_8inc_a77f0715aaf93ca0aa9bc787d4ebafa06}{
+\index{field\_\-test.storage.inc@{field\_\-test.storage.inc}!field\_\-test\_\-field\_\-attach\_\-rename\_\-bundle@{field\_\-test\_\-field\_\-attach\_\-rename\_\-bundle}}
+\index{field\_\-test\_\-field\_\-attach\_\-rename\_\-bundle@{field\_\-test\_\-field\_\-attach\_\-rename\_\-bundle}!field_test.storage.inc@{field\_\-test.storage.inc}}
+\subsubsection[{field\_\-test\_\-field\_\-attach\_\-rename\_\-bundle}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-attach\_\-rename\_\-bundle (\$ {\em bundle\_\-old}, \/  \$ {\em bundle\_\-new})}}
+\label{field__test_8storage_8inc_a77f0715aaf93ca0aa9bc787d4ebafa06}
+Implements \hyperlink{group__field__attach_gaf218d913150bda6004d5d8e112d3174a}{hook\_\-field\_\-attach\_\-rename\_\-bundle()}. \hypertarget{field__test_8storage_8inc_a40793876a6a577af289bfcc98d4d3b17}{
+\index{field\_\-test.storage.inc@{field\_\-test.storage.inc}!field\_\-test\_\-field\_\-storage\_\-create\_\-field@{field\_\-test\_\-field\_\-storage\_\-create\_\-field}}
+\index{field\_\-test\_\-field\_\-storage\_\-create\_\-field@{field\_\-test\_\-field\_\-storage\_\-create\_\-field}!field_test.storage.inc@{field\_\-test.storage.inc}}
+\subsubsection[{field\_\-test\_\-field\_\-storage\_\-create\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-storage\_\-create\_\-field (\$ {\em field})}}
+\label{field__test_8storage_8inc_a40793876a6a577af289bfcc98d4d3b17}
+Implements \hyperlink{group__field__storage_gac345df04a43f63941dd69c7d18e83e00}{hook\_\-field\_\-storage\_\-create\_\-field()}. \hypertarget{field__test_8storage_8inc_a724f6b8c3ae75b4e9ace35cbe8981e83}{
+\index{field\_\-test.storage.inc@{field\_\-test.storage.inc}!field\_\-test\_\-field\_\-storage\_\-delete@{field\_\-test\_\-field\_\-storage\_\-delete}}
+\index{field\_\-test\_\-field\_\-storage\_\-delete@{field\_\-test\_\-field\_\-storage\_\-delete}!field_test.storage.inc@{field\_\-test.storage.inc}}
+\subsubsection[{field\_\-test\_\-field\_\-storage\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-storage\_\-delete (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em fields})}}
+\label{field__test_8storage_8inc_a724f6b8c3ae75b4e9ace35cbe8981e83}
+Implements \hyperlink{group__field__storage_ga64bd5adc0e4ccc1fe52fbaabcfa10274}{hook\_\-field\_\-storage\_\-delete()}. \hypertarget{field__test_8storage_8inc_a3f9bebc0bc8a81e2a751383cc7d40e32}{
+\index{field\_\-test.storage.inc@{field\_\-test.storage.inc}!field\_\-test\_\-field\_\-storage\_\-delete\_\-field@{field\_\-test\_\-field\_\-storage\_\-delete\_\-field}}
+\index{field\_\-test\_\-field\_\-storage\_\-delete\_\-field@{field\_\-test\_\-field\_\-storage\_\-delete\_\-field}!field_test.storage.inc@{field\_\-test.storage.inc}}
+\subsubsection[{field\_\-test\_\-field\_\-storage\_\-delete\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-storage\_\-delete\_\-field (\$ {\em field})}}
+\label{field__test_8storage_8inc_a3f9bebc0bc8a81e2a751383cc7d40e32}
+Implements \hyperlink{group__field__storage_ga2102841b167285acf3f0e4e9f854440d}{hook\_\-field\_\-storage\_\-delete\_\-field()}. \hypertarget{field__test_8storage_8inc_a27f07a8c8348e9818bb59b29f1c3f6a0}{
+\index{field\_\-test.storage.inc@{field\_\-test.storage.inc}!field\_\-test\_\-field\_\-storage\_\-delete\_\-instance@{field\_\-test\_\-field\_\-storage\_\-delete\_\-instance}}
+\index{field\_\-test\_\-field\_\-storage\_\-delete\_\-instance@{field\_\-test\_\-field\_\-storage\_\-delete\_\-instance}!field_test.storage.inc@{field\_\-test.storage.inc}}
+\subsubsection[{field\_\-test\_\-field\_\-storage\_\-delete\_\-instance}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-storage\_\-delete\_\-instance (\$ {\em instance})}}
+\label{field__test_8storage_8inc_a27f07a8c8348e9818bb59b29f1c3f6a0}
+Implements \hyperlink{group__field__storage_ga509e10cbd2900c13ab7269f1740a36f7}{hook\_\-field\_\-storage\_\-delete\_\-instance()}. \hypertarget{field__test_8storage_8inc_a2bbfdc99551c6d326bb28324a88a0ffc}{
+\index{field\_\-test.storage.inc@{field\_\-test.storage.inc}!field\_\-test\_\-field\_\-storage\_\-delete\_\-revision@{field\_\-test\_\-field\_\-storage\_\-delete\_\-revision}}
+\index{field\_\-test\_\-field\_\-storage\_\-delete\_\-revision@{field\_\-test\_\-field\_\-storage\_\-delete\_\-revision}!field_test.storage.inc@{field\_\-test.storage.inc}}
+\subsubsection[{field\_\-test\_\-field\_\-storage\_\-delete\_\-revision}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-storage\_\-delete\_\-revision (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em fields})}}
+\label{field__test_8storage_8inc_a2bbfdc99551c6d326bb28324a88a0ffc}
+Implements \hyperlink{group__field__storage_ga74ff0893fd8d05ab372bd4b65d0ffc71}{hook\_\-field\_\-storage\_\-delete\_\-revision()}. \hypertarget{field__test_8storage_8inc_a13b21ea3b360341839b6082c2836e5eb}{
+\index{field\_\-test.storage.inc@{field\_\-test.storage.inc}!field\_\-test\_\-field\_\-storage\_\-details@{field\_\-test\_\-field\_\-storage\_\-details}}
+\index{field\_\-test\_\-field\_\-storage\_\-details@{field\_\-test\_\-field\_\-storage\_\-details}!field_test.storage.inc@{field\_\-test.storage.inc}}
+\subsubsection[{field\_\-test\_\-field\_\-storage\_\-details}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-storage\_\-details (\$ {\em field})}}
+\label{field__test_8storage_8inc_a13b21ea3b360341839b6082c2836e5eb}
+Implements \hyperlink{group__field__storage_ga72b4d22502ffc709e50de0ba4f417062}{hook\_\-field\_\-storage\_\-details()}. \hypertarget{field__test_8storage_8inc_a7aadff122767aac99f03d92e52d891cd}{
+\index{field\_\-test.storage.inc@{field\_\-test.storage.inc}!field\_\-test\_\-field\_\-storage\_\-details\_\-alter@{field\_\-test\_\-field\_\-storage\_\-details\_\-alter}}
+\index{field\_\-test\_\-field\_\-storage\_\-details\_\-alter@{field\_\-test\_\-field\_\-storage\_\-details\_\-alter}!field_test.storage.inc@{field\_\-test.storage.inc}}
+\subsubsection[{field\_\-test\_\-field\_\-storage\_\-details\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-storage\_\-details\_\-alter (\&\$ {\em details}, \/  \$ {\em field})}}
+\label{field__test_8storage_8inc_a7aadff122767aac99f03d92e52d891cd}
+Implements \hyperlink{group__field__storage_gae79d6c32c896d3db208c90f3ab1b1ad0}{hook\_\-field\_\-storage\_\-details\_\-alter()}.
+
+\begin{DoxySeeAlso}{See also}
+FieldAttachStorageTestCase::testFieldStorageDetailsAlter() 
+\end{DoxySeeAlso}
+\hypertarget{field__test_8storage_8inc_a8467eb75b6a3cacbcd4a29fa23940e88}{
+\index{field\_\-test.storage.inc@{field\_\-test.storage.inc}!field\_\-test\_\-field\_\-storage\_\-info@{field\_\-test\_\-field\_\-storage\_\-info}}
+\index{field\_\-test\_\-field\_\-storage\_\-info@{field\_\-test\_\-field\_\-storage\_\-info}!field_test.storage.inc@{field\_\-test.storage.inc}}
+\subsubsection[{field\_\-test\_\-field\_\-storage\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-storage\_\-info ()}}
+\label{field__test_8storage_8inc_a8467eb75b6a3cacbcd4a29fa23940e88}
+Implements \hyperlink{group__field__storage_gadc5bfde3133504e946bb0aae8babe6f3}{hook\_\-field\_\-storage\_\-info()}. \hypertarget{field__test_8storage_8inc_a10f9c00a27624829625018699df8debf}{
+\index{field\_\-test.storage.inc@{field\_\-test.storage.inc}!field\_\-test\_\-field\_\-storage\_\-load@{field\_\-test\_\-field\_\-storage\_\-load}}
+\index{field\_\-test\_\-field\_\-storage\_\-load@{field\_\-test\_\-field\_\-storage\_\-load}!field_test.storage.inc@{field\_\-test.storage.inc}}
+\subsubsection[{field\_\-test\_\-field\_\-storage\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-storage\_\-load (\$ {\em entity\_\-type}, \/  \$ {\em entities}, \/  \$ {\em age}, \/  \$ {\em fields}, \/  \$ {\em options})}}
+\label{field__test_8storage_8inc_a10f9c00a27624829625018699df8debf}
+Implements \hyperlink{group__field__storage_gac9885dcd8f5d74b5f3137d7af40cf958}{hook\_\-field\_\-storage\_\-load()}. \hypertarget{field__test_8storage_8inc_a5faac556f945fdb5366f0a6034aa5360}{
+\index{field\_\-test.storage.inc@{field\_\-test.storage.inc}!field\_\-test\_\-field\_\-storage\_\-purge@{field\_\-test\_\-field\_\-storage\_\-purge}}
+\index{field\_\-test\_\-field\_\-storage\_\-purge@{field\_\-test\_\-field\_\-storage\_\-purge}!field_test.storage.inc@{field\_\-test.storage.inc}}
+\subsubsection[{field\_\-test\_\-field\_\-storage\_\-purge}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-storage\_\-purge (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field}, \/  \$ {\em instance})}}
+\label{field__test_8storage_8inc_a5faac556f945fdb5366f0a6034aa5360}
+Implements \hyperlink{group__field__crud_gab26211d5d58698d2446bfd855f6137c9}{hook\_\-field\_\-storage\_\-purge()}. \hypertarget{field__test_8storage_8inc_af02cd305f81f7d4059a81aab41d13b4c}{
+\index{field\_\-test.storage.inc@{field\_\-test.storage.inc}!field\_\-test\_\-field\_\-storage\_\-query@{field\_\-test\_\-field\_\-storage\_\-query}}
+\index{field\_\-test\_\-field\_\-storage\_\-query@{field\_\-test\_\-field\_\-storage\_\-query}!field_test.storage.inc@{field\_\-test.storage.inc}}
+\subsubsection[{field\_\-test\_\-field\_\-storage\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-storage\_\-query (\$ {\em field\_\-id}, \/  \$ {\em conditions}, \/  \$ {\em count}, \/  \&\$ {\em cursor} = {\ttfamily NULL}, \/  \$ {\em age})}}
+\label{field__test_8storage_8inc_af02cd305f81f7d4059a81aab41d13b4c}
+Implements \hyperlink{group__field__storage_gaf46795ee1b678a72b4457b524303c794}{hook\_\-field\_\-storage\_\-query()}. \hypertarget{field__test_8storage_8inc_aa7f37b08fb61d3dc31226c409cb9a1ac}{
+\index{field\_\-test.storage.inc@{field\_\-test.storage.inc}!field\_\-test\_\-field\_\-storage\_\-write@{field\_\-test\_\-field\_\-storage\_\-write}}
+\index{field\_\-test\_\-field\_\-storage\_\-write@{field\_\-test\_\-field\_\-storage\_\-write}!field_test.storage.inc@{field\_\-test.storage.inc}}
+\subsubsection[{field\_\-test\_\-field\_\-storage\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-storage\_\-write (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em op}, \/  \$ {\em fields})}}
+\label{field__test_8storage_8inc_aa7f37b08fb61d3dc31226c409cb9a1ac}
+Implements \hyperlink{group__field__storage_ga5663ebcfb92828cbed84a041e9a4b0d1}{hook\_\-field\_\-storage\_\-write()}. 

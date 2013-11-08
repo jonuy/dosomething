@@ -1,0 +1,141 @@
+\hypertarget{html__to__text_8inc}{
+\section{html/profiles/dosomething/modules/contrib/mailsystem/html\_\-to\_\-text.inc File Reference}
+\label{html__to__text_8inc}\index{html/profiles/dosomething/modules/contrib/mailsystem/html\_\-to\_\-text.inc@{html/profiles/dosomething/modules/contrib/mailsystem/html\_\-to\_\-text.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{html__to__text_8inc_a7137e9a046abb0bc57ad54a580612474}{mailsystem\_\-wrap\_\-mail} (\$text, array \$options=array())
+\item 
+\hyperlink{html__to__text_8inc_abd38fa306fb704f7e880c034042768b2}{mailsystem\_\-html\_\-to\_\-text} (\$string, \$allowed\_\-tags=NULL)
+\item 
+\hyperlink{html__to__text_8inc_af581a74a8de0f0cbedc673623bccdc5d}{\_\-mailsystem\_\-html\_\-to\_\-text} (DOMNode \$node, array \$allowed\_\-tags, array \&\$notes, \$line\_\-length=80, array \$parents=array(), \&\$count=NULL)
+\item 
+\hyperlink{html__to__text_8inc_aaae86eca3d53d44fb34d4a64db93ae89}{\_\-mailsystem\_\-html\_\-to\_\-text\_\-table} (DOMNode \$node, \$allowed\_\-tags=NULL, array \&\$notes=array(), \$table\_\-width=80)
+\item 
+\hyperlink{html__to__text_8inc_af062b4bc2cb10c61afac44647167bd19}{\_\-mailsystem\_\-wrap\_\-mail\_\-line} (\&\$line, \$key, \$values)
+\item 
+\hyperlink{html__to__text_8inc_ad77a7dffe89d0b6cb337b0f36bdb64b3}{\_\-mailsystem\_\-indent\_\-mail\_\-line} (\&\$line, \$key, \$values)
+\item 
+\hyperlink{html__to__text_8inc_a33422aa7297978d57f41144ae705ed60}{\_\-mailsystem\_\-html\_\-to\_\-text\_\-clean} (\$indent)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Copy of drupal\_\-html\_\-to\_\-text improvements from issue \#299138. 
+
+\subsection{Function Documentation}
+\hypertarget{html__to__text_8inc_af581a74a8de0f0cbedc673623bccdc5d}{
+\index{html\_\-to\_\-text.inc@{html\_\-to\_\-text.inc}!\_\-mailsystem\_\-html\_\-to\_\-text@{\_\-mailsystem\_\-html\_\-to\_\-text}}
+\index{\_\-mailsystem\_\-html\_\-to\_\-text@{\_\-mailsystem\_\-html\_\-to\_\-text}!html_to_text.inc@{html\_\-to\_\-text.inc}}
+\subsubsection[{\_\-mailsystem\_\-html\_\-to\_\-text}]{\setlength{\rightskip}{0pt plus 5cm}\_\-mailsystem\_\-html\_\-to\_\-text (DOMNode \$ {\em node}, \/  array \$ {\em allowed\_\-tags}, \/  array \&\$ {\em notes}, \/  \$ {\em line\_\-length} = {\ttfamily 80}, \/  array \$ {\em parents} = {\ttfamily array()}, \/  \&\$ {\em count} = {\ttfamily NULL})}}
+\label{html__to__text_8inc_af581a74a8de0f0cbedc673623bccdc5d}
+Helper function for \hyperlink{mail_8inc_a1d324056cce089d2fc06dedee5b6e92e}{drupal\_\-html\_\-to\_\-text()}.
+
+Recursively converts \$node to text, wrapping and indenting as necessary.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]The source DOMNode. \item[{\em \$allowed\_\-tags}]A list of tags that will be transformed. \item[{\em array}]\&\$notes A writeable array of footnote reference numbers, keyed by their respective hyperlink destination urls. \item[{\em \$line\_\-length}]The maximum length of a line, for wrapping. Defaults to 80 characters. \item[{\em array}]\$parents The list of ancestor tags, from nearest to most distant. Defaults to an empty array(). \item[{\em \$count}]The number to use for the next list item within an ordered list. Defaults to 1. \end{DoxyParams}
+\hypertarget{html__to__text_8inc_a33422aa7297978d57f41144ae705ed60}{
+\index{html\_\-to\_\-text.inc@{html\_\-to\_\-text.inc}!\_\-mailsystem\_\-html\_\-to\_\-text\_\-clean@{\_\-mailsystem\_\-html\_\-to\_\-text\_\-clean}}
+\index{\_\-mailsystem\_\-html\_\-to\_\-text\_\-clean@{\_\-mailsystem\_\-html\_\-to\_\-text\_\-clean}!html_to_text.inc@{html\_\-to\_\-text.inc}}
+\subsubsection[{\_\-mailsystem\_\-html\_\-to\_\-text\_\-clean}]{\setlength{\rightskip}{0pt plus 5cm}\_\-mailsystem\_\-html\_\-to\_\-text\_\-clean (\$ {\em indent})}}
+\label{html__to__text_8inc_a33422aa7297978d57f41144ae705ed60}
+Helper function for \hyperlink{mail_8inc_a955ffecc70c15ab89079ea29557f7b41}{drupal\_\-wrap\_\-mail()} and \hyperlink{mail_8inc_a1d324056cce089d2fc06dedee5b6e92e}{drupal\_\-html\_\-to\_\-text()}.
+
+Replace all non-\/quotation markers from a given piece of indentation with non-\/breaking space characters. \hypertarget{html__to__text_8inc_aaae86eca3d53d44fb34d4a64db93ae89}{
+\index{html\_\-to\_\-text.inc@{html\_\-to\_\-text.inc}!\_\-mailsystem\_\-html\_\-to\_\-text\_\-table@{\_\-mailsystem\_\-html\_\-to\_\-text\_\-table}}
+\index{\_\-mailsystem\_\-html\_\-to\_\-text\_\-table@{\_\-mailsystem\_\-html\_\-to\_\-text\_\-table}!html_to_text.inc@{html\_\-to\_\-text.inc}}
+\subsubsection[{\_\-mailsystem\_\-html\_\-to\_\-text\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}\_\-mailsystem\_\-html\_\-to\_\-text\_\-table (DOMNode \$ {\em node}, \/  \$ {\em allowed\_\-tags} = {\ttfamily NULL}, \/  array \&\$ {\em notes} = {\ttfamily array()}, \/  \$ {\em table\_\-width} = {\ttfamily 80})}}
+\label{html__to__text_8inc_aaae86eca3d53d44fb34d4a64db93ae89}
+Helper function for \hyperlink{html__to__text_8inc_af581a74a8de0f0cbedc673623bccdc5d}{\_\-mailsystem\_\-html\_\-to\_\-text()}.
+
+Renders a \begin{TabularC}{0}
+\hline
+\end{TabularC}
+Node into plain text. Attributes such as rowspan, colspan, padding, border, etc. are ignored.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em DOMNode}]\$node The DOMNode corresponding to the \begin{TabularC}{0}
+\hline
+\end{TabularC}
+and its contents. \item[{\em \$allowed\_\-tags}]The list of allowed tags passed to \hyperlink{html__to__text_8inc_af581a74a8de0f0cbedc673623bccdc5d}{\_\-mailsystem\_\-html\_\-to\_\-text()}. \item[{\em array}]\&\$notes A writeable array of footnote reference numbers, keyed by their respective hyperlink destination urls. \item[{\em \$table\_\-width}]The desired maximum table width, after word-\/wrapping each table cell.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A plain text representation of the table.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{html__to__text_8inc_af581a74a8de0f0cbedc673623bccdc5d}{\_\-mailsystem\_\-html\_\-to\_\-text()} 
+\end{DoxySeeAlso}
+\hypertarget{html__to__text_8inc_ad77a7dffe89d0b6cb337b0f36bdb64b3}{
+\index{html\_\-to\_\-text.inc@{html\_\-to\_\-text.inc}!\_\-mailsystem\_\-indent\_\-mail\_\-line@{\_\-mailsystem\_\-indent\_\-mail\_\-line}}
+\index{\_\-mailsystem\_\-indent\_\-mail\_\-line@{\_\-mailsystem\_\-indent\_\-mail\_\-line}!html_to_text.inc@{html\_\-to\_\-text.inc}}
+\subsubsection[{\_\-mailsystem\_\-indent\_\-mail\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}\_\-mailsystem\_\-indent\_\-mail\_\-line (\&\$ {\em line}, \/  \$ {\em key}, \/  \$ {\em values})}}
+\label{html__to__text_8inc_ad77a7dffe89d0b6cb337b0f36bdb64b3}
+Helper function for array\_\-walk in \hyperlink{mail_8inc_a955ffecc70c15ab89079ea29557f7b41}{drupal\_\-wrap\_\-mail()}.
+
+If \$values\mbox{[}'pad'\mbox{]} is non-\/empty, \$values\mbox{[}'indent'\mbox{]} will be added at the start of each line, and \$values\mbox{[}'pad'\mbox{]} at the end, repeating the last character of \$values\mbox{[}'pad'\mbox{]} until the line length equals \$values\mbox{[}'max'\mbox{]}.
+
+If \$values\mbox{[}'pad'\mbox{]} is empty, \$values\mbox{[}'indent'\mbox{]} will be added at the start of the first line, and \$values\mbox{[}'clean'\mbox{]} at the start of subsequent lines.
+
+If \$values\mbox{[}'stuff'\mbox{]} is true, then an extra space character will be added at the start of any line beginning with a space, a '$>$', or the word 'From'.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://www.ietf.org/rfc/rfc3676.txt}{\tt http://www.ietf.org/rfc/rfc3676.txt} 
+\end{DoxySeeAlso}
+\hypertarget{html__to__text_8inc_af062b4bc2cb10c61afac44647167bd19}{
+\index{html\_\-to\_\-text.inc@{html\_\-to\_\-text.inc}!\_\-mailsystem\_\-wrap\_\-mail\_\-line@{\_\-mailsystem\_\-wrap\_\-mail\_\-line}}
+\index{\_\-mailsystem\_\-wrap\_\-mail\_\-line@{\_\-mailsystem\_\-wrap\_\-mail\_\-line}!html_to_text.inc@{html\_\-to\_\-text.inc}}
+\subsubsection[{\_\-mailsystem\_\-wrap\_\-mail\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}\_\-mailsystem\_\-wrap\_\-mail\_\-line (\&\$ {\em line}, \/  \$ {\em key}, \/  \$ {\em values})}}
+\label{html__to__text_8inc_af062b4bc2cb10c61afac44647167bd19}
+Helper function for array\_\-walk in \hyperlink{mail_8inc_a955ffecc70c15ab89079ea29557f7b41}{drupal\_\-wrap\_\-mail()}.
+
+Inserts \$values\mbox{[}'break'\mbox{]} sequences to break up \$line into parts of no more than \$values\mbox{[}'wrap'\mbox{]} characters. Only breaks at space characters, unless \$values\mbox{[}'hard'\mbox{]} is TRUE. \hypertarget{html__to__text_8inc_abd38fa306fb704f7e880c034042768b2}{
+\index{html\_\-to\_\-text.inc@{html\_\-to\_\-text.inc}!mailsystem\_\-html\_\-to\_\-text@{mailsystem\_\-html\_\-to\_\-text}}
+\index{mailsystem\_\-html\_\-to\_\-text@{mailsystem\_\-html\_\-to\_\-text}!html_to_text.inc@{html\_\-to\_\-text.inc}}
+\subsubsection[{mailsystem\_\-html\_\-to\_\-text}]{\setlength{\rightskip}{0pt plus 5cm}mailsystem\_\-html\_\-to\_\-text (\$ {\em string}, \/  \$ {\em allowed\_\-tags} = {\ttfamily NULL})}}
+\label{html__to__text_8inc_abd38fa306fb704f7e880c034042768b2}
+Transform an HTML string into plain text, preserving the structure of the markup. Useful for preparing the body of a node to be sent by e-\/mail.
+
+The output will be suitable for use as 'format=flowed; delsp=yes' text (RFC 3676) and can be passed directly to \hyperlink{mail_8inc_ab80781fd7273975a77cbbd13300eddbf}{drupal\_\-mail()} for sending.
+
+We deliberately use variable\_\-get('mail\_\-line\_\-endings', MAIL\_\-LINE\_\-ENDINGS) rather than \char`\"{}$\backslash$r$\backslash$n\char`\"{}.
+
+This function provides suitable alternatives for the following tags:
+
+$<$address$>$ {\bfseries  $<$blockquote$>$ \par
+  $<$cite$>$   
+\begin{DoxyDescription}
+\item[{\itshape         {\itshape      {\bfseries           The following tag attributes are supported:: Hyperlink destination urls.: Ordered list item numbers.: Ordered list start number.   \$string The string to be transformed.  \$allowed\_\-tags (optional) If supplied, a list of tags that will be transformed. If omitted, all supported tags are transformed.   The transformed string.   \hyperlink{mail_8inc_ab80781fd7273975a77cbbd13300eddbf}{drupal\_\-mail()} }\/}\/}]
+\end{DoxyDescription}}\hypertarget{html__to__text_8inc_a7137e9a046abb0bc57ad54a580612474}{
+\index{html\_\-to\_\-text.inc@{html\_\-to\_\-text.inc}!mailsystem\_\-wrap\_\-mail@{mailsystem\_\-wrap\_\-mail}}
+\index{mailsystem\_\-wrap\_\-mail@{mailsystem\_\-wrap\_\-mail}!html_to_text.inc@{html\_\-to\_\-text.inc}}
+\subsubsection[{mailsystem\_\-wrap\_\-mail}]{\setlength{\rightskip}{0pt plus 5cm}mailsystem\_\-wrap\_\-mail (\$ {\em text}, \/  array \$ {\em options} = {\ttfamily array()})}}
+\label{html__to__text_8inc_a7137e9a046abb0bc57ad54a580612474}
+Perform format=flowed soft wrapping for mail (RFC 3676).
+
+We use delsp=yes wrapping, but only break non-\/spaced languages when absolutely necessary to avoid compatibility issues.
+
+We deliberately use variable\_\-get('mail\_\-line\_\-endings', MAIL\_\-LINE\_\-ENDINGS) rather than \char`\"{}$\backslash$r$\backslash$n\char`\"{}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$text}]The plain text to process. \item[{\em array}]\$options (optional) An array containing one or more of the following keys:
+\begin{DoxyItemize}
+\item indent: A string to indent the text with. Only '$>$' characters are repeated on subsequent wrapped lines. Others are replaced by spaces.
+\item max: The maximum length at which to wrap each line. Defaults to 80.
+\item stuff: Whether to space-\/stuff special lines. Defaults to TRUE.
+\item hard: Whether to enforce the maximum line length even if no convenient space character is available. Defaults to FALSE.
+\item pad: A string to use for padding short lines to 'max' characters. If more than one character, only the last will be repeated.
+\item break: The line break sequence to insert. The default is one of the following:
+\begin{DoxyItemize}
+\item \char`\"{}$\backslash$r$\backslash$n\char`\"{}: Windows, when \$text does not contain a space character.
+\item \char`\"{}$\backslash$n\char`\"{}: Non-\/Windows, when \$text does not contain a space character.
+\item \char`\"{} $\backslash$r$\backslash$n\char`\"{}: On Windows, when \$text contains at least one space.
+\item \char`\"{} $\backslash$n\char`\"{}: Non-\/Windows, when \$text contains at least one space.
+\end{DoxyItemize}
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{mail_8inc_ab80781fd7273975a77cbbd13300eddbf}{drupal\_\-mail()} 
+\end{DoxySeeAlso}

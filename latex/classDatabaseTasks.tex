@@ -1,0 +1,157 @@
+\hypertarget{classDatabaseTasks}{
+\section{DatabaseTasks Class Reference}
+\label{classDatabaseTasks}\index{DatabaseTasks@{DatabaseTasks}}
+}
+Inheritance diagram for DatabaseTasks::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classDatabaseTasks}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDatabaseTasks_aea31e0c70a1870a0290ab2ee06f364e1}{installable} ()
+\item 
+\hyperlink{classDatabaseTasks_ae582e57b43461aad87f47ad0d37b6c9a}{name} ()
+\item 
+\hyperlink{classDatabaseTasks_a840dd551944911605ee2e139a434efea}{minimumVersion} ()
+\item 
+\hyperlink{classDatabaseTasks_a02a8ac31c7ed2c7798732ef5cf8482d0}{runTasks} ()
+\item 
+\hyperlink{classDatabaseTasks_a97968c7dd7807a65a301a27ea3d15480}{getFormOptions} (\$database)
+\item 
+\hyperlink{classDatabaseTasks_a44116b4f564f8fcfdd5ade73853419b8}{validateDatabaseSettings} (\$database)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDatabaseTasks_a04d6c3b18630c969106bb890a0156e34}{hasPdoDriver} ()
+\item 
+\hyperlink{classDatabaseTasks_a97dfb29bafb3aeca1eeba6caec27f203}{fail} (\$message)
+\item 
+\hyperlink{classDatabaseTasks_ab95a2718467b938c7116b5d2feeb9a4c}{pass} (\$message)
+\item 
+\hyperlink{classDatabaseTasks_a64f74ab2f1de175c8b472223a9267ce7}{connect} ()
+\item 
+\hyperlink{classDatabaseTasks_a53da139c1b17ae90a0f6df6dd003c0ca}{runTestQuery} (\$query, \$pass, \$fail, \$fatal=FALSE)
+\item 
+\hyperlink{classDatabaseTasks_a0e94441f09146aa9d6a991f7483f19d1}{checkEngineVersion} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDatabaseTasks_abe98e1901f232f60a8690b0af4b2b8ab}{
+{\bfseries \$tasks}}
+\label{classDatabaseTasks_abe98e1901f232f60a8690b0af4b2b8ab}
+
+\item 
+\hypertarget{classDatabaseTasks_ac218754419e471c1523a4e56d36899dc}{
+{\bfseries \$results} = array()}
+\label{classDatabaseTasks_ac218754419e471c1523a4e56d36899dc}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classDatabase}{Database} installer structure.
+
+Defines basic Drupal requirements for databases. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classDatabaseTasks_a0e94441f09146aa9d6a991f7483f19d1}{
+\index{DatabaseTasks@{DatabaseTasks}!checkEngineVersion@{checkEngineVersion}}
+\index{checkEngineVersion@{checkEngineVersion}!DatabaseTasks@{DatabaseTasks}}
+\subsubsection[{checkEngineVersion}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseTasks::checkEngineVersion ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseTasks_a0e94441f09146aa9d6a991f7483f19d1}
+Check the engine version. \hypertarget{classDatabaseTasks_a64f74ab2f1de175c8b472223a9267ce7}{
+\index{DatabaseTasks@{DatabaseTasks}!connect@{connect}}
+\index{connect@{connect}!DatabaseTasks@{DatabaseTasks}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseTasks::connect ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseTasks_a64f74ab2f1de175c8b472223a9267ce7}
+Check if we can connect to the database. \hypertarget{classDatabaseTasks_a97dfb29bafb3aeca1eeba6caec27f203}{
+\index{DatabaseTasks@{DatabaseTasks}!fail@{fail}}
+\index{fail@{fail}!DatabaseTasks@{DatabaseTasks}}
+\subsubsection[{fail}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseTasks::fail (\$ {\em message})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseTasks_a97dfb29bafb3aeca1eeba6caec27f203}
+Assert test as failed. \hypertarget{classDatabaseTasks_a97968c7dd7807a65a301a27ea3d15480}{
+\index{DatabaseTasks@{DatabaseTasks}!getFormOptions@{getFormOptions}}
+\index{getFormOptions@{getFormOptions}!DatabaseTasks@{DatabaseTasks}}
+\subsubsection[{getFormOptions}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseTasks::getFormOptions (\$ {\em database})}}
+\label{classDatabaseTasks_a97968c7dd7807a65a301a27ea3d15480}
+Return driver specific configuration options.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$database}]An array of driver specific configuration options.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The options form array. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classDatabaseTasks__sqlite_a8406f646a0461ef07f4d9ad01279aaea}{DatabaseTasks\_\-sqlite}.\hypertarget{classDatabaseTasks_a04d6c3b18630c969106bb890a0156e34}{
+\index{DatabaseTasks@{DatabaseTasks}!hasPdoDriver@{hasPdoDriver}}
+\index{hasPdoDriver@{hasPdoDriver}!DatabaseTasks@{DatabaseTasks}}
+\subsubsection[{hasPdoDriver}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseTasks::hasPdoDriver ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseTasks_a04d6c3b18630c969106bb890a0156e34}
+Ensure the PDO driver is supported by the version of PHP in use. \hypertarget{classDatabaseTasks_aea31e0c70a1870a0290ab2ee06f364e1}{
+\index{DatabaseTasks@{DatabaseTasks}!installable@{installable}}
+\index{installable@{installable}!DatabaseTasks@{DatabaseTasks}}
+\subsubsection[{installable}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseTasks::installable ()}}
+\label{classDatabaseTasks_aea31e0c70a1870a0290ab2ee06f364e1}
+Check whether Drupal is installable on the database. \hypertarget{classDatabaseTasks_a840dd551944911605ee2e139a434efea}{
+\index{DatabaseTasks@{DatabaseTasks}!minimumVersion@{minimumVersion}}
+\index{minimumVersion@{minimumVersion}!DatabaseTasks@{DatabaseTasks}}
+\subsubsection[{minimumVersion}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseTasks::minimumVersion ()}}
+\label{classDatabaseTasks_a840dd551944911605ee2e139a434efea}
+Return the minimum required version of the engine.
+
+\begin{DoxyReturn}{Returns}
+A version string. If not NULL, it will be checked against the version reported by the \hyperlink{classDatabase}{Database} engine using version\_\-compare(). 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classDatabaseTasks__mysql_a7f4a11fcaa8a2267767eb16547cf7c52}{DatabaseTasks\_\-mysql}, \hyperlink{classDatabaseTasks__pgsql_abf42cc0a5aa01ae5c146277419f394ae}{DatabaseTasks\_\-pgsql}, and \hyperlink{classDatabaseTasks__sqlite_ac546ff3ed7f1ece5726b3c5cd7a39ef9}{DatabaseTasks\_\-sqlite}.\hypertarget{classDatabaseTasks_ae582e57b43461aad87f47ad0d37b6c9a}{
+\index{DatabaseTasks@{DatabaseTasks}!name@{name}}
+\index{name@{name}!DatabaseTasks@{DatabaseTasks}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseTasks::name ()\hspace{0.3cm}{\ttfamily  \mbox{[}abstract\mbox{]}}}}
+\label{classDatabaseTasks_ae582e57b43461aad87f47ad0d37b6c9a}
+Return the human-\/readable name of the driver. 
+
+Reimplemented in \hyperlink{classDatabaseTasks__mysql_ab8f790cc6df5bbde06325da137da7030}{DatabaseTasks\_\-mysql}, \hyperlink{classDatabaseTasks__pgsql_afe779086f177b48b3441372136e2d560}{DatabaseTasks\_\-pgsql}, and \hyperlink{classDatabaseTasks__sqlite_ad31220279e6cbec9d248a66e8b51fe2f}{DatabaseTasks\_\-sqlite}.\hypertarget{classDatabaseTasks_ab95a2718467b938c7116b5d2feeb9a4c}{
+\index{DatabaseTasks@{DatabaseTasks}!pass@{pass}}
+\index{pass@{pass}!DatabaseTasks@{DatabaseTasks}}
+\subsubsection[{pass}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseTasks::pass (\$ {\em message})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseTasks_ab95a2718467b938c7116b5d2feeb9a4c}
+Assert test as a pass. \hypertarget{classDatabaseTasks_a02a8ac31c7ed2c7798732ef5cf8482d0}{
+\index{DatabaseTasks@{DatabaseTasks}!runTasks@{runTasks}}
+\index{runTasks@{runTasks}!DatabaseTasks@{DatabaseTasks}}
+\subsubsection[{runTasks}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseTasks::runTasks ()}}
+\label{classDatabaseTasks_a02a8ac31c7ed2c7798732ef5cf8482d0}
+Run database tasks and tests to see if Drupal can run on the database. \hypertarget{classDatabaseTasks_a53da139c1b17ae90a0f6df6dd003c0ca}{
+\index{DatabaseTasks@{DatabaseTasks}!runTestQuery@{runTestQuery}}
+\index{runTestQuery@{runTestQuery}!DatabaseTasks@{DatabaseTasks}}
+\subsubsection[{runTestQuery}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseTasks::runTestQuery (\$ {\em query}, \/  \$ {\em pass}, \/  \$ {\em fail}, \/  \$ {\em fatal} = {\ttfamily FALSE})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseTasks_a53da139c1b17ae90a0f6df6dd003c0ca}
+Run SQL tests to ensure the database can execute commands with the current user. \hypertarget{classDatabaseTasks_a44116b4f564f8fcfdd5ade73853419b8}{
+\index{DatabaseTasks@{DatabaseTasks}!validateDatabaseSettings@{validateDatabaseSettings}}
+\index{validateDatabaseSettings@{validateDatabaseSettings}!DatabaseTasks@{DatabaseTasks}}
+\subsubsection[{validateDatabaseSettings}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseTasks::validateDatabaseSettings (\$ {\em database})}}
+\label{classDatabaseTasks_a44116b4f564f8fcfdd5ade73853419b8}
+Validates driver specific configuration settings.
+
+Checks to ensure correct basic database settings and that a proper connection to the database can be established.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$database}]An array of driver specific configuration options.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of driver configuration errors, keyed by form element name. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classDatabaseTasks__sqlite_a3d2e2aff4e7a3d890a82b057aab722c4}{DatabaseTasks\_\-sqlite}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/\hyperlink{install_8inc}{install.inc}\end{DoxyCompactItemize}

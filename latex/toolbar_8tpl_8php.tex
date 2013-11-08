@@ -1,0 +1,43 @@
+\hypertarget{toolbar_8tpl_8php}{
+\section{html/modules/toolbar/toolbar.tpl.php File Reference}
+\label{toolbar_8tpl_8php}\index{html/modules/toolbar/toolbar.tpl.php@{html/modules/toolbar/toolbar.tpl.php}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{toolbar_8tpl_8php_a6d48ecbdbc70ca1812e665169b5fa1e2}{
+print {\bfseries \$classes}}
+\label{toolbar_8tpl_8php_a6d48ecbdbc70ca1812e665169b5fa1e2}
+
+\item 
+\hypertarget{toolbar_8tpl_8php_a82cd33ca97ff99f2fcc5e9c81d65251b}{
+{\bfseries endif}}
+\label{toolbar_8tpl_8php_a82cd33ca97ff99f2fcc5e9c81d65251b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Default template for admin toolbar.
+
+Available variables:
+\begin{DoxyItemize}
+\item \$classes: String of classes that can be used to style contextually through CSS. It can be manipulated through the variable \$classes\_\-array from preprocess functions. The default value has the following:
+\begin{DoxyItemize}
+\item toolbar: The current template type, i.e., \char`\"{}theming hook\char`\"{}.
+\end{DoxyItemize}
+\item \$toolbar\mbox{[}'toolbar\_\-user'\mbox{]}: User account / logout links.
+\item \$toolbar\mbox{[}'toolbar\_\-menu'\mbox{]}: Top level management menu links.
+\item \$toolbar\mbox{[}'toolbar\_\-drawer'\mbox{]}: A place for extended toolbar content.
+\end{DoxyItemize}
+
+Other variables:
+\begin{DoxyItemize}
+\item \$classes\_\-array: Array of html class attribute values. It is flattened into a string within the variable \$classes.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{includes_2theme_8inc_a3eeb7bcdba7ef4859f99586da264d347}{template\_\-preprocess()} 
+
+template\_\-preprocess\_\-toolbar() 
+\end{DoxySeeAlso}

@@ -1,0 +1,140 @@
+\hypertarget{options_8module}{
+\section{html/modules/field/modules/options/options.module File Reference}
+\label{options_8module}\index{html/modules/field/modules/options/options.module@{html/modules/field/modules/options/options.module}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{options_8module_af1fe641e7ce3d6b9b177b6b0b6d9f79c}{options\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{options_8module_abd79ab0dcf6dd76002d3907c7c6b23aa}{options\_\-theme} ()
+\item 
+\hyperlink{options_8module_a2a5b985f8f891674657082a64718a2f3}{options\_\-field\_\-widget\_\-info} ()
+\item 
+\hyperlink{options_8module_a3b29c0fa799d570fc011b1b45e34719f}{options\_\-field\_\-widget\_\-form} (\&\$form, \&\$form\_\-state, \$field, \$instance, \$langcode, \$items, \$delta, \$element)
+\item 
+\hyperlink{options_8module_a9be7905a9c57a7ce26a8c37dc441b446}{options\_\-field\_\-widget\_\-settings\_\-form} (\$field, \$instance)
+\item 
+\hyperlink{options_8module_a7d411a2659add08a965e0892fe83787f}{options\_\-field\_\-widget\_\-validate} (\$element, \&\$form\_\-state)
+\item 
+\hyperlink{options_8module_a77844a0b5beb19eaa6a58ba1213150e5}{\_\-options\_\-properties} (\$type, \$multiple, \$required, \$has\_\-value)
+\item 
+\hyperlink{options_8module_a31c60c79de94e0ade1abf9b53e05b695}{\_\-options\_\-get\_\-options} (\$field, \$instance, \$properties, \$entity\_\-type, \$entity)
+\item 
+\hyperlink{options_8module_ab54ed362b7302ba52cd93457c315aec8}{\_\-options\_\-prepare\_\-options} (\&\$options, \$properties)
+\item 
+\hyperlink{options_8module_a2685060524ba869cbf096e798a374070}{\_\-options\_\-storage\_\-to\_\-form} (\$items, \$options, \$column, \$properties)
+\item 
+\hyperlink{options_8module_aac475d38301c8589cc2e903b7c2920c3}{\_\-options\_\-form\_\-to\_\-storage} (\$element)
+\item 
+\hyperlink{options_8module_ad8c45e3075cbf026b5838474c28a9dc0}{options\_\-array\_\-transpose} (\$array)
+\item 
+\hyperlink{options_8module_aae0e4ab472c2c47597c915b106c6faf3}{options\_\-array\_\-flatten} (\$array)
+\item 
+\hyperlink{options_8module_a1027f9d62824a05b68ad460e23a5edcf}{options\_\-field\_\-widget\_\-error} (\$element, \$error, \$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__themeable_gac1e1ed5c70484046a550344155a9bf6d}{theme\_\-options\_\-none} (\$variables)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines selection, check box and radio button widgets for text and numeric fields. 
+
+\subsection{Function Documentation}
+\hypertarget{options_8module_aac475d38301c8589cc2e903b7c2920c3}{
+\index{options.module@{options.module}!\_\-options\_\-form\_\-to\_\-storage@{\_\-options\_\-form\_\-to\_\-storage}}
+\index{\_\-options\_\-form\_\-to\_\-storage@{\_\-options\_\-form\_\-to\_\-storage}!options.module@{options.module}}
+\subsubsection[{\_\-options\_\-form\_\-to\_\-storage}]{\setlength{\rightskip}{0pt plus 5cm}\_\-options\_\-form\_\-to\_\-storage (\$ {\em element})}}
+\label{options_8module_aac475d38301c8589cc2e903b7c2920c3}
+Transforms submitted form values into field storage format. \hypertarget{options_8module_a31c60c79de94e0ade1abf9b53e05b695}{
+\index{options.module@{options.module}!\_\-options\_\-get\_\-options@{\_\-options\_\-get\_\-options}}
+\index{\_\-options\_\-get\_\-options@{\_\-options\_\-get\_\-options}!options.module@{options.module}}
+\subsubsection[{\_\-options\_\-get\_\-options}]{\setlength{\rightskip}{0pt plus 5cm}\_\-options\_\-get\_\-options (\$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em properties}, \/  \$ {\em entity\_\-type}, \/  \$ {\em entity})}}
+\label{options_8module_a31c60c79de94e0ade1abf9b53e05b695}
+Collects the options for a field. \hypertarget{options_8module_ab54ed362b7302ba52cd93457c315aec8}{
+\index{options.module@{options.module}!\_\-options\_\-prepare\_\-options@{\_\-options\_\-prepare\_\-options}}
+\index{\_\-options\_\-prepare\_\-options@{\_\-options\_\-prepare\_\-options}!options.module@{options.module}}
+\subsubsection[{\_\-options\_\-prepare\_\-options}]{\setlength{\rightskip}{0pt plus 5cm}\_\-options\_\-prepare\_\-options (\&\$ {\em options}, \/  \$ {\em properties})}}
+\label{options_8module_ab54ed362b7302ba52cd93457c315aec8}
+Sanitizes the options.
+
+The function is recursive to support optgroups. \hypertarget{options_8module_a77844a0b5beb19eaa6a58ba1213150e5}{
+\index{options.module@{options.module}!\_\-options\_\-properties@{\_\-options\_\-properties}}
+\index{\_\-options\_\-properties@{\_\-options\_\-properties}!options.module@{options.module}}
+\subsubsection[{\_\-options\_\-properties}]{\setlength{\rightskip}{0pt plus 5cm}\_\-options\_\-properties (\$ {\em type}, \/  \$ {\em multiple}, \/  \$ {\em required}, \/  \$ {\em has\_\-value})}}
+\label{options_8module_a77844a0b5beb19eaa6a58ba1213150e5}
+Describes the preparation steps required by each widget. \hypertarget{options_8module_a2685060524ba869cbf096e798a374070}{
+\index{options.module@{options.module}!\_\-options\_\-storage\_\-to\_\-form@{\_\-options\_\-storage\_\-to\_\-form}}
+\index{\_\-options\_\-storage\_\-to\_\-form@{\_\-options\_\-storage\_\-to\_\-form}!options.module@{options.module}}
+\subsubsection[{\_\-options\_\-storage\_\-to\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}\_\-options\_\-storage\_\-to\_\-form (\$ {\em items}, \/  \$ {\em options}, \/  \$ {\em column}, \/  \$ {\em properties})}}
+\label{options_8module_a2685060524ba869cbf096e798a374070}
+Transforms stored field values into the format the widgets need. \hypertarget{options_8module_aae0e4ab472c2c47597c915b106c6faf3}{
+\index{options.module@{options.module}!options\_\-array\_\-flatten@{options\_\-array\_\-flatten}}
+\index{options\_\-array\_\-flatten@{options\_\-array\_\-flatten}!options.module@{options.module}}
+\subsubsection[{options\_\-array\_\-flatten}]{\setlength{\rightskip}{0pt plus 5cm}options\_\-array\_\-flatten (\$ {\em array})}}
+\label{options_8module_aae0e4ab472c2c47597c915b106c6faf3}
+Flattens an array of allowed values.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$array}]A single or multidimensional array. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A flattened array. 
+\end{DoxyReturn}
+\hypertarget{options_8module_ad8c45e3075cbf026b5838474c28a9dc0}{
+\index{options.module@{options.module}!options\_\-array\_\-transpose@{options\_\-array\_\-transpose}}
+\index{options\_\-array\_\-transpose@{options\_\-array\_\-transpose}!options.module@{options.module}}
+\subsubsection[{options\_\-array\_\-transpose}]{\setlength{\rightskip}{0pt plus 5cm}options\_\-array\_\-transpose (\$ {\em array})}}
+\label{options_8module_ad8c45e3075cbf026b5838474c28a9dc0}
+Manipulates a 2D array to reverse rows and columns.
+
+The default data storage for fields is delta first, column names second. This is sometimes inconvenient for field modules, so this function can be used to present the data in an alternate format.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$array}]The array to be transposed. It must be at least two-\/dimensional, and the subarrays must all have the same keys or behavior is undefined. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The transposed array. 
+\end{DoxyReturn}
+\hypertarget{options_8module_a1027f9d62824a05b68ad460e23a5edcf}{
+\index{options.module@{options.module}!options\_\-field\_\-widget\_\-error@{options\_\-field\_\-widget\_\-error}}
+\index{options\_\-field\_\-widget\_\-error@{options\_\-field\_\-widget\_\-error}!options.module@{options.module}}
+\subsubsection[{options\_\-field\_\-widget\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}options\_\-field\_\-widget\_\-error (\$ {\em element}, \/  \$ {\em error}, \/  \$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{options_8module_a1027f9d62824a05b68ad460e23a5edcf}
+Implements \hyperlink{group__field__widget_ga9a2031578542fef9e296d79c946431fd}{hook\_\-field\_\-widget\_\-error()}. \hypertarget{options_8module_a3b29c0fa799d570fc011b1b45e34719f}{
+\index{options.module@{options.module}!options\_\-field\_\-widget\_\-form@{options\_\-field\_\-widget\_\-form}}
+\index{options\_\-field\_\-widget\_\-form@{options\_\-field\_\-widget\_\-form}!options.module@{options.module}}
+\subsubsection[{options\_\-field\_\-widget\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}options\_\-field\_\-widget\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode}, \/  \$ {\em items}, \/  \$ {\em delta}, \/  \$ {\em element})}}
+\label{options_8module_a3b29c0fa799d570fc011b1b45e34719f}
+Implements \hyperlink{group__field__widget_gaa9b0e55fd0eb57ac0f9c7c30d251971b}{hook\_\-field\_\-widget\_\-form()}. \hypertarget{options_8module_a2a5b985f8f891674657082a64718a2f3}{
+\index{options.module@{options.module}!options\_\-field\_\-widget\_\-info@{options\_\-field\_\-widget\_\-info}}
+\index{options\_\-field\_\-widget\_\-info@{options\_\-field\_\-widget\_\-info}!options.module@{options.module}}
+\subsubsection[{options\_\-field\_\-widget\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}options\_\-field\_\-widget\_\-info ()}}
+\label{options_8module_a2a5b985f8f891674657082a64718a2f3}
+Implements \hyperlink{group__field__widget_gac53aa6c2a4ac1215660d25b5d7f20792}{hook\_\-field\_\-widget\_\-info()}.
+
+Field type modules willing to use those widgets should:
+\begin{DoxyItemize}
+\item Use \hyperlink{group__field__widget_ga2e74ac1b4b45e9f31b58b86d01892e7e}{hook\_\-field\_\-widget\_\-info\_\-alter()} to append their field own types to the list of types supported by the widgets,
+\item Implement \hyperlink{options_8api_8php_aa25d7440810f3dc0c137ef0e5747b485}{hook\_\-options\_\-list()} to provide the list of options. See \hyperlink{list_8module}{list.module}. 
+\end{DoxyItemize}\hypertarget{options_8module_a9be7905a9c57a7ce26a8c37dc441b446}{
+\index{options.module@{options.module}!options\_\-field\_\-widget\_\-settings\_\-form@{options\_\-field\_\-widget\_\-settings\_\-form}}
+\index{options\_\-field\_\-widget\_\-settings\_\-form@{options\_\-field\_\-widget\_\-settings\_\-form}!options.module@{options.module}}
+\subsubsection[{options\_\-field\_\-widget\_\-settings\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}options\_\-field\_\-widget\_\-settings\_\-form (\$ {\em field}, \/  \$ {\em instance})}}
+\label{options_8module_a9be7905a9c57a7ce26a8c37dc441b446}
+Implements \hyperlink{group__field__types_gabe5ece2134d0cbdfc3c4793f24c5866c}{hook\_\-field\_\-widget\_\-settings\_\-form()}. \hypertarget{options_8module_a7d411a2659add08a965e0892fe83787f}{
+\index{options.module@{options.module}!options\_\-field\_\-widget\_\-validate@{options\_\-field\_\-widget\_\-validate}}
+\index{options\_\-field\_\-widget\_\-validate@{options\_\-field\_\-widget\_\-validate}!options.module@{options.module}}
+\subsubsection[{options\_\-field\_\-widget\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}options\_\-field\_\-widget\_\-validate (\$ {\em element}, \/  \&\$ {\em form\_\-state})}}
+\label{options_8module_a7d411a2659add08a965e0892fe83787f}
+Form element validation handler for options element. \hypertarget{options_8module_af1fe641e7ce3d6b9b177b6b0b6d9f79c}{
+\index{options.module@{options.module}!options\_\-help@{options\_\-help}}
+\index{options\_\-help@{options\_\-help}!options.module@{options.module}}
+\subsubsection[{options\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}options\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{options_8module_af1fe641e7ce3d6b9b177b6b0b6d9f79c}
+Implements \hyperlink{group__hooks_ga5589c2714a782738e8851c4c90231f0e}{hook\_\-help()}. \hypertarget{options_8module_abd79ab0dcf6dd76002d3907c7c6b23aa}{
+\index{options.module@{options.module}!options\_\-theme@{options\_\-theme}}
+\index{options\_\-theme@{options\_\-theme}!options.module@{options.module}}
+\subsubsection[{options\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}options\_\-theme ()}}
+\label{options_8module_abd79ab0dcf6dd76002d3907c7c6b23aa}
+Implements \hyperlink{group__hooks_ga013ccb45c7aaab1c16cf9691428c910d}{hook\_\-theme()}. 

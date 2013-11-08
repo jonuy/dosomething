@@ -1,0 +1,56 @@
+\hypertarget{themes_2bartik_2templates_2comment-wrapper_8tpl_8php}{
+\section{html/themes/bartik/templates/comment-\/wrapper.tpl.php File Reference}
+\label{themes_2bartik_2templates_2comment-wrapper_8tpl_8php}\index{html/themes/bartik/templates/comment-\/wrapper.tpl.php@{html/themes/bartik/templates/comment-\/wrapper.tpl.php}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{themes_2bartik_2templates_2comment-wrapper_8tpl_8php_a6d48ecbdbc70ca1812e665169b5fa1e2}{
+print {\bfseries \$classes}}
+\label{themes_2bartik_2templates_2comment-wrapper_8tpl_8php_a6d48ecbdbc70ca1812e665169b5fa1e2}
+
+\item 
+\hypertarget{themes_2bartik_2templates_2comment-wrapper_8tpl_8php_a9c88c4272fa40546577b45392a0b3cd3}{
+print {\bfseries \$attributes}}
+\label{themes_2bartik_2templates_2comment-wrapper_8tpl_8php_a9c88c4272fa40546577b45392a0b3cd3}
+
+\item 
+\hypertarget{themes_2bartik_2templates_2comment-wrapper_8tpl_8php_a82cd33ca97ff99f2fcc5e9c81d65251b}{
+{\bfseries endif}}
+\label{themes_2bartik_2templates_2comment-wrapper_8tpl_8php_a82cd33ca97ff99f2fcc5e9c81d65251b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Bartik's theme implementation to provide an HTML container for comments.
+
+Available variables:
+\begin{DoxyItemize}
+\item \$content: The array of content-\/related elements for the node. Use render(\$content) to print them all, or print a subset such as render(\$content\mbox{[}'comment\_\-form'\mbox{]}).
+\item \$classes: String of classes that can be used to style contextually through CSS. It can be manipulated through the variable \$classes\_\-array from preprocess functions. The default value has the following:
+\begin{DoxyItemize}
+\item comment-\/wrapper: The current template type, i.e., \char`\"{}theming hook\char`\"{}.
+\end{DoxyItemize}
+\item \$title\_\-prefix (array): An array containing additional output populated by modules, intended to be displayed in front of the main title tag that appears in the template.
+\item \$title\_\-suffix (array): An array containing additional output populated by modules, intended to be displayed after the main title tag that appears in the template.
+\end{DoxyItemize}
+
+The following variables are provided for contextual information.
+\begin{DoxyItemize}
+\item \$node: Node object the comments are attached to. The constants below the variables show the possible values and should be used for comparison.
+\item \$display\_\-mode
+\begin{DoxyItemize}
+\item COMMENT\_\-MODE\_\-FLAT
+\item COMMENT\_\-MODE\_\-THREADED
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Other variables:
+\begin{DoxyItemize}
+\item \$classes\_\-array: Array of html class attribute values. It is flattened into a string within the variable \$classes.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{comment_8module_aeccd0447ccb1d7a888c63c47444d54fc}{template\_\-preprocess\_\-comment\_\-wrapper()} 
+\end{DoxySeeAlso}

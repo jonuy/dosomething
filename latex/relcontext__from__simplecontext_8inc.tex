@@ -1,0 +1,55 @@
+\hypertarget{relcontext__from__simplecontext_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/ctools\_\-plugin\_\-example/plugins/relationships/relcontext\_\-from\_\-simplecontext.inc File Reference}
+\label{relcontext__from__simplecontext_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/ctools\_\-plugin\_\-example/plugins/relationships/relcontext\_\-from\_\-simplecontext.inc@{html/profiles/dosomething/modules/contrib/ctools/ctools\_\-plugin\_\-example/plugins/relationships/relcontext\_\-from\_\-simplecontext.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{relcontext__from__simplecontext_8inc_abed4b100c64dc8ffb3867ae551e0ae88}{ctools\_\-relcontext\_\-from\_\-simplecontext\_\-context} (\$context=NULL, \$conf)
+\item 
+\hyperlink{relcontext__from__simplecontext_8inc_a6941982dec73fea7cd33fc91523b1f25}{ctools\_\-relcontext\_\-from\_\-simplecontext\_\-settings\_\-form} (\$conf)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{relcontext__from__simplecontext_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sample relationship plugin.
+
+We take a simplecontext, look in it for what we need to make a relcontext, and make it. In the real world, this might be getting a taxonomy id from a node, for example. 
+
+\subsection{Function Documentation}
+\hypertarget{relcontext__from__simplecontext_8inc_abed4b100c64dc8ffb3867ae551e0ae88}{
+\index{relcontext\_\-from\_\-simplecontext.inc@{relcontext\_\-from\_\-simplecontext.inc}!ctools\_\-relcontext\_\-from\_\-simplecontext\_\-context@{ctools\_\-relcontext\_\-from\_\-simplecontext\_\-context}}
+\index{ctools\_\-relcontext\_\-from\_\-simplecontext\_\-context@{ctools\_\-relcontext\_\-from\_\-simplecontext\_\-context}!relcontext_from_simplecontext.inc@{relcontext\_\-from\_\-simplecontext.inc}}
+\subsubsection[{ctools\_\-relcontext\_\-from\_\-simplecontext\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-relcontext\_\-from\_\-simplecontext\_\-context (\$ {\em context} = {\ttfamily NULL}, \/  \$ {\em conf})}}
+\label{relcontext__from__simplecontext_8inc_abed4b100c64dc8ffb3867ae551e0ae88}
+Return a new context based on an existing context. \hypertarget{relcontext__from__simplecontext_8inc_a6941982dec73fea7cd33fc91523b1f25}{
+\index{relcontext\_\-from\_\-simplecontext.inc@{relcontext\_\-from\_\-simplecontext.inc}!ctools\_\-relcontext\_\-from\_\-simplecontext\_\-settings\_\-form@{ctools\_\-relcontext\_\-from\_\-simplecontext\_\-settings\_\-form}}
+\index{ctools\_\-relcontext\_\-from\_\-simplecontext\_\-settings\_\-form@{ctools\_\-relcontext\_\-from\_\-simplecontext\_\-settings\_\-form}!relcontext_from_simplecontext.inc@{relcontext\_\-from\_\-simplecontext.inc}}
+\subsubsection[{ctools\_\-relcontext\_\-from\_\-simplecontext\_\-settings\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-relcontext\_\-from\_\-simplecontext\_\-settings\_\-form (\$ {\em conf})}}
+\label{relcontext__from__simplecontext_8inc_a6941982dec73fea7cd33fc91523b1f25}
+Settings form for the relationship. 
+
+\subsection{Variable Documentation}
+\hypertarget{relcontext__from__simplecontext_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{relcontext\_\-from\_\-simplecontext.inc@{relcontext\_\-from\_\-simplecontext.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!relcontext_from_simplecontext.inc@{relcontext\_\-from\_\-simplecontext.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{relcontext__from__simplecontext_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t("Relcontext from simplecontext"),
+  'keyword' => 'relcontext',
+  'description' => t('Adds a relcontext from existing simplecontext.'),
+  'required context' => new ctools_context_required(t('Simplecontext'), 'simpleco
+      ntext'),
+  'context' => 'ctools_relcontext_from_simplecontext_context',
+  'settings form' => 'ctools_relcontext_from_simplecontext_settings_form',
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

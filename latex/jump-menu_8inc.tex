@@ -1,0 +1,57 @@
+\hypertarget{jump-menu_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/includes/jump-\/menu.inc File Reference}
+\label{jump-menu_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/includes/jump-\/menu.inc@{html/profiles/dosomething/modules/contrib/ctools/includes/jump-\/menu.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{jump-menu_8inc_aaacb11546fb51a4ab5416740a18a5e67}{ctools\_\-jump\_\-menu} (\$form, \&\$form\_\-state, \$select, \$options=array())
+\item 
+\hyperlink{jump-menu_8inc_a68fece12f8d911934a1ffb41f0e30188}{ctools\_\-jump\_\-menu\_\-submit} (\$form, \&\$form\_\-state)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides a simple \char`\"{}jump menu\char`\"{}.
+
+A jump menu is a select box and an optional 'go' button which can be removed if javascript is in use. Each item is keyed to the href that the button should go to. With javascript, the page is immediately redirected. Without javascript, the form is submitted and a \hyperlink{group__http__handling_ga5b68d7a934713d1d623b2b32a732235d}{drupal\_\-goto()} is given. 
+
+\subsection{Function Documentation}
+\hypertarget{jump-menu_8inc_aaacb11546fb51a4ab5416740a18a5e67}{
+\index{jump-\/menu.inc@{jump-\/menu.inc}!ctools\_\-jump\_\-menu@{ctools\_\-jump\_\-menu}}
+\index{ctools\_\-jump\_\-menu@{ctools\_\-jump\_\-menu}!jump-menu.inc@{jump-\/menu.inc}}
+\subsubsection[{ctools\_\-jump\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-jump\_\-menu (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em select}, \/  \$ {\em options} = {\ttfamily array()})}}
+\label{jump-menu_8inc_aaacb11546fb51a4ab5416740a18a5e67}
+Generate a jump menu form.
+
+This can either be used with \hyperlink{group__form__api_ga720df81a837b06dfe19daf1c1eea3437}{drupal\_\-get\_\-form()} or directly added to a form. The button provides its own submit handler so by default, other submit handlers will not be called.
+
+One note: Do not use tree = TRUE or it will be unable to find the proper value.
+
+
+\begin{DoxyCode}
+ ctools_include('jump-menu');
+ $output = drupal_get_form('ctools_jump_menu', $targets, $options);
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$select}]An array suitable for use as the options. The keys will be the direct URLs that will be jumped to, so you absolutely must encode these using \hyperlink{common_8inc_a43b2a0594431556db49df980801d8807}{url()} in order for them to work reliably.\item[{\em \$options}]\$options may be an array with the following options:
+\begin{DoxyItemize}
+\item 'title': The text to display for the title attribute.
+\item 'description': The text to display for the description attribute.
+\item 'default\_\-value': The text to display for the default\_\-value attribute.
+\item 'hide': If TRUE the go button will be set to hide via javascript and will submit on change.
+\item 'button': The text to display on the button.
+\item 'image': If set, an image button will be used instead, and the image set to this.
+\item 'inline': If set to TRUE (default) the display will be forced inline. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{jump-menu_8inc_a68fece12f8d911934a1ffb41f0e30188}{
+\index{jump-\/menu.inc@{jump-\/menu.inc}!ctools\_\-jump\_\-menu\_\-submit@{ctools\_\-jump\_\-menu\_\-submit}}
+\index{ctools\_\-jump\_\-menu\_\-submit@{ctools\_\-jump\_\-menu\_\-submit}!jump-menu.inc@{jump-\/menu.inc}}
+\subsubsection[{ctools\_\-jump\_\-menu\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-jump\_\-menu\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{jump-menu_8inc_a68fece12f8d911934a1ffb41f0e30188}
+Submit handler for the jump menu.
+
+This is normally only invoked upon submit without javascript enabled. 

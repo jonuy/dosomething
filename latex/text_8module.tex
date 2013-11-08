@@ -1,0 +1,193 @@
+\hypertarget{text_8module}{
+\section{html/modules/field/modules/text/text.module File Reference}
+\label{text_8module}\index{html/modules/field/modules/text/text.module@{html/modules/field/modules/text/text.module}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{text_8module_ada236d36b8e686509f3de37cb66a1187}{text\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{text_8module_a22fe4380fedbc8da50c296248104a7bf}{text\_\-field\_\-info} ()
+\item 
+\hyperlink{text_8module_af4495cfed6f9461e1b83b541e133a61c}{text\_\-field\_\-settings\_\-form} (\$field, \$instance, \$has\_\-data)
+\item 
+\hyperlink{text_8module_a50788b1f6f044d9adb396021b19e87c2}{text\_\-field\_\-instance\_\-settings\_\-form} (\$field, \$instance)
+\item 
+\hyperlink{text_8module_a0f6c8c7d5aef9765478ae16efeeaec5e}{text\_\-field\_\-validate} (\$entity\_\-type, \$entity, \$field, \$instance, \$langcode, \$items, \&\$errors)
+\item 
+\hyperlink{text_8module_a76386531217df0ac7e847c8928a29f9a}{text\_\-field\_\-load} (\$entity\_\-type, \$entities, \$field, \$instances, \$langcode, \&\$items)
+\item 
+\hyperlink{text_8module_a65e04fe0635223a533f9335166b45996}{text\_\-field\_\-is\_\-empty} (\$item, \$field)
+\item 
+\hyperlink{text_8module_afecc893fd77d050108c8256f975831ee}{text\_\-field\_\-formatter\_\-info} ()
+\item 
+\hyperlink{text_8module_a0eb85c2d1e0767cea7e22b00a65311a3}{text\_\-field\_\-formatter\_\-settings\_\-form} (\$field, \$instance, \$view\_\-mode, \$form, \&\$form\_\-state)
+\item 
+\hyperlink{text_8module_a89eae3ac39a5f54983fa7e9f04d3ac85}{text\_\-field\_\-formatter\_\-settings\_\-summary} (\$field, \$instance, \$view\_\-mode)
+\item 
+\hyperlink{text_8module_afc45ca296fcf7338ae6c3877b4d8b926}{text\_\-field\_\-formatter\_\-view} (\$entity\_\-type, \$entity, \$field, \$instance, \$langcode, \$items, \$display)
+\item 
+\hyperlink{text_8module_a4fc0ca3bd718171be9d5cfded5bc8831}{\_\-text\_\-sanitize} (\$instance, \$langcode, \$item, \$column)
+\item 
+\hyperlink{text_8module_a5ae589015a2710f032b1407af469a4c1}{text\_\-summary} (\$text, \$format=NULL, \$size=NULL)
+\item 
+\hyperlink{text_8module_aacf1cec61c2dbad31fb5ab8a1ee98085}{text\_\-field\_\-widget\_\-info} ()
+\item 
+\hyperlink{text_8module_a147e56b0fdbe7e08da652c5ae64c8a0f}{text\_\-field\_\-widget\_\-settings\_\-form} (\$field, \$instance)
+\item 
+\hyperlink{text_8module_a4eb0394997c0e7511c717b9c6fd7590e}{text\_\-field\_\-widget\_\-form} (\&\$form, \&\$form\_\-state, \$field, \$instance, \$langcode, \$items, \$delta, \$element)
+\item 
+\hyperlink{text_8module_a6ca0cbd6b13e1893a1655fcb404e6b76}{text\_\-field\_\-widget\_\-error} (\$element, \$error, \$form, \&\$form\_\-state)
+\item 
+\hyperlink{text_8module_a05f6cb8a18f03ffc50d78563c2e7cba6}{text\_\-field\_\-prepare\_\-translation} (\$entity\_\-type, \$entity, \$field, \$instance, \$langcode, \&\$items, \$source\_\-entity, \$source\_\-langcode)
+\item 
+\hyperlink{text_8module_a8b955b60415b2f9473046fb92c1c9157}{text\_\-filter\_\-format\_\-update} (\$format)
+\item 
+\hyperlink{text_8module_a69f8b21fdab6c273c1b3825de83eb2de}{text\_\-filter\_\-format\_\-disable} (\$format)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines simple text field types. 
+
+\subsection{Function Documentation}
+\hypertarget{text_8module_a4fc0ca3bd718171be9d5cfded5bc8831}{
+\index{text.module@{text.module}!\_\-text\_\-sanitize@{\_\-text\_\-sanitize}}
+\index{\_\-text\_\-sanitize@{\_\-text\_\-sanitize}!text.module@{text.module}}
+\subsubsection[{\_\-text\_\-sanitize}]{\setlength{\rightskip}{0pt plus 5cm}\_\-text\_\-sanitize (\$ {\em instance}, \/  \$ {\em langcode}, \/  \$ {\em item}, \/  \$ {\em column})}}
+\label{text_8module_a4fc0ca3bd718171be9d5cfded5bc8831}
+Sanitizes the 'value' or 'summary' data of a text value.
+
+Depending on whether the field instance uses text processing, data is run through \hyperlink{group__sanitization_ga76fc67a30fd8d75ddd80565e6e65a13d}{check\_\-plain()} or \hyperlink{group__sanitization_gaa3872d938cf9ba93ed0621a6b26eaa59}{check\_\-markup()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$instance}]The instance definition. \item[{\em \$langcode}]The language associated to \$item. \item[{\em \$item}]The field value to sanitize. \item[{\em \$column}]The column to sanitize (either 'value' or 'summary').\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sanitized string. 
+\end{DoxyReturn}
+\hypertarget{text_8module_afecc893fd77d050108c8256f975831ee}{
+\index{text.module@{text.module}!text\_\-field\_\-formatter\_\-info@{text\_\-field\_\-formatter\_\-info}}
+\index{text\_\-field\_\-formatter\_\-info@{text\_\-field\_\-formatter\_\-info}!text.module@{text.module}}
+\subsubsection[{text\_\-field\_\-formatter\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}text\_\-field\_\-formatter\_\-info ()}}
+\label{text_8module_afecc893fd77d050108c8256f975831ee}
+Implements \hyperlink{group__field__formatter_ga2f5aa1c7455f55dffd84a48efa57f987}{hook\_\-field\_\-formatter\_\-info()}. \hypertarget{text_8module_a0eb85c2d1e0767cea7e22b00a65311a3}{
+\index{text.module@{text.module}!text\_\-field\_\-formatter\_\-settings\_\-form@{text\_\-field\_\-formatter\_\-settings\_\-form}}
+\index{text\_\-field\_\-formatter\_\-settings\_\-form@{text\_\-field\_\-formatter\_\-settings\_\-form}!text.module@{text.module}}
+\subsubsection[{text\_\-field\_\-formatter\_\-settings\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}text\_\-field\_\-formatter\_\-settings\_\-form (\$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em view\_\-mode}, \/  \$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{text_8module_a0eb85c2d1e0767cea7e22b00a65311a3}
+Implements \hyperlink{group__field__types_gaf9b6aefe0b4fe6c03ebd5bd9bd1b891b}{hook\_\-field\_\-formatter\_\-settings\_\-form()}. \hypertarget{text_8module_a89eae3ac39a5f54983fa7e9f04d3ac85}{
+\index{text.module@{text.module}!text\_\-field\_\-formatter\_\-settings\_\-summary@{text\_\-field\_\-formatter\_\-settings\_\-summary}}
+\index{text\_\-field\_\-formatter\_\-settings\_\-summary@{text\_\-field\_\-formatter\_\-settings\_\-summary}!text.module@{text.module}}
+\subsubsection[{text\_\-field\_\-formatter\_\-settings\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}text\_\-field\_\-formatter\_\-settings\_\-summary (\$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em view\_\-mode})}}
+\label{text_8module_a89eae3ac39a5f54983fa7e9f04d3ac85}
+Implements \hyperlink{group__field__types_ga0cdef0fb8588dde07292df1b86f06d81}{hook\_\-field\_\-formatter\_\-settings\_\-summary()}. \hypertarget{text_8module_afc45ca296fcf7338ae6c3877b4d8b926}{
+\index{text.module@{text.module}!text\_\-field\_\-formatter\_\-view@{text\_\-field\_\-formatter\_\-view}}
+\index{text\_\-field\_\-formatter\_\-view@{text\_\-field\_\-formatter\_\-view}!text.module@{text.module}}
+\subsubsection[{text\_\-field\_\-formatter\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}text\_\-field\_\-formatter\_\-view (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode}, \/  \$ {\em items}, \/  \$ {\em display})}}
+\label{text_8module_afc45ca296fcf7338ae6c3877b4d8b926}
+Implements \hyperlink{group__field__formatter_gaa588d99481fa147a1c88416e55fdfad6}{hook\_\-field\_\-formatter\_\-view()}. \hypertarget{text_8module_a22fe4380fedbc8da50c296248104a7bf}{
+\index{text.module@{text.module}!text\_\-field\_\-info@{text\_\-field\_\-info}}
+\index{text\_\-field\_\-info@{text\_\-field\_\-info}!text.module@{text.module}}
+\subsubsection[{text\_\-field\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}text\_\-field\_\-info ()}}
+\label{text_8module_a22fe4380fedbc8da50c296248104a7bf}
+Implements \hyperlink{group__field__types_gad3eb779f26f41b520f19af011ece3eb1}{hook\_\-field\_\-info()}.
+
+Field settings:
+\begin{DoxyItemize}
+\item max\_\-length: the maximum length for a varchar field. Instance settings:
+\item text\_\-processing: whether text input filters should be used.
+\item display\_\-summary: whether the summary field should be displayed. When empty and not displayed the summary will take its value from the trimmed value of the main text field. 
+\end{DoxyItemize}\hypertarget{text_8module_a50788b1f6f044d9adb396021b19e87c2}{
+\index{text.module@{text.module}!text\_\-field\_\-instance\_\-settings\_\-form@{text\_\-field\_\-instance\_\-settings\_\-form}}
+\index{text\_\-field\_\-instance\_\-settings\_\-form@{text\_\-field\_\-instance\_\-settings\_\-form}!text.module@{text.module}}
+\subsubsection[{text\_\-field\_\-instance\_\-settings\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}text\_\-field\_\-instance\_\-settings\_\-form (\$ {\em field}, \/  \$ {\em instance})}}
+\label{text_8module_a50788b1f6f044d9adb396021b19e87c2}
+Implements \hyperlink{group__field__types_gacce0ff92e36c0054ad131d95e576a13a}{hook\_\-field\_\-instance\_\-settings\_\-form()}. \hypertarget{text_8module_a65e04fe0635223a533f9335166b45996}{
+\index{text.module@{text.module}!text\_\-field\_\-is\_\-empty@{text\_\-field\_\-is\_\-empty}}
+\index{text\_\-field\_\-is\_\-empty@{text\_\-field\_\-is\_\-empty}!text.module@{text.module}}
+\subsubsection[{text\_\-field\_\-is\_\-empty}]{\setlength{\rightskip}{0pt plus 5cm}text\_\-field\_\-is\_\-empty (\$ {\em item}, \/  \$ {\em field})}}
+\label{text_8module_a65e04fe0635223a533f9335166b45996}
+Implements \hyperlink{group__field__types_ga192dd7e7a02a7bc9e0af8b67b187b071}{hook\_\-field\_\-is\_\-empty()}. \hypertarget{text_8module_a76386531217df0ac7e847c8928a29f9a}{
+\index{text.module@{text.module}!text\_\-field\_\-load@{text\_\-field\_\-load}}
+\index{text\_\-field\_\-load@{text\_\-field\_\-load}!text.module@{text.module}}
+\subsubsection[{text\_\-field\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}text\_\-field\_\-load (\$ {\em entity\_\-type}, \/  \$ {\em entities}, \/  \$ {\em field}, \/  \$ {\em instances}, \/  \$ {\em langcode}, \/  \&\$ {\em items})}}
+\label{text_8module_a76386531217df0ac7e847c8928a29f9a}
+Implements \hyperlink{group__field__types_ga37f2456e9b5b8b39dc11cffd59163c19}{hook\_\-field\_\-load()}.
+
+Where possible, generate the sanitized version of each field early so that it is cached in the field cache. This avoids looking up from the filter cache separately.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{text_8module_afc45ca296fcf7338ae6c3877b4d8b926}{text\_\-field\_\-formatter\_\-view()} 
+\end{DoxySeeAlso}
+\hypertarget{text_8module_a05f6cb8a18f03ffc50d78563c2e7cba6}{
+\index{text.module@{text.module}!text\_\-field\_\-prepare\_\-translation@{text\_\-field\_\-prepare\_\-translation}}
+\index{text\_\-field\_\-prepare\_\-translation@{text\_\-field\_\-prepare\_\-translation}!text.module@{text.module}}
+\subsubsection[{text\_\-field\_\-prepare\_\-translation}]{\setlength{\rightskip}{0pt plus 5cm}text\_\-field\_\-prepare\_\-translation (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode}, \/  \&\$ {\em items}, \/  \$ {\em source\_\-entity}, \/  \$ {\em source\_\-langcode})}}
+\label{text_8module_a05f6cb8a18f03ffc50d78563c2e7cba6}
+Implements \hyperlink{group__field__types_ga551145e42b305ccf93e325fc590fa379}{hook\_\-field\_\-prepare\_\-translation()}. \hypertarget{text_8module_af4495cfed6f9461e1b83b541e133a61c}{
+\index{text.module@{text.module}!text\_\-field\_\-settings\_\-form@{text\_\-field\_\-settings\_\-form}}
+\index{text\_\-field\_\-settings\_\-form@{text\_\-field\_\-settings\_\-form}!text.module@{text.module}}
+\subsubsection[{text\_\-field\_\-settings\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}text\_\-field\_\-settings\_\-form (\$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em has\_\-data})}}
+\label{text_8module_af4495cfed6f9461e1b83b541e133a61c}
+Implements \hyperlink{group__field__types_gab8a2ed808857cc6f3cb661fbc99d30d4}{hook\_\-field\_\-settings\_\-form()}. \hypertarget{text_8module_a0f6c8c7d5aef9765478ae16efeeaec5e}{
+\index{text.module@{text.module}!text\_\-field\_\-validate@{text\_\-field\_\-validate}}
+\index{text\_\-field\_\-validate@{text\_\-field\_\-validate}!text.module@{text.module}}
+\subsubsection[{text\_\-field\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}text\_\-field\_\-validate (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode}, \/  \$ {\em items}, \/  \&\$ {\em errors})}}
+\label{text_8module_a0f6c8c7d5aef9765478ae16efeeaec5e}
+Implements \hyperlink{group__field__types_gaa7d8846e8fe3766e1b3435cd50b965be}{hook\_\-field\_\-validate()}.
+
+Possible error codes:
+\begin{DoxyItemize}
+\item 'text\_\-value\_\-max\_\-length': The value exceeds the maximum length.
+\item 'text\_\-summary\_\-max\_\-length': The summary exceeds the maximum length. 
+\end{DoxyItemize}\hypertarget{text_8module_a6ca0cbd6b13e1893a1655fcb404e6b76}{
+\index{text.module@{text.module}!text\_\-field\_\-widget\_\-error@{text\_\-field\_\-widget\_\-error}}
+\index{text\_\-field\_\-widget\_\-error@{text\_\-field\_\-widget\_\-error}!text.module@{text.module}}
+\subsubsection[{text\_\-field\_\-widget\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}text\_\-field\_\-widget\_\-error (\$ {\em element}, \/  \$ {\em error}, \/  \$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{text_8module_a6ca0cbd6b13e1893a1655fcb404e6b76}
+Implements \hyperlink{group__field__widget_ga9a2031578542fef9e296d79c946431fd}{hook\_\-field\_\-widget\_\-error()}. \hypertarget{text_8module_a4eb0394997c0e7511c717b9c6fd7590e}{
+\index{text.module@{text.module}!text\_\-field\_\-widget\_\-form@{text\_\-field\_\-widget\_\-form}}
+\index{text\_\-field\_\-widget\_\-form@{text\_\-field\_\-widget\_\-form}!text.module@{text.module}}
+\subsubsection[{text\_\-field\_\-widget\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}text\_\-field\_\-widget\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode}, \/  \$ {\em items}, \/  \$ {\em delta}, \/  \$ {\em element})}}
+\label{text_8module_a4eb0394997c0e7511c717b9c6fd7590e}
+Implements \hyperlink{group__field__widget_gaa9b0e55fd0eb57ac0f9c7c30d251971b}{hook\_\-field\_\-widget\_\-form()}. \hypertarget{text_8module_aacf1cec61c2dbad31fb5ab8a1ee98085}{
+\index{text.module@{text.module}!text\_\-field\_\-widget\_\-info@{text\_\-field\_\-widget\_\-info}}
+\index{text\_\-field\_\-widget\_\-info@{text\_\-field\_\-widget\_\-info}!text.module@{text.module}}
+\subsubsection[{text\_\-field\_\-widget\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}text\_\-field\_\-widget\_\-info ()}}
+\label{text_8module_aacf1cec61c2dbad31fb5ab8a1ee98085}
+Implements \hyperlink{group__field__widget_gac53aa6c2a4ac1215660d25b5d7f20792}{hook\_\-field\_\-widget\_\-info()}. \hypertarget{text_8module_a147e56b0fdbe7e08da652c5ae64c8a0f}{
+\index{text.module@{text.module}!text\_\-field\_\-widget\_\-settings\_\-form@{text\_\-field\_\-widget\_\-settings\_\-form}}
+\index{text\_\-field\_\-widget\_\-settings\_\-form@{text\_\-field\_\-widget\_\-settings\_\-form}!text.module@{text.module}}
+\subsubsection[{text\_\-field\_\-widget\_\-settings\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}text\_\-field\_\-widget\_\-settings\_\-form (\$ {\em field}, \/  \$ {\em instance})}}
+\label{text_8module_a147e56b0fdbe7e08da652c5ae64c8a0f}
+Implements \hyperlink{group__field__types_gabe5ece2134d0cbdfc3c4793f24c5866c}{hook\_\-field\_\-widget\_\-settings\_\-form()}. \hypertarget{text_8module_a69f8b21fdab6c273c1b3825de83eb2de}{
+\index{text.module@{text.module}!text\_\-filter\_\-format\_\-disable@{text\_\-filter\_\-format\_\-disable}}
+\index{text\_\-filter\_\-format\_\-disable@{text\_\-filter\_\-format\_\-disable}!text.module@{text.module}}
+\subsubsection[{text\_\-filter\_\-format\_\-disable}]{\setlength{\rightskip}{0pt plus 5cm}text\_\-filter\_\-format\_\-disable (\$ {\em format})}}
+\label{text_8module_a69f8b21fdab6c273c1b3825de83eb2de}
+Implements \hyperlink{group__hooks_gae4873bf6d76c33475296917d304719e9}{hook\_\-filter\_\-format\_\-disable()}. \hypertarget{text_8module_a8b955b60415b2f9473046fb92c1c9157}{
+\index{text.module@{text.module}!text\_\-filter\_\-format\_\-update@{text\_\-filter\_\-format\_\-update}}
+\index{text\_\-filter\_\-format\_\-update@{text\_\-filter\_\-format\_\-update}!text.module@{text.module}}
+\subsubsection[{text\_\-filter\_\-format\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}text\_\-filter\_\-format\_\-update (\$ {\em format})}}
+\label{text_8module_a8b955b60415b2f9473046fb92c1c9157}
+Implements \hyperlink{group__hooks_gaf9e4490f3ca224c161481754a3332c92}{hook\_\-filter\_\-format\_\-update()}. \hypertarget{text_8module_ada236d36b8e686509f3de37cb66a1187}{
+\index{text.module@{text.module}!text\_\-help@{text\_\-help}}
+\index{text\_\-help@{text\_\-help}!text.module@{text.module}}
+\subsubsection[{text\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}text\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{text_8module_ada236d36b8e686509f3de37cb66a1187}
+Implements \hyperlink{group__hooks_ga5589c2714a782738e8851c4c90231f0e}{hook\_\-help()}. \hypertarget{text_8module_a5ae589015a2710f032b1407af469a4c1}{
+\index{text.module@{text.module}!text\_\-summary@{text\_\-summary}}
+\index{text\_\-summary@{text\_\-summary}!text.module@{text.module}}
+\subsubsection[{text\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}text\_\-summary (\$ {\em text}, \/  \$ {\em format} = {\ttfamily NULL}, \/  \$ {\em size} = {\ttfamily NULL})}}
+\label{text_8module_a5ae589015a2710f032b1407af469a4c1}
+Generate a trimmed, formatted version of a text field value.
+
+If the end of the summary is not indicated using the delimiter then we generate the summary automatically, trying to end it at a sensible place such as the end of a paragraph, a line break, or the end of a sentence (in that order of preference).
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$text}]The content for which a summary will be generated. \item[{\em \$format}]The format of the content. If the PHP filter is present and \$text contains PHP code, we do not split it up to prevent parse errors. If the line break filter is present then we treat newlines embedded in \$text as line breaks. If the htmlcorrector filter is present, it will be run on the generated summary (if different from the incoming \$text). \item[{\em \$size}]The desired character length of the summary. If omitted, the default value will be used. Ignored if the special delimiter is present in \$text. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The generated summary. 
+\end{DoxyReturn}

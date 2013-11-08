@@ -1,0 +1,241 @@
+\hypertarget{content_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/includes/content.inc File Reference}
+\label{content_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/includes/content.inc@{html/profiles/dosomething/modules/contrib/ctools/includes/content.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{content_8inc_acad481b57f87b650fa0a8cf2b29b6548}{ctools\_\-content\_\-process} (\&\$plugin, \$info)
+\item 
+\hyperlink{content_8inc_a41fa9354b9c05ff536e74913921739dd}{ctools\_\-get\_\-content\_\-type} (\$content\_\-type)
+\item 
+\hyperlink{content_8inc_ae76cc86416c34ae727a2261cb158f1b6}{ctools\_\-get\_\-content\_\-types} ()
+\item 
+\hyperlink{content_8inc_aebe7b424bae151218c7f2e1670d67b96}{ctools\_\-content\_\-get\_\-subtypes} (\$type)
+\item 
+\hyperlink{content_8inc_a097e7d6c457337992167d8fffbffeb2a}{ctools\_\-content\_\-get\_\-subtype} (\$type, \$subtype\_\-id)
+\item 
+\hyperlink{content_8inc_a7a4b1689ccc9acb74be39fe2de1d35ab}{ctools\_\-content\_\-prepare\_\-subtype} (\&\$subtype, \$plugin)
+\item 
+\hyperlink{content_8inc_ae0ad07a6b466f81e14a32b70c716f3a1}{ctools\_\-content\_\-render} (\$type, \$subtype, \$conf, \$keywords=array(), \$args=array(), \$context=array(), \$incoming\_\-content= '')
+\item 
+\hyperlink{content_8inc_ad7386957cafa4ac906da577b4f12ddfd}{ctools\_\-content\_\-editable} (\$type, \$subtype, \$conf)
+\item 
+\hyperlink{content_8inc_aa2e438783f4289d5388c15061e93e0a2}{ctools\_\-content\_\-admin\_\-title} (\$type, \$subtype, \$conf, \$context=NULL)
+\item 
+\hyperlink{content_8inc_a8a34ea697f0793ce3d937ad6e80970ef}{ctools\_\-content\_\-admin\_\-icon} (\$subtype)
+\item 
+\hyperlink{content_8inc_a528e74fc0b05f44ec27dfc2604f645d5}{ctools\_\-content\_\-get\_\-defaults} (\$plugin, \$subtype)
+\item 
+\hyperlink{content_8inc_add05b7edd8612b6dfcea3eb5c7cea4cf}{ctools\_\-content\_\-admin\_\-info} (\$type, \$subtype, \$conf, \$context=NULL)
+\item 
+\hyperlink{content_8inc_aa433fb0534a5179c0f00b556dd22b5b3}{ctools\_\-content\_\-configure\_\-form\_\-defaults} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{content_8inc_af413cf9d35b010c5f527c1d2345c840c}{ctools\_\-content\_\-configure\_\-form\_\-defaults\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{content_8inc_a1eac5a29677be088ca112ac5158059a8}{ctools\_\-content\_\-form} (\$op, \$form\_\-info, \&\$form\_\-state, \$plugin, \$subtype\_\-name, \$subtype, \&\$conf, \$step=NULL)
+\item 
+\hypertarget{content_8inc_a6555b18d0f009f095fc84705804a3d9e}{
+{\bfseries \_\-ctools\_\-content\_\-create\_\-form\_\-info} (\&\$form\_\-info, \$info, \$plugin, \$subtype, \$op)}
+\label{content_8inc_a6555b18d0f009f095fc84705804a3d9e}
+
+\item 
+\hyperlink{content_8inc_a39110a11fabc723e97f07881a8f7a16f}{ctools\_\-content\_\-get\_\-available\_\-types} (\$contexts=NULL, \$has\_\-content=FALSE, \$allowed\_\-types=NULL, \$default\_\-types=NULL)
+\item 
+\hyperlink{content_8inc_aec142fe1e425f0d7087368dc17d4fd48}{ctools\_\-content\_\-get\_\-all\_\-types} ()
+\item 
+\hyperlink{content_8inc_a5d850254c7e33ba6b215841e1839eae5}{ctools\_\-content\_\-select\_\-context} (\$plugin, \$subtype, \$conf, \$contexts)
+\item 
+\hyperlink{content_8inc_a6fd8cc1103c59bb40d5ffcf8f3f1d06b}{ctools\_\-get\_\-addressable\_\-content} (\$address, \$type= 'content')
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains the tools to handle pluggable content that can be used by other applications such as Panels or Dashboard.
+
+See the context-\/content.html file in advanced help for documentation of this tool. 
+
+\subsection{Function Documentation}
+\hypertarget{content_8inc_a8a34ea697f0793ce3d937ad6e80970ef}{
+\index{content.inc@{content.inc}!ctools\_\-content\_\-admin\_\-icon@{ctools\_\-content\_\-admin\_\-icon}}
+\index{ctools\_\-content\_\-admin\_\-icon@{ctools\_\-content\_\-admin\_\-icon}!content.inc@{content.inc}}
+\subsubsection[{ctools\_\-content\_\-admin\_\-icon}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-content\_\-admin\_\-icon (\$ {\em subtype})}}
+\label{content_8inc_a8a34ea697f0793ce3d937ad6e80970ef}
+Get the proper icon path to use, falling back to default icons if no icon exists.
+
+\$subtype The loaded subtype info. \hypertarget{content_8inc_add05b7edd8612b6dfcea3eb5c7cea4cf}{
+\index{content.inc@{content.inc}!ctools\_\-content\_\-admin\_\-info@{ctools\_\-content\_\-admin\_\-info}}
+\index{ctools\_\-content\_\-admin\_\-info@{ctools\_\-content\_\-admin\_\-info}!content.inc@{content.inc}}
+\subsubsection[{ctools\_\-content\_\-admin\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-content\_\-admin\_\-info (\$ {\em type}, \/  \$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em context} = {\ttfamily NULL})}}
+\label{content_8inc_add05b7edd8612b6dfcea3eb5c7cea4cf}
+Get the administrative title from a given content type.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]The content type. May be the name or an already loaded content type object. \item[{\em \$subtype}]The subtype being rendered. \item[{\em \$conf}]The configuration for the content type. \item[{\em \$context}]An array of context objects available for use. These may be placeholders. \end{DoxyParams}
+\hypertarget{content_8inc_aa2e438783f4289d5388c15061e93e0a2}{
+\index{content.inc@{content.inc}!ctools\_\-content\_\-admin\_\-title@{ctools\_\-content\_\-admin\_\-title}}
+\index{ctools\_\-content\_\-admin\_\-title@{ctools\_\-content\_\-admin\_\-title}!content.inc@{content.inc}}
+\subsubsection[{ctools\_\-content\_\-admin\_\-title}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-content\_\-admin\_\-title (\$ {\em type}, \/  \$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em context} = {\ttfamily NULL})}}
+\label{content_8inc_aa2e438783f4289d5388c15061e93e0a2}
+Get the administrative title from a given content type.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]The content type. May be the name or an already loaded content type object. \item[{\em \$subtype}]The subtype being rendered. \item[{\em \$conf}]The configuration for the content type. \item[{\em \$context}]An array of context objects available for use. These may be placeholders. \end{DoxyParams}
+\hypertarget{content_8inc_aa433fb0534a5179c0f00b556dd22b5b3}{
+\index{content.inc@{content.inc}!ctools\_\-content\_\-configure\_\-form\_\-defaults@{ctools\_\-content\_\-configure\_\-form\_\-defaults}}
+\index{ctools\_\-content\_\-configure\_\-form\_\-defaults@{ctools\_\-content\_\-configure\_\-form\_\-defaults}!content.inc@{content.inc}}
+\subsubsection[{ctools\_\-content\_\-configure\_\-form\_\-defaults}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-content\_\-configure\_\-form\_\-defaults (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{content_8inc_aa433fb0534a5179c0f00b556dd22b5b3}
+Add the default FAPI elements to the content type configuration form \hypertarget{content_8inc_af413cf9d35b010c5f527c1d2345c840c}{
+\index{content.inc@{content.inc}!ctools\_\-content\_\-configure\_\-form\_\-defaults\_\-submit@{ctools\_\-content\_\-configure\_\-form\_\-defaults\_\-submit}}
+\index{ctools\_\-content\_\-configure\_\-form\_\-defaults\_\-submit@{ctools\_\-content\_\-configure\_\-form\_\-defaults\_\-submit}!content.inc@{content.inc}}
+\subsubsection[{ctools\_\-content\_\-configure\_\-form\_\-defaults\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-content\_\-configure\_\-form\_\-defaults\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{content_8inc_af413cf9d35b010c5f527c1d2345c840c}
+Submit handler to store context/title override info. \hypertarget{content_8inc_ad7386957cafa4ac906da577b4f12ddfd}{
+\index{content.inc@{content.inc}!ctools\_\-content\_\-editable@{ctools\_\-content\_\-editable}}
+\index{ctools\_\-content\_\-editable@{ctools\_\-content\_\-editable}!content.inc@{content.inc}}
+\subsubsection[{ctools\_\-content\_\-editable}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-content\_\-editable (\$ {\em type}, \/  \$ {\em subtype}, \/  \$ {\em conf})}}
+\label{content_8inc_ad7386957cafa4ac906da577b4f12ddfd}
+Determine if a content type can be edited or not.
+
+Some content types simply have their content and no options. This function lets a UI determine if it should display an edit link or not. \hypertarget{content_8inc_a1eac5a29677be088ca112ac5158059a8}{
+\index{content.inc@{content.inc}!ctools\_\-content\_\-form@{ctools\_\-content\_\-form}}
+\index{ctools\_\-content\_\-form@{ctools\_\-content\_\-form}!content.inc@{content.inc}}
+\subsubsection[{ctools\_\-content\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-content\_\-form (\$ {\em op}, \/  \$ {\em form\_\-info}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em plugin}, \/  \$ {\em subtype\_\-name}, \/  \$ {\em subtype}, \/  \&\$ {\em conf}, \/  \$ {\em step} = {\ttfamily NULL})}}
+\label{content_8inc_a1eac5a29677be088ca112ac5158059a8}
+Get the config form.
+
+The \$form\_\-info and \$form\_\-state need to be preconfigured with data you'll need such as whether or not you're using ajax, or the modal. \$form\_\-info will need your next/submit callbacks so that you can cache your data appropriately.
+
+\begin{DoxyReturn}{Returns}
+If this function returns false, no form exists. 
+\end{DoxyReturn}
+\hypertarget{content_8inc_aec142fe1e425f0d7087368dc17d4fd48}{
+\index{content.inc@{content.inc}!ctools\_\-content\_\-get\_\-all\_\-types@{ctools\_\-content\_\-get\_\-all\_\-types}}
+\index{ctools\_\-content\_\-get\_\-all\_\-types@{ctools\_\-content\_\-get\_\-all\_\-types}!content.inc@{content.inc}}
+\subsubsection[{ctools\_\-content\_\-get\_\-all\_\-types}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-content\_\-get\_\-all\_\-types ()}}
+\label{content_8inc_aec142fe1e425f0d7087368dc17d4fd48}
+Get an array of all content types that can be fed into the display editor for the add content list, regardless of availability. \hypertarget{content_8inc_a39110a11fabc723e97f07881a8f7a16f}{
+\index{content.inc@{content.inc}!ctools\_\-content\_\-get\_\-available\_\-types@{ctools\_\-content\_\-get\_\-available\_\-types}}
+\index{ctools\_\-content\_\-get\_\-available\_\-types@{ctools\_\-content\_\-get\_\-available\_\-types}!content.inc@{content.inc}}
+\subsubsection[{ctools\_\-content\_\-get\_\-available\_\-types}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-content\_\-get\_\-available\_\-types (\$ {\em contexts} = {\ttfamily NULL}, \/  \$ {\em has\_\-content} = {\ttfamily FALSE}, \/  \$ {\em allowed\_\-types} = {\ttfamily NULL}, \/  \$ {\em default\_\-types} = {\ttfamily NULL})}}
+\label{content_8inc_a39110a11fabc723e97f07881a8f7a16f}
+Get an array of all available content types that can be fed into the display editor for the add content list.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$context}]If a context is provided, content that requires that context can apepar. \item[{\em \$has\_\-content}]Whether or not the display will have incoming content \item[{\em \$allowed\_\-types}]An array of allowed content types (pane types) keyed by content\_\-type . '-\/' . sub\_\-type \item[{\em \$default\_\-types}]A default allowed/denied status for content that isn't known about \end{DoxyParams}
+\hypertarget{content_8inc_a528e74fc0b05f44ec27dfc2604f645d5}{
+\index{content.inc@{content.inc}!ctools\_\-content\_\-get\_\-defaults@{ctools\_\-content\_\-get\_\-defaults}}
+\index{ctools\_\-content\_\-get\_\-defaults@{ctools\_\-content\_\-get\_\-defaults}!content.inc@{content.inc}}
+\subsubsection[{ctools\_\-content\_\-get\_\-defaults}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-content\_\-get\_\-defaults (\$ {\em plugin}, \/  \$ {\em subtype})}}
+\label{content_8inc_a528e74fc0b05f44ec27dfc2604f645d5}
+Set up the default \$conf for a new instance of a content type. \hypertarget{content_8inc_a097e7d6c457337992167d8fffbffeb2a}{
+\index{content.inc@{content.inc}!ctools\_\-content\_\-get\_\-subtype@{ctools\_\-content\_\-get\_\-subtype}}
+\index{ctools\_\-content\_\-get\_\-subtype@{ctools\_\-content\_\-get\_\-subtype}!content.inc@{content.inc}}
+\subsubsection[{ctools\_\-content\_\-get\_\-subtype}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-content\_\-get\_\-subtype (\$ {\em type}, \/  \$ {\em subtype\_\-id})}}
+\label{content_8inc_a097e7d6c457337992167d8fffbffeb2a}
+Given a content type and a subtype id, return the information about that content subtype.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]The content type being fetched. \item[{\em \$subtype\_\-id}]The id of the subtype being fetched.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of information describing the content subtype. 
+\end{DoxyReturn}
+\hypertarget{content_8inc_aebe7b424bae151218c7f2e1670d67b96}{
+\index{content.inc@{content.inc}!ctools\_\-content\_\-get\_\-subtypes@{ctools\_\-content\_\-get\_\-subtypes}}
+\index{ctools\_\-content\_\-get\_\-subtypes@{ctools\_\-content\_\-get\_\-subtypes}!content.inc@{content.inc}}
+\subsubsection[{ctools\_\-content\_\-get\_\-subtypes}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-content\_\-get\_\-subtypes (\$ {\em type})}}
+\label{content_8inc_aebe7b424bae151218c7f2e1670d67b96}
+Get all of the individual subtypes provided by a given content type. This would be all of the blocks for the block type, or all of the views for the \hyperlink{classview}{view} type.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]The content type to load.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of all subtypes available. 
+\end{DoxyReturn}
+\hypertarget{content_8inc_a7a4b1689ccc9acb74be39fe2de1d35ab}{
+\index{content.inc@{content.inc}!ctools\_\-content\_\-prepare\_\-subtype@{ctools\_\-content\_\-prepare\_\-subtype}}
+\index{ctools\_\-content\_\-prepare\_\-subtype@{ctools\_\-content\_\-prepare\_\-subtype}!content.inc@{content.inc}}
+\subsubsection[{ctools\_\-content\_\-prepare\_\-subtype}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-content\_\-prepare\_\-subtype (\&\$ {\em subtype}, \/  \$ {\em plugin})}}
+\label{content_8inc_a7a4b1689ccc9acb74be39fe2de1d35ab}
+Ensure minimal required settings on a content subtype exist. \hypertarget{content_8inc_acad481b57f87b650fa0a8cf2b29b6548}{
+\index{content.inc@{content.inc}!ctools\_\-content\_\-process@{ctools\_\-content\_\-process}}
+\index{ctools\_\-content\_\-process@{ctools\_\-content\_\-process}!content.inc@{content.inc}}
+\subsubsection[{ctools\_\-content\_\-process}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-content\_\-process (\&\$ {\em plugin}, \/  \$ {\em info})}}
+\label{content_8inc_acad481b57f87b650fa0a8cf2b29b6548}
+Provide defaults for a content type.
+
+Currently we check for automatically named callbacks to make life a little easier on the developer. \hypertarget{content_8inc_ae0ad07a6b466f81e14a32b70c716f3a1}{
+\index{content.inc@{content.inc}!ctools\_\-content\_\-render@{ctools\_\-content\_\-render}}
+\index{ctools\_\-content\_\-render@{ctools\_\-content\_\-render}!content.inc@{content.inc}}
+\subsubsection[{ctools\_\-content\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-content\_\-render (\$ {\em type}, \/  \$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em keywords} = {\ttfamily array()}, \/  \$ {\em args} = {\ttfamily array()}, \/  \$ {\em context} = {\ttfamily array()}, \/  \$ {\em incoming\_\-content} = {\ttfamily ''})}}
+\label{content_8inc_ae0ad07a6b466f81e14a32b70c716f3a1}
+Get the content from a given content type.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]The content type. May be the name or an already loaded content type plugin. \item[{\em \$subtype}]The name of the subtype being rendered. \item[{\em \$conf}]The configuration for the content type. \item[{\em \$keywords}]An array of replacement keywords that come from outside contexts. \item[{\em \$args}]The arguments provided to the owner of the content type. Some content may wish to configure itself based on the arguments the panel or dashboard received. \item[{\em \$context}]An array of context objects available for use. \item[{\em \$incoming\_\-content}]Any incoming content, if this display is a wrapper.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The content as rendered by the plugin. This content should be an array with the following possible keys:
+\begin{DoxyItemize}
+\item title: The safe to render title of the content.
+\item content: The safe to render HTML content.
+\item links: An array of links associated with the content suitable for theme('links').
+\item more: An optional 'more' link (destination only)
+\item admin\_\-links: Administrative links associated with the content, suitable for theme('links').
+\item feeds: An array of feed icons or links associated with the content. Each member of the array is rendered HTML.
+\item type: The content type.
+\item subtype: The content subtype. These two may be used together as module-\/delta for block style rendering. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{content_8inc_a5d850254c7e33ba6b215841e1839eae5}{
+\index{content.inc@{content.inc}!ctools\_\-content\_\-select\_\-context@{ctools\_\-content\_\-select\_\-context}}
+\index{ctools\_\-content\_\-select\_\-context@{ctools\_\-content\_\-select\_\-context}!content.inc@{content.inc}}
+\subsubsection[{ctools\_\-content\_\-select\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-content\_\-select\_\-context (\$ {\em plugin}, \/  \$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em contexts})}}
+\label{content_8inc_a5d850254c7e33ba6b215841e1839eae5}
+Select the context to be used for a piece of content, based upon config.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$plugin}]The content plugin \item[{\em \$subtype}]The subtype of the content. \item[{\em \$conf}]The configuration array that should contain the context. \item[{\em \$contexts}]A keyed array of available contexts.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The matching contexts or NULL if none or necessary, or FALSE if requirements can't be met. 
+\end{DoxyReturn}
+\hypertarget{content_8inc_a6fd8cc1103c59bb40d5ffcf8f3f1d06b}{
+\index{content.inc@{content.inc}!ctools\_\-get\_\-addressable\_\-content@{ctools\_\-get\_\-addressable\_\-content}}
+\index{ctools\_\-get\_\-addressable\_\-content@{ctools\_\-get\_\-addressable\_\-content}!content.inc@{content.inc}}
+\subsubsection[{ctools\_\-get\_\-addressable\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-get\_\-addressable\_\-content (\$ {\em address}, \/  \$ {\em type} = {\ttfamily 'content'})}}
+\label{content_8inc_a6fd8cc1103c59bb40d5ffcf8f3f1d06b}
+Fetch a piece of content from the addressable content system.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$address}]A string or an array representing the address of the content. \item[{\em \$type}]The type of content to return. The type is dependent on what the content actually is. The default, 'content' means a simple string representing the content. However, richer systems may offer more options. For example, Panels might allow the fetching of 'display' and 'pane' objects. Page Manager might allow for the fetching of 'task\_\-handler' objects (AKA variants). \end{DoxyParams}
+\hypertarget{content_8inc_a41fa9354b9c05ff536e74913921739dd}{
+\index{content.inc@{content.inc}!ctools\_\-get\_\-content\_\-type@{ctools\_\-get\_\-content\_\-type}}
+\index{ctools\_\-get\_\-content\_\-type@{ctools\_\-get\_\-content\_\-type}!content.inc@{content.inc}}
+\subsubsection[{ctools\_\-get\_\-content\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-get\_\-content\_\-type (\$ {\em content\_\-type})}}
+\label{content_8inc_a41fa9354b9c05ff536e74913921739dd}
+Fetch metadata on a specific content\_\-type plugin.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$content}]type Name of a panel content type.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array with information about the requested panel content type. 
+\end{DoxyReturn}
+\hypertarget{content_8inc_ae76cc86416c34ae727a2261cb158f1b6}{
+\index{content.inc@{content.inc}!ctools\_\-get\_\-content\_\-types@{ctools\_\-get\_\-content\_\-types}}
+\index{ctools\_\-get\_\-content\_\-types@{ctools\_\-get\_\-content\_\-types}!content.inc@{content.inc}}
+\subsubsection[{ctools\_\-get\_\-content\_\-types}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-get\_\-content\_\-types ()}}
+\label{content_8inc_ae76cc86416c34ae727a2261cb158f1b6}
+Fetch metadata for all content\_\-type plugins.
+
+\begin{DoxyReturn}{Returns}
+An array of arrays with information about all available panel content types. 
+\end{DoxyReturn}

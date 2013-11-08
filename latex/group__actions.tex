@@ -1,0 +1,315 @@
+\hypertarget{group__actions}{
+\section{Actions}
+\label{group__actions}\index{Actions@{Actions}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__actions_gacfece93b3453da7c572057dde3453122}{actions\_\-do} (\$action\_\-ids, \$object=NULL, \$context=NULL, \$a1=NULL, \$a2=NULL)
+\item 
+\hyperlink{group__actions_gab4b880ee11ea9075bf10e6e29d21ba25}{comment\_\-publish\_\-action} (\$comment, \$context=array())
+\item 
+\hyperlink{group__actions_gaa4f6361d453bff4f865f19bc369ecdfe}{comment\_\-unpublish\_\-action} (\$comment, \$context=array())
+\item 
+\hyperlink{group__actions_gaf5c19c791a33e0dc2b0bd3eb4fa79ba5}{comment\_\-unpublish\_\-by\_\-keyword\_\-action} (\$comment, \$context)
+\item 
+\hyperlink{group__actions_ga074553675107cf7c8cac925d76666922}{comment\_\-save\_\-action} (\$comment)
+\item 
+\hyperlink{group__actions_gadf8322ab430e3fb9cbb7e84db47b744f}{node\_\-publish\_\-action} (\$node, \$context=array())
+\item 
+\hyperlink{group__actions_ga93d63f63526d64026ebdd5fc6572f5ab}{node\_\-unpublish\_\-action} (\$node, \$context=array())
+\item 
+\hyperlink{group__actions_ga73254d8abc7dfa53cd2259230bd5246a}{node\_\-make\_\-sticky\_\-action} (\$node, \$context=array())
+\item 
+\hyperlink{group__actions_gab04ec5d42febda8ef49715c27c4ad126}{node\_\-make\_\-unsticky\_\-action} (\$node, \$context=array())
+\item 
+\hyperlink{group__actions_ga5e48e8fd6348bdc8e826b84446ed2c0d}{node\_\-promote\_\-action} (\$node, \$context=array())
+\item 
+\hyperlink{group__actions_ga8f13fd18828b94e3736a39264149f927}{node\_\-unpromote\_\-action} (\$node, \$context=array())
+\item 
+\hyperlink{group__actions_ga84f5af7da5d6f9161307f61e8b345bce}{node\_\-save\_\-action} (\$node)
+\item 
+\hyperlink{group__actions_ga35a1ee4e6845f1031ef84ef787252efd}{node\_\-assign\_\-owner\_\-action} (\$node, \$context)
+\item 
+\hyperlink{group__actions_gaa453e8f47436b80070213abd851535d0}{node\_\-unpublish\_\-by\_\-keyword\_\-action} (\$node, \$context)
+\item 
+\hyperlink{group__actions_ga3df26c5d6496c91fcd0edd8648023fb4}{hook\_\-action\_\-info} ()
+\item 
+\hyperlink{group__actions_gae09a4cd8054571b9ac3659adccfac574}{system\_\-send\_\-email\_\-action} (\$entity, \$context)
+\item 
+\hyperlink{group__actions_ga5dd09e03b155bd9ad1ef0dad464661e3}{system\_\-message\_\-action} (\&\$entity, \$context=array())
+\item 
+\hyperlink{group__actions_gae5230dbace638d69f196392fbc77e1af}{system\_\-goto\_\-action} (\$entity, \$context)
+\item 
+\hyperlink{group__actions_ga02b4d9ad9eadcc1b795e2f145cc06db9}{system\_\-block\_\-ip\_\-action} ()
+\item 
+\hyperlink{group__actions_gaaebd8bde2e44d7b334ba57e716fce110}{user\_\-block\_\-user\_\-action} (\&\$entity, \$context=array())
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions that perform an action on a certain system object.
+
+Action functions are declared by modules by implementing \hyperlink{group__actions_ga3df26c5d6496c91fcd0edd8648023fb4}{hook\_\-action\_\-info()}. Modules can cause action functions to run by calling \hyperlink{group__actions_gacfece93b3453da7c572057dde3453122}{actions\_\-do()}, and \hyperlink{trigger_8module}{trigger.module} provides a user interface that lets administrators define events that cause action functions to run.
+
+Each action function takes two to four arguments:
+\begin{DoxyItemize}
+\item \$entity: The object that the action acts on, such as a node, comment, or user.
+\item \$context: Array of additional information about what triggered the action.
+\item \$a1, \$a2: Optional additional information, which can be passed into \hyperlink{group__actions_gacfece93b3453da7c572057dde3453122}{actions\_\-do()} and will be passed along to the action function. 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\hypertarget{group__actions_gacfece93b3453da7c572057dde3453122}{
+\index{actions@{actions}!actions\_\-do@{actions\_\-do}}
+\index{actions\_\-do@{actions\_\-do}!actions@{actions}}
+\subsubsection[{actions\_\-do}]{\setlength{\rightskip}{0pt plus 5cm}actions\_\-do (\$ {\em action\_\-ids}, \/  \$ {\em object} = {\ttfamily NULL}, \/  \$ {\em context} = {\ttfamily NULL}, \/  \$ {\em a1} = {\ttfamily NULL}, \/  \$ {\em a2} = {\ttfamily NULL})}}
+\label{group__actions_gacfece93b3453da7c572057dde3453122}
+Performs a given list of actions by executing their callback functions.
+
+Given the IDs of actions to perform, this function finds out what the callback functions for the actions are by querying the database. Then it calls each callback using the function call \$function(\$object, \$context, \$a1, \$a2), passing the input arguments of this function (see below) to the action function.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$action\_\-ids}]The IDs of the actions to perform. Can be a single action ID or an array of IDs. IDs of configurable actions must be given as numeric action IDs; IDs of non-\/configurable actions may be given as action function names. \item[{\em \$object}]The object that the action will act on: a node, user, or comment object. \item[{\em \$context}]Associative array containing extra information about what triggered the action call, with \$context\mbox{[}'hook'\mbox{]} giving the name of the hook that resulted in this call to \hyperlink{group__actions_gacfece93b3453da7c572057dde3453122}{actions\_\-do()}. \item[{\em \$a1}]Passed along to the callback. \item[{\em \$a2}]Passed along to the callback.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An associative array containing the results of the functions that perform the actions, keyed on action ID. 
+\end{DoxyReturn}
+\hypertarget{group__actions_gab4b880ee11ea9075bf10e6e29d21ba25}{
+\index{actions@{actions}!comment\_\-publish\_\-action@{comment\_\-publish\_\-action}}
+\index{comment\_\-publish\_\-action@{comment\_\-publish\_\-action}!actions@{actions}}
+\subsubsection[{comment\_\-publish\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-publish\_\-action (\$ {\em comment}, \/  \$ {\em context} = {\ttfamily array()})}}
+\label{group__actions_gab4b880ee11ea9075bf10e6e29d21ba25}
+Publishes a comment.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$comment}]An optional comment object. \item[{\em array}]\$context Array with components:
+\begin{DoxyItemize}
+\item 'cid': Comment ID. Required if \$comment is not given. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{group__actions_ga074553675107cf7c8cac925d76666922}{
+\index{actions@{actions}!comment\_\-save\_\-action@{comment\_\-save\_\-action}}
+\index{comment\_\-save\_\-action@{comment\_\-save\_\-action}!actions@{actions}}
+\subsubsection[{comment\_\-save\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-save\_\-action (\$ {\em comment})}}
+\label{group__actions_ga074553675107cf7c8cac925d76666922}
+Saves a comment. \hypertarget{group__actions_gaa4f6361d453bff4f865f19bc369ecdfe}{
+\index{actions@{actions}!comment\_\-unpublish\_\-action@{comment\_\-unpublish\_\-action}}
+\index{comment\_\-unpublish\_\-action@{comment\_\-unpublish\_\-action}!actions@{actions}}
+\subsubsection[{comment\_\-unpublish\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-unpublish\_\-action (\$ {\em comment}, \/  \$ {\em context} = {\ttfamily array()})}}
+\label{group__actions_gaa4f6361d453bff4f865f19bc369ecdfe}
+Unpublishes a comment.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$comment}]An optional comment object. \item[{\em array}]\$context Array with components:
+\begin{DoxyItemize}
+\item 'cid': Comment ID. Required if \$comment is not given. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{group__actions_gaf5c19c791a33e0dc2b0bd3eb4fa79ba5}{
+\index{actions@{actions}!comment\_\-unpublish\_\-by\_\-keyword\_\-action@{comment\_\-unpublish\_\-by\_\-keyword\_\-action}}
+\index{comment\_\-unpublish\_\-by\_\-keyword\_\-action@{comment\_\-unpublish\_\-by\_\-keyword\_\-action}!actions@{actions}}
+\subsubsection[{comment\_\-unpublish\_\-by\_\-keyword\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-unpublish\_\-by\_\-keyword\_\-action (\$ {\em comment}, \/  \$ {\em context})}}
+\label{group__actions_gaf5c19c791a33e0dc2b0bd3eb4fa79ba5}
+Unpublishes a comment if it contains certain keywords.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$comment}]Comment object to modify. \item[{\em array}]\$context Array with components:
+\begin{DoxyItemize}
+\item 'keywords': Keywords to look for. If the comment contains at least one of the keywords, it is unpublished.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__forms_gad0012e675df965329fce2570a6be8f46}{comment\_\-unpublish\_\-by\_\-keyword\_\-action\_\-form()} 
+
+\hyperlink{comment_8module_ad94091cb95aec2dd607bde68a07e0dd1}{comment\_\-unpublish\_\-by\_\-keyword\_\-action\_\-submit()} 
+\end{DoxySeeAlso}
+\hypertarget{group__actions_ga3df26c5d6496c91fcd0edd8648023fb4}{
+\index{actions@{actions}!hook\_\-action\_\-info@{hook\_\-action\_\-info}}
+\index{hook\_\-action\_\-info@{hook\_\-action\_\-info}!actions@{actions}}
+\subsubsection[{hook\_\-action\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-action\_\-info ()}}
+\label{group__actions_ga3df26c5d6496c91fcd0edd8648023fb4}
+Declares information about actions.
+
+Any module can define actions, and then call \hyperlink{group__actions_gacfece93b3453da7c572057dde3453122}{actions\_\-do()} to make those actions happen in response to events. The trigger module provides a user interface for associating actions with module-\/defined triggers, and it makes sure the core triggers fire off actions when their events happen.
+
+An action consists of two or three parts:
+\begin{DoxyItemize}
+\item an action definition (returned by this hook)
+\item a function which performs the action (which by convention is named MODULE\_\-description-\/of-\/function\_\-action)
+\item an optional form definition function that defines a configuration form (which has the name of the action function with '\_\-form' appended to it.)
+\end{DoxyItemize}
+
+The action function takes two to four arguments, which come from the input arguments to \hyperlink{group__actions_gacfece93b3453da7c572057dde3453122}{actions\_\-do()}.
+
+\begin{DoxyReturn}{Returns}
+An associative array of action descriptions. The keys of the array are the names of the action functions, and each corresponding value is an associative array with the following key-\/value pairs:
+\begin{DoxyItemize}
+\item 'type': The type of object this action acts upon. Core actions have types 'node', 'user', 'comment', and 'system'.
+\item 'label': The human-\/readable name of the action, which should be passed through the t() function for translation.
+\item 'configurable': If FALSE, then the action doesn't require any extra configuration. If TRUE, then your module must define a form function with the same name as the action function with '\_\-form' appended (e.g., the form for 'node\_\-assign\_\-owner\_\-action' is 'node\_\-assign\_\-owner\_\-action\_\-form'.) This function takes \$context as its only parameter, and is paired with the usual \_\-submit function, and possibly a \_\-validate function.
+\item 'triggers': An array of the events (that is, hooks) that can trigger this action. For example: array('node\_\-insert', 'user\_\-update'). You can also declare support for any trigger by returning array('any') for this value.
+\item 'behavior': (optional) A machine-\/readable array of behaviors of this action, used to signal additionally required actions that may need to be triggered. Currently recognized behaviors by Trigger module:
+\begin{DoxyItemize}
+\item 'changes\_\-property': If an action with this behavior is assigned to a trigger other than a \char`\"{}presave\char`\"{} hook, any save actions also assigned to this trigger are moved later in the list. If no save action is present, one will be added. Modules that are processing actions (like Trigger module) should take special care for the \char`\"{}presave\char`\"{} hook, in which case a dependent \char`\"{}save\char`\"{} action should NOT be invoked. 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{group__actions_ga35a1ee4e6845f1031ef84ef787252efd}{
+\index{actions@{actions}!node\_\-assign\_\-owner\_\-action@{node\_\-assign\_\-owner\_\-action}}
+\index{node\_\-assign\_\-owner\_\-action@{node\_\-assign\_\-owner\_\-action}!actions@{actions}}
+\subsubsection[{node\_\-assign\_\-owner\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-assign\_\-owner\_\-action (\$ {\em node}, \/  \$ {\em context})}}
+\label{group__actions_ga35a1ee4e6845f1031ef84ef787252efd}
+Assigns ownership of a node to a user.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]A node object to modify. \item[{\em \$context}]Array with the following elements:
+\begin{DoxyItemize}
+\item 'owner\_\-uid': User ID to assign to the node.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__forms_ga427eee96a0ab2c2048a39fafcb6c4173}{node\_\-assign\_\-owner\_\-action\_\-form()} 
+
+\hyperlink{node_8module_a85a0ccfdb35dae02fed98ec3c3498c85}{node\_\-assign\_\-owner\_\-action\_\-validate()} 
+
+\hyperlink{node_8module_a777bb331cf28f580e2a3030d95d9f254}{node\_\-assign\_\-owner\_\-action\_\-submit()} 
+\end{DoxySeeAlso}
+\hypertarget{group__actions_ga73254d8abc7dfa53cd2259230bd5246a}{
+\index{actions@{actions}!node\_\-make\_\-sticky\_\-action@{node\_\-make\_\-sticky\_\-action}}
+\index{node\_\-make\_\-sticky\_\-action@{node\_\-make\_\-sticky\_\-action}!actions@{actions}}
+\subsubsection[{node\_\-make\_\-sticky\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-make\_\-sticky\_\-action (\$ {\em node}, \/  \$ {\em context} = {\ttfamily array()})}}
+\label{group__actions_ga73254d8abc7dfa53cd2259230bd5246a}
+Sets the sticky-\/at-\/top-\/of-\/list property of a node to 1.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]A node object. \item[{\em \$context}](optional) Array of additional information about what triggered the action. Not used for this action. \end{DoxyParams}
+\hypertarget{group__actions_gab04ec5d42febda8ef49715c27c4ad126}{
+\index{actions@{actions}!node\_\-make\_\-unsticky\_\-action@{node\_\-make\_\-unsticky\_\-action}}
+\index{node\_\-make\_\-unsticky\_\-action@{node\_\-make\_\-unsticky\_\-action}!actions@{actions}}
+\subsubsection[{node\_\-make\_\-unsticky\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-make\_\-unsticky\_\-action (\$ {\em node}, \/  \$ {\em context} = {\ttfamily array()})}}
+\label{group__actions_gab04ec5d42febda8ef49715c27c4ad126}
+Sets the sticky-\/at-\/top-\/of-\/list property of a node to 0.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]A node object. \item[{\em \$context}](optional) Array of additional information about what triggered the action. Not used for this action. \end{DoxyParams}
+\hypertarget{group__actions_ga5e48e8fd6348bdc8e826b84446ed2c0d}{
+\index{actions@{actions}!node\_\-promote\_\-action@{node\_\-promote\_\-action}}
+\index{node\_\-promote\_\-action@{node\_\-promote\_\-action}!actions@{actions}}
+\subsubsection[{node\_\-promote\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-promote\_\-action (\$ {\em node}, \/  \$ {\em context} = {\ttfamily array()})}}
+\label{group__actions_ga5e48e8fd6348bdc8e826b84446ed2c0d}
+Sets the promote property of a node to 1.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]A node object. \item[{\em \$context}](optional) Array of additional information about what triggered the action. Not used for this action. \end{DoxyParams}
+\hypertarget{group__actions_gadf8322ab430e3fb9cbb7e84db47b744f}{
+\index{actions@{actions}!node\_\-publish\_\-action@{node\_\-publish\_\-action}}
+\index{node\_\-publish\_\-action@{node\_\-publish\_\-action}!actions@{actions}}
+\subsubsection[{node\_\-publish\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-publish\_\-action (\$ {\em node}, \/  \$ {\em context} = {\ttfamily array()})}}
+\label{group__actions_gadf8322ab430e3fb9cbb7e84db47b744f}
+Sets the status of a node to 1 (published).
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]A node object. \item[{\em \$context}](optional) Array of additional information about what triggered the action. Not used for this action. \end{DoxyParams}
+\hypertarget{group__actions_ga84f5af7da5d6f9161307f61e8b345bce}{
+\index{actions@{actions}!node\_\-save\_\-action@{node\_\-save\_\-action}}
+\index{node\_\-save\_\-action@{node\_\-save\_\-action}!actions@{actions}}
+\subsubsection[{node\_\-save\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-save\_\-action (\$ {\em node})}}
+\label{group__actions_ga84f5af7da5d6f9161307f61e8b345bce}
+Saves a node.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]The node to be saved. \end{DoxyParams}
+\hypertarget{group__actions_ga8f13fd18828b94e3736a39264149f927}{
+\index{actions@{actions}!node\_\-unpromote\_\-action@{node\_\-unpromote\_\-action}}
+\index{node\_\-unpromote\_\-action@{node\_\-unpromote\_\-action}!actions@{actions}}
+\subsubsection[{node\_\-unpromote\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-unpromote\_\-action (\$ {\em node}, \/  \$ {\em context} = {\ttfamily array()})}}
+\label{group__actions_ga8f13fd18828b94e3736a39264149f927}
+Sets the promote property of a node to 0.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]A node object. \item[{\em \$context}](optional) Array of additional information about what triggered the action. Not used for this action. \end{DoxyParams}
+\hypertarget{group__actions_ga93d63f63526d64026ebdd5fc6572f5ab}{
+\index{actions@{actions}!node\_\-unpublish\_\-action@{node\_\-unpublish\_\-action}}
+\index{node\_\-unpublish\_\-action@{node\_\-unpublish\_\-action}!actions@{actions}}
+\subsubsection[{node\_\-unpublish\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-unpublish\_\-action (\$ {\em node}, \/  \$ {\em context} = {\ttfamily array()})}}
+\label{group__actions_ga93d63f63526d64026ebdd5fc6572f5ab}
+Sets the status of a node to 0 (unpublished).
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]A node object. \item[{\em \$context}](optional) Array of additional information about what triggered the action. Not used for this action. \end{DoxyParams}
+\hypertarget{group__actions_gaa453e8f47436b80070213abd851535d0}{
+\index{actions@{actions}!node\_\-unpublish\_\-by\_\-keyword\_\-action@{node\_\-unpublish\_\-by\_\-keyword\_\-action}}
+\index{node\_\-unpublish\_\-by\_\-keyword\_\-action@{node\_\-unpublish\_\-by\_\-keyword\_\-action}!actions@{actions}}
+\subsubsection[{node\_\-unpublish\_\-by\_\-keyword\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-unpublish\_\-by\_\-keyword\_\-action (\$ {\em node}, \/  \$ {\em context})}}
+\label{group__actions_gaa453e8f47436b80070213abd851535d0}
+Unpublishes a node containing certain keywords.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]A node object to modify. \item[{\em \$context}]Array with the following elements:
+\begin{DoxyItemize}
+\item 'keywords': Array of keywords. If any keyword is present in the rendered node, the node's status flag is set to unpublished. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{group__actions_ga02b4d9ad9eadcc1b795e2f145cc06db9}{
+\index{actions@{actions}!system\_\-block\_\-ip\_\-action@{system\_\-block\_\-ip\_\-action}}
+\index{system\_\-block\_\-ip\_\-action@{system\_\-block\_\-ip\_\-action}!actions@{actions}}
+\subsubsection[{system\_\-block\_\-ip\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-block\_\-ip\_\-action ()}}
+\label{group__actions_ga02b4d9ad9eadcc1b795e2f145cc06db9}
+Blocks the current user's IP address. \hypertarget{group__actions_gae5230dbace638d69f196392fbc77e1af}{
+\index{actions@{actions}!system\_\-goto\_\-action@{system\_\-goto\_\-action}}
+\index{system\_\-goto\_\-action@{system\_\-goto\_\-action}!actions@{actions}}
+\subsubsection[{system\_\-goto\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-goto\_\-action (\$ {\em entity}, \/  \$ {\em context})}}
+\label{group__actions_gae5230dbace638d69f196392fbc77e1af}
+Redirects to a different URL.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity}]Ignored. \item[{\em array}]\$context Array with the following elements:
+\begin{DoxyItemize}
+\item 'url': URL to redirect to. This will be passed through \hyperlink{includes_2token_8inc_a47eb294b05ca8d04439a9a82ccc4d82a}{token\_\-replace()}.
+\item Other elements will be used as the data for token replacement. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{group__actions_ga5dd09e03b155bd9ad1ef0dad464661e3}{
+\index{actions@{actions}!system\_\-message\_\-action@{system\_\-message\_\-action}}
+\index{system\_\-message\_\-action@{system\_\-message\_\-action}!actions@{actions}}
+\subsubsection[{system\_\-message\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-message\_\-action (\&\$ {\em entity}, \/  \$ {\em context} = {\ttfamily array()})}}
+\label{group__actions_ga5dd09e03b155bd9ad1ef0dad464661e3}
+Sends a message to the current user's screen.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em object}]\$entity An optional node object, which will be added as \$context\mbox{[}'node'\mbox{]} if provided. \item[{\em array}]\$context Array with the following elements:
+\begin{DoxyItemize}
+\item 'message': The message to send. This will be passed through \hyperlink{includes_2token_8inc_a47eb294b05ca8d04439a9a82ccc4d82a}{token\_\-replace()}.
+\item Other elements will be used as the data for token replacement in the message. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{group__actions_gae09a4cd8054571b9ac3659adccfac574}{
+\index{actions@{actions}!system\_\-send\_\-email\_\-action@{system\_\-send\_\-email\_\-action}}
+\index{system\_\-send\_\-email\_\-action@{system\_\-send\_\-email\_\-action}!actions@{actions}}
+\subsubsection[{system\_\-send\_\-email\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-send\_\-email\_\-action (\$ {\em entity}, \/  \$ {\em context})}}
+\label{group__actions_gae09a4cd8054571b9ac3659adccfac574}
+Sends an e-\/mail message.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em object}]\$entity An optional node object, which will be added as \$context\mbox{[}'node'\mbox{]} if provided. \item[{\em array}]\$context Array with the following elements:
+\begin{DoxyItemize}
+\item 'recipient': E-\/mail message recipient. This will be passed through \hyperlink{includes_2token_8inc_a47eb294b05ca8d04439a9a82ccc4d82a}{token\_\-replace()}.
+\item 'subject': The subject of the message. This will be passed through \hyperlink{includes_2token_8inc_a47eb294b05ca8d04439a9a82ccc4d82a}{token\_\-replace()}.
+\item 'message': The message to send. This will be passed through \hyperlink{includes_2token_8inc_a47eb294b05ca8d04439a9a82ccc4d82a}{token\_\-replace()}.
+\item Other elements will be used as the data for token replacement. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{group__actions_gaaebd8bde2e44d7b334ba57e716fce110}{
+\index{actions@{actions}!user\_\-block\_\-user\_\-action@{user\_\-block\_\-user\_\-action}}
+\index{user\_\-block\_\-user\_\-action@{user\_\-block\_\-user\_\-action}!actions@{actions}}
+\subsubsection[{user\_\-block\_\-user\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-block\_\-user\_\-action (\&\$ {\em entity}, \/  \$ {\em context} = {\ttfamily array()})}}
+\label{group__actions_gaaebd8bde2e44d7b334ba57e716fce110}
+Blocks the current user. 

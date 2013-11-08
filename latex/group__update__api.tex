@@ -1,0 +1,95 @@
+\hypertarget{group__update__api}{
+\section{Update versions of API functions}
+\label{group__update__api}\index{Update versions of API functions@{Update versions of API functions}}
+}
+End of \char`\"{}addtogroup callbacks\char`\"{}.
+
+Functions that are similar to normal API functions, but do not invoke hooks.
+
+These simplified versions of core API functions are provided for use by update functions (\hyperlink{group__hooks_ga908950689e6b85cd0fae3b780d69a41f}{hook\_\-update\_\-N()} implementations).
+
+During database updates the schema of any module could be out of date. For this reason, caution is needed when using any API function within an update function -\/ particularly CRUD functions, functions that depend on the schema (for example by using \hyperlink{group__schemaapi_ga96f707de751a962bf21b6cb0cb4f2ae6}{drupal\_\-write\_\-record()}), and any functions that invoke hooks.
+
+Instead, a simplified utility function should be used. If a utility version of the API function you require does not already exist, then you should create a new function. The new utility function should be named \_\-update\_\-N\_\-mymodule\_\-my\_\-function(). N is the schema version the function acts on (the schema version is the number N from the \hyperlink{group__hooks_ga908950689e6b85cd0fae3b780d69a41f}{hook\_\-update\_\-N()} implementation where this schema was introduced, or a number following the same numbering scheme), and mymodule\_\-my\_\-function is the name of the original API function including the module's name.
+
+Examples:
+\begin{DoxyItemize}
+\item \_\-update\_\-6000\_\-mymodule\_\-save(): This function performs a save operation without invoking any hooks using the 6.x schema.
+\item \_\-update\_\-7000\_\-mymodule\_\-save(): This function performs the same save operation using the 7.x schema.
+\end{DoxyItemize}
+
+The utility function should not invoke any hooks, and should perform database operations using functions from the \hyperlink{group__database}{Database abstraction layer, } like \hyperlink{group__database_gaadfbffaf30ff5eb14f1bd88619351345}{db\_\-insert()}, \hyperlink{group__database_ga40967197ee5d6a23a5c5a77e627067fe}{db\_\-update()}, \hyperlink{group__database_ga72f0ccecc0ba181de16c6e3451150f2c}{db\_\-delete()}, \hyperlink{group__database_gafa3b6cb2b2f61479cc63a4150c62da9b}{db\_\-query()}, and so on.
+
+If a change to the schema necessitates a change to the utility function, a new function should be created with a name based on the version of the schema it acts on. See \_\-update\_\-7000\_\-bar\_\-get\_\-types() and \_\-update\_\-7001\_\-bar\_\-get\_\-types() in the code examples that follow.
+
+For example, foo.install could contain: 
+\begin{DoxyCode}
+ function foo_update_dependencies() {
+   // foo_update_7010() needs to run after bar_update_7000().
+   $dependencies['foo'][7010] = array(
+     'bar' => 7000,
+   );
+
+   // foo_update_7036() needs to run after bar_update_7001().
+   $dependencies['foo'][7036] = array(
+     'bar' => 7001,
+   );
+
+   return $dependencies;
+ }
+
+ function foo_update_7000() {
+   // No updates have been run on the {bar_types} table yet, so this needs
+   // to work with the 6.x schema.
+   foreach (_update_6000_bar_get_types() as $type) {
+     // Rename a variable.
+   }
+ }
+
+ function foo_update_7010() {
+    // Since foo_update_7010() is going to run after bar_update_7000(), it
+    // needs to operate on the new schema, not the old one.
+    foreach (_update_7000_bar_get_types() as $type) {
+      // Rename a different variable.
+    }
+ }
+
+ function foo_update_7036() {
+   // This update will run after bar_update_7001().
+   foreach (_update_7001_bar_get_types() as $type) {
+   }
+ }
+\end{DoxyCode}
+
+
+And bar.install could contain: 
+\begin{DoxyCode}
+ function bar_update_7000() {
+   // Type and bundle are confusing, so we renamed the table.
+   db_rename_table('bar_types', 'bar_bundles');
+ }
+
+ function bar_update_7001() {
+   // Database table names should be singular when possible.
+   db_rename_table('bar_bundles', 'bar_bundle');
+ }
+
+ function _update_6000_bar_get_types() {
+   db_query('SELECT * FROM {bar_types}')->fetchAll();
+ }
+
+ function _update_7000_bar_get_types() {
+   db_query('SELECT * FROM {bar_bundles'})->fetchAll();
+ }
+
+ function _update_7001_bar_get_types() {
+   db_query('SELECT * FROM {bar_bundle}')->fetchAll();
+ }
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__hooks_ga908950689e6b85cd0fae3b780d69a41f}{hook\_\-update\_\-N()} 
+
+\hyperlink{group__hooks_ga23e9e019b7ec64d95bafbeaffd295483}{hook\_\-update\_\-dependencies()} 
+\end{DoxySeeAlso}

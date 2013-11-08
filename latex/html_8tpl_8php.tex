@@ -1,0 +1,106 @@
+\hypertarget{html_8tpl_8php}{
+\section{html/modules/system/html.tpl.php File Reference}
+\label{html_8tpl_8php}\index{html/modules/system/html.tpl.php@{html/modules/system/html.tpl.php}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{html_8tpl_8php_a42cd582c44c919666b05626f0b2a39d3}{
+print \$language {\bfseries language}}
+\label{html_8tpl_8php_a42cd582c44c919666b05626f0b2a39d3}
+
+\item 
+\hypertarget{html_8tpl_8php_a9046a842bdd63fcdce32768992ca7e93}{
+print \$language {\bfseries dir}}
+\label{html_8tpl_8php_a9046a842bdd63fcdce32768992ca7e93}
+
+\item 
+\hypertarget{html_8tpl_8php_a757a2e43eabebdf258388f25852bdf8a}{
+print {\bfseries \$rdf\_\-namespaces}}
+\label{html_8tpl_8php_a757a2e43eabebdf258388f25852bdf8a}
+
+\item 
+\hypertarget{html_8tpl_8php_a595cfd3fb04ccef19394997205e51540}{
+print {\bfseries \$grddl\_\-profile}}
+\label{html_8tpl_8php_a595cfd3fb04ccef19394997205e51540}
+
+\item 
+\hypertarget{html_8tpl_8php_a2758cd2886f39b56c05b61ab6cec7a5d}{
+print {\bfseries \$head}}
+\label{html_8tpl_8php_a2758cd2886f39b56c05b61ab6cec7a5d}
+
+\item 
+\hypertarget{html_8tpl_8php_a107cec09f27fd63715a39ba222571e1e}{
+print {\bfseries \$head\_\-title}}
+\label{html_8tpl_8php_a107cec09f27fd63715a39ba222571e1e}
+
+\item 
+\hypertarget{html_8tpl_8php_a8f1db0526d0e6b99ae580d83209e717f}{
+print {\bfseries \$styles}}
+\label{html_8tpl_8php_a8f1db0526d0e6b99ae580d83209e717f}
+
+\item 
+\hypertarget{html_8tpl_8php_a2163fdf9fe7af884a6291084c2811896}{
+print {\bfseries \$scripts}}
+\label{html_8tpl_8php_a2163fdf9fe7af884a6291084c2811896}
+
+\item 
+\hypertarget{html_8tpl_8php_a6d48ecbdbc70ca1812e665169b5fa1e2}{
+print {\bfseries \$classes}}
+\label{html_8tpl_8php_a6d48ecbdbc70ca1812e665169b5fa1e2}
+
+\item 
+\hypertarget{html_8tpl_8php_a9c88c4272fa40546577b45392a0b3cd3}{
+print {\bfseries \$attributes}}
+\label{html_8tpl_8php_a9c88c4272fa40546577b45392a0b3cd3}
+
+\item 
+\hypertarget{html_8tpl_8php_aafe3d8568482436044136d4ef94f2c11}{
+print {\bfseries \$page\_\-top}}
+\label{html_8tpl_8php_aafe3d8568482436044136d4ef94f2c11}
+
+\item 
+\hypertarget{html_8tpl_8php_aa0fd4542b316ecf8a64050c479b7227c}{
+print {\bfseries \$page}}
+\label{html_8tpl_8php_aa0fd4542b316ecf8a64050c479b7227c}
+
+\item 
+\hypertarget{html_8tpl_8php_afd5b85d1c3433f5fd7c137b6c29c20f9}{
+print {\bfseries \$page\_\-bottom}}
+\label{html_8tpl_8php_afd5b85d1c3433f5fd7c137b6c29c20f9}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Default theme implementation to display the basic html structure of a single Drupal page.
+
+Variables:
+\begin{DoxyItemize}
+\item \$css: An array of CSS files for the current page.
+\item \$language: (object) The language the site is being displayed in. \$language-\/$>$language contains its textual representation. \$language-\/$>$dir contains the language direction. It will either be 'ltr' or 'rtl'.
+\item \$rdf\_\-namespaces: All the RDF namespace prefixes used in the HTML document.
+\item \$grddl\_\-profile: A GRDDL profile allowing agents to extract the RDF data.
+\item \$head\_\-title: A modified version of the page title, for use in the TITLE tag.
+\item \$head\_\-title\_\-array: (array) An associative array containing the string parts that were used to generate the \$head\_\-title variable, already prepared to be output as TITLE tag. The key/value pairs may contain one or more of the following, depending on conditions:
+\begin{DoxyItemize}
+\item title: The title of the current page, if any.
+\item name: The name of the site.
+\item slogan: The slogan of the site, if any, and if there is no title.
+\end{DoxyItemize}
+\item \$head: Markup for the HEAD section (including meta tags, keyword tags, and so on).
+\item \$styles: Style tags necessary to import all CSS files for the page.
+\item \$scripts: Script tags necessary to load the JavaScript files and settings for the page.
+\item \$page\_\-top: Initial markup from any modules that have altered the page. This variable should always be output first, before all other dynamic content.
+\item \$page: The rendered page content.
+\item \$page\_\-bottom: Final closing markup from any modules that have altered the page. This variable should always be output last, after all other dynamic content.
+\item \$classes String of classes that can be used to style contextually through CSS.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{includes_2theme_8inc_a3eeb7bcdba7ef4859f99586da264d347}{template\_\-preprocess()} 
+
+\hyperlink{includes_2theme_8inc_a5bc9f37111330a160833274482ad866a}{template\_\-preprocess\_\-html()} 
+
+\hyperlink{includes_2theme_8inc_a9b4d56c55dab2c59b7af6f71d6b1a940}{template\_\-process()} 
+\end{DoxySeeAlso}

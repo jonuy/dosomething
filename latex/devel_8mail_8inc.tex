@@ -1,0 +1,19 @@
+\hypertarget{devel_8mail_8inc}{
+\section{html/profiles/dosomething/modules/contrib/devel/devel.mail.inc File Reference}
+\label{devel_8mail_8inc}\index{html/profiles/dosomething/modules/contrib/devel/devel.mail.inc@{html/profiles/dosomething/modules/contrib/devel/devel.mail.inc}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDevelMailLog}{DevelMailLog}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{interfaceMailSystemInterface}{MailSystemInterface} for logging mails to the filesystem.
+
+To enable, save a variable in \hyperlink{settings_8php}{settings.php} (or otherwise) whose value can be as simple as:
+
+\$conf\mbox{[}'mail\_\-system'\mbox{]} = array( 'default-\/system' =$>$ 'DevelMailLog', );
+
+Saves to temporary://devel-\/mails dir by default. Can be changed using 'devel\_\-debug\_\-mail\_\-directory' variable. Filename pattern controlled by 'devel\_\-debug\_\-mail\_\-file\_\-format' variable. 

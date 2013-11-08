@@ -1,0 +1,67 @@
+\hypertarget{profile_8admin_8inc}{
+\section{html/modules/profile/profile.admin.inc File Reference}
+\label{profile_8admin_8inc}\index{html/modules/profile/profile.admin.inc@{html/modules/profile/profile.admin.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__forms_gafea18af3496251513291ed1ddc563fcc}{profile\_\-admin\_\-overview} (\$form)
+\item 
+\hyperlink{profile_8admin_8inc_a010af3295f669ceac61a1da0f8d5ad53}{profile\_\-admin\_\-overview\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__themeable_ga8ae065d1df5f313b0701ec6af07d7b05}{theme\_\-profile\_\-admin\_\-overview} (\$variables)
+\item 
+\hyperlink{group__forms_ga05b59d1f5368616b5bf775acbb3f87e7}{profile\_\-field\_\-form} (\$form, \&\$form\_\-state, \$arg=NULL)
+\item 
+\hyperlink{profile_8admin_8inc_a68cc1dfe2c4f0e0946ede9786b4554e2}{profile\_\-field\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{profile_8admin_8inc_a25efcaa4c4b8e9dc9568622ad0ab3411}{profile\_\-field\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{profile_8admin_8inc_a2c4b876b5125112271191e78f4816c35}{profile\_\-field\_\-delete} (\$form, \&\$form\_\-state, \$fid)
+\item 
+\hyperlink{profile_8admin_8inc_a4b5d228dbc4ee4a3091c72b8d4530f38}{profile\_\-field\_\-delete\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{profile_8admin_8inc_a2952c7f0dfb428dfdf77d7be37b707ad}{profile\_\-admin\_\-settings\_\-autocomplete} (\$string)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Administrative page callbacks for the profile module. 
+
+\subsection{Function Documentation}
+\hypertarget{profile_8admin_8inc_a010af3295f669ceac61a1da0f8d5ad53}{
+\index{profile.admin.inc@{profile.admin.inc}!profile\_\-admin\_\-overview\_\-submit@{profile\_\-admin\_\-overview\_\-submit}}
+\index{profile\_\-admin\_\-overview\_\-submit@{profile\_\-admin\_\-overview\_\-submit}!profile.admin.inc@{profile.admin.inc}}
+\subsubsection[{profile\_\-admin\_\-overview\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-admin\_\-overview\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{profile_8admin_8inc_a010af3295f669ceac61a1da0f8d5ad53}
+Submit handler to update changed profile field weights and categories.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__forms_gafea18af3496251513291ed1ddc563fcc}{profile\_\-admin\_\-overview()} 
+\end{DoxySeeAlso}
+\hypertarget{profile_8admin_8inc_a2952c7f0dfb428dfdf77d7be37b707ad}{
+\index{profile.admin.inc@{profile.admin.inc}!profile\_\-admin\_\-settings\_\-autocomplete@{profile\_\-admin\_\-settings\_\-autocomplete}}
+\index{profile\_\-admin\_\-settings\_\-autocomplete@{profile\_\-admin\_\-settings\_\-autocomplete}!profile.admin.inc@{profile.admin.inc}}
+\subsubsection[{profile\_\-admin\_\-settings\_\-autocomplete}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-admin\_\-settings\_\-autocomplete (\$ {\em string})}}
+\label{profile_8admin_8inc_a2952c7f0dfb428dfdf77d7be37b707ad}
+Retrieve a pipe delimited string of autocomplete suggestions for profile categories \hypertarget{profile_8admin_8inc_a2c4b876b5125112271191e78f4816c35}{
+\index{profile.admin.inc@{profile.admin.inc}!profile\_\-field\_\-delete@{profile\_\-field\_\-delete}}
+\index{profile\_\-field\_\-delete@{profile\_\-field\_\-delete}!profile.admin.inc@{profile.admin.inc}}
+\subsubsection[{profile\_\-field\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-field\_\-delete (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em fid})}}
+\label{profile_8admin_8inc_a2c4b876b5125112271191e78f4816c35}
+Menu callback; deletes a field from all user profiles. \hypertarget{profile_8admin_8inc_a4b5d228dbc4ee4a3091c72b8d4530f38}{
+\index{profile.admin.inc@{profile.admin.inc}!profile\_\-field\_\-delete\_\-submit@{profile\_\-field\_\-delete\_\-submit}}
+\index{profile\_\-field\_\-delete\_\-submit@{profile\_\-field\_\-delete\_\-submit}!profile.admin.inc@{profile.admin.inc}}
+\subsubsection[{profile\_\-field\_\-delete\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-field\_\-delete\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{profile_8admin_8inc_a4b5d228dbc4ee4a3091c72b8d4530f38}
+Process a field delete form submission. \hypertarget{profile_8admin_8inc_a25efcaa4c4b8e9dc9568622ad0ab3411}{
+\index{profile.admin.inc@{profile.admin.inc}!profile\_\-field\_\-form\_\-submit@{profile\_\-field\_\-form\_\-submit}}
+\index{profile\_\-field\_\-form\_\-submit@{profile\_\-field\_\-form\_\-submit}!profile.admin.inc@{profile.admin.inc}}
+\subsubsection[{profile\_\-field\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-field\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{profile_8admin_8inc_a25efcaa4c4b8e9dc9568622ad0ab3411}
+Process profile\_\-field\_\-form submissions. \hypertarget{profile_8admin_8inc_a68cc1dfe2c4f0e0946ede9786b4554e2}{
+\index{profile.admin.inc@{profile.admin.inc}!profile\_\-field\_\-form\_\-validate@{profile\_\-field\_\-form\_\-validate}}
+\index{profile\_\-field\_\-form\_\-validate@{profile\_\-field\_\-form\_\-validate}!profile.admin.inc@{profile.admin.inc}}
+\subsubsection[{profile\_\-field\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-field\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{profile_8admin_8inc_a68cc1dfe2c4f0e0946ede9786b4554e2}
+Validate profile\_\-field\_\-form submissions. 

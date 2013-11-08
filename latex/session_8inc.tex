@@ -1,0 +1,190 @@
+\hypertarget{session_8inc}{
+\section{html/includes/session.inc File Reference}
+\label{session_8inc}\index{html/includes/session.inc@{html/includes/session.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{session_8inc_ac8852f85f169dfbee885d44239a6048c}{\_\-drupal\_\-session\_\-open} ()
+\item 
+\hyperlink{session_8inc_a442fb2eb576d761183c100cdd1c078fd}{\_\-drupal\_\-session\_\-close} ()
+\item 
+\hyperlink{session_8inc_aeb991b6399401804bd0072e5ee6e4741}{\_\-drupal\_\-session\_\-read} (\$sid)
+\item 
+\hyperlink{session_8inc_a4c7b4bd789e8a27c6c7078cb1a32f8f9}{\_\-drupal\_\-session\_\-write} (\$sid, \$value)
+\item 
+\hyperlink{session_8inc_a1ddf625160ae9e448b25ea74f9fa58d0}{drupal\_\-session\_\-initialize} ()
+\item 
+\hyperlink{group__php__wrappers_gaef664546ab6308e639e0d6f6b363ae57}{drupal\_\-session\_\-start} ()
+\item 
+\hyperlink{session_8inc_ad6c0ee8cae83649ccfbc7f2eef268377}{drupal\_\-session\_\-commit} ()
+\item 
+\hyperlink{session_8inc_a4de15350e0f9d1786d59da6ea7ea7171}{drupal\_\-session\_\-started} (\$set=NULL)
+\item 
+\hyperlink{group__php__wrappers_ga144f983d31722d56cef8cdf259d2f68f}{drupal\_\-session\_\-regenerate} ()
+\item 
+\hyperlink{session_8inc_af8a3df8c027292c59745d5ce00025480}{\_\-drupal\_\-session\_\-destroy} (\$sid)
+\item 
+\hyperlink{session_8inc_a8e37ac914709ebe5fd2a90a05ef9d07d}{\_\-drupal\_\-session\_\-delete\_\-cookie} (\$name, \$secure=NULL)
+\item 
+\hyperlink{session_8inc_a5ac41504673ec444e5e2d1aa1dc231f8}{drupal\_\-session\_\-destroy\_\-uid} (\$uid)
+\item 
+\hyperlink{session_8inc_a27392dffc0efaa15d678b516379eec99}{\_\-drupal\_\-session\_\-garbage\_\-collection} (\$lifetime)
+\item 
+\hyperlink{session_8inc_a2e1c6443b96a7018027383ca39585ce7}{drupal\_\-save\_\-session} (\$status=NULL)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+User session handling functions.
+
+The user-\/level session storage handlers:
+\begin{DoxyItemize}
+\item \hyperlink{session_8inc_ac8852f85f169dfbee885d44239a6048c}{\_\-drupal\_\-session\_\-open()}
+\item \hyperlink{session_8inc_a442fb2eb576d761183c100cdd1c078fd}{\_\-drupal\_\-session\_\-close()}
+\item \hyperlink{session_8inc_aeb991b6399401804bd0072e5ee6e4741}{\_\-drupal\_\-session\_\-read()}
+\item \hyperlink{session_8inc_a4c7b4bd789e8a27c6c7078cb1a32f8f9}{\_\-drupal\_\-session\_\-write()}
+\item \hyperlink{session_8inc_af8a3df8c027292c59745d5ce00025480}{\_\-drupal\_\-session\_\-destroy()}
+\item \hyperlink{session_8inc_a27392dffc0efaa15d678b516379eec99}{\_\-drupal\_\-session\_\-garbage\_\-collection()} are assigned by session\_\-set\_\-save\_\-handler() in \hyperlink{bootstrap_8inc}{bootstrap.inc} and are called automatically by PHP. These functions should not be called directly. Session data should instead be accessed via the \$\_\-SESSION superglobal. 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\hypertarget{session_8inc_a442fb2eb576d761183c100cdd1c078fd}{
+\index{session.inc@{session.inc}!\_\-drupal\_\-session\_\-close@{\_\-drupal\_\-session\_\-close}}
+\index{\_\-drupal\_\-session\_\-close@{\_\-drupal\_\-session\_\-close}!session.inc@{session.inc}}
+\subsubsection[{\_\-drupal\_\-session\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}\_\-drupal\_\-session\_\-close ()}}
+\label{session_8inc_a442fb2eb576d761183c100cdd1c078fd}
+Session handler assigned by session\_\-set\_\-save\_\-handler().
+
+This function is used to close the current session. Because Drupal stores session data in the database immediately on write, this function does not need to do anything.
+
+This function should not be called directly.
+
+\begin{DoxyReturn}{Returns}
+This function will always return TRUE. 
+\end{DoxyReturn}
+\hypertarget{session_8inc_a8e37ac914709ebe5fd2a90a05ef9d07d}{
+\index{session.inc@{session.inc}!\_\-drupal\_\-session\_\-delete\_\-cookie@{\_\-drupal\_\-session\_\-delete\_\-cookie}}
+\index{\_\-drupal\_\-session\_\-delete\_\-cookie@{\_\-drupal\_\-session\_\-delete\_\-cookie}!session.inc@{session.inc}}
+\subsubsection[{\_\-drupal\_\-session\_\-delete\_\-cookie}]{\setlength{\rightskip}{0pt plus 5cm}\_\-drupal\_\-session\_\-delete\_\-cookie (\$ {\em name}, \/  \$ {\em secure} = {\ttfamily NULL})}}
+\label{session_8inc_a8e37ac914709ebe5fd2a90a05ef9d07d}
+Deletes the session cookie.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]Name of session cookie to delete. \item[{\em boolean}]\$secure Force the secure value of the cookie. \end{DoxyParams}
+\hypertarget{session_8inc_af8a3df8c027292c59745d5ce00025480}{
+\index{session.inc@{session.inc}!\_\-drupal\_\-session\_\-destroy@{\_\-drupal\_\-session\_\-destroy}}
+\index{\_\-drupal\_\-session\_\-destroy@{\_\-drupal\_\-session\_\-destroy}!session.inc@{session.inc}}
+\subsubsection[{\_\-drupal\_\-session\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}\_\-drupal\_\-session\_\-destroy (\$ {\em sid})}}
+\label{session_8inc_af8a3df8c027292c59745d5ce00025480}
+Session handler assigned by session\_\-set\_\-save\_\-handler().
+
+Cleans up a specific session.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$sid}]Session ID. \end{DoxyParams}
+\hypertarget{session_8inc_a27392dffc0efaa15d678b516379eec99}{
+\index{session.inc@{session.inc}!\_\-drupal\_\-session\_\-garbage\_\-collection@{\_\-drupal\_\-session\_\-garbage\_\-collection}}
+\index{\_\-drupal\_\-session\_\-garbage\_\-collection@{\_\-drupal\_\-session\_\-garbage\_\-collection}!session.inc@{session.inc}}
+\subsubsection[{\_\-drupal\_\-session\_\-garbage\_\-collection}]{\setlength{\rightskip}{0pt plus 5cm}\_\-drupal\_\-session\_\-garbage\_\-collection (\$ {\em lifetime})}}
+\label{session_8inc_a27392dffc0efaa15d678b516379eec99}
+Session handler assigned by session\_\-set\_\-save\_\-handler().
+
+Cleans up stalled sessions.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$lifetime}]The value of session.gc\_\-maxlifetime, passed by PHP. Sessions not updated for more than \$lifetime seconds will be removed. \end{DoxyParams}
+\hypertarget{session_8inc_ac8852f85f169dfbee885d44239a6048c}{
+\index{session.inc@{session.inc}!\_\-drupal\_\-session\_\-open@{\_\-drupal\_\-session\_\-open}}
+\index{\_\-drupal\_\-session\_\-open@{\_\-drupal\_\-session\_\-open}!session.inc@{session.inc}}
+\subsubsection[{\_\-drupal\_\-session\_\-open}]{\setlength{\rightskip}{0pt plus 5cm}\_\-drupal\_\-session\_\-open ()}}
+\label{session_8inc_ac8852f85f169dfbee885d44239a6048c}
+Session handler assigned by session\_\-set\_\-save\_\-handler().
+
+This function is used to handle any initialization, such as file paths or database connections, that is needed before accessing session data. Drupal does not need to initialize anything in this function.
+
+This function should not be called directly.
+
+\begin{DoxyReturn}{Returns}
+This function will always return TRUE. 
+\end{DoxyReturn}
+\hypertarget{session_8inc_aeb991b6399401804bd0072e5ee6e4741}{
+\index{session.inc@{session.inc}!\_\-drupal\_\-session\_\-read@{\_\-drupal\_\-session\_\-read}}
+\index{\_\-drupal\_\-session\_\-read@{\_\-drupal\_\-session\_\-read}!session.inc@{session.inc}}
+\subsubsection[{\_\-drupal\_\-session\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}\_\-drupal\_\-session\_\-read (\$ {\em sid})}}
+\label{session_8inc_aeb991b6399401804bd0072e5ee6e4741}
+Reads an entire session from the database (internal use only).
+
+Also initializes the \$user object for the user associated with the session. This function is registered with session\_\-set\_\-save\_\-handler() to support database-\/backed sessions. It is called on every page load when PHP sets up the \$\_\-SESSION superglobal.
+
+This function is an internal function and must not be called directly. Doing so may result in logging out the current user, corrupting session data or other unexpected behavior. Session data must always be accessed via the \$\_\-SESSION superglobal.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$sid}]The session ID of the session to retrieve.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The user's session, or an empty string if no session exists. 
+\end{DoxyReturn}
+\hypertarget{session_8inc_a4c7b4bd789e8a27c6c7078cb1a32f8f9}{
+\index{session.inc@{session.inc}!\_\-drupal\_\-session\_\-write@{\_\-drupal\_\-session\_\-write}}
+\index{\_\-drupal\_\-session\_\-write@{\_\-drupal\_\-session\_\-write}!session.inc@{session.inc}}
+\subsubsection[{\_\-drupal\_\-session\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}\_\-drupal\_\-session\_\-write (\$ {\em sid}, \/  \$ {\em value})}}
+\label{session_8inc_a4c7b4bd789e8a27c6c7078cb1a32f8f9}
+Writes an entire session to the database (internal use only).
+
+This function is registered with session\_\-set\_\-save\_\-handler() to support database-\/backed sessions.
+
+This function is an internal function and must not be called directly. Doing so may result in corrupted session data or other unexpected behavior. Session data must always be accessed via the \$\_\-SESSION superglobal.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$sid}]The session ID of the session to write to. \item[{\em \$value}]Session data to write as a serialized string.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns TRUE. 
+\end{DoxyReturn}
+\hypertarget{session_8inc_a2e1c6443b96a7018027383ca39585ce7}{
+\index{session.inc@{session.inc}!drupal\_\-save\_\-session@{drupal\_\-save\_\-session}}
+\index{drupal\_\-save\_\-session@{drupal\_\-save\_\-session}!session.inc@{session.inc}}
+\subsubsection[{drupal\_\-save\_\-session}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-save\_\-session (\$ {\em status} = {\ttfamily NULL})}}
+\label{session_8inc_a2e1c6443b96a7018027383ca39585ce7}
+Determines whether to save session data of the current request.
+
+This function allows the caller to temporarily disable writing of session data, should the request end while performing potentially dangerous operations, such as manipulating the global \$user object. See \href{http://drupal.org/node/218104}{\tt http://drupal.org/node/218104} for usage.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$status}]Disables writing of session data when FALSE, (re-\/)enables writing when TRUE.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+FALSE if writing session data has been disabled. Otherwise, TRUE. 
+\end{DoxyReturn}
+\hypertarget{session_8inc_ad6c0ee8cae83649ccfbc7f2eef268377}{
+\index{session.inc@{session.inc}!drupal\_\-session\_\-commit@{drupal\_\-session\_\-commit}}
+\index{drupal\_\-session\_\-commit@{drupal\_\-session\_\-commit}!session.inc@{session.inc}}
+\subsubsection[{drupal\_\-session\_\-commit}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-session\_\-commit ()}}
+\label{session_8inc_ad6c0ee8cae83649ccfbc7f2eef268377}
+Commits the current session, if necessary.
+
+If an anonymous user already have an empty session, destroy it. \hypertarget{session_8inc_a5ac41504673ec444e5e2d1aa1dc231f8}{
+\index{session.inc@{session.inc}!drupal\_\-session\_\-destroy\_\-uid@{drupal\_\-session\_\-destroy\_\-uid}}
+\index{drupal\_\-session\_\-destroy\_\-uid@{drupal\_\-session\_\-destroy\_\-uid}!session.inc@{session.inc}}
+\subsubsection[{drupal\_\-session\_\-destroy\_\-uid}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-session\_\-destroy\_\-uid (\$ {\em uid})}}
+\label{session_8inc_a5ac41504673ec444e5e2d1aa1dc231f8}
+Ends a specific user's session(s).
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$uid}]User ID. \end{DoxyParams}
+\hypertarget{session_8inc_a1ddf625160ae9e448b25ea74f9fa58d0}{
+\index{session.inc@{session.inc}!drupal\_\-session\_\-initialize@{drupal\_\-session\_\-initialize}}
+\index{drupal\_\-session\_\-initialize@{drupal\_\-session\_\-initialize}!session.inc@{session.inc}}
+\subsubsection[{drupal\_\-session\_\-initialize}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-session\_\-initialize ()}}
+\label{session_8inc_a1ddf625160ae9e448b25ea74f9fa58d0}
+Initializes the session handler, starting a session if needed. \hypertarget{session_8inc_a4de15350e0f9d1786d59da6ea7ea7171}{
+\index{session.inc@{session.inc}!drupal\_\-session\_\-started@{drupal\_\-session\_\-started}}
+\index{drupal\_\-session\_\-started@{drupal\_\-session\_\-started}!session.inc@{session.inc}}
+\subsubsection[{drupal\_\-session\_\-started}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-session\_\-started (\$ {\em set} = {\ttfamily NULL})}}
+\label{session_8inc_a4de15350e0f9d1786d59da6ea7ea7171}
+Returns whether a session has been started. 

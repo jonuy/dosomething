@@ -1,0 +1,122 @@
+\hypertarget{user_8admin_8inc}{
+\section{html/modules/user/user.admin.inc File Reference}
+\label{user_8admin_8inc}\index{html/modules/user/user.admin.inc@{html/modules/user/user.admin.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{user_8admin_8inc_a16b515af1b1f5d114383d668812c0b9b}{user\_\-admin} (\$callback\_\-arg= '')
+\item 
+\hyperlink{group__forms_ga4492f8566743ff967248ff7d22108a54}{user\_\-filter\_\-form} ()
+\item 
+\hyperlink{user_8admin_8inc_aedf12621a6f405cf3032a9319771b4e1}{user\_\-filter\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__forms_ga3dde5a35fbda589c3fb9a4bb6d4b1d9a}{user\_\-admin\_\-account} ()
+\item 
+\hyperlink{user_8admin_8inc_a20540c356ad435d034ff0229323f33d5}{user\_\-admin\_\-account\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hypertarget{user_8admin_8inc_a677766378db180ef3601f618951f35e0}{
+{\bfseries user\_\-admin\_\-account\_\-validate} (\$form, \&\$form\_\-state)}
+\label{user_8admin_8inc_a677766378db180ef3601f618951f35e0}
+
+\item 
+\hyperlink{group__forms_ga8cb1bc70278e0e628fd17c2ec8353bd1}{user\_\-admin\_\-settings} ()
+\item 
+\hyperlink{group__forms_gabcf8ce0bd54bdce14e7abeea7ed2bad9}{user\_\-admin\_\-permissions} (\$form, \$form\_\-state, \$rid=NULL)
+\item 
+\hyperlink{user_8admin_8inc_a05efed62d2fe9e10ee50a21b54f6ec31}{user\_\-admin\_\-permissions\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__themeable_gad8be4d71043b96d113f321c62f457765}{theme\_\-user\_\-admin\_\-permissions} (\$variables)
+\item 
+\hyperlink{group__themeable_ga459815f84e50a6416f625577c99b9017}{theme\_\-user\_\-permission\_\-description} (\$variables)
+\item 
+\hyperlink{group__forms_ga80c86a9ecd42e3a8b2518d23cf9b0b84}{user\_\-admin\_\-roles} (\$form, \$form\_\-state)
+\item 
+\hyperlink{user_8admin_8inc_a572641931024871c1d4fa6a574f20763}{user\_\-admin\_\-roles\_\-order\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__themeable_gad4ed00385370ab78b0edbc7ec01b729f}{theme\_\-user\_\-admin\_\-roles} (\$variables)
+\item 
+\hyperlink{group__forms_ga1b97a1d994a0fff5e514d8c0b79b9d9f}{user\_\-admin\_\-role} (\$form, \$form\_\-state, \$role)
+\item 
+\hyperlink{user_8admin_8inc_ad03d629a48434e2a62448d3ef2dec1bd}{user\_\-admin\_\-role\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{user_8admin_8inc_ac85f25cd1c59104fcc4dc4f7b9dfbd2e}{user\_\-admin\_\-role\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{user_8admin_8inc_a43838b5335621b4c5d7914b3d4ee34b9}{user\_\-admin\_\-role\_\-delete\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{user_8admin_8inc_a3e68f9349198e39b9854f876a7a295fb}{user\_\-admin\_\-role\_\-delete\_\-confirm} (\$form, \&\$form\_\-state, \$role)
+\item 
+\hyperlink{user_8admin_8inc_ae983d48bc867c0154f4c4af502cefd71}{user\_\-admin\_\-role\_\-delete\_\-confirm\_\-submit} (\$form, \&\$form\_\-state)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Admin page callback file for the user module. 
+
+\subsection{Function Documentation}
+\hypertarget{user_8admin_8inc_a16b515af1b1f5d114383d668812c0b9b}{
+\index{user.admin.inc@{user.admin.inc}!user\_\-admin@{user\_\-admin}}
+\index{user\_\-admin@{user\_\-admin}!user.admin.inc@{user.admin.inc}}
+\subsubsection[{user\_\-admin}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-admin (\$ {\em callback\_\-arg} = {\ttfamily ''})}}
+\label{user_8admin_8inc_a16b515af1b1f5d114383d668812c0b9b}
+Page callback: Generates the appropriate user administration form.
+
+This function generates the user registration, multiple user cancellation, or filtered user list admin form, depending on the argument and the POST form values.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$callback\_\-arg (optional) Indicates which form to build. Defaults to '', which will trigger the user filter form. If the POST value 'op' is present, this function uses that value as the callback argument.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string A renderable form array for the respective request. 
+\end{DoxyReturn}
+\hypertarget{user_8admin_8inc_a20540c356ad435d034ff0229323f33d5}{
+\index{user.admin.inc@{user.admin.inc}!user\_\-admin\_\-account\_\-submit@{user\_\-admin\_\-account\_\-submit}}
+\index{user\_\-admin\_\-account\_\-submit@{user\_\-admin\_\-account\_\-submit}!user.admin.inc@{user.admin.inc}}
+\subsubsection[{user\_\-admin\_\-account\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-admin\_\-account\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8admin_8inc_a20540c356ad435d034ff0229323f33d5}
+Submit the user administration update form. \hypertarget{user_8admin_8inc_a05efed62d2fe9e10ee50a21b54f6ec31}{
+\index{user.admin.inc@{user.admin.inc}!user\_\-admin\_\-permissions\_\-submit@{user\_\-admin\_\-permissions\_\-submit}}
+\index{user\_\-admin\_\-permissions\_\-submit@{user\_\-admin\_\-permissions\_\-submit}!user.admin.inc@{user.admin.inc}}
+\subsubsection[{user\_\-admin\_\-permissions\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-admin\_\-permissions\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8admin_8inc_a05efed62d2fe9e10ee50a21b54f6ec31}
+Save permissions selected on the administer permissions page.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__forms_gabcf8ce0bd54bdce14e7abeea7ed2bad9}{user\_\-admin\_\-permissions()} 
+\end{DoxySeeAlso}
+\hypertarget{user_8admin_8inc_a3e68f9349198e39b9854f876a7a295fb}{
+\index{user.admin.inc@{user.admin.inc}!user\_\-admin\_\-role\_\-delete\_\-confirm@{user\_\-admin\_\-role\_\-delete\_\-confirm}}
+\index{user\_\-admin\_\-role\_\-delete\_\-confirm@{user\_\-admin\_\-role\_\-delete\_\-confirm}!user.admin.inc@{user.admin.inc}}
+\subsubsection[{user\_\-admin\_\-role\_\-delete\_\-confirm}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-admin\_\-role\_\-delete\_\-confirm (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em role})}}
+\label{user_8admin_8inc_a3e68f9349198e39b9854f876a7a295fb}
+Form to confirm role delete operation. \hypertarget{user_8admin_8inc_ae983d48bc867c0154f4c4af502cefd71}{
+\index{user.admin.inc@{user.admin.inc}!user\_\-admin\_\-role\_\-delete\_\-confirm\_\-submit@{user\_\-admin\_\-role\_\-delete\_\-confirm\_\-submit}}
+\index{user\_\-admin\_\-role\_\-delete\_\-confirm\_\-submit@{user\_\-admin\_\-role\_\-delete\_\-confirm\_\-submit}!user.admin.inc@{user.admin.inc}}
+\subsubsection[{user\_\-admin\_\-role\_\-delete\_\-confirm\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-admin\_\-role\_\-delete\_\-confirm\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8admin_8inc_ae983d48bc867c0154f4c4af502cefd71}
+Form submit handler for \hyperlink{user_8admin_8inc_a3e68f9349198e39b9854f876a7a295fb}{user\_\-admin\_\-role\_\-delete\_\-confirm()}. \hypertarget{user_8admin_8inc_a43838b5335621b4c5d7914b3d4ee34b9}{
+\index{user.admin.inc@{user.admin.inc}!user\_\-admin\_\-role\_\-delete\_\-submit@{user\_\-admin\_\-role\_\-delete\_\-submit}}
+\index{user\_\-admin\_\-role\_\-delete\_\-submit@{user\_\-admin\_\-role\_\-delete\_\-submit}!user.admin.inc@{user.admin.inc}}
+\subsubsection[{user\_\-admin\_\-role\_\-delete\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-admin\_\-role\_\-delete\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8admin_8inc_a43838b5335621b4c5d7914b3d4ee34b9}
+Form submit handler for the \hyperlink{group__forms_ga1b97a1d994a0fff5e514d8c0b79b9d9f}{user\_\-admin\_\-role()} form. \hypertarget{user_8admin_8inc_ac85f25cd1c59104fcc4dc4f7b9dfbd2e}{
+\index{user.admin.inc@{user.admin.inc}!user\_\-admin\_\-role\_\-submit@{user\_\-admin\_\-role\_\-submit}}
+\index{user\_\-admin\_\-role\_\-submit@{user\_\-admin\_\-role\_\-submit}!user.admin.inc@{user.admin.inc}}
+\subsubsection[{user\_\-admin\_\-role\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-admin\_\-role\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8admin_8inc_ac85f25cd1c59104fcc4dc4f7b9dfbd2e}
+Form submit handler for the \hyperlink{group__forms_ga1b97a1d994a0fff5e514d8c0b79b9d9f}{user\_\-admin\_\-role()} form. \hypertarget{user_8admin_8inc_ad03d629a48434e2a62448d3ef2dec1bd}{
+\index{user.admin.inc@{user.admin.inc}!user\_\-admin\_\-role\_\-validate@{user\_\-admin\_\-role\_\-validate}}
+\index{user\_\-admin\_\-role\_\-validate@{user\_\-admin\_\-role\_\-validate}!user.admin.inc@{user.admin.inc}}
+\subsubsection[{user\_\-admin\_\-role\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-admin\_\-role\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8admin_8inc_ad03d629a48434e2a62448d3ef2dec1bd}
+Form validation handler for the \hyperlink{group__forms_ga1b97a1d994a0fff5e514d8c0b79b9d9f}{user\_\-admin\_\-role()} form. \hypertarget{user_8admin_8inc_a572641931024871c1d4fa6a574f20763}{
+\index{user.admin.inc@{user.admin.inc}!user\_\-admin\_\-roles\_\-order\_\-submit@{user\_\-admin\_\-roles\_\-order\_\-submit}}
+\index{user\_\-admin\_\-roles\_\-order\_\-submit@{user\_\-admin\_\-roles\_\-order\_\-submit}!user.admin.inc@{user.admin.inc}}
+\subsubsection[{user\_\-admin\_\-roles\_\-order\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-admin\_\-roles\_\-order\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8admin_8inc_a572641931024871c1d4fa6a574f20763}
+Form submit function. Update the role weights. \hypertarget{user_8admin_8inc_aedf12621a6f405cf3032a9319771b4e1}{
+\index{user.admin.inc@{user.admin.inc}!user\_\-filter\_\-form\_\-submit@{user\_\-filter\_\-form\_\-submit}}
+\index{user\_\-filter\_\-form\_\-submit@{user\_\-filter\_\-form\_\-submit}!user.admin.inc@{user.admin.inc}}
+\subsubsection[{user\_\-filter\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}user\_\-filter\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{user_8admin_8inc_aedf12621a6f405cf3032a9319771b4e1}
+Process result from user administration filter form. 

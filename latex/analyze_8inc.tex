@@ -1,0 +1,66 @@
+\hypertarget{analyze_8inc}{
+\section{html/profiles/dosomething/modules/contrib/views/includes/analyze.inc File Reference}
+\label{analyze_8inc}\index{html/profiles/dosomething/modules/contrib/views/includes/analyze.inc@{html/profiles/dosomething/modules/contrib/views/includes/analyze.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{analyze_8inc_a8f418e18d26fe543f6e960bade40a367}{views\_\-analyze\_\-view} (\&\$\hyperlink{classview}{view})
+\item 
+\hyperlink{analyze_8inc_abb4831d09ff37091c93536f24729a2ad}{views\_\-analyze\_\-format\_\-result} (\$\hyperlink{classview}{view}, \$messages)
+\item 
+\hyperlink{analyze_8inc_aa4f08098638b001519a0f905b102f22a}{views\_\-ui\_\-analysis} (\$message, \$type= 'error')
+\item 
+\hyperlink{analyze_8inc_abda4985a58e7461d134687a85c92f65f}{views\_\-ui\_\-views\_\-analyze} (\$\hyperlink{classview}{view})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains the \hyperlink{classview}{view} analyze tool code.
+
+This tool is a small plugin manager to perform analysis on a \hyperlink{classview}{view} and report results to the user. This tool is meant to let modules that provide data to Views also help users properly use that data by detecting invalid configurations. Views itself comes with only a small amount of analysis tools, but more could easily be added either by modules or as patches to Views itself. 
+
+\subsection{Function Documentation}
+\hypertarget{analyze_8inc_abb4831d09ff37091c93536f24729a2ad}{
+\index{analyze.inc@{analyze.inc}!views\_\-analyze\_\-format\_\-result@{views\_\-analyze\_\-format\_\-result}}
+\index{views\_\-analyze\_\-format\_\-result@{views\_\-analyze\_\-format\_\-result}!analyze.inc@{analyze.inc}}
+\subsubsection[{views\_\-analyze\_\-format\_\-result}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-analyze\_\-format\_\-result (\$ {\em view}, \/  \$ {\em messages})}}
+\label{analyze_8inc_abb4831d09ff37091c93536f24729a2ad}
+Format the analyze result into a message string.
+
+This is based upon the format of drupal\_\-set\_\-message which uses separate boxes for \char`\"{}ok\char`\"{}, \char`\"{}warning\char`\"{} and \char`\"{}error\char`\"{}. \hypertarget{analyze_8inc_a8f418e18d26fe543f6e960bade40a367}{
+\index{analyze.inc@{analyze.inc}!views\_\-analyze\_\-view@{views\_\-analyze\_\-view}}
+\index{views\_\-analyze\_\-view@{views\_\-analyze\_\-view}!analyze.inc@{analyze.inc}}
+\subsubsection[{views\_\-analyze\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-analyze\_\-view (\&\$ {\em view})}}
+\label{analyze_8inc_a8f418e18d26fe543f6e960bade40a367}
+Analyze a review and return the results.
+
+\begin{DoxyReturn}{Returns}
+An array of analyze results organized into arrays keyed by 'ok', 'warning' and 'error'. 
+\end{DoxyReturn}
+\hypertarget{analyze_8inc_aa4f08098638b001519a0f905b102f22a}{
+\index{analyze.inc@{analyze.inc}!views\_\-ui\_\-analysis@{views\_\-ui\_\-analysis}}
+\index{views\_\-ui\_\-analysis@{views\_\-ui\_\-analysis}!analyze.inc@{analyze.inc}}
+\subsubsection[{views\_\-ui\_\-analysis}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-ui\_\-analysis (\$ {\em message}, \/  \$ {\em type} = {\ttfamily 'error'})}}
+\label{analyze_8inc_aa4f08098638b001519a0f905b102f22a}
+Format an analysis message.
+
+This tool should be called by any module responding to the analyze hook to properly format the message. It is usually used in the form: 
+\begin{DoxyCode}
+   $ret[] = views_ui_analysis(t('This is the message'), 'ok');
+\end{DoxyCode}
+
+
+The 'ok' status should be used to provide information about things that are acceptable. In general analysis isn't interested in 'ok' messages, but instead the 'warning', which is a category for items that may be broken unless the user knows what he or she is doing, and 'error' for items that are definitely broken are much more useful.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$messages}]The message to report. \item[{\em \$type}]The type of message. This should be \char`\"{}ok\char`\"{}, \char`\"{}warning\char`\"{} or \char`\"{}error\char`\"{}. Other values can be used but how they are treated by the output routine is undefined. \end{DoxyParams}
+\hypertarget{analyze_8inc_abda4985a58e7461d134687a85c92f65f}{
+\index{analyze.inc@{analyze.inc}!views\_\-ui\_\-views\_\-analyze@{views\_\-ui\_\-views\_\-analyze}}
+\index{views\_\-ui\_\-views\_\-analyze@{views\_\-ui\_\-views\_\-analyze}!analyze.inc@{analyze.inc}}
+\subsubsection[{views\_\-ui\_\-views\_\-analyze}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-ui\_\-views\_\-analyze (\$ {\em view})}}
+\label{analyze_8inc_abda4985a58e7461d134687a85c92f65f}
+Implements hook\_\-views\_\-analyze().
+
+This is the basic views analysis that checks for very minimal problems. There are other analysis tools in core specific sections, such as \hyperlink{node_8views_8inc}{node.views.inc} as well. 

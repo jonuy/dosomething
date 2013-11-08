@@ -1,0 +1,116 @@
+\hypertarget{classArchiverTar}{
+\section{ArchiverTar Class Reference}
+\label{classArchiverTar}\index{ArchiverTar@{ArchiverTar}}
+}
+Inheritance diagram for ArchiverTar::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classArchiverTar}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classArchiverTar_af3727d4c5fa466d4aabde81bb9d4c7df}{\_\-\_\-construct} (\$file\_\-path)
+\item 
+\hyperlink{classArchiverTar_a23c343bebf4ba3a61fc8087427406bbe}{add} (\$file\_\-path)
+\item 
+\hyperlink{classArchiverTar_a7e3e6cc10110d77b1411074f7e65c2e0}{remove} (\$file\_\-path)
+\item 
+\hypertarget{classArchiverTar_a56055f3c010d727ecc260f49e514649f}{
+{\bfseries extract} (\$path, Array \$files=array())}
+\label{classArchiverTar_a56055f3c010d727ecc260f49e514649f}
+
+\item 
+\hyperlink{classArchiverTar_a6293cb8fd0519ae617a789ea08799914}{listContents} ()
+\item 
+\hyperlink{classArchiverTar_a2898ddb1ed703ef248a7358be9237c86}{getArchive} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classArchiverTar_aceaa126d4723ef39d100d2befadccdfb}{
+{\bfseries \$tar}}
+\label{classArchiverTar_aceaa126d4723ef39d100d2befadccdfb}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Archiver for .tar files. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classArchiverTar_af3727d4c5fa466d4aabde81bb9d4c7df}{
+\index{ArchiverTar@{ArchiverTar}!\_\-\_\-construct@{\_\-\_\-construct}}
+\index{\_\-\_\-construct@{\_\-\_\-construct}!ArchiverTar@{ArchiverTar}}
+\subsubsection[{\_\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}ArchiverTar::\_\-\_\-construct (\$ {\em file\_\-path})}}
+\label{classArchiverTar_af3727d4c5fa466d4aabde81bb9d4c7df}
+Constructs a new archiver instance.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$file\_\-path}]The full system path of the archive to manipulate. Only local files are supported. If the file does not yet exist, it will be created if appropriate. \end{DoxyParams}
+
+
+Implements \hyperlink{interfaceArchiverInterface_aa380cf3e1bcf80763ccd6c790b50aee5}{ArchiverInterface}.
+
+\subsection{Member Function Documentation}
+\hypertarget{classArchiverTar_a23c343bebf4ba3a61fc8087427406bbe}{
+\index{ArchiverTar@{ArchiverTar}!add@{add}}
+\index{add@{add}!ArchiverTar@{ArchiverTar}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}ArchiverTar::add (\$ {\em file\_\-path})}}
+\label{classArchiverTar_a23c343bebf4ba3a61fc8087427406bbe}
+Adds the specified file or directory to the archive.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$file\_\-path}]The full system path of the file or directory to add. Only local files and directories are supported.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{interfaceArchiverInterface}{ArchiverInterface} The called object. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceArchiverInterface_aedd1c39f36b45e2f12381003d83ee4bf}{ArchiverInterface}.\hypertarget{classArchiverTar_a2898ddb1ed703ef248a7358be9237c86}{
+\index{ArchiverTar@{ArchiverTar}!getArchive@{getArchive}}
+\index{getArchive@{getArchive}!ArchiverTar@{ArchiverTar}}
+\subsubsection[{getArchive}]{\setlength{\rightskip}{0pt plus 5cm}ArchiverTar::getArchive ()}}
+\label{classArchiverTar_a2898ddb1ed703ef248a7358be9237c86}
+Retrieve the tar engine itself.
+
+In some cases it may be necessary to directly access the underlying \hyperlink{classArchive__Tar}{Archive\_\-Tar} object for implementation-\/specific logic. This is for advanced use only as it is not shared by other implementations of ArchiveInterface.
+
+\begin{DoxyReturn}{Returns}
+The \hyperlink{classArchive__Tar}{Archive\_\-Tar} object used by this object. 
+\end{DoxyReturn}
+\hypertarget{classArchiverTar_a6293cb8fd0519ae617a789ea08799914}{
+\index{ArchiverTar@{ArchiverTar}!listContents@{listContents}}
+\index{listContents@{listContents}!ArchiverTar@{ArchiverTar}}
+\subsubsection[{listContents}]{\setlength{\rightskip}{0pt plus 5cm}ArchiverTar::listContents ()}}
+\label{classArchiverTar_a6293cb8fd0519ae617a789ea08799914}
+Lists all files in the archive.
+
+\begin{DoxyReturn}{Returns}
+An array of file names relative to the root of the archive. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceArchiverInterface_a0be527152061af9bfd22a525fc29d78d}{ArchiverInterface}.\hypertarget{classArchiverTar_a7e3e6cc10110d77b1411074f7e65c2e0}{
+\index{ArchiverTar@{ArchiverTar}!remove@{remove}}
+\index{remove@{remove}!ArchiverTar@{ArchiverTar}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}ArchiverTar::remove (\$ {\em path})}}
+\label{classArchiverTar_a7e3e6cc10110d77b1411074f7e65c2e0}
+Removes the specified file from the archive.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$path}]The file name relative to the root of the archive to remove.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{interfaceArchiverInterface}{ArchiverInterface} The called object. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceArchiverInterface_adf87dd4d31b2af7c9a90617436683edc}{ArchiverInterface}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/modules/system/\hyperlink{system_8archiver_8inc}{system.archiver.inc}\end{DoxyCompactItemize}

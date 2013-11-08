@@ -1,0 +1,45 @@
+\hypertarget{group__validation}{
+\section{Input validation}
+\label{group__validation}\index{Input validation@{Input validation}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__validation_ga486c51f034746a76618602e1e76fa718}{valid\_\-email\_\-address} (\$mail)
+\item 
+\hyperlink{group__validation_gae9221d1759a8d5a2ba2db93ae3a6feff}{valid\_\-url} (\$url, \$absolute=FALSE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions to validate user input. 
+
+\subsection{Function Documentation}
+\hypertarget{group__validation_ga486c51f034746a76618602e1e76fa718}{
+\index{validation@{validation}!valid\_\-email\_\-address@{valid\_\-email\_\-address}}
+\index{valid\_\-email\_\-address@{valid\_\-email\_\-address}!validation@{validation}}
+\subsubsection[{valid\_\-email\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}valid\_\-email\_\-address (\$ {\em mail})}}
+\label{group__validation_ga486c51f034746a76618602e1e76fa718}
+Verifies the syntax of the given e-\/mail address.
+
+This uses the \hyperlink{}{PHP e-\/mail validation filter. }
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$mail}]A string containing an e-\/mail address.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the address is in a valid format. 
+\end{DoxyReturn}
+\hypertarget{group__validation_gae9221d1759a8d5a2ba2db93ae3a6feff}{
+\index{validation@{validation}!valid\_\-url@{valid\_\-url}}
+\index{valid\_\-url@{valid\_\-url}!validation@{validation}}
+\subsubsection[{valid\_\-url}]{\setlength{\rightskip}{0pt plus 5cm}valid\_\-url (\$ {\em url}, \/  \$ {\em absolute} = {\ttfamily FALSE})}}
+\label{group__validation_gae9221d1759a8d5a2ba2db93ae3a6feff}
+Verifies the syntax of the given URL.
+
+This function should only be used on actual URLs. It should not be used for Drupal menu paths, which can contain arbitrary characters. Valid values per RFC 3986. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \$url}]The URL to verify. \item[{\em \$absolute}]Whether the URL is absolute (beginning with a scheme such as \char`\"{}http:\char`\"{}).\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the URL is in a valid format. 
+\end{DoxyReturn}

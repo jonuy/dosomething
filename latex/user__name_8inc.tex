@@ -1,0 +1,48 @@
+\hypertarget{user__name_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/user\_\-name.inc File Reference}
+\label{user__name_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/user\_\-name.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/user\_\-name.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{user__name_8inc_ad4a7c8ebb4a32658ed945de104a1e2c4}{ctools\_\-argument\_\-user\_\-name\_\-context} (\$arg=NULL, \$conf=NULL, \$empty=FALSE)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{user__name_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide an argument handler for a username 
+
+\subsection{Function Documentation}
+\hypertarget{user__name_8inc_ad4a7c8ebb4a32658ed945de104a1e2c4}{
+\index{user\_\-name.inc@{user\_\-name.inc}!ctools\_\-argument\_\-user\_\-name\_\-context@{ctools\_\-argument\_\-user\_\-name\_\-context}}
+\index{ctools\_\-argument\_\-user\_\-name\_\-context@{ctools\_\-argument\_\-user\_\-name\_\-context}!user_name.inc@{user\_\-name.inc}}
+\subsubsection[{ctools\_\-argument\_\-user\_\-name\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-argument\_\-user\_\-name\_\-context (\$ {\em arg} = {\ttfamily NULL}, \/  \$ {\em conf} = {\ttfamily NULL}, \/  \$ {\em empty} = {\ttfamily FALSE})}}
+\label{user__name_8inc_ad4a7c8ebb4a32658ed945de104a1e2c4}
+Discover if this argument gives us the user we crave. 
+
+\subsection{Variable Documentation}
+\hypertarget{user__name_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{user\_\-name.inc@{user\_\-name.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!user_name.inc@{user\_\-name.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{user__name_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t("User: name"),
+  
+  'keyword' => 'user',
+  'description' => t('Creates a user context from a user name.'),
+  'context' => 'ctools_argument_user_name_context',
+  'placeholder form' => array(
+    '#type' => 'textfield',
+    '#description' => t('Enter the username of a user for this argument'),
+  ),
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

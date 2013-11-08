@@ -1,0 +1,147 @@
+\hypertarget{classviews__handler__filter__boolean__operator}{
+\section{views\_\-handler\_\-filter\_\-boolean\_\-operator Class Reference}
+\label{classviews__handler__filter__boolean__operator}\index{views\_\-handler\_\-filter\_\-boolean\_\-operator@{views\_\-handler\_\-filter\_\-boolean\_\-operator}}
+}
+Inheritance diagram for views\_\-handler\_\-filter\_\-boolean\_\-operator::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.59259cm]{classviews__handler__filter__boolean__operator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__handler__filter__boolean__operator_a659352df10ef3144359e90247f450ef2}{
+{\bfseries construct} ()}
+\label{classviews__handler__filter__boolean__operator_a659352df10ef3144359e90247f450ef2}
+
+\item 
+\hyperlink{classviews__handler__filter__boolean__operator_ad2c5508cee59025448c3c18a862976d8}{get\_\-value\_\-options} ()
+\item 
+\hypertarget{classviews__handler__filter__boolean__operator_af2103bf9a481a2a2eb4d5c0e6baf2b77}{
+{\bfseries option\_\-definition} ()}
+\label{classviews__handler__filter__boolean__operator_af2103bf9a481a2a2eb4d5c0e6baf2b77}
+
+\item 
+\hyperlink{classviews__handler__filter__boolean__operator_a2b8c0523843b8f24144bf5a59254cdd9}{operator\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__handler__filter__boolean__operator_a1680256640c960fef88ad1485cfb91f7}{value\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__handler__filter__boolean__operator_a9c61464d97fb29d4a481e30f97cb50f9}{value\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__handler__filter__boolean__operator_a7b58a9b58ae9778383b6a215834d7cdb}{admin\_\-summary} ()
+\item 
+\hyperlink{classviews__handler__filter__boolean__operator_a24ff1f565f02838bc2a63939ab510d89}{expose\_\-options} ()
+\item 
+\hyperlink{classviews__handler__filter__boolean__operator_ab3afc650701939c060e684d75fa2b21b}{query} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__handler__filter__boolean__operator_a9cb8583474a5a923731acf4406306c30}{
+{\bfseries \$always\_\-multiple} = TRUE}
+\label{classviews__handler__filter__boolean__operator_a9cb8583474a5a923731acf4406306c30}
+
+\item 
+\hypertarget{classviews__handler__filter__boolean__operator_a0ad8e21c2f836e4ade02e9d0c458bc90}{
+{\bfseries \$no\_\-operator} = TRUE}
+\label{classviews__handler__filter__boolean__operator_a0ad8e21c2f836e4ade02e9d0c458bc90}
+
+\item 
+\hypertarget{classviews__handler__filter__boolean__operator_ac6f1cd7c0c2f1108a4678651dd2e437b}{
+{\bfseries \$accept\_\-null} = FALSE}
+\label{classviews__handler__filter__boolean__operator_ac6f1cd7c0c2f1108a4678651dd2e437b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple filter to handle matching of boolean values
+
+Definition items:
+\begin{DoxyItemize}
+\item label: (REQUIRED) The label for the checkbox.
+\item type: For basic 'true false' types, an item can specify the following:
+\begin{DoxyItemize}
+\item true-\/false: True/false (this is the default)
+\item yes-\/no: Yes/No
+\item on-\/off: On/Off
+\item enabled-\/disabled: Enabled/Disabled
+\end{DoxyItemize}
+\item accept null: Treat a NULL value as false.
+\item use equal: If you use this flag the query will use = 1 instead of $<$$>$ 0. This might be helpful for performance reasons. 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__handler__filter__boolean__operator_a7b58a9b58ae9778383b6a215834d7cdb}{
+\index{views\_\-handler\_\-filter\_\-boolean\_\-operator@{views\_\-handler\_\-filter\_\-boolean\_\-operator}!admin\_\-summary@{admin\_\-summary}}
+\index{admin\_\-summary@{admin\_\-summary}!views_handler_filter_boolean_operator@{views\_\-handler\_\-filter\_\-boolean\_\-operator}}
+\subsubsection[{admin\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-filter\_\-boolean\_\-operator::admin\_\-summary ()}}
+\label{classviews__handler__filter__boolean__operator_a7b58a9b58ae9778383b6a215834d7cdb}
+Display the filter on the administrative summary 
+
+Reimplemented from \hyperlink{classviews__handler__filter_a655263cd0b73188eec064b9a9743fe4c}{views\_\-handler\_\-filter}.\hypertarget{classviews__handler__filter__boolean__operator_a24ff1f565f02838bc2a63939ab510d89}{
+\index{views\_\-handler\_\-filter\_\-boolean\_\-operator@{views\_\-handler\_\-filter\_\-boolean\_\-operator}!expose\_\-options@{expose\_\-options}}
+\index{expose\_\-options@{expose\_\-options}!views_handler_filter_boolean_operator@{views\_\-handler\_\-filter\_\-boolean\_\-operator}}
+\subsubsection[{expose\_\-options}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-filter\_\-boolean\_\-operator::expose\_\-options ()}}
+\label{classviews__handler__filter__boolean__operator_a24ff1f565f02838bc2a63939ab510d89}
+Provide default options for exposed filters. 
+
+Reimplemented from \hyperlink{classviews__handler__filter_a07ab6afc47bf892fb5fd5934c3f1d64c}{views\_\-handler\_\-filter}.\hypertarget{classviews__handler__filter__boolean__operator_ad2c5508cee59025448c3c18a862976d8}{
+\index{views\_\-handler\_\-filter\_\-boolean\_\-operator@{views\_\-handler\_\-filter\_\-boolean\_\-operator}!get\_\-value\_\-options@{get\_\-value\_\-options}}
+\index{get\_\-value\_\-options@{get\_\-value\_\-options}!views_handler_filter_boolean_operator@{views\_\-handler\_\-filter\_\-boolean\_\-operator}}
+\subsubsection[{get\_\-value\_\-options}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-filter\_\-boolean\_\-operator::get\_\-value\_\-options ()}}
+\label{classviews__handler__filter__boolean__operator_ad2c5508cee59025448c3c18a862976d8}
+Return the possible options for this filter.
+
+Child classes should override this function to set the possible values for the filter. Since this is a boolean filter, the array should have two possible keys: 1 for \char`\"{}True\char`\"{} and 0 for \char`\"{}False\char`\"{}, although the labels can be whatever makes sense for the filter. These values are used for configuring the filter, when the filter is exposed, and in the admin summary of the filter. Normally, this should be static data, but if it's dynamic for some reason, child classes should use a guard to reduce database hits as much as possible. \hypertarget{classviews__handler__filter__boolean__operator_a2b8c0523843b8f24144bf5a59254cdd9}{
+\index{views\_\-handler\_\-filter\_\-boolean\_\-operator@{views\_\-handler\_\-filter\_\-boolean\_\-operator}!operator\_\-form@{operator\_\-form}}
+\index{operator\_\-form@{operator\_\-form}!views_handler_filter_boolean_operator@{views\_\-handler\_\-filter\_\-boolean\_\-operator}}
+\subsubsection[{operator\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-filter\_\-boolean\_\-operator::operator\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__handler__filter__boolean__operator_a2b8c0523843b8f24144bf5a59254cdd9}
+Options form subform for setting the operator.
+
+This may be overridden by child classes, and it must define \$form\mbox{[}'operator'\mbox{]};
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classviews__handler__filter_af14c69367162057a32709a6340de0988}{options\_\-form()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{classviews__handler__filter_a8c77c0a8bba8c3ceceae8950fc7b1121}{views\_\-handler\_\-filter}.\hypertarget{classviews__handler__filter__boolean__operator_ab3afc650701939c060e684d75fa2b21b}{
+\index{views\_\-handler\_\-filter\_\-boolean\_\-operator@{views\_\-handler\_\-filter\_\-boolean\_\-operator}!query@{query}}
+\index{query@{query}!views_handler_filter_boolean_operator@{views\_\-handler\_\-filter\_\-boolean\_\-operator}}
+\subsubsection[{query}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-filter\_\-boolean\_\-operator::query ()}}
+\label{classviews__handler__filter__boolean__operator_ab3afc650701939c060e684d75fa2b21b}
+Add this filter to the query.
+
+Due to the nature of fapi, the value and the operator have an unintended level of indirection. You will find them in \$this-\/$>$operator and \$this-\/$>$value respectively. 
+
+Reimplemented from \hyperlink{classviews__handler__filter_a8e513b3abbc2559f37b550ca4957b4ae}{views\_\-handler\_\-filter}.
+
+Reimplemented in \hyperlink{classviews__handler__filter__boolean__operator__string_ad4d0444476749372e38591ad058ee1cd}{views\_\-handler\_\-filter\_\-boolean\_\-operator\_\-string}, \hyperlink{classviews__handler__filter__tracker__boolean__operator_aa359173355e1a3094423882ac5af5897}{views\_\-handler\_\-filter\_\-tracker\_\-boolean\_\-operator}, and \hyperlink{classviews__handler__filter__user__current_a6002cf25d2385bd07c771f9a65cee48f}{views\_\-handler\_\-filter\_\-user\_\-current}.\hypertarget{classviews__handler__filter__boolean__operator_a1680256640c960fef88ad1485cfb91f7}{
+\index{views\_\-handler\_\-filter\_\-boolean\_\-operator@{views\_\-handler\_\-filter\_\-boolean\_\-operator}!value\_\-form@{value\_\-form}}
+\index{value\_\-form@{value\_\-form}!views_handler_filter_boolean_operator@{views\_\-handler\_\-filter\_\-boolean\_\-operator}}
+\subsubsection[{value\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-filter\_\-boolean\_\-operator::value\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__handler__filter__boolean__operator_a1680256640c960fef88ad1485cfb91f7}
+Options form subform for setting options.
+
+This should be overridden by all child classes and it must define \$form\mbox{[}'value'\mbox{]}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classviews__handler__filter_af14c69367162057a32709a6340de0988}{options\_\-form()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{classviews__handler__filter_a9168b39edae84b20e01a3fd0d810ba66}{views\_\-handler\_\-filter}.\hypertarget{classviews__handler__filter__boolean__operator_a9c61464d97fb29d4a481e30f97cb50f9}{
+\index{views\_\-handler\_\-filter\_\-boolean\_\-operator@{views\_\-handler\_\-filter\_\-boolean\_\-operator}!value\_\-validate@{value\_\-validate}}
+\index{value\_\-validate@{value\_\-validate}!views_handler_filter_boolean_operator@{views\_\-handler\_\-filter\_\-boolean\_\-operator}}
+\subsubsection[{value\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-filter\_\-boolean\_\-operator::value\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__handler__filter__boolean__operator_a9c61464d97fb29d4a481e30f97cb50f9}
+Validate the options form. 
+
+Reimplemented from \hyperlink{classviews__handler__filter_a55b051bcd047b7251e6dbbece8e0a081}{views\_\-handler\_\-filter}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/handlers/\hyperlink{views__handler__filter__boolean__operator_8inc}{views\_\-handler\_\-filter\_\-boolean\_\-operator.inc}\end{DoxyCompactItemize}

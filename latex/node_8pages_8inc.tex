@@ -1,0 +1,208 @@
+\hypertarget{node_8pages_8inc}{
+\section{html/modules/node/node.pages.inc File Reference}
+\label{node_8pages_8inc}\index{html/modules/node/node.pages.inc@{html/modules/node/node.pages.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{node_8pages_8inc_a553fc35bb17545341a3fcc36360fb43b}{node\_\-page\_\-edit} (\$node)
+\item 
+\hyperlink{node_8pages_8inc_ac51e34d673a1de68491ea88ea30832b9}{node\_\-add\_\-page} ()
+\item 
+\hyperlink{group__themeable_gab493e4a21e1f9653a52edf932492f6f6}{theme\_\-node\_\-add\_\-list} (\$variables)
+\item 
+\hyperlink{node_8pages_8inc_a29be8dfd0fadad9f4399d50ab3615461}{node\_\-add} (\$type)
+\item 
+\hyperlink{node_8pages_8inc_aedf9f810594bc4c402a92cb197930bd9}{node\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__forms_ga267299500e205db099ee4e8396769d3f}{node\_\-form} (\$form, \&\$form\_\-state, \$node)
+\item 
+\hyperlink{node_8pages_8inc_a5cdd62f89098801ac87b85d8c61e7ee2}{node\_\-form\_\-delete\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{node_8pages_8inc_a71425b02d4c0dd3af239bffdd7e1649b}{node\_\-form\_\-build\_\-preview} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{node_8pages_8inc_a774d9df7be341a7c9058555e8cfb4b2b}{node\_\-preview} (\$node)
+\item 
+\hyperlink{group__themeable_ga1a03fc98e8ba251ec4b971a27b615f09}{theme\_\-node\_\-preview} (\$variables)
+\item 
+\hyperlink{node_8pages_8inc_addb125e26be73cec8769d2e729d7aa2c}{node\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{node_8pages_8inc_a09cc7aec34e871fc093e18e18b8f4889}{node\_\-form\_\-submit\_\-build\_\-node} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{node_8pages_8inc_a6394c9476a3cbc56ba6130755f99497e}{node\_\-delete\_\-confirm} (\$form, \&\$form\_\-state, \$node)
+\item 
+\hyperlink{node_8pages_8inc_a2d744b2bdca2ec49b8eaa0fc7c69e1c3}{node\_\-delete\_\-confirm\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{node_8pages_8inc_a1654ae495e6814b2f08c7a8e4aeabd68}{node\_\-revision\_\-overview} (\$node)
+\item 
+\hyperlink{group__forms_ga755acf87a0cd1c4d9d457843656c397b}{node\_\-revision\_\-revert\_\-confirm} (\$form, \$form\_\-state, \$node\_\-revision)
+\item 
+\hyperlink{node_8pages_8inc_ae22f280976210711cb3bd363caa6d956}{node\_\-revision\_\-revert\_\-confirm\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__forms_gae46b8603fe31b65546854c92d5923b68}{node\_\-revision\_\-delete\_\-confirm} (\$form, \$form\_\-state, \$node\_\-revision)
+\item 
+\hyperlink{node_8pages_8inc_ad6e0dfda7fccc07dfd93dd257e8ed99f}{node\_\-revision\_\-delete\_\-confirm\_\-submit} (\$form, \&\$form\_\-state)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Page callbacks for adding, editing, deleting, and revisions management for content. 
+
+\subsection{Function Documentation}
+\hypertarget{node_8pages_8inc_a29be8dfd0fadad9f4399d50ab3615461}{
+\index{node.pages.inc@{node.pages.inc}!node\_\-add@{node\_\-add}}
+\index{node\_\-add@{node\_\-add}!node.pages.inc@{node.pages.inc}}
+\subsubsection[{node\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-add (\$ {\em type})}}
+\label{node_8pages_8inc_a29be8dfd0fadad9f4399d50ab3615461}
+Returns a node submission form.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]The node type for the submitted node.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The themed form. 
+\end{DoxyReturn}
+\hypertarget{node_8pages_8inc_ac51e34d673a1de68491ea88ea30832b9}{
+\index{node.pages.inc@{node.pages.inc}!node\_\-add\_\-page@{node\_\-add\_\-page}}
+\index{node\_\-add\_\-page@{node\_\-add\_\-page}!node.pages.inc@{node.pages.inc}}
+\subsubsection[{node\_\-add\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-add\_\-page ()}}
+\label{node_8pages_8inc_ac51e34d673a1de68491ea88ea30832b9}
+Page callback: Displays add content links for available content types.
+
+Redirects to node/add/\mbox{[}type\mbox{]} if only one content type is available.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{node_8module_a15e8d85a7559f22b8f2c77c1d5dfac63}{node\_\-menu()} 
+\end{DoxySeeAlso}
+\hypertarget{node_8pages_8inc_a6394c9476a3cbc56ba6130755f99497e}{
+\index{node.pages.inc@{node.pages.inc}!node\_\-delete\_\-confirm@{node\_\-delete\_\-confirm}}
+\index{node\_\-delete\_\-confirm@{node\_\-delete\_\-confirm}!node.pages.inc@{node.pages.inc}}
+\subsubsection[{node\_\-delete\_\-confirm}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-delete\_\-confirm (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em node})}}
+\label{node_8pages_8inc_a6394c9476a3cbc56ba6130755f99497e}
+Form constructor for the node deletion confirmation form.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{node_8pages_8inc_a2d744b2bdca2ec49b8eaa0fc7c69e1c3}{node\_\-delete\_\-confirm\_\-submit()} 
+\end{DoxySeeAlso}
+\hypertarget{node_8pages_8inc_a2d744b2bdca2ec49b8eaa0fc7c69e1c3}{
+\index{node.pages.inc@{node.pages.inc}!node\_\-delete\_\-confirm\_\-submit@{node\_\-delete\_\-confirm\_\-submit}}
+\index{node\_\-delete\_\-confirm\_\-submit@{node\_\-delete\_\-confirm\_\-submit}!node.pages.inc@{node.pages.inc}}
+\subsubsection[{node\_\-delete\_\-confirm\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-delete\_\-confirm\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{node_8pages_8inc_a2d744b2bdca2ec49b8eaa0fc7c69e1c3}
+Executes node deletion.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{node_8pages_8inc_a6394c9476a3cbc56ba6130755f99497e}{node\_\-delete\_\-confirm()} 
+\end{DoxySeeAlso}
+\hypertarget{node_8pages_8inc_a71425b02d4c0dd3af239bffdd7e1649b}{
+\index{node.pages.inc@{node.pages.inc}!node\_\-form\_\-build\_\-preview@{node\_\-form\_\-build\_\-preview}}
+\index{node\_\-form\_\-build\_\-preview@{node\_\-form\_\-build\_\-preview}!node.pages.inc@{node.pages.inc}}
+\subsubsection[{node\_\-form\_\-build\_\-preview}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-form\_\-build\_\-preview (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{node_8pages_8inc_a71425b02d4c0dd3af239bffdd7e1649b}
+Form submission handler for \hyperlink{group__forms_ga267299500e205db099ee4e8396769d3f}{node\_\-form()}.
+
+Handles the 'Preview' button on the node form.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__forms_ga267299500e205db099ee4e8396769d3f}{node\_\-form()} 
+
+\hyperlink{node_8pages_8inc_aedf9f810594bc4c402a92cb197930bd9}{node\_\-form\_\-validate()} 
+\end{DoxySeeAlso}
+\hypertarget{node_8pages_8inc_a5cdd62f89098801ac87b85d8c61e7ee2}{
+\index{node.pages.inc@{node.pages.inc}!node\_\-form\_\-delete\_\-submit@{node\_\-form\_\-delete\_\-submit}}
+\index{node\_\-form\_\-delete\_\-submit@{node\_\-form\_\-delete\_\-submit}!node.pages.inc@{node.pages.inc}}
+\subsubsection[{node\_\-form\_\-delete\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-form\_\-delete\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{node_8pages_8inc_a5cdd62f89098801ac87b85d8c61e7ee2}
+Form submission handler for \hyperlink{group__forms_ga267299500e205db099ee4e8396769d3f}{node\_\-form()}.
+
+Handles the 'Delete' button on the node form.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__forms_ga267299500e205db099ee4e8396769d3f}{node\_\-form()} 
+
+\hyperlink{node_8pages_8inc_aedf9f810594bc4c402a92cb197930bd9}{node\_\-form\_\-validate()} 
+\end{DoxySeeAlso}
+\hypertarget{node_8pages_8inc_addb125e26be73cec8769d2e729d7aa2c}{
+\index{node.pages.inc@{node.pages.inc}!node\_\-form\_\-submit@{node\_\-form\_\-submit}}
+\index{node\_\-form\_\-submit@{node\_\-form\_\-submit}!node.pages.inc@{node.pages.inc}}
+\subsubsection[{node\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{node_8pages_8inc_addb125e26be73cec8769d2e729d7aa2c}
+Form submission handler for \hyperlink{group__forms_ga267299500e205db099ee4e8396769d3f}{node\_\-form()}.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__forms_ga267299500e205db099ee4e8396769d3f}{node\_\-form()} 
+
+\hyperlink{node_8pages_8inc_aedf9f810594bc4c402a92cb197930bd9}{node\_\-form\_\-validate()} 
+\end{DoxySeeAlso}
+\hypertarget{node_8pages_8inc_a09cc7aec34e871fc093e18e18b8f4889}{
+\index{node.pages.inc@{node.pages.inc}!node\_\-form\_\-submit\_\-build\_\-node@{node\_\-form\_\-submit\_\-build\_\-node}}
+\index{node\_\-form\_\-submit\_\-build\_\-node@{node\_\-form\_\-submit\_\-build\_\-node}!node.pages.inc@{node.pages.inc}}
+\subsubsection[{node\_\-form\_\-submit\_\-build\_\-node}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-form\_\-submit\_\-build\_\-node (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{node_8pages_8inc_a09cc7aec34e871fc093e18e18b8f4889}
+Updates the form state's node entity by processing this submission's values.
+
+This is the default builder function for the node form. It is called during the \char`\"{}Save\char`\"{} and \char`\"{}Preview\char`\"{} submit handlers to retrieve the entity to save or preview. This function can also be called by a \char`\"{}Next\char`\"{} button of a wizard to update the form state's entity with the current step's values before proceeding to the next step.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__forms_ga267299500e205db099ee4e8396769d3f}{node\_\-form()} 
+\end{DoxySeeAlso}
+\hypertarget{node_8pages_8inc_aedf9f810594bc4c402a92cb197930bd9}{
+\index{node.pages.inc@{node.pages.inc}!node\_\-form\_\-validate@{node\_\-form\_\-validate}}
+\index{node\_\-form\_\-validate@{node\_\-form\_\-validate}!node.pages.inc@{node.pages.inc}}
+\subsubsection[{node\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{node_8pages_8inc_aedf9f810594bc4c402a92cb197930bd9}
+Form validation handler for \hyperlink{group__forms_ga267299500e205db099ee4e8396769d3f}{node\_\-form()}.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__forms_ga267299500e205db099ee4e8396769d3f}{node\_\-form()} 
+
+\hyperlink{node_8pages_8inc_addb125e26be73cec8769d2e729d7aa2c}{node\_\-form\_\-submit()} 
+\end{DoxySeeAlso}
+\hypertarget{node_8pages_8inc_a553fc35bb17545341a3fcc36360fb43b}{
+\index{node.pages.inc@{node.pages.inc}!node\_\-page\_\-edit@{node\_\-page\_\-edit}}
+\index{node\_\-page\_\-edit@{node\_\-page\_\-edit}!node.pages.inc@{node.pages.inc}}
+\subsubsection[{node\_\-page\_\-edit}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-page\_\-edit (\$ {\em node})}}
+\label{node_8pages_8inc_a553fc35bb17545341a3fcc36360fb43b}
+Menu callback; presents the node editing form. \hypertarget{node_8pages_8inc_a774d9df7be341a7c9058555e8cfb4b2b}{
+\index{node.pages.inc@{node.pages.inc}!node\_\-preview@{node\_\-preview}}
+\index{node\_\-preview@{node\_\-preview}!node.pages.inc@{node.pages.inc}}
+\subsubsection[{node\_\-preview}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-preview (\$ {\em node})}}
+\label{node_8pages_8inc_a774d9df7be341a7c9058555e8cfb4b2b}
+Generates a node preview.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]The node to preview.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An HTML-\/formatted string of a node preview.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{node_8pages_8inc_a71425b02d4c0dd3af239bffdd7e1649b}{node\_\-form\_\-build\_\-preview()} 
+\end{DoxySeeAlso}
+\hypertarget{node_8pages_8inc_ad6e0dfda7fccc07dfd93dd257e8ed99f}{
+\index{node.pages.inc@{node.pages.inc}!node\_\-revision\_\-delete\_\-confirm\_\-submit@{node\_\-revision\_\-delete\_\-confirm\_\-submit}}
+\index{node\_\-revision\_\-delete\_\-confirm\_\-submit@{node\_\-revision\_\-delete\_\-confirm\_\-submit}!node.pages.inc@{node.pages.inc}}
+\subsubsection[{node\_\-revision\_\-delete\_\-confirm\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-revision\_\-delete\_\-confirm\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{node_8pages_8inc_ad6e0dfda7fccc07dfd93dd257e8ed99f}
+Form submission handler for \hyperlink{group__forms_gae46b8603fe31b65546854c92d5923b68}{node\_\-revision\_\-delete\_\-confirm()}. \hypertarget{node_8pages_8inc_a1654ae495e6814b2f08c7a8e4aeabd68}{
+\index{node.pages.inc@{node.pages.inc}!node\_\-revision\_\-overview@{node\_\-revision\_\-overview}}
+\index{node\_\-revision\_\-overview@{node\_\-revision\_\-overview}!node.pages.inc@{node.pages.inc}}
+\subsubsection[{node\_\-revision\_\-overview}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-revision\_\-overview (\$ {\em node})}}
+\label{node_8pages_8inc_a1654ae495e6814b2f08c7a8e4aeabd68}
+Generates an overview table of older revisions of a node.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]A node object.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array as expected by \hyperlink{common_8inc_a05798b44e8d6c496d4bee5cc32fa7851}{drupal\_\-render()}.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{node_8module_a15e8d85a7559f22b8f2c77c1d5dfac63}{node\_\-menu()} 
+\end{DoxySeeAlso}
+\hypertarget{node_8pages_8inc_ae22f280976210711cb3bd363caa6d956}{
+\index{node.pages.inc@{node.pages.inc}!node\_\-revision\_\-revert\_\-confirm\_\-submit@{node\_\-revision\_\-revert\_\-confirm\_\-submit}}
+\index{node\_\-revision\_\-revert\_\-confirm\_\-submit@{node\_\-revision\_\-revert\_\-confirm\_\-submit}!node.pages.inc@{node.pages.inc}}
+\subsubsection[{node\_\-revision\_\-revert\_\-confirm\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-revision\_\-revert\_\-confirm\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{node_8pages_8inc_ae22f280976210711cb3bd363caa6d956}
+Form submission handler for \hyperlink{group__forms_ga755acf87a0cd1c4d9d457843656c397b}{node\_\-revision\_\-revert\_\-confirm()}. 

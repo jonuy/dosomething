@@ -1,0 +1,408 @@
+\hypertarget{group__field__storage}{
+\section{Field Storage API}
+\label{group__field__storage}\index{Field Storage API@{Field Storage API}}
+}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__field__storage_ga45ab1b1aff3e5823611963cca1565954}{FIELD\_\-STORAGE\_\-UPDATE} 
+\item 
+enum \hyperlink{group__field__storage_ga111f1bae2368f363e9d68469e8a11fdf}{FIELD\_\-STORAGE\_\-INSERT} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__field__storage_gadc5bfde3133504e946bb0aae8babe6f3}{hook\_\-field\_\-storage\_\-info} ()
+\item 
+\hyperlink{group__field__storage_ga98873f1aaac19188d739bf6cfcae468f}{hook\_\-field\_\-storage\_\-info\_\-alter} (\&\$info)
+\item 
+\hyperlink{group__field__storage_ga72b4d22502ffc709e50de0ba4f417062}{hook\_\-field\_\-storage\_\-details} (\$field)
+\item 
+\hyperlink{group__field__storage_gae79d6c32c896d3db208c90f3ab1b1ad0}{hook\_\-field\_\-storage\_\-details\_\-alter} (\&\$details, \$field)
+\item 
+\hyperlink{group__field__storage_gac9885dcd8f5d74b5f3137d7af40cf958}{hook\_\-field\_\-storage\_\-load} (\$entity\_\-type, \$entities, \$age, \$fields, \$options)
+\item 
+\hyperlink{group__field__storage_ga5663ebcfb92828cbed84a041e9a4b0d1}{hook\_\-field\_\-storage\_\-write} (\$entity\_\-type, \$entity, \$op, \$fields)
+\item 
+\hyperlink{group__field__storage_ga64bd5adc0e4ccc1fe52fbaabcfa10274}{hook\_\-field\_\-storage\_\-delete} (\$entity\_\-type, \$entity, \$fields)
+\item 
+\hyperlink{group__field__storage_ga74ff0893fd8d05ab372bd4b65d0ffc71}{hook\_\-field\_\-storage\_\-delete\_\-revision} (\$entity\_\-type, \$entity, \$fields)
+\item 
+\hyperlink{group__field__storage_gaf46795ee1b678a72b4457b524303c794}{hook\_\-field\_\-storage\_\-query} (\$query)
+\item 
+\hyperlink{group__field__storage_gac345df04a43f63941dd69c7d18e83e00}{hook\_\-field\_\-storage\_\-create\_\-field} (\$field)
+\item 
+\hyperlink{group__field__storage_ga2102841b167285acf3f0e4e9f854440d}{hook\_\-field\_\-storage\_\-delete\_\-field} (\$field)
+\item 
+\hyperlink{group__field__storage_ga509e10cbd2900c13ab7269f1740a36f7}{hook\_\-field\_\-storage\_\-delete\_\-instance} (\$instance)
+\item 
+\hyperlink{group__field__storage_ga3ecb0f31afe3c91eb5ab58bfba4d33fb}{hook\_\-field\_\-storage\_\-pre\_\-load} (\$entity\_\-type, \$entities, \$age, \&\$skip\_\-fields, \$options)
+\item 
+\hyperlink{group__field__storage_gaa4fa274b87c435d41fc9267adedbec79}{hook\_\-field\_\-storage\_\-pre\_\-insert} (\$entity\_\-type, \$entity, \&\$skip\_\-fields)
+\item 
+\hyperlink{group__field__storage_ga3cc35769d019ea0dcfedc7ca6b084983}{hook\_\-field\_\-storage\_\-pre\_\-update} (\$entity\_\-type, \$entity, \&\$skip\_\-fields)
+\item 
+\hyperlink{group__field__storage_gaf1424a5701b90d6e40e505370ba707ce}{hook\_\-field\_\-info\_\-max\_\-weight} (\$entity\_\-type, \$bundle, \$context)
+\item 
+\hyperlink{group__field__storage_ga7a5d4e018902a0072d5de819bbc7c409}{hook\_\-field\_\-display\_\-alter} (\&\$display, \$context)
+\item 
+\hyperlink{group__field__storage_gadc76e94183dbbeebe237c70be5ca1e96}{hook\_\-field\_\-display\_\-ENTITY\_\-TYPE\_\-alter} (\&\$display, \$context)
+\item 
+\hyperlink{group__field__storage_ga351523fbe5df740a16257a35f2daa335}{hook\_\-field\_\-extra\_\-fields\_\-display\_\-alter} (\&\$displays, \$context)
+\item 
+\hyperlink{group__field__storage_gafbf6029d00ade9df41649d247531f3ba}{hook\_\-field\_\-widget\_\-properties\_\-ENTITY\_\-TYPE\_\-alter} (\&\$widget, \$context)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implement a storage engine for Field API data.
+
+The Field Attach API uses the Field Storage API to perform all \char`\"{}database
+ access\char`\"{}. Each Field Storage API hook function defines a primitive database operation such as read, write, or delete. The default field storage module, \hyperlink{field__sql__storage_8module}{field\_\-sql\_\-storage.module}, uses the local SQL database to implement these operations, but alternative field storage backends can choose to represent the data in SQL differently or use a completely different storage mechanism such as a cloud-\/based database.
+
+Each field defines which storage backend it uses. The Drupal system variable 'field\_\-storage\_\-default' identifies the storage backend used by default.
+
+See \hyperlink{group__field}{Field API } for information about the other parts of the Field API.
+
+End of \char`\"{}defgroup field\_\-attach\char`\"{}. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__field__storage_ga111f1bae2368f363e9d68469e8a11fdf}{
+\index{field\_\-storage@{field\_\-storage}!FIELD\_\-STORAGE\_\-INSERT@{FIELD\_\-STORAGE\_\-INSERT}}
+\index{FIELD\_\-STORAGE\_\-INSERT@{FIELD\_\-STORAGE\_\-INSERT}!field_storage@{field\_\-storage}}
+\subsubsection[{FIELD\_\-STORAGE\_\-INSERT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf FIELD\_\-STORAGE\_\-INSERT}}}
+\label{group__field__storage_ga111f1bae2368f363e9d68469e8a11fdf}
+Argument for an insert operation.
+
+This is used in hook\_\-field\_\-storage\_\-write when inserting a new entity. \hypertarget{group__field__storage_ga45ab1b1aff3e5823611963cca1565954}{
+\index{field\_\-storage@{field\_\-storage}!FIELD\_\-STORAGE\_\-UPDATE@{FIELD\_\-STORAGE\_\-UPDATE}}
+\index{FIELD\_\-STORAGE\_\-UPDATE@{FIELD\_\-STORAGE\_\-UPDATE}!field_storage@{field\_\-storage}}
+\subsubsection[{FIELD\_\-STORAGE\_\-UPDATE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf FIELD\_\-STORAGE\_\-UPDATE}}}
+\label{group__field__storage_ga45ab1b1aff3e5823611963cca1565954}
+Argument for an update operation.
+
+This is used in hook\_\-field\_\-storage\_\-write when updating an existing entity. 
+
+\subsection{Function Documentation}
+\hypertarget{group__field__storage_ga7a5d4e018902a0072d5de819bbc7c409}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-display\_\-alter@{hook\_\-field\_\-display\_\-alter}}
+\index{hook\_\-field\_\-display\_\-alter@{hook\_\-field\_\-display\_\-alter}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-display\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-display\_\-alter (\&\$ {\em display}, \/  \$ {\em context})}}
+\label{group__field__storage_ga7a5d4e018902a0072d5de819bbc7c409}
+Alters the display settings of a field before it gets displayed.
+
+Note that instead of \hyperlink{group__field__storage_ga7a5d4e018902a0072d5de819bbc7c409}{hook\_\-field\_\-display\_\-alter()}, which is called for all fields on all entity types, \hyperlink{group__field__storage_gadc76e94183dbbeebe237c70be5ca1e96}{hook\_\-field\_\-display\_\-ENTITY\_\-TYPE\_\-alter()} may be used to alter display settings for fields on a specific entity type only.
+
+This hook is called once per field per displayed entity. If the result of the hook involves reading from the database, it is highly recommended to statically cache the information.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$display}]The display settings that will be used to display the field values, as found in the 'display' key of \$instance definitions. \item[{\em \$context}]An associative array containing:
+\begin{DoxyItemize}
+\item entity\_\-type: The entity type; e.g., 'node' or 'user'.
+\item field: The field being rendered.
+\item instance: The instance being rendered.
+\item entity: The entity being rendered.
+\item view\_\-mode: The \hyperlink{classview}{view} mode, e.g. 'full', 'teaser'...
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__field__storage_gadc76e94183dbbeebe237c70be5ca1e96}{hook\_\-field\_\-display\_\-ENTITY\_\-TYPE\_\-alter()} 
+\end{DoxySeeAlso}
+\hypertarget{group__field__storage_gadc76e94183dbbeebe237c70be5ca1e96}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-display\_\-ENTITY\_\-TYPE\_\-alter@{hook\_\-field\_\-display\_\-ENTITY\_\-TYPE\_\-alter}}
+\index{hook\_\-field\_\-display\_\-ENTITY\_\-TYPE\_\-alter@{hook\_\-field\_\-display\_\-ENTITY\_\-TYPE\_\-alter}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-display\_\-ENTITY\_\-TYPE\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-display\_\-ENTITY\_\-TYPE\_\-alter (\&\$ {\em display}, \/  \$ {\em context})}}
+\label{group__field__storage_gadc76e94183dbbeebe237c70be5ca1e96}
+Alters the display settings of a field on a given entity type before it gets displayed.
+
+Modules can implement \hyperlink{group__field__storage_gadc76e94183dbbeebe237c70be5ca1e96}{hook\_\-field\_\-display\_\-ENTITY\_\-TYPE\_\-alter()} to alter display settings for fields on a specific entity type, rather than implementing \hyperlink{group__field__storage_ga7a5d4e018902a0072d5de819bbc7c409}{hook\_\-field\_\-display\_\-alter()}.
+
+This hook is called once per field per displayed entity. If the result of the hook involves reading from the database, it is highly recommended to statically cache the information.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$display}]The display settings that will be used to display the field values, as found in the 'display' key of \$instance definitions. \item[{\em \$context}]An associative array containing:
+\begin{DoxyItemize}
+\item entity\_\-type: The entity type; e.g., 'node' or 'user'.
+\item field: The field being rendered.
+\item instance: The instance being rendered.
+\item entity: The entity being rendered.
+\item view\_\-mode: The \hyperlink{classview}{view} mode, e.g. 'full', 'teaser'...
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__field__storage_ga7a5d4e018902a0072d5de819bbc7c409}{hook\_\-field\_\-display\_\-alter()} 
+\end{DoxySeeAlso}
+\hypertarget{group__field__storage_ga351523fbe5df740a16257a35f2daa335}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-extra\_\-fields\_\-display\_\-alter@{hook\_\-field\_\-extra\_\-fields\_\-display\_\-alter}}
+\index{hook\_\-field\_\-extra\_\-fields\_\-display\_\-alter@{hook\_\-field\_\-extra\_\-fields\_\-display\_\-alter}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-extra\_\-fields\_\-display\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-extra\_\-fields\_\-display\_\-alter (\&\$ {\em displays}, \/  \$ {\em context})}}
+\label{group__field__storage_ga351523fbe5df740a16257a35f2daa335}
+Alters the display settings of pseudo-\/fields before an entity is displayed.
+
+This hook is called once per displayed entity. If the result of the hook involves reading from the database, it is highly recommended to statically cache the information.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$displays}]An array of display settings for the pseudo-\/fields in the entity, keyed by pseudo-\/field names. \item[{\em \$context}]An associative array containing:
+\begin{DoxyItemize}
+\item entity\_\-type: The entity type; e.g., 'node' or 'user'.
+\item bundle: The bundle name.
+\item view\_\-mode: The \hyperlink{classview}{view} mode, e.g. 'full', 'teaser'... 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{group__field__storage_gaf1424a5701b90d6e40e505370ba707ce}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-info\_\-max\_\-weight@{hook\_\-field\_\-info\_\-max\_\-weight}}
+\index{hook\_\-field\_\-info\_\-max\_\-weight@{hook\_\-field\_\-info\_\-max\_\-weight}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-info\_\-max\_\-weight}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-info\_\-max\_\-weight (\$ {\em entity\_\-type}, \/  \$ {\em bundle}, \/  \$ {\em context})}}
+\label{group__field__storage_gaf1424a5701b90d6e40e505370ba707ce}
+Returns the maximum weight for the entity components handled by the module.
+
+Field API takes care of fields and 'extra\_\-fields'. This hook is intended for third-\/party modules adding other entity components (e.g. field\_\-group).
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of entity; e.g. 'node' or 'user'. \item[{\em \$bundle}]The bundle name. \item[{\em \$context}]The context for which the maximum weight is requested. Either 'form', or the name of a \hyperlink{classview}{view} mode. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The maximum weight of the entity's components, or NULL if no components were found. 
+\end{DoxyReturn}
+\hypertarget{group__field__storage_gac345df04a43f63941dd69c7d18e83e00}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-storage\_\-create\_\-field@{hook\_\-field\_\-storage\_\-create\_\-field}}
+\index{hook\_\-field\_\-storage\_\-create\_\-field@{hook\_\-field\_\-storage\_\-create\_\-field}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-storage\_\-create\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-storage\_\-create\_\-field (\$ {\em field})}}
+\label{group__field__storage_gac345df04a43f63941dd69c7d18e83e00}
+Act on creation of a new field.
+
+This hook is invoked from \hyperlink{group__field__crud_ga0f879889d2da2b5d638252d7eb027746}{field\_\-create\_\-field()} to ask the field storage module to save field information and prepare for storing field instances. If there is a problem, the field storage module should throw an exception.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field}]The field structure being created. \end{DoxyParams}
+\hypertarget{group__field__storage_ga64bd5adc0e4ccc1fe52fbaabcfa10274}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-storage\_\-delete@{hook\_\-field\_\-storage\_\-delete}}
+\index{hook\_\-field\_\-storage\_\-delete@{hook\_\-field\_\-storage\_\-delete}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-storage\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-storage\_\-delete (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em fields})}}
+\label{group__field__storage_ga64bd5adc0e4ccc1fe52fbaabcfa10274}
+Delete all field data for an entity.
+
+This hook is invoked from \hyperlink{group__field__attach_gac2e3658c9c02d0d0e71359f9ef2f207a}{field\_\-attach\_\-delete()} to ask the field storage module to delete field data.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The entity type of entity, such as 'node' or 'user'. \item[{\em \$entity}]The entity on which to operate. \item[{\em \$fields}]An array listing the fields to delete. The keys and values of the array are field IDs. \end{DoxyParams}
+\hypertarget{group__field__storage_ga2102841b167285acf3f0e4e9f854440d}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-storage\_\-delete\_\-field@{hook\_\-field\_\-storage\_\-delete\_\-field}}
+\index{hook\_\-field\_\-storage\_\-delete\_\-field@{hook\_\-field\_\-storage\_\-delete\_\-field}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-storage\_\-delete\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-storage\_\-delete\_\-field (\$ {\em field})}}
+\label{group__field__storage_ga2102841b167285acf3f0e4e9f854440d}
+Act on deletion of a field.
+
+This hook is invoked from \hyperlink{group__field__crud_gaa4792fd8f5f651b985dec7eca250f0f1}{field\_\-delete\_\-field()} to ask the field storage module to mark all information stored in the field for deletion.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field}]The field being deleted. \end{DoxyParams}
+\hypertarget{group__field__storage_ga509e10cbd2900c13ab7269f1740a36f7}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-storage\_\-delete\_\-instance@{hook\_\-field\_\-storage\_\-delete\_\-instance}}
+\index{hook\_\-field\_\-storage\_\-delete\_\-instance@{hook\_\-field\_\-storage\_\-delete\_\-instance}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-storage\_\-delete\_\-instance}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-storage\_\-delete\_\-instance (\$ {\em instance})}}
+\label{group__field__storage_ga509e10cbd2900c13ab7269f1740a36f7}
+Act on deletion of a field instance.
+
+This hook is invoked from \hyperlink{group__field__crud_ga16bf0e2a15b20b066ff84403b5f24bf5}{field\_\-delete\_\-instance()} to ask the field storage module to mark all information stored for the field instance for deletion.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$instance}]The instance being deleted. \end{DoxyParams}
+\hypertarget{group__field__storage_ga74ff0893fd8d05ab372bd4b65d0ffc71}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-storage\_\-delete\_\-revision@{hook\_\-field\_\-storage\_\-delete\_\-revision}}
+\index{hook\_\-field\_\-storage\_\-delete\_\-revision@{hook\_\-field\_\-storage\_\-delete\_\-revision}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-storage\_\-delete\_\-revision}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-storage\_\-delete\_\-revision (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em fields})}}
+\label{group__field__storage_ga74ff0893fd8d05ab372bd4b65d0ffc71}
+Delete a single revision of field data for an entity.
+
+This hook is invoked from \hyperlink{group__field__attach_gaa9eae65e6d9f1996cb27a55ba25b56e9}{field\_\-attach\_\-delete\_\-revision()} to ask the field storage module to delete field revision data.
+
+Deleting the current (most recently written) revision is not allowed as has undefined results.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The entity type of entity, such as 'node' or 'user'. \item[{\em \$entity}]The entity on which to operate. The revision to delete is indicated by the entity's revision ID property, as identified by hook\_\-fieldable\_\-info() for \$entity\_\-type. \item[{\em \$fields}]An array listing the fields to delete. The keys and values of the array are field IDs. \end{DoxyParams}
+\hypertarget{group__field__storage_ga72b4d22502ffc709e50de0ba4f417062}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-storage\_\-details@{hook\_\-field\_\-storage\_\-details}}
+\index{hook\_\-field\_\-storage\_\-details@{hook\_\-field\_\-storage\_\-details}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-storage\_\-details}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-storage\_\-details (\$ {\em field})}}
+\label{group__field__storage_ga72b4d22502ffc709e50de0ba4f417062}
+Reveal the internal details about the storage for a field.
+
+For example, an SQL storage module might return the Schema API structure for the table. A key/value storage module might return the server name, authentication credentials, and bin name.
+
+Field storage modules are not obligated to implement this hook. Modules that rely on these details must only use them for read operations.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field}]A field structure.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of details.
+\begin{DoxyItemize}
+\item The first dimension is a store type (sql, solr, etc).
+\item The second dimension indicates the age of the values in the store FIELD\_\-LOAD\_\-CURRENT or FIELD\_\-LOAD\_\-REVISION.
+\item Other dimensions are specific to the field storage module.
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__field__storage_gae79d6c32c896d3db208c90f3ab1b1ad0}{hook\_\-field\_\-storage\_\-details\_\-alter()} 
+\end{DoxySeeAlso}
+\hypertarget{group__field__storage_gae79d6c32c896d3db208c90f3ab1b1ad0}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-storage\_\-details\_\-alter@{hook\_\-field\_\-storage\_\-details\_\-alter}}
+\index{hook\_\-field\_\-storage\_\-details\_\-alter@{hook\_\-field\_\-storage\_\-details\_\-alter}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-storage\_\-details\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-storage\_\-details\_\-alter (\&\$ {\em details}, \/  \$ {\em field})}}
+\label{group__field__storage_gae79d6c32c896d3db208c90f3ab1b1ad0}
+Perform alterations on Field API storage details.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$details}]An array of storage details for fields as exposed by \hyperlink{group__field__storage_ga72b4d22502ffc709e50de0ba4f417062}{hook\_\-field\_\-storage\_\-details()} implementations. \item[{\em \$field}]A field structure.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__field__storage_ga72b4d22502ffc709e50de0ba4f417062}{hook\_\-field\_\-storage\_\-details()} 
+\end{DoxySeeAlso}
+\hypertarget{group__field__storage_gadc5bfde3133504e946bb0aae8babe6f3}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-storage\_\-info@{hook\_\-field\_\-storage\_\-info}}
+\index{hook\_\-field\_\-storage\_\-info@{hook\_\-field\_\-storage\_\-info}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-storage\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-storage\_\-info ()}}
+\label{group__field__storage_gadc5bfde3133504e946bb0aae8babe6f3}
+Expose Field API storage backends.
+
+\begin{DoxyReturn}{Returns}
+An array describing the storage backends implemented by the module. The keys are storage backend names. To avoid name clashes, storage backend names should be prefixed with the name of the module that exposes them. The values are arrays describing the storage backend, with the following key/value pairs:
+\begin{DoxyItemize}
+\item label: The human-\/readable name of the storage backend.
+\item description: A short description for the storage backend.
+\item settings: An array whose keys are the names of the settings available for the storage backend, and whose values are the default values for those settings. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{group__field__storage_ga98873f1aaac19188d739bf6cfcae468f}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-storage\_\-info\_\-alter@{hook\_\-field\_\-storage\_\-info\_\-alter}}
+\index{hook\_\-field\_\-storage\_\-info\_\-alter@{hook\_\-field\_\-storage\_\-info\_\-alter}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-storage\_\-info\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-storage\_\-info\_\-alter (\&\$ {\em info})}}
+\label{group__field__storage_ga98873f1aaac19188d739bf6cfcae468f}
+Perform alterations on Field API storage types.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$info}]Array of informations on storage types exposed by hook\_\-field\_\-field\_\-storage\_\-info() implementations. \end{DoxyParams}
+\hypertarget{group__field__storage_gac9885dcd8f5d74b5f3137d7af40cf958}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-storage\_\-load@{hook\_\-field\_\-storage\_\-load}}
+\index{hook\_\-field\_\-storage\_\-load@{hook\_\-field\_\-storage\_\-load}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-storage\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-storage\_\-load (\$ {\em entity\_\-type}, \/  \$ {\em entities}, \/  \$ {\em age}, \/  \$ {\em fields}, \/  \$ {\em options})}}
+\label{group__field__storage_gac9885dcd8f5d74b5f3137d7af40cf958}
+Load field data for a set of entities.
+
+This hook is invoked from \hyperlink{group__field__attach_ga1e92543395961c912eb293b50e991586}{field\_\-attach\_\-load()} to ask the field storage module to load field data.
+
+Modules implementing this hook should load field values and add them to objects in \$entities. Fields with no values should be added as empty arrays.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of entity, such as 'node' or 'user'. \item[{\em \$entities}]The array of entity objects to add fields to, keyed by entity ID. \item[{\em \$age}]FIELD\_\-LOAD\_\-CURRENT to load the most recent revision for all fields, or FIELD\_\-LOAD\_\-REVISION to load the version indicated by each entity. \item[{\em \$fields}]An array listing the fields to be loaded. The keys of the array are field IDs, and the values of the array are the entity IDs (or revision IDs, depending on the \$age parameter) to add each field to. \item[{\em \$options}]An associative array of additional options, with the following keys:
+\begin{DoxyItemize}
+\item deleted: If TRUE, deleted fields should be loaded as well as non-\/deleted fields. If unset or FALSE, only non-\/deleted fields should be loaded. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{group__field__storage_gaa4fa274b87c435d41fc9267adedbec79}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-storage\_\-pre\_\-insert@{hook\_\-field\_\-storage\_\-pre\_\-insert}}
+\index{hook\_\-field\_\-storage\_\-pre\_\-insert@{hook\_\-field\_\-storage\_\-pre\_\-insert}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-storage\_\-pre\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-storage\_\-pre\_\-insert (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \&\$ {\em skip\_\-fields})}}
+\label{group__field__storage_gaa4fa274b87c435d41fc9267adedbec79}
+Act before the storage backends insert field data.
+
+This hook allows modules to store data before the Field Storage API, optionally preventing the field storage module from doing so.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of \$entity; for example, 'node' or 'user'. \item[{\em \$entity}]The entity with fields to save. \item[{\em \$skip\_\-fields}]An array keyed by field IDs whose data has already been written and therefore should not be written again. The values associated with these keys are not specified. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Saved field IDs are set set as keys in \$skip\_\-fields. 
+\end{DoxyReturn}
+\hypertarget{group__field__storage_ga3ecb0f31afe3c91eb5ab58bfba4d33fb}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-storage\_\-pre\_\-load@{hook\_\-field\_\-storage\_\-pre\_\-load}}
+\index{hook\_\-field\_\-storage\_\-pre\_\-load@{hook\_\-field\_\-storage\_\-pre\_\-load}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-storage\_\-pre\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-storage\_\-pre\_\-load (\$ {\em entity\_\-type}, \/  \$ {\em entities}, \/  \$ {\em age}, \/  \&\$ {\em skip\_\-fields}, \/  \$ {\em options})}}
+\label{group__field__storage_ga3ecb0f31afe3c91eb5ab58bfba4d33fb}
+Act before the storage backends load field data.
+
+This hook allows modules to load data before the Field Storage API, optionally preventing the field storage module from doing so.
+
+This lets 3rd party modules override, mirror, shard, or otherwise store a subset of fields in a different way than the current storage engine. Possible use cases include per-\/bundle storage, per-\/combo-\/field storage, etc.
+
+Modules implementing this hook should load field values and add them to objects in \$entities. Fields with no values should be added as empty arrays. In addition, fields loaded should be added as keys to \$skip\_\-fields.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of entity, such as 'node' or 'user'. \item[{\em \$entities}]The array of entity objects to add fields to, keyed by entity ID. \item[{\em \$age}]FIELD\_\-LOAD\_\-CURRENT to load the most recent revision for all fields, or FIELD\_\-LOAD\_\-REVISION to load the version indicated by each entity. \item[{\em \$skip\_\-fields}]An array keyed by field IDs whose data has already been loaded and therefore should not be loaded again. Add a key to this array to indicate that your module has already loaded a field. \item[{\em \$options}]An associative array of additional options, with the following keys:
+\begin{DoxyItemize}
+\item field\_\-id: The field ID that should be loaded. If unset, all fields should be loaded.
+\item deleted: If TRUE, deleted fields should be loaded as well as non-\/deleted fields. If unset or FALSE, only non-\/deleted fields should be loaded. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{group__field__storage_ga3cc35769d019ea0dcfedc7ca6b084983}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-storage\_\-pre\_\-update@{hook\_\-field\_\-storage\_\-pre\_\-update}}
+\index{hook\_\-field\_\-storage\_\-pre\_\-update@{hook\_\-field\_\-storage\_\-pre\_\-update}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-storage\_\-pre\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-storage\_\-pre\_\-update (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \&\$ {\em skip\_\-fields})}}
+\label{group__field__storage_ga3cc35769d019ea0dcfedc7ca6b084983}
+Act before the storage backends update field data.
+
+This hook allows modules to store data before the Field Storage API, optionally preventing the field storage module from doing so.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of \$entity; for example, 'node' or 'user'. \item[{\em \$entity}]The entity with fields to save. \item[{\em \$skip\_\-fields}]An array keyed by field IDs whose data has already been written and therefore should not be written again. The values associated with these keys are not specified. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Saved field IDs are set set as keys in \$skip\_\-fields. 
+\end{DoxyReturn}
+\hypertarget{group__field__storage_gaf46795ee1b678a72b4457b524303c794}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-storage\_\-query@{hook\_\-field\_\-storage\_\-query}}
+\index{hook\_\-field\_\-storage\_\-query@{hook\_\-field\_\-storage\_\-query}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-storage\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-storage\_\-query (\$ {\em query})}}
+\label{group__field__storage_gaf46795ee1b678a72b4457b524303c794}
+Execute an \hyperlink{classEntityFieldQuery}{EntityFieldQuery}.
+
+This hook is called to find the entities having certain entity and field conditions and sort them in the given field order. If the field storage engine also handles property sorts and orders, it should unset those properties in the called object to signal that those have been handled.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{classEntityFieldQuery}{EntityFieldQuery}}]\$query An \hyperlink{classEntityFieldQuery}{EntityFieldQuery}.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+See \hyperlink{classEntityFieldQuery_ac90614418d7fb3a0c81134889fe1bcbd}{EntityFieldQuery::execute()} for the return values. 
+\end{DoxyReturn}
+\hypertarget{group__field__storage_ga5663ebcfb92828cbed84a041e9a4b0d1}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-storage\_\-write@{hook\_\-field\_\-storage\_\-write}}
+\index{hook\_\-field\_\-storage\_\-write@{hook\_\-field\_\-storage\_\-write}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-storage\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-storage\_\-write (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em op}, \/  \$ {\em fields})}}
+\label{group__field__storage_ga5663ebcfb92828cbed84a041e9a4b0d1}
+Write field data for an entity.
+
+This hook is invoked from \hyperlink{group__field__attach_gad7c37d577b97db5e0c182bc570ed7cf4}{field\_\-attach\_\-insert()} and \hyperlink{group__field__attach_ga8d15efdca36306ea04552bed4986e77b}{field\_\-attach\_\-update()}, to ask the field storage module to save field data.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The entity type of entity, such as 'node' or 'user'. \item[{\em \$entity}]The entity on which to operate. \item[{\em \$op}]FIELD\_\-STORAGE\_\-UPDATE when updating an existing entity, FIELD\_\-STORAGE\_\-INSERT when inserting a new entity. \item[{\em \$fields}]An array listing the fields to be written. The keys and values of the array are field IDs. \end{DoxyParams}
+\hypertarget{group__field__storage_gafbf6029d00ade9df41649d247531f3ba}{
+\index{field\_\-storage@{field\_\-storage}!hook\_\-field\_\-widget\_\-properties\_\-ENTITY\_\-TYPE\_\-alter@{hook\_\-field\_\-widget\_\-properties\_\-ENTITY\_\-TYPE\_\-alter}}
+\index{hook\_\-field\_\-widget\_\-properties\_\-ENTITY\_\-TYPE\_\-alter@{hook\_\-field\_\-widget\_\-properties\_\-ENTITY\_\-TYPE\_\-alter}!field_storage@{field\_\-storage}}
+\subsubsection[{hook\_\-field\_\-widget\_\-properties\_\-ENTITY\_\-TYPE\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-widget\_\-properties\_\-ENTITY\_\-TYPE\_\-alter (\&\$ {\em widget}, \/  \$ {\em context})}}
+\label{group__field__storage_gafbf6029d00ade9df41649d247531f3ba}
+Alters the widget properties of a field instance on a given entity type before it gets displayed.
+
+Modules can implement \hyperlink{group__field__storage_gafbf6029d00ade9df41649d247531f3ba}{hook\_\-field\_\-widget\_\-properties\_\-ENTITY\_\-TYPE\_\-alter()} to alter the widget properties for fields on a specific entity type, rather than implementing \hyperlink{group__field__widget_gaa88988bce1ffbec1f481ec7a3ba87e51}{hook\_\-field\_\-widget\_\-properties\_\-alter()}.
+
+This hook is called once per field per displayed widget entity. If the result of the hook involves reading from the database, it is highly recommended to statically cache the information.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$widget}]The instance's widget properties. \item[{\em \$context}]An associative array containing:
+\begin{DoxyItemize}
+\item entity\_\-type: The entity type; e.g., 'node' or 'user'.
+\item entity: The entity object.
+\item field: The field that the widget belongs to.
+\item instance: The instance of the field.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__field__widget_gaa88988bce1ffbec1f481ec7a3ba87e51}{hook\_\-field\_\-widget\_\-properties\_\-alter()} 
+\end{DoxySeeAlso}

@@ -1,0 +1,29 @@
+\hypertarget{entity__cache__test_8module}{
+\section{html/modules/simpletest/tests/entity\_\-cache\_\-test.module File Reference}
+\label{entity__cache__test_8module}\index{html/modules/simpletest/tests/entity\_\-cache\_\-test.module@{html/modules/simpletest/tests/entity\_\-cache\_\-test.module}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{entity__cache__test_8module_ac85e216d914488e093962a30b2350015}{entity\_\-cache\_\-test\_\-watchdog} (\$log\_\-entry)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper module for entity cache tests. 
+
+\subsection{Function Documentation}
+\hypertarget{entity__cache__test_8module_ac85e216d914488e093962a30b2350015}{
+\index{entity\_\-cache\_\-test.module@{entity\_\-cache\_\-test.module}!entity\_\-cache\_\-test\_\-watchdog@{entity\_\-cache\_\-test\_\-watchdog}}
+\index{entity\_\-cache\_\-test\_\-watchdog@{entity\_\-cache\_\-test\_\-watchdog}!entity_cache_test.module@{entity\_\-cache\_\-test.module}}
+\subsubsection[{entity\_\-cache\_\-test\_\-watchdog}]{\setlength{\rightskip}{0pt plus 5cm}entity\_\-cache\_\-test\_\-watchdog (\$ {\em log\_\-entry})}}
+\label{entity__cache__test_8module_ac85e216d914488e093962a30b2350015}
+Implements \hyperlink{group__hooks_gab2b8bf0289fad4b39485e933012f290c}{hook\_\-watchdog()}.
+
+This hook is called during \hyperlink{module_8inc_a4b2c9ea60d7c88595eaebfc4abd5f1bf}{module\_\-enable()} and since this hook implementation is invoked, we have to expect that this module and dependent modules have been properly installed already. So we expect to be able to retrieve the entity information that has been registered by the required dependency module.
+
+\begin{DoxySeeAlso}{See also}
+EnableDisableTestCase::testEntityCache() 
+
+\hyperlink{entity__cache__test__dependency_8module_aefb386090205f182e44675503615ce16}{entity\_\-cache\_\-test\_\-dependency\_\-entity\_\-info()} 
+\end{DoxySeeAlso}

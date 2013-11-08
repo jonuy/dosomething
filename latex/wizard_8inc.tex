@@ -1,0 +1,73 @@
+\hypertarget{wizard_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/includes/wizard.inc File Reference}
+\label{wizard_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/includes/wizard.inc@{html/profiles/dosomething/modules/contrib/ctools/includes/wizard.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{wizard_8inc_a0b42108018cbf45ee377a2fbbe980716}{ctools\_\-wizard\_\-multistep\_\-form} (\$form\_\-info, \$step, \&\$form\_\-state)
+\item 
+\hyperlink{wizard_8inc_a2373e7bfdb5d0ad17fcbe1802606dd46}{ctools\_\-wizard\_\-wrapper} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{wizard_8inc_a29fd9e85f0e0e87557a80b3b960a61d1}{ctools\_\-wizard\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{wizard_8inc_afc7a25ab27f2c6ec84fe095b4be44541}{ctools\_\-wizard\_\-get\_\-path} (\$form\_\-info, \$step)
+\item 
+\hyperlink{wizard_8inc_aa26a3f8dffd117ea24de566d81f34bf9}{ctools\_\-wizard\_\-defaults} (\&\$form\_\-info)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+CTools' multi-\/step form wizard tool.
+
+This tool enables the creation of multi-\/step forms that go from one form to another. The forms themselves can allow branching if they like, and there are a number of configurable options to how the wizard operates.
+
+The wizard can also be friendly to ajax forms, such as when used with the modal tool.
+
+The wizard provides callbacks throughout the process, allowing the owner to control the flow. The general flow of what happens is:
+
+Generate a form submit a form based upon button clicked, 'finished', 'next form', 'cancel' or 'return'.
+
+Each action has its own callback, so cached objects can be modifed and or turned into real objects. Each callback can make decisions about where to go next if it wishes to override the default flow. 
+
+\subsection{Function Documentation}
+\hypertarget{wizard_8inc_aa26a3f8dffd117ea24de566d81f34bf9}{
+\index{wizard.inc@{wizard.inc}!ctools\_\-wizard\_\-defaults@{ctools\_\-wizard\_\-defaults}}
+\index{ctools\_\-wizard\_\-defaults@{ctools\_\-wizard\_\-defaults}!wizard.inc@{wizard.inc}}
+\subsubsection[{ctools\_\-wizard\_\-defaults}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-wizard\_\-defaults (\&\$ {\em form\_\-info})}}
+\label{wizard_8inc_aa26a3f8dffd117ea24de566d81f34bf9}
+Set default parameters and callbacks if none are given. Callbacks follows pattern: \$form\_\-info\mbox{[}'id'\mbox{]}\_\-\$hook \$form\_\-info\mbox{[}'id'\mbox{]}\_\-\$form\_\-info\mbox{[}'forms'\mbox{]}\mbox{[}\$step\_\-key\mbox{]}\_\-\$hook \hypertarget{wizard_8inc_afc7a25ab27f2c6ec84fe095b4be44541}{
+\index{wizard.inc@{wizard.inc}!ctools\_\-wizard\_\-get\_\-path@{ctools\_\-wizard\_\-get\_\-path}}
+\index{ctools\_\-wizard\_\-get\_\-path@{ctools\_\-wizard\_\-get\_\-path}!wizard.inc@{wizard.inc}}
+\subsubsection[{ctools\_\-wizard\_\-get\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-wizard\_\-get\_\-path (\$ {\em form\_\-info}, \/  \$ {\em step})}}
+\label{wizard_8inc_afc7a25ab27f2c6ec84fe095b4be44541}
+Create a path from the form info and a given step. \hypertarget{wizard_8inc_a0b42108018cbf45ee377a2fbbe980716}{
+\index{wizard.inc@{wizard.inc}!ctools\_\-wizard\_\-multistep\_\-form@{ctools\_\-wizard\_\-multistep\_\-form}}
+\index{ctools\_\-wizard\_\-multistep\_\-form@{ctools\_\-wizard\_\-multistep\_\-form}!wizard.inc@{wizard.inc}}
+\subsubsection[{ctools\_\-wizard\_\-multistep\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-wizard\_\-multistep\_\-form (\$ {\em form\_\-info}, \/  \$ {\em step}, \/  \&\$ {\em form\_\-state})}}
+\label{wizard_8inc_a0b42108018cbf45ee377a2fbbe980716}
+Display a multi-\/step form.
+
+Aside from the addition of the \$form\_\-info which contains an array of information and configuration so the multi-\/step wizard can do its thing, this function works a lot like drupal\_\-build\_\-form.
+
+Remember that the form builders for this form will receive \&\$form, \&\$form\_\-state, NOT just \&\$form\_\-state and no additional args.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$form\_\-info}]An array of form info. \end{DoxyParams}
+\begin{Desc}
+\item[\hyperlink{todo__todo000036}{Todo}]document the array. \end{Desc}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$step}]The current form step. \item[{\em \&\$form\_\-state}]The form state array; this is a reference so the caller can get back whatever information the form(s) involved left for it. \end{DoxyParams}
+\hypertarget{wizard_8inc_a29fd9e85f0e0e87557a80b3b960a61d1}{
+\index{wizard.inc@{wizard.inc}!ctools\_\-wizard\_\-submit@{ctools\_\-wizard\_\-submit}}
+\index{ctools\_\-wizard\_\-submit@{ctools\_\-wizard\_\-submit}!wizard.inc@{wizard.inc}}
+\subsubsection[{ctools\_\-wizard\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-wizard\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{wizard_8inc_a29fd9e85f0e0e87557a80b3b960a61d1}
+On a submit, go to the next form. \hypertarget{wizard_8inc_a2373e7bfdb5d0ad17fcbe1802606dd46}{
+\index{wizard.inc@{wizard.inc}!ctools\_\-wizard\_\-wrapper@{ctools\_\-wizard\_\-wrapper}}
+\index{ctools\_\-wizard\_\-wrapper@{ctools\_\-wizard\_\-wrapper}!wizard.inc@{wizard.inc}}
+\subsubsection[{ctools\_\-wizard\_\-wrapper}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-wizard\_\-wrapper (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{wizard_8inc_a2373e7bfdb5d0ad17fcbe1802606dd46}
+Provide a wrapper around another form for adding multi-\/step information. 

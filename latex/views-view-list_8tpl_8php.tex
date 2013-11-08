@@ -1,0 +1,52 @@
+\hypertarget{views-view-list_8tpl_8php}{
+\section{html/profiles/dosomething/modules/contrib/views/theme/views-\/view-\/list.tpl.php File Reference}
+\label{views-view-list_8tpl_8php}\index{html/profiles/dosomething/modules/contrib/views/theme/views-\/view-\/list.tpl.php@{html/profiles/dosomething/modules/contrib/views/theme/views-\/view-\/list.tpl.php}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{views-view-list_8tpl_8php_ae335f3127484561ec8234df407bd1c5a}{
+print {\bfseries \$wrapper\_\-prefix}}
+\label{views-view-list_8tpl_8php_ae335f3127484561ec8234df407bd1c5a}
+
+\item 
+\hypertarget{views-view-list_8tpl_8php_ade91bc69a503a5ab88f3fdb968225b63}{
+if(!empty(\$title)) {\bfseries endif}}
+\label{views-view-list_8tpl_8php_ade91bc69a503a5ab88f3fdb968225b63}
+
+\item 
+\hypertarget{views-view-list_8tpl_8php_aeca3572012ef780fc01c828ea1fe8e8b}{
+print {\bfseries \$list\_\-type\_\-prefix}}
+\label{views-view-list_8tpl_8php_aeca3572012ef780fc01c828ea1fe8e8b}
+
+\item 
+\hypertarget{views-view-list_8tpl_8php_af50a7f2d493c1886630359887894e53e}{
+foreach(\$rows as \$id=$>$ \$row) print {\bfseries \$row}}
+\label{views-view-list_8tpl_8php_af50a7f2d493c1886630359887894e53e}
+
+\item 
+\hypertarget{views-view-list_8tpl_8php_a672d9707ef91db026c210f98cc601123}{
+{\bfseries endforeach}}
+\label{views-view-list_8tpl_8php_a672d9707ef91db026c210f98cc601123}
+
+\item 
+\hypertarget{views-view-list_8tpl_8php_aeac6912660cccae27a4a7c5339b6dfd4}{
+print {\bfseries \$list\_\-type\_\-suffix}}
+\label{views-view-list_8tpl_8php_aeac6912660cccae27a4a7c5339b6dfd4}
+
+\item 
+\hypertarget{views-view-list_8tpl_8php_a518d54474976ade540852f7fb8e0892e}{
+print {\bfseries \$wrapper\_\-suffix}}
+\label{views-view-list_8tpl_8php_a518d54474976ade540852f7fb8e0892e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Default simple \hyperlink{classview}{view} template to display a list of rows.
+
+
+\begin{DoxyItemize}
+\item \$title : The title of this group of rows. May be empty.
+\item \$options\mbox{[}'type'\mbox{]} will either be ul or ol. 
+\end{DoxyItemize}

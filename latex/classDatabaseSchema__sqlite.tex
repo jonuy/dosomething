@@ -1,0 +1,479 @@
+\hypertarget{classDatabaseSchema__sqlite}{
+\section{DatabaseSchema\_\-sqlite Class Reference}
+\label{classDatabaseSchema__sqlite}\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}}
+}
+Inheritance diagram for DatabaseSchema\_\-sqlite::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classDatabaseSchema__sqlite}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a8799172b7c34295d232f0335af6ddc08}{tableExists} (\$table)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a0ed3e65a49d4d1fc0db835ed5e49bf45}{fieldExists} (\$table, \$column)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a785f6c8f33c27551e0e590613bcd49c7}{createTableSql} (\$name, \$table)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a0acdc6880132e45933c71928ca9d0ea7}{getFieldTypeMap} ()
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a3ca3d490665805d43e6c143b90de0cf9}{renameTable} (\$table, \$new\_\-name)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_adfb4c367167a77d523c3d002af1fc7cc}{dropTable} (\$table)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_ae55ed07d32dcc323c699b490e0dc137b}{addField} (\$table, \$field, \$specification, \$keys\_\-new=array())
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a724d96040dfa30f34e5f0278525774bf}{dropField} (\$table, \$field)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_ada4db729f33e2ac55a9d886f30b7b3ad}{changeField} (\$table, \$field, \$field\_\-new, \$spec, \$keys\_\-new=array())
+\item 
+\hyperlink{classDatabaseSchema__sqlite_af6c71cb38c8cf5b8e37fe00d9c32861c}{addIndex} (\$table, \$name, \$fields)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_ac3f44b37b0b2d08a47433b5b4120aa6b}{indexExists} (\$table, \$name)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a876b9d643b03532cf0be81f6ea13ad9f}{dropIndex} (\$table, \$name)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_ad180a50d157cd3488cf81f8cc08dd80f}{addUniqueKey} (\$table, \$name, \$fields)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a93c409d48623019e1a5c1a2ff881c2c7}{dropUniqueKey} (\$table, \$name)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a00b3d8c7ebad2d9ca71d41e3caab7624}{addPrimaryKey} (\$table, \$fields)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a2fe8b467c14e7fca2f24b2af6487db4c}{dropPrimaryKey} (\$table)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a357cd81ce4c000c77592cdcea4bc8d06}{fieldSetDefault} (\$table, \$field, \$default)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a607aa7b0fef26ab3dfd08d46103ad4ce}{fieldSetNoDefault} (\$table, \$field)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a7cfb91db091c6f998be9d660ea5c63ae}{findTables} (\$table\_\-expression)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDatabaseSchema__sqlite_aee165c6e7710d1572386f3e886534843}{createIndexSql} (\$tablename, \$schema)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a134fb7e8fbeb0ff0f7c8bfa6d73f3da0}{createColumsSql} (\$tablename, \$schema)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a49b7b9de049e43a4e5df195e78b2385f}{createKeySql} (\$fields)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a3017c0fafd2330a51fe89159c16cd071}{processField} (\$field)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a2282f26222ac5d7e08e9ca7d481040fc}{createFieldSql} (\$name, \$spec)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a2da2a8f7d621393a63f1ee642462b92c}{alterTable} (\$table, \$old\_\-schema, \$new\_\-schema, array \$mapping=array())
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a55c7b8fe7ea795bd62c4c8aec8d88f3d}{introspectSchema} (\$table)
+\item 
+\hyperlink{classDatabaseSchema__sqlite_a0a3875b0867fb7e95508ca54a5958f5d}{mapKeyDefinition} (array \$key\_\-definition, array \$mapping)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDatabaseSchema__sqlite_ab0f2d6c0731bffc8a88b64cad3a60a3f}{\$defaultSchema} = 'main'
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDatabaseSchema__sqlite_ae55ed07d32dcc323c699b490e0dc137b}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!addField@{addField}}
+\index{addField@{addField}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{addField}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::addField (\$ {\em table}, \/  \$ {\em field}, \/  \$ {\em spec}, \/  \$ {\em keys\_\-new} = {\ttfamily array()})}}
+\label{classDatabaseSchema__sqlite_ae55ed07d32dcc323c699b490e0dc137b}
+Add a new field to a table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]Name of the table to be altered. \item[{\em \$field}]Name of the field to be added. \item[{\em \$spec}]The field specification array, as taken from a schema definition. The specification may also contain the key 'initial', the newly created field will be set to the value of the key in all rows. This is most useful for creating NOT NULL columns with no default value in existing tables. \item[{\em \$keys\_\-new}]Optional keys and indexes specification to be created on the table along with adding the field. The format is the same as a table specification but without the 'fields' element. If you are adding a type 'serial' field, you MUST specify at least one key or index including it in this array. See \hyperlink{group__schemaapi_ga9e0a4211eb8137e187d5f3f4fa716cea}{db\_\-change\_\-field()} for more explanation why.\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseSchemaObjectDoesNotExistException}{DatabaseSchemaObjectDoesNotExistException}}]If the specified table doesn't exist. \item[{\em \hyperlink{classDatabaseSchemaObjectExistsException}{DatabaseSchemaObjectExistsException}}]If the specified table already has a field by that name. \end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_a54800af6c4094cea196e1c66b5106c99}{DatabaseSchema}.\hypertarget{classDatabaseSchema__sqlite_af6c71cb38c8cf5b8e37fe00d9c32861c}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!addIndex@{addIndex}}
+\index{addIndex@{addIndex}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{addIndex}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::addIndex (\$ {\em table}, \/  \$ {\em name}, \/  \$ {\em fields})}}
+\label{classDatabaseSchema__sqlite_af6c71cb38c8cf5b8e37fe00d9c32861c}
+Add an index.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$name}]The name of the index. \item[{\em \$fields}]An array of field names.\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseSchemaObjectDoesNotExistException}{DatabaseSchemaObjectDoesNotExistException}}]If the specified table doesn't exist. \item[{\em \hyperlink{classDatabaseSchemaObjectExistsException}{DatabaseSchemaObjectExistsException}}]If the specified table already has an index by that name. \end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_a12f4b519abe55aaef3e4d736dbb27ab7}{DatabaseSchema}.\hypertarget{classDatabaseSchema__sqlite_a00b3d8c7ebad2d9ca71d41e3caab7624}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!addPrimaryKey@{addPrimaryKey}}
+\index{addPrimaryKey@{addPrimaryKey}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{addPrimaryKey}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::addPrimaryKey (\$ {\em table}, \/  \$ {\em fields})}}
+\label{classDatabaseSchema__sqlite_a00b3d8c7ebad2d9ca71d41e3caab7624}
+Add a primary key.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$fields}]Fields for the primary key.\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseSchemaObjectDoesNotExistException}{DatabaseSchemaObjectDoesNotExistException}}]If the specified table doesn't exist. \item[{\em \hyperlink{classDatabaseSchemaObjectExistsException}{DatabaseSchemaObjectExistsException}}]If the specified table already has a primary key. \end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_abe9490392e8408eb3847256aeb15bba0}{DatabaseSchema}.\hypertarget{classDatabaseSchema__sqlite_ad180a50d157cd3488cf81f8cc08dd80f}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!addUniqueKey@{addUniqueKey}}
+\index{addUniqueKey@{addUniqueKey}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{addUniqueKey}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::addUniqueKey (\$ {\em table}, \/  \$ {\em name}, \/  \$ {\em fields})}}
+\label{classDatabaseSchema__sqlite_ad180a50d157cd3488cf81f8cc08dd80f}
+Add a unique key.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$name}]The name of the key. \item[{\em \$fields}]An array of field names.\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseSchemaObjectDoesNotExistException}{DatabaseSchemaObjectDoesNotExistException}}]If the specified table doesn't exist. \item[{\em \hyperlink{classDatabaseSchemaObjectExistsException}{DatabaseSchemaObjectExistsException}}]If the specified table already has a key by that name. \end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_ac2e6358da1c2d38fe6a1a1d003dac8ca}{DatabaseSchema}.\hypertarget{classDatabaseSchema__sqlite_a2da2a8f7d621393a63f1ee642462b92c}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!alterTable@{alterTable}}
+\index{alterTable@{alterTable}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{alterTable}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::alterTable (\$ {\em table}, \/  \$ {\em old\_\-schema}, \/  \$ {\em new\_\-schema}, \/  array \$ {\em mapping} = {\ttfamily array()})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseSchema__sqlite_a2da2a8f7d621393a63f1ee642462b92c}
+Create a table with a new schema containing the old content.
+
+As SQLite does not support ALTER TABLE (with a few exceptions) it is necessary to create a new table and copy over the old content.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]Name of the table to be altered. \item[{\em \$old\_\-schema}]The old schema array for the table. \item[{\em \$new\_\-schema}]The new schema array for the table. \item[{\em \$mapping}]An optional mapping between the fields of the old specification and the fields of the new specification. An associative array, whose keys are the fields of the new table, and values can take two possible forms:
+\begin{DoxyItemize}
+\item a simple string, which is interpreted as the name of a field of the old table,
+\item an associative array with two keys 'expression' and 'arguments', that will be used as an expression field. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{classDatabaseSchema__sqlite_ada4db729f33e2ac55a9d886f30b7b3ad}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!changeField@{changeField}}
+\index{changeField@{changeField}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{changeField}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::changeField (\$ {\em table}, \/  \$ {\em field}, \/  \$ {\em field\_\-new}, \/  \$ {\em spec}, \/  \$ {\em keys\_\-new} = {\ttfamily array()})}}
+\label{classDatabaseSchema__sqlite_ada4db729f33e2ac55a9d886f30b7b3ad}
+Change a field definition.
+
+IMPORTANT NOTE: To maintain database portability, you have to explicitly recreate all indices and primary keys that are using the changed field.
+
+That means that you have to drop all affected keys and indexes with db\_\-drop\_\-\{primary\_\-key,unique\_\-key,index\}() before calling \hyperlink{group__schemaapi_ga9e0a4211eb8137e187d5f3f4fa716cea}{db\_\-change\_\-field()}. To recreate the keys and indices, pass the key definitions as the optional \$keys\_\-new argument directly to \hyperlink{group__schemaapi_ga9e0a4211eb8137e187d5f3f4fa716cea}{db\_\-change\_\-field()}.
+
+For example, suppose you have: 
+\begin{DoxyCode}
+ $schema['foo'] = array(
+   'fields' => array(
+     'bar' => array('type' => 'int', 'not null' => TRUE)
+   ),
+   'primary key' => array('bar')
+ );
+\end{DoxyCode}
+ and you want to change foo.bar to be type serial, leaving it as the primary key. The correct sequence is: 
+\begin{DoxyCode}
+ db_drop_primary_key('foo');
+ db_change_field('foo', 'bar', 'bar',
+   array('type' => 'serial', 'not null' => TRUE),
+   array('primary key' => array('bar')));
+\end{DoxyCode}
+
+
+The reasons for this are due to the different database engines:
+
+On PostgreSQL, changing a field definition involves adding a new field and dropping an old one which$\ast$ causes any indices, primary keys and sequences (from serial-\/type fields) that use the changed field to be dropped.
+
+On MySQL, all type 'serial' fields must be part of at least one key or index as soon as they are created. You cannot use db\_\-add\_\-\{primary\_\-key,unique\_\-key,index\}() for this purpose because the ALTER TABLE command will fail to add the column without a key or index specification. The solution is to use the optional \$keys\_\-new argument to create the key or index at the same time as field.
+
+You could use db\_\-add\_\-\{primary\_\-key,unique\_\-key,index\}() in all cases unless you are converting a field to be type serial. You can use the \$keys\_\-new argument in all cases.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]Name of the table. \item[{\em \$field}]Name of the field to change. \item[{\em \$field\_\-new}]New name for the field (set to the same as \$field if you don't want to change the name). \item[{\em \$spec}]The field specification for the new field. \item[{\em \$keys\_\-new}]Optional keys and indexes specification to be created on the table along with changing the field. The format is the same as a table specification but without the 'fields' element.\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseSchemaObjectDoesNotExistException}{DatabaseSchemaObjectDoesNotExistException}}]If the specified table or source field doesn't exist. \item[{\em \hyperlink{classDatabaseSchemaObjectExistsException}{DatabaseSchemaObjectExistsException}}]If the specified destination field already exists. \end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_ab2470d34145fdbb413dd952baf7067be}{DatabaseSchema}.\hypertarget{classDatabaseSchema__sqlite_a134fb7e8fbeb0ff0f7c8bfa6d73f3da0}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!createColumsSql@{createColumsSql}}
+\index{createColumsSql@{createColumsSql}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{createColumsSql}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::createColumsSql (\$ {\em tablename}, \/  \$ {\em schema})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseSchema__sqlite_a134fb7e8fbeb0ff0f7c8bfa6d73f3da0}
+Build the SQL expression for creating columns. \hypertarget{classDatabaseSchema__sqlite_a2282f26222ac5d7e08e9ca7d481040fc}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!createFieldSql@{createFieldSql}}
+\index{createFieldSql@{createFieldSql}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{createFieldSql}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::createFieldSql (\$ {\em name}, \/  \$ {\em spec})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseSchema__sqlite_a2282f26222ac5d7e08e9ca7d481040fc}
+Create an SQL string for a field to be used in table creation or alteration.
+
+Before passing a field out of a schema definition into this function it has to be processed by db\_\-processField().
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]Name of the field. \item[{\em \$spec}]The field specification, as per the schema data structure format. \end{DoxyParams}
+\hypertarget{classDatabaseSchema__sqlite_aee165c6e7710d1572386f3e886534843}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!createIndexSql@{createIndexSql}}
+\index{createIndexSql@{createIndexSql}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{createIndexSql}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::createIndexSql (\$ {\em tablename}, \/  \$ {\em schema})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseSchema__sqlite_aee165c6e7710d1572386f3e886534843}
+Build the SQL expression for indexes. \hypertarget{classDatabaseSchema__sqlite_a49b7b9de049e43a4e5df195e78b2385f}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!createKeySql@{createKeySql}}
+\index{createKeySql@{createKeySql}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{createKeySql}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::createKeySql (\$ {\em fields})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseSchema__sqlite_a49b7b9de049e43a4e5df195e78b2385f}
+Build the SQL expression for keys. \hypertarget{classDatabaseSchema__sqlite_a785f6c8f33c27551e0e590613bcd49c7}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!createTableSql@{createTableSql}}
+\index{createTableSql@{createTableSql}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{createTableSql}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::createTableSql (\$ {\em name}, \/  \$ {\em table})}}
+\label{classDatabaseSchema__sqlite_a785f6c8f33c27551e0e590613bcd49c7}
+Generate SQL to create a new table from a Drupal schema definition.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]The name of the table to create. \item[{\em \$table}]A Schema API table definition array. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of SQL statements to create the table. 
+\end{DoxyReturn}
+\hypertarget{classDatabaseSchema__sqlite_a724d96040dfa30f34e5f0278525774bf}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!dropField@{dropField}}
+\index{dropField@{dropField}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{dropField}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::dropField (\$ {\em table}, \/  \$ {\em field})}}
+\label{classDatabaseSchema__sqlite_a724d96040dfa30f34e5f0278525774bf}
+Drop a field.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$field}]The field to be dropped.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the field was successfully dropped, FALSE if there was no field by that name to begin with. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_a9eee3ae81e40bba206015a83450e1d56}{DatabaseSchema}.\hypertarget{classDatabaseSchema__sqlite_a876b9d643b03532cf0be81f6ea13ad9f}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!dropIndex@{dropIndex}}
+\index{dropIndex@{dropIndex}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{dropIndex}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::dropIndex (\$ {\em table}, \/  \$ {\em name})}}
+\label{classDatabaseSchema__sqlite_a876b9d643b03532cf0be81f6ea13ad9f}
+Drop an index.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$name}]The name of the index.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the index was successfully dropped, FALSE if there was no index by that name to begin with. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_adf5467aa59e462857527d8f1a5988a81}{DatabaseSchema}.\hypertarget{classDatabaseSchema__sqlite_a2fe8b467c14e7fca2f24b2af6487db4c}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!dropPrimaryKey@{dropPrimaryKey}}
+\index{dropPrimaryKey@{dropPrimaryKey}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{dropPrimaryKey}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::dropPrimaryKey (\$ {\em table})}}
+\label{classDatabaseSchema__sqlite_a2fe8b467c14e7fca2f24b2af6487db4c}
+Drop the primary key.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the primary key was successfully dropped, FALSE if there was no primary key on this table to begin with. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_a08057609758a32c13c4d1863da54b63e}{DatabaseSchema}.\hypertarget{classDatabaseSchema__sqlite_adfb4c367167a77d523c3d002af1fc7cc}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!dropTable@{dropTable}}
+\index{dropTable@{dropTable}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{dropTable}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::dropTable (\$ {\em table})}}
+\label{classDatabaseSchema__sqlite_adfb4c367167a77d523c3d002af1fc7cc}
+Drop a table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be dropped.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the table was successfully dropped, FALSE if there was no table by that name to begin with. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_a61a37e713374b88d28161e0ade1a5c78}{DatabaseSchema}.\hypertarget{classDatabaseSchema__sqlite_a93c409d48623019e1a5c1a2ff881c2c7}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!dropUniqueKey@{dropUniqueKey}}
+\index{dropUniqueKey@{dropUniqueKey}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{dropUniqueKey}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::dropUniqueKey (\$ {\em table}, \/  \$ {\em name})}}
+\label{classDatabaseSchema__sqlite_a93c409d48623019e1a5c1a2ff881c2c7}
+Drop a unique key.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$name}]The name of the key.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the key was successfully dropped, FALSE if there was no key by that name to begin with. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_a40519a35f27d1bfe0f2eb0e759df1afd}{DatabaseSchema}.\hypertarget{classDatabaseSchema__sqlite_a0ed3e65a49d4d1fc0db835ed5e49bf45}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!fieldExists@{fieldExists}}
+\index{fieldExists@{fieldExists}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{fieldExists}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::fieldExists (\$ {\em table}, \/  \$ {\em column})}}
+\label{classDatabaseSchema__sqlite_a0ed3e65a49d4d1fc0db835ed5e49bf45}
+Check if a column exists in the given table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The name of the table in drupal (no prefixing). \item[{\em \$name}]The name of the column.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the given column exists, otherwise FALSE. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_a1f657a73ea94b4fa0de1d1954350b4e7}{DatabaseSchema}.\hypertarget{classDatabaseSchema__sqlite_a357cd81ce4c000c77592cdcea4bc8d06}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!fieldSetDefault@{fieldSetDefault}}
+\index{fieldSetDefault@{fieldSetDefault}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{fieldSetDefault}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::fieldSetDefault (\$ {\em table}, \/  \$ {\em field}, \/  \$ {\em default})}}
+\label{classDatabaseSchema__sqlite_a357cd81ce4c000c77592cdcea4bc8d06}
+Set the default value for a field.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$field}]The field to be altered. \item[{\em \$default}]Default value to be set. NULL for 'default NULL'.\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseSchemaObjectDoesNotExistException}{DatabaseSchemaObjectDoesNotExistException}}]If the specified table or field doesn't exist. \end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_a0e7b9c13344b59584bf6e1ddea009592}{DatabaseSchema}.\hypertarget{classDatabaseSchema__sqlite_a607aa7b0fef26ab3dfd08d46103ad4ce}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!fieldSetNoDefault@{fieldSetNoDefault}}
+\index{fieldSetNoDefault@{fieldSetNoDefault}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{fieldSetNoDefault}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::fieldSetNoDefault (\$ {\em table}, \/  \$ {\em field})}}
+\label{classDatabaseSchema__sqlite_a607aa7b0fef26ab3dfd08d46103ad4ce}
+Set a field to have no default value.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$field}]The field to be altered.\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseSchemaObjectDoesNotExistException}{DatabaseSchemaObjectDoesNotExistException}}]If the specified table or field doesn't exist. \end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_ae4de35c98eed09a4c38d82e3f17ed8a6}{DatabaseSchema}.\hypertarget{classDatabaseSchema__sqlite_a7cfb91db091c6f998be9d660ea5c63ae}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!findTables@{findTables}}
+\index{findTables@{findTables}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{findTables}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::findTables (\$ {\em table\_\-expression})}}
+\label{classDatabaseSchema__sqlite_a7cfb91db091c6f998be9d660ea5c63ae}
+Find all tables that are like the specified base table name.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table\_\-expression}]An SQL expression, for example \char`\"{}simpletest\%\char`\"{} (without the quotes). BEWARE: this is not prefixed, the caller should take care of that.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array, both the keys and the values are the matching tables. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_aecbf376fb9d85811278ee6448e99feca}{DatabaseSchema}.\hypertarget{classDatabaseSchema__sqlite_a0acdc6880132e45933c71928ca9d0ea7}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!getFieldTypeMap@{getFieldTypeMap}}
+\index{getFieldTypeMap@{getFieldTypeMap}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{getFieldTypeMap}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::getFieldTypeMap ()}}
+\label{classDatabaseSchema__sqlite_a0acdc6880132e45933c71928ca9d0ea7}
+This maps a generic data type in combination with its data size to the engine-\/specific data type. 
+
+Reimplemented from \hyperlink{classDatabaseSchema_a82022c76c3131c4d745736d08321b788}{DatabaseSchema}.\hypertarget{classDatabaseSchema__sqlite_ac3f44b37b0b2d08a47433b5b4120aa6b}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!indexExists@{indexExists}}
+\index{indexExists@{indexExists}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{indexExists}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::indexExists (\$ {\em table}, \/  \$ {\em name})}}
+\label{classDatabaseSchema__sqlite_ac3f44b37b0b2d08a47433b5b4120aa6b}
+Checks if an index exists in the given table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The name of the table in drupal (no prefixing). \item[{\em \$name}]The name of the index in drupal (no prefixing).\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the given index exists, otherwise FALSE. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_ae343d2fd453d51d9df43d439af0a22e2}{DatabaseSchema}.\hypertarget{classDatabaseSchema__sqlite_a55c7b8fe7ea795bd62c4c8aec8d88f3d}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!introspectSchema@{introspectSchema}}
+\index{introspectSchema@{introspectSchema}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{introspectSchema}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::introspectSchema (\$ {\em table})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseSchema__sqlite_a55c7b8fe7ea795bd62c4c8aec8d88f3d}
+Find out the schema of a table.
+
+This function uses introspection methods provided by the database to create a schema array. This is useful, for example, during update when the old schema is not available.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]Name of the table. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array representing the schema, from \hyperlink{group__schemaapi_ga979670bd6bd2e34337ffc5f0810f2d71}{drupal\_\-get\_\-schema()}. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__schemaapi_ga979670bd6bd2e34337ffc5f0810f2d71}{drupal\_\-get\_\-schema()} 
+\end{DoxySeeAlso}
+\hypertarget{classDatabaseSchema__sqlite_a0a3875b0867fb7e95508ca54a5958f5d}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!mapKeyDefinition@{mapKeyDefinition}}
+\index{mapKeyDefinition@{mapKeyDefinition}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{mapKeyDefinition}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::mapKeyDefinition (array \$ {\em key\_\-definition}, \/  array \$ {\em mapping})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseSchema__sqlite_a0a3875b0867fb7e95508ca54a5958f5d}
+Utility method: rename columns in an index definition according to a new mapping.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$key\_\-definition}]The key definition. \item[{\em \$mapping}]The new mapping. \end{DoxyParams}
+\hypertarget{classDatabaseSchema__sqlite_a3017c0fafd2330a51fe89159c16cd071}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!processField@{processField}}
+\index{processField@{processField}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{processField}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::processField (\$ {\em field})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseSchema__sqlite_a3017c0fafd2330a51fe89159c16cd071}
+Set database-\/engine specific properties for a field.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field}]A field description array, as specified in the schema documentation. \end{DoxyParams}
+\hypertarget{classDatabaseSchema__sqlite_a3ca3d490665805d43e6c143b90de0cf9}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!renameTable@{renameTable}}
+\index{renameTable@{renameTable}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{renameTable}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::renameTable (\$ {\em table}, \/  \$ {\em new\_\-name})}}
+\label{classDatabaseSchema__sqlite_a3ca3d490665805d43e6c143b90de0cf9}
+Rename a table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be renamed. \item[{\em \$new\_\-name}]The new name for the table.\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseSchemaObjectDoesNotExistException}{DatabaseSchemaObjectDoesNotExistException}}]If the specified table doesn't exist. \item[{\em \hyperlink{classDatabaseSchemaObjectExistsException}{DatabaseSchemaObjectExistsException}}]If a table with the specified new name already exists. \end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_aaa0b6f32797505bdfc9ed953e10a486e}{DatabaseSchema}.\hypertarget{classDatabaseSchema__sqlite_a8799172b7c34295d232f0335af6ddc08}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!tableExists@{tableExists}}
+\index{tableExists@{tableExists}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{tableExists}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::tableExists (\$ {\em table})}}
+\label{classDatabaseSchema__sqlite_a8799172b7c34295d232f0335af6ddc08}
+Check if a table exists.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The name of the table in drupal (no prefixing).\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the given table exists, otherwise FALSE. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseSchema_acf4650f58bed6fc76d94d49a72e5d706}{DatabaseSchema}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classDatabaseSchema__sqlite_ab0f2d6c0731bffc8a88b64cad3a60a3f}{
+\index{DatabaseSchema\_\-sqlite@{DatabaseSchema\_\-sqlite}!\$defaultSchema@{\$defaultSchema}}
+\index{\$defaultSchema@{\$defaultSchema}!DatabaseSchema_sqlite@{DatabaseSchema\_\-sqlite}}
+\subsubsection[{\$defaultSchema}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseSchema\_\-sqlite::\$defaultSchema = 'main'\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseSchema__sqlite_ab0f2d6c0731bffc8a88b64cad3a60a3f}
+Override \hyperlink{classDatabaseSchema_ad1b406aa6605327a3f5c910e0fd37816}{DatabaseSchema::\$defaultSchema} 
+
+Reimplemented from \hyperlink{classDatabaseSchema_ad1b406aa6605327a3f5c910e0fd37816}{DatabaseSchema}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/database/sqlite/\hyperlink{sqlite_2schema_8inc}{schema.inc}\end{DoxyCompactItemize}

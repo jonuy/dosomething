@@ -1,0 +1,19 @@
+\hypertarget{updater_8inc}{
+\section{html/includes/updater.inc File Reference}
+\label{updater_8inc}\index{html/includes/updater.inc@{html/includes/updater.inc}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+interface \hyperlink{interfaceDrupalUpdaterInterface}{DrupalUpdaterInterface}
+\item 
+class \hyperlink{classUpdater}{Updater}
+\item 
+class \hyperlink{classUpdaterException}{UpdaterException}
+\item 
+class \hyperlink{classUpdaterFileTransferException}{UpdaterFileTransferException}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classes used for updating various files in the Drupal webroot. These classes use a \hyperlink{classFileTransfer}{FileTransfer} object to actually perform the operations. Normally, the \hyperlink{classFileTransfer}{FileTransfer} is provided when the site owner is redirected to \hyperlink{authorize_8php}{authorize.php} as part of a multistep process. 

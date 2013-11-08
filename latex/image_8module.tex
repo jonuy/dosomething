@@ -1,0 +1,612 @@
+\hypertarget{image_8module}{
+\section{html/modules/image/image.module File Reference}
+\label{image_8module}\index{html/modules/image/image.module@{html/modules/image/image.module}}
+}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{image_8module_a1b56f6b9594bbb7ab736ebcb17dfb6e0}{IMAGE\_\-STORAGE\_\-NORMAL} 
+\item 
+enum \hyperlink{image_8module_adfb4172c27b27b4689c40abb24d61ebe}{IMAGE\_\-STORAGE\_\-OVERRIDE} 
+\item 
+enum \hyperlink{image_8module_a2d98c7ee570daf265a73daaf0146e7b6}{IMAGE\_\-STORAGE\_\-DEFAULT} 
+\item 
+enum \hyperlink{image_8module_a09997555da59d60fccb6435974c29003}{IMAGE\_\-STORAGE\_\-EDITABLE} 
+\item 
+enum \hyperlink{image_8module_a5eeb2eba5576aacf25051422d667de24}{IMAGE\_\-STORAGE\_\-MODULE} 
+\item 
+enum \hyperlink{image_8module_a8a6f7ae8bb3763bbb2a257f43d110493}{IMAGE\_\-DERIVATIVE\_\-TOKEN} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{image_8module_a777780a89a7149f7ee61107cc6ec4d98}{image\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{image_8module_a6307beafb83fb2959c3db239516a9515}{image\_\-menu} ()
+\item 
+\hyperlink{image_8module_a2a6282083e95717d02ac5f79a194f3bb}{image\_\-theme} ()
+\item 
+\hyperlink{image_8module_afa11fbedc7ee323dcaa0a52b4ffab623}{image\_\-permission} ()
+\item 
+\hyperlink{image_8module_adac7f313632df6ce2a34f3cadb75130c}{image\_\-form\_\-system\_\-file\_\-system\_\-settings\_\-alter} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{image_8module_a440845d7f8654b992f5be1ed61dc7892}{image\_\-system\_\-file\_\-system\_\-settings\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{image_8module_a5c9f5b16187ee7050c9f47ffbe204a9b}{image\_\-flush\_\-caches} ()
+\item 
+\hyperlink{image_8module_a7b239d6ba682f11002687acf636474ec}{image\_\-file\_\-download} (\$uri)
+\item 
+\hyperlink{image_8module_a27cd817c67a0dea086228c8466ffe213}{image\_\-file\_\-move} (\$file, \$source)
+\item 
+\hyperlink{image_8module_a3e93edb08d958010616bc0d594558470}{image\_\-file\_\-delete} (\$file)
+\item 
+\hyperlink{image_8module_ac412aad2549572b4f2dae20d2dbd89ae}{image\_\-image\_\-default\_\-styles} ()
+\item 
+\hyperlink{image_8module_afe509faa7e910702e9f9e685b7caee54}{image\_\-image\_\-style\_\-save} (\$style)
+\item 
+\hyperlink{image_8module_a919467cd4f77608c63a9ada825782c66}{image\_\-image\_\-style\_\-delete} (\$style)
+\item 
+\hyperlink{image_8module_a61fe19440569b6eb7fd3a61f34e4ebfd}{image\_\-field\_\-delete\_\-field} (\$field)
+\item 
+\hyperlink{image_8module_ae1d89a3e614972588adf70b46109571a}{image\_\-field\_\-update\_\-field} (\$field, \$prior\_\-field, \$has\_\-data)
+\item 
+\hyperlink{image_8module_a0e5f193a0ecbe7dac74a86f0f7ea5f8b}{image\_\-field\_\-delete\_\-instance} (\$instance)
+\item 
+\hyperlink{image_8module_a3ee06b052a9a2a8372874966c24fbca7}{image\_\-field\_\-update\_\-instance} (\$instance, \$prior\_\-instance)
+\item 
+\hyperlink{image_8module_a842cc641e4d7c7f1e403d400e92ec2ce}{image\_\-path\_\-flush} (\$path)
+\item 
+\hyperlink{image_8module_a2c68836c891747cbd10954b0acf34a71}{image\_\-styles} ()
+\item 
+\hyperlink{image_8module_a0d7388bec5f42788968823a8099a64a7}{image\_\-style\_\-load} (\$name=NULL, \$isid=NULL, \$include=NULL)
+\item 
+\hyperlink{image_8module_a181d174a5071727c4d0f24103dfb2b9d}{image\_\-style\_\-save} (\$style)
+\item 
+\hyperlink{image_8module_a83cfe6d842e5f7860914cf449f1ba47c}{image\_\-style\_\-delete} (\$style, \$replacement\_\-style\_\-name= '')
+\item 
+\hyperlink{image_8module_a5bc8f07cdbaa380732137a12020877da}{image\_\-style\_\-effects} (\$style)
+\item 
+\hyperlink{image_8module_a2c69d85e23ccb050a6f01832f41d3e5a}{image\_\-style\_\-options} (\$include\_\-empty=TRUE, \$output=\hyperlink{bootstrap_8inc_a7b115778ff532867b7af4c53d39a1de2}{CHECK\_\-PLAIN})
+\item 
+\hyperlink{image_8module_a80cd974ca58e2f9aaee8a655497d2db7}{image\_\-style\_\-deliver} (\$style, \$scheme)
+\item 
+\hyperlink{image_8module_ac097959664fd40ab625104fb98090ee3}{image\_\-style\_\-create\_\-derivative} (\$style, \$source, \$destination)
+\item 
+\hyperlink{image_8module_a4cde7d67cc8cce2fa6fc3a11880947f8}{image\_\-style\_\-transform\_\-dimensions} (\$style\_\-name, array \&\$dimensions)
+\item 
+\hyperlink{image_8module_a18ea35a0e02f61a447a0851b78e1e556}{image\_\-style\_\-flush} (\$style)
+\item 
+\hyperlink{image_8module_a306cf59855e3462ac9539850d4c763eb}{image\_\-style\_\-url} (\$style\_\-name, \$path)
+\item 
+\hyperlink{image_8module_a97eaa4de01dc69378e7fc314438abe5a}{image\_\-style\_\-path\_\-token} (\$style\_\-name, \$uri)
+\item 
+\hyperlink{image_8module_a993e0bcd2c632aa81deb0da7e3baa84c}{image\_\-style\_\-path} (\$style\_\-name, \$uri)
+\item 
+\hyperlink{image_8module_a6070f04fce978050d271f4777bc10bea}{image\_\-default\_\-style\_\-save} (\$style)
+\item 
+\hyperlink{image_8module_af8b1ed6a3a3ac9e694c06f852075172e}{image\_\-default\_\-style\_\-revert} (\$style)
+\item 
+\hyperlink{image_8module_a8b4b01544349854c77bad8727d52f7d1}{image\_\-effect\_\-definitions} ()
+\item 
+\hyperlink{image_8module_a91383fe83b2a2da4c90b4221e48abf6a}{image\_\-effect\_\-definition\_\-load} (\$effect, \$style\_\-name=NULL)
+\item 
+\hyperlink{image_8module_ae0237054a43c19118bf13e609e5cff8b}{image\_\-effects} ()
+\item 
+\hyperlink{image_8module_a7ad62224057dbc7757dfa2df898926ad}{image\_\-effect\_\-load} (\$ieid, \$style\_\-name, \$include=NULL)
+\item 
+\hyperlink{image_8module_aafc029da510317ef4aaf45be74864f17}{image\_\-effect\_\-save} (\$effect)
+\item 
+\hyperlink{image_8module_abb2f70cfdb563527af8f05eb81aee202}{image\_\-effect\_\-delete} (\$effect)
+\item 
+\hyperlink{image_8module_a94560c78e1736e12dcc85fd2f16b5d3a}{image\_\-effect\_\-apply} (\$image, \$effect)
+\item 
+\hyperlink{group__themeable_ga18305f3777e7a1e9e5ffcf253b39bbd5}{theme\_\-image\_\-style} (\$variables)
+\item 
+\hyperlink{image_8module_a4d9e07c3779bccf249a6d294778b9b41}{image\_\-filter\_\-keyword} (\$value, \$current\_\-pixels, \$new\_\-pixels)
+\item 
+\hyperlink{image_8module_ac764a8c22c22632edf4633c68b6f3223}{\_\-image\_\-effect\_\-definitions\_\-sort} (\$a, \$b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Exposes global functionality for creating image styles. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{image_8module_a8a6f7ae8bb3763bbb2a257f43d110493}{
+\index{image.module@{image.module}!IMAGE\_\-DERIVATIVE\_\-TOKEN@{IMAGE\_\-DERIVATIVE\_\-TOKEN}}
+\index{IMAGE\_\-DERIVATIVE\_\-TOKEN@{IMAGE\_\-DERIVATIVE\_\-TOKEN}!image.module@{image.module}}
+\subsubsection[{IMAGE\_\-DERIVATIVE\_\-TOKEN}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf IMAGE\_\-DERIVATIVE\_\-TOKEN}}}
+\label{image_8module_a8a6f7ae8bb3763bbb2a257f43d110493}
+The name of the query parameter for image derivative tokens. \hypertarget{image_8module_a2d98c7ee570daf265a73daaf0146e7b6}{
+\index{image.module@{image.module}!IMAGE\_\-STORAGE\_\-DEFAULT@{IMAGE\_\-STORAGE\_\-DEFAULT}}
+\index{IMAGE\_\-STORAGE\_\-DEFAULT@{IMAGE\_\-STORAGE\_\-DEFAULT}!image.module@{image.module}}
+\subsubsection[{IMAGE\_\-STORAGE\_\-DEFAULT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf IMAGE\_\-STORAGE\_\-DEFAULT}}}
+\label{image_8module_a2d98c7ee570daf265a73daaf0146e7b6}
+Image style constant for module-\/defined presets in code. \hypertarget{image_8module_a09997555da59d60fccb6435974c29003}{
+\index{image.module@{image.module}!IMAGE\_\-STORAGE\_\-EDITABLE@{IMAGE\_\-STORAGE\_\-EDITABLE}}
+\index{IMAGE\_\-STORAGE\_\-EDITABLE@{IMAGE\_\-STORAGE\_\-EDITABLE}!image.module@{image.module}}
+\subsubsection[{IMAGE\_\-STORAGE\_\-EDITABLE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf IMAGE\_\-STORAGE\_\-EDITABLE}}}
+\label{image_8module_a09997555da59d60fccb6435974c29003}
+Image style constant to represent an editable preset. \hypertarget{image_8module_a5eeb2eba5576aacf25051422d667de24}{
+\index{image.module@{image.module}!IMAGE\_\-STORAGE\_\-MODULE@{IMAGE\_\-STORAGE\_\-MODULE}}
+\index{IMAGE\_\-STORAGE\_\-MODULE@{IMAGE\_\-STORAGE\_\-MODULE}!image.module@{image.module}}
+\subsubsection[{IMAGE\_\-STORAGE\_\-MODULE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf IMAGE\_\-STORAGE\_\-MODULE}}}
+\label{image_8module_a5eeb2eba5576aacf25051422d667de24}
+Image style constant to represent any module-\/based preset. \hypertarget{image_8module_a1b56f6b9594bbb7ab736ebcb17dfb6e0}{
+\index{image.module@{image.module}!IMAGE\_\-STORAGE\_\-NORMAL@{IMAGE\_\-STORAGE\_\-NORMAL}}
+\index{IMAGE\_\-STORAGE\_\-NORMAL@{IMAGE\_\-STORAGE\_\-NORMAL}!image.module@{image.module}}
+\subsubsection[{IMAGE\_\-STORAGE\_\-NORMAL}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf IMAGE\_\-STORAGE\_\-NORMAL}}}
+\label{image_8module_a1b56f6b9594bbb7ab736ebcb17dfb6e0}
+Image style constant for user presets in the database. \hypertarget{image_8module_adfb4172c27b27b4689c40abb24d61ebe}{
+\index{image.module@{image.module}!IMAGE\_\-STORAGE\_\-OVERRIDE@{IMAGE\_\-STORAGE\_\-OVERRIDE}}
+\index{IMAGE\_\-STORAGE\_\-OVERRIDE@{IMAGE\_\-STORAGE\_\-OVERRIDE}!image.module@{image.module}}
+\subsubsection[{IMAGE\_\-STORAGE\_\-OVERRIDE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf IMAGE\_\-STORAGE\_\-OVERRIDE}}}
+\label{image_8module_adfb4172c27b27b4689c40abb24d61ebe}
+Image style constant for user presets that override module-\/defined presets. 
+
+\subsection{Function Documentation}
+\hypertarget{image_8module_ac764a8c22c22632edf4633c68b6f3223}{
+\index{image.module@{image.module}!\_\-image\_\-effect\_\-definitions\_\-sort@{\_\-image\_\-effect\_\-definitions\_\-sort}}
+\index{\_\-image\_\-effect\_\-definitions\_\-sort@{\_\-image\_\-effect\_\-definitions\_\-sort}!image.module@{image.module}}
+\subsubsection[{\_\-image\_\-effect\_\-definitions\_\-sort}]{\setlength{\rightskip}{0pt plus 5cm}\_\-image\_\-effect\_\-definitions\_\-sort (\$ {\em a}, \/  \$ {\em b})}}
+\label{image_8module_ac764a8c22c22632edf4633c68b6f3223}
+Internal function for sorting image effect definitions through uasort().
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{image_8module_a8b4b01544349854c77bad8727d52f7d1}{image\_\-effect\_\-definitions()} 
+\end{DoxySeeAlso}
+\hypertarget{image_8module_af8b1ed6a3a3ac9e694c06f852075172e}{
+\index{image.module@{image.module}!image\_\-default\_\-style\_\-revert@{image\_\-default\_\-style\_\-revert}}
+\index{image\_\-default\_\-style\_\-revert@{image\_\-default\_\-style\_\-revert}!image.module@{image.module}}
+\subsubsection[{image\_\-default\_\-style\_\-revert}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-default\_\-style\_\-revert (\$ {\em style})}}
+\label{image_8module_af8b1ed6a3a3ac9e694c06f852075172e}
+Reverts the changes made by users to a default image style.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em style}]An image style array. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean TRUE if the operation succeeded. 
+\end{DoxyReturn}
+\hypertarget{image_8module_a6070f04fce978050d271f4777bc10bea}{
+\index{image.module@{image.module}!image\_\-default\_\-style\_\-save@{image\_\-default\_\-style\_\-save}}
+\index{image\_\-default\_\-style\_\-save@{image\_\-default\_\-style\_\-save}!image.module@{image.module}}
+\subsubsection[{image\_\-default\_\-style\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-default\_\-style\_\-save (\$ {\em style})}}
+\label{image_8module_a6070f04fce978050d271f4777bc10bea}
+Saves a default image style to the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em style}]An image style array provided by a module.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An image style array. The returned style array will include the new 'isid' assigned to the style. 
+\end{DoxyReturn}
+\hypertarget{image_8module_a94560c78e1736e12dcc85fd2f16b5d3a}{
+\index{image.module@{image.module}!image\_\-effect\_\-apply@{image\_\-effect\_\-apply}}
+\index{image\_\-effect\_\-apply@{image\_\-effect\_\-apply}!image.module@{image.module}}
+\subsubsection[{image\_\-effect\_\-apply}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-effect\_\-apply (\$ {\em image}, \/  \$ {\em effect})}}
+\label{image_8module_a94560c78e1736e12dcc85fd2f16b5d3a}
+Applies an image effect to the image object.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object returned by \hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()}. \item[{\em \$effect}]An image effect array.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success. FALSE if unable to perform the image effect on the image. 
+\end{DoxyReturn}
+\hypertarget{image_8module_a91383fe83b2a2da4c90b4221e48abf6a}{
+\index{image.module@{image.module}!image\_\-effect\_\-definition\_\-load@{image\_\-effect\_\-definition\_\-load}}
+\index{image\_\-effect\_\-definition\_\-load@{image\_\-effect\_\-definition\_\-load}!image.module@{image.module}}
+\subsubsection[{image\_\-effect\_\-definition\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-effect\_\-definition\_\-load (\$ {\em effect}, \/  \$ {\em style\_\-name} = {\ttfamily NULL})}}
+\label{image_8module_a91383fe83b2a2da4c90b4221e48abf6a}
+Loads the definition for an image effect.
+
+The effect definition is a set of core properties for an image effect, not containing any user-\/settings. The definition defines various functions to call when configuring or executing an image effect. This loader is mostly for internal use within \hyperlink{image_8module}{image.module}. Use \hyperlink{image_8module_a7ad62224057dbc7757dfa2df898926ad}{image\_\-effect\_\-load()} or \hyperlink{image_8module_a0d7388bec5f42788968823a8099a64a7}{image\_\-style\_\-load()} to get image effects that contain configuration.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$effect}]The name of the effect definition to load. \item[{\em \$style}]An image style array to which this effect will be added.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array containing the image effect definition with the following keys:
+\begin{DoxyItemize}
+\item \char`\"{}effect\char`\"{}: The unique name for the effect being performed. Usually prefixed with the name of the module providing the effect.
+\item \char`\"{}module\char`\"{}: The module providing the effect.
+\item \char`\"{}help\char`\"{}: A description of the effect.
+\item \char`\"{}function\char`\"{}: The name of the function that will execute the effect.
+\item \char`\"{}form\char`\"{}: (optional) The name of a function to configure the effect.
+\item \char`\"{}summary\char`\"{}: (optional) The name of a theme function that will display a one-\/line summary of the effect. Does not include the \char`\"{}theme\_\-\char`\"{} prefix. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{image_8module_a8b4b01544349854c77bad8727d52f7d1}{
+\index{image.module@{image.module}!image\_\-effect\_\-definitions@{image\_\-effect\_\-definitions}}
+\index{image\_\-effect\_\-definitions@{image\_\-effect\_\-definitions}!image.module@{image.module}}
+\subsubsection[{image\_\-effect\_\-definitions}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-effect\_\-definitions ()}}
+\label{image_8module_a8b4b01544349854c77bad8727d52f7d1}
+Returns a set of image effects.
+
+These image effects are exposed by modules implementing \hyperlink{group__hooks_ga9681816aeb01a316e98457b40a01f8ed}{hook\_\-image\_\-effect\_\-info()}.
+
+\begin{DoxyReturn}{Returns}
+An array of image effects to be used when transforming images. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__hooks_ga9681816aeb01a316e98457b40a01f8ed}{hook\_\-image\_\-effect\_\-info()} 
+
+\hyperlink{image_8module_a91383fe83b2a2da4c90b4221e48abf6a}{image\_\-effect\_\-definition\_\-load()} 
+\end{DoxySeeAlso}
+\hypertarget{image_8module_abb2f70cfdb563527af8f05eb81aee202}{
+\index{image.module@{image.module}!image\_\-effect\_\-delete@{image\_\-effect\_\-delete}}
+\index{image\_\-effect\_\-delete@{image\_\-effect\_\-delete}!image.module@{image.module}}
+\subsubsection[{image\_\-effect\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-effect\_\-delete (\$ {\em effect})}}
+\label{image_8module_abb2f70cfdb563527af8f05eb81aee202}
+Deletes an image effect.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$effect}]An image effect array. \end{DoxyParams}
+\hypertarget{image_8module_a7ad62224057dbc7757dfa2df898926ad}{
+\index{image.module@{image.module}!image\_\-effect\_\-load@{image\_\-effect\_\-load}}
+\index{image\_\-effect\_\-load@{image\_\-effect\_\-load}!image.module@{image.module}}
+\subsubsection[{image\_\-effect\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-effect\_\-load (\$ {\em ieid}, \/  \$ {\em style\_\-name}, \/  \$ {\em include} = {\ttfamily NULL})}}
+\label{image_8module_a7ad62224057dbc7757dfa2df898926ad}
+Loads a single image effect.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$ieid}]The image effect ID. \item[{\em \$style\_\-name}]The image style name. \item[{\em \$include}]If set, this loader will restrict to a specific type of image style, may be one of the defined Image style storage constants.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An image effect array, consisting of the following keys:
+\begin{DoxyItemize}
+\item \char`\"{}ieid\char`\"{}: The unique image effect ID.
+\item \char`\"{}isid\char`\"{}: The unique image style ID that contains this image effect.
+\item \char`\"{}weight\char`\"{}: The weight of this image effect within the image style.
+\item \char`\"{}name\char`\"{}: The name of the effect definition that powers this image effect.
+\item \char`\"{}data\char`\"{}: An array of configuration options for this image effect. Besides these keys, the entirety of the image definition is merged into the image effect array. Returns FALSE if the specified effect cannot be found. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{image_8module_a0d7388bec5f42788968823a8099a64a7}{image\_\-style\_\-load()} 
+
+\hyperlink{image_8module_a91383fe83b2a2da4c90b4221e48abf6a}{image\_\-effect\_\-definition\_\-load()} 
+\end{DoxySeeAlso}
+\hypertarget{image_8module_aafc029da510317ef4aaf45be74864f17}{
+\index{image.module@{image.module}!image\_\-effect\_\-save@{image\_\-effect\_\-save}}
+\index{image\_\-effect\_\-save@{image\_\-effect\_\-save}!image.module@{image.module}}
+\subsubsection[{image\_\-effect\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-effect\_\-save (\$ {\em effect})}}
+\label{image_8module_aafc029da510317ef4aaf45be74864f17}
+Saves an image effect.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$effect}]An image effect array.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An image effect array. In the case of a new effect, 'ieid' will be set. 
+\end{DoxyReturn}
+\hypertarget{image_8module_ae0237054a43c19118bf13e609e5cff8b}{
+\index{image.module@{image.module}!image\_\-effects@{image\_\-effects}}
+\index{image\_\-effects@{image\_\-effects}!image.module@{image.module}}
+\subsubsection[{image\_\-effects}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-effects ()}}
+\label{image_8module_ae0237054a43c19118bf13e609e5cff8b}
+Loads all image effects from the database.
+
+\begin{DoxyReturn}{Returns}
+An array of all image effects. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{image_8module_a7ad62224057dbc7757dfa2df898926ad}{image\_\-effect\_\-load()} 
+\end{DoxySeeAlso}
+\hypertarget{image_8module_a61fe19440569b6eb7fd3a61f34e4ebfd}{
+\index{image.module@{image.module}!image\_\-field\_\-delete\_\-field@{image\_\-field\_\-delete\_\-field}}
+\index{image\_\-field\_\-delete\_\-field@{image\_\-field\_\-delete\_\-field}!image.module@{image.module}}
+\subsubsection[{image\_\-field\_\-delete\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-field\_\-delete\_\-field (\$ {\em field})}}
+\label{image_8module_a61fe19440569b6eb7fd3a61f34e4ebfd}
+Implements \hyperlink{group__field__crud_gacc586bd79943816012827d165b668aab}{hook\_\-field\_\-delete\_\-field()}. \hypertarget{image_8module_a0e5f193a0ecbe7dac74a86f0f7ea5f8b}{
+\index{image.module@{image.module}!image\_\-field\_\-delete\_\-instance@{image\_\-field\_\-delete\_\-instance}}
+\index{image\_\-field\_\-delete\_\-instance@{image\_\-field\_\-delete\_\-instance}!image.module@{image.module}}
+\subsubsection[{image\_\-field\_\-delete\_\-instance}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-field\_\-delete\_\-instance (\$ {\em instance})}}
+\label{image_8module_a0e5f193a0ecbe7dac74a86f0f7ea5f8b}
+Implements \hyperlink{group__field__crud_gae351ac9408b7c2e8bfefd9ebca5ab7f5}{hook\_\-field\_\-delete\_\-instance()}. \hypertarget{image_8module_ae1d89a3e614972588adf70b46109571a}{
+\index{image.module@{image.module}!image\_\-field\_\-update\_\-field@{image\_\-field\_\-update\_\-field}}
+\index{image\_\-field\_\-update\_\-field@{image\_\-field\_\-update\_\-field}!image.module@{image.module}}
+\subsubsection[{image\_\-field\_\-update\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-field\_\-update\_\-field (\$ {\em field}, \/  \$ {\em prior\_\-field}, \/  \$ {\em has\_\-data})}}
+\label{image_8module_ae1d89a3e614972588adf70b46109571a}
+Implements \hyperlink{group__field__crud_ga4f06c14e6fb60ec1903c005ddbb4ee83}{hook\_\-field\_\-update\_\-field()}. \hypertarget{image_8module_a3ee06b052a9a2a8372874966c24fbca7}{
+\index{image.module@{image.module}!image\_\-field\_\-update\_\-instance@{image\_\-field\_\-update\_\-instance}}
+\index{image\_\-field\_\-update\_\-instance@{image\_\-field\_\-update\_\-instance}!image.module@{image.module}}
+\subsubsection[{image\_\-field\_\-update\_\-instance}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-field\_\-update\_\-instance (\$ {\em instance}, \/  \$ {\em prior\_\-instance})}}
+\label{image_8module_a3ee06b052a9a2a8372874966c24fbca7}
+Implements \hyperlink{group__field__crud_gadac9cbd13f55714dbf8fc2a98227f6e3}{hook\_\-field\_\-update\_\-instance()}. \hypertarget{image_8module_a3e93edb08d958010616bc0d594558470}{
+\index{image.module@{image.module}!image\_\-file\_\-delete@{image\_\-file\_\-delete}}
+\index{image\_\-file\_\-delete@{image\_\-file\_\-delete}!image.module@{image.module}}
+\subsubsection[{image\_\-file\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-file\_\-delete (\$ {\em file})}}
+\label{image_8module_a3e93edb08d958010616bc0d594558470}
+Implements \hyperlink{group__hooks_gafa88683ad014451b3fbc9ca9bb80afdd}{hook\_\-file\_\-delete()}. \hypertarget{image_8module_a7b239d6ba682f11002687acf636474ec}{
+\index{image.module@{image.module}!image\_\-file\_\-download@{image\_\-file\_\-download}}
+\index{image\_\-file\_\-download@{image\_\-file\_\-download}!image.module@{image.module}}
+\subsubsection[{image\_\-file\_\-download}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-file\_\-download (\$ {\em uri})}}
+\label{image_8module_a7b239d6ba682f11002687acf636474ec}
+Implements \hyperlink{group__hooks_gab73f0e658d6630220ba7836ccd011ecc}{hook\_\-file\_\-download()}.
+
+Control the access to files underneath the styles directory. \hypertarget{image_8module_a27cd817c67a0dea086228c8466ffe213}{
+\index{image.module@{image.module}!image\_\-file\_\-move@{image\_\-file\_\-move}}
+\index{image\_\-file\_\-move@{image\_\-file\_\-move}!image.module@{image.module}}
+\subsubsection[{image\_\-file\_\-move}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-file\_\-move (\$ {\em file}, \/  \$ {\em source})}}
+\label{image_8module_a27cd817c67a0dea086228c8466ffe213}
+Implements \hyperlink{group__hooks_ga7053514a7a923b43960b31cacfa9ce95}{hook\_\-file\_\-move()}. \hypertarget{image_8module_a4d9e07c3779bccf249a6d294778b9b41}{
+\index{image.module@{image.module}!image\_\-filter\_\-keyword@{image\_\-filter\_\-keyword}}
+\index{image\_\-filter\_\-keyword@{image\_\-filter\_\-keyword}!image.module@{image.module}}
+\subsubsection[{image\_\-filter\_\-keyword}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-filter\_\-keyword (\$ {\em value}, \/  \$ {\em current\_\-pixels}, \/  \$ {\em new\_\-pixels})}}
+\label{image_8module_a4d9e07c3779bccf249a6d294778b9b41}
+Accepts a keyword (center, top, left, etc) and returns it as a pixel offset.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$value}]\item[{\em \$current\_\-pixels}]\item[{\em \$new\_\-pixels}]\end{DoxyParams}
+\hypertarget{image_8module_a5c9f5b16187ee7050c9f47ffbe204a9b}{
+\index{image.module@{image.module}!image\_\-flush\_\-caches@{image\_\-flush\_\-caches}}
+\index{image\_\-flush\_\-caches@{image\_\-flush\_\-caches}!image.module@{image.module}}
+\subsubsection[{image\_\-flush\_\-caches}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-flush\_\-caches ()}}
+\label{image_8module_a5c9f5b16187ee7050c9f47ffbe204a9b}
+Implements \hyperlink{group__hooks_ga66531e6e564157b7ca45ed07549c9b97}{hook\_\-flush\_\-caches()}. \hypertarget{image_8module_adac7f313632df6ce2a34f3cadb75130c}{
+\index{image.module@{image.module}!image\_\-form\_\-system\_\-file\_\-system\_\-settings\_\-alter@{image\_\-form\_\-system\_\-file\_\-system\_\-settings\_\-alter}}
+\index{image\_\-form\_\-system\_\-file\_\-system\_\-settings\_\-alter@{image\_\-form\_\-system\_\-file\_\-system\_\-settings\_\-alter}!image.module@{image.module}}
+\subsubsection[{image\_\-form\_\-system\_\-file\_\-system\_\-settings\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-form\_\-system\_\-file\_\-system\_\-settings\_\-alter (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{image_8module_adac7f313632df6ce2a34f3cadb75130c}
+Implements \hyperlink{group__hooks_ga8d4a4089551493d55911bd5c4f218264}{hook\_\-form\_\-FORM\_\-ID\_\-alter()}. \hypertarget{image_8module_a777780a89a7149f7ee61107cc6ec4d98}{
+\index{image.module@{image.module}!image\_\-help@{image\_\-help}}
+\index{image\_\-help@{image\_\-help}!image.module@{image.module}}
+\subsubsection[{image\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{image_8module_a777780a89a7149f7ee61107cc6ec4d98}
+Implements \hyperlink{group__hooks_ga5589c2714a782738e8851c4c90231f0e}{hook\_\-help()}. \hypertarget{image_8module_ac412aad2549572b4f2dae20d2dbd89ae}{
+\index{image.module@{image.module}!image\_\-image\_\-default\_\-styles@{image\_\-image\_\-default\_\-styles}}
+\index{image\_\-image\_\-default\_\-styles@{image\_\-image\_\-default\_\-styles}!image.module@{image.module}}
+\subsubsection[{image\_\-image\_\-default\_\-styles}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-image\_\-default\_\-styles ()}}
+\label{image_8module_ac412aad2549572b4f2dae20d2dbd89ae}
+Implements \hyperlink{group__hooks_ga856096251574b0df42813f6aff0d62ab}{hook\_\-image\_\-default\_\-styles()}. \hypertarget{image_8module_a919467cd4f77608c63a9ada825782c66}{
+\index{image.module@{image.module}!image\_\-image\_\-style\_\-delete@{image\_\-image\_\-style\_\-delete}}
+\index{image\_\-image\_\-style\_\-delete@{image\_\-image\_\-style\_\-delete}!image.module@{image.module}}
+\subsubsection[{image\_\-image\_\-style\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-image\_\-style\_\-delete (\$ {\em style})}}
+\label{image_8module_a919467cd4f77608c63a9ada825782c66}
+Implements \hyperlink{group__hooks_ga376a3d4a9427d6a8dad73d68bdd140dc}{hook\_\-image\_\-style\_\-delete()}. \hypertarget{image_8module_afe509faa7e910702e9f9e685b7caee54}{
+\index{image.module@{image.module}!image\_\-image\_\-style\_\-save@{image\_\-image\_\-style\_\-save}}
+\index{image\_\-image\_\-style\_\-save@{image\_\-image\_\-style\_\-save}!image.module@{image.module}}
+\subsubsection[{image\_\-image\_\-style\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-image\_\-style\_\-save (\$ {\em style})}}
+\label{image_8module_afe509faa7e910702e9f9e685b7caee54}
+Implements \hyperlink{group__hooks_gad403dde0a7859e160772ae696ab35cea}{hook\_\-image\_\-style\_\-save()}. \hypertarget{image_8module_a6307beafb83fb2959c3db239516a9515}{
+\index{image.module@{image.module}!image\_\-menu@{image\_\-menu}}
+\index{image\_\-menu@{image\_\-menu}!image.module@{image.module}}
+\subsubsection[{image\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-menu ()}}
+\label{image_8module_a6307beafb83fb2959c3db239516a9515}
+Implements \hyperlink{group__hooks_ga5c95244fea59b25666e409759e133ded}{hook\_\-menu()}. \hypertarget{image_8module_a842cc641e4d7c7f1e403d400e92ec2ce}{
+\index{image.module@{image.module}!image\_\-path\_\-flush@{image\_\-path\_\-flush}}
+\index{image\_\-path\_\-flush@{image\_\-path\_\-flush}!image.module@{image.module}}
+\subsubsection[{image\_\-path\_\-flush}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-path\_\-flush (\$ {\em path})}}
+\label{image_8module_a842cc641e4d7c7f1e403d400e92ec2ce}
+Clears cached versions of a specific file in all styles.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$path}]The Drupal file path to the original image. \end{DoxyParams}
+\hypertarget{image_8module_afa11fbedc7ee323dcaa0a52b4ffab623}{
+\index{image.module@{image.module}!image\_\-permission@{image\_\-permission}}
+\index{image\_\-permission@{image\_\-permission}!image.module@{image.module}}
+\subsubsection[{image\_\-permission}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-permission ()}}
+\label{image_8module_afa11fbedc7ee323dcaa0a52b4ffab623}
+Implements \hyperlink{group__hooks_ga2b22b45f4925f2478412477bae329713}{hook\_\-permission()}. \hypertarget{image_8module_ac097959664fd40ab625104fb98090ee3}{
+\index{image.module@{image.module}!image\_\-style\_\-create\_\-derivative@{image\_\-style\_\-create\_\-derivative}}
+\index{image\_\-style\_\-create\_\-derivative@{image\_\-style\_\-create\_\-derivative}!image.module@{image.module}}
+\subsubsection[{image\_\-style\_\-create\_\-derivative}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-style\_\-create\_\-derivative (\$ {\em style}, \/  \$ {\em source}, \/  \$ {\em destination})}}
+\label{image_8module_ac097959664fd40ab625104fb98090ee3}
+Creates a new image derivative based on an image style.
+
+Generates an image derivative by creating the destination folder (if it does not already exist), applying all image effects defined in \$style\mbox{[}'effects'\mbox{]}, and saving a cached version of the resulting image.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$style}]An image style array. \item[{\em \$source}]Path of the source file. \item[{\em \$destination}]Path or URI of the destination file.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if an image derivative was generated, or FALSE if the image derivative could not be generated.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{image_8module_a0d7388bec5f42788968823a8099a64a7}{image\_\-style\_\-load()} 
+\end{DoxySeeAlso}
+\hypertarget{image_8module_a83cfe6d842e5f7860914cf449f1ba47c}{
+\index{image.module@{image.module}!image\_\-style\_\-delete@{image\_\-style\_\-delete}}
+\index{image\_\-style\_\-delete@{image\_\-style\_\-delete}!image.module@{image.module}}
+\subsubsection[{image\_\-style\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-style\_\-delete (\$ {\em style}, \/  \$ {\em replacement\_\-style\_\-name} = {\ttfamily ''})}}
+\label{image_8module_a83cfe6d842e5f7860914cf449f1ba47c}
+Deletes an image style.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$style}]An image style array. \item[{\em \$replacement\_\-style\_\-name}](optional) When deleting a style, specify a replacement style name so that existing settings (if any) may be converted to a new style.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success. 
+\end{DoxyReturn}
+\hypertarget{image_8module_a80cd974ca58e2f9aaee8a655497d2db7}{
+\index{image.module@{image.module}!image\_\-style\_\-deliver@{image\_\-style\_\-deliver}}
+\index{image\_\-style\_\-deliver@{image\_\-style\_\-deliver}!image.module@{image.module}}
+\subsubsection[{image\_\-style\_\-deliver}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-style\_\-deliver (\$ {\em style}, \/  \$ {\em scheme})}}
+\label{image_8module_a80cd974ca58e2f9aaee8a655497d2db7}
+Page callback: Generates a derivative, given a style and image path.
+
+After generating an image, transfer it to the requesting agent.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$style}]The image style \end{DoxyParams}
+\hypertarget{image_8module_a5bc8f07cdbaa380732137a12020877da}{
+\index{image.module@{image.module}!image\_\-style\_\-effects@{image\_\-style\_\-effects}}
+\index{image\_\-style\_\-effects@{image\_\-style\_\-effects}!image.module@{image.module}}
+\subsubsection[{image\_\-style\_\-effects}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-style\_\-effects (\$ {\em style})}}
+\label{image_8module_a5bc8f07cdbaa380732137a12020877da}
+Loads all the effects for an image style.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$style An image style array containing:
+\begin{DoxyItemize}
+\item isid: The unique image style ID that contains this image effect.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of image effects associated with specified image style in the format array('isid' =$>$ array()), or an empty array if the specified style has no effects. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{image_8module_ae0237054a43c19118bf13e609e5cff8b}{image\_\-effects()} 
+\end{DoxySeeAlso}
+\hypertarget{image_8module_a18ea35a0e02f61a447a0851b78e1e556}{
+\index{image.module@{image.module}!image\_\-style\_\-flush@{image\_\-style\_\-flush}}
+\index{image\_\-style\_\-flush@{image\_\-style\_\-flush}!image.module@{image.module}}
+\subsubsection[{image\_\-style\_\-flush}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-style\_\-flush (\$ {\em style})}}
+\label{image_8module_a18ea35a0e02f61a447a0851b78e1e556}
+Flushes cached media for a style.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$style}]An image style array. \end{DoxyParams}
+\hypertarget{image_8module_a0d7388bec5f42788968823a8099a64a7}{
+\index{image.module@{image.module}!image\_\-style\_\-load@{image\_\-style\_\-load}}
+\index{image\_\-style\_\-load@{image\_\-style\_\-load}!image.module@{image.module}}
+\subsubsection[{image\_\-style\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-style\_\-load (\$ {\em name} = {\ttfamily NULL}, \/  \$ {\em isid} = {\ttfamily NULL}, \/  \$ {\em include} = {\ttfamily NULL})}}
+\label{image_8module_a0d7388bec5f42788968823a8099a64a7}
+Loads a style by style name or ID.
+
+May be used as a loader for menu items.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]The name of the style. \item[{\em \$isid}]Optional. The numeric id of a style if the name is not known. \item[{\em \$include}]If set, this loader will restrict to a specific type of image style, may be one of the defined Image style storage constants.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An image style array containing the following keys:
+\begin{DoxyItemize}
+\item \char`\"{}isid\char`\"{}: The unique image style ID.
+\item \char`\"{}name\char`\"{}: The unique image style name.
+\item \char`\"{}effects\char`\"{}: An array of image effects within this image style. If the image style name or ID is not valid, an empty array is returned. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{image_8module_a7ad62224057dbc7757dfa2df898926ad}{image\_\-effect\_\-load()} 
+\end{DoxySeeAlso}
+\hypertarget{image_8module_a2c69d85e23ccb050a6f01832f41d3e5a}{
+\index{image.module@{image.module}!image\_\-style\_\-options@{image\_\-style\_\-options}}
+\index{image\_\-style\_\-options@{image\_\-style\_\-options}!image.module@{image.module}}
+\subsubsection[{image\_\-style\_\-options}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-style\_\-options (\$ {\em include\_\-empty} = {\ttfamily TRUE}, \/  \$ {\em output} = {\ttfamily {\bf CHECK\_\-PLAIN}})}}
+\label{image_8module_a2c69d85e23ccb050a6f01832f41d3e5a}
+Gets an array of image styles suitable for using as select list options.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$include\_\-empty}]If TRUE a $<$none$>$ option will be inserted in the options array. \item[{\em \$output}]Optional flag determining how the options will be sanitized on output. Leave this at the default (CHECK\_\-PLAIN) if you are using the output of this function directly in an HTML context, such as for checkbox or radio button labels, and do not plan to sanitize it on your own. If using the output of this function as select list options (its primary use case), you should instead set this flag to PASS\_\-THROUGH to avoid double-\/escaping of the output (the form API sanitizes select list options by default).\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array of image styles with the machine name as key and the label as value. 
+\end{DoxyReturn}
+\hypertarget{image_8module_a993e0bcd2c632aa81deb0da7e3baa84c}{
+\index{image.module@{image.module}!image\_\-style\_\-path@{image\_\-style\_\-path}}
+\index{image\_\-style\_\-path@{image\_\-style\_\-path}!image.module@{image.module}}
+\subsubsection[{image\_\-style\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-style\_\-path (\$ {\em style\_\-name}, \/  \$ {\em uri})}}
+\label{image_8module_a993e0bcd2c632aa81deb0da7e3baa84c}
+Returns the URI of an image when using a style.
+
+The path returned by this function may not exist. The default generation method only creates images when they are requested by a user's browser.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$style\_\-name}]The name of the style to be used with this image. \item[{\em \$uri}]The URI or path to the image.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The URI to an image style image. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{image_8module_a306cf59855e3462ac9539850d4c763eb}{image\_\-style\_\-url()} 
+\end{DoxySeeAlso}
+\hypertarget{image_8module_a97eaa4de01dc69378e7fc314438abe5a}{
+\index{image.module@{image.module}!image\_\-style\_\-path\_\-token@{image\_\-style\_\-path\_\-token}}
+\index{image\_\-style\_\-path\_\-token@{image\_\-style\_\-path\_\-token}!image.module@{image.module}}
+\subsubsection[{image\_\-style\_\-path\_\-token}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-style\_\-path\_\-token (\$ {\em style\_\-name}, \/  \$ {\em uri})}}
+\label{image_8module_a97eaa4de01dc69378e7fc314438abe5a}
+Generates a token to protect an image style derivative.
+
+This prevents unauthorized generation of an image style derivative, which can be costly both in CPU time and disk space.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$style\_\-name}]The name of the image style. \item[{\em \$uri}]The URI of the image for this style, for example as returned by \hyperlink{image_8module_a993e0bcd2c632aa81deb0da7e3baa84c}{image\_\-style\_\-path()}.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An eight-\/character token which can be used to protect image style derivatives against denial-\/of-\/service attacks. 
+\end{DoxyReturn}
+\hypertarget{image_8module_a181d174a5071727c4d0f24103dfb2b9d}{
+\index{image.module@{image.module}!image\_\-style\_\-save@{image\_\-style\_\-save}}
+\index{image\_\-style\_\-save@{image\_\-style\_\-save}!image.module@{image.module}}
+\subsubsection[{image\_\-style\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-style\_\-save (\$ {\em style})}}
+\label{image_8module_a181d174a5071727c4d0f24103dfb2b9d}
+Saves an image style.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$style An image style array containing:
+\begin{DoxyItemize}
+\item name: A unique name for the style.
+\item isid: (optional) An image style ID.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An image style array containing:
+\begin{DoxyItemize}
+\item name: An unique name for the style.
+\item old\_\-name: The original name for the style.
+\item isid: An image style ID.
+\item is\_\-new: TRUE if this is a new style, and FALSE if it is an existing style. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{image_8module_a4cde7d67cc8cce2fa6fc3a11880947f8}{
+\index{image.module@{image.module}!image\_\-style\_\-transform\_\-dimensions@{image\_\-style\_\-transform\_\-dimensions}}
+\index{image\_\-style\_\-transform\_\-dimensions@{image\_\-style\_\-transform\_\-dimensions}!image.module@{image.module}}
+\subsubsection[{image\_\-style\_\-transform\_\-dimensions}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-style\_\-transform\_\-dimensions (\$ {\em style\_\-name}, \/  array \&\$ {\em dimensions})}}
+\label{image_8module_a4cde7d67cc8cce2fa6fc3a11880947f8}
+Determines the dimensions of the styled image.
+
+Applies all of an image style's effects to \$dimensions.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$style\_\-name}]The name of the style to be applied. \item[{\em \$dimensions}]Dimensions to be modified -\/ an array with components width and height, in pixels. \end{DoxyParams}
+\hypertarget{image_8module_a306cf59855e3462ac9539850d4c763eb}{
+\index{image.module@{image.module}!image\_\-style\_\-url@{image\_\-style\_\-url}}
+\index{image\_\-style\_\-url@{image\_\-style\_\-url}!image.module@{image.module}}
+\subsubsection[{image\_\-style\_\-url}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-style\_\-url (\$ {\em style\_\-name}, \/  \$ {\em path})}}
+\label{image_8module_a306cf59855e3462ac9539850d4c763eb}
+Returns the URL for an image derivative given a style and image path.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$style\_\-name}]The name of the style to be used with this image. \item[{\em \$path}]The path to the image.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The absolute URL where a style image can be downloaded, suitable for use in an  tag. Requesting the URL will cause the image to be created. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{image_8module_a80cd974ca58e2f9aaee8a655497d2db7}{image\_\-style\_\-deliver()} 
+\end{DoxySeeAlso}
+\hypertarget{image_8module_a2c68836c891747cbd10954b0acf34a71}{
+\index{image.module@{image.module}!image\_\-styles@{image\_\-styles}}
+\index{image\_\-styles@{image\_\-styles}!image.module@{image.module}}
+\subsubsection[{image\_\-styles}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-styles ()}}
+\label{image_8module_a2c68836c891747cbd10954b0acf34a71}
+Gets an array of all styles and their settings.
+
+\begin{DoxyReturn}{Returns}
+An array of styles keyed by the image style ID (isid). 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{image_8module_a0d7388bec5f42788968823a8099a64a7}{image\_\-style\_\-load()} 
+\end{DoxySeeAlso}
+\hypertarget{image_8module_a440845d7f8654b992f5be1ed61dc7892}{
+\index{image.module@{image.module}!image\_\-system\_\-file\_\-system\_\-settings\_\-submit@{image\_\-system\_\-file\_\-system\_\-settings\_\-submit}}
+\index{image\_\-system\_\-file\_\-system\_\-settings\_\-submit@{image\_\-system\_\-file\_\-system\_\-settings\_\-submit}!image.module@{image.module}}
+\subsubsection[{image\_\-system\_\-file\_\-system\_\-settings\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-system\_\-file\_\-system\_\-settings\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{image_8module_a440845d7f8654b992f5be1ed61dc7892}
+Form submission handler for \hyperlink{group__forms_gab0199bde08bcb49ff536dd4987718632}{system\_\-file\_\-system\_\-settings()}.
+
+Adds a menu rebuild after the public file path has been changed, so that the menu router item depending on that file path will be regenerated. \hypertarget{image_8module_a2a6282083e95717d02ac5f79a194f3bb}{
+\index{image.module@{image.module}!image\_\-theme@{image\_\-theme}}
+\index{image\_\-theme@{image\_\-theme}!image.module@{image.module}}
+\subsubsection[{image\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-theme ()}}
+\label{image_8module_a2a6282083e95717d02ac5f79a194f3bb}
+Implements \hyperlink{group__hooks_ga013ccb45c7aaab1c16cf9691428c910d}{hook\_\-theme()}. 

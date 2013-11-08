@@ -1,0 +1,62 @@
+\hypertarget{classTaxonomyTermController}{
+\section{TaxonomyTermController Class Reference}
+\label{classTaxonomyTermController}\index{TaxonomyTermController@{TaxonomyTermController}}
+}
+Inheritance diagram for TaxonomyTermController::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classTaxonomyTermController}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTaxonomyTermController_a38102da86b43fb5b2c3c3412cb2ba3d2}{buildQuery} (\$ids, \$conditions=array(), \$revision\_\-id=FALSE)
+\item 
+\hyperlink{classTaxonomyTermController_a9bfba8c802d79ed1dcdfbfbe915adf1b}{cacheGet} (\$ids, \$conditions=array())
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controller class for taxonomy terms.
+
+This extends the \hyperlink{classDrupalDefaultEntityController}{DrupalDefaultEntityController} class. Only alteration is that we match the condition on term name case-\/independently. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classTaxonomyTermController_a38102da86b43fb5b2c3c3412cb2ba3d2}{
+\index{TaxonomyTermController@{TaxonomyTermController}!buildQuery@{buildQuery}}
+\index{buildQuery@{buildQuery}!TaxonomyTermController@{TaxonomyTermController}}
+\subsubsection[{buildQuery}]{\setlength{\rightskip}{0pt plus 5cm}TaxonomyTermController::buildQuery (\$ {\em ids}, \/  \$ {\em conditions} = {\ttfamily array()}, \/  \$ {\em revision\_\-id} = {\ttfamily FALSE})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classTaxonomyTermController_a38102da86b43fb5b2c3c3412cb2ba3d2}
+Builds the query to load the entity.
+
+This has full revision support. For entities requiring special queries, the class can be extended, and the default query can be constructed by calling parent::buildQuery(). This is usually necessary when the object being loaded needs to be augmented with additional data from another table, such as loading node type into comments or vocabulary machine name into terms, however it can also support \$conditions on different tables. See \hyperlink{classCommentController_a0feb93a67f87f04b06eb64eb0d359ca7}{CommentController::buildQuery()} or \hyperlink{classTaxonomyTermController_a38102da86b43fb5b2c3c3412cb2ba3d2}{TaxonomyTermController::buildQuery()} for examples.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$ids}]An array of entity IDs, or FALSE to load all entities. \item[{\em \$conditions}]An array of conditions in the form 'field' =$>$ \$value. \item[{\em \$revision\_\-id}]The ID of the revision to load, or FALSE if this query is asking for the most current revision(s).\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classSelectQuery}{SelectQuery} A \hyperlink{classSelectQuery}{SelectQuery} object for loading the entity. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDrupalDefaultEntityController_aaa882d053aa4e04e2816b0093b79b0f8}{DrupalDefaultEntityController}.\hypertarget{classTaxonomyTermController_a9bfba8c802d79ed1dcdfbfbe915adf1b}{
+\index{TaxonomyTermController@{TaxonomyTermController}!cacheGet@{cacheGet}}
+\index{cacheGet@{cacheGet}!TaxonomyTermController@{TaxonomyTermController}}
+\subsubsection[{cacheGet}]{\setlength{\rightskip}{0pt plus 5cm}TaxonomyTermController::cacheGet (\$ {\em ids}, \/  \$ {\em conditions} = {\ttfamily array()})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classTaxonomyTermController_a9bfba8c802d79ed1dcdfbfbe915adf1b}
+Gets entities from the static cache.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$ids}]If not empty, return entities that match these IDs. \item[{\em \$conditions}]If set, return entities that match all of these conditions.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array of entities from the entity cache. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDrupalDefaultEntityController_ae791ed21b33704e3b315d106354959c9}{DrupalDefaultEntityController}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/modules/taxonomy/\hyperlink{taxonomy_8module}{taxonomy.module}\end{DoxyCompactItemize}

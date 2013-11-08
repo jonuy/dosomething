@@ -1,0 +1,350 @@
+\hypertarget{update_8inc}{
+\section{html/includes/update.inc File Reference}
+\label{update_8inc}\index{html/includes/update.inc@{html/includes/update.inc}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDrupalUpdateException}{DrupalUpdateException}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{update_8inc_acba191c88d6f0e38bec3a5f873f57108}{REQUIRED\_\-D6\_\-SCHEMA\_\-VERSION} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{update_8inc_ab86cb0f00b89fc52f7f6294be9a1e33c}{update\_\-fix\_\-compatibility} ()
+\item 
+\hyperlink{update_8inc_a39592132a77fd791c44a8d6faf362cb0}{update\_\-check\_\-incompatibility} (\$name, \$type= 'module')
+\item 
+\hyperlink{update_8inc_ae3ce2c866dce2d33c363b57136a2ba84}{update\_\-prepare\_\-d7\_\-bootstrap} ()
+\item 
+\hyperlink{update_8inc_a349ad25ac5547fbb44556538758988a2}{update\_\-fix\_\-d7\_\-block\_\-deltas} (\&\$sandbox, \$renamed\_\-deltas, \$moved\_\-deltas)
+\item 
+\hyperlink{update_8inc_a00697f7fb179855f3c3fa65105abee94}{update\_\-fix\_\-d7\_\-requirements} ()
+\item 
+\hyperlink{update_8inc_a4c65cc44fc9d615c6f69ac8ecb57bf5a}{update\_\-fix\_\-d7\_\-install\_\-profile} ()
+\item 
+\hyperlink{update_8inc_a39f4938dea0ce704d1e426243cec11ec}{update\_\-parse\_\-db\_\-url} (\$db\_\-url, \$db\_\-prefix)
+\item 
+\hyperlink{update_8inc_a1e41248922d100f2412b8471c05c59be}{update\_\-get\_\-d6\_\-session\_\-name} ()
+\item 
+\hyperlink{update_8inc_ac46854f64e50a81361ed8816b8f0ce7e}{update\_\-do\_\-one} (\$module, \$number, \$dependency\_\-map, \&\$context)
+\item 
+\hyperlink{update_8inc_aa4dd3d84e553f6bf25ad19608152d5b7}{update\_\-batch} (\$start, \$redirect=NULL, \$url=NULL, \$batch=array(), \$redirect\_\-callback= 'drupal\_\-goto')
+\item 
+\hyperlink{update_8inc_a80f7fdd8ca66ebda4959b9429fc343f3}{update\_\-finished} (\$success, \$results, \$operations)
+\item 
+\hyperlink{update_8inc_ae95fb5ec58e85fd5c10c56345fd7cabe}{update\_\-get\_\-update\_\-list} ()
+\item 
+\hyperlink{update_8inc_aa931d6cdddc2e9e0ec96d240523056e9}{update\_\-resolve\_\-dependencies} (\$starting\_\-updates)
+\item 
+\hyperlink{update_8inc_ad268e1662e1d06a85f3d51dfec9955b2}{update\_\-get\_\-update\_\-function\_\-list} (\$starting\_\-updates)
+\item 
+\hyperlink{update_8inc_aafca47c65645d8463d85a3fa7884c220}{update\_\-build\_\-dependency\_\-graph} (\$update\_\-functions)
+\item 
+\hyperlink{update_8inc_ab41c0d635b6a220d269146f778a6a245}{update\_\-is\_\-missing} (\$module, \$number, \$update\_\-functions)
+\item 
+\hyperlink{update_8inc_a6ccab16044efda416011fc20367d9344}{update\_\-already\_\-performed} (\$module, \$number)
+\item 
+\hyperlink{update_8inc_af82e7fa9b13df713eb110a4e782b0e69}{update\_\-retrieve\_\-dependencies} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Drupal database update API.
+
+This file contains functions to perform database updates for a Drupal installation. It is included and used extensively by \hyperlink{update_8php}{update.php}. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{update_8inc_acba191c88d6f0e38bec3a5f873f57108}{
+\index{update.inc@{update.inc}!REQUIRED\_\-D6\_\-SCHEMA\_\-VERSION@{REQUIRED\_\-D6\_\-SCHEMA\_\-VERSION}}
+\index{REQUIRED\_\-D6\_\-SCHEMA\_\-VERSION@{REQUIRED\_\-D6\_\-SCHEMA\_\-VERSION}!update.inc@{update.inc}}
+\subsubsection[{REQUIRED\_\-D6\_\-SCHEMA\_\-VERSION}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf REQUIRED\_\-D6\_\-SCHEMA\_\-VERSION}}}
+\label{update_8inc_acba191c88d6f0e38bec3a5f873f57108}
+Minimum schema version of Drupal 6 required for upgrade to Drupal 7.
+
+Upgrades from Drupal 6 to Drupal 7 require that Drupal 6 be running the most recent version, or the upgrade could fail. We can't easily check the Drupal 6 version once the update process has begun, so instead we check the schema version of \hyperlink{system_8module}{system.module} in the system table. 
+
+\subsection{Function Documentation}
+\hypertarget{update_8inc_a6ccab16044efda416011fc20367d9344}{
+\index{update.inc@{update.inc}!update\_\-already\_\-performed@{update\_\-already\_\-performed}}
+\index{update\_\-already\_\-performed@{update\_\-already\_\-performed}!update.inc@{update.inc}}
+\subsubsection[{update\_\-already\_\-performed}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-already\_\-performed (\$ {\em module}, \/  \$ {\em number})}}
+\label{update_8inc_a6ccab16044efda416011fc20367d9344}
+Determines if a module update has already been performed.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$module}]The name of the module. \item[{\em \$number}]The number of the update within that module.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the database schema indicates that the update has already been performed; FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{update_8inc_aa4dd3d84e553f6bf25ad19608152d5b7}{
+\index{update.inc@{update.inc}!update\_\-batch@{update\_\-batch}}
+\index{update\_\-batch@{update\_\-batch}!update.inc@{update.inc}}
+\subsubsection[{update\_\-batch}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-batch (\$ {\em start}, \/  \$ {\em redirect} = {\ttfamily NULL}, \/  \$ {\em url} = {\ttfamily NULL}, \/  \$ {\em batch} = {\ttfamily array()}, \/  \$ {\em redirect\_\-callback} = {\ttfamily 'drupal\_\-goto'})}}
+\label{update_8inc_aa4dd3d84e553f6bf25ad19608152d5b7}
+Starts the database update batch process.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$start}]An array whose keys contain the names of modules to be updated during the current batch process, and whose values contain the number of the first requested update for that module. The actual updates that are run (and the order they are run in) will depend on the results of passing this data through the update dependency system. \item[{\em \$redirect}]Path to redirect to when the batch has finished processing. \item[{\em \$url}]URL of the batch processing page (should only be used for separate scripts like \hyperlink{update_8php}{update.php}). \item[{\em \$batch}]Optional parameters to pass into the batch API. \item[{\em \$redirect\_\-callback}](optional) Specify a function to be called to redirect to the progressive processing page.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{update_8inc_aa931d6cdddc2e9e0ec96d240523056e9}{update\_\-resolve\_\-dependencies()} 
+\end{DoxySeeAlso}
+\hypertarget{update_8inc_aafca47c65645d8463d85a3fa7884c220}{
+\index{update.inc@{update.inc}!update\_\-build\_\-dependency\_\-graph@{update\_\-build\_\-dependency\_\-graph}}
+\index{update\_\-build\_\-dependency\_\-graph@{update\_\-build\_\-dependency\_\-graph}!update.inc@{update.inc}}
+\subsubsection[{update\_\-build\_\-dependency\_\-graph}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-build\_\-dependency\_\-graph (\$ {\em update\_\-functions})}}
+\label{update_8inc_aafca47c65645d8463d85a3fa7884c220}
+Constructs a graph which encodes the dependencies between module updates.
+
+This function returns an associative array which contains a \char`\"{}directed graph\char`\"{} representation of the dependencies between a provided list of update functions, as well as any outside update functions that they directly depend on but that were not in the provided list. The vertices of the graph represent the update functions themselves, and each edge represents a requirement that the first update function needs to run before the second. For example, consider this graph:
+
+system\_\-update\_\-7000 -\/-\/-\/$>$ system\_\-update\_\-7001 -\/-\/-\/$>$ system\_\-update\_\-7002
+
+Visually, this indicates that system\_\-update\_\-7000() must run before system\_\-update\_\-7001(), which in turn must run before system\_\-update\_\-7002().
+
+The function takes into account standard dependencies within each module, as shown above (i.e., the fact that each module's updates must run in numerical order), but also finds any cross-\/module dependencies that are defined by modules which implement \hyperlink{group__hooks_ga23e9e019b7ec64d95bafbeaffd295483}{hook\_\-update\_\-dependencies()}, and builds them into the graph as well.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$update\_\-functions}]An organized array of update functions, in the format returned by \hyperlink{update_8inc_ad268e1662e1d06a85f3d51dfec9955b2}{update\_\-get\_\-update\_\-function\_\-list()}.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A multidimensional array representing the dependency graph, suitable for passing in to \hyperlink{graph_8inc_ab1e9257090d35212bd3dd3eba7706471}{drupal\_\-depth\_\-first\_\-search()}, but with extra information about each update function also included. Each array key contains the name of an update function, including all update functions from the provided list as well as any outside update functions which they directly depend on. Each value is an associative array containing the following keys:
+\begin{DoxyItemize}
+\item 'edges': A representation of any other update functions that immediately depend on this one. See \hyperlink{graph_8inc_ab1e9257090d35212bd3dd3eba7706471}{drupal\_\-depth\_\-first\_\-search()} for more details on the format.
+\item 'module': The name of the module that this update function belongs to.
+\item 'number': The number of this update function within that module.
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{graph_8inc_ab1e9257090d35212bd3dd3eba7706471}{drupal\_\-depth\_\-first\_\-search()} 
+
+\hyperlink{update_8inc_aa931d6cdddc2e9e0ec96d240523056e9}{update\_\-resolve\_\-dependencies()} 
+\end{DoxySeeAlso}
+\hypertarget{update_8inc_a39592132a77fd791c44a8d6faf362cb0}{
+\index{update.inc@{update.inc}!update\_\-check\_\-incompatibility@{update\_\-check\_\-incompatibility}}
+\index{update\_\-check\_\-incompatibility@{update\_\-check\_\-incompatibility}!update.inc@{update.inc}}
+\subsubsection[{update\_\-check\_\-incompatibility}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-check\_\-incompatibility (\$ {\em name}, \/  \$ {\em type} = {\ttfamily 'module'})}}
+\label{update_8inc_a39592132a77fd791c44a8d6faf362cb0}
+Tests the compatibility of a module or theme. \hypertarget{update_8inc_ac46854f64e50a81361ed8816b8f0ce7e}{
+\index{update.inc@{update.inc}!update\_\-do\_\-one@{update\_\-do\_\-one}}
+\index{update\_\-do\_\-one@{update\_\-do\_\-one}!update.inc@{update.inc}}
+\subsubsection[{update\_\-do\_\-one}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-do\_\-one (\$ {\em module}, \/  \$ {\em number}, \/  \$ {\em dependency\_\-map}, \/  \&\$ {\em context})}}
+\label{update_8inc_ac46854f64e50a81361ed8816b8f0ce7e}
+Performs one update and stores the results for display on the results page.
+
+If an update function completes successfully, it should return a message as a string indicating success, for example: 
+\begin{DoxyCode}
+ return t('New index added successfully.');
+\end{DoxyCode}
+
+
+Alternatively, it may return nothing. In that case, no message will be displayed at all.
+
+If it fails for whatever reason, it should throw an instance of \hyperlink{classDrupalUpdateException}{DrupalUpdateException} with an appropriate error message, for example: 
+\begin{DoxyCode}
+ throw new DrupalUpdateException(t('Description of what went wrong'));
+\end{DoxyCode}
+
+
+If an exception is thrown, the current update and all updates that depend on it will be aborted. The schema version will not be updated in this case, and all the aborted updates will continue to appear on \hyperlink{update_8php}{update.php} as updates that have not yet been run.
+
+If an update function needs to be re-\/run as part of a batch process, it should accept the \$sandbox array by reference as its first parameter and set the finished property to the percentage completed that it is, as a fraction of 1.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$module}]The module whose update will be run. \item[{\em \$number}]The update number to run. \item[{\em \$dependency\_\-map}]An array whose keys are the names of all update functions that will be performed during this batch process, and whose values are arrays of other update functions that each one depends on. \item[{\em \$context}]The batch context array.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{update_8inc_aa931d6cdddc2e9e0ec96d240523056e9}{update\_\-resolve\_\-dependencies()} 
+\end{DoxySeeAlso}
+\hypertarget{update_8inc_a80f7fdd8ca66ebda4959b9429fc343f3}{
+\index{update.inc@{update.inc}!update\_\-finished@{update\_\-finished}}
+\index{update\_\-finished@{update\_\-finished}!update.inc@{update.inc}}
+\subsubsection[{update\_\-finished}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-finished (\$ {\em success}, \/  \$ {\em results}, \/  \$ {\em operations})}}
+\label{update_8inc_a80f7fdd8ca66ebda4959b9429fc343f3}
+Finishes the update process and stores the results for eventual display.
+
+After the updates run, all caches are flushed. The update results are stored into the session (for example, to be displayed on the update results page in \hyperlink{update_8php}{update.php}). Additionally, if the site was off-\/line, now that the update process is completed, the site is set back online.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$success}]Indicate that the batch API tasks were all completed successfully. \item[{\em \$results}]An array of all the results that were updated in \hyperlink{update_8inc_ac46854f64e50a81361ed8816b8f0ce7e}{update\_\-do\_\-one()}. \item[{\em \$operations}]A list of all the operations that had not been completed by the batch API.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{update_8inc_aa4dd3d84e553f6bf25ad19608152d5b7}{update\_\-batch()} 
+\end{DoxySeeAlso}
+\hypertarget{update_8inc_ab86cb0f00b89fc52f7f6294be9a1e33c}{
+\index{update.inc@{update.inc}!update\_\-fix\_\-compatibility@{update\_\-fix\_\-compatibility}}
+\index{update\_\-fix\_\-compatibility@{update\_\-fix\_\-compatibility}!update.inc@{update.inc}}
+\subsubsection[{update\_\-fix\_\-compatibility}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-fix\_\-compatibility ()}}
+\label{update_8inc_ab86cb0f00b89fc52f7f6294be9a1e33c}
+Disable any items in the \{system\} table that are not core compatible. \hypertarget{update_8inc_a349ad25ac5547fbb44556538758988a2}{
+\index{update.inc@{update.inc}!update\_\-fix\_\-d7\_\-block\_\-deltas@{update\_\-fix\_\-d7\_\-block\_\-deltas}}
+\index{update\_\-fix\_\-d7\_\-block\_\-deltas@{update\_\-fix\_\-d7\_\-block\_\-deltas}!update.inc@{update.inc}}
+\subsubsection[{update\_\-fix\_\-d7\_\-block\_\-deltas}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-fix\_\-d7\_\-block\_\-deltas (\&\$ {\em sandbox}, \/  \$ {\em renamed\_\-deltas}, \/  \$ {\em moved\_\-deltas})}}
+\label{update_8inc_a349ad25ac5547fbb44556538758988a2}
+A helper function that modules can use to assist with the transformation from numeric block deltas to string block deltas during the 6.x -\/$>$ 7.x upgrade.
+
+\begin{Desc}
+\item[\hyperlink{todo__todo000007}{Todo}]This function should be removed in 8.x.\end{Desc}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$sandbox}]An array holding data for the batch process. \item[{\em \$renamed\_\-deltas}]An associative array. Keys are module names, values an associative array mapping the old block deltas to the new block deltas for the module. Example: 
+\begin{DoxyCode}
+     $renamed_deltas = array(
+       'mymodule' =>
+         array(
+           0 => 'mymodule-block-1',
+           1 => 'mymodule-block-2',
+         ),
+     );
+\end{DoxyCode}
+ \item[{\em \$moved\_\-deltas}]An associative array. Keys are source module names, values an associative array mapping the (possibly renamed) block name to the new module name. Example: 
+\begin{DoxyCode}
+     $moved_deltas = array(
+       'user' =>
+         array(
+           'navigation' => 'system',
+         ),
+     );
+\end{DoxyCode}
+ \end{DoxyParams}
+\hypertarget{update_8inc_a4c65cc44fc9d615c6f69ac8ecb57bf5a}{
+\index{update.inc@{update.inc}!update\_\-fix\_\-d7\_\-install\_\-profile@{update\_\-fix\_\-d7\_\-install\_\-profile}}
+\index{update\_\-fix\_\-d7\_\-install\_\-profile@{update\_\-fix\_\-d7\_\-install\_\-profile}!update.inc@{update.inc}}
+\subsubsection[{update\_\-fix\_\-d7\_\-install\_\-profile}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-fix\_\-d7\_\-install\_\-profile ()}}
+\label{update_8inc_a4c65cc44fc9d615c6f69ac8ecb57bf5a}
+Register the currently installed profile in the system table.
+
+Installation profiles are now treated as modules by Drupal, and have an upgrade path based on their schema version in the system table.
+
+The installation profile will be set to schema\_\-version 0, as it has already been installed. Any other hook\_\-update\_\-N functions provided by the installation profile will be run by \hyperlink{update_8php}{update.php}. \hypertarget{update_8inc_a00697f7fb179855f3c3fa65105abee94}{
+\index{update.inc@{update.inc}!update\_\-fix\_\-d7\_\-requirements@{update\_\-fix\_\-d7\_\-requirements}}
+\index{update\_\-fix\_\-d7\_\-requirements@{update\_\-fix\_\-d7\_\-requirements}!update.inc@{update.inc}}
+\subsubsection[{update\_\-fix\_\-d7\_\-requirements}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-fix\_\-d7\_\-requirements ()}}
+\label{update_8inc_a00697f7fb179855f3c3fa65105abee94}
+Perform Drupal 6.x to 7.x updates that are required for \hyperlink{update_8php}{update.php} to function properly.
+
+This function runs when \hyperlink{update_8php}{update.php} is run the first time for 7.x, even before updates are selected or performed. It is important that if updates are not ultimately performed that no changes are made which make it impossible to continue using the prior version. \hypertarget{update_8inc_a1e41248922d100f2412b8471c05c59be}{
+\index{update.inc@{update.inc}!update\_\-get\_\-d6\_\-session\_\-name@{update\_\-get\_\-d6\_\-session\_\-name}}
+\index{update\_\-get\_\-d6\_\-session\_\-name@{update\_\-get\_\-d6\_\-session\_\-name}!update.inc@{update.inc}}
+\subsubsection[{update\_\-get\_\-d6\_\-session\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-get\_\-d6\_\-session\_\-name ()}}
+\label{update_8inc_a1e41248922d100f2412b8471c05c59be}
+Constructs a session name compatible with a D6 environment.
+
+\begin{DoxyReturn}{Returns}
+D6-\/compatible session name string.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{bootstrap_8inc_acae9a8501a2571219d7517f50cc6afec}{drupal\_\-settings\_\-initialize()} 
+\end{DoxySeeAlso}
+\hypertarget{update_8inc_ad268e1662e1d06a85f3d51dfec9955b2}{
+\index{update.inc@{update.inc}!update\_\-get\_\-update\_\-function\_\-list@{update\_\-get\_\-update\_\-function\_\-list}}
+\index{update\_\-get\_\-update\_\-function\_\-list@{update\_\-get\_\-update\_\-function\_\-list}!update.inc@{update.inc}}
+\subsubsection[{update\_\-get\_\-update\_\-function\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-get\_\-update\_\-function\_\-list (\$ {\em starting\_\-updates})}}
+\label{update_8inc_ad268e1662e1d06a85f3d51dfec9955b2}
+Returns an organized list of update functions for a set of modules.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$starting\_\-updates}]An array whose keys contain the names of modules and whose values contain the number of the first requested update for that module.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array containing all the update functions that should be run for each module, including the provided starting update and all subsequent updates that are available. The keys of the array contain the module names, and each value is an ordered array of update functions, keyed by the update number.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{update_8inc_aa931d6cdddc2e9e0ec96d240523056e9}{update\_\-resolve\_\-dependencies()} 
+\end{DoxySeeAlso}
+\hypertarget{update_8inc_ae95fb5ec58e85fd5c10c56345fd7cabe}{
+\index{update.inc@{update.inc}!update\_\-get\_\-update\_\-list@{update\_\-get\_\-update\_\-list}}
+\index{update\_\-get\_\-update\_\-list@{update\_\-get\_\-update\_\-list}!update.inc@{update.inc}}
+\subsubsection[{update\_\-get\_\-update\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-get\_\-update\_\-list ()}}
+\label{update_8inc_ae95fb5ec58e85fd5c10c56345fd7cabe}
+Returns a list of all the pending database updates.
+
+\begin{DoxyReturn}{Returns}
+An associative array keyed by module name which contains all information about database updates that need to be run, and any updates that are not going to proceed due to missing requirements. The system module will always be listed first.
+\end{DoxyReturn}
+The subarray for each module can contain the following keys:
+\begin{DoxyItemize}
+\item start: The starting update that is to be processed. If this does not exist then do not process any updates for this module as there are other requirements that need to be resolved.
+\item warning: Any warnings about why this module can not be updated.
+\item pending: An array of all the pending updates for the module including the update number and the description from source code comment for each update function. This array is keyed by the update number. 
+\end{DoxyItemize}\hypertarget{update_8inc_ab41c0d635b6a220d269146f778a6a245}{
+\index{update.inc@{update.inc}!update\_\-is\_\-missing@{update\_\-is\_\-missing}}
+\index{update\_\-is\_\-missing@{update\_\-is\_\-missing}!update.inc@{update.inc}}
+\subsubsection[{update\_\-is\_\-missing}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-is\_\-missing (\$ {\em module}, \/  \$ {\em number}, \/  \$ {\em update\_\-functions})}}
+\label{update_8inc_ab41c0d635b6a220d269146f778a6a245}
+Determines if a module update is missing or unavailable.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$module}]The name of the module. \item[{\em \$number}]The number of the update within that module. \item[{\em \$update\_\-functions}]An organized array of update functions, in the format returned by \hyperlink{update_8inc_ad268e1662e1d06a85f3d51dfec9955b2}{update\_\-get\_\-update\_\-function\_\-list()}. This should represent all module updates that are requested to run at the time this function is called.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the provided module update is not installed or is not in the provided list of updates to run; FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{update_8inc_a39f4938dea0ce704d1e426243cec11ec}{
+\index{update.inc@{update.inc}!update\_\-parse\_\-db\_\-url@{update\_\-parse\_\-db\_\-url}}
+\index{update\_\-parse\_\-db\_\-url@{update\_\-parse\_\-db\_\-url}!update.inc@{update.inc}}
+\subsubsection[{update\_\-parse\_\-db\_\-url}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-parse\_\-db\_\-url (\$ {\em db\_\-url}, \/  \$ {\em db\_\-prefix})}}
+\label{update_8inc_a39f4938dea0ce704d1e426243cec11ec}
+Parse pre-\/Drupal 7 database connection URLs and return D7 compatible array.
+
+\begin{DoxyReturn}{Returns}
+Drupal 7 DBTNG compatible array of database connection information. 
+\end{DoxyReturn}
+\hypertarget{update_8inc_ae3ce2c866dce2d33c363b57136a2ba84}{
+\index{update.inc@{update.inc}!update\_\-prepare\_\-d7\_\-bootstrap@{update\_\-prepare\_\-d7\_\-bootstrap}}
+\index{update\_\-prepare\_\-d7\_\-bootstrap@{update\_\-prepare\_\-d7\_\-bootstrap}!update.inc@{update.inc}}
+\subsubsection[{update\_\-prepare\_\-d7\_\-bootstrap}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-prepare\_\-d7\_\-bootstrap ()}}
+\label{update_8inc_ae3ce2c866dce2d33c363b57136a2ba84}
+Performs extra steps required to bootstrap when using a Drupal 6 database.
+
+Users who still have a Drupal 6 database (and are in the process of updating to Drupal 7) need extra help before a full bootstrap can be achieved. This function does the necessary preliminary work that allows the bootstrap to be successful.
+
+No access check has been performed when this function is called, so no irreversible changes to the database are made here. \hypertarget{update_8inc_aa931d6cdddc2e9e0ec96d240523056e9}{
+\index{update.inc@{update.inc}!update\_\-resolve\_\-dependencies@{update\_\-resolve\_\-dependencies}}
+\index{update\_\-resolve\_\-dependencies@{update\_\-resolve\_\-dependencies}!update.inc@{update.inc}}
+\subsubsection[{update\_\-resolve\_\-dependencies}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-resolve\_\-dependencies (\$ {\em starting\_\-updates})}}
+\label{update_8inc_aa931d6cdddc2e9e0ec96d240523056e9}
+Resolves dependencies in a set of module updates, and orders them correctly.
+
+This function receives a list of requested module updates and determines an appropriate order to run them in such that all update dependencies are met. Any updates whose dependencies cannot be met are included in the returned array but have the key 'allowed' set to FALSE; the calling function should take responsibility for ensuring that these updates are ultimately not performed.
+
+In addition, the returned array also includes detailed information about the dependency chain for each update, as provided by the depth-\/first search algorithm in \hyperlink{graph_8inc_ab1e9257090d35212bd3dd3eba7706471}{drupal\_\-depth\_\-first\_\-search()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$starting\_\-updates}]An array whose keys contain the names of modules with updates to be run and whose values contain the number of the first requested update for that module.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array whose keys are the names of all update functions within the provided modules that would need to be run in order to fulfill the request, arranged in the order in which the update functions should be run. (This includes the provided starting update for each module and all subsequent updates that are available.) The values are themselves arrays containing all the keys provided by the \hyperlink{graph_8inc_ab1e9257090d35212bd3dd3eba7706471}{drupal\_\-depth\_\-first\_\-search()} algorithm, which encode detailed information about the dependency chain for this update function (for example: 'paths', 'reverse\_\-paths', 'weight', and 'component'), as well as the following additional keys:
+\begin{DoxyItemize}
+\item 'allowed': A boolean which is TRUE when the update function's dependencies are met, and FALSE otherwise. Calling functions should inspect this value before running the update.
+\item 'missing\_\-dependencies': An array containing the names of any other update functions that are required by this one but that are unavailable to be run. This array will be empty when 'allowed' is TRUE.
+\item 'module': The name of the module that this update function belongs to.
+\item 'number': The number of this update function within that module.
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{graph_8inc_ab1e9257090d35212bd3dd3eba7706471}{drupal\_\-depth\_\-first\_\-search()} 
+\end{DoxySeeAlso}
+\hypertarget{update_8inc_af82e7fa9b13df713eb110a4e782b0e69}{
+\index{update.inc@{update.inc}!update\_\-retrieve\_\-dependencies@{update\_\-retrieve\_\-dependencies}}
+\index{update\_\-retrieve\_\-dependencies@{update\_\-retrieve\_\-dependencies}!update.inc@{update.inc}}
+\subsubsection[{update\_\-retrieve\_\-dependencies}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-retrieve\_\-dependencies ()}}
+\label{update_8inc_af82e7fa9b13df713eb110a4e782b0e69}
+Invokes \hyperlink{group__hooks_ga23e9e019b7ec64d95bafbeaffd295483}{hook\_\-update\_\-dependencies()} in all installed modules.
+
+This function is similar to \hyperlink{group__hooks_gabedb5f566ef5faaa5768dd15125b111c}{module\_\-invoke\_\-all()}, with the main difference that it does not require that a module be enabled to invoke its hook, only that it be installed. This allows the update system to properly perform updates even on modules that are currently disabled.
+
+\begin{DoxyReturn}{Returns}
+An array of return values obtained by merging the results of the \hyperlink{group__hooks_ga23e9e019b7ec64d95bafbeaffd295483}{hook\_\-update\_\-dependencies()} implementations in all installed modules.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__hooks_gabedb5f566ef5faaa5768dd15125b111c}{module\_\-invoke\_\-all()} 
+
+\hyperlink{group__hooks_ga23e9e019b7ec64d95bafbeaffd295483}{hook\_\-update\_\-dependencies()} 
+\end{DoxySeeAlso}

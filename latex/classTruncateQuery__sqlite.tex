@@ -1,0 +1,40 @@
+\hypertarget{classTruncateQuery__sqlite}{
+\section{TruncateQuery\_\-sqlite Class Reference}
+\label{classTruncateQuery__sqlite}\index{TruncateQuery\_\-sqlite@{TruncateQuery\_\-sqlite}}
+}
+Inheritance diagram for TruncateQuery\_\-sqlite::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classTruncateQuery__sqlite}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTruncateQuery__sqlite_a5b051a5c4f35a4c8e91cb7ecb38f7dcf}{\_\-\_\-toString} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+SQLite specific implementation of \hyperlink{classTruncateQuery}{TruncateQuery}.
+
+SQLite doesn't support TRUNCATE, but a DELETE query with no condition has exactly the effect (it is implemented by DROPing the table). 
+
+\subsection{Member Function Documentation}
+\hypertarget{classTruncateQuery__sqlite_a5b051a5c4f35a4c8e91cb7ecb38f7dcf}{
+\index{TruncateQuery\_\-sqlite@{TruncateQuery\_\-sqlite}!\_\-\_\-toString@{\_\-\_\-toString}}
+\index{\_\-\_\-toString@{\_\-\_\-toString}!TruncateQuery_sqlite@{TruncateQuery\_\-sqlite}}
+\subsubsection[{\_\-\_\-toString}]{\setlength{\rightskip}{0pt plus 5cm}TruncateQuery\_\-sqlite::\_\-\_\-toString ()}}
+\label{classTruncateQuery__sqlite_a5b051a5c4f35a4c8e91cb7ecb38f7dcf}
+Implements PHP magic \_\-\_\-toString method to convert the query to a string.
+
+\begin{DoxyReturn}{Returns}
+string The prepared statement. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classTruncateQuery_a4a18f66831b99b10cccd74c617fa6723}{TruncateQuery}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/database/sqlite/\hyperlink{sqlite_2query_8inc}{query.inc}\end{DoxyCompactItemize}

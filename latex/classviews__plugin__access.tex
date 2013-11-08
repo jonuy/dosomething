@@ -1,0 +1,114 @@
+\hypertarget{classviews__plugin__access}{
+\section{views\_\-plugin\_\-access Class Reference}
+\label{classviews__plugin__access}\index{views\_\-plugin\_\-access@{views\_\-plugin\_\-access}}
+}
+Inheritance diagram for views\_\-plugin\_\-access::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.36585cm]{classviews__plugin__access}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classviews__plugin__access_a1b295cea820f403d1e361e7de4e3800e}{init} (\&\$\hyperlink{classview}{view}, \&\$display)
+\item 
+\hyperlink{classviews__plugin__access_a3d52dc2603a2991a46a3c212a04097d2}{option\_\-definition} ()
+\item 
+\hyperlink{classviews__plugin__access_a530865442ea42db5e720e6c49f3d16f2}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__access_a1ac0bea409be6ef8d7eb4bfafcf760c6}{options\_\-validate} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__access_ad0610dfaa0e225c5d2cd85c7a13287fd}{options\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__access_ade500a95e599deffa417f8cbdd67bbf4}{summary\_\-title} ()
+\item 
+\hyperlink{classviews__plugin__access_ad24d38c1b1a1bd7527b2b96a2103cede}{access} (\$account)
+\item 
+\hyperlink{classviews__plugin__access_ad4038a32fccc6a662a74f437d0bf6a23}{get\_\-access\_\-callback} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The base plugin to handle access control. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__plugin__access_ad24d38c1b1a1bd7527b2b96a2103cede}{
+\index{views\_\-plugin\_\-access@{views\_\-plugin\_\-access}!access@{access}}
+\index{access@{access}!views_plugin_access@{views\_\-plugin\_\-access}}
+\subsubsection[{access}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access::access (\$ {\em account})}}
+\label{classviews__plugin__access_ad24d38c1b1a1bd7527b2b96a2103cede}
+Determine if the current user has access or not. 
+
+Reimplemented in \hyperlink{classviews__plugin__access__perm_ac5b655153815ade74513b1af48c18cad}{views\_\-plugin\_\-access\_\-perm}, \hyperlink{classviews__plugin__access__role_a8de6032d940b90e06820cdbd9a15a51c}{views\_\-plugin\_\-access\_\-role}, \hyperlink{classviews__test__plugin__access__test__dynamic_a44a0d68fea7b88011bd5bea488ae982f}{views\_\-test\_\-plugin\_\-access\_\-test\_\-dynamic}, and \hyperlink{classviews__test__plugin__access__test__static_acb7d4c26172324fed2bf8e610f375b88}{views\_\-test\_\-plugin\_\-access\_\-test\_\-static}.\hypertarget{classviews__plugin__access_ad4038a32fccc6a662a74f437d0bf6a23}{
+\index{views\_\-plugin\_\-access@{views\_\-plugin\_\-access}!get\_\-access\_\-callback@{get\_\-access\_\-callback}}
+\index{get\_\-access\_\-callback@{get\_\-access\_\-callback}!views_plugin_access@{views\_\-plugin\_\-access}}
+\subsubsection[{get\_\-access\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access::get\_\-access\_\-callback ()}}
+\label{classviews__plugin__access_ad4038a32fccc6a662a74f437d0bf6a23}
+Determine the access callback and arguments.
+
+This information will be embedded in the menu in order to reduce performance hits during menu item access testing, which happens a lot.
+
+\begin{DoxyReturn}{Returns}
+an array; the first item should be the function to call, and the second item should be an array of arguments. The first item may also be TRUE (bool only) which will indicate no access control.) 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classviews__plugin__access__perm_ac9dce994826265f48711a23cf3f2414f}{views\_\-plugin\_\-access\_\-perm}, \hyperlink{classviews__plugin__access__role_a50094384e297acdd629d9462004df69a}{views\_\-plugin\_\-access\_\-role}, \hyperlink{classviews__test__plugin__access__test__dynamic_ac4efa2ff862eb1592afd64b76ebfed1d}{views\_\-test\_\-plugin\_\-access\_\-test\_\-dynamic}, and \hyperlink{classviews__test__plugin__access__test__static_a4ddfff64a5cccae83c64e4c89095aeb6}{views\_\-test\_\-plugin\_\-access\_\-test\_\-static}.\hypertarget{classviews__plugin__access_a1b295cea820f403d1e361e7de4e3800e}{
+\index{views\_\-plugin\_\-access@{views\_\-plugin\_\-access}!init@{init}}
+\index{init@{init}!views_plugin_access@{views\_\-plugin\_\-access}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access::init (\&\$ {\em view}, \/  \&\$ {\em display})}}
+\label{classviews__plugin__access_a1b295cea820f403d1e361e7de4e3800e}
+Initialize the plugin.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$view}]The \hyperlink{classview}{view} object. \item[{\em \$display}]The display handler. \end{DoxyParams}
+\hypertarget{classviews__plugin__access_a3d52dc2603a2991a46a3c212a04097d2}{
+\index{views\_\-plugin\_\-access@{views\_\-plugin\_\-access}!option\_\-definition@{option\_\-definition}}
+\index{option\_\-definition@{option\_\-definition}!views_plugin_access@{views\_\-plugin\_\-access}}
+\subsubsection[{option\_\-definition}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access::option\_\-definition ()}}
+\label{classviews__plugin__access_a3d52dc2603a2991a46a3c212a04097d2}
+Retrieve the options when this is a new access control plugin 
+
+Reimplemented in \hyperlink{classviews__plugin__access__perm_a7fb275a2bd4c2858064b8d4120ad8f22}{views\_\-plugin\_\-access\_\-perm}, \hyperlink{classviews__plugin__access__role_a76714a96150c4611683068a50be7eb26}{views\_\-plugin\_\-access\_\-role}, \hyperlink{classviews__test__plugin__access__test__dynamic_a93811dcacbb91508644cf989d53ca5cb}{views\_\-test\_\-plugin\_\-access\_\-test\_\-dynamic}, and \hyperlink{classviews__test__plugin__access__test__static_a5b36ae87f1e4d92e04d02bb946a15330}{views\_\-test\_\-plugin\_\-access\_\-test\_\-static}.\hypertarget{classviews__plugin__access_a530865442ea42db5e720e6c49f3d16f2}{
+\index{views\_\-plugin\_\-access@{views\_\-plugin\_\-access}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_plugin_access@{views\_\-plugin\_\-access}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__access_a530865442ea42db5e720e6c49f3d16f2}
+Provide the default form for setting options. 
+
+Reimplemented from \hyperlink{classviews__plugin_a1aaed8da1afd9f45293a37358c159837}{views\_\-plugin}.
+
+Reimplemented in \hyperlink{classviews__plugin__access__perm_af662e29c6b61b1a476b7b9ba368f5650}{views\_\-plugin\_\-access\_\-perm}, and \hyperlink{classviews__plugin__access__role_a76293d33e84a78e2ce0df6df955da760}{views\_\-plugin\_\-access\_\-role}.\hypertarget{classviews__plugin__access_ad0610dfaa0e225c5d2cd85c7a13287fd}{
+\index{views\_\-plugin\_\-access@{views\_\-plugin\_\-access}!options\_\-submit@{options\_\-submit}}
+\index{options\_\-submit@{options\_\-submit}!views_plugin_access@{views\_\-plugin\_\-access}}
+\subsubsection[{options\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access::options\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__access_ad0610dfaa0e225c5d2cd85c7a13287fd}
+Provide the default form form for submitting options 
+
+Reimplemented from \hyperlink{classviews__plugin_a442b0f392deb52725ec8159e05654e06}{views\_\-plugin}.
+
+Reimplemented in \hyperlink{classviews__plugin__access__role_ad9bf6eddd91a7c224fb813a58077ee4d}{views\_\-plugin\_\-access\_\-role}.\hypertarget{classviews__plugin__access_a1ac0bea409be6ef8d7eb4bfafcf760c6}{
+\index{views\_\-plugin\_\-access@{views\_\-plugin\_\-access}!options\_\-validate@{options\_\-validate}}
+\index{options\_\-validate@{options\_\-validate}!views_plugin_access@{views\_\-plugin\_\-access}}
+\subsubsection[{options\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access::options\_\-validate (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__access_a1ac0bea409be6ef8d7eb4bfafcf760c6}
+Provide the default form form for validating options 
+
+Reimplemented from \hyperlink{classviews__plugin_a46d72eb35feea36fed83cd1355a47431}{views\_\-plugin}.
+
+Reimplemented in \hyperlink{classviews__plugin__access__role_a82fda91cd55acbbcac1759448c8fc471}{views\_\-plugin\_\-access\_\-role}.\hypertarget{classviews__plugin__access_ade500a95e599deffa417f8cbdd67bbf4}{
+\index{views\_\-plugin\_\-access@{views\_\-plugin\_\-access}!summary\_\-title@{summary\_\-title}}
+\index{summary\_\-title@{summary\_\-title}!views_plugin_access@{views\_\-plugin\_\-access}}
+\subsubsection[{summary\_\-title}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access::summary\_\-title ()}}
+\label{classviews__plugin__access_ade500a95e599deffa417f8cbdd67bbf4}
+Return a string to display as the clickable title for the access control. 
+
+Reimplemented from \hyperlink{classviews__plugin_a9a4aaece48a7cf465dd95d59a3bc5ea1}{views\_\-plugin}.
+
+Reimplemented in \hyperlink{classviews__plugin__access__none_ab76847f19e943e463cbc2ff1723bdb00}{views\_\-plugin\_\-access\_\-none}, \hyperlink{classviews__plugin__access__perm_a1e0e33b03ffddf2b98c60740222d8ca5}{views\_\-plugin\_\-access\_\-perm}, and \hyperlink{classviews__plugin__access__role_a25dbbc0f06093f0e4ee13182ea0d277f}{views\_\-plugin\_\-access\_\-role}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/plugins/\hyperlink{views__plugin__access_8inc}{views\_\-plugin\_\-access.inc}\end{DoxyCompactItemize}

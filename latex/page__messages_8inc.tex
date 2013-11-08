@@ -1,0 +1,47 @@
+\hypertarget{page__messages_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/content\_\-types/page/page\_\-messages.inc File Reference}
+\label{page__messages_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/content\_\-types/page/page\_\-messages.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/content\_\-types/page/page\_\-messages.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{page__messages_8inc_a0760caa64cc186b76bef918084c48fc9}{ctools\_\-page\_\-messages\_\-content\_\-type\_\-render} (\$subtype, \$conf, \$panel\_\-args)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{page__messages_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to handle the 'page\_\-messages' content type which allows the status messages of the current page to be embedded into a panel. 
+
+\subsection{Function Documentation}
+\hypertarget{page__messages_8inc_a0760caa64cc186b76bef918084c48fc9}{
+\index{page\_\-messages.inc@{page\_\-messages.inc}!ctools\_\-page\_\-messages\_\-content\_\-type\_\-render@{ctools\_\-page\_\-messages\_\-content\_\-type\_\-render}}
+\index{ctools\_\-page\_\-messages\_\-content\_\-type\_\-render@{ctools\_\-page\_\-messages\_\-content\_\-type\_\-render}!page_messages.inc@{page\_\-messages.inc}}
+\subsubsection[{ctools\_\-page\_\-messages\_\-content\_\-type\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-page\_\-messages\_\-content\_\-type\_\-render (\$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em panel\_\-args})}}
+\label{page__messages_8inc_a0760caa64cc186b76bef918084c48fc9}
+Output function for the 'page\_\-messages' content type.
+
+Outputs the breadcrumb for the current page. 
+
+\subsection{Variable Documentation}
+\hypertarget{page__messages_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{page\_\-messages.inc@{page\_\-messages.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!page_messages.inc@{page\_\-messages.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{page__messages_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('Status messages'),
+  'single' => TRUE,
+  'icon' => 'icon_page.png',
+  'description' => t('Add the status messages of the current page as content.'),
+  'category' => t('Page elements'),
+  'render last' => TRUE,
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

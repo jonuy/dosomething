@@ -1,0 +1,70 @@
+\hypertarget{taxonomy_8pages_8inc}{
+\section{html/modules/taxonomy/taxonomy.pages.inc File Reference}
+\label{taxonomy_8pages_8inc}\index{html/modules/taxonomy/taxonomy.pages.inc@{html/modules/taxonomy/taxonomy.pages.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{taxonomy_8pages_8inc_a43b5178b66864e214a43196bd7b15c91}{taxonomy\_\-term\_\-page} (\$term)
+\item 
+\hyperlink{taxonomy_8pages_8inc_a8400d3de3b78abc951c0e1c6657c8fc1}{taxonomy\_\-term\_\-feed} (\$term)
+\item 
+\hyperlink{taxonomy_8pages_8inc_ac738ea7a02da7aad1b3dbb986939c7ce}{taxonomy\_\-autocomplete} (\$field\_\-name= '', \$tags\_\-typed= '')
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Page callbacks for the taxonomy module. 
+
+\subsection{Function Documentation}
+\hypertarget{taxonomy_8pages_8inc_ac738ea7a02da7aad1b3dbb986939c7ce}{
+\index{taxonomy.pages.inc@{taxonomy.pages.inc}!taxonomy\_\-autocomplete@{taxonomy\_\-autocomplete}}
+\index{taxonomy\_\-autocomplete@{taxonomy\_\-autocomplete}!taxonomy.pages.inc@{taxonomy.pages.inc}}
+\subsubsection[{taxonomy\_\-autocomplete}]{\setlength{\rightskip}{0pt plus 5cm}taxonomy\_\-autocomplete (\$ {\em field\_\-name} = {\ttfamily ''}, \/  \$ {\em tags\_\-typed} = {\ttfamily ''})}}
+\label{taxonomy_8pages_8inc_ac738ea7a02da7aad1b3dbb986939c7ce}
+Page callback: Outputs JSON for taxonomy autocomplete suggestions.
+
+Path: taxonomy/autocomplete
+
+This callback outputs term name suggestions in response to Ajax requests made by the taxonomy autocomplete widget for taxonomy term reference fields. The output is a JSON object of plain-\/text term suggestions, keyed by the user-\/entered value with the completed term name appended. Term names containing commas are wrapped in quotes.
+
+For example, suppose the user has entered the string 'red fish, blue' in the field, and there are two taxonomy terms, 'blue fish' and 'blue moon'. The JSON output would have the following structure: 
+\begin{DoxyCode}
+   {
+     "red fish, blue fish": "blue fish",
+     "red fish, blue moon": "blue moon",
+   };
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field\_\-name}]The name of the term reference field. \item[{\em \$tags\_\-typed}](optional) A comma-\/separated list of term names entered in the autocomplete form element. Only the last term is used for autocompletion. Defaults to '' (an empty string).\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{taxonomy_8module_a256fff9f5fb7e3f68d2cb9e82d35b68c}{taxonomy\_\-menu()} 
+
+\hyperlink{taxonomy_8module_ad6d45fa8106c7ee50059ebf9e89b9268}{taxonomy\_\-field\_\-widget\_\-info()} 
+\end{DoxySeeAlso}
+\hypertarget{taxonomy_8pages_8inc_a8400d3de3b78abc951c0e1c6657c8fc1}{
+\index{taxonomy.pages.inc@{taxonomy.pages.inc}!taxonomy\_\-term\_\-feed@{taxonomy\_\-term\_\-feed}}
+\index{taxonomy\_\-term\_\-feed@{taxonomy\_\-term\_\-feed}!taxonomy.pages.inc@{taxonomy.pages.inc}}
+\subsubsection[{taxonomy\_\-term\_\-feed}]{\setlength{\rightskip}{0pt plus 5cm}taxonomy\_\-term\_\-feed (\$ {\em term})}}
+\label{taxonomy_8pages_8inc_a8400d3de3b78abc951c0e1c6657c8fc1}
+Generate the content feed for a taxonomy term.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$term}]The taxonomy term. \end{DoxyParams}
+\hypertarget{taxonomy_8pages_8inc_a43b5178b66864e214a43196bd7b15c91}{
+\index{taxonomy.pages.inc@{taxonomy.pages.inc}!taxonomy\_\-term\_\-page@{taxonomy\_\-term\_\-page}}
+\index{taxonomy\_\-term\_\-page@{taxonomy\_\-term\_\-page}!taxonomy.pages.inc@{taxonomy.pages.inc}}
+\subsubsection[{taxonomy\_\-term\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}taxonomy\_\-term\_\-page (\$ {\em term})}}
+\label{taxonomy_8pages_8inc_a43b5178b66864e214a43196bd7b15c91}
+Menu callback; displays all nodes associated with a term.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$term}]The taxonomy term. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The page content. 
+\end{DoxyReturn}

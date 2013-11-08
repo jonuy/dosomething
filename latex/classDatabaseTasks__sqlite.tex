@@ -1,0 +1,87 @@
+\hypertarget{classDatabaseTasks__sqlite}{
+\section{DatabaseTasks\_\-sqlite Class Reference}
+\label{classDatabaseTasks__sqlite}\index{DatabaseTasks\_\-sqlite@{DatabaseTasks\_\-sqlite}}
+}
+Inheritance diagram for DatabaseTasks\_\-sqlite::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classDatabaseTasks__sqlite}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDatabaseTasks__sqlite_ad31220279e6cbec9d248a66e8b51fe2f}{name} ()
+\item 
+\hyperlink{classDatabaseTasks__sqlite_ac546ff3ed7f1ece5726b3c5cd7a39ef9}{minimumVersion} ()
+\item 
+\hyperlink{classDatabaseTasks__sqlite_a8406f646a0461ef07f4d9ad01279aaea}{getFormOptions} (\$database)
+\item 
+\hyperlink{classDatabaseTasks__sqlite_a3d2e2aff4e7a3d890a82b057aab722c4}{validateDatabaseSettings} (\$database)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDatabaseTasks__sqlite_a8f885f6c8890d26b5e2a2c73ee6984f7}{
+{\bfseries \$pdoDriver} = 'sqlite'}
+\label{classDatabaseTasks__sqlite_a8f885f6c8890d26b5e2a2c73ee6984f7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDatabaseTasks__sqlite_a8406f646a0461ef07f4d9ad01279aaea}{
+\index{DatabaseTasks\_\-sqlite@{DatabaseTasks\_\-sqlite}!getFormOptions@{getFormOptions}}
+\index{getFormOptions@{getFormOptions}!DatabaseTasks_sqlite@{DatabaseTasks\_\-sqlite}}
+\subsubsection[{getFormOptions}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseTasks\_\-sqlite::getFormOptions (\$ {\em database})}}
+\label{classDatabaseTasks__sqlite_a8406f646a0461ef07f4d9ad01279aaea}
+Return driver specific configuration options.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$database}]An array of driver specific configuration options.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The options form array. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseTasks_a97968c7dd7807a65a301a27ea3d15480}{DatabaseTasks}.\hypertarget{classDatabaseTasks__sqlite_ac546ff3ed7f1ece5726b3c5cd7a39ef9}{
+\index{DatabaseTasks\_\-sqlite@{DatabaseTasks\_\-sqlite}!minimumVersion@{minimumVersion}}
+\index{minimumVersion@{minimumVersion}!DatabaseTasks_sqlite@{DatabaseTasks\_\-sqlite}}
+\subsubsection[{minimumVersion}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseTasks\_\-sqlite::minimumVersion ()}}
+\label{classDatabaseTasks__sqlite_ac546ff3ed7f1ece5726b3c5cd7a39ef9}
+Minimum engine version.
+
+\begin{Desc}
+\item[\hyperlink{todo__todo000003}{Todo}]: consider upping to 3.6.8 in Drupal 8 to get SAVEPOINT support. \end{Desc}
+
+
+Reimplemented from \hyperlink{classDatabaseTasks_a840dd551944911605ee2e139a434efea}{DatabaseTasks}.\hypertarget{classDatabaseTasks__sqlite_ad31220279e6cbec9d248a66e8b51fe2f}{
+\index{DatabaseTasks\_\-sqlite@{DatabaseTasks\_\-sqlite}!name@{name}}
+\index{name@{name}!DatabaseTasks_sqlite@{DatabaseTasks\_\-sqlite}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseTasks\_\-sqlite::name ()}}
+\label{classDatabaseTasks__sqlite_ad31220279e6cbec9d248a66e8b51fe2f}
+Return the human-\/readable name of the driver. 
+
+Reimplemented from \hyperlink{classDatabaseTasks_ae582e57b43461aad87f47ad0d37b6c9a}{DatabaseTasks}.\hypertarget{classDatabaseTasks__sqlite_a3d2e2aff4e7a3d890a82b057aab722c4}{
+\index{DatabaseTasks\_\-sqlite@{DatabaseTasks\_\-sqlite}!validateDatabaseSettings@{validateDatabaseSettings}}
+\index{validateDatabaseSettings@{validateDatabaseSettings}!DatabaseTasks_sqlite@{DatabaseTasks\_\-sqlite}}
+\subsubsection[{validateDatabaseSettings}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseTasks\_\-sqlite::validateDatabaseSettings (\$ {\em database})}}
+\label{classDatabaseTasks__sqlite_a3d2e2aff4e7a3d890a82b057aab722c4}
+Validates driver specific configuration settings.
+
+Checks to ensure correct basic database settings and that a proper connection to the database can be established.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$database}]An array of driver specific configuration options.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of driver configuration errors, keyed by form element name. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseTasks_a44116b4f564f8fcfdd5ade73853419b8}{DatabaseTasks}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/database/sqlite/\hyperlink{database_2sqlite_2install_8inc}{install.inc}\end{DoxyCompactItemize}

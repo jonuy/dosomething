@@ -1,0 +1,43 @@
+\hypertarget{book-navigation_8tpl_8php}{
+\section{html/modules/book/book-\/navigation.tpl.php File Reference}
+\label{book-navigation_8tpl_8php}\index{html/modules/book/book-\/navigation.tpl.php@{html/modules/book/book-\/navigation.tpl.php}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{book-navigation_8tpl_8php_a250010eed3e0a7047a9141f8f7eb73b0}{
+if(\$tree$|$$|$\$has\_\-links) print {\bfseries \$tree}}
+\label{book-navigation_8tpl_8php_a250010eed3e0a7047a9141f8f7eb73b0}
+
+\item 
+\hypertarget{book-navigation_8tpl_8php_a82cd33ca97ff99f2fcc5e9c81d65251b}{
+{\bfseries endif}}
+\label{book-navigation_8tpl_8php_a82cd33ca97ff99f2fcc5e9c81d65251b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Default theme implementation to navigate books.
+
+Presented under nodes that are a part of book outlines.
+
+Available variables:
+\begin{DoxyItemize}
+\item \$tree: The immediate children of the current node rendered as an unordered list.
+\item \$current\_\-depth: Depth of the current node within the book outline. Provided for context.
+\item \$prev\_\-url: URL to the previous node.
+\item \$prev\_\-title: Title of the previous node.
+\item \$parent\_\-url: URL to the parent node.
+\item \$parent\_\-title: Title of the parent node. Not printed by default. Provided as an option.
+\item \$next\_\-url: URL to the next node.
+\item \$next\_\-title: Title of the next node.
+\item \$has\_\-links: Flags TRUE whenever the previous, parent or next data has a value.
+\item \$book\_\-id: The book ID of the current outline being viewed. Same as the node ID containing the entire outline. Provided for context.
+\item \$book\_\-url: The book/node URL of the current outline being viewed. Provided as an option. Not used by default.
+\item \$book\_\-title: The book/node title of the current outline being viewed. Provided as an option. Not used by default.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{book_8module_aa5d42034a0e369d49bb21ae74409e9fa}{template\_\-preprocess\_\-book\_\-navigation()} 
+\end{DoxySeeAlso}

@@ -1,0 +1,48 @@
+\hypertarget{search-block-form_8tpl_8php}{
+\section{html/modules/search/search-\/block-\/form.tpl.php File Reference}
+\label{search-block-form_8tpl_8php}\index{html/modules/search/search-\/block-\/form.tpl.php@{html/modules/search/search-\/block-\/form.tpl.php}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{search-block-form_8tpl_8php_a82cd33ca97ff99f2fcc5e9c81d65251b}{
+{\bfseries endif}}
+\label{search-block-form_8tpl_8php_a82cd33ca97ff99f2fcc5e9c81d65251b}
+
+\item 
+\hypertarget{search-block-form_8tpl_8php_afd923baf84a0be7eed66628a9497cc0d}{
+print {\bfseries \$search\_\-form}}
+\label{search-block-form_8tpl_8php_afd923baf84a0be7eed66628a9497cc0d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Displays the search form block.
+
+Available variables:
+\begin{DoxyItemize}
+\item \$search\_\-form: The complete search form ready for print.
+\item \$search: Associative array of search elements. Can be used to print each form element separately.
+\end{DoxyItemize}
+
+Default elements within \$search:
+\begin{DoxyItemize}
+\item \$search\mbox{[}'search\_\-block\_\-form'\mbox{]}: Text input area wrapped in a div.
+\item \$search\mbox{[}'actions'\mbox{]}: Rendered form buttons.
+\item \$search\mbox{[}'hidden'\mbox{]}: Hidden form elements. Used to validate forms when submitted.
+\end{DoxyItemize}
+
+Modules can add to the search form, so it is recommended to check for their existence before printing. The default keys will always exist. To check for a module-\/provided field, use code like this: 
+\begin{DoxyCode}
+   <?php if (isset($search['extra_field'])): ?>
+     <div class="extra-field">
+       <?php print $search['extra_field']; ?>
+     </div>
+   <?php endif; ?>
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__search_ga545a7c7108d985d17d8b8b4054ba66ef}{template\_\-preprocess\_\-search\_\-block\_\-form()} 
+\end{DoxySeeAlso}

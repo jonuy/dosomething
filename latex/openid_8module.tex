@@ -1,0 +1,325 @@
+\hypertarget{openid_8module}{
+\section{html/modules/openid/openid.module File Reference}
+\label{openid_8module}\index{html/modules/openid/openid.module@{html/modules/openid/openid.module}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{openid_8module_aa69d0d365b41e46075ea773c996138d7}{openid\_\-menu} ()
+\item 
+\hyperlink{openid_8module_aff513e1dfb782931acb6ba216acf47d6}{openid\_\-menu\_\-site\_\-status\_\-alter} (\&\$menu\_\-site\_\-status, \$path)
+\item 
+\hyperlink{openid_8module_aac1965c6df11df447cef2984b059de23}{openid\_\-admin\_\-paths} ()
+\item 
+\hyperlink{openid_8module_ab1f39ca3181eb680cf6ed2600f879299}{openid\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{openid_8module_a11174384d46cea926dbe85c0fc64dcce}{openid\_\-user\_\-insert} (\&\$edit, \$account, \$category)
+\item 
+\hyperlink{openid_8module_aa0ecaf6826cbc73940e3e88ef18a2715}{openid\_\-user\_\-login} (\&\$edit, \$account)
+\item 
+\hyperlink{openid_8module_a46b5934f9e70d9f51afb48d413db6ffe}{openid\_\-user\_\-logout} (\$account)
+\item 
+\hyperlink{openid_8module_a9820da9d7dabe2b3ef2e3e47af3d7a35}{openid\_\-form\_\-user\_\-login\_\-block\_\-alter} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{openid_8module_a0814fd0ed315219d49d117462946c6c3}{openid\_\-form\_\-user\_\-login\_\-alter} (\&\$form, \&\$form\_\-state)
+\item 
+\hypertarget{openid_8module_a134a571d0b1f54e9feed91d2aacd7d1d}{
+{\bfseries \_\-openid\_\-user\_\-login\_\-form\_\-alter} (\&\$form, \&\$form\_\-state)}
+\label{openid_8module_a134a571d0b1f54e9feed91d2aacd7d1d}
+
+\item 
+\hyperlink{openid_8module_a3e72c243b50c2c5382c2ca88a9d8798f}{openid\_\-form\_\-user\_\-register\_\-form\_\-alter} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{openid_8module_aae1394cded5f4c7167dc90307929472c}{openid\_\-login\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{openid_8module_a09025e6f08d24b6630a5bc95d26d1fcf}{openid\_\-begin} (\$claimed\_\-id, \$return\_\-to= '', \$form\_\-values=array())
+\item 
+\hyperlink{openid_8module_a5d4362ca6e1e5f62daa2de3f5b6709f3}{openid\_\-complete} (\$response=array())
+\item 
+\hyperlink{openid_8module_ae52417e5179c251a3256583ea3e67d30}{openid\_\-discovery} (\$claimed\_\-id)
+\item 
+\hyperlink{openid_8module_adf3edad18f0e31d9dc5c2ed6429f1983}{openid\_\-openid\_\-discovery\_\-method\_\-info} ()
+\item 
+\hyperlink{openid_8module_a8fe2a535999c4dbbea783966cf26443f}{\_\-openid\_\-xri\_\-discovery} (\$claimed\_\-id)
+\item 
+\hyperlink{openid_8module_a90d1aa7f4e4f3778d16564d1db5ecf14}{\_\-openid\_\-xrds\_\-discovery} (\$claimed\_\-id)
+\item 
+\hyperlink{openid_8module_a24787fe76c0379844feb68970ee993fb}{openid\_\-openid\_\-normalization\_\-method\_\-info} ()
+\item 
+\hyperlink{openid_8module_a305374e14009f439fbef9733223b6660}{openid\_\-association} (\$op\_\-endpoint)
+\item 
+\hyperlink{openid_8module_a40916dd14d08da91ecd140824aac9578}{openid\_\-authentication} (\$response)
+\item 
+\hypertarget{openid_8module_a1a7ae0472128ef1eb4ee9046fc50a67c}{
+{\bfseries openid\_\-association\_\-request} (\$public)}
+\label{openid_8module_a1a7ae0472128ef1eb4ee9046fc50a67c}
+
+\item 
+\hypertarget{openid_8module_a9bed1dc27e01330aed5098920420065d}{
+{\bfseries openid\_\-authentication\_\-request} (\$claimed\_\-id, \$identity, \$return\_\-to= '', \$assoc\_\-handle= '', \$service)}
+\label{openid_8module_a9bed1dc27e01330aed5098920420065d}
+
+\item 
+\hyperlink{openid_8module_a8f328709b317b9c509b5572afa331469}{openid\_\-verify\_\-assertion} (\$service, \$response)
+\item 
+\hyperlink{openid_8module_ab2abb87e4bd165165d3c851c8a2ac344}{openid\_\-verify\_\-assertion\_\-signature} (\$service, \$association, \$response)
+\item 
+\hyperlink{openid_8module_adc4a4bdf953124a14a6265264f70ca2e}{openid\_\-verify\_\-assertion\_\-nonce} (\$service, \$response)
+\item 
+\hyperlink{openid_8module_a523fa00a214374d55f9748c489b2180b}{openid\_\-verify\_\-assertion\_\-return\_\-url} (\$service, \$response)
+\item 
+\hyperlink{openid_8module_af88e0dcff253cebd08363501020daf76}{openid\_\-cron} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implement OpenID Relying Party support for Drupal 
+
+\subsection{Function Documentation}
+\hypertarget{openid_8module_a90d1aa7f4e4f3778d16564d1db5ecf14}{
+\index{openid.module@{openid.module}!\_\-openid\_\-xrds\_\-discovery@{\_\-openid\_\-xrds\_\-discovery}}
+\index{\_\-openid\_\-xrds\_\-discovery@{\_\-openid\_\-xrds\_\-discovery}!openid.module@{openid.module}}
+\subsubsection[{\_\-openid\_\-xrds\_\-discovery}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-xrds\_\-discovery (\$ {\em claimed\_\-id})}}
+\label{openid_8module_a90d1aa7f4e4f3778d16564d1db5ecf14}
+OpenID discovery method: perform a XRDS discovery.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://openid.net/specs/openid-authentication-2_0.html#discovery}{\tt http://openid.net/specs/openid-\/authentication-\/2\_\-0.html\#discovery} 
+
+\hyperlink{group__hooks_gaec6cbfdd913d8ba670c991b87bbf9676}{hook\_\-openid\_\-discovery\_\-method\_\-info()} 
+
+\hyperlink{openid_8module_ae52417e5179c251a3256583ea3e67d30}{openid\_\-discovery()}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+An array of discovered services and claimed identifier or NULL. See \hyperlink{openid_8module_ae52417e5179c251a3256583ea3e67d30}{openid\_\-discovery()} for more specific information. 
+\end{DoxyReturn}
+\hypertarget{openid_8module_a8fe2a535999c4dbbea783966cf26443f}{
+\index{openid.module@{openid.module}!\_\-openid\_\-xri\_\-discovery@{\_\-openid\_\-xri\_\-discovery}}
+\index{\_\-openid\_\-xri\_\-discovery@{\_\-openid\_\-xri\_\-discovery}!openid.module@{openid.module}}
+\subsubsection[{\_\-openid\_\-xri\_\-discovery}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-xri\_\-discovery (\$ {\em claimed\_\-id})}}
+\label{openid_8module_a8fe2a535999c4dbbea783966cf26443f}
+OpenID discovery method: perform an XRI discovery.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://openid.net/specs/openid-authentication-2_0.html#discovery}{\tt http://openid.net/specs/openid-\/authentication-\/2\_\-0.html\#discovery} 
+
+\hyperlink{group__hooks_gaec6cbfdd913d8ba670c991b87bbf9676}{hook\_\-openid\_\-discovery\_\-method\_\-info()} 
+
+\hyperlink{openid_8module_ae52417e5179c251a3256583ea3e67d30}{openid\_\-discovery()}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+An array of discovered services and claimed identifier or NULL. See \hyperlink{openid_8module_ae52417e5179c251a3256583ea3e67d30}{openid\_\-discovery()} for more specific information. 
+\end{DoxyReturn}
+\hypertarget{openid_8module_aac1965c6df11df447cef2984b059de23}{
+\index{openid.module@{openid.module}!openid\_\-admin\_\-paths@{openid\_\-admin\_\-paths}}
+\index{openid\_\-admin\_\-paths@{openid\_\-admin\_\-paths}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-admin\_\-paths}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-admin\_\-paths ()}}
+\label{openid_8module_aac1965c6df11df447cef2984b059de23}
+Implements \hyperlink{group__hooks_ga3fe6d93afc8bb04afbd9e3c326d1bdc1}{hook\_\-admin\_\-paths()}. \hypertarget{openid_8module_a305374e14009f439fbef9733223b6660}{
+\index{openid.module@{openid.module}!openid\_\-association@{openid\_\-association}}
+\index{openid\_\-association@{openid\_\-association}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-association}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-association (\$ {\em op\_\-endpoint})}}
+\label{openid_8module_a305374e14009f439fbef9733223b6660}
+Attempt to create a shared secret with the OpenID Provider.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$op\_\-endpoint}]URL of the OpenID Provider endpoint.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$assoc\_\-handle The association handle. 
+\end{DoxyReturn}
+\hypertarget{openid_8module_a40916dd14d08da91ecd140824aac9578}{
+\index{openid.module@{openid.module}!openid\_\-authentication@{openid\_\-authentication}}
+\index{openid\_\-authentication@{openid\_\-authentication}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-authentication}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-authentication (\$ {\em response})}}
+\label{openid_8module_a40916dd14d08da91ecd140824aac9578}
+Authenticate a user or attempt registration.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$response}]Response values from the OpenID Provider. \end{DoxyParams}
+\hypertarget{openid_8module_a09025e6f08d24b6630a5bc95d26d1fcf}{
+\index{openid.module@{openid.module}!openid\_\-begin@{openid\_\-begin}}
+\index{openid\_\-begin@{openid\_\-begin}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-begin}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-begin (\$ {\em claimed\_\-id}, \/  \$ {\em return\_\-to} = {\ttfamily ''}, \/  \$ {\em form\_\-values} = {\ttfamily array()})}}
+\label{openid_8module_a09025e6f08d24b6630a5bc95d26d1fcf}
+The initial step of OpenID authentication responsible for the following:
+\begin{DoxyItemize}
+\item Perform discovery on the claimed OpenID.
+\item If possible, create an association with the Provider's endpoint.
+\item Create the authentication request.
+\item Perform the appropriate redirect.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$claimed\_\-id}]The OpenID to authenticate \item[{\em \$return\_\-to}]The endpoint to return to from the OpenID Provider \end{DoxyParams}
+\hypertarget{openid_8module_a5d4362ca6e1e5f62daa2de3f5b6709f3}{
+\index{openid.module@{openid.module}!openid\_\-complete@{openid\_\-complete}}
+\index{openid\_\-complete@{openid\_\-complete}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-complete}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-complete (\$ {\em response} = {\ttfamily array()})}}
+\label{openid_8module_a5d4362ca6e1e5f62daa2de3f5b6709f3}
+Completes OpenID authentication by validating returned data from the OpenID Provider.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$response}]Array of returned values from the OpenID Provider.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$response Response values for further processing with \$response\mbox{[}'status'\mbox{]} set to one of 'success', 'failed' or 'cancel'. 
+\end{DoxyReturn}
+\hypertarget{openid_8module_af88e0dcff253cebd08363501020daf76}{
+\index{openid.module@{openid.module}!openid\_\-cron@{openid\_\-cron}}
+\index{openid\_\-cron@{openid\_\-cron}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-cron}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-cron ()}}
+\label{openid_8module_af88e0dcff253cebd08363501020daf76}
+Remove expired nonces from the database.
+
+Implements \hyperlink{group__hooks_gaf07f1e3d98112fc2ba6920cf7ee6fb16}{hook\_\-cron()}. \hypertarget{openid_8module_ae52417e5179c251a3256583ea3e67d30}{
+\index{openid.module@{openid.module}!openid\_\-discovery@{openid\_\-discovery}}
+\index{openid\_\-discovery@{openid\_\-discovery}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-discovery}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-discovery (\$ {\em claimed\_\-id})}}
+\label{openid_8module_ae52417e5179c251a3256583ea3e67d30}
+Perform discovery on a claimed ID to determine the OpenID provider endpoint.
+
+Discovery methods are provided by the hook\_\-openid\_\-discovery\_\-method\_\-info and could be further altered using the hook\_\-openid\_\-discovery\_\-method\_\-info\_\-alter.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$claimed\_\-id}]The OpenID URL to perform discovery on.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The resulting discovery array from the first successful discovery method, which must contain following keys:
+\begin{DoxyItemize}
+\item 'services' (required) an array of discovered services (including OpenID version, endpoint URI, etc).
+\item 'claimed\_\-id' (optional) new claimed identifer, found by following HTTP redirects during the services discovery. If all the discovery method fails or if no appropriate discovery method is found, FALSE is returned. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{openid_8module_a0814fd0ed315219d49d117462946c6c3}{
+\index{openid.module@{openid.module}!openid\_\-form\_\-user\_\-login\_\-alter@{openid\_\-form\_\-user\_\-login\_\-alter}}
+\index{openid\_\-form\_\-user\_\-login\_\-alter@{openid\_\-form\_\-user\_\-login\_\-alter}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-form\_\-user\_\-login\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-form\_\-user\_\-login\_\-alter (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{openid_8module_a0814fd0ed315219d49d117462946c6c3}
+Implements \hyperlink{group__hooks_ga8d4a4089551493d55911bd5c4f218264}{hook\_\-form\_\-FORM\_\-ID\_\-alter()}. \hypertarget{openid_8module_a9820da9d7dabe2b3ef2e3e47af3d7a35}{
+\index{openid.module@{openid.module}!openid\_\-form\_\-user\_\-login\_\-block\_\-alter@{openid\_\-form\_\-user\_\-login\_\-block\_\-alter}}
+\index{openid\_\-form\_\-user\_\-login\_\-block\_\-alter@{openid\_\-form\_\-user\_\-login\_\-block\_\-alter}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-form\_\-user\_\-login\_\-block\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-form\_\-user\_\-login\_\-block\_\-alter (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{openid_8module_a9820da9d7dabe2b3ef2e3e47af3d7a35}
+Implements \hyperlink{group__hooks_ga8d4a4089551493d55911bd5c4f218264}{hook\_\-form\_\-FORM\_\-ID\_\-alter()}. \hypertarget{openid_8module_a3e72c243b50c2c5382c2ca88a9d8798f}{
+\index{openid.module@{openid.module}!openid\_\-form\_\-user\_\-register\_\-form\_\-alter@{openid\_\-form\_\-user\_\-register\_\-form\_\-alter}}
+\index{openid\_\-form\_\-user\_\-register\_\-form\_\-alter@{openid\_\-form\_\-user\_\-register\_\-form\_\-alter}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-form\_\-user\_\-register\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-form\_\-user\_\-register\_\-form\_\-alter (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{openid_8module_a3e72c243b50c2c5382c2ca88a9d8798f}
+Implements \hyperlink{group__hooks_ga8d4a4089551493d55911bd5c4f218264}{hook\_\-form\_\-FORM\_\-ID\_\-alter()}.
+
+Prefills the login form with values acquired via OpenID. \hypertarget{openid_8module_ab1f39ca3181eb680cf6ed2600f879299}{
+\index{openid.module@{openid.module}!openid\_\-help@{openid\_\-help}}
+\index{openid\_\-help@{openid\_\-help}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{openid_8module_ab1f39ca3181eb680cf6ed2600f879299}
+Implements \hyperlink{group__hooks_ga5589c2714a782738e8851c4c90231f0e}{hook\_\-help()}. \hypertarget{openid_8module_aae1394cded5f4c7167dc90307929472c}{
+\index{openid.module@{openid.module}!openid\_\-login\_\-validate@{openid\_\-login\_\-validate}}
+\index{openid\_\-login\_\-validate@{openid\_\-login\_\-validate}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-login\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-login\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{openid_8module_aae1394cded5f4c7167dc90307929472c}
+Login form \_\-validate hook \hypertarget{openid_8module_aa69d0d365b41e46075ea773c996138d7}{
+\index{openid.module@{openid.module}!openid\_\-menu@{openid\_\-menu}}
+\index{openid\_\-menu@{openid\_\-menu}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-menu ()}}
+\label{openid_8module_aa69d0d365b41e46075ea773c996138d7}
+Implements \hyperlink{group__hooks_ga5c95244fea59b25666e409759e133ded}{hook\_\-menu()}. \hypertarget{openid_8module_aff513e1dfb782931acb6ba216acf47d6}{
+\index{openid.module@{openid.module}!openid\_\-menu\_\-site\_\-status\_\-alter@{openid\_\-menu\_\-site\_\-status\_\-alter}}
+\index{openid\_\-menu\_\-site\_\-status\_\-alter@{openid\_\-menu\_\-site\_\-status\_\-alter}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-menu\_\-site\_\-status\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-menu\_\-site\_\-status\_\-alter (\&\$ {\em menu\_\-site\_\-status}, \/  \$ {\em path})}}
+\label{openid_8module_aff513e1dfb782931acb6ba216acf47d6}
+Implements \hyperlink{group__hooks_ga3096be11aad61c8b342ade94789f6137}{hook\_\-menu\_\-site\_\-status\_\-alter()}. \hypertarget{openid_8module_adf3edad18f0e31d9dc5c2ed6429f1983}{
+\index{openid.module@{openid.module}!openid\_\-openid\_\-discovery\_\-method\_\-info@{openid\_\-openid\_\-discovery\_\-method\_\-info}}
+\index{openid\_\-openid\_\-discovery\_\-method\_\-info@{openid\_\-openid\_\-discovery\_\-method\_\-info}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-openid\_\-discovery\_\-method\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-openid\_\-discovery\_\-method\_\-info ()}}
+\label{openid_8module_adf3edad18f0e31d9dc5c2ed6429f1983}
+Implements \hyperlink{group__hooks_gaec6cbfdd913d8ba670c991b87bbf9676}{hook\_\-openid\_\-discovery\_\-method\_\-info()}.
+
+Define standard discovery methods. \hypertarget{openid_8module_a24787fe76c0379844feb68970ee993fb}{
+\index{openid.module@{openid.module}!openid\_\-openid\_\-normalization\_\-method\_\-info@{openid\_\-openid\_\-normalization\_\-method\_\-info}}
+\index{openid\_\-openid\_\-normalization\_\-method\_\-info@{openid\_\-openid\_\-normalization\_\-method\_\-info}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-openid\_\-normalization\_\-method\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-openid\_\-normalization\_\-method\_\-info ()}}
+\label{openid_8module_a24787fe76c0379844feb68970ee993fb}
+Implements \hyperlink{group__hooks_ga53b4878d46aae5aea7de146ab543c585}{hook\_\-openid\_\-normalization\_\-method\_\-info()}.
+
+Define standard normalization methods. \hypertarget{openid_8module_a11174384d46cea926dbe85c0fc64dcce}{
+\index{openid.module@{openid.module}!openid\_\-user\_\-insert@{openid\_\-user\_\-insert}}
+\index{openid\_\-user\_\-insert@{openid\_\-user\_\-insert}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-user\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-user\_\-insert (\&\$ {\em edit}, \/  \$ {\em account}, \/  \$ {\em category})}}
+\label{openid_8module_a11174384d46cea926dbe85c0fc64dcce}
+Implements \hyperlink{group__hooks_gaa3e2c4c972ee796d216b15da7aaf9c2c}{hook\_\-user\_\-insert()}. \hypertarget{openid_8module_aa0ecaf6826cbc73940e3e88ef18a2715}{
+\index{openid.module@{openid.module}!openid\_\-user\_\-login@{openid\_\-user\_\-login}}
+\index{openid\_\-user\_\-login@{openid\_\-user\_\-login}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-user\_\-login}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-user\_\-login (\&\$ {\em edit}, \/  \$ {\em account})}}
+\label{openid_8module_aa0ecaf6826cbc73940e3e88ef18a2715}
+Implements \hyperlink{group__hooks_ga8cce712a39ee6e57bd506b5a0c457d09}{hook\_\-user\_\-login()}.
+
+Save openid\_\-identifier to visitor cookie. \hypertarget{openid_8module_a46b5934f9e70d9f51afb48d413db6ffe}{
+\index{openid.module@{openid.module}!openid\_\-user\_\-logout@{openid\_\-user\_\-logout}}
+\index{openid\_\-user\_\-logout@{openid\_\-user\_\-logout}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-user\_\-logout}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-user\_\-logout (\$ {\em account})}}
+\label{openid_8module_a46b5934f9e70d9f51afb48d413db6ffe}
+Implements \hyperlink{group__hooks_ga49a4bb63d4b643cf9e3feb2266fe4865}{hook\_\-user\_\-logout()}.
+
+Delete any openid\_\-identifier in visitor cookie. \hypertarget{openid_8module_a8f328709b317b9c509b5572afa331469}{
+\index{openid.module@{openid.module}!openid\_\-verify\_\-assertion@{openid\_\-verify\_\-assertion}}
+\index{openid\_\-verify\_\-assertion@{openid\_\-verify\_\-assertion}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-verify\_\-assertion}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-verify\_\-assertion (\$ {\em service}, \/  \$ {\em response})}}
+\label{openid_8module_a8f328709b317b9c509b5572afa331469}
+Attempt to verify the response received from the OpenID Provider.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$service}]Array describing the OpenID provider. \item[{\em \$response}]Array of response values from the provider.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{http://openid.net/specs/openid-authentication-2_0.html#rfc.section.11.4}{\tt http://openid.net/specs/openid-\/authentication-\/2\_\-0.html\#rfc.section.11.4} 
+\end{DoxySeeAlso}
+\hypertarget{openid_8module_adc4a4bdf953124a14a6265264f70ca2e}{
+\index{openid.module@{openid.module}!openid\_\-verify\_\-assertion\_\-nonce@{openid\_\-verify\_\-assertion\_\-nonce}}
+\index{openid\_\-verify\_\-assertion\_\-nonce@{openid\_\-verify\_\-assertion\_\-nonce}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-verify\_\-assertion\_\-nonce}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-verify\_\-assertion\_\-nonce (\$ {\em service}, \/  \$ {\em response})}}
+\label{openid_8module_adc4a4bdf953124a14a6265264f70ca2e}
+Verify that the nonce has not been used in earlier assertions from the same OpenID provider.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$service}]Array describing the OpenID provider. \item[{\em \$response}]Array of response values from the provider.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the nonce has not expired and has not been used earlier. 
+\end{DoxyReturn}
+\hypertarget{openid_8module_a523fa00a214374d55f9748c489b2180b}{
+\index{openid.module@{openid.module}!openid\_\-verify\_\-assertion\_\-return\_\-url@{openid\_\-verify\_\-assertion\_\-return\_\-url}}
+\index{openid\_\-verify\_\-assertion\_\-return\_\-url@{openid\_\-verify\_\-assertion\_\-return\_\-url}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-verify\_\-assertion\_\-return\_\-url}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-verify\_\-assertion\_\-return\_\-url (\$ {\em service}, \/  \$ {\em response})}}
+\label{openid_8module_a523fa00a214374d55f9748c489b2180b}
+Verify that openid.return\_\-to matches the current URL.
+
+See OpenID Authentication 2.0, section 11.1. While OpenID Authentication 1.1, section 4.3 does not mandate return\_\-to verification, the received return\_\-to should still match these constraints.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$service}]Array describing the OpenID provider. \item[{\em \$response}]Array of response values from the provider.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if return\_\-to is valid, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{openid_8module_ab2abb87e4bd165165d3c851c8a2ac344}{
+\index{openid.module@{openid.module}!openid\_\-verify\_\-assertion\_\-signature@{openid\_\-verify\_\-assertion\_\-signature}}
+\index{openid\_\-verify\_\-assertion\_\-signature@{openid\_\-verify\_\-assertion\_\-signature}!openid.module@{openid.module}}
+\subsubsection[{openid\_\-verify\_\-assertion\_\-signature}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-verify\_\-assertion\_\-signature (\$ {\em service}, \/  \$ {\em association}, \/  \$ {\em response})}}
+\label{openid_8module_ab2abb87e4bd165165d3c851c8a2ac344}
+Verify the signature of the response received from the OpenID provider.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$service}]Array describing the OpenID provider. \item[{\em \$association}]Information on the association with the OpenID provider. \item[{\em \$response}]Array of response values from the provider.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the signature is valid and covers all fields required to be signed. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{http://openid.net/specs/openid-authentication-2_0.html#rfc.section.11.4}{\tt http://openid.net/specs/openid-\/authentication-\/2\_\-0.html\#rfc.section.11.4} 
+\end{DoxySeeAlso}

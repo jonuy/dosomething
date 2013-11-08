@@ -1,0 +1,155 @@
+\hypertarget{classviews__plugin__display__page}{
+\section{views\_\-plugin\_\-display\_\-page Class Reference}
+\label{classviews__plugin__display__page}\index{views\_\-plugin\_\-display\_\-page@{views\_\-plugin\_\-display\_\-page}}
+}
+Inheritance diagram for views\_\-plugin\_\-display\_\-page::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classviews__plugin__display__page}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classviews__plugin__display__page_a6ab3df375279fc7308aea96e3f08f833}{has\_\-path} ()
+\item 
+\hyperlink{classviews__plugin__display__page_acbdafb32168f809b28e083d654399f3f}{uses\_\-breadcrumb} ()
+\item 
+\hypertarget{classviews__plugin__display__page_a19b25a55cb43755a944d1f37c0180ff4}{
+{\bfseries option\_\-definition} ()}
+\label{classviews__plugin__display__page_a19b25a55cb43755a944d1f37c0180ff4}
+
+\item 
+\hyperlink{classviews__plugin__display__page_a92137bfe76641bd6c50e7d8b81108b91}{execute\_\-hook\_\-menu} (\$callbacks)
+\item 
+\hyperlink{classviews__plugin__display__page_a943b71fc873e5d09f548b69ba314b674}{execute} ()
+\item 
+\hyperlink{classviews__plugin__display__page_a47de087f3201600b057e0d4a55eef48c}{options\_\-summary} (\&\$categories, \&\$options)
+\item 
+\hyperlink{classviews__plugin__display__page_aa8267a4774b92a7b47a3768ac98aac36}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__display__page_a192c8feb8740fdb389600fb7a8588c27}{options\_\-validate} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__display__page_a9b03d35a15fcfcae4a474ea56b6ca5b6}{options\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__display__page_a995cf48d67e20ef897d931fcbba391d1}{validate} ()
+\item 
+\hyperlink{classviews__plugin__display__page_ae3056e57372089c08fb50d85fbfaea49}{get\_\-argument\_\-text} ()
+\item 
+\hyperlink{classviews__plugin__display__page_aca620130dea055b599b405845627f3f0}{get\_\-pager\_\-text} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The plugin that handles a full page. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__plugin__display__page_a943b71fc873e5d09f548b69ba314b674}{
+\index{views\_\-plugin\_\-display\_\-page@{views\_\-plugin\_\-display\_\-page}!execute@{execute}}
+\index{execute@{execute}!views_plugin_display_page@{views\_\-plugin\_\-display\_\-page}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-page::execute ()}}
+\label{classviews__plugin__display__page_a943b71fc873e5d09f548b69ba314b674}
+The display page handler returns a normal \hyperlink{classview}{view}, but it also does a drupal\_\-set\_\-title for the page, and does a views\_\-set\_\-page\_\-view on the \hyperlink{classview}{view}. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_af99c4a303d3e409ab7b14c6cfcd3a1d8}{views\_\-plugin\_\-display}.
+
+Reimplemented in \hyperlink{classviews__plugin__display__feed_a6bfa566313f3f8fba85751554567e2dd}{views\_\-plugin\_\-display\_\-feed}.\hypertarget{classviews__plugin__display__page_a92137bfe76641bd6c50e7d8b81108b91}{
+\index{views\_\-plugin\_\-display\_\-page@{views\_\-plugin\_\-display\_\-page}!execute\_\-hook\_\-menu@{execute\_\-hook\_\-menu}}
+\index{execute\_\-hook\_\-menu@{execute\_\-hook\_\-menu}!views_plugin_display_page@{views\_\-plugin\_\-display\_\-page}}
+\subsubsection[{execute\_\-hook\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-page::execute\_\-hook\_\-menu (\$ {\em callbacks})}}
+\label{classviews__plugin__display__page_a92137bfe76641bd6c50e7d8b81108b91}
+Add this display's path information to Drupal's menu system. \hypertarget{classviews__plugin__display__page_ae3056e57372089c08fb50d85fbfaea49}{
+\index{views\_\-plugin\_\-display\_\-page@{views\_\-plugin\_\-display\_\-page}!get\_\-argument\_\-text@{get\_\-argument\_\-text}}
+\index{get\_\-argument\_\-text@{get\_\-argument\_\-text}!views_plugin_display_page@{views\_\-plugin\_\-display\_\-page}}
+\subsubsection[{get\_\-argument\_\-text}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-page::get\_\-argument\_\-text ()}}
+\label{classviews__plugin__display__page_ae3056e57372089c08fb50d85fbfaea49}
+Provide some helpful text for the arguments. The result should contain of an array with
+\begin{DoxyItemize}
+\item filter value present: The title of the fieldset in the argument where you can configure what should be done with a given argument.
+\item filter value not present: The tiel of the fieldset in the argument where you can configure what should be done if the argument does not exist.
+\item description: A description about how arguments comes to the display. For example blocks don't get it from url. 
+\end{DoxyItemize}
+
+Reimplemented from \hyperlink{classviews__plugin__display_a3afbeac02cf2d083014cf64c3e66c290}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__page_aca620130dea055b599b405845627f3f0}{
+\index{views\_\-plugin\_\-display\_\-page@{views\_\-plugin\_\-display\_\-page}!get\_\-pager\_\-text@{get\_\-pager\_\-text}}
+\index{get\_\-pager\_\-text@{get\_\-pager\_\-text}!views_plugin_display_page@{views\_\-plugin\_\-display\_\-page}}
+\subsubsection[{get\_\-pager\_\-text}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-page::get\_\-pager\_\-text ()}}
+\label{classviews__plugin__display__page_aca620130dea055b599b405845627f3f0}
+Provide some helpful text for pagers.
+
+The result should contain of an array within
+\begin{DoxyItemize}
+\item items per page title 
+\end{DoxyItemize}
+
+Reimplemented from \hyperlink{classviews__plugin__display_add6b60160cfdbc8b0ea29a380854057e}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__page_a6ab3df375279fc7308aea96e3f08f833}{
+\index{views\_\-plugin\_\-display\_\-page@{views\_\-plugin\_\-display\_\-page}!has\_\-path@{has\_\-path}}
+\index{has\_\-path@{has\_\-path}!views_plugin_display_page@{views\_\-plugin\_\-display\_\-page}}
+\subsubsection[{has\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-page::has\_\-path ()}}
+\label{classviews__plugin__display__page_a6ab3df375279fc7308aea96e3f08f833}
+The page display has a path. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_a08fe612e61fe35f549f0ec9a1fe8d953}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__page_aa8267a4774b92a7b47a3768ac98aac36}{
+\index{views\_\-plugin\_\-display\_\-page@{views\_\-plugin\_\-display\_\-page}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_plugin_display_page@{views\_\-plugin\_\-display\_\-page}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-page::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__display__page_aa8267a4774b92a7b47a3768ac98aac36}
+Provide the default form for setting options. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_ad9c69d91ea1165ff51dcd1f1f6d3a154}{views\_\-plugin\_\-display}.
+
+Reimplemented in \hyperlink{classviews__plugin__display__feed_abe0a41d577b52de992279986d6c8c2d9}{views\_\-plugin\_\-display\_\-feed}.\hypertarget{classviews__plugin__display__page_a9b03d35a15fcfcae4a474ea56b6ca5b6}{
+\index{views\_\-plugin\_\-display\_\-page@{views\_\-plugin\_\-display\_\-page}!options\_\-submit@{options\_\-submit}}
+\index{options\_\-submit@{options\_\-submit}!views_plugin_display_page@{views\_\-plugin\_\-display\_\-page}}
+\subsubsection[{options\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-page::options\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__display__page_a9b03d35a15fcfcae4a474ea56b6ca5b6}
+Perform any necessary changes to the form values prior to storage. There is no need for this function to actually store the data. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_a75f0b2d5587b365640fcb4d414daae36}{views\_\-plugin\_\-display}.
+
+Reimplemented in \hyperlink{classviews__plugin__display__feed_ab7cca15934456ddb26045f03483899fb}{views\_\-plugin\_\-display\_\-feed}.\hypertarget{classviews__plugin__display__page_a47de087f3201600b057e0d4a55eef48c}{
+\index{views\_\-plugin\_\-display\_\-page@{views\_\-plugin\_\-display\_\-page}!options\_\-summary@{options\_\-summary}}
+\index{options\_\-summary@{options\_\-summary}!views_plugin_display_page@{views\_\-plugin\_\-display\_\-page}}
+\subsubsection[{options\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-page::options\_\-summary (\&\$ {\em categories}, \/  \&\$ {\em options})}}
+\label{classviews__plugin__display__page_a47de087f3201600b057e0d4a55eef48c}
+Provide the summary for page options in the views UI.
+
+This output is returned as an array. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_a7a2f2aeedfc14816815e3ce65a61aedf}{views\_\-plugin\_\-display}.
+
+Reimplemented in \hyperlink{classviews__plugin__display__feed_a5c0b5faad36090985c85b16a454023a6}{views\_\-plugin\_\-display\_\-feed}.\hypertarget{classviews__plugin__display__page_a192c8feb8740fdb389600fb7a8588c27}{
+\index{views\_\-plugin\_\-display\_\-page@{views\_\-plugin\_\-display\_\-page}!options\_\-validate@{options\_\-validate}}
+\index{options\_\-validate@{options\_\-validate}!views_plugin_display_page@{views\_\-plugin\_\-display\_\-page}}
+\subsubsection[{options\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-page::options\_\-validate (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__display__page_a192c8feb8740fdb389600fb7a8588c27}
+Validate the options form. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_a0b4336df4db25dec552de8d20141a9f5}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__page_acbdafb32168f809b28e083d654399f3f}{
+\index{views\_\-plugin\_\-display\_\-page@{views\_\-plugin\_\-display\_\-page}!uses\_\-breadcrumb@{uses\_\-breadcrumb}}
+\index{uses\_\-breadcrumb@{uses\_\-breadcrumb}!views_plugin_display_page@{views\_\-plugin\_\-display\_\-page}}
+\subsubsection[{uses\_\-breadcrumb}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-page::uses\_\-breadcrumb ()}}
+\label{classviews__plugin__display__page_acbdafb32168f809b28e083d654399f3f}
+Check to see if the display needs a breadcrumb
+
+By default, displays do not need breadcrumbs 
+
+Reimplemented from \hyperlink{classviews__plugin__display_ab3d2779948700bcc6c5ee3b26726f468}{views\_\-plugin\_\-display}.
+
+Reimplemented in \hyperlink{classviews__plugin__display__feed_a4bc729e21f5578c13d420bbaf3c388c5}{views\_\-plugin\_\-display\_\-feed}.\hypertarget{classviews__plugin__display__page_a995cf48d67e20ef897d931fcbba391d1}{
+\index{views\_\-plugin\_\-display\_\-page@{views\_\-plugin\_\-display\_\-page}!validate@{validate}}
+\index{validate@{validate}!views_plugin_display_page@{views\_\-plugin\_\-display\_\-page}}
+\subsubsection[{validate}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-page::validate ()}}
+\label{classviews__plugin__display__page_a995cf48d67e20ef897d931fcbba391d1}
+Make sure the display and all associated handlers are valid.
+
+\begin{DoxyReturn}{Returns}
+Empty array if the display is valid; an array of error strings if it is not. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classviews__plugin__display_a3282edb1b32b756937fe2d0c8757c80c}{views\_\-plugin\_\-display}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/plugins/\hyperlink{views__plugin__display__page_8inc}{views\_\-plugin\_\-display\_\-page.inc}\end{DoxyCompactItemize}

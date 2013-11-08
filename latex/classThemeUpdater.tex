@@ -1,0 +1,99 @@
+\hypertarget{classThemeUpdater}{
+\section{ThemeUpdater Class Reference}
+\label{classThemeUpdater}\index{ThemeUpdater@{ThemeUpdater}}
+}
+Inheritance diagram for ThemeUpdater::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classThemeUpdater}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classThemeUpdater_a3c3305b406350c7e0c9cca377e5b50d6}{getInstallDirectory} ()
+\item 
+\hyperlink{classThemeUpdater_aa150c0bf1bc488f7cc32f681eb7ff4b6}{isInstalled} ()
+\item 
+\hyperlink{classThemeUpdater_a66e74f3e7f7116e77355947e11d038e1}{postInstall} ()
+\item 
+\hyperlink{classThemeUpdater_a0ed994865cfa41230a515aa3d759e693}{postInstallTasks} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classThemeUpdater_a5a7a2a58d90d97545d32a41af99a6afc}{canUpdateDirectory} (\$directory)
+\item 
+\hypertarget{classThemeUpdater_a7b852de833a0393055cb74df26c77899}{
+static {\bfseries canUpdate} (\$project\_\-name)}
+\label{classThemeUpdater_a7b852de833a0393055cb74df26c77899}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for updating themes using \hyperlink{classFileTransfer}{FileTransfer} classes via \hyperlink{authorize_8php}{authorize.php}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classThemeUpdater_a5a7a2a58d90d97545d32a41af99a6afc}{
+\index{ThemeUpdater@{ThemeUpdater}!canUpdateDirectory@{canUpdateDirectory}}
+\index{canUpdateDirectory@{canUpdateDirectory}!ThemeUpdater@{ThemeUpdater}}
+\subsubsection[{canUpdateDirectory}]{\setlength{\rightskip}{0pt plus 5cm}static ThemeUpdater::canUpdateDirectory (\$ {\em directory})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classThemeUpdater_a5a7a2a58d90d97545d32a41af99a6afc}
+Determine if the \hyperlink{classUpdater}{Updater} can handle the project provided in \$directory.
+
+\begin{Desc}
+\item[\hyperlink{todo__todo000008}{Todo}]: Provide something more rational here, like a project spec file.\end{Desc}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$directory\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the project is installed, FALSE if not. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceDrupalUpdaterInterface_a3ff6c92f6ed593e03f5e36788ef2d2cc}{DrupalUpdaterInterface}.\hypertarget{classThemeUpdater_a3c3305b406350c7e0c9cca377e5b50d6}{
+\index{ThemeUpdater@{ThemeUpdater}!getInstallDirectory@{getInstallDirectory}}
+\index{getInstallDirectory@{getInstallDirectory}!ThemeUpdater@{ThemeUpdater}}
+\subsubsection[{getInstallDirectory}]{\setlength{\rightskip}{0pt plus 5cm}ThemeUpdater::getInstallDirectory ()}}
+\label{classThemeUpdater_a3c3305b406350c7e0c9cca377e5b50d6}
+Return the directory where a theme should be installed.
+
+If the theme is already installed, \hyperlink{common_8inc_ae3bbe8f97bf07bb0eaf4580c98f9bf94}{drupal\_\-get\_\-path()} will return a valid path and we should install it there (although we need to use an absolute path, so we prepend DRUPAL\_\-ROOT). If we're installing a new theme, we always want it to go into sites/all/themes, since that's where all the documentation recommends users install their themes, and there's no way that can conflict on a multi-\/site installation, since the Update manager won't let you install a new theme if it's already found on your system, and if there was a copy in sites/all, we'd see it. 
+
+Implements \hyperlink{interfaceDrupalUpdaterInterface_a2d619c7d5c0e869f13651543587419f1}{DrupalUpdaterInterface}.\hypertarget{classThemeUpdater_aa150c0bf1bc488f7cc32f681eb7ff4b6}{
+\index{ThemeUpdater@{ThemeUpdater}!isInstalled@{isInstalled}}
+\index{isInstalled@{isInstalled}!ThemeUpdater@{ThemeUpdater}}
+\subsubsection[{isInstalled}]{\setlength{\rightskip}{0pt plus 5cm}ThemeUpdater::isInstalled ()}}
+\label{classThemeUpdater_aa150c0bf1bc488f7cc32f681eb7ff4b6}
+Checks if the project is installed.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceDrupalUpdaterInterface_af4e78762c89a91a4a2a7dd2fb325f214}{DrupalUpdaterInterface}.\hypertarget{classThemeUpdater_a66e74f3e7f7116e77355947e11d038e1}{
+\index{ThemeUpdater@{ThemeUpdater}!postInstall@{postInstall}}
+\index{postInstall@{postInstall}!ThemeUpdater@{ThemeUpdater}}
+\subsubsection[{postInstall}]{\setlength{\rightskip}{0pt plus 5cm}ThemeUpdater::postInstall ()}}
+\label{classThemeUpdater_a66e74f3e7f7116e77355947e11d038e1}
+Actions to run after an install has occurred. 
+
+Implements \hyperlink{interfaceDrupalUpdaterInterface_a392c2cdc12736286a18ec819732f9156}{DrupalUpdaterInterface}.\hypertarget{classThemeUpdater_a0ed994865cfa41230a515aa3d759e693}{
+\index{ThemeUpdater@{ThemeUpdater}!postInstallTasks@{postInstallTasks}}
+\index{postInstallTasks@{postInstallTasks}!ThemeUpdater@{ThemeUpdater}}
+\subsubsection[{postInstallTasks}]{\setlength{\rightskip}{0pt plus 5cm}ThemeUpdater::postInstallTasks ()}}
+\label{classThemeUpdater_a0ed994865cfa41230a515aa3d759e693}
+Return an array of links to pages that should be visited post operation.
+
+\begin{DoxyReturn}{Returns}
+array Links which provide actions to take after the install is finished. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classUpdater_a59eb832c6bb80dd9f04fc85c8ebe8905}{Updater}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/modules/system/\hyperlink{system_8updater_8inc}{system.updater.inc}\end{DoxyCompactItemize}

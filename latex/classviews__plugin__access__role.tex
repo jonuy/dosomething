@@ -1,0 +1,94 @@
+\hypertarget{classviews__plugin__access__role}{
+\section{views\_\-plugin\_\-access\_\-role Class Reference}
+\label{classviews__plugin__access__role}\index{views\_\-plugin\_\-access\_\-role@{views\_\-plugin\_\-access\_\-role}}
+}
+Inheritance diagram for views\_\-plugin\_\-access\_\-role::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classviews__plugin__access__role}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classviews__plugin__access__role_a8de6032d940b90e06820cdbd9a15a51c}{access} (\$account)
+\item 
+\hyperlink{classviews__plugin__access__role_a50094384e297acdd629d9462004df69a}{get\_\-access\_\-callback} ()
+\item 
+\hyperlink{classviews__plugin__access__role_a25dbbc0f06093f0e4ee13182ea0d277f}{summary\_\-title} ()
+\item 
+\hyperlink{classviews__plugin__access__role_a76714a96150c4611683068a50be7eb26}{option\_\-definition} ()
+\item 
+\hyperlink{classviews__plugin__access__role_a76293d33e84a78e2ce0df6df955da760}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__access__role_a82fda91cd55acbbcac1759448c8fc471}{options\_\-validate} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__access__role_ad9bf6eddd91a7c224fb813a58077ee4d}{options\_\-submit} (\&\$form, \&\$form\_\-state)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Access plugin that provides role-\/based access control. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__plugin__access__role_a8de6032d940b90e06820cdbd9a15a51c}{
+\index{views\_\-plugin\_\-access\_\-role@{views\_\-plugin\_\-access\_\-role}!access@{access}}
+\index{access@{access}!views_plugin_access_role@{views\_\-plugin\_\-access\_\-role}}
+\subsubsection[{access}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access\_\-role::access (\$ {\em account})}}
+\label{classviews__plugin__access__role_a8de6032d940b90e06820cdbd9a15a51c}
+Determine if the current user has access or not. 
+
+Reimplemented from \hyperlink{classviews__plugin__access_ad24d38c1b1a1bd7527b2b96a2103cede}{views\_\-plugin\_\-access}.\hypertarget{classviews__plugin__access__role_a50094384e297acdd629d9462004df69a}{
+\index{views\_\-plugin\_\-access\_\-role@{views\_\-plugin\_\-access\_\-role}!get\_\-access\_\-callback@{get\_\-access\_\-callback}}
+\index{get\_\-access\_\-callback@{get\_\-access\_\-callback}!views_plugin_access_role@{views\_\-plugin\_\-access\_\-role}}
+\subsubsection[{get\_\-access\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access\_\-role::get\_\-access\_\-callback ()}}
+\label{classviews__plugin__access__role_a50094384e297acdd629d9462004df69a}
+Determine the access callback and arguments.
+
+This information will be embedded in the menu in order to reduce performance hits during menu item access testing, which happens a lot.
+
+\begin{DoxyReturn}{Returns}
+an array; the first item should be the function to call, and the second item should be an array of arguments. The first item may also be TRUE (bool only) which will indicate no access control.) 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classviews__plugin__access_ad4038a32fccc6a662a74f437d0bf6a23}{views\_\-plugin\_\-access}.\hypertarget{classviews__plugin__access__role_a76714a96150c4611683068a50be7eb26}{
+\index{views\_\-plugin\_\-access\_\-role@{views\_\-plugin\_\-access\_\-role}!option\_\-definition@{option\_\-definition}}
+\index{option\_\-definition@{option\_\-definition}!views_plugin_access_role@{views\_\-plugin\_\-access\_\-role}}
+\subsubsection[{option\_\-definition}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access\_\-role::option\_\-definition ()}}
+\label{classviews__plugin__access__role_a76714a96150c4611683068a50be7eb26}
+Retrieve the options when this is a new access control plugin 
+
+Reimplemented from \hyperlink{classviews__plugin__access_a3d52dc2603a2991a46a3c212a04097d2}{views\_\-plugin\_\-access}.\hypertarget{classviews__plugin__access__role_a76293d33e84a78e2ce0df6df955da760}{
+\index{views\_\-plugin\_\-access\_\-role@{views\_\-plugin\_\-access\_\-role}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_plugin_access_role@{views\_\-plugin\_\-access\_\-role}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access\_\-role::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__access__role_a76293d33e84a78e2ce0df6df955da760}
+Provide the default form for setting options. 
+
+Reimplemented from \hyperlink{classviews__plugin__access_a530865442ea42db5e720e6c49f3d16f2}{views\_\-plugin\_\-access}.\hypertarget{classviews__plugin__access__role_ad9bf6eddd91a7c224fb813a58077ee4d}{
+\index{views\_\-plugin\_\-access\_\-role@{views\_\-plugin\_\-access\_\-role}!options\_\-submit@{options\_\-submit}}
+\index{options\_\-submit@{options\_\-submit}!views_plugin_access_role@{views\_\-plugin\_\-access\_\-role}}
+\subsubsection[{options\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access\_\-role::options\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__access__role_ad9bf6eddd91a7c224fb813a58077ee4d}
+Provide the default form form for submitting options 
+
+Reimplemented from \hyperlink{classviews__plugin__access_ad0610dfaa0e225c5d2cd85c7a13287fd}{views\_\-plugin\_\-access}.\hypertarget{classviews__plugin__access__role_a82fda91cd55acbbcac1759448c8fc471}{
+\index{views\_\-plugin\_\-access\_\-role@{views\_\-plugin\_\-access\_\-role}!options\_\-validate@{options\_\-validate}}
+\index{options\_\-validate@{options\_\-validate}!views_plugin_access_role@{views\_\-plugin\_\-access\_\-role}}
+\subsubsection[{options\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access\_\-role::options\_\-validate (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__access__role_a82fda91cd55acbbcac1759448c8fc471}
+Provide the default form form for validating options 
+
+Reimplemented from \hyperlink{classviews__plugin__access_a1ac0bea409be6ef8d7eb4bfafcf760c6}{views\_\-plugin\_\-access}.\hypertarget{classviews__plugin__access__role_a25dbbc0f06093f0e4ee13182ea0d277f}{
+\index{views\_\-plugin\_\-access\_\-role@{views\_\-plugin\_\-access\_\-role}!summary\_\-title@{summary\_\-title}}
+\index{summary\_\-title@{summary\_\-title}!views_plugin_access_role@{views\_\-plugin\_\-access\_\-role}}
+\subsubsection[{summary\_\-title}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access\_\-role::summary\_\-title ()}}
+\label{classviews__plugin__access__role_a25dbbc0f06093f0e4ee13182ea0d277f}
+Return a string to display as the clickable title for the access control. 
+
+Reimplemented from \hyperlink{classviews__plugin__access_ade500a95e599deffa417f8cbdd67bbf4}{views\_\-plugin\_\-access}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/plugins/\hyperlink{views__plugin__access__role_8inc}{views\_\-plugin\_\-access\_\-role.inc}\end{DoxyCompactItemize}

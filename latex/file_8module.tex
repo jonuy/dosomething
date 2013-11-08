@@ -1,0 +1,214 @@
+\hypertarget{file_8module}{
+\section{html/modules/file/file.module File Reference}
+\label{file_8module}\index{html/modules/file/file.module@{html/modules/file/file.module}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{file_8module_a24c3b4fe327392636d2d409f07cf8266}{file\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{file_8module_acf2d37bd1c1db6d3b8632a615bd40226}{file\_\-menu} ()
+\item 
+\hyperlink{file_8module_aa2a3477520eac39499554db31af9b905}{file\_\-element\_\-info} ()
+\item 
+\hyperlink{file_8module_a073bfda14a6169090471f7b93980d518}{file\_\-theme} ()
+\item 
+\hyperlink{file_8module_a3b90dc2df5781f1fe16027a3b8082948}{file\_\-file\_\-download} (\$uri, \$field\_\-type= 'file')
+\item 
+\hyperlink{file_8module_a01240c6ad20b49a60879a93211a4fdbb}{file\_\-ajax\_\-upload} ()
+\item 
+\hyperlink{file_8module_a97ec958e5f2329df3e66fbf0ca41abab}{file\_\-ajax\_\-progress} (\$key)
+\item 
+\hyperlink{file_8module_af97cd48da26f5ab56503fa1218a11a04}{file\_\-progress\_\-implementation} ()
+\item 
+\hyperlink{file_8module_a1fabb61995abd7c4361037cccf3f6d63}{file\_\-file\_\-delete} (\$file)
+\item 
+\hyperlink{file_8module_a1e1b9d0cfae09221706106e984a1b18c}{file\_\-managed\_\-file\_\-process} (\$element, \&\$form\_\-state, \$form)
+\item 
+\hyperlink{file_8module_a9cb9afc76f5078ef555e93a0513ae90f}{file\_\-managed\_\-file\_\-value} (\&\$element, \$input=FALSE, \$form\_\-state=NULL)
+\item 
+\hyperlink{file_8module_adf68e5c79852aee513af71c70f5bc511}{file\_\-managed\_\-file\_\-validate} (\&\$element, \&\$form\_\-state)
+\item 
+\hyperlink{file_8module_a4343cdafac927e9f8ba7156776829c71}{file\_\-managed\_\-file\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{file_8module_a0179609c4b4e28da21121e04ce05cdd3}{file\_\-managed\_\-file\_\-save\_\-upload} (\$element)
+\item 
+\hyperlink{group__themeable_ga4a224a07d1150f036feea621eb99fbe5}{theme\_\-file\_\-managed\_\-file} (\$variables)
+\item 
+\hyperlink{file_8module_a0e548196b69cc1d2354b468348d514cf}{file\_\-managed\_\-file\_\-pre\_\-render} (\$element)
+\item 
+\hyperlink{group__themeable_ga09a17231e69397fafde06db8db4f476f}{theme\_\-file\_\-link} (\$variables)
+\item 
+\hyperlink{group__themeable_ga7807f8ee7d081b9d1f7a9f96f7b0a52c}{theme\_\-file\_\-icon} (\$variables)
+\item 
+\hyperlink{file_8module_ad4fcd7650077b4fa3d08812c30806ed5}{file\_\-icon\_\-url} (\$file, \$icon\_\-directory=NULL)
+\item 
+\hyperlink{file_8module_a567cc64128c525052f215ebe1a2b5dd8}{file\_\-icon\_\-path} (\$file, \$icon\_\-directory=NULL)
+\item 
+\hyperlink{file_8module_a469ff5325a9180869170a3b9b09e09ea}{file\_\-icon\_\-map} (\$file)
+\item 
+\hyperlink{group__file_gad391f02fb9f97bad982b7f66c1ce54d0}{file\_\-get\_\-file\_\-references} (\$file, \$field=NULL, \$age=\hyperlink{group__field_ga6eae4d17256be446f837da1a360f0096}{FIELD\_\-LOAD\_\-REVISION}, \$field\_\-type= 'file')
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines a \char`\"{}managed\_\-file\char`\"{} Form API field and a \char`\"{}file\char`\"{} field for Field module. 
+
+\subsection{Function Documentation}
+\hypertarget{file_8module_a97ec958e5f2329df3e66fbf0ca41abab}{
+\index{file.module@{file.module}!file\_\-ajax\_\-progress@{file\_\-ajax\_\-progress}}
+\index{file\_\-ajax\_\-progress@{file\_\-ajax\_\-progress}!file.module@{file.module}}
+\subsubsection[{file\_\-ajax\_\-progress}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-ajax\_\-progress (\$ {\em key})}}
+\label{file_8module_a97ec958e5f2329df3e66fbf0ca41abab}
+Menu callback for upload progress.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$key}]The unique key for this upload process. \end{DoxyParams}
+\hypertarget{file_8module_a01240c6ad20b49a60879a93211a4fdbb}{
+\index{file.module@{file.module}!file\_\-ajax\_\-upload@{file\_\-ajax\_\-upload}}
+\index{file\_\-ajax\_\-upload@{file\_\-ajax\_\-upload}!file.module@{file.module}}
+\subsubsection[{file\_\-ajax\_\-upload}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-ajax\_\-upload ()}}
+\label{file_8module_a01240c6ad20b49a60879a93211a4fdbb}
+Menu callback; Shared Ajax callback for file uploads and deletions.
+
+This rebuilds the form element for a particular field item. As long as the form processing is properly encapsulated in the widget element the form should rebuild correctly using FAPI without the need for additional callbacks or processing. \hypertarget{file_8module_aa2a3477520eac39499554db31af9b905}{
+\index{file.module@{file.module}!file\_\-element\_\-info@{file\_\-element\_\-info}}
+\index{file\_\-element\_\-info@{file\_\-element\_\-info}!file.module@{file.module}}
+\subsubsection[{file\_\-element\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-element\_\-info ()}}
+\label{file_8module_aa2a3477520eac39499554db31af9b905}
+Implements \hyperlink{group__hooks_ga3c5182432eddc82f8b7845e66a365d51}{hook\_\-element\_\-info()}.
+
+The managed file element may be used anywhere in Drupal. \hypertarget{file_8module_a1fabb61995abd7c4361037cccf3f6d63}{
+\index{file.module@{file.module}!file\_\-file\_\-delete@{file\_\-file\_\-delete}}
+\index{file\_\-file\_\-delete@{file\_\-file\_\-delete}!file.module@{file.module}}
+\subsubsection[{file\_\-file\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-file\_\-delete (\$ {\em file})}}
+\label{file_8module_a1fabb61995abd7c4361037cccf3f6d63}
+Implements \hyperlink{group__hooks_gafa88683ad014451b3fbc9ca9bb80afdd}{hook\_\-file\_\-delete()}. \hypertarget{file_8module_a3b90dc2df5781f1fe16027a3b8082948}{
+\index{file.module@{file.module}!file\_\-file\_\-download@{file\_\-file\_\-download}}
+\index{file\_\-file\_\-download@{file\_\-file\_\-download}!file.module@{file.module}}
+\subsubsection[{file\_\-file\_\-download}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-file\_\-download (\$ {\em uri}, \/  \$ {\em field\_\-type} = {\ttfamily 'file'})}}
+\label{file_8module_a3b90dc2df5781f1fe16027a3b8082948}
+Implements \hyperlink{group__hooks_gab73f0e658d6630220ba7836ccd011ecc}{hook\_\-file\_\-download()}.
+
+This function takes an extra parameter \$field\_\-type so that it may be re-\/used by other File-\/like modules, such as Image. \hypertarget{file_8module_a24c3b4fe327392636d2d409f07cf8266}{
+\index{file.module@{file.module}!file\_\-help@{file\_\-help}}
+\index{file\_\-help@{file\_\-help}!file.module@{file.module}}
+\subsubsection[{file\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{file_8module_a24c3b4fe327392636d2d409f07cf8266}
+Implements \hyperlink{group__hooks_ga5589c2714a782738e8851c4c90231f0e}{hook\_\-help()}. \hypertarget{file_8module_a469ff5325a9180869170a3b9b09e09ea}{
+\index{file.module@{file.module}!file\_\-icon\_\-map@{file\_\-icon\_\-map}}
+\index{file\_\-icon\_\-map@{file\_\-icon\_\-map}!file.module@{file.module}}
+\subsubsection[{file\_\-icon\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-icon\_\-map (\$ {\em file})}}
+\label{file_8module_a469ff5325a9180869170a3b9b09e09ea}
+Determines the generic icon MIME package based on a file's MIME type.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$file}]A file object.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The generic icon MIME package expected for this file. 
+\end{DoxyReturn}
+\hypertarget{file_8module_a567cc64128c525052f215ebe1a2b5dd8}{
+\index{file.module@{file.module}!file\_\-icon\_\-path@{file\_\-icon\_\-path}}
+\index{file\_\-icon\_\-path@{file\_\-icon\_\-path}!file.module@{file.module}}
+\subsubsection[{file\_\-icon\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-icon\_\-path (\$ {\em file}, \/  \$ {\em icon\_\-directory} = {\ttfamily NULL})}}
+\label{file_8module_a567cc64128c525052f215ebe1a2b5dd8}
+Creates a path to the icon for a file object.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$file}]A file object. \item[{\em \$icon\_\-directory}](optional) A path to a directory of icons to be used for files. Defaults to the value of the \char`\"{}file\_\-icon\_\-directory\char`\"{} variable.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string to the icon as a local path, or FALSE if an appropriate icon could not be found. 
+\end{DoxyReturn}
+\hypertarget{file_8module_ad4fcd7650077b4fa3d08812c30806ed5}{
+\index{file.module@{file.module}!file\_\-icon\_\-url@{file\_\-icon\_\-url}}
+\index{file\_\-icon\_\-url@{file\_\-icon\_\-url}!file.module@{file.module}}
+\subsubsection[{file\_\-icon\_\-url}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-icon\_\-url (\$ {\em file}, \/  \$ {\em icon\_\-directory} = {\ttfamily NULL})}}
+\label{file_8module_ad4fcd7650077b4fa3d08812c30806ed5}
+Creates a URL to the icon for a file object.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$file}]A file object. \item[{\em \$icon\_\-directory}](optional) A path to a directory of icons to be used for files. Defaults to the value of the \char`\"{}file\_\-icon\_\-directory\char`\"{} variable.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A URL string to the icon, or FALSE if an appropriate icon cannot be found. 
+\end{DoxyReturn}
+\hypertarget{file_8module_a0e548196b69cc1d2354b468348d514cf}{
+\index{file.module@{file.module}!file\_\-managed\_\-file\_\-pre\_\-render@{file\_\-managed\_\-file\_\-pre\_\-render}}
+\index{file\_\-managed\_\-file\_\-pre\_\-render@{file\_\-managed\_\-file\_\-pre\_\-render}!file.module@{file.module}}
+\subsubsection[{file\_\-managed\_\-file\_\-pre\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-managed\_\-file\_\-pre\_\-render (\$ {\em element})}}
+\label{file_8module_a0e548196b69cc1d2354b468348d514cf}
+pre\_\-render callback to hide display of the upload or remove controls.
+
+Upload controls are hidden when a file is already uploaded. Remove controls are hidden when there is no file attached. Controls are hidden here instead of in \hyperlink{file_8module_a1e1b9d0cfae09221706106e984a1b18c}{file\_\-managed\_\-file\_\-process()}, because access for these buttons depends on the managed\_\-file element's value. See the documentation of \hyperlink{group__form__api_gae839323ba1c81ba86030b496fee24f7d}{form\_\-builder()} for more detailed information about the relationship between process, value, and access.
+
+Because access is set here, it affects display only and does not prevent JavaScript or other untrusted code from submitting the form as though access were enabled. The form processing functions for these elements should not assume that the buttons can't be \char`\"{}clicked\char`\"{} just because they are not displayed.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{file_8module_a1e1b9d0cfae09221706106e984a1b18c}{file\_\-managed\_\-file\_\-process()} 
+
+\hyperlink{group__form__api_gae839323ba1c81ba86030b496fee24f7d}{form\_\-builder()} 
+\end{DoxySeeAlso}
+\hypertarget{file_8module_a1e1b9d0cfae09221706106e984a1b18c}{
+\index{file.module@{file.module}!file\_\-managed\_\-file\_\-process@{file\_\-managed\_\-file\_\-process}}
+\index{file\_\-managed\_\-file\_\-process@{file\_\-managed\_\-file\_\-process}!file.module@{file.module}}
+\subsubsection[{file\_\-managed\_\-file\_\-process}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-managed\_\-file\_\-process (\$ {\em element}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em form})}}
+\label{file_8module_a1e1b9d0cfae09221706106e984a1b18c}
+Process function to expand the managed\_\-file element type.
+
+Expands the file type to include Upload and Remove buttons, as well as support for a default value. \hypertarget{file_8module_a0179609c4b4e28da21121e04ce05cdd3}{
+\index{file.module@{file.module}!file\_\-managed\_\-file\_\-save\_\-upload@{file\_\-managed\_\-file\_\-save\_\-upload}}
+\index{file\_\-managed\_\-file\_\-save\_\-upload@{file\_\-managed\_\-file\_\-save\_\-upload}!file.module@{file.module}}
+\subsubsection[{file\_\-managed\_\-file\_\-save\_\-upload}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-managed\_\-file\_\-save\_\-upload (\$ {\em element})}}
+\label{file_8module_a0179609c4b4e28da21121e04ce05cdd3}
+Saves any files that have been uploaded into a managed\_\-file element.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$element}]The FAPI element whose values are being saved.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The file object representing the file that was saved, or FALSE if no file was saved. 
+\end{DoxyReturn}
+\hypertarget{file_8module_a4343cdafac927e9f8ba7156776829c71}{
+\index{file.module@{file.module}!file\_\-managed\_\-file\_\-submit@{file\_\-managed\_\-file\_\-submit}}
+\index{file\_\-managed\_\-file\_\-submit@{file\_\-managed\_\-file\_\-submit}!file.module@{file.module}}
+\subsubsection[{file\_\-managed\_\-file\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-managed\_\-file\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{file_8module_a4343cdafac927e9f8ba7156776829c71}
+Form submission handler for upload / remove buttons of managed\_\-file elements.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{file_8module_a1e1b9d0cfae09221706106e984a1b18c}{file\_\-managed\_\-file\_\-process()} 
+\end{DoxySeeAlso}
+\hypertarget{file_8module_adf68e5c79852aee513af71c70f5bc511}{
+\index{file.module@{file.module}!file\_\-managed\_\-file\_\-validate@{file\_\-managed\_\-file\_\-validate}}
+\index{file\_\-managed\_\-file\_\-validate@{file\_\-managed\_\-file\_\-validate}!file.module@{file.module}}
+\subsubsection[{file\_\-managed\_\-file\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-managed\_\-file\_\-validate (\&\$ {\em element}, \/  \&\$ {\em form\_\-state})}}
+\label{file_8module_adf68e5c79852aee513af71c70f5bc511}
+An element\_\-validate callback for the managed\_\-file element. \hypertarget{file_8module_a9cb9afc76f5078ef555e93a0513ae90f}{
+\index{file.module@{file.module}!file\_\-managed\_\-file\_\-value@{file\_\-managed\_\-file\_\-value}}
+\index{file\_\-managed\_\-file\_\-value@{file\_\-managed\_\-file\_\-value}!file.module@{file.module}}
+\subsubsection[{file\_\-managed\_\-file\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-managed\_\-file\_\-value (\&\$ {\em element}, \/  \$ {\em input} = {\ttfamily FALSE}, \/  \$ {\em form\_\-state} = {\ttfamily NULL})}}
+\label{file_8module_a9cb9afc76f5078ef555e93a0513ae90f}
+The value\_\-callback for a managed\_\-file type element. \hypertarget{file_8module_acf2d37bd1c1db6d3b8632a615bd40226}{
+\index{file.module@{file.module}!file\_\-menu@{file\_\-menu}}
+\index{file\_\-menu@{file\_\-menu}!file.module@{file.module}}
+\subsubsection[{file\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-menu ()}}
+\label{file_8module_acf2d37bd1c1db6d3b8632a615bd40226}
+Implements \hyperlink{group__hooks_ga5c95244fea59b25666e409759e133ded}{hook\_\-menu()}. \hypertarget{file_8module_af97cd48da26f5ab56503fa1218a11a04}{
+\index{file.module@{file.module}!file\_\-progress\_\-implementation@{file\_\-progress\_\-implementation}}
+\index{file\_\-progress\_\-implementation@{file\_\-progress\_\-implementation}!file.module@{file.module}}
+\subsubsection[{file\_\-progress\_\-implementation}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-progress\_\-implementation ()}}
+\label{file_8module_af97cd48da26f5ab56503fa1218a11a04}
+Determines the preferred upload progress implementation.
+
+\begin{DoxyReturn}{Returns}
+A string indicating which upload progress system is available. Either \char`\"{}apc\char`\"{} or \char`\"{}uploadprogress\char`\"{}. If neither are available, returns FALSE. 
+\end{DoxyReturn}
+\hypertarget{file_8module_a073bfda14a6169090471f7b93980d518}{
+\index{file.module@{file.module}!file\_\-theme@{file\_\-theme}}
+\index{file\_\-theme@{file\_\-theme}!file.module@{file.module}}
+\subsubsection[{file\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-theme ()}}
+\label{file_8module_a073bfda14a6169090471f7b93980d518}
+Implements \hyperlink{group__hooks_ga013ccb45c7aaab1c16cf9691428c910d}{hook\_\-theme()}. 

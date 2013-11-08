@@ -1,0 +1,50 @@
+\hypertarget{file_8api_8php}{
+\section{html/modules/file/file.api.php File Reference}
+\label{file_8api_8php}\index{html/modules/file/file.api.php@{html/modules/file/file.api.php}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{file_8api_8php_ae72c8feceec1072762bffc3ba020aa2a}{hook\_\-file\_\-download\_\-access} (\$file\_\-item, \$entity\_\-type, \$entity)
+\item 
+\hyperlink{file_8api_8php_a7e22cfd274f391fcf170c4f1619921ab}{hook\_\-file\_\-download\_\-access\_\-alter} (\&\$grants, \$file\_\-item, \$entity\_\-type, \$entity)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Hooks for file module. 
+
+\subsection{Function Documentation}
+\hypertarget{file_8api_8php_ae72c8feceec1072762bffc3ba020aa2a}{
+\index{file.api.php@{file.api.php}!hook\_\-file\_\-download\_\-access@{hook\_\-file\_\-download\_\-access}}
+\index{hook\_\-file\_\-download\_\-access@{hook\_\-file\_\-download\_\-access}!file.api.php@{file.api.php}}
+\subsubsection[{hook\_\-file\_\-download\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-file\_\-download\_\-access (\$ {\em file\_\-item}, \/  \$ {\em entity\_\-type}, \/  \$ {\em entity})}}
+\label{file_8api_8php_ae72c8feceec1072762bffc3ba020aa2a}
+Control download access to files.
+
+The hook is typically implemented to limit access based on the entity the file is referenced, e.g., only users with access to a node should be allowed to download files attached to that node.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$file\_\-item The array of information about the file to check access for. \item[{\em \$entity\_\-type}]The type of \$entity; for example, 'node' or 'user'. \item[{\em \$entity}]The \$entity to which \$file is referenced.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE is access should be allowed by this entity or FALSE if denied. Note that denial may be overridden by another entity controller, making this grant permissive rather than restrictive.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__hooks_ga9281312bdad448a24f3cfb7e341b36ba}{hook\_\-field\_\-access()}. 
+\end{DoxySeeAlso}
+\hypertarget{file_8api_8php_a7e22cfd274f391fcf170c4f1619921ab}{
+\index{file.api.php@{file.api.php}!hook\_\-file\_\-download\_\-access\_\-alter@{hook\_\-file\_\-download\_\-access\_\-alter}}
+\index{hook\_\-file\_\-download\_\-access\_\-alter@{hook\_\-file\_\-download\_\-access\_\-alter}!file.api.php@{file.api.php}}
+\subsubsection[{hook\_\-file\_\-download\_\-access\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-file\_\-download\_\-access\_\-alter (\&\$ {\em grants}, \/  \$ {\em file\_\-item}, \/  \$ {\em entity\_\-type}, \/  \$ {\em entity})}}
+\label{file_8api_8php_a7e22cfd274f391fcf170c4f1619921ab}
+Alter the access rules applied to a file download.
+
+Entities that implement file management set the access rules for their individual files. Module may use this hook to create custom access rules for file downloads.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{file_8api_8php_ae72c8feceec1072762bffc3ba020aa2a}{hook\_\-file\_\-download\_\-access()}.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$grants}]An array of grants gathered by \hyperlink{file_8api_8php_ae72c8feceec1072762bffc3ba020aa2a}{hook\_\-file\_\-download\_\-access()}. The array is keyed by the module that defines the entity type's access control; the values are Boolean grant responses for each module. \item[{\em array}]\$file\_\-item The array of information about the file to alter access for. \item[{\em \$entity\_\-type}]The type of \$entity; for example, 'node' or 'user'. \item[{\em \$entity}]The \$entity to which \$file is referenced. \end{DoxyParams}

@@ -1,0 +1,169 @@
+\hypertarget{classDrupalDefaultEntityController}{
+\section{DrupalDefaultEntityController Class Reference}
+\label{classDrupalDefaultEntityController}\index{DrupalDefaultEntityController@{DrupalDefaultEntityController}}
+}
+Inheritance diagram for DrupalDefaultEntityController::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.20603cm]{classDrupalDefaultEntityController}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDrupalDefaultEntityController_ae25e238e38c76dc784040ae8ad9cfc9c}{\_\-\_\-construct} (\$entityType)
+\item 
+\hyperlink{classDrupalDefaultEntityController_a4d64a900a78ece5d4acc569000b69270}{resetCache} (array \$ids=NULL)
+\item 
+\hyperlink{classDrupalDefaultEntityController_a523544ab73cba6994201afa89b0fb0c7}{load} (\$ids=array(), \$conditions=array())
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDrupalDefaultEntityController_aaa882d053aa4e04e2816b0093b79b0f8}{buildQuery} (\$ids, \$conditions=array(), \$revision\_\-id=FALSE)
+\item 
+\hyperlink{classDrupalDefaultEntityController_a68735c41d2ba655a073c64983754edf7}{attachLoad} (\&\$queried\_\-entities, \$revision\_\-id=FALSE)
+\item 
+\hyperlink{classDrupalDefaultEntityController_ae791ed21b33704e3b315d106354959c9}{cacheGet} (\$ids, \$conditions=array())
+\item 
+\hyperlink{classDrupalDefaultEntityController_a5a63fa946fe3fd17b99f865553d0c74d}{cacheSet} (\$entities)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDrupalDefaultEntityController_acbb2e6a6999ded7c291e1cf86e254176}{
+{\bfseries \$entityCache}}
+\label{classDrupalDefaultEntityController_acbb2e6a6999ded7c291e1cf86e254176}
+
+\item 
+\hypertarget{classDrupalDefaultEntityController_a952f2440f72af738dddba02ee28e9b13}{
+{\bfseries \$entityType}}
+\label{classDrupalDefaultEntityController_a952f2440f72af738dddba02ee28e9b13}
+
+\item 
+\hypertarget{classDrupalDefaultEntityController_a6cd0f67d5c1da3b239fa0649becf4e91}{
+{\bfseries \$entityInfo}}
+\label{classDrupalDefaultEntityController_a6cd0f67d5c1da3b239fa0649becf4e91}
+
+\item 
+\hypertarget{classDrupalDefaultEntityController_a60f93fd1bc54bd165da93470cad902cb}{
+{\bfseries \$hookLoadArguments}}
+\label{classDrupalDefaultEntityController_a60f93fd1bc54bd165da93470cad902cb}
+
+\item 
+\hypertarget{classDrupalDefaultEntityController_a8cd76449f510d31ea480b79c05b04354}{
+{\bfseries \$idKey}}
+\label{classDrupalDefaultEntityController_a8cd76449f510d31ea480b79c05b04354}
+
+\item 
+\hypertarget{classDrupalDefaultEntityController_a9fa43bc75fc4ac8e8ac6d0f428421771}{
+{\bfseries \$revisionKey}}
+\label{classDrupalDefaultEntityController_a9fa43bc75fc4ac8e8ac6d0f428421771}
+
+\item 
+\hypertarget{classDrupalDefaultEntityController_a9ce8e5dc9e34a09f18878d2176321ede}{
+{\bfseries \$revisionTable}}
+\label{classDrupalDefaultEntityController_a9ce8e5dc9e34a09f18878d2176321ede}
+
+\item 
+\hypertarget{classDrupalDefaultEntityController_ac385e4a3ae0cc75de84fa3bfd56ae732}{
+{\bfseries \$cache}}
+\label{classDrupalDefaultEntityController_ac385e4a3ae0cc75de84fa3bfd56ae732}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Default implementation of \hyperlink{interfaceDrupalEntityControllerInterface}{DrupalEntityControllerInterface}.
+
+This class can be used as-\/is by most simple entity types. Entity types requiring special handling can extend the class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDrupalDefaultEntityController_ae25e238e38c76dc784040ae8ad9cfc9c}{
+\index{DrupalDefaultEntityController@{DrupalDefaultEntityController}!\_\-\_\-construct@{\_\-\_\-construct}}
+\index{\_\-\_\-construct@{\_\-\_\-construct}!DrupalDefaultEntityController@{DrupalDefaultEntityController}}
+\subsubsection[{\_\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}DrupalDefaultEntityController::\_\-\_\-construct (\$ {\em entityType})}}
+\label{classDrupalDefaultEntityController_ae25e238e38c76dc784040ae8ad9cfc9c}
+Constructor: sets basic variables.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entityType}]The entity type for which the instance is created. \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDrupalDefaultEntityController_a68735c41d2ba655a073c64983754edf7}{
+\index{DrupalDefaultEntityController@{DrupalDefaultEntityController}!attachLoad@{attachLoad}}
+\index{attachLoad@{attachLoad}!DrupalDefaultEntityController@{DrupalDefaultEntityController}}
+\subsubsection[{attachLoad}]{\setlength{\rightskip}{0pt plus 5cm}DrupalDefaultEntityController::attachLoad (\&\$ {\em queried\_\-entities}, \/  \$ {\em revision\_\-id} = {\ttfamily FALSE})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDrupalDefaultEntityController_a68735c41d2ba655a073c64983754edf7}
+Attaches data to entities upon loading.
+
+This will attach fields, if the entity is fieldable. It calls \hyperlink{group__hooks_ga1f594647c8cbb27f75b77cc4118da8d6}{hook\_\-entity\_\-load()} for modules which need to add data to all entities. It also calls hook\_\-TYPE\_\-load() on the loaded entities. For example \hyperlink{group__node__api__hooks_gad48bb14b68ed38526029d1f7ac2d2de4}{hook\_\-node\_\-load()} or \hyperlink{group__hooks_ga81027843e38de3a899fa6e72f876d6b6}{hook\_\-user\_\-load()}. If your hook\_\-TYPE\_\-load() expects special parameters apart from the queried entities, you can set \$this-\/$>$hookLoadArguments prior to calling the method. See \hyperlink{classNodeController_abdc7525854d61d63fa6ee79bb2409359}{NodeController::attachLoad()} for an example.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$queried\_\-entities}]Associative array of query results, keyed on the entity ID. \item[{\em \$revision\_\-id}]ID of the revision that was loaded, or FALSE if the most current revision was loaded. \end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classCommentController_a0a9904b695922b40ac18b5cfeb6a5b9a}{CommentController}, \hyperlink{classTestEntityBundleController_a8033ce2e754ee5c644da047738dd8835}{TestEntityBundleController}, \hyperlink{classNodeController_abdc7525854d61d63fa6ee79bb2409359}{NodeController}, \hyperlink{classUserController_a3be247594b3793977c74fc29241502ec}{UserController}, and \hyperlink{classWysiwygProfileController_a0a4f9e5386dd5e410f77ac21509cd13b}{WysiwygProfileController}.\hypertarget{classDrupalDefaultEntityController_aaa882d053aa4e04e2816b0093b79b0f8}{
+\index{DrupalDefaultEntityController@{DrupalDefaultEntityController}!buildQuery@{buildQuery}}
+\index{buildQuery@{buildQuery}!DrupalDefaultEntityController@{DrupalDefaultEntityController}}
+\subsubsection[{buildQuery}]{\setlength{\rightskip}{0pt plus 5cm}DrupalDefaultEntityController::buildQuery (\$ {\em ids}, \/  \$ {\em conditions} = {\ttfamily array()}, \/  \$ {\em revision\_\-id} = {\ttfamily FALSE})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDrupalDefaultEntityController_aaa882d053aa4e04e2816b0093b79b0f8}
+Builds the query to load the entity.
+
+This has full revision support. For entities requiring special queries, the class can be extended, and the default query can be constructed by calling parent::buildQuery(). This is usually necessary when the object being loaded needs to be augmented with additional data from another table, such as loading node type into comments or vocabulary machine name into terms, however it can also support \$conditions on different tables. See \hyperlink{classCommentController_a0feb93a67f87f04b06eb64eb0d359ca7}{CommentController::buildQuery()} or \hyperlink{classTaxonomyTermController_a38102da86b43fb5b2c3c3412cb2ba3d2}{TaxonomyTermController::buildQuery()} for examples.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$ids}]An array of entity IDs, or FALSE to load all entities. \item[{\em \$conditions}]An array of conditions in the form 'field' =$>$ \$value. \item[{\em \$revision\_\-id}]The ID of the revision to load, or FALSE if this query is asking for the most current revision(s).\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classSelectQuery}{SelectQuery} A \hyperlink{classSelectQuery}{SelectQuery} object for loading the entity. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classCommentController_a0feb93a67f87f04b06eb64eb0d359ca7}{CommentController}, \hyperlink{classNodeController_a0326b94bee0719269dfd9f8ef93fbeb1}{NodeController}, \hyperlink{classTaxonomyTermController_a38102da86b43fb5b2c3c3412cb2ba3d2}{TaxonomyTermController}, and \hyperlink{classTaxonomyVocabularyController_a9472e3b979afabb2f1f08fb2cd0f83b8}{TaxonomyVocabularyController}.\hypertarget{classDrupalDefaultEntityController_ae791ed21b33704e3b315d106354959c9}{
+\index{DrupalDefaultEntityController@{DrupalDefaultEntityController}!cacheGet@{cacheGet}}
+\index{cacheGet@{cacheGet}!DrupalDefaultEntityController@{DrupalDefaultEntityController}}
+\subsubsection[{cacheGet}]{\setlength{\rightskip}{0pt plus 5cm}DrupalDefaultEntityController::cacheGet (\$ {\em ids}, \/  \$ {\em conditions} = {\ttfamily array()})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDrupalDefaultEntityController_ae791ed21b33704e3b315d106354959c9}
+Gets entities from the static cache.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$ids}]If not empty, return entities that match these IDs. \item[{\em \$conditions}]If set, return entities that match all of these conditions.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array of entities from the entity cache. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classTaxonomyTermController_a9bfba8c802d79ed1dcdfbfbe915adf1b}{TaxonomyTermController}.\hypertarget{classDrupalDefaultEntityController_a5a63fa946fe3fd17b99f865553d0c74d}{
+\index{DrupalDefaultEntityController@{DrupalDefaultEntityController}!cacheSet@{cacheSet}}
+\index{cacheSet@{cacheSet}!DrupalDefaultEntityController@{DrupalDefaultEntityController}}
+\subsubsection[{cacheSet}]{\setlength{\rightskip}{0pt plus 5cm}DrupalDefaultEntityController::cacheSet (\$ {\em entities})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDrupalDefaultEntityController_a5a63fa946fe3fd17b99f865553d0c74d}
+Stores entities in the static entity cache.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entities}]Entities to store in the cache. \end{DoxyParams}
+\hypertarget{classDrupalDefaultEntityController_a523544ab73cba6994201afa89b0fb0c7}{
+\index{DrupalDefaultEntityController@{DrupalDefaultEntityController}!load@{load}}
+\index{load@{load}!DrupalDefaultEntityController@{DrupalDefaultEntityController}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}DrupalDefaultEntityController::load (\$ {\em ids} = {\ttfamily array()}, \/  \$ {\em conditions} = {\ttfamily array()})}}
+\label{classDrupalDefaultEntityController_a523544ab73cba6994201afa89b0fb0c7}
+Implements \hyperlink{interfaceDrupalEntityControllerInterface_acc6ec97b35f4d32680c0d2ba090f7389}{DrupalEntityControllerInterface::load()}. 
+
+Implements \hyperlink{interfaceDrupalEntityControllerInterface_acc6ec97b35f4d32680c0d2ba090f7389}{DrupalEntityControllerInterface}.\hypertarget{classDrupalDefaultEntityController_a4d64a900a78ece5d4acc569000b69270}{
+\index{DrupalDefaultEntityController@{DrupalDefaultEntityController}!resetCache@{resetCache}}
+\index{resetCache@{resetCache}!DrupalDefaultEntityController@{DrupalDefaultEntityController}}
+\subsubsection[{resetCache}]{\setlength{\rightskip}{0pt plus 5cm}DrupalDefaultEntityController::resetCache (array \$ {\em ids} = {\ttfamily NULL})}}
+\label{classDrupalDefaultEntityController_a4d64a900a78ece5d4acc569000b69270}
+Implements \hyperlink{interfaceDrupalEntityControllerInterface_ae735484b175ff431b7b104732b7a497b}{DrupalEntityControllerInterface::resetCache()}. 
+
+Implements \hyperlink{interfaceDrupalEntityControllerInterface_ae735484b175ff431b7b104732b7a497b}{DrupalEntityControllerInterface}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/entity.inc\end{DoxyCompactItemize}

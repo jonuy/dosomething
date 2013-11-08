@@ -1,0 +1,132 @@
+\hypertarget{handlers_8inc}{
+\section{html/profiles/dosomething/modules/contrib/views/includes/handlers.inc File Reference}
+\label{handlers_8inc}\index{html/profiles/dosomething/modules/contrib/views/includes/handlers.inc@{html/profiles/dosomething/modules/contrib/views/includes/handlers.inc}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classviews__handler}{views\_\-handler}
+\item 
+class \hyperlink{classviews__many__to__one__helper}{views\_\-many\_\-to\_\-one\_\-helper}
+\item 
+class \hyperlink{classviews__join}{views\_\-join}
+\item 
+class \hyperlink{classviews__join__subquery}{views\_\-join\_\-subquery}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{handlers_8inc_adb01fd80de3fb9f4583b2ae5e6dcd5be}{\_\-views\_\-create\_\-handler} (\$definition, \$type= 'handler', \$handler\_\-type=NULL)
+\item 
+\hyperlink{handlers_8inc_ad181d2d2434c64eee6344b0eeb1fa074}{\_\-views\_\-prepare\_\-handler} (\$definition, \$data, \$field, \$type)
+\item 
+\hyperlink{handlers_8inc_a76ba5af63134db1102702696a50ba6f5}{views\_\-get\_\-table\_\-join} (\$table, \$base\_\-table)
+\item 
+\hyperlink{handlers_8inc_a6f75075f134aec561d058af4949a2602}{views\_\-break\_\-phrase\_\-string} (\$str, \&\$handler=NULL)
+\item 
+\hyperlink{handlers_8inc_abe4b24879b13b3e43ad741951af113e0}{views\_\-break\_\-phrase} (\$str, \&\$handler=NULL)
+\item 
+\hyperlink{handlers_8inc_a3bd8b0bf769dc6d068349b222edb410c}{views\_\-get\_\-timezone} ()
+\item 
+\hyperlink{handlers_8inc_ae61b1af2423ecd6df2332d716f980234}{views\_\-date\_\-sql\_\-field} (\$field, \$field\_\-type= 'int', \$set\_\-offset=NULL)
+\item 
+\hyperlink{handlers_8inc_a7916ceb65f4cbc07601e2acae923374e}{views\_\-date\_\-sql\_\-format} (\$format, \$field, \$field\_\-type= 'int', \$set\_\-offset=NULL)
+\item 
+\hyperlink{handlers_8inc_add4a1d7bb4ea764872603f9f56afaab1}{views\_\-date\_\-sql\_\-extract} (\$extract\_\-type, \$field, \$field\_\-type= 'int', \$set\_\-offset=NULL)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines the various handler objects to help build and display views. 
+
+\subsection{Function Documentation}
+\hypertarget{handlers_8inc_adb01fd80de3fb9f4583b2ae5e6dcd5be}{
+\index{handlers.inc@{handlers.inc}!\_\-views\_\-create\_\-handler@{\_\-views\_\-create\_\-handler}}
+\index{\_\-views\_\-create\_\-handler@{\_\-views\_\-create\_\-handler}!handlers.inc@{handlers.inc}}
+\subsubsection[{\_\-views\_\-create\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}\_\-views\_\-create\_\-handler (\$ {\em definition}, \/  \$ {\em type} = {\ttfamily 'handler'}, \/  \$ {\em handler\_\-type} = {\ttfamily NULL})}}
+\label{handlers_8inc_adb01fd80de3fb9f4583b2ae5e6dcd5be}
+Instantiate and construct a new handler \hypertarget{handlers_8inc_ad181d2d2434c64eee6344b0eeb1fa074}{
+\index{handlers.inc@{handlers.inc}!\_\-views\_\-prepare\_\-handler@{\_\-views\_\-prepare\_\-handler}}
+\index{\_\-views\_\-prepare\_\-handler@{\_\-views\_\-prepare\_\-handler}!handlers.inc@{handlers.inc}}
+\subsubsection[{\_\-views\_\-prepare\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}\_\-views\_\-prepare\_\-handler (\$ {\em definition}, \/  \$ {\em data}, \/  \$ {\em field}, \/  \$ {\em type})}}
+\label{handlers_8inc_ad181d2d2434c64eee6344b0eeb1fa074}
+Prepare a handler's data by checking defaults and such. \hypertarget{handlers_8inc_abe4b24879b13b3e43ad741951af113e0}{
+\index{handlers.inc@{handlers.inc}!views\_\-break\_\-phrase@{views\_\-break\_\-phrase}}
+\index{views\_\-break\_\-phrase@{views\_\-break\_\-phrase}!handlers.inc@{handlers.inc}}
+\subsubsection[{views\_\-break\_\-phrase}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-break\_\-phrase (\$ {\em str}, \/  \&\$ {\em handler} = {\ttfamily NULL})}}
+\label{handlers_8inc_abe4b24879b13b3e43ad741951af113e0}
+Break x,y,z and x+y+z into an array. Numeric only.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$str}]The string to parse. \item[{\em \$handler}]The handler object to use as a base. If not specified one will be created.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$handler The new handler object. 
+\end{DoxyReturn}
+\hypertarget{handlers_8inc_a6f75075f134aec561d058af4949a2602}{
+\index{handlers.inc@{handlers.inc}!views\_\-break\_\-phrase\_\-string@{views\_\-break\_\-phrase\_\-string}}
+\index{views\_\-break\_\-phrase\_\-string@{views\_\-break\_\-phrase\_\-string}!handlers.inc@{handlers.inc}}
+\subsubsection[{views\_\-break\_\-phrase\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-break\_\-phrase\_\-string (\$ {\em str}, \/  \&\$ {\em handler} = {\ttfamily NULL})}}
+\label{handlers_8inc_a6f75075f134aec561d058af4949a2602}
+Break x,y,z and x+y+z into an array. Works for strings.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$str}]The string to parse. \item[{\em \$object}]The object to use as a base. If not specified one will be created.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$object An object containing
+\begin{DoxyItemize}
+\item operator: Either 'and' or 'or'
+\item value: An array of numeric values. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{handlers_8inc_add4a1d7bb4ea764872603f9f56afaab1}{
+\index{handlers.inc@{handlers.inc}!views\_\-date\_\-sql\_\-extract@{views\_\-date\_\-sql\_\-extract}}
+\index{views\_\-date\_\-sql\_\-extract@{views\_\-date\_\-sql\_\-extract}!handlers.inc@{handlers.inc}}
+\subsubsection[{views\_\-date\_\-sql\_\-extract}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-date\_\-sql\_\-extract (\$ {\em extract\_\-type}, \/  \$ {\em field}, \/  \$ {\em field\_\-type} = {\ttfamily 'int'}, \/  \$ {\em set\_\-offset} = {\ttfamily NULL})}}
+\label{handlers_8inc_add4a1d7bb4ea764872603f9f56afaab1}
+Helper function to create cross-\/database SQL date extraction.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$extract\_\-type}]The type of value to extract from the date, like 'MONTH'. \item[{\em \$field}]The real table and field name, like 'tablename.fieldname'. \item[{\em \$field\_\-type}]The type of date field, 'int' or 'datetime'. \item[{\em \$set\_\-offset}]The name of a field that holds the timezone offset or a fixed timezone offset value. If not provided, the normal Drupal timezone handling will be used, i.e. \$set\_\-offset = 0 will make no timezone adjustment. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An appropriate SQL string for the db type and field type. 
+\end{DoxyReturn}
+\hypertarget{handlers_8inc_ae61b1af2423ecd6df2332d716f980234}{
+\index{handlers.inc@{handlers.inc}!views\_\-date\_\-sql\_\-field@{views\_\-date\_\-sql\_\-field}}
+\index{views\_\-date\_\-sql\_\-field@{views\_\-date\_\-sql\_\-field}!handlers.inc@{handlers.inc}}
+\subsubsection[{views\_\-date\_\-sql\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-date\_\-sql\_\-field (\$ {\em field}, \/  \$ {\em field\_\-type} = {\ttfamily 'int'}, \/  \$ {\em set\_\-offset} = {\ttfamily NULL})}}
+\label{handlers_8inc_ae61b1af2423ecd6df2332d716f980234}
+Helper function to create cross-\/database SQL dates.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field}]The real table and field name, like 'tablename.fieldname'. \item[{\em \$field\_\-type}]The type of date field, 'int' or 'datetime'. \item[{\em \$set\_\-offset}]The name of a field that holds the timezone offset or a fixed timezone offset value. If not provided, the normal Drupal timezone handling will be used, i.e. \$set\_\-offset = 0 will make no timezone adjustment. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An appropriate SQL string for the db type and field type. 
+\end{DoxyReturn}
+\hypertarget{handlers_8inc_a7916ceb65f4cbc07601e2acae923374e}{
+\index{handlers.inc@{handlers.inc}!views\_\-date\_\-sql\_\-format@{views\_\-date\_\-sql\_\-format}}
+\index{views\_\-date\_\-sql\_\-format@{views\_\-date\_\-sql\_\-format}!handlers.inc@{handlers.inc}}
+\subsubsection[{views\_\-date\_\-sql\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-date\_\-sql\_\-format (\$ {\em format}, \/  \$ {\em field}, \/  \$ {\em field\_\-type} = {\ttfamily 'int'}, \/  \$ {\em set\_\-offset} = {\ttfamily NULL})}}
+\label{handlers_8inc_a7916ceb65f4cbc07601e2acae923374e}
+Helper function to create cross-\/database SQL date formatting.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$format}]A format string for the result, like 'Y-\/m-\/d H:i:s'. \item[{\em \$field}]The real table and field name, like 'tablename.fieldname'. \item[{\em \$field\_\-type}]The type of date field, 'int' or 'datetime'. \item[{\em \$set\_\-offset}]The name of a field that holds the timezone offset or a fixed timezone offset value. If not provided, the normal Drupal timezone handling will be used, i.e. \$set\_\-offset = 0 will make no timezone adjustment. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An appropriate SQL string for the db type and field type. 
+\end{DoxyReturn}
+\hypertarget{handlers_8inc_a76ba5af63134db1102702696a50ba6f5}{
+\index{handlers.inc@{handlers.inc}!views\_\-get\_\-table\_\-join@{views\_\-get\_\-table\_\-join}}
+\index{views\_\-get\_\-table\_\-join@{views\_\-get\_\-table\_\-join}!handlers.inc@{handlers.inc}}
+\subsubsection[{views\_\-get\_\-table\_\-join}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-get\_\-table\_\-join (\$ {\em table}, \/  \$ {\em base\_\-table})}}
+\label{handlers_8inc_a76ba5af63134db1102702696a50ba6f5}
+Fetch a handler to join one table to a primary table from the data cache \hypertarget{handlers_8inc_a3bd8b0bf769dc6d068349b222edb410c}{
+\index{handlers.inc@{handlers.inc}!views\_\-get\_\-timezone@{views\_\-get\_\-timezone}}
+\index{views\_\-get\_\-timezone@{views\_\-get\_\-timezone}!handlers.inc@{handlers.inc}}
+\subsubsection[{views\_\-get\_\-timezone}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-get\_\-timezone ()}}
+\label{handlers_8inc_a3bd8b0bf769dc6d068349b222edb410c}
+Figure out what timezone we're in; needed for some date manipulations. 
