@@ -64,8 +64,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </table>
 </div>
 <div class="memdoc">
-<p>Confirms that a specific cell phone number is valid.</p>
-<dl><dt><b>Parameters:</b></dt><dd>
+<p>Confirms that a specific cell phone number is valid. A valid phone number is a number with either 10 or 11 digits (as long as the first digit is a "1"). Valid phone numbers do not have 3 consecutive 5's in any part, nor do they use punctuation where there should be numbers.</p>
+<div class="fragment"><pre class="fragment">  <a class="code" href="dosomething__user_8module.html#ae2ee3bafb69f17cb8cc4014d22f155c2">dosomething_user_valid_cell</a>(<span class="stringliteral">&apos;123-456-7890&apos;</span>);
+<span class="preprocessor">  # =&gt; true</span>
+<span class="preprocessor"></span>  <a class="code" href="dosomething__user_8module.html#ae2ee3bafb69f17cb8cc4014d22f155c2">dosomething_user_valid_cell</a>(<span class="stringliteral">&apos;123.456 7890&apos;</span>);
+<span class="preprocessor">  # =&gt; true</span>
+<span class="preprocessor"></span>  <a class="code" href="dosomething__user_8module.html#ae2ee3bafb69f17cb8cc4014d22f155c2">dosomething_user_valid_cell</a>(<span class="stringliteral">&apos;1 (123) 456-7890&apos;</span>);
+<span class="preprocessor">  # =&gt; true</span>
+<span class="preprocessor"></span>  <a class="code" href="dosomething__user_8module.html#ae2ee3bafb69f17cb8cc4014d22f155c2">dosomething_user_valid_cell</a>(<span class="stringliteral">&apos;123-555-9942&apos;</span>);
+<span class="preprocessor">  # =&gt; false</span>
+<span class="preprocessor"></span>  <a class="code" href="dosomething__user_8module.html#ae2ee3bafb69f17cb8cc4014d22f155c2">dosomething_user_valid_cell</a>(<span class="stringliteral">&apos;1 902 #@@ 1234&apos;</span>);
+<span class="preprocessor">  # =&gt; false</span>
+</pre></div><dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>$number The cell phone number that should be validated. </td></tr>
   </table>
