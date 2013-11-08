@@ -1,0 +1,84 @@
+\hypertarget{views__panes_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/content\_\-types/views\_\-panes.inc File Reference}
+\label{views__panes_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/content\_\-types/views\_\-panes.inc@{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/content\_\-types/views\_\-panes.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{views__panes_8inc_a47ae37922a47cd0ce4389ef3ff4dcf13}{views\_\-content\_\-views\_\-panes\_\-ctools\_\-content\_\-types} ()
+\item 
+\hyperlink{views__panes_8inc_a27dc273e61036885ab806b283debd0ff}{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-content\_\-types} (\$plugin)
+\item 
+\hyperlink{views__panes_8inc_a574f8e1390e8933ff0d788df01b7347a}{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-content\_\-type} (\$subtype, \$plugin)
+\item 
+\hypertarget{views__panes_8inc_acb89daa3d309b045920f1dd9aaaf30cb}{
+{\bfseries \_\-views\_\-content\_\-panes\_\-content\_\-type} (\$\hyperlink{classview}{view}, \$display)}
+\label{views__panes_8inc_acb89daa3d309b045920f1dd9aaaf30cb}
+
+\item 
+\hyperlink{views__panes_8inc_ae1fe2dcd3a3ee733e44ead83786d3870}{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-render} (\$subtype, \$conf, \$panel\_\-args, \$contexts)
+\item 
+\hyperlink{views__panes_8inc_a8c66441e03f6ca1eb97b2ff4eda629b1}{views\_\-content\_\-views\_\-panes\_\-add\_\-defaults} (\&\$conf, \$\hyperlink{classview}{view})
+\item 
+\hyperlink{views__panes_8inc_ac86eb41504d821a677f83530dcd07119}{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-edit\_\-form} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{views__panes_8inc_a08909edfae5e99b7b41c01c053f117f8}{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-edit\_\-form\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{views__panes_8inc_a9f812dd75c492c5947dcb4409d2b1651}{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-admin\_\-title} (\$subtype, \$conf, \$contexts)
+\item 
+\hyperlink{views__panes_8inc_a195ec7b84cf3cbca102ed50bf78949d7}{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-admin\_\-info} (\$subtype, \$conf, \$contexts)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Content type plugin to allow Views to be exposed as a display type, leaving most of the configuration on the \hyperlink{classview}{view}. 
+
+\subsection{Function Documentation}
+\hypertarget{views__panes_8inc_a8c66441e03f6ca1eb97b2ff4eda629b1}{
+\index{views\_\-panes.inc@{views\_\-panes.inc}!views\_\-content\_\-views\_\-panes\_\-add\_\-defaults@{views\_\-content\_\-views\_\-panes\_\-add\_\-defaults}}
+\index{views\_\-content\_\-views\_\-panes\_\-add\_\-defaults@{views\_\-content\_\-views\_\-panes\_\-add\_\-defaults}!views_panes.inc@{views\_\-panes.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-panes\_\-add\_\-defaults}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-panes\_\-add\_\-defaults (\&\$ {\em conf}, \/  \$ {\em view})}}
+\label{views__panes_8inc_a8c66441e03f6ca1eb97b2ff4eda629b1}
+Add defaults to \hyperlink{classview}{view} pane settings. This helps cover us if \$allow settings changed and there are no actual settings for a particular item. \hypertarget{views__panes_8inc_a195ec7b84cf3cbca102ed50bf78949d7}{
+\index{views\_\-panes.inc@{views\_\-panes.inc}!views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-admin\_\-info@{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-admin\_\-info}}
+\index{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-admin\_\-info@{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-admin\_\-info}!views_panes.inc@{views\_\-panes.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-admin\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-admin\_\-info (\$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em contexts})}}
+\label{views__panes_8inc_a195ec7b84cf3cbca102ed50bf78949d7}
+Returns the administrative title for a type. \hypertarget{views__panes_8inc_a9f812dd75c492c5947dcb4409d2b1651}{
+\index{views\_\-panes.inc@{views\_\-panes.inc}!views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-admin\_\-title@{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-admin\_\-title}}
+\index{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-admin\_\-title@{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-admin\_\-title}!views_panes.inc@{views\_\-panes.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-admin\_\-title}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-admin\_\-title (\$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em contexts})}}
+\label{views__panes_8inc_a9f812dd75c492c5947dcb4409d2b1651}
+Returns the administrative title for a type. \hypertarget{views__panes_8inc_a574f8e1390e8933ff0d788df01b7347a}{
+\index{views\_\-panes.inc@{views\_\-panes.inc}!views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-content\_\-type@{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-content\_\-type}}
+\index{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-content\_\-type@{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-content\_\-type}!views_panes.inc@{views\_\-panes.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-content\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-content\_\-type (\$ {\em subtype}, \/  \$ {\em plugin})}}
+\label{views__panes_8inc_a574f8e1390e8933ff0d788df01b7347a}
+Return a single content type. \hypertarget{views__panes_8inc_a27dc273e61036885ab806b283debd0ff}{
+\index{views\_\-panes.inc@{views\_\-panes.inc}!views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-content\_\-types@{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-content\_\-types}}
+\index{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-content\_\-types@{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-content\_\-types}!views_panes.inc@{views\_\-panes.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-content\_\-types}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-content\_\-types (\$ {\em plugin})}}
+\label{views__panes_8inc_a27dc273e61036885ab806b283debd0ff}
+Return all content types available. \hypertarget{views__panes_8inc_ac86eb41504d821a677f83530dcd07119}{
+\index{views\_\-panes.inc@{views\_\-panes.inc}!views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-edit\_\-form@{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-edit\_\-form}}
+\index{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-edit\_\-form@{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-edit\_\-form}!views_panes.inc@{views\_\-panes.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-edit\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-edit\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{views__panes_8inc_ac86eb41504d821a677f83530dcd07119}
+Returns an edit form for a block. \hypertarget{views__panes_8inc_a08909edfae5e99b7b41c01c053f117f8}{
+\index{views\_\-panes.inc@{views\_\-panes.inc}!views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-edit\_\-form\_\-submit@{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-edit\_\-form\_\-submit}}
+\index{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-edit\_\-form\_\-submit@{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-edit\_\-form\_\-submit}!views_panes.inc@{views\_\-panes.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-edit\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-edit\_\-form\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{views__panes_8inc_a08909edfae5e99b7b41c01c053f117f8}
+Store form values in \$conf. \hypertarget{views__panes_8inc_ae1fe2dcd3a3ee733e44ead83786d3870}{
+\index{views\_\-panes.inc@{views\_\-panes.inc}!views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-render@{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-render}}
+\index{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-render@{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-render}!views_panes.inc@{views\_\-panes.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-panes\_\-content\_\-type\_\-render (\$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em panel\_\-args}, \/  \$ {\em contexts})}}
+\label{views__panes_8inc_ae1fe2dcd3a3ee733e44ead83786d3870}
+Output function for the 'views' content type.
+
+Outputs a \hyperlink{classview}{view} based on the module and delta supplied in the configuration. \hypertarget{views__panes_8inc_a47ae37922a47cd0ce4389ef3ff4dcf13}{
+\index{views\_\-panes.inc@{views\_\-panes.inc}!views\_\-content\_\-views\_\-panes\_\-ctools\_\-content\_\-types@{views\_\-content\_\-views\_\-panes\_\-ctools\_\-content\_\-types}}
+\index{views\_\-content\_\-views\_\-panes\_\-ctools\_\-content\_\-types@{views\_\-content\_\-views\_\-panes\_\-ctools\_\-content\_\-types}!views_panes.inc@{views\_\-panes.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-panes\_\-ctools\_\-content\_\-types}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-panes\_\-ctools\_\-content\_\-types ()}}
+\label{views__panes_8inc_a47ae37922a47cd0ce4389ef3ff4dcf13}
+Implements hook\_\-ctools\_\-content\_\-types() 

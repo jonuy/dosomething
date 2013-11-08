@@ -1,0 +1,59 @@
+\hypertarget{path__visibility_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/access/path\_\-visibility.inc File Reference}
+\label{path__visibility_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/access/path\_\-visibility.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/access/path\_\-visibility.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{path__visibility_8inc_a6f4294c309bedd34c01a2a94441c23dd}{ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-settings} (\$form, \&\$form\_\-state, \$conf)
+\item 
+\hyperlink{path__visibility_8inc_ac2d365fb2246a343312ce6590e9d147f}{ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-check} (\$conf, \$context)
+\item 
+\hyperlink{path__visibility_8inc_acf915389dcc61088cc1c60d4b9184254}{ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-summary} (\$conf, \$context)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide access control/visibility based on path. 
+
+\subsection{Function Documentation}
+\hypertarget{path__visibility_8inc_ac2d365fb2246a343312ce6590e9d147f}{
+\index{path\_\-visibility.inc@{path\_\-visibility.inc}!ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-check@{ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-check}}
+\index{ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-check@{ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-check}!path_visibility.inc@{path\_\-visibility.inc}}
+\subsubsection[{ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-check}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-check (\$ {\em conf}, \/  \$ {\em context})}}
+\label{path__visibility_8inc_ac2d365fb2246a343312ce6590e9d147f}
+Check for access. \hypertarget{path__visibility_8inc_a6f4294c309bedd34c01a2a94441c23dd}{
+\index{path\_\-visibility.inc@{path\_\-visibility.inc}!ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-settings@{ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-settings}}
+\index{ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-settings@{ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-settings}!path_visibility.inc@{path\_\-visibility.inc}}
+\subsubsection[{ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-settings (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em conf})}}
+\label{path__visibility_8inc_a6f4294c309bedd34c01a2a94441c23dd}
+Settings form \hypertarget{path__visibility_8inc_acf915389dcc61088cc1c60d4b9184254}{
+\index{path\_\-visibility.inc@{path\_\-visibility.inc}!ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-summary@{ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-summary}}
+\index{ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-summary@{ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-summary}!path_visibility.inc@{path\_\-visibility.inc}}
+\subsubsection[{ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-path\_\-visibility\_\-ctools\_\-access\_\-summary (\$ {\em conf}, \/  \$ {\em context})}}
+\label{path__visibility_8inc_acf915389dcc61088cc1c60d4b9184254}
+Provide a summary description. 
+
+\subsection{Variable Documentation}
+\hypertarget{path__visibility_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{path\_\-visibility.inc@{path\_\-visibility.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!path_visibility.inc@{path\_\-visibility.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{path__visibility_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('String: URL path'),
+  'description' => t('Control access by the current path.'),
+  'callback' => 'ctools_path_visibility_ctools_access_check',
+  'settings form' => 'ctools_path_visibility_ctools_access_settings',
+  'summary' => 'ctools_path_visibility_ctools_access_summary',
+  'required context' =>  new ctools_context_optional(t('Path'), 'string'),
+  'default' => array('visibility_setting' => 1, 'paths' => ''),
+)
+\end{DoxyCode}

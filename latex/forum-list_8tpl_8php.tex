@@ -1,0 +1,89 @@
+\hypertarget{forum-list_8tpl_8php}{
+\section{html/modules/forum/forum-\/list.tpl.php File Reference}
+\label{forum-list_8tpl_8php}\index{html/modules/forum/forum-\/list.tpl.php@{html/modules/forum/forum-\/list.tpl.php}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{forum-list_8tpl_8php_a34d61fc74c18838e5ac968032b90a3f9}{
+print {\bfseries \$forum\_\-id}}
+\label{forum-list_8tpl_8php_a34d61fc74c18838e5ac968032b90a3f9}
+
+\item 
+\hypertarget{forum-list_8tpl_8php_ab2afb0fd737f1a3161b83c05aa9bf0e9}{
+foreach(\$forums as \$child\_\-id=$>$ \$forum) print \$forum {\bfseries zebra}}
+\label{forum-list_8tpl_8php_ab2afb0fd737f1a3161b83c05aa9bf0e9}
+
+\item 
+\hypertarget{forum-list_8tpl_8php_aefd4ad989e095c4fd5a6ffbb6c53984d}{
+print \$forum {\bfseries is\_\-container}}
+\label{forum-list_8tpl_8php_aefd4ad989e095c4fd5a6ffbb6c53984d}
+
+\item 
+\hypertarget{forum-list_8tpl_8php_ab929fd3b80ff41d6a5d981d12ee7c3a0}{
+print \$forum {\bfseries icon\_\-class}}
+\label{forum-list_8tpl_8php_ab929fd3b80ff41d6a5d981d12ee7c3a0}
+
+\item 
+\hypertarget{forum-list_8tpl_8php_a4b2b933dfcfa4f41cb0c1d1911ade3a9}{
+print \$forum {\bfseries icon\_\-title}}
+\label{forum-list_8tpl_8php_a4b2b933dfcfa4f41cb0c1d1911ade3a9}
+
+\item 
+\hypertarget{forum-list_8tpl_8php_a96c4cb1b65109bc8e69e4fd558b76b54}{
+print \$forum {\bfseries link}}
+\label{forum-list_8tpl_8php_a96c4cb1b65109bc8e69e4fd558b76b54}
+
+\item 
+\hypertarget{forum-list_8tpl_8php_af45eed1e6416d36a59afb38dfbaed0f0}{
+print \$forum {\bfseries name}}
+\label{forum-list_8tpl_8php_af45eed1e6416d36a59afb38dfbaed0f0}
+
+\item 
+\hypertarget{forum-list_8tpl_8php_afb799dd9a092a5f9976f8b41dc0bcd98}{
+if(\$forum-\/$>$description) {\bfseries endif}}
+\label{forum-list_8tpl_8php_afb799dd9a092a5f9976f8b41dc0bcd98}
+
+\item 
+\hypertarget{forum-list_8tpl_8php_ae02958244c63e6b4c4a07e5efe312478}{
+if(!\$forum-\/$>$is\_\-container)(\$forum-\/$>$new\_\-topics) print \$forum {\bfseries new\_\-text}}
+\label{forum-list_8tpl_8php_ae02958244c63e6b4c4a07e5efe312478}
+
+\item 
+\hypertarget{forum-list_8tpl_8php_a672d9707ef91db026c210f98cc601123}{
+{\bfseries endforeach}}
+\label{forum-list_8tpl_8php_a672d9707ef91db026c210f98cc601123}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Displays a list of forums and containers.
+
+Available variables:
+\begin{DoxyItemize}
+\item \$forums: An array of forums and containers to display. It is keyed to the numeric IDs of all child forums and containers. Each \$forum in \$forums contains:
+\begin{DoxyItemize}
+\item \$forum-\/$>$is\_\-container: TRUE if the forum can contain other forums. FALSE if the forum can contain only topics.
+\item \$forum-\/$>$depth: How deep the forum is in the current hierarchy.
+\item \$forum-\/$>$zebra: 'even' or 'odd' string used for row class.
+\item \$forum-\/$>$icon\_\-class: 'default' or 'new' string used for forum icon class.
+\item \$forum-\/$>$icon\_\-title: Text alternative for the forum icon.
+\item \$forum-\/$>$name: The name of the forum.
+\item \$forum-\/$>$link: The URL to link to this forum.
+\item \$forum-\/$>$description: The description of this forum.
+\item \$forum-\/$>$new\_\-topics: TRUE if the forum contains unread posts.
+\item \$forum-\/$>$new\_\-url: A URL to the forum's unread posts.
+\item \$forum-\/$>$new\_\-text: Text for the above URL, which tells how many new posts.
+\item \$forum-\/$>$old\_\-topics: A count of posts that have already been read.
+\item \$forum-\/$>$num\_\-posts: The total number of posts in the forum.
+\item \$forum-\/$>$last\_\-reply: Text representing the last time a forum was posted or commented in.
+\end{DoxyItemize}
+\item \$forum\_\-id: Forum ID for the current forum. Parent to all items within the \$forums array.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{forum_8module_ad3b69c5d2f0cbf90157149bf0c8f21a5}{template\_\-preprocess\_\-forum\_\-list()} 
+
+theme\_\-forum\_\-list() 
+\end{DoxySeeAlso}

@@ -1,0 +1,113 @@
+\hypertarget{node__access__test_8module}{
+\section{html/modules/node/tests/node\_\-access\_\-test.module File Reference}
+\label{node__access__test_8module}\index{html/modules/node/tests/node\_\-access\_\-test.module@{html/modules/node/tests/node\_\-access\_\-test.module}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{node__access__test_8module_ab786cb7574630a4c4573638f07456d24}{node\_\-access\_\-test\_\-node\_\-grants} (\$account, \$op)
+\item 
+\hyperlink{node__access__test_8module_aaf057da77b2be1912eb8713f927533ca}{node\_\-access\_\-test\_\-node\_\-access\_\-records} (\$node)
+\item 
+\hyperlink{node__access__test_8module_a502abc1d3e08ab60a5643b058181f068}{node\_\-access\_\-test\_\-permission} ()
+\item 
+\hyperlink{node__access__test_8module_a2dd99334135c118135fc170ea07f3d46}{node\_\-access\_\-test\_\-menu} ()
+\item 
+\hyperlink{node__access__test_8module_a7d5ba9d1824c59f68cc2dfc2b9758487}{node\_\-access\_\-test\_\-page} ()
+\item 
+\hyperlink{node__access__test_8module_a303b4aa21e0a1afbca6067d38d5b961e}{node\_\-access\_\-entity\_\-test\_\-page} ()
+\item 
+\hyperlink{node__access__test_8module_a22d192ecfb4b1cb2fd5533e6d2330636}{node\_\-access\_\-test\_\-form\_\-node\_\-form\_\-alter} (\&\$form, \$form\_\-state)
+\item 
+\hyperlink{node__access__test_8module_aaeaad51d410d2cd92ff9f9d653096c8d}{node\_\-access\_\-test\_\-node\_\-load} (\$nodes, \$types)
+\item 
+\hyperlink{node__access__test_8module_a45b4e169741404976907c0432c119f3a}{node\_\-access\_\-test\_\-node\_\-delete} (\$node)
+\item 
+\hyperlink{node__access__test_8module_afb11c51940388ec9b43c605f27896573}{node\_\-access\_\-test\_\-node\_\-insert} (\$node)
+\item 
+\hyperlink{node__access__test_8module_a29f378c85be54f81cb706c9638a1ea07}{node\_\-access\_\-test\_\-node\_\-update} (\$node)
+\item 
+\hyperlink{node__access__test_8module_a64f2b481c2dd9b763d7ff9249d2ac827}{\_\-node\_\-access\_\-test\_\-node\_\-write} (\$node)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A dummy module implementing node access related hooks for testing purposes.
+
+A dummy module implementing node access related hooks to test API interaction with the Node module. This module restricts \hyperlink{classview}{view} permission to those with a special 'node test view' permission. 
+
+\subsection{Function Documentation}
+\hypertarget{node__access__test_8module_a64f2b481c2dd9b763d7ff9249d2ac827}{
+\index{node\_\-access\_\-test.module@{node\_\-access\_\-test.module}!\_\-node\_\-access\_\-test\_\-node\_\-write@{\_\-node\_\-access\_\-test\_\-node\_\-write}}
+\index{\_\-node\_\-access\_\-test\_\-node\_\-write@{\_\-node\_\-access\_\-test\_\-node\_\-write}!node_access_test.module@{node\_\-access\_\-test.module}}
+\subsubsection[{\_\-node\_\-access\_\-test\_\-node\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}\_\-node\_\-access\_\-test\_\-node\_\-write (\$ {\em node})}}
+\label{node__access__test_8module_a64f2b481c2dd9b763d7ff9249d2ac827}
+Helper for node insert/update. \hypertarget{node__access__test_8module_a303b4aa21e0a1afbca6067d38d5b961e}{
+\index{node\_\-access\_\-test.module@{node\_\-access\_\-test.module}!node\_\-access\_\-entity\_\-test\_\-page@{node\_\-access\_\-entity\_\-test\_\-page}}
+\index{node\_\-access\_\-entity\_\-test\_\-page@{node\_\-access\_\-entity\_\-test\_\-page}!node_access_test.module@{node\_\-access\_\-test.module}}
+\subsubsection[{node\_\-access\_\-entity\_\-test\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-access\_\-entity\_\-test\_\-page ()}}
+\label{node__access__test_8module_a303b4aa21e0a1afbca6067d38d5b961e}
+Page callback for node access entity test page.
+
+Page should say \char`\"{}No nodes\char`\"{} if there are no nodes, and \char`\"{}Yes, \# nodes\char`\"{} (with the number filled in) if there were nodes the user could access. Also, the database query is shown, and a list of the node IDs, for debugging purposes. And if there is a query exception, the page says \char`\"{}Exception\char`\"{} and gives the error.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{node__access__test_8module_a2dd99334135c118135fc170ea07f3d46}{node\_\-access\_\-test\_\-menu()} 
+\end{DoxySeeAlso}
+\hypertarget{node__access__test_8module_a22d192ecfb4b1cb2fd5533e6d2330636}{
+\index{node\_\-access\_\-test.module@{node\_\-access\_\-test.module}!node\_\-access\_\-test\_\-form\_\-node\_\-form\_\-alter@{node\_\-access\_\-test\_\-form\_\-node\_\-form\_\-alter}}
+\index{node\_\-access\_\-test\_\-form\_\-node\_\-form\_\-alter@{node\_\-access\_\-test\_\-form\_\-node\_\-form\_\-alter}!node_access_test.module@{node\_\-access\_\-test.module}}
+\subsubsection[{node\_\-access\_\-test\_\-form\_\-node\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-access\_\-test\_\-form\_\-node\_\-form\_\-alter (\&\$ {\em form}, \/  \$ {\em form\_\-state})}}
+\label{node__access__test_8module_a22d192ecfb4b1cb2fd5533e6d2330636}
+Implements \hyperlink{group__hooks_gaf0cfc224a88c8823da68856c30a4841a}{hook\_\-form\_\-BASE\_\-FORM\_\-ID\_\-alter()}. \hypertarget{node__access__test_8module_a2dd99334135c118135fc170ea07f3d46}{
+\index{node\_\-access\_\-test.module@{node\_\-access\_\-test.module}!node\_\-access\_\-test\_\-menu@{node\_\-access\_\-test\_\-menu}}
+\index{node\_\-access\_\-test\_\-menu@{node\_\-access\_\-test\_\-menu}!node_access_test.module@{node\_\-access\_\-test.module}}
+\subsubsection[{node\_\-access\_\-test\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-access\_\-test\_\-menu ()}}
+\label{node__access__test_8module_a2dd99334135c118135fc170ea07f3d46}
+Implements \hyperlink{group__hooks_ga5c95244fea59b25666e409759e133ded}{hook\_\-menu()}.
+
+Sets up a page that lists nodes. \hypertarget{node__access__test_8module_aaf057da77b2be1912eb8713f927533ca}{
+\index{node\_\-access\_\-test.module@{node\_\-access\_\-test.module}!node\_\-access\_\-test\_\-node\_\-access\_\-records@{node\_\-access\_\-test\_\-node\_\-access\_\-records}}
+\index{node\_\-access\_\-test\_\-node\_\-access\_\-records@{node\_\-access\_\-test\_\-node\_\-access\_\-records}!node_access_test.module@{node\_\-access\_\-test.module}}
+\subsubsection[{node\_\-access\_\-test\_\-node\_\-access\_\-records}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-access\_\-test\_\-node\_\-access\_\-records (\$ {\em node})}}
+\label{node__access__test_8module_aaf057da77b2be1912eb8713f927533ca}
+Implements \hyperlink{group__node__access_ga3fe7744d74446e40e9b9ad2a782b4269}{hook\_\-node\_\-access\_\-records()}. \hypertarget{node__access__test_8module_a45b4e169741404976907c0432c119f3a}{
+\index{node\_\-access\_\-test.module@{node\_\-access\_\-test.module}!node\_\-access\_\-test\_\-node\_\-delete@{node\_\-access\_\-test\_\-node\_\-delete}}
+\index{node\_\-access\_\-test\_\-node\_\-delete@{node\_\-access\_\-test\_\-node\_\-delete}!node_access_test.module@{node\_\-access\_\-test.module}}
+\subsubsection[{node\_\-access\_\-test\_\-node\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-access\_\-test\_\-node\_\-delete (\$ {\em node})}}
+\label{node__access__test_8module_a45b4e169741404976907c0432c119f3a}
+Implements \hyperlink{group__node__api__hooks_ga66ea0473a9950dc961802e801e5042e9}{hook\_\-node\_\-delete()}. \hypertarget{node__access__test_8module_ab786cb7574630a4c4573638f07456d24}{
+\index{node\_\-access\_\-test.module@{node\_\-access\_\-test.module}!node\_\-access\_\-test\_\-node\_\-grants@{node\_\-access\_\-test\_\-node\_\-grants}}
+\index{node\_\-access\_\-test\_\-node\_\-grants@{node\_\-access\_\-test\_\-node\_\-grants}!node_access_test.module@{node\_\-access\_\-test.module}}
+\subsubsection[{node\_\-access\_\-test\_\-node\_\-grants}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-access\_\-test\_\-node\_\-grants (\$ {\em account}, \/  \$ {\em op})}}
+\label{node__access__test_8module_ab786cb7574630a4c4573638f07456d24}
+Implements \hyperlink{group__node__access_gaa973f2ab6ab14c3fa14e5138c6d69ecf}{hook\_\-node\_\-grants()}. \hypertarget{node__access__test_8module_afb11c51940388ec9b43c605f27896573}{
+\index{node\_\-access\_\-test.module@{node\_\-access\_\-test.module}!node\_\-access\_\-test\_\-node\_\-insert@{node\_\-access\_\-test\_\-node\_\-insert}}
+\index{node\_\-access\_\-test\_\-node\_\-insert@{node\_\-access\_\-test\_\-node\_\-insert}!node_access_test.module@{node\_\-access\_\-test.module}}
+\subsubsection[{node\_\-access\_\-test\_\-node\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-access\_\-test\_\-node\_\-insert (\$ {\em node})}}
+\label{node__access__test_8module_afb11c51940388ec9b43c605f27896573}
+Implements \hyperlink{group__node__api__hooks_ga8b40dc62e46e5055c205d2a723dc3548}{hook\_\-node\_\-insert()}. \hypertarget{node__access__test_8module_aaeaad51d410d2cd92ff9f9d653096c8d}{
+\index{node\_\-access\_\-test.module@{node\_\-access\_\-test.module}!node\_\-access\_\-test\_\-node\_\-load@{node\_\-access\_\-test\_\-node\_\-load}}
+\index{node\_\-access\_\-test\_\-node\_\-load@{node\_\-access\_\-test\_\-node\_\-load}!node_access_test.module@{node\_\-access\_\-test.module}}
+\subsubsection[{node\_\-access\_\-test\_\-node\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-access\_\-test\_\-node\_\-load (\$ {\em nodes}, \/  \$ {\em types})}}
+\label{node__access__test_8module_aaeaad51d410d2cd92ff9f9d653096c8d}
+Implements \hyperlink{group__node__api__hooks_gad48bb14b68ed38526029d1f7ac2d2de4}{hook\_\-node\_\-load()}. \hypertarget{node__access__test_8module_a29f378c85be54f81cb706c9638a1ea07}{
+\index{node\_\-access\_\-test.module@{node\_\-access\_\-test.module}!node\_\-access\_\-test\_\-node\_\-update@{node\_\-access\_\-test\_\-node\_\-update}}
+\index{node\_\-access\_\-test\_\-node\_\-update@{node\_\-access\_\-test\_\-node\_\-update}!node_access_test.module@{node\_\-access\_\-test.module}}
+\subsubsection[{node\_\-access\_\-test\_\-node\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-access\_\-test\_\-node\_\-update (\$ {\em node})}}
+\label{node__access__test_8module_a29f378c85be54f81cb706c9638a1ea07}
+Implements hook\_\-nodeapi\_\-update(). \hypertarget{node__access__test_8module_a7d5ba9d1824c59f68cc2dfc2b9758487}{
+\index{node\_\-access\_\-test.module@{node\_\-access\_\-test.module}!node\_\-access\_\-test\_\-page@{node\_\-access\_\-test\_\-page}}
+\index{node\_\-access\_\-test\_\-page@{node\_\-access\_\-test\_\-page}!node_access_test.module@{node\_\-access\_\-test.module}}
+\subsubsection[{node\_\-access\_\-test\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-access\_\-test\_\-page ()}}
+\label{node__access__test_8module_a7d5ba9d1824c59f68cc2dfc2b9758487}
+Page callback for node access test page.
+
+Page should say \char`\"{}No nodes\char`\"{} if there are no nodes, and \char`\"{}Yes, \# nodes\char`\"{} (with the number filled in) if there were nodes the user could access. Also, the database query is shown, and a list of the node IDs, for debugging purposes. And if there is a query exception, the page says \char`\"{}Exception\char`\"{} and gives the error. \hypertarget{node__access__test_8module_a502abc1d3e08ab60a5643b058181f068}{
+\index{node\_\-access\_\-test.module@{node\_\-access\_\-test.module}!node\_\-access\_\-test\_\-permission@{node\_\-access\_\-test\_\-permission}}
+\index{node\_\-access\_\-test\_\-permission@{node\_\-access\_\-test\_\-permission}!node_access_test.module@{node\_\-access\_\-test.module}}
+\subsubsection[{node\_\-access\_\-test\_\-permission}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-access\_\-test\_\-permission ()}}
+\label{node__access__test_8module_a502abc1d3e08ab60a5643b058181f068}
+Implements \hyperlink{group__hooks_ga2b22b45f4925f2478412477bae329713}{hook\_\-permission()}.
+
+Sets up permissions for this module. 

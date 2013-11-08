@@ -1,0 +1,71 @@
+\hypertarget{arguments_2term_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/term.inc File Reference}
+\label{arguments_2term_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/term.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/term.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{arguments_2term_8inc_a75a1887ebce05f09df059f33eb495048}{ctools\_\-term\_\-context} (\$arg=NULL, \$conf=NULL, \$empty=FALSE)
+\item 
+\hyperlink{arguments_2term_8inc_af4a25873906e508bdf514e26c1d5120d}{ctools\_\-term\_\-settings\_\-form} (\&\$form, \&\$form\_\-state, \$conf)
+\item 
+\hyperlink{arguments_2term_8inc_a24d6278aff14d86da27c59993507ce52}{ctools\_\-term\_\-ctools\_\-argument\_\-placeholder} (\$conf)
+\item 
+\hyperlink{arguments_2term_8inc_ac6b9540df9878fcf5fcd2ccca97911a8}{ctools\_\-term\_\-breadcrumb} (\$conf, \$context)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{arguments_2term_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide an argument handler for a Taxonomy term 
+
+\subsection{Function Documentation}
+\hypertarget{arguments_2term_8inc_ac6b9540df9878fcf5fcd2ccca97911a8}{
+\index{arguments/term.inc@{arguments/term.inc}!ctools\_\-term\_\-breadcrumb@{ctools\_\-term\_\-breadcrumb}}
+\index{ctools\_\-term\_\-breadcrumb@{ctools\_\-term\_\-breadcrumb}!arguments/term.inc@{arguments/term.inc}}
+\subsubsection[{ctools\_\-term\_\-breadcrumb}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-term\_\-breadcrumb (\$ {\em conf}, \/  \$ {\em context})}}
+\label{arguments_2term_8inc_ac6b9540df9878fcf5fcd2ccca97911a8}
+Inject the breadcrumb trail if necessary. \hypertarget{arguments_2term_8inc_a75a1887ebce05f09df059f33eb495048}{
+\index{arguments/term.inc@{arguments/term.inc}!ctools\_\-term\_\-context@{ctools\_\-term\_\-context}}
+\index{ctools\_\-term\_\-context@{ctools\_\-term\_\-context}!arguments/term.inc@{arguments/term.inc}}
+\subsubsection[{ctools\_\-term\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-term\_\-context (\$ {\em arg} = {\ttfamily NULL}, \/  \$ {\em conf} = {\ttfamily NULL}, \/  \$ {\em empty} = {\ttfamily FALSE})}}
+\label{arguments_2term_8inc_a75a1887ebce05f09df059f33eb495048}
+Discover if this argument gives us the term we crave. \hypertarget{arguments_2term_8inc_a24d6278aff14d86da27c59993507ce52}{
+\index{arguments/term.inc@{arguments/term.inc}!ctools\_\-term\_\-ctools\_\-argument\_\-placeholder@{ctools\_\-term\_\-ctools\_\-argument\_\-placeholder}}
+\index{ctools\_\-term\_\-ctools\_\-argument\_\-placeholder@{ctools\_\-term\_\-ctools\_\-argument\_\-placeholder}!arguments/term.inc@{arguments/term.inc}}
+\subsubsection[{ctools\_\-term\_\-ctools\_\-argument\_\-placeholder}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-term\_\-ctools\_\-argument\_\-placeholder (\$ {\em conf})}}
+\label{arguments_2term_8inc_a24d6278aff14d86da27c59993507ce52}
+Form fragment to get an argument to convert a placeholder for preview. \hypertarget{arguments_2term_8inc_af4a25873906e508bdf514e26c1d5120d}{
+\index{arguments/term.inc@{arguments/term.inc}!ctools\_\-term\_\-settings\_\-form@{ctools\_\-term\_\-settings\_\-form}}
+\index{ctools\_\-term\_\-settings\_\-form@{ctools\_\-term\_\-settings\_\-form}!arguments/term.inc@{arguments/term.inc}}
+\subsubsection[{ctools\_\-term\_\-settings\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-term\_\-settings\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em conf})}}
+\label{arguments_2term_8inc_af4a25873906e508bdf514e26c1d5120d}
+Settings form for the argument 
+
+\subsection{Variable Documentation}
+\hypertarget{arguments_2term_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{arguments/term.inc@{arguments/term.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!arguments/term.inc@{arguments/term.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{arguments_2term_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t("Taxonomy term: ID"),
+  
+  'keyword' => 'term',
+  'description' => t('Creates a single taxonomy term from a taxonomy ID or taxono
+      my term name.'),
+  'context' => 'ctools_term_context',
+  'default' => array('input_form' => 'tid', 'breadcrumb' => TRUE, 'transform' => 
+      FALSE),
+  'settings form' => 'ctools_term_settings_form',
+  'placeholder form' => 'ctools_term_ctools_argument_placeholder',
+  'breadcrumb' => 'ctools_term_breadcrumb',
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

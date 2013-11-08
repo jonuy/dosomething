@@ -1,0 +1,50 @@
+\hypertarget{dropbutton_8theme_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/includes/dropbutton.theme.inc File Reference}
+\label{dropbutton_8theme_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/includes/dropbutton.theme.inc@{html/profiles/dosomething/modules/contrib/ctools/includes/dropbutton.theme.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{dropbutton_8theme_8inc_a99047f738264a4430be947b0405f6334}{ctools\_\-dropbutton\_\-theme} (\&\$items)
+\item 
+\hyperlink{dropbutton_8theme_8inc_a17b29f655247ef7a2a5925a4963e7a6f}{theme\_\-links\_\-\_\-ctools\_\-dropbutton} (\$vars)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provide a javascript based dropbutton menu.
+
+An example are the edit/disable/delete links on the views listing page.
+
+The dropbutton menu will show up as a button with a clickable twisty pointer to the right. When clicked the button will expand, showing the list of links.
+
+The dropbutton will stay open until either the user has moved the mouse away from the box for $>$ .5 seconds, or can be immediately closed by clicking the twisty again. The code is smart enough that if the mouse moves away and then back within the .5 second window, it will not re-\/close.
+
+Multiple dropbuttons can be placed per page.
+
+If only one link is passed to the theme function, the function will render a ctools-\/button with no twisty. The twisty is only rendered when 2 or more links are provided. The wrapping element will be classed with both ctools-\/button and ctools-\/dropbutton when a dropbutton is rendered.
+
+If the user does not have javascript enabled, the link will not appear, and instead by default the list of links will appear as a normal inline list.
+
+The menu is minimally styled by default, and to make it look different will require your own CSS. You can apply your own class to the dropbutton to help style it.
+
+The twisty is rendered as a border on a widthless and heightless element. There is no image for the twisty. The color of the twisty is the color of the link by default. To adjust the size of the twisty, adjust the border widths on .ctools-\/twisty. The adjust the color of the twisty, assign a new color to the .ctools-\/button class or assign a color to .ctools-\/twisty. You shouldn't need to adjust border-\/color.
+
+Use the \hyperlink{includes_2theme_8inc_a7c25609a935874541a19657affd30fff}{theme()} function to render dropbutton e.g. theme('links\_\-\_\-ctools\_\-dropbutton', array()) where array contains a renderable array of links. 
+
+\subsection{Function Documentation}
+\hypertarget{dropbutton_8theme_8inc_a99047f738264a4430be947b0405f6334}{
+\index{dropbutton.theme.inc@{dropbutton.theme.inc}!ctools\_\-dropbutton\_\-theme@{ctools\_\-dropbutton\_\-theme}}
+\index{ctools\_\-dropbutton\_\-theme@{ctools\_\-dropbutton\_\-theme}!dropbutton.theme.inc@{dropbutton.theme.inc}}
+\subsubsection[{ctools\_\-dropbutton\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-dropbutton\_\-theme (\&\$ {\em items})}}
+\label{dropbutton_8theme_8inc_a99047f738264a4430be947b0405f6334}
+Delegated implementation of \hyperlink{group__hooks_ga013ccb45c7aaab1c16cf9691428c910d}{hook\_\-theme()} \hypertarget{dropbutton_8theme_8inc_a17b29f655247ef7a2a5925a4963e7a6f}{
+\index{dropbutton.theme.inc@{dropbutton.theme.inc}!theme\_\-links\_\-\_\-ctools\_\-dropbutton@{theme\_\-links\_\-\_\-ctools\_\-dropbutton}}
+\index{theme\_\-links\_\-\_\-ctools\_\-dropbutton@{theme\_\-links\_\-\_\-ctools\_\-dropbutton}!dropbutton.theme.inc@{dropbutton.theme.inc}}
+\subsubsection[{theme\_\-links\_\-\_\-ctools\_\-dropbutton}]{\setlength{\rightskip}{0pt plus 5cm}theme\_\-links\_\-\_\-ctools\_\-dropbutton (\$ {\em vars})}}
+\label{dropbutton_8theme_8inc_a17b29f655247ef7a2a5925a4963e7a6f}
+Create a dropbutton menu.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$title}]The text to place in the clickable area to activate the dropbutton. This text is indented to -\/9999px by default. \item[{\em \$links}]A list of links to provide within the dropbutton, suitable for use in via Drupal's theme('links'). \item[{\em \$image}]If true, the dropbutton link is an image and will not get extra decorations that a text dropbutton link will. \item[{\em \$class}]An optional class to add to the dropbutton's container div to allow you to style a single dropbutton however you like without interfering with other dropbuttons. \end{DoxyParams}

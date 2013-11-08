@@ -1,0 +1,166 @@
+\hypertarget{features_8drush_8inc}{
+\section{html/profiles/dosomething/modules/contrib/features/features.drush.inc File Reference}
+\label{features_8drush_8inc}\index{html/profiles/dosomething/modules/contrib/features/features.drush.inc@{html/profiles/dosomething/modules/contrib/features/features.drush.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{features_8drush_8inc_a00ed49df191e919ece900cc7aa8b8921}{features\_\-drush\_\-command} ()
+\item 
+\hyperlink{features_8drush_8inc_af50837dd8f14194568dffcfad0c38f9c}{features\_\-drush\_\-help} (\$section)
+\item 
+\hyperlink{features_8drush_8inc_a65af07a0ebc9889a8bc4ae56b860d756}{drush\_\-features\_\-list} ()
+\item 
+\hyperlink{features_8drush_8inc_a8018fdcee7b58fd3a05ca4a7688db1f4}{drush\_\-features\_\-components} ()
+\item 
+\hyperlink{features_8drush_8inc_a8c810b2c994b99f9307a4cedbbbd7f0c}{\_\-drush\_\-features\_\-component\_\-list} ()
+\item 
+\hyperlink{features_8drush_8inc_a01f48749fead1e5c6982f6c554d49454}{\_\-drush\_\-features\_\-component\_\-filter} (\$all\_\-components, \$patterns=array(), \$options=array())
+\item 
+\hyperlink{features_8drush_8inc_a4721c725c6eeaf6030a1e073835fe8ad}{\_\-drush\_\-features\_\-component\_\-print} (\$filtered\_\-components)
+\item 
+\hyperlink{features_8drush_8inc_a0eae3a9ca889fd7820b3556c5167d0dd}{drush\_\-features\_\-export} ()
+\item 
+\hyperlink{features_8drush_8inc_a4c44d06332931a2474f148f6d1469436}{drush\_\-features\_\-add} ()
+\item 
+\hyperlink{features_8drush_8inc_ae2dbdf181a8cca17c4ef45646ceb0ea1}{drush\_\-features\_\-update} ()
+\item 
+\hyperlink{features_8drush_8inc_a7d95941d91e834c1e3cee0ffa754ceec}{drush\_\-features\_\-update\_\-all} ()
+\item 
+\hyperlink{features_8drush_8inc_a3773d63fc524e8440924d9f79cc1231a}{\_\-drush\_\-features\_\-export} (\$info, \$module\_\-name=NULL, \$directory=NULL)
+\item 
+\hyperlink{features_8drush_8inc_aa7000926946fab9e88e2f1798e6ec688}{\_\-drush\_\-features\_\-generate\_\-export} (\&\$info, \&\$module\_\-name)
+\item 
+\hyperlink{features_8drush_8inc_aaac9159c4d7d5f228fa134accf950ef0}{drush\_\-features\_\-revert} ()
+\item 
+\hyperlink{features_8drush_8inc_ad34f00c0b0713a83ac44557a361e7b35}{drush\_\-features\_\-revert\_\-all} ()
+\item 
+\hyperlink{features_8drush_8inc_a920aff13747c72e9657c0542707ebb87}{drush\_\-features\_\-diff} ()
+\item 
+\hyperlink{features_8drush_8inc_a4561151a5ec9bf2f20e09ad0f047d5bd}{\_\-features\_\-drush\_\-set\_\-error} (\$feature, \$error= '')
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Features module drush integration. 
+
+\subsection{Function Documentation}
+\hypertarget{features_8drush_8inc_a01f48749fead1e5c6982f6c554d49454}{
+\index{features.drush.inc@{features.drush.inc}!\_\-drush\_\-features\_\-component\_\-filter@{\_\-drush\_\-features\_\-component\_\-filter}}
+\index{\_\-drush\_\-features\_\-component\_\-filter@{\_\-drush\_\-features\_\-component\_\-filter}!features.drush.inc@{features.drush.inc}}
+\subsubsection[{\_\-drush\_\-features\_\-component\_\-filter}]{\setlength{\rightskip}{0pt plus 5cm}\_\-drush\_\-features\_\-component\_\-filter (\$ {\em all\_\-components}, \/  \$ {\em patterns} = {\ttfamily array()}, \/  \$ {\em options} = {\ttfamily array()})}}
+\label{features_8drush_8inc_a01f48749fead1e5c6982f6c554d49454}
+Filters components by patterns. \hypertarget{features_8drush_8inc_a8c810b2c994b99f9307a4cedbbbd7f0c}{
+\index{features.drush.inc@{features.drush.inc}!\_\-drush\_\-features\_\-component\_\-list@{\_\-drush\_\-features\_\-component\_\-list}}
+\index{\_\-drush\_\-features\_\-component\_\-list@{\_\-drush\_\-features\_\-component\_\-list}!features.drush.inc@{features.drush.inc}}
+\subsubsection[{\_\-drush\_\-features\_\-component\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}\_\-drush\_\-features\_\-component\_\-list ()}}
+\label{features_8drush_8inc_a8c810b2c994b99f9307a4cedbbbd7f0c}
+Returns a listing of all known components, indexed by source. \hypertarget{features_8drush_8inc_a4721c725c6eeaf6030a1e073835fe8ad}{
+\index{features.drush.inc@{features.drush.inc}!\_\-drush\_\-features\_\-component\_\-print@{\_\-drush\_\-features\_\-component\_\-print}}
+\index{\_\-drush\_\-features\_\-component\_\-print@{\_\-drush\_\-features\_\-component\_\-print}!features.drush.inc@{features.drush.inc}}
+\subsubsection[{\_\-drush\_\-features\_\-component\_\-print}]{\setlength{\rightskip}{0pt plus 5cm}\_\-drush\_\-features\_\-component\_\-print (\$ {\em filtered\_\-components})}}
+\label{features_8drush_8inc_a4721c725c6eeaf6030a1e073835fe8ad}
+Prints a list of filtered components. \hypertarget{features_8drush_8inc_a3773d63fc524e8440924d9f79cc1231a}{
+\index{features.drush.inc@{features.drush.inc}!\_\-drush\_\-features\_\-export@{\_\-drush\_\-features\_\-export}}
+\index{\_\-drush\_\-features\_\-export@{\_\-drush\_\-features\_\-export}!features.drush.inc@{features.drush.inc}}
+\subsubsection[{\_\-drush\_\-features\_\-export}]{\setlength{\rightskip}{0pt plus 5cm}\_\-drush\_\-features\_\-export (\$ {\em info}, \/  \$ {\em module\_\-name} = {\ttfamily NULL}, \/  \$ {\em directory} = {\ttfamily NULL})}}
+\label{features_8drush_8inc_a3773d63fc524e8440924d9f79cc1231a}
+Write a module to the site dir.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$info}]The feature info associative array. \item[{\em \$module\_\-name}]Optional. The name for the exported module. \end{DoxyParams}
+\hypertarget{features_8drush_8inc_aa7000926946fab9e88e2f1798e6ec688}{
+\index{features.drush.inc@{features.drush.inc}!\_\-drush\_\-features\_\-generate\_\-export@{\_\-drush\_\-features\_\-generate\_\-export}}
+\index{\_\-drush\_\-features\_\-generate\_\-export@{\_\-drush\_\-features\_\-generate\_\-export}!features.drush.inc@{features.drush.inc}}
+\subsubsection[{\_\-drush\_\-features\_\-generate\_\-export}]{\setlength{\rightskip}{0pt plus 5cm}\_\-drush\_\-features\_\-generate\_\-export (\&\$ {\em info}, \/  \&\$ {\em module\_\-name})}}
+\label{features_8drush_8inc_aa7000926946fab9e88e2f1798e6ec688}
+Helper function for \_\-drush\_\-feature\_\-export.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$info}]The feature info associative array. \item[{\em \$module\_\-name}]Optional. The name for the exported module. \end{DoxyParams}
+\hypertarget{features_8drush_8inc_a4561151a5ec9bf2f20e09ad0f047d5bd}{
+\index{features.drush.inc@{features.drush.inc}!\_\-features\_\-drush\_\-set\_\-error@{\_\-features\_\-drush\_\-set\_\-error}}
+\index{\_\-features\_\-drush\_\-set\_\-error@{\_\-features\_\-drush\_\-set\_\-error}!features.drush.inc@{features.drush.inc}}
+\subsubsection[{\_\-features\_\-drush\_\-set\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}\_\-features\_\-drush\_\-set\_\-error (\$ {\em feature}, \/  \$ {\em error} = {\ttfamily ''})}}
+\label{features_8drush_8inc_a4561151a5ec9bf2f20e09ad0f047d5bd}
+Helper function to call drush\_\-set\_\-error().
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$feature}]The string name of the feature. \item[{\em \$error}]A text string identifying the type of error. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+FALSE. See drush\_\-set\_\-error(). 
+\end{DoxyReturn}
+\hypertarget{features_8drush_8inc_a4c44d06332931a2474f148f6d1469436}{
+\index{features.drush.inc@{features.drush.inc}!drush\_\-features\_\-add@{drush\_\-features\_\-add}}
+\index{drush\_\-features\_\-add@{drush\_\-features\_\-add}!features.drush.inc@{features.drush.inc}}
+\subsubsection[{drush\_\-features\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}drush\_\-features\_\-add ()}}
+\label{features_8drush_8inc_a4c44d06332931a2474f148f6d1469436}
+Add a component to a features module the selected components.
+
+This is DEPRECATED, but keeping it around for a bit longer for user migration \hypertarget{features_8drush_8inc_a8018fdcee7b58fd3a05ca4a7688db1f4}{
+\index{features.drush.inc@{features.drush.inc}!drush\_\-features\_\-components@{drush\_\-features\_\-components}}
+\index{drush\_\-features\_\-components@{drush\_\-features\_\-components}!features.drush.inc@{features.drush.inc}}
+\subsubsection[{drush\_\-features\_\-components}]{\setlength{\rightskip}{0pt plus 5cm}drush\_\-features\_\-components ()}}
+\label{features_8drush_8inc_a8018fdcee7b58fd3a05ca4a7688db1f4}
+List components, with pattern matching. \hypertarget{features_8drush_8inc_a920aff13747c72e9657c0542707ebb87}{
+\index{features.drush.inc@{features.drush.inc}!drush\_\-features\_\-diff@{drush\_\-features\_\-diff}}
+\index{drush\_\-features\_\-diff@{drush\_\-features\_\-diff}!features.drush.inc@{features.drush.inc}}
+\subsubsection[{drush\_\-features\_\-diff}]{\setlength{\rightskip}{0pt plus 5cm}drush\_\-features\_\-diff ()}}
+\label{features_8drush_8inc_a920aff13747c72e9657c0542707ebb87}
+Show the diff of a feature module. \hypertarget{features_8drush_8inc_a0eae3a9ca889fd7820b3556c5167d0dd}{
+\index{features.drush.inc@{features.drush.inc}!drush\_\-features\_\-export@{drush\_\-features\_\-export}}
+\index{drush\_\-features\_\-export@{drush\_\-features\_\-export}!features.drush.inc@{features.drush.inc}}
+\subsubsection[{drush\_\-features\_\-export}]{\setlength{\rightskip}{0pt plus 5cm}drush\_\-features\_\-export ()}}
+\label{features_8drush_8inc_a0eae3a9ca889fd7820b3556c5167d0dd}
+Add a component to a features module, or create a new module with the selected components. \hypertarget{features_8drush_8inc_a65af07a0ebc9889a8bc4ae56b860d756}{
+\index{features.drush.inc@{features.drush.inc}!drush\_\-features\_\-list@{drush\_\-features\_\-list}}
+\index{drush\_\-features\_\-list@{drush\_\-features\_\-list}!features.drush.inc@{features.drush.inc}}
+\subsubsection[{drush\_\-features\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}drush\_\-features\_\-list ()}}
+\label{features_8drush_8inc_a65af07a0ebc9889a8bc4ae56b860d756}
+Get a list of all feature modules. \hypertarget{features_8drush_8inc_aaac9159c4d7d5f228fa134accf950ef0}{
+\index{features.drush.inc@{features.drush.inc}!drush\_\-features\_\-revert@{drush\_\-features\_\-revert}}
+\index{drush\_\-features\_\-revert@{drush\_\-features\_\-revert}!features.drush.inc@{features.drush.inc}}
+\subsubsection[{drush\_\-features\_\-revert}]{\setlength{\rightskip}{0pt plus 5cm}drush\_\-features\_\-revert ()}}
+\label{features_8drush_8inc_aaac9159c4d7d5f228fa134accf950ef0}
+Revert a feature to it's code definition. Optionally accept a list of components to revert. \hypertarget{features_8drush_8inc_ad34f00c0b0713a83ac44557a361e7b35}{
+\index{features.drush.inc@{features.drush.inc}!drush\_\-features\_\-revert\_\-all@{drush\_\-features\_\-revert\_\-all}}
+\index{drush\_\-features\_\-revert\_\-all@{drush\_\-features\_\-revert\_\-all}!features.drush.inc@{features.drush.inc}}
+\subsubsection[{drush\_\-features\_\-revert\_\-all}]{\setlength{\rightskip}{0pt plus 5cm}drush\_\-features\_\-revert\_\-all ()}}
+\label{features_8drush_8inc_ad34f00c0b0713a83ac44557a361e7b35}
+Revert all enabled features to their definitions in code.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em ...}](Optional) A list of features to exclude from being reverted. \end{DoxyParams}
+\hypertarget{features_8drush_8inc_ae2dbdf181a8cca17c4ef45646ceb0ea1}{
+\index{features.drush.inc@{features.drush.inc}!drush\_\-features\_\-update@{drush\_\-features\_\-update}}
+\index{drush\_\-features\_\-update@{drush\_\-features\_\-update}!features.drush.inc@{features.drush.inc}}
+\subsubsection[{drush\_\-features\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}drush\_\-features\_\-update ()}}
+\label{features_8drush_8inc_ae2dbdf181a8cca17c4ef45646ceb0ea1}
+Update an existing feature module. \hypertarget{features_8drush_8inc_a7d95941d91e834c1e3cee0ffa754ceec}{
+\index{features.drush.inc@{features.drush.inc}!drush\_\-features\_\-update\_\-all@{drush\_\-features\_\-update\_\-all}}
+\index{drush\_\-features\_\-update\_\-all@{drush\_\-features\_\-update\_\-all}!features.drush.inc@{features.drush.inc}}
+\subsubsection[{drush\_\-features\_\-update\_\-all}]{\setlength{\rightskip}{0pt plus 5cm}drush\_\-features\_\-update\_\-all ()}}
+\label{features_8drush_8inc_a7d95941d91e834c1e3cee0ffa754ceec}
+Update all enabled features. Optionally pass in a list of features to exclude from being updated. \hypertarget{features_8drush_8inc_a00ed49df191e919ece900cc7aa8b8921}{
+\index{features.drush.inc@{features.drush.inc}!features\_\-drush\_\-command@{features\_\-drush\_\-command}}
+\index{features\_\-drush\_\-command@{features\_\-drush\_\-command}!features.drush.inc@{features.drush.inc}}
+\subsubsection[{features\_\-drush\_\-command}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-drush\_\-command ()}}
+\label{features_8drush_8inc_a00ed49df191e919ece900cc7aa8b8921}
+Implements hook\_\-drush\_\-command().
+
+\begin{DoxyReturn}{Returns}
+An associative array describing your command(s).
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+drush\_\-parse\_\-command() 
+\end{DoxySeeAlso}
+\hypertarget{features_8drush_8inc_af50837dd8f14194568dffcfad0c38f9c}{
+\index{features.drush.inc@{features.drush.inc}!features\_\-drush\_\-help@{features\_\-drush\_\-help}}
+\index{features\_\-drush\_\-help@{features\_\-drush\_\-help}!features.drush.inc@{features.drush.inc}}
+\subsubsection[{features\_\-drush\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-drush\_\-help (\$ {\em section})}}
+\label{features_8drush_8inc_af50837dd8f14194568dffcfad0c38f9c}
+Implements hook\_\-drush\_\-help(). 

@@ -1,0 +1,114 @@
+\hypertarget{classviews__plugin__row__node__view}{
+\section{views\_\-plugin\_\-row\_\-node\_\-view Class Reference}
+\label{classviews__plugin__row__node__view}\index{views\_\-plugin\_\-row\_\-node\_\-view@{views\_\-plugin\_\-row\_\-node\_\-view}}
+}
+Inheritance diagram for views\_\-plugin\_\-row\_\-node\_\-view::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classviews__plugin__row__node__view}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classviews__plugin__row__node__view_a3bb6fb204cefdab520d24765a8f916ba}{init} (\&\$\hyperlink{classview}{view}, \&\$display, \$options=NULL)
+\item 
+\hypertarget{classviews__plugin__row__node__view_af489a0ff40c6b85382d9611cce0c509b}{
+{\bfseries option\_\-definition} ()}
+\label{classviews__plugin__row__node__view_af489a0ff40c6b85382d9611cce0c509b}
+
+\item 
+\hyperlink{classviews__plugin__row__node__view_a7bc31b38a1cc4474695af3a564fde775}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__row__node__view_a36ec9ec1547dae456e8669de4b5625ce}{options\_\-form\_\-summary\_\-options} ()
+\item 
+\hyperlink{classviews__plugin__row__node__view_a64b0c17198744b817ca0246e0d973aad}{summary\_\-title} ()
+\item 
+\hyperlink{classviews__plugin__row__node__view_a5a6428b6994ff8c0ff52e1e9022fc8eb}{pre\_\-render} (\$values)
+\item 
+\hyperlink{classviews__plugin__row__node__view_a54c188103326e10c26a466d896e6d74b}{render} (\$row)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__plugin__row__node__view_a24bbaae2ffd937d231ff9918a7c4067e}{
+{\bfseries \$base\_\-table} = 'node'}
+\label{classviews__plugin__row__node__view_a24bbaae2ffd937d231ff9918a7c4067e}
+
+\item 
+\hypertarget{classviews__plugin__row__node__view_ae77441cc82786f0acca947e12a38c922}{
+{\bfseries \$base\_\-field} = 'nid'}
+\label{classviews__plugin__row__node__view_ae77441cc82786f0acca947e12a38c922}
+
+\item 
+\hypertarget{classviews__plugin__row__node__view_ac15e21d5118e882d46bf0630618916b3}{
+{\bfseries \$nodes} = array()}
+\label{classviews__plugin__row__node__view_ac15e21d5118e882d46bf0630618916b3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin which performs a node\_\-view on the resulting object.
+
+Most of the code on this object is in the theme function. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__plugin__row__node__view_a3bb6fb204cefdab520d24765a8f916ba}{
+\index{views\_\-plugin\_\-row\_\-node\_\-view@{views\_\-plugin\_\-row\_\-node\_\-view}!init@{init}}
+\index{init@{init}!views_plugin_row_node_view@{views\_\-plugin\_\-row\_\-node\_\-view}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row\_\-node\_\-view::init (\&\$ {\em view}, \/  \&\$ {\em display}, \/  \$ {\em options} = {\ttfamily NULL})}}
+\label{classviews__plugin__row__node__view_a3bb6fb204cefdab520d24765a8f916ba}
+Initialize the row plugin. 
+
+Reimplemented from \hyperlink{classviews__plugin__row_abf02e5f51e907c5009edda15d997c161}{views\_\-plugin\_\-row}.\hypertarget{classviews__plugin__row__node__view_a7bc31b38a1cc4474695af3a564fde775}{
+\index{views\_\-plugin\_\-row\_\-node\_\-view@{views\_\-plugin\_\-row\_\-node\_\-view}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_plugin_row_node_view@{views\_\-plugin\_\-row\_\-node\_\-view}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row\_\-node\_\-view::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__row__node__view_a7bc31b38a1cc4474695af3a564fde775}
+Provide a form for setting options. 
+
+Reimplemented from \hyperlink{classviews__plugin__row_a6914c39d64977a0aa71da39cc1af004e}{views\_\-plugin\_\-row}.\hypertarget{classviews__plugin__row__node__view_a36ec9ec1547dae456e8669de4b5625ce}{
+\index{views\_\-plugin\_\-row\_\-node\_\-view@{views\_\-plugin\_\-row\_\-node\_\-view}!options\_\-form\_\-summary\_\-options@{options\_\-form\_\-summary\_\-options}}
+\index{options\_\-form\_\-summary\_\-options@{options\_\-form\_\-summary\_\-options}!views_plugin_row_node_view@{views\_\-plugin\_\-row\_\-node\_\-view}}
+\subsubsection[{options\_\-form\_\-summary\_\-options}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row\_\-node\_\-view::options\_\-form\_\-summary\_\-options ()}}
+\label{classviews__plugin__row__node__view_a36ec9ec1547dae456e8669de4b5625ce}
+Return the main options, which are shown in the summary title. \hypertarget{classviews__plugin__row__node__view_a5a6428b6994ff8c0ff52e1e9022fc8eb}{
+\index{views\_\-plugin\_\-row\_\-node\_\-view@{views\_\-plugin\_\-row\_\-node\_\-view}!pre\_\-render@{pre\_\-render}}
+\index{pre\_\-render@{pre\_\-render}!views_plugin_row_node_view@{views\_\-plugin\_\-row\_\-node\_\-view}}
+\subsubsection[{pre\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row\_\-node\_\-view::pre\_\-render (\$ {\em result})}}
+\label{classviews__plugin__row__node__view_a5a6428b6994ff8c0ff52e1e9022fc8eb}
+Allow the style to do stuff before each row is rendered.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$result}]The full array of results from the query. \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classviews__plugin__row_ae49a23f750874e4b3d294aa3a20ecd64}{views\_\-plugin\_\-row}.\hypertarget{classviews__plugin__row__node__view_a54c188103326e10c26a466d896e6d74b}{
+\index{views\_\-plugin\_\-row\_\-node\_\-view@{views\_\-plugin\_\-row\_\-node\_\-view}!render@{render}}
+\index{render@{render}!views_plugin_row_node_view@{views\_\-plugin\_\-row\_\-node\_\-view}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row\_\-node\_\-view::render (\$ {\em row})}}
+\label{classviews__plugin__row__node__view_a54c188103326e10c26a466d896e6d74b}
+Render a row object. This usually passes through to a theme template of some form, but not always.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em stdClass}]\$row A single row of the query result, so an element of \$view-\/$>$result.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The rendered output of a single row, used by the style plugin. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classviews__plugin__row_a8243842e087dd28664b32cef0309f2a6}{views\_\-plugin\_\-row}.\hypertarget{classviews__plugin__row__node__view_a64b0c17198744b817ca0246e0d973aad}{
+\index{views\_\-plugin\_\-row\_\-node\_\-view@{views\_\-plugin\_\-row\_\-node\_\-view}!summary\_\-title@{summary\_\-title}}
+\index{summary\_\-title@{summary\_\-title}!views_plugin_row_node_view@{views\_\-plugin\_\-row\_\-node\_\-view}}
+\subsubsection[{summary\_\-title}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row\_\-node\_\-view::summary\_\-title ()}}
+\label{classviews__plugin__row__node__view_a64b0c17198744b817ca0246e0d973aad}
+Returns the summary of the settings in the display. 
+
+Reimplemented from \hyperlink{classviews__plugin_a9a4aaece48a7cf465dd95d59a3bc5ea1}{views\_\-plugin}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/modules/node/\hyperlink{views__plugin__row__node__view_8inc}{views\_\-plugin\_\-row\_\-node\_\-view.inc}\end{DoxyCompactItemize}

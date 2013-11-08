@@ -1,0 +1,109 @@
+\hypertarget{book_8admin_8inc}{
+\section{html/modules/book/book.admin.inc File Reference}
+\label{book_8admin_8inc}\index{html/modules/book/book.admin.inc@{html/modules/book/book.admin.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{book_8admin_8inc_a8157d71732b3c171a9328b73059f2716}{book\_\-admin\_\-overview} ()
+\item 
+\hyperlink{group__forms_ga036f1d2ed17d79b71545c955c864cf2e}{book\_\-admin\_\-settings} ()
+\item 
+\hyperlink{book_8admin_8inc_a18c68be0c946b1fdf59bed35fc266d60}{book\_\-admin\_\-settings\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__forms_gac3a5a2ff41875baa73d6af357cf328e6}{book\_\-admin\_\-edit} (\$form, \$form\_\-state, \$node)
+\item 
+\hyperlink{book_8admin_8inc_ae92ff3db1b9b0f3a9832e1db72d5faec}{book\_\-admin\_\-edit\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{book_8admin_8inc_af0fb9b52db15bf3bc44c63d5b9042c69}{book\_\-admin\_\-edit\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{book_8admin_8inc_a5a76c710890bc8a1bf273f7a56a82830}{\_\-book\_\-admin\_\-table} (\$node, \&\$form)
+\item 
+\hyperlink{book_8admin_8inc_a67224aa7f69e5f25baca3d08b4b7dc5c}{\_\-book\_\-admin\_\-table\_\-tree} (\$tree, \&\$form)
+\item 
+\hyperlink{group__themeable_gad9629dbe505d7b381ba96e62496035bc}{theme\_\-book\_\-admin\_\-table} (\$variables)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Administration page callbacks for the Book module. 
+
+\subsection{Function Documentation}
+\hypertarget{book_8admin_8inc_a5a76c710890bc8a1bf273f7a56a82830}{
+\index{book.admin.inc@{book.admin.inc}!\_\-book\_\-admin\_\-table@{\_\-book\_\-admin\_\-table}}
+\index{\_\-book\_\-admin\_\-table@{\_\-book\_\-admin\_\-table}!book.admin.inc@{book.admin.inc}}
+\subsubsection[{\_\-book\_\-admin\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}\_\-book\_\-admin\_\-table (\$ {\em node}, \/  \&\$ {\em form})}}
+\label{book_8admin_8inc_a5a76c710890bc8a1bf273f7a56a82830}
+Builds the table portion of the form for the book administration page.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]The node of the top-\/level page in the book. \item[{\em \$form}]The form that is being modified, passed by reference.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__forms_gac3a5a2ff41875baa73d6af357cf328e6}{book\_\-admin\_\-edit()} 
+\end{DoxySeeAlso}
+\hypertarget{book_8admin_8inc_a67224aa7f69e5f25baca3d08b4b7dc5c}{
+\index{book.admin.inc@{book.admin.inc}!\_\-book\_\-admin\_\-table\_\-tree@{\_\-book\_\-admin\_\-table\_\-tree}}
+\index{\_\-book\_\-admin\_\-table\_\-tree@{\_\-book\_\-admin\_\-table\_\-tree}!book.admin.inc@{book.admin.inc}}
+\subsubsection[{\_\-book\_\-admin\_\-table\_\-tree}]{\setlength{\rightskip}{0pt plus 5cm}\_\-book\_\-admin\_\-table\_\-tree (\$ {\em tree}, \/  \&\$ {\em form})}}
+\label{book_8admin_8inc_a67224aa7f69e5f25baca3d08b4b7dc5c}
+Helps build the main table in the book administration page form.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$tree}]A subtree of the book menu hierarchy. \item[{\em \$form}]The form that is being modified, passed by reference.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The modified form array.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__forms_gac3a5a2ff41875baa73d6af357cf328e6}{book\_\-admin\_\-edit()} 
+\end{DoxySeeAlso}
+\hypertarget{book_8admin_8inc_af0fb9b52db15bf3bc44c63d5b9042c69}{
+\index{book.admin.inc@{book.admin.inc}!book\_\-admin\_\-edit\_\-submit@{book\_\-admin\_\-edit\_\-submit}}
+\index{book\_\-admin\_\-edit\_\-submit@{book\_\-admin\_\-edit\_\-submit}!book.admin.inc@{book.admin.inc}}
+\subsubsection[{book\_\-admin\_\-edit\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}book\_\-admin\_\-edit\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{book_8admin_8inc_af0fb9b52db15bf3bc44c63d5b9042c69}
+Form submission handler for \hyperlink{group__forms_gac3a5a2ff41875baa73d6af357cf328e6}{book\_\-admin\_\-edit()}.
+
+This function takes care to save parent menu items before their children. Saving menu items in the incorrect order can break the menu tree.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{book_8admin_8inc_ae92ff3db1b9b0f3a9832e1db72d5faec}{book\_\-admin\_\-edit\_\-validate()} 
+
+\hyperlink{menu_8admin_8inc_aa16576d9e19529ee9f710dc3b5f5b810}{menu\_\-overview\_\-form\_\-submit()} 
+\end{DoxySeeAlso}
+\hypertarget{book_8admin_8inc_ae92ff3db1b9b0f3a9832e1db72d5faec}{
+\index{book.admin.inc@{book.admin.inc}!book\_\-admin\_\-edit\_\-validate@{book\_\-admin\_\-edit\_\-validate}}
+\index{book\_\-admin\_\-edit\_\-validate@{book\_\-admin\_\-edit\_\-validate}!book.admin.inc@{book.admin.inc}}
+\subsubsection[{book\_\-admin\_\-edit\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}book\_\-admin\_\-edit\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{book_8admin_8inc_ae92ff3db1b9b0f3a9832e1db72d5faec}
+Form validation handler for \hyperlink{group__forms_gac3a5a2ff41875baa73d6af357cf328e6}{book\_\-admin\_\-edit()}.
+
+Checks that the book has not been changed while using the form.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{book_8admin_8inc_af0fb9b52db15bf3bc44c63d5b9042c69}{book\_\-admin\_\-edit\_\-submit()} 
+\end{DoxySeeAlso}
+\hypertarget{book_8admin_8inc_a8157d71732b3c171a9328b73059f2716}{
+\index{book.admin.inc@{book.admin.inc}!book\_\-admin\_\-overview@{book\_\-admin\_\-overview}}
+\index{book\_\-admin\_\-overview@{book\_\-admin\_\-overview}!book.admin.inc@{book.admin.inc}}
+\subsubsection[{book\_\-admin\_\-overview}]{\setlength{\rightskip}{0pt plus 5cm}book\_\-admin\_\-overview ()}}
+\label{book_8admin_8inc_a8157d71732b3c171a9328b73059f2716}
+Returns an administrative overview of all books.
+
+\begin{DoxyReturn}{Returns}
+string A HTML-\/formatted string with the administrative page content.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{book_8module_adc2bbd5235a769fa1ae9b02e8effc15e}{book\_\-menu()} 
+\end{DoxySeeAlso}
+\hypertarget{book_8admin_8inc_a18c68be0c946b1fdf59bed35fc266d60}{
+\index{book.admin.inc@{book.admin.inc}!book\_\-admin\_\-settings\_\-validate@{book\_\-admin\_\-settings\_\-validate}}
+\index{book\_\-admin\_\-settings\_\-validate@{book\_\-admin\_\-settings\_\-validate}!book.admin.inc@{book.admin.inc}}
+\subsubsection[{book\_\-admin\_\-settings\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}book\_\-admin\_\-settings\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{book_8admin_8inc_a18c68be0c946b1fdf59bed35fc266d60}
+Form validation handler for \hyperlink{group__forms_ga036f1d2ed17d79b71545c955c864cf2e}{book\_\-admin\_\-settings()}.
+
+\begin{DoxySeeAlso}{See also}
+book\_\-admin\_\-settings\_\-submit() 
+\end{DoxySeeAlso}

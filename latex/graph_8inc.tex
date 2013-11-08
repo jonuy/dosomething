@@ -1,0 +1,70 @@
+\hypertarget{graph_8inc}{
+\section{html/includes/graph.inc File Reference}
+\label{graph_8inc}\index{html/includes/graph.inc@{html/includes/graph.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{graph_8inc_ab1e9257090d35212bd3dd3eba7706471}{drupal\_\-depth\_\-first\_\-search} (\&\$graph)
+\item 
+\hyperlink{graph_8inc_ac59acd453622f095c7861c3404b5c176}{\_\-drupal\_\-depth\_\-first\_\-search} (\&\$graph, \&\$state, \$start, \&\$component=NULL)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Directed acyclic graph manipulation. 
+
+\subsection{Function Documentation}
+\hypertarget{graph_8inc_ac59acd453622f095c7861c3404b5c176}{
+\index{graph.inc@{graph.inc}!\_\-drupal\_\-depth\_\-first\_\-search@{\_\-drupal\_\-depth\_\-first\_\-search}}
+\index{\_\-drupal\_\-depth\_\-first\_\-search@{\_\-drupal\_\-depth\_\-first\_\-search}!graph.inc@{graph.inc}}
+\subsubsection[{\_\-drupal\_\-depth\_\-first\_\-search}]{\setlength{\rightskip}{0pt plus 5cm}\_\-drupal\_\-depth\_\-first\_\-search (\&\$ {\em graph}, \/  \&\$ {\em state}, \/  \$ {\em start}, \/  \&\$ {\em component} = {\ttfamily NULL})}}
+\label{graph_8inc_ac59acd453622f095c7861c3404b5c176}
+Performs a depth-\/first search on a graph.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$graph}]A three dimensional associated graph array. \item[{\em \$state}]An associative array. The key 'last\_\-visit\_\-order' stores a list of the vertices visited. The key components stores list of vertices belonging to the same the component. \item[{\em \$start}]An arbitrary vertex where we started traversing the graph. \item[{\em \$component}]The component of the last vertex.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{graph_8inc_ab1e9257090d35212bd3dd3eba7706471}{drupal\_\-depth\_\-first\_\-search()} 
+\end{DoxySeeAlso}
+\hypertarget{graph_8inc_ab1e9257090d35212bd3dd3eba7706471}{
+\index{graph.inc@{graph.inc}!drupal\_\-depth\_\-first\_\-search@{drupal\_\-depth\_\-first\_\-search}}
+\index{drupal\_\-depth\_\-first\_\-search@{drupal\_\-depth\_\-first\_\-search}!graph.inc@{graph.inc}}
+\subsubsection[{drupal\_\-depth\_\-first\_\-search}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-depth\_\-first\_\-search (\&\$ {\em graph})}}
+\label{graph_8inc_ab1e9257090d35212bd3dd3eba7706471}
+Performs a depth-\/first search and sort on a directed acyclic graph.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$graph}]A three dimensional associated array, with the first keys being the names of the vertices, these can be strings or numbers. The second key is 'edges' and the third one are again vertices, each such key representing an edge. Values of array elements are copied over.\end{DoxyParams}
+Example: 
+\begin{DoxyCode}
+     $graph[1]['edges'][2] = 1;
+     $graph[2]['edges'][3] = 1;
+     $graph[2]['edges'][4] = 1;
+     $graph[3]['edges'][4] = 1;
+\end{DoxyCode}
+
+
+On return you will also have: 
+\begin{DoxyCode}
+     $graph[1]['paths'][2] = 1;
+     $graph[1]['paths'][3] = 1;
+     $graph[2]['reverse_paths'][1] = 1;
+     $graph[3]['reverse_paths'][1] = 1;
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+The passed-\/in \$graph with more secondary keys filled in:
+\begin{DoxyItemize}
+\item 'paths': Contains a list of vertices than can be reached on a path from this vertex.
+\item 'reverse\_\-paths': Contains a list of vertices that has a path from them to this vertex.
+\item 'weight': If there is a path from a vertex to another then the weight of the latter is higher.
+\item 'component': Vertices in the same component have the same component identifier.
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{graph_8inc_ac59acd453622f095c7861c3404b5c176}{\_\-drupal\_\-depth\_\-first\_\-search()} 
+\end{DoxySeeAlso}

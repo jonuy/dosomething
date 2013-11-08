@@ -1,0 +1,906 @@
+\hypertarget{views_8module}{
+\section{html/profiles/dosomething/modules/contrib/views/views.module File Reference}
+\label{views_8module}\index{html/profiles/dosomething/modules/contrib/views/views.module@{html/profiles/dosomething/modules/contrib/views/views.module}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{views_8module_a771e26f3407f1baf8ffbaa97e7b91579}{views\_\-api\_\-version} ()
+\item 
+\hyperlink{views_8module_afed058cc3f58a834a8c72c0a8129032b}{views\_\-forms} (\$form\_\-id, \$args)
+\item 
+\hyperlink{views_8module_abd283e66b3b172682b7a1fe2b59fbca9}{views\_\-form\_\-id} (\$\hyperlink{classview}{view})
+\item 
+\hyperlink{views_8module_a218d917d0079bfe634c320d51e0ab403}{views\_\-api\_\-minimum\_\-version} ()
+\item 
+\hyperlink{views_8module_aff7ae737313bb2250e6c27f9ca520627}{views\_\-theme} (\$existing, \$type, \$theme, \$path)
+\item 
+\hyperlink{views_8module_a80aabc6f7846ad34568192eec17b70d7}{\_\-views\_\-find\_\-module\_\-templates} (\$cache, \$path)
+\item 
+\hyperlink{views_8module_a29c38bcb5187337aaa3fa82750bb67b9}{views\_\-plugin\_\-list} ()
+\item 
+\hyperlink{views_8module_aa21197cc54893f9efe75b3200a86d1c2}{views\_\-preprocess\_\-node} (\&\$vars)
+\item 
+\hyperlink{views_8module_a79869d9e32f3a55cb67f8024a35ea2ac}{views\_\-preprocess\_\-comment} (\&\$vars)
+\item 
+\hyperlink{views_8module_a0d62d027dd49788bfa55b9011c0af70f}{views\_\-permission} ()
+\item 
+\hyperlink{views_8module_ab62ba1ad3afe80e5bf544339a6a690b6}{views\_\-menu} ()
+\item 
+\hyperlink{views_8module_a927f922bf3e583010e7deb46db1cbb4e}{views\_\-menu\_\-alter} (\&\$callbacks)
+\item 
+\hyperlink{views_8module_a606f90f31faa85d799a5ff1dc82cc8f1}{views\_\-arg\_\-load} (\$value, \$name, \$display\_\-id, \$index)
+\item 
+\hyperlink{views_8module_a1cbb11f8adc6fbfecb3a029ab2973cff}{views\_\-page} (\$name, \$display\_\-id)
+\item 
+\hyperlink{views_8module_a278afcd00ca124837da7016ede4e64b2}{views\_\-page\_\-alter} (\&\$page)
+\item 
+\hyperlink{views_8module_a625ef34d5fe86fa3eb7152359e819d43}{views\_\-preprocess\_\-html} (\&\$variables)
+\item 
+\hyperlink{views_8module_ae9e5be1396c0f03114ade9e629d659ee}{views\_\-contextual\_\-links\_\-view\_\-alter} (\&\$element, \$items)
+\item 
+\hyperlink{views_8module_a394aa81d1c40be16ebc29acb2fdae0fc}{views\_\-block\_\-info} ()
+\item 
+\hyperlink{views_8module_ae2b10c93b6c54fb61100759aed3b7299}{views\_\-block\_\-view} (\$delta)
+\item 
+\hyperlink{views_8module_a45becd00bbd9f1fa7e672af1513200d5}{views\_\-add\_\-block\_\-contextual\_\-links} (\&\$block, \$\hyperlink{classview}{view}, \$display\_\-id, \$block\_\-type= 'block')
+\item 
+\hyperlink{views_8module_ada5efae53eaaac7b5d9a1411aae14138}{views\_\-add\_\-contextual\_\-links} (\&\$render\_\-element, \$location, \$\hyperlink{classview}{view}, \$display\_\-id)
+\item 
+\hyperlink{views_8module_a1e6f0f91344d0781f385e90f247e5aa8}{views\_\-language\_\-list} (\$field= 'name', \$all=FALSE)
+\item 
+\hyperlink{views_8module_acb54c1ed22df1323d1191cc3ff0c6891}{views\_\-flush\_\-caches} ()
+\item 
+\hyperlink{views_8module_a190407236048bea187c49db49f19e9ce}{views\_\-field\_\-create\_\-instance} (\$instance)
+\item 
+\hyperlink{views_8module_aad19a47ddacc5b8344e42a6ff92b7c4f}{views\_\-field\_\-update\_\-instance} (\$instance, \$prior\_\-instance)
+\item 
+\hyperlink{views_8module_a62211abcf036f968e40bcf20158f10c4}{views\_\-field\_\-delete\_\-instance} (\$instance)
+\item 
+\hyperlink{views_8module_a51e180fd9efb14998bb83aa5c9118867}{views\_\-invalidate\_\-cache} ()
+\item 
+\hyperlink{views_8module_a01c92296a9a5d51e8e5e470068d7cd40}{views\_\-import\_\-access} ()
+\item 
+\hyperlink{views_8module_a3ecb735baf489bc115f6de9549d8fe81}{views\_\-access} ()
+\item 
+\hyperlink{views_8module_aa76091b45e7d90275a77906611361832}{views\_\-check\_\-perm} (\$perm, \$account=NULL)
+\item 
+\hyperlink{views_8module_aff4ad7e99455055e33d13bc6394bea69}{views\_\-check\_\-roles} (\$rids, \$account=NULL)
+\item 
+\& \hyperlink{views_8module_a71f9684b8a0e7aae0871333881fc06c7}{views\_\-set\_\-page\_\-view} (\$\hyperlink{classview}{view}=NULL)
+\item 
+\& \hyperlink{views_8module_a6f9bd3baa42d847c9ea9dee1d0372db8}{views\_\-get\_\-page\_\-view} ()
+\item 
+\& \hyperlink{views_8module_af6970f0a92406ed61373aa9ede6b121e}{views\_\-set\_\-current\_\-view} (\$\hyperlink{classview}{view}=NULL)
+\item 
+\& \hyperlink{views_8module_a3e0de34df0a9358f06a0bc139250ac47}{views\_\-get\_\-current\_\-view} ()
+\item 
+\hyperlink{views_8module_ad842e97fb86ddbcdb0c35b42bae9abba}{views\_\-include} (\$file)
+\item 
+\hyperlink{views_8module_a22df4c2332b9999ad29f8e2771cf63b1}{views\_\-module\_\-include} (\$api, \$reset=FALSE)
+\item 
+\hyperlink{views_8module_a1da818e38d5362aa5474ed84c833cfc6}{views\_\-get\_\-module\_\-apis} (\$api= 'views', \$reset=FALSE)
+\item 
+\hyperlink{views_8module_ae236596838c24ca0d9639b523e397cd4}{views\_\-add\_\-css} (\$file)
+\item 
+\hyperlink{views_8module_a46f0b0606a74393adc87edd14044edbe}{views\_\-add\_\-js} (\$file)
+\item 
+\hyperlink{views_8module_a3369e9cb08a242a97093d79ed688653c}{views\_\-include\_\-handlers} (\$reset=FALSE)
+\item 
+\hyperlink{views_8module_a01ad2babd9f3cc6cc40e092a12267158}{views\_\-get\_\-handler} (\$table, \$field, \$key, \$override=NULL)
+\item 
+\hyperlink{views_8module_ae5d88e70640d423f3faed5c7bb6af672}{views\_\-fetch\_\-data} (\$table=NULL, \$move=TRUE, \$reset=FALSE)
+\item 
+\hyperlink{views_8module_ae97ae3a47ea45a0d7d39a52286e6fab2}{views\_\-fetch\_\-plugin\_\-data} (\$type=NULL, \$plugin=NULL, \$reset=FALSE)
+\item 
+\hyperlink{views_8module_ae7963b102753500f8de139bf60d59ca5}{views\_\-fetch\_\-plugin\_\-names} (\$type, \$key=NULL, \$base=array())
+\item 
+\hyperlink{views_8module_a6989c2c815b1afa01fa3f29841497ba1}{views\_\-get\_\-plugin} (\$type, \$plugin, \$reset=FALSE)
+\item 
+\hyperlink{views_8module_a21a516eefab3dad9e882299d604a3aee}{views\_\-get\_\-localization\_\-plugin} ()
+\item 
+\hyperlink{views_8module_a1acf51b07678da9f1bbf608f11099e80}{views\_\-get\_\-all\_\-templates} ()
+\item 
+\hyperlink{views_8module_a6ebd20c8c63a43de53643809db0fd1f5}{views\_\-new\_\-view} ()
+\item 
+\hyperlink{views_8module_aa014d34aca90095935b24f3a6f49bb4a}{views\_\-get\_\-applicable\_\-views} (\$type)
+\item 
+\hyperlink{views_8module_ab1f0b4d2bc5c4a7db19554780f5779ea}{views\_\-get\_\-all\_\-views} (\$reset=FALSE)
+\item 
+\hyperlink{views_8module_a8c21a5392230ac4dce7091e5031f3c93}{views\_\-get\_\-enabled\_\-views} ()
+\item 
+\hyperlink{views_8module_aa1fc003dbf7d8e16d0b3861be577afc4}{views\_\-get\_\-disabled\_\-views} ()
+\item 
+\hyperlink{views_8module_a8a6a958634c7fee2a5ae780bc306295a}{views\_\-get\_\-views\_\-as\_\-options} (\$views\_\-only=FALSE, \$filter= 'all', \$exclude\_\-view=NULL, \$optgroup=FALSE, \$sort=FALSE)
+\item 
+\hyperlink{views_8module_a2d707888904ef7d6d0c54ff7802f8cd9}{views\_\-view\_\-is\_\-enabled} (\$\hyperlink{classview}{view})
+\item 
+\hyperlink{views_8module_afba08d9328467943ebfec0a583ecb214}{views\_\-view\_\-is\_\-disabled} (\$\hyperlink{classview}{view})
+\item 
+\hyperlink{views_8module_add8b65aa3fa72b8a6f89e5ff314e42c0}{views\_\-get\_\-view} (\$name, \$reset=FALSE)
+\item 
+\hyperlink{views_8module_a06896a9ace9eb509293d9d915710562d}{views\_\-move\_\-table} (\$table)
+\item 
+\hyperlink{views_8module_a5ba50dc2afc437f2faf7d956d6488eb1}{views\_\-load\_\-display\_\-records} (\&\$views)
+\item 
+\hyperlink{views_8module_a7de4aba561f47e86e405f5519a0d3dfe}{views\_\-save\_\-view} (\&\$\hyperlink{classview}{view})
+\item 
+\hyperlink{views_8module_a1eeaff33304db50bde3466466d1bfc2d}{views\_\-delete\_\-view} (\&\$\hyperlink{classview}{view})
+\item 
+\hyperlink{views_8module_aaf41a0a8cdaaa95df87a8287b68fbb12}{views\_\-export\_\-view} (\&\$\hyperlink{classview}{view}, \$indent= '')
+\item 
+\hyperlink{views_8module_ad4357e120d4f572aa1f3f12270b9114f}{views\_\-export\_\-status} (\$\hyperlink{classview}{view}, \$status)
+\item 
+\hyperlink{views_8module_adb6971e0ec522398d8262cc90438e0f9}{views\_\-debug} (\$message, \$placeholders=array())
+\item 
+\hyperlink{views_8module_aa69e09155c17e0432a42d8e2748164ab}{vpr} (\$message, \$placeholders=array())
+\item 
+\hyperlink{views_8module_a9f7435f9c80f93858758b82f6f0cc001}{vsm} (\$message)
+\item 
+\hypertarget{views_8module_a71d9d255aba3d13cd853c5c989736028}{
+{\bfseries views\_\-trace} ()}
+\label{views_8module_a71d9d255aba3d13cd853c5c989736028}
+
+\item 
+\hypertarget{views_8module_a3ea2514fcb3a0e4f24270fd01c7e98cf}{
+{\bfseries vsm\_\-trace} ()}
+\label{views_8module_a3ea2514fcb3a0e4f24270fd01c7e98cf}
+
+\item 
+\hypertarget{views_8module_a8d068e8fce2e3293dbcf408c50bb76ab}{
+{\bfseries vpr\_\-trace} ()}
+\label{views_8module_a8d068e8fce2e3293dbcf408c50bb76ab}
+
+\item 
+\hyperlink{views_8module_a5e3621086e4f50ae1e7cfe14392c6bca}{views\_\-view\_\-has\_\-form\_\-elements} (\$\hyperlink{classview}{view})
+\item 
+\hyperlink{views_8module_ad2b3623cab717e77713170df21927c92}{views\_\-form} (\$form, \&\$form\_\-state, \$\hyperlink{classview}{view}, \$output)
+\item 
+\hyperlink{views_8module_a0597f9e730eb438da7c5e91eb9eec685}{views\_\-form\_\-views\_\-form} (\$form, \&\$form\_\-state, \$\hyperlink{classview}{view}, \$output)
+\item 
+\hyperlink{views_8module_a1d7ebdb64055b2c813237617e8be7241}{views\_\-form\_\-views\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{views_8module_a7fbf15fdfa7d026d5d8735d86d1c3fcf}{views\_\-form\_\-views\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{views_8module_a73e0d571664dc78bbddc65be02bc0a2e}{views\_\-exposed\_\-form} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{views_8module_a1b2f933056d6e97e743b462d39e1d535}{views\_\-form\_\-views\_\-exposed\_\-form\_\-alter} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{views_8module_aabe2634331d3b98e6f229d3392d2b5ce}{views\_\-exposed\_\-form\_\-validate} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{views_8module_a931d81415d29b2c8bb3ec3a2e9edbfea}{views\_\-exposed\_\-form\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{views_8module_a5db0d5532dfe2507275360e0738e4d64}{views\_\-exposed\_\-form\_\-cache} (\$views\_\-name, \$display\_\-name, \$form\_\-output=NULL)
+\item 
+\hyperlink{views_8module_a5c5e28542b853cf61c0540d05d057e40}{views\_\-theme\_\-functions} (\$hook, \$\hyperlink{classview}{view}, \$display=NULL)
+\item 
+\hyperlink{views_8module_af14b36b042237ca5f054fc19c44a188c}{views\_\-views\_\-query\_\-substitutions} (\$\hyperlink{classview}{view})
+\item 
+\hyperlink{views_8module_a621a7deea033fadbb8de49ef7795a8b7}{views\_\-query\_\-views\_\-alter} (\hyperlink{interfaceQueryAlterableInterface}{QueryAlterableInterface} \$query)
+\item 
+\hyperlink{views_8module_a51cb108c148c7478b50e6262e216a17d}{\_\-views\_\-query\_\-tag\_\-alter\_\-condition} (\hyperlink{interfaceQueryAlterableInterface}{QueryAlterableInterface} \$query, \&\$conditions, \$substitutions)
+\item 
+\hyperlink{views_8module_ae8f9f0c72da6982461ec2423eaf88a5a}{views\_\-embed\_\-view} (\$name, \$display\_\-id= 'default')
+\item 
+\hyperlink{views_8module_a176654fda08f5f0fcb5c8d5e41de5078}{views\_\-get\_\-view\_\-result} (\$name, \$display\_\-id=NULL)
+\item 
+\hyperlink{views_8module_af1114513b82cdc5613adc9dee41e11c7}{views\_\-var\_\-export} (\$var, \$prefix= '', \$init=TRUE)
+\item 
+\hyperlink{views_8module_ab664f954156e8a19e30b4db39812fad6}{views\_\-clean\_\-css\_\-identifier} (\$identifier, \$filter=array(' '=$>$ '-\/', '/'=$>$ '-\/', '\mbox{[}'=$>$ '-\/', '\mbox{]}'=$>$ ''))
+\item 
+\hyperlink{views_8module_a132f41fd30b74a1be5592fd178ccdd85}{views\_\-views\_\-exportables} (\$op= 'list', \$views=NULL, \$name= 'foo')
+\item 
+\hyperlink{views_8module_a15e88bdb192b9928200f4304f010acb1}{views\_\-process\_\-check\_\-options} (\$element, \&\$form\_\-state)
+\item 
+\hyperlink{views_8module_aa312b055f6206c4ba0c088e60d339d9f}{views\_\-trim\_\-text} (\$alter, \$value)
+\item 
+\hyperlink{views_8module_ab67b484fcc0a053477538cab840645c0}{views\_\-array\_\-key\_\-plus} (\$array)
+\item 
+\hyperlink{views_8module_abd5c327faf0b930512aaa7442a778504}{views\_\-ctools\_\-plugin\_\-api\_\-hook\_\-name} ()
+\item 
+\hyperlink{views_8module_a907c76d0314986d60f7e2361243eaa5d}{views\_\-views\_\-api} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Primarily Drupal hooks and global API functions to manipulate views.
+
+This is the main module file for Views. The main entry points into this module are \hyperlink{views_8module_a1cbb11f8adc6fbfecb3a029ab2973cff}{views\_\-page()} and views\_\-block(), where it handles incoming page and block requests. 
+
+\subsection{Function Documentation}
+\hypertarget{views_8module_a80aabc6f7846ad34568192eec17b70d7}{
+\index{views.module@{views.module}!\_\-views\_\-find\_\-module\_\-templates@{\_\-views\_\-find\_\-module\_\-templates}}
+\index{\_\-views\_\-find\_\-module\_\-templates@{\_\-views\_\-find\_\-module\_\-templates}!views.module@{views.module}}
+\subsubsection[{\_\-views\_\-find\_\-module\_\-templates}]{\setlength{\rightskip}{0pt plus 5cm}\_\-views\_\-find\_\-module\_\-templates (\$ {\em cache}, \/  \$ {\em path})}}
+\label{views_8module_a80aabc6f7846ad34568192eec17b70d7}
+Scans a directory of a module for template files.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cache}]The existing cache of theme hooks to test against. \item[{\em \$path}]The path to search.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{includes_2theme_8inc_aa755f6e8f11a62c9e90a6d7af55145b1}{drupal\_\-find\_\-theme\_\-templates()} 
+\end{DoxySeeAlso}
+\hypertarget{views_8module_a51cb108c148c7478b50e6262e216a17d}{
+\index{views.module@{views.module}!\_\-views\_\-query\_\-tag\_\-alter\_\-condition@{\_\-views\_\-query\_\-tag\_\-alter\_\-condition}}
+\index{\_\-views\_\-query\_\-tag\_\-alter\_\-condition@{\_\-views\_\-query\_\-tag\_\-alter\_\-condition}!views.module@{views.module}}
+\subsubsection[{\_\-views\_\-query\_\-tag\_\-alter\_\-condition}]{\setlength{\rightskip}{0pt plus 5cm}\_\-views\_\-query\_\-tag\_\-alter\_\-condition ({\bf QueryAlterableInterface} \$ {\em query}, \/  \&\$ {\em conditions}, \/  \$ {\em substitutions})}}
+\label{views_8module_a51cb108c148c7478b50e6262e216a17d}
+Replaces the substitutions recursive foreach condition. \hypertarget{views_8module_a3ecb735baf489bc115f6de9549d8fe81}{
+\index{views.module@{views.module}!views\_\-access@{views\_\-access}}
+\index{views\_\-access@{views\_\-access}!views.module@{views.module}}
+\subsubsection[{views\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-access ()}}
+\label{views_8module_a3ecb735baf489bc115f6de9549d8fe81}
+Determine if the logged in user has access to a \hyperlink{classview}{view}.
+
+This function should only be called from a menu hook or some other embedded source. Each argument is the result of a call to \hyperlink{classviews__plugin__access_ad4038a32fccc6a662a74f437d0bf6a23}{views\_\-plugin\_\-access::get\_\-access\_\-callback()} which is then used to determine if that display is accessible. If $\ast$any$\ast$ argument is accessible, then the \hyperlink{classview}{view} is accessible. \hypertarget{views_8module_a45becd00bbd9f1fa7e672af1513200d5}{
+\index{views.module@{views.module}!views\_\-add\_\-block\_\-contextual\_\-links@{views\_\-add\_\-block\_\-contextual\_\-links}}
+\index{views\_\-add\_\-block\_\-contextual\_\-links@{views\_\-add\_\-block\_\-contextual\_\-links}!views.module@{views.module}}
+\subsubsection[{views\_\-add\_\-block\_\-contextual\_\-links}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-add\_\-block\_\-contextual\_\-links (\&\$ {\em block}, \/  \$ {\em view}, \/  \$ {\em display\_\-id}, \/  \$ {\em block\_\-type} = {\ttfamily 'block'})}}
+\label{views_8module_a45becd00bbd9f1fa7e672af1513200d5}
+Converts Views block content to a renderable array with contextual links.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$block}]An array representing the block, with the same structure as the return value of \hyperlink{group__hooks_gaa14092a3e74cdc57aa295100cfd6860d}{hook\_\-block\_\-view()}. This will be modified so as to force \$block\mbox{[}'content'\mbox{]} to be a renderable array, containing the optional 'contextual\_\-links' property (if there are any contextual links associated with the block). \item[{\em \$view}]The \hyperlink{classview}{view} that was used to generate the block content. \item[{\em \$display\_\-id}]The ID of the display within the \hyperlink{classview}{view} that was used to generate the block content. \item[{\em \$block\_\-type}]The type of the block. If it's block it's a regular views display, but 'special\_\-block\_\--\/exp' exist as well. \end{DoxyParams}
+\hypertarget{views_8module_ada5efae53eaaac7b5d9a1411aae14138}{
+\index{views.module@{views.module}!views\_\-add\_\-contextual\_\-links@{views\_\-add\_\-contextual\_\-links}}
+\index{views\_\-add\_\-contextual\_\-links@{views\_\-add\_\-contextual\_\-links}!views.module@{views.module}}
+\subsubsection[{views\_\-add\_\-contextual\_\-links}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-add\_\-contextual\_\-links (\&\$ {\em render\_\-element}, \/  \$ {\em location}, \/  \$ {\em view}, \/  \$ {\em display\_\-id})}}
+\label{views_8module_ada5efae53eaaac7b5d9a1411aae14138}
+Adds contextual links associated with a \hyperlink{classview}{view} display to a renderable array.
+
+This function should be called when a \hyperlink{classview}{view} is being rendered in a particular location and you want to attach the appropriate contextual links (e.g., links for editing the \hyperlink{classview}{view}) to it.
+
+The function operates by checking the view's display plugin to see if it has defined any contextual links that are intended to be displayed in the requested location; if so, it attaches them. The contextual links intended for a particular location are defined by the 'contextual links' and 'contextual links locations' properties in \hyperlink{group__views__hooks_ga23f6e9972b2ed84fc54b7ff63f44477d}{hook\_\-views\_\-plugins()} and \hyperlink{group__views__hooks_ga6c4e4c2a769b0017bf0edcd0adae57e9}{hook\_\-views\_\-plugins\_\-alter()}; as a result, these hook implementations have full control over where and how contextual links are rendered for each display.
+
+In addition to attaching the contextual links to the passed-\/in array (via the standard contextual\_\-links property), this function also attaches additional information via the views\_\-contextual\_\-links\_\-info property. This stores an array whose keys are the names of each module that provided views-\/related contextual links (same as the keys of the contextual\_\-links array itself) and whose values are themselves arrays whose keys ('location', 'view\_\-name', and 'view\_\-display\_\-id') store the location, name of the \hyperlink{classview}{view}, and display ID that were passed in to this function. This allows you to access information about the contextual links and how they were generated in a variety of contexts where you might be manipulating the renderable array later on (for example, alter hooks which run later during the same page request).
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$render\_\-element}]The renderable array to which contextual links will be added. This array should be suitable for passing in to \hyperlink{common_8inc_a05798b44e8d6c496d4bee5cc32fa7851}{drupal\_\-render()} and will normally contain a representation of the \hyperlink{classview}{view} display whose contextual links are being requested. \item[{\em \$location}]The location in which the calling function intends to render the \hyperlink{classview}{view} and its contextual links. The core system supports three options for this parameter:
+\begin{DoxyItemize}
+\item 'block': Used when rendering a block which contains a \hyperlink{classview}{view}. This retrieves any contextual links intended to be attached to the block itself.
+\item 'page': Used when rendering the main content of a page which contains a \hyperlink{classview}{view}. This retrieves any contextual links intended to be attached to the page itself (for example, links which are displayed directly next to the page title).
+\item 'view': Used when rendering the \hyperlink{classview}{view} itself, in any context. This retrieves any contextual links intended to be attached directly to the \hyperlink{classview}{view}. If you are rendering a \hyperlink{classview}{view} and its contextual links in another location, you can pass in a different value for this parameter. However, you will also need to use \hyperlink{group__views__hooks_ga23f6e9972b2ed84fc54b7ff63f44477d}{hook\_\-views\_\-plugins()} or \hyperlink{group__views__hooks_ga6c4e4c2a769b0017bf0edcd0adae57e9}{hook\_\-views\_\-plugins\_\-alter()} to declare, via the 'contextual links locations' array key, which \hyperlink{classview}{view} displays support having their contextual links rendered in the location you have defined. 
+\end{DoxyItemize}\item[{\em \$view}]The \hyperlink{classview}{view} whose contextual links will be added. \item[{\em \$display\_\-id}]The ID of the display within \$view whose contextual links will be added.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__views__hooks_ga23f6e9972b2ed84fc54b7ff63f44477d}{hook\_\-views\_\-plugins()} 
+
+\hyperlink{views_8module_ae2b10c93b6c54fb61100759aed3b7299}{views\_\-block\_\-view()} 
+
+\hyperlink{views_8module_a278afcd00ca124837da7016ede4e64b2}{views\_\-page\_\-alter()} 
+
+\hyperlink{profiles_2dosomething_2modules_2contrib_2views_2theme_2theme_8inc_a9390b0a0ab9315839031fadfc73df433}{template\_\-preprocess\_\-views\_\-view()} 
+\end{DoxySeeAlso}
+\hypertarget{views_8module_ae236596838c24ca0d9639b523e397cd4}{
+\index{views.module@{views.module}!views\_\-add\_\-css@{views\_\-add\_\-css}}
+\index{views\_\-add\_\-css@{views\_\-add\_\-css}!views.module@{views.module}}
+\subsubsection[{views\_\-add\_\-css}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-add\_\-css (\$ {\em file})}}
+\label{views_8module_ae236596838c24ca0d9639b523e397cd4}
+Include views .css files. \hypertarget{views_8module_a46f0b0606a74393adc87edd14044edbe}{
+\index{views.module@{views.module}!views\_\-add\_\-js@{views\_\-add\_\-js}}
+\index{views\_\-add\_\-js@{views\_\-add\_\-js}!views.module@{views.module}}
+\subsubsection[{views\_\-add\_\-js}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-add\_\-js (\$ {\em file})}}
+\label{views_8module_a46f0b0606a74393adc87edd14044edbe}
+Include views .js files. \hypertarget{views_8module_a218d917d0079bfe634c320d51e0ab403}{
+\index{views.module@{views.module}!views\_\-api\_\-minimum\_\-version@{views\_\-api\_\-minimum\_\-version}}
+\index{views\_\-api\_\-minimum\_\-version@{views\_\-api\_\-minimum\_\-version}!views.module@{views.module}}
+\subsubsection[{views\_\-api\_\-minimum\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-api\_\-minimum\_\-version ()}}
+\label{views_8module_a218d917d0079bfe634c320d51e0ab403}
+Views will not load plugins advertising a version older than this. \hypertarget{views_8module_a771e26f3407f1baf8ffbaa97e7b91579}{
+\index{views.module@{views.module}!views\_\-api\_\-version@{views\_\-api\_\-version}}
+\index{views\_\-api\_\-version@{views\_\-api\_\-version}!views.module@{views.module}}
+\subsubsection[{views\_\-api\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-api\_\-version ()}}
+\label{views_8module_a771e26f3407f1baf8ffbaa97e7b91579}
+Advertise the current views api version \hypertarget{views_8module_a606f90f31faa85d799a5ff1dc82cc8f1}{
+\index{views.module@{views.module}!views\_\-arg\_\-load@{views\_\-arg\_\-load}}
+\index{views\_\-arg\_\-load@{views\_\-arg\_\-load}!views.module@{views.module}}
+\subsubsection[{views\_\-arg\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-arg\_\-load (\$ {\em value}, \/  \$ {\em name}, \/  \$ {\em display\_\-id}, \/  \$ {\em index})}}
+\label{views_8module_a606f90f31faa85d799a5ff1dc82cc8f1}
+Helper function for menu loading. This will automatically be called in order to 'load' a views argument; primarily it will be used to perform validation.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$value}]The actual value passed. \item[{\em \$name}]The name of the \hyperlink{classview}{view}. This needs to be specified in the 'load function' of the menu entry. \item[{\em \$display\_\-id}]The display id that will be loaded for this menu item. \item[{\em \$index}]The menu argument index. This counts from 1. \end{DoxyParams}
+\hypertarget{views_8module_ab67b484fcc0a053477538cab840645c0}{
+\index{views.module@{views.module}!views\_\-array\_\-key\_\-plus@{views\_\-array\_\-key\_\-plus}}
+\index{views\_\-array\_\-key\_\-plus@{views\_\-array\_\-key\_\-plus}!views.module@{views.module}}
+\subsubsection[{views\_\-array\_\-key\_\-plus}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-array\_\-key\_\-plus (\$ {\em array})}}
+\label{views_8module_ab67b484fcc0a053477538cab840645c0}
+Adds one to each key of the array.
+
+For example array(0 =$>$ 'foo') would be array(1 =$>$ 'foo'). \hypertarget{views_8module_a394aa81d1c40be16ebc29acb2fdae0fc}{
+\index{views.module@{views.module}!views\_\-block\_\-info@{views\_\-block\_\-info}}
+\index{views\_\-block\_\-info@{views\_\-block\_\-info}!views.module@{views.module}}
+\subsubsection[{views\_\-block\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-block\_\-info ()}}
+\label{views_8module_a394aa81d1c40be16ebc29acb2fdae0fc}
+Implement \hyperlink{group__hooks_ga2bd926c3e90deeba0c3ba64fb3c64d73}{hook\_\-block\_\-info()}. \hypertarget{views_8module_ae2b10c93b6c54fb61100759aed3b7299}{
+\index{views.module@{views.module}!views\_\-block\_\-view@{views\_\-block\_\-view}}
+\index{views\_\-block\_\-view@{views\_\-block\_\-view}!views.module@{views.module}}
+\subsubsection[{views\_\-block\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-block\_\-view (\$ {\em delta})}}
+\label{views_8module_ae2b10c93b6c54fb61100759aed3b7299}
+Implement \hyperlink{group__hooks_gaa14092a3e74cdc57aa295100cfd6860d}{hook\_\-block\_\-view()}. \hypertarget{views_8module_aa76091b45e7d90275a77906611361832}{
+\index{views.module@{views.module}!views\_\-check\_\-perm@{views\_\-check\_\-perm}}
+\index{views\_\-check\_\-perm@{views\_\-check\_\-perm}!views.module@{views.module}}
+\subsubsection[{views\_\-check\_\-perm}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-check\_\-perm (\$ {\em perm}, \/  \$ {\em account} = {\ttfamily NULL})}}
+\label{views_8module_aa76091b45e7d90275a77906611361832}
+Access callback for the \hyperlink{classviews__plugin__access__perm}{views\_\-plugin\_\-access\_\-perm} access plugin.
+
+Determine if the specified user has access to a \hyperlink{classview}{view} on the basis of permissions. If the \$account argument is omitted, the current user is used. \hypertarget{views_8module_aff4ad7e99455055e33d13bc6394bea69}{
+\index{views.module@{views.module}!views\_\-check\_\-roles@{views\_\-check\_\-roles}}
+\index{views\_\-check\_\-roles@{views\_\-check\_\-roles}!views.module@{views.module}}
+\subsubsection[{views\_\-check\_\-roles}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-check\_\-roles (\$ {\em rids}, \/  \$ {\em account} = {\ttfamily NULL})}}
+\label{views_8module_aff4ad7e99455055e33d13bc6394bea69}
+Access callback for the \hyperlink{classviews__plugin__access__role}{views\_\-plugin\_\-access\_\-role} access plugin.
+
+Determine if the specified user has access to a \hyperlink{classview}{view} on the basis of any of the requested roles. If the \$account argument is omitted, the current user is used. \hypertarget{views_8module_ab664f954156e8a19e30b4db39812fad6}{
+\index{views.module@{views.module}!views\_\-clean\_\-css\_\-identifier@{views\_\-clean\_\-css\_\-identifier}}
+\index{views\_\-clean\_\-css\_\-identifier@{views\_\-clean\_\-css\_\-identifier}!views.module@{views.module}}
+\subsubsection[{views\_\-clean\_\-css\_\-identifier}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-clean\_\-css\_\-identifier (\$ {\em identifier}, \/  \$ {\em filter} = {\ttfamily array('~'~=$>$~'-\/',~'/'~=$>$~'-\/',~'\mbox{[}'~=$>$~'-\/',~'\mbox{]}'~=$>$~'')})}}
+\label{views_8module_ab664f954156e8a19e30b4db39812fad6}
+Prepare a string for use as a valid CSS identifier (element, class or ID name). This function is similar to a core version but with more sane filter values.
+
+\href{http://www.w3.org/TR/CSS21/syndata.html#characters}{\tt http://www.w3.org/TR/CSS21/syndata.html\#characters} shows the syntax for valid CSS identifiers (including element names, classes, and IDs in selectors.)
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$identifier}]The identifier to clean. \item[{\em \$filter}]An array of string replacements to use on the identifier. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The cleaned identifier.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{common_8inc_a71bc20ece521646a633b65868a441d26}{drupal\_\-clean\_\-css\_\-identifier()} 
+\end{DoxySeeAlso}
+\hypertarget{views_8module_ae9e5be1396c0f03114ade9e629d659ee}{
+\index{views.module@{views.module}!views\_\-contextual\_\-links\_\-view\_\-alter@{views\_\-contextual\_\-links\_\-view\_\-alter}}
+\index{views\_\-contextual\_\-links\_\-view\_\-alter@{views\_\-contextual\_\-links\_\-view\_\-alter}!views.module@{views.module}}
+\subsubsection[{views\_\-contextual\_\-links\_\-view\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-contextual\_\-links\_\-view\_\-alter (\&\$ {\em element}, \/  \$ {\em items})}}
+\label{views_8module_ae9e5be1396c0f03114ade9e629d659ee}
+Implements \hyperlink{group__hooks_ga30ebdd98be1d239b608b769bda0ca9f0}{hook\_\-contextual\_\-links\_\-view\_\-alter()}. \hypertarget{views_8module_abd5c327faf0b930512aaa7442a778504}{
+\index{views.module@{views.module}!views\_\-ctools\_\-plugin\_\-api\_\-hook\_\-name@{views\_\-ctools\_\-plugin\_\-api\_\-hook\_\-name}}
+\index{views\_\-ctools\_\-plugin\_\-api\_\-hook\_\-name@{views\_\-ctools\_\-plugin\_\-api\_\-hook\_\-name}!views.module@{views.module}}
+\subsubsection[{views\_\-ctools\_\-plugin\_\-api\_\-hook\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-ctools\_\-plugin\_\-api\_\-hook\_\-name ()}}
+\label{views_8module_abd5c327faf0b930512aaa7442a778504}
+Report to CTools that we use hook\_\-views\_\-api instead of hook\_\-ctools\_\-plugin\_\-api() \hypertarget{views_8module_adb6971e0ec522398d8262cc90438e0f9}{
+\index{views.module@{views.module}!views\_\-debug@{views\_\-debug}}
+\index{views\_\-debug@{views\_\-debug}!views.module@{views.module}}
+\subsubsection[{views\_\-debug}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-debug (\$ {\em message}, \/  \$ {\em placeholders} = {\ttfamily array()})}}
+\label{views_8module_adb6971e0ec522398d8262cc90438e0f9}
+Provide debug output for Views.
+
+This relies on devel.module or on the \hyperlink{common_8inc_a008ec6c4681fcb83701755c61daa8050}{debug()} function if you use a simpletest.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$message}]The message/variable which should be debugged. This either could be $\ast$ an array/object which is converted to pretty output $\ast$ a translation source string which is used together with the parameter placeholders.\item[{\em \$placeholder}]The placeholders which are used for the translation source string. \end{DoxyParams}
+\hypertarget{views_8module_a1eeaff33304db50bde3466466d1bfc2d}{
+\index{views.module@{views.module}!views\_\-delete\_\-view@{views\_\-delete\_\-view}}
+\index{views\_\-delete\_\-view@{views\_\-delete\_\-view}!views.module@{views.module}}
+\subsubsection[{views\_\-delete\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-delete\_\-view (\&\$ {\em view})}}
+\label{views_8module_a1eeaff33304db50bde3466466d1bfc2d}
+Export CRUD callback to delete a \hyperlink{classview}{view}. \hypertarget{views_8module_ae8f9f0c72da6982461ec2423eaf88a5a}{
+\index{views.module@{views.module}!views\_\-embed\_\-view@{views\_\-embed\_\-view}}
+\index{views\_\-embed\_\-view@{views\_\-embed\_\-view}!views.module@{views.module}}
+\subsubsection[{views\_\-embed\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-embed\_\-view (\$ {\em name}, \/  \$ {\em display\_\-id} = {\ttfamily 'default'})}}
+\label{views_8module_ae8f9f0c72da6982461ec2423eaf88a5a}
+Embed a \hyperlink{classview}{view} using a PHP snippet.
+
+This function is meant to be called from PHP snippets, should one wish to embed a \hyperlink{classview}{view} in a node or something. It's meant to provide the simplest solution and doesn't really offer a lot of options, but breaking the function apart is pretty easy, and this provides a worthwhile guide to doing so.
+
+Note that this function does NOT display the title of the \hyperlink{classview}{view}. If you want to do that, you will need to do what this function does manually, by loading the \hyperlink{classview}{view}, getting the preview and then getting \$view-\/$>$get\_\-title().
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]The name of the \hyperlink{classview}{view} to embed. \item[{\em \$display\_\-id}]The display id to embed. If unsure, use 'default', as it will always be valid. But things like 'page' or 'block' should work here. \item[{\em ...}]Any additional parameters will be passed as arguments. \end{DoxyParams}
+\hypertarget{views_8module_ad4357e120d4f572aa1f3f12270b9114f}{
+\index{views.module@{views.module}!views\_\-export\_\-status@{views\_\-export\_\-status}}
+\index{views\_\-export\_\-status@{views\_\-export\_\-status}!views.module@{views.module}}
+\subsubsection[{views\_\-export\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-export\_\-status (\$ {\em view}, \/  \$ {\em status})}}
+\label{views_8module_ad4357e120d4f572aa1f3f12270b9114f}
+Export callback to change \hyperlink{classview}{view} status. \hypertarget{views_8module_aaf41a0a8cdaaa95df87a8287b68fbb12}{
+\index{views.module@{views.module}!views\_\-export\_\-view@{views\_\-export\_\-view}}
+\index{views\_\-export\_\-view@{views\_\-export\_\-view}!views.module@{views.module}}
+\subsubsection[{views\_\-export\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-export\_\-view (\&\$ {\em view}, \/  \$ {\em indent} = {\ttfamily ''})}}
+\label{views_8module_aaf41a0a8cdaaa95df87a8287b68fbb12}
+Export CRUD callback to export a \hyperlink{classview}{view}. \hypertarget{views_8module_a73e0d571664dc78bbddc65be02bc0a2e}{
+\index{views.module@{views.module}!views\_\-exposed\_\-form@{views\_\-exposed\_\-form}}
+\index{views\_\-exposed\_\-form@{views\_\-exposed\_\-form}!views.module@{views.module}}
+\subsubsection[{views\_\-exposed\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-exposed\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{views_8module_a73e0d571664dc78bbddc65be02bc0a2e}
+Form builder for the exposed widgets form.
+
+Be sure that \$view and \$display are references. \hypertarget{views_8module_a5db0d5532dfe2507275360e0738e4d64}{
+\index{views.module@{views.module}!views\_\-exposed\_\-form\_\-cache@{views\_\-exposed\_\-form\_\-cache}}
+\index{views\_\-exposed\_\-form\_\-cache@{views\_\-exposed\_\-form\_\-cache}!views.module@{views.module}}
+\subsubsection[{views\_\-exposed\_\-form\_\-cache}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-exposed\_\-form\_\-cache (\$ {\em views\_\-name}, \/  \$ {\em display\_\-name}, \/  \$ {\em form\_\-output} = {\ttfamily NULL})}}
+\label{views_8module_a5db0d5532dfe2507275360e0738e4d64}
+Save the Views exposed form for later use.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$views\_\-name}]String. The views name. \item[{\em \$display\_\-name}]String. The current \hyperlink{classview}{view} display name. \item[{\em \$form\_\-output}]Array (optional). The form structure. Only needed when inserting the value. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array. The form structure, if any. Otherwise, return FALSE. 
+\end{DoxyReturn}
+\hypertarget{views_8module_a931d81415d29b2c8bb3ec3a2e9edbfea}{
+\index{views.module@{views.module}!views\_\-exposed\_\-form\_\-submit@{views\_\-exposed\_\-form\_\-submit}}
+\index{views\_\-exposed\_\-form\_\-submit@{views\_\-exposed\_\-form\_\-submit}!views.module@{views.module}}
+\subsubsection[{views\_\-exposed\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-exposed\_\-form\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{views_8module_a931d81415d29b2c8bb3ec3a2e9edbfea}
+Submit handler for exposed filters \hypertarget{views_8module_aabe2634331d3b98e6f229d3392d2b5ce}{
+\index{views.module@{views.module}!views\_\-exposed\_\-form\_\-validate@{views\_\-exposed\_\-form\_\-validate}}
+\index{views\_\-exposed\_\-form\_\-validate@{views\_\-exposed\_\-form\_\-validate}!views.module@{views.module}}
+\subsubsection[{views\_\-exposed\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-exposed\_\-form\_\-validate (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{views_8module_aabe2634331d3b98e6f229d3392d2b5ce}
+Validate handler for exposed filters \hypertarget{views_8module_ae5d88e70640d423f3faed5c7bb6af672}{
+\index{views.module@{views.module}!views\_\-fetch\_\-data@{views\_\-fetch\_\-data}}
+\index{views\_\-fetch\_\-data@{views\_\-fetch\_\-data}!views.module@{views.module}}
+\subsubsection[{views\_\-fetch\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-fetch\_\-data (\$ {\em table} = {\ttfamily NULL}, \/  \$ {\em move} = {\ttfamily TRUE}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{views_8module_ae5d88e70640d423f3faed5c7bb6af672}
+Fetch Views' data from the cache \hypertarget{views_8module_ae97ae3a47ea45a0d7d39a52286e6fab2}{
+\index{views.module@{views.module}!views\_\-fetch\_\-plugin\_\-data@{views\_\-fetch\_\-plugin\_\-data}}
+\index{views\_\-fetch\_\-plugin\_\-data@{views\_\-fetch\_\-plugin\_\-data}!views.module@{views.module}}
+\subsubsection[{views\_\-fetch\_\-plugin\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-fetch\_\-plugin\_\-data (\$ {\em type} = {\ttfamily NULL}, \/  \$ {\em plugin} = {\ttfamily NULL}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{views_8module_ae97ae3a47ea45a0d7d39a52286e6fab2}
+Fetch the plugin data from cache. \hypertarget{views_8module_ae7963b102753500f8de139bf60d59ca5}{
+\index{views.module@{views.module}!views\_\-fetch\_\-plugin\_\-names@{views\_\-fetch\_\-plugin\_\-names}}
+\index{views\_\-fetch\_\-plugin\_\-names@{views\_\-fetch\_\-plugin\_\-names}!views.module@{views.module}}
+\subsubsection[{views\_\-fetch\_\-plugin\_\-names}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-fetch\_\-plugin\_\-names (\$ {\em type}, \/  \$ {\em key} = {\ttfamily NULL}, \/  \$ {\em base} = {\ttfamily array()})}}
+\label{views_8module_ae7963b102753500f8de139bf60d59ca5}
+Fetch a list of all base tables available
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]Either 'display', 'style' or 'row' \item[{\em \$key}]For style plugins, this is an optional type to restrict to. May be 'normal', 'summary', 'feed' or others based on the neds of the display. \item[{\em \$base}]An array of possible base tables.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A keyed array of in the form of 'base\_\-table' =$>$ 'Description'. 
+\end{DoxyReturn}
+\hypertarget{views_8module_a190407236048bea187c49db49f19e9ce}{
+\index{views.module@{views.module}!views\_\-field\_\-create\_\-instance@{views\_\-field\_\-create\_\-instance}}
+\index{views\_\-field\_\-create\_\-instance@{views\_\-field\_\-create\_\-instance}!views.module@{views.module}}
+\subsubsection[{views\_\-field\_\-create\_\-instance}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-field\_\-create\_\-instance (\$ {\em instance})}}
+\label{views_8module_a190407236048bea187c49db49f19e9ce}
+Implements hook\_\-field\_\-create\_\-instance. \hypertarget{views_8module_a62211abcf036f968e40bcf20158f10c4}{
+\index{views.module@{views.module}!views\_\-field\_\-delete\_\-instance@{views\_\-field\_\-delete\_\-instance}}
+\index{views\_\-field\_\-delete\_\-instance@{views\_\-field\_\-delete\_\-instance}!views.module@{views.module}}
+\subsubsection[{views\_\-field\_\-delete\_\-instance}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-field\_\-delete\_\-instance (\$ {\em instance})}}
+\label{views_8module_a62211abcf036f968e40bcf20158f10c4}
+Implements hook\_\-field\_\-delete\_\-instance. \hypertarget{views_8module_aad19a47ddacc5b8344e42a6ff92b7c4f}{
+\index{views.module@{views.module}!views\_\-field\_\-update\_\-instance@{views\_\-field\_\-update\_\-instance}}
+\index{views\_\-field\_\-update\_\-instance@{views\_\-field\_\-update\_\-instance}!views.module@{views.module}}
+\subsubsection[{views\_\-field\_\-update\_\-instance}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-field\_\-update\_\-instance (\$ {\em instance}, \/  \$ {\em prior\_\-instance})}}
+\label{views_8module_aad19a47ddacc5b8344e42a6ff92b7c4f}
+Implements hook\_\-field\_\-update\_\-instance. \hypertarget{views_8module_acb54c1ed22df1323d1191cc3ff0c6891}{
+\index{views.module@{views.module}!views\_\-flush\_\-caches@{views\_\-flush\_\-caches}}
+\index{views\_\-flush\_\-caches@{views\_\-flush\_\-caches}!views.module@{views.module}}
+\subsubsection[{views\_\-flush\_\-caches}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-flush\_\-caches ()}}
+\label{views_8module_acb54c1ed22df1323d1191cc3ff0c6891}
+Implements \hyperlink{group__hooks_ga66531e6e564157b7ca45ed07549c9b97}{hook\_\-flush\_\-caches()}. \hypertarget{views_8module_ad2b3623cab717e77713170df21927c92}{
+\index{views.module@{views.module}!views\_\-form@{views\_\-form}}
+\index{views\_\-form@{views\_\-form}!views.module@{views.module}}
+\subsubsection[{views\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em view}, \/  \$ {\em output})}}
+\label{views_8module_ad2b3623cab717e77713170df21927c92}
+This is the entry function. Just gets the form for the current step. The form is always assumed to be multistep, even if it has only one step (the default 'views\_\-form\_\-views\_\-form' step). That way it is actually possible for modules to have a multistep form if they need to. \hypertarget{views_8module_abd283e66b3b172682b7a1fe2b59fbca9}{
+\index{views.module@{views.module}!views\_\-form\_\-id@{views\_\-form\_\-id}}
+\index{views\_\-form\_\-id@{views\_\-form\_\-id}!views.module@{views.module}}
+\subsubsection[{views\_\-form\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-form\_\-id (\$ {\em view})}}
+\label{views_8module_abd283e66b3b172682b7a1fe2b59fbca9}
+Returns a form ID for a Views form using the name and display of the View. \hypertarget{views_8module_a1b2f933056d6e97e743b462d39e1d535}{
+\index{views.module@{views.module}!views\_\-form\_\-views\_\-exposed\_\-form\_\-alter@{views\_\-form\_\-views\_\-exposed\_\-form\_\-alter}}
+\index{views\_\-form\_\-views\_\-exposed\_\-form\_\-alter@{views\_\-form\_\-views\_\-exposed\_\-form\_\-alter}!views.module@{views.module}}
+\subsubsection[{views\_\-form\_\-views\_\-exposed\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-form\_\-views\_\-exposed\_\-form\_\-alter (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{views_8module_a1b2f933056d6e97e743b462d39e1d535}
+Implement hook\_\-form\_\-alter for the exposed form.
+
+Since the exposed form is a GET form, we don't want it to send a wide variety of information. \hypertarget{views_8module_a0597f9e730eb438da7c5e91eb9eec685}{
+\index{views.module@{views.module}!views\_\-form\_\-views\_\-form@{views\_\-form\_\-views\_\-form}}
+\index{views\_\-form\_\-views\_\-form@{views\_\-form\_\-views\_\-form}!views.module@{views.module}}
+\subsubsection[{views\_\-form\_\-views\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-form\_\-views\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em view}, \/  \$ {\em output})}}
+\label{views_8module_a0597f9e730eb438da7c5e91eb9eec685}
+Callback for the main step of a Views form. Invoked by \hyperlink{views_8module_ad2b3623cab717e77713170df21927c92}{views\_\-form()}. \hypertarget{views_8module_a7fbf15fdfa7d026d5d8735d86d1c3fcf}{
+\index{views.module@{views.module}!views\_\-form\_\-views\_\-form\_\-submit@{views\_\-form\_\-views\_\-form\_\-submit}}
+\index{views\_\-form\_\-views\_\-form\_\-submit@{views\_\-form\_\-views\_\-form\_\-submit}!views.module@{views.module}}
+\subsubsection[{views\_\-form\_\-views\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-form\_\-views\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{views_8module_a7fbf15fdfa7d026d5d8735d86d1c3fcf}
+Submit handler for the first step of the views form. Calls any existing views\_\-form\_\-submit functions located on the views fields. \hypertarget{views_8module_a1d7ebdb64055b2c813237617e8be7241}{
+\index{views.module@{views.module}!views\_\-form\_\-views\_\-form\_\-validate@{views\_\-form\_\-views\_\-form\_\-validate}}
+\index{views\_\-form\_\-views\_\-form\_\-validate@{views\_\-form\_\-views\_\-form\_\-validate}!views.module@{views.module}}
+\subsubsection[{views\_\-form\_\-views\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-form\_\-views\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{views_8module_a1d7ebdb64055b2c813237617e8be7241}
+Validate handler for the first step of the views form. Calls any existing views\_\-form\_\-validate functions located on the views fields. \hypertarget{views_8module_afed058cc3f58a834a8c72c0a8129032b}{
+\index{views.module@{views.module}!views\_\-forms@{views\_\-forms}}
+\index{views\_\-forms@{views\_\-forms}!views.module@{views.module}}
+\subsubsection[{views\_\-forms}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-forms (\$ {\em form\_\-id}, \/  \$ {\em args})}}
+\label{views_8module_afed058cc3f58a834a8c72c0a8129032b}
+Implements \hyperlink{group__hooks_gaa764fee74b85797f75c0c923cad628d5}{hook\_\-forms()}.
+
+To provide distinct form IDs for Views forms, the View name and specific display name are appended to the base ID, views\_\-form\_\-views\_\-form. When such a form is built or submitted, this function will return the proper callback function to use for the given form. \hypertarget{views_8module_a1acf51b07678da9f1bbf608f11099e80}{
+\index{views.module@{views.module}!views\_\-get\_\-all\_\-templates@{views\_\-get\_\-all\_\-templates}}
+\index{views\_\-get\_\-all\_\-templates@{views\_\-get\_\-all\_\-templates}!views.module@{views.module}}
+\subsubsection[{views\_\-get\_\-all\_\-templates}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-get\_\-all\_\-templates ()}}
+\label{views_8module_a1acf51b07678da9f1bbf608f11099e80}
+Get all \hyperlink{classview}{view} templates.
+
+Templates are special in-\/code views that are never active, but exist only to be cloned into real views as though they were templates. \hypertarget{views_8module_ab1f0b4d2bc5c4a7db19554780f5779ea}{
+\index{views.module@{views.module}!views\_\-get\_\-all\_\-views@{views\_\-get\_\-all\_\-views}}
+\index{views\_\-get\_\-all\_\-views@{views\_\-get\_\-all\_\-views}!views.module@{views.module}}
+\subsubsection[{views\_\-get\_\-all\_\-views}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-get\_\-all\_\-views (\$ {\em reset} = {\ttfamily FALSE})}}
+\label{views_8module_ab1f0b4d2bc5c4a7db19554780f5779ea}
+Return an array of all views as fully loaded \$view objects.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$reset}]If TRUE, reset the static cache forcing views to be reloaded. \end{DoxyParams}
+\hypertarget{views_8module_aa014d34aca90095935b24f3a6f49bb4a}{
+\index{views.module@{views.module}!views\_\-get\_\-applicable\_\-views@{views\_\-get\_\-applicable\_\-views}}
+\index{views\_\-get\_\-applicable\_\-views@{views\_\-get\_\-applicable\_\-views}!views.module@{views.module}}
+\subsubsection[{views\_\-get\_\-applicable\_\-views}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-get\_\-applicable\_\-views (\$ {\em type})}}
+\label{views_8module_aa014d34aca90095935b24f3a6f49bb4a}
+Return a list of all views and display IDs that have a particular setting in their display's plugin settings.
+
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyCode}
+ array(
+   array($view, $display_id),
+   array($view, $display_id),
+ );
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\hypertarget{views_8module_a3e0de34df0a9358f06a0bc139250ac47}{
+\index{views.module@{views.module}!views\_\-get\_\-current\_\-view@{views\_\-get\_\-current\_\-view}}
+\index{views\_\-get\_\-current\_\-view@{views\_\-get\_\-current\_\-view}!views.module@{views.module}}
+\subsubsection[{views\_\-get\_\-current\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}\& views\_\-get\_\-current\_\-view ()}}
+\label{views_8module_a3e0de34df0a9358f06a0bc139250ac47}
+Find out what, if any, current \hyperlink{classview}{view} is currently in use. Please note that this returns a reference, so be careful! You can unintentionally modify the \$view object.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classview}{view} 
+\end{DoxyReturn}
+\hypertarget{views_8module_aa1fc003dbf7d8e16d0b3861be577afc4}{
+\index{views.module@{views.module}!views\_\-get\_\-disabled\_\-views@{views\_\-get\_\-disabled\_\-views}}
+\index{views\_\-get\_\-disabled\_\-views@{views\_\-get\_\-disabled\_\-views}!views.module@{views.module}}
+\subsubsection[{views\_\-get\_\-disabled\_\-views}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-get\_\-disabled\_\-views ()}}
+\label{views_8module_aa1fc003dbf7d8e16d0b3861be577afc4}
+Returns an array of all disabled views, as fully loaded \$view objects. \hypertarget{views_8module_a8c21a5392230ac4dce7091e5031f3c93}{
+\index{views.module@{views.module}!views\_\-get\_\-enabled\_\-views@{views\_\-get\_\-enabled\_\-views}}
+\index{views\_\-get\_\-enabled\_\-views@{views\_\-get\_\-enabled\_\-views}!views.module@{views.module}}
+\subsubsection[{views\_\-get\_\-enabled\_\-views}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-get\_\-enabled\_\-views ()}}
+\label{views_8module_a8c21a5392230ac4dce7091e5031f3c93}
+Returns an array of all enabled views, as fully loaded \$view objects. \hypertarget{views_8module_a01ad2babd9f3cc6cc40e092a12267158}{
+\index{views.module@{views.module}!views\_\-get\_\-handler@{views\_\-get\_\-handler}}
+\index{views\_\-get\_\-handler@{views\_\-get\_\-handler}!views.module@{views.module}}
+\subsubsection[{views\_\-get\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-get\_\-handler (\$ {\em table}, \/  \$ {\em field}, \/  \$ {\em key}, \/  \$ {\em override} = {\ttfamily NULL})}}
+\label{views_8module_a01ad2babd9f3cc6cc40e092a12267158}
+Fetch a handler from the data cache.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The name of the table this handler is from. \item[{\em \$field}]The name of the field this handler is from. \item[{\em \$key}]The type of handler. i.e, sort, field, argument, filter, relationship \item[{\em \$override}]Override the actual handler object with this class. Used for aggregation when the handler is redirected to the aggregation handler.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classviews__handler}{views\_\-handler} An instance of a handler object. May be views\_\-handler\_\-broken. 
+\end{DoxyReturn}
+\hypertarget{views_8module_a21a516eefab3dad9e882299d604a3aee}{
+\index{views.module@{views.module}!views\_\-get\_\-localization\_\-plugin@{views\_\-get\_\-localization\_\-plugin}}
+\index{views\_\-get\_\-localization\_\-plugin@{views\_\-get\_\-localization\_\-plugin}!views.module@{views.module}}
+\subsubsection[{views\_\-get\_\-localization\_\-plugin}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-get\_\-localization\_\-plugin ()}}
+\label{views_8module_a21a516eefab3dad9e882299d604a3aee}
+Load the current enabled localization plugin.
+
+\begin{DoxyReturn}{Returns}
+The name of the localization plugin. 
+\end{DoxyReturn}
+\hypertarget{views_8module_a1da818e38d5362aa5474ed84c833cfc6}{
+\index{views.module@{views.module}!views\_\-get\_\-module\_\-apis@{views\_\-get\_\-module\_\-apis}}
+\index{views\_\-get\_\-module\_\-apis@{views\_\-get\_\-module\_\-apis}!views.module@{views.module}}
+\subsubsection[{views\_\-get\_\-module\_\-apis}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-get\_\-module\_\-apis (\$ {\em api} = {\ttfamily 'views'}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{views_8module_a1da818e38d5362aa5474ed84c833cfc6}
+Get a list of modules that support the current views API. \hypertarget{views_8module_a6f9bd3baa42d847c9ea9dee1d0372db8}{
+\index{views.module@{views.module}!views\_\-get\_\-page\_\-view@{views\_\-get\_\-page\_\-view}}
+\index{views\_\-get\_\-page\_\-view@{views\_\-get\_\-page\_\-view}!views.module@{views.module}}
+\subsubsection[{views\_\-get\_\-page\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}\& views\_\-get\_\-page\_\-view ()}}
+\label{views_8module_a6f9bd3baa42d847c9ea9dee1d0372db8}
+Find out what, if any, page \hyperlink{classview}{view} is currently in use. Please note that this returns a reference, so be careful! You can unintentionally modify the \$view object.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classview}{view} A fully formed, empty \$view object. 
+\end{DoxyReturn}
+\hypertarget{views_8module_a6989c2c815b1afa01fa3f29841497ba1}{
+\index{views.module@{views.module}!views\_\-get\_\-plugin@{views\_\-get\_\-plugin}}
+\index{views\_\-get\_\-plugin@{views\_\-get\_\-plugin}!views.module@{views.module}}
+\subsubsection[{views\_\-get\_\-plugin}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-get\_\-plugin (\$ {\em type}, \/  \$ {\em plugin}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{views_8module_a6989c2c815b1afa01fa3f29841497ba1}
+Get a handler for a plugin
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classviews__plugin}{views\_\-plugin}
+\end{DoxyReturn}
+The created plugin object. \hypertarget{views_8module_add8b65aa3fa72b8a6f89e5ff314e42c0}{
+\index{views.module@{views.module}!views\_\-get\_\-view@{views\_\-get\_\-view}}
+\index{views\_\-get\_\-view@{views\_\-get\_\-view}!views.module@{views.module}}
+\subsubsection[{views\_\-get\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-get\_\-view (\$ {\em name}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{views_8module_add8b65aa3fa72b8a6f89e5ff314e42c0}
+Get a \hyperlink{classview}{view} from the database or from default views.
+
+This function is just a static wrapper around views::load(). This function isn't called 'views\_\-load()' primarily because it might get a \hyperlink{classview}{view} from the default views which aren't technically loaded from the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]The name of the \hyperlink{classview}{view}. \item[{\em \$reset}]If TRUE, reset this entry in the load cache. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classview}{view} A reference to the \$view object. Use \$reset if you're sure you want a fresh one. 
+\end{DoxyReturn}
+\hypertarget{views_8module_a176654fda08f5f0fcb5c8d5e41de5078}{
+\index{views.module@{views.module}!views\_\-get\_\-view\_\-result@{views\_\-get\_\-view\_\-result}}
+\index{views\_\-get\_\-view\_\-result@{views\_\-get\_\-view\_\-result}!views.module@{views.module}}
+\subsubsection[{views\_\-get\_\-view\_\-result}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-get\_\-view\_\-result (\$ {\em name}, \/  \$ {\em display\_\-id} = {\ttfamily NULL})}}
+\label{views_8module_a176654fda08f5f0fcb5c8d5e41de5078}
+Get the result of a \hyperlink{classview}{view}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$name The name of the \hyperlink{classview}{view} to retrieve the data from. \item[{\em string}]\$display\_\-id The display id. On the edit page for the \hyperlink{classview}{view} in question, you'll find a list of displays at the left side of the control area. \char`\"{}Master\char`\"{} will be at the top of that list. Hover your cursor over the name of the display you want to use. An URL will appear in the status bar of your browser. This is usually at the bottom of the window, in the chrome. Everything after views-\/tab-\/ is the display ID, e.g. page\_\-1. \item[{\em ...}]Any additional parameters will be passed as arguments. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array containing an object for each \hyperlink{classview}{view} item. 
+\end{DoxyReturn}
+\hypertarget{views_8module_a8a6a958634c7fee2a5ae780bc306295a}{
+\index{views.module@{views.module}!views\_\-get\_\-views\_\-as\_\-options@{views\_\-get\_\-views\_\-as\_\-options}}
+\index{views\_\-get\_\-views\_\-as\_\-options@{views\_\-get\_\-views\_\-as\_\-options}!views.module@{views.module}}
+\subsubsection[{views\_\-get\_\-views\_\-as\_\-options}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-get\_\-views\_\-as\_\-options (\$ {\em views\_\-only} = {\ttfamily FALSE}, \/  \$ {\em filter} = {\ttfamily 'all'}, \/  \$ {\em exclude\_\-view} = {\ttfamily NULL}, \/  \$ {\em optgroup} = {\ttfamily FALSE}, \/  \$ {\em sort} = {\ttfamily FALSE})}}
+\label{views_8module_a8a6a958634c7fee2a5ae780bc306295a}
+Return an array of \hyperlink{classview}{view} as options array, that can be used by select, checkboxes and radios as options.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em bool}]\$views\_\-only If TRUE, only return views, not displays. \item[{\em string}]\$filter Filters the views on status. Can either be 'all' (default), 'enabled' or 'disabled' \item[{\em mixed}]\$exclude\_\-view \hyperlink{classview}{view} or current display to exclude either a
+\begin{DoxyItemize}
+\item views object (containing \$exclude\_\-view-\/$>$name and \$exclude\_\-view-\/$>$current\_\-display)
+\item views name as string: e.g. my\_\-view
+\item views name and display id (separated by ':'): e.g. my\_\-view:default 
+\end{DoxyItemize}\item[{\em bool}]\$optgroup If TRUE, returns an array with optgroups for each \hyperlink{classview}{view} (will be ignored for \$views\_\-only = TRUE). Can be used by select \item[{\em bool}]\$sort If TRUE, the list of views is sorted ascending.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array an associative array for use in select.
+\begin{DoxyItemize}
+\item key: \hyperlink{classview}{view} name and display id separated by ':', or the \hyperlink{classview}{view} name only 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{views_8module_a01c92296a9a5d51e8e5e470068d7cd40}{
+\index{views.module@{views.module}!views\_\-import\_\-access@{views\_\-import\_\-access}}
+\index{views\_\-import\_\-access@{views\_\-import\_\-access}!views.module@{views.module}}
+\subsubsection[{views\_\-import\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-import\_\-access ()}}
+\label{views_8module_a01c92296a9a5d51e8e5e470068d7cd40}
+Access callback to determine if the user can import Views.
+
+View imports require an additional access check because they are PHP code and PHP is more locked down than administer views. \hypertarget{views_8module_ad842e97fb86ddbcdb0c35b42bae9abba}{
+\index{views.module@{views.module}!views\_\-include@{views\_\-include}}
+\index{views\_\-include@{views\_\-include}!views.module@{views.module}}
+\subsubsection[{views\_\-include}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-include (\$ {\em file})}}
+\label{views_8module_ad842e97fb86ddbcdb0c35b42bae9abba}
+Include views .inc files as necessary. \hypertarget{views_8module_a3369e9cb08a242a97093d79ed688653c}{
+\index{views.module@{views.module}!views\_\-include\_\-handlers@{views\_\-include\_\-handlers}}
+\index{views\_\-include\_\-handlers@{views\_\-include\_\-handlers}!views.module@{views.module}}
+\subsubsection[{views\_\-include\_\-handlers}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-include\_\-handlers (\$ {\em reset} = {\ttfamily FALSE})}}
+\label{views_8module_a3369e9cb08a242a97093d79ed688653c}
+Load views files on behalf of modules. \hypertarget{views_8module_a51e180fd9efb14998bb83aa5c9118867}{
+\index{views.module@{views.module}!views\_\-invalidate\_\-cache@{views\_\-invalidate\_\-cache}}
+\index{views\_\-invalidate\_\-cache@{views\_\-invalidate\_\-cache}!views.module@{views.module}}
+\subsubsection[{views\_\-invalidate\_\-cache}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-invalidate\_\-cache ()}}
+\label{views_8module_a51e180fd9efb14998bb83aa5c9118867}
+Invalidate the views cache, forcing a rebuild on the next grab of table data. \hypertarget{views_8module_a1e6f0f91344d0781f385e90f247e5aa8}{
+\index{views.module@{views.module}!views\_\-language\_\-list@{views\_\-language\_\-list}}
+\index{views\_\-language\_\-list@{views\_\-language\_\-list}!views.module@{views.module}}
+\subsubsection[{views\_\-language\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-language\_\-list (\$ {\em field} = {\ttfamily 'name'}, \/  \$ {\em all} = {\ttfamily FALSE})}}
+\label{views_8module_a1e6f0f91344d0781f385e90f247e5aa8}
+Returns an array of language names.
+
+This is a one to one copy of locale\_\-language\_\-list because we can't rely on enabled locale module.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field}]'name' =$>$ names in current language, localized 'native' =$>$ native names \item[{\em \$all}]Boolean to return all languages or only enabled ones\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{locale_8module_a744c64d4144758494d9e552375258a53}{locale\_\-language\_\-list()} 
+\end{DoxySeeAlso}
+\hypertarget{views_8module_a5ba50dc2afc437f2faf7d956d6488eb1}{
+\index{views.module@{views.module}!views\_\-load\_\-display\_\-records@{views\_\-load\_\-display\_\-records}}
+\index{views\_\-load\_\-display\_\-records@{views\_\-load\_\-display\_\-records}!views.module@{views.module}}
+\subsubsection[{views\_\-load\_\-display\_\-records}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-load\_\-display\_\-records (\&\$ {\em views})}}
+\label{views_8module_a5ba50dc2afc437f2faf7d956d6488eb1}
+Export callback to load the \hyperlink{classview}{view} subrecords, which are the displays. \hypertarget{views_8module_ab62ba1ad3afe80e5bf544339a6a690b6}{
+\index{views.module@{views.module}!views\_\-menu@{views\_\-menu}}
+\index{views\_\-menu@{views\_\-menu}!views.module@{views.module}}
+\subsubsection[{views\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-menu ()}}
+\label{views_8module_ab62ba1ad3afe80e5bf544339a6a690b6}
+Implement \hyperlink{group__hooks_ga5c95244fea59b25666e409759e133ded}{hook\_\-menu()}. \hypertarget{views_8module_a927f922bf3e583010e7deb46db1cbb4e}{
+\index{views.module@{views.module}!views\_\-menu\_\-alter@{views\_\-menu\_\-alter}}
+\index{views\_\-menu\_\-alter@{views\_\-menu\_\-alter}!views.module@{views.module}}
+\subsubsection[{views\_\-menu\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-menu\_\-alter (\&\$ {\em callbacks})}}
+\label{views_8module_a927f922bf3e583010e7deb46db1cbb4e}
+Implement \hyperlink{group__hooks_ga4c37deddcf48dbfe6f3081df1652f6fa}{hook\_\-menu\_\-alter()}. \hypertarget{views_8module_a22df4c2332b9999ad29f8e2771cf63b1}{
+\index{views.module@{views.module}!views\_\-module\_\-include@{views\_\-module\_\-include}}
+\index{views\_\-module\_\-include@{views\_\-module\_\-include}!views.module@{views.module}}
+\subsubsection[{views\_\-module\_\-include}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-module\_\-include (\$ {\em api}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{views_8module_a22df4c2332b9999ad29f8e2771cf63b1}
+Load views files on behalf of modules. \hypertarget{views_8module_a06896a9ace9eb509293d9d915710562d}{
+\index{views.module@{views.module}!views\_\-move\_\-table@{views\_\-move\_\-table}}
+\index{views\_\-move\_\-table@{views\_\-move\_\-table}!views.module@{views.module}}
+\subsubsection[{views\_\-move\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-move\_\-table (\$ {\em table})}}
+\label{views_8module_a06896a9ace9eb509293d9d915710562d}
+Find the real location of a table.
+
+If a table has moved, find the new name of the table so that we can change its name directly in options where necessary. \hypertarget{views_8module_a6ebd20c8c63a43de53643809db0fd1f5}{
+\index{views.module@{views.module}!views\_\-new\_\-view@{views\_\-new\_\-view}}
+\index{views\_\-new\_\-view@{views\_\-new\_\-view}!views.module@{views.module}}
+\subsubsection[{views\_\-new\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-new\_\-view ()}}
+\label{views_8module_a6ebd20c8c63a43de53643809db0fd1f5}
+Create an empty \hyperlink{classview}{view} to work with.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classview}{view} A fully formed, empty \$view object. This object must be populated before it can be successfully saved. 
+\end{DoxyReturn}
+\hypertarget{views_8module_a1cbb11f8adc6fbfecb3a029ab2973cff}{
+\index{views.module@{views.module}!views\_\-page@{views\_\-page}}
+\index{views\_\-page@{views\_\-page}!views.module@{views.module}}
+\subsubsection[{views\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-page (\$ {\em name}, \/  \$ {\em display\_\-id})}}
+\label{views_8module_a1cbb11f8adc6fbfecb3a029ab2973cff}
+Page callback: Displays a page \hyperlink{classview}{view}, given a name and display id.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]The name of a \hyperlink{classview}{view}. \item[{\em \$display\_\-id}]The display id of a \hyperlink{classview}{view}.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Either the HTML of a fully-\/executed \hyperlink{classview}{view}, or MENU\_\-NOT\_\-FOUND. 
+\end{DoxyReturn}
+\hypertarget{views_8module_a278afcd00ca124837da7016ede4e64b2}{
+\index{views.module@{views.module}!views\_\-page\_\-alter@{views\_\-page\_\-alter}}
+\index{views\_\-page\_\-alter@{views\_\-page\_\-alter}!views.module@{views.module}}
+\subsubsection[{views\_\-page\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-page\_\-alter (\&\$ {\em page})}}
+\label{views_8module_a278afcd00ca124837da7016ede4e64b2}
+Implements \hyperlink{group__hooks_gaa965aa8f38b48aed1a19c556c199145f}{hook\_\-page\_\-alter()}. \hypertarget{views_8module_a0d62d027dd49788bfa55b9011c0af70f}{
+\index{views.module@{views.module}!views\_\-permission@{views\_\-permission}}
+\index{views\_\-permission@{views\_\-permission}!views.module@{views.module}}
+\subsubsection[{views\_\-permission}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-permission ()}}
+\label{views_8module_a0d62d027dd49788bfa55b9011c0af70f}
+Implement \hyperlink{group__hooks_ga2b22b45f4925f2478412477bae329713}{hook\_\-permission()}. \hypertarget{views_8module_a29c38bcb5187337aaa3fa82750bb67b9}{
+\index{views.module@{views.module}!views\_\-plugin\_\-list@{views\_\-plugin\_\-list}}
+\index{views\_\-plugin\_\-list@{views\_\-plugin\_\-list}!views.module@{views.module}}
+\subsubsection[{views\_\-plugin\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-list ()}}
+\label{views_8module_a29c38bcb5187337aaa3fa82750bb67b9}
+Returns a list of plugins and metadata about them.
+
+\begin{DoxyReturn}{Returns}
+array An array keyed by PLUGIN\_\-TYPE:PLUGIN\_\-NAME, like 'display:page' or 'pager:full', containing an array with the following keys:
+\begin{DoxyItemize}
+\item title: The plugin's title.
+\item type: The plugin type.
+\item module: The module providing the plugin.
+\item views: An array of enabled Views that are currently using this plugin, keyed by machine name. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{views_8module_a79869d9e32f3a55cb67f8024a35ea2ac}{
+\index{views.module@{views.module}!views\_\-preprocess\_\-comment@{views\_\-preprocess\_\-comment}}
+\index{views\_\-preprocess\_\-comment@{views\_\-preprocess\_\-comment}!views.module@{views.module}}
+\subsubsection[{views\_\-preprocess\_\-comment}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-preprocess\_\-comment (\&\$ {\em vars})}}
+\label{views_8module_a79869d9e32f3a55cb67f8024a35ea2ac}
+A theme preprocess function to automatically allow view-\/based node templates if called from a \hyperlink{classview}{view}. \hypertarget{views_8module_a625ef34d5fe86fa3eb7152359e819d43}{
+\index{views.module@{views.module}!views\_\-preprocess\_\-html@{views\_\-preprocess\_\-html}}
+\index{views\_\-preprocess\_\-html@{views\_\-preprocess\_\-html}!views.module@{views.module}}
+\subsubsection[{views\_\-preprocess\_\-html}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-preprocess\_\-html (\&\$ {\em variables})}}
+\label{views_8module_a625ef34d5fe86fa3eb7152359e819d43}
+Implements MODULE\_\-preprocess\_\-HOOK(). \hypertarget{views_8module_aa21197cc54893f9efe75b3200a86d1c2}{
+\index{views.module@{views.module}!views\_\-preprocess\_\-node@{views\_\-preprocess\_\-node}}
+\index{views\_\-preprocess\_\-node@{views\_\-preprocess\_\-node}!views.module@{views.module}}
+\subsubsection[{views\_\-preprocess\_\-node}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-preprocess\_\-node (\&\$ {\em vars})}}
+\label{views_8module_aa21197cc54893f9efe75b3200a86d1c2}
+A theme preprocess function to automatically allow view-\/based node templates if called from a \hyperlink{classview}{view}.
+
+The 'modules/node.views.inc' file is a better place for this, but we haven't got a chance to load that file before Drupal builds the node portion of the theme registry. \hypertarget{views_8module_a15e88bdb192b9928200f4304f010acb1}{
+\index{views.module@{views.module}!views\_\-process\_\-check\_\-options@{views\_\-process\_\-check\_\-options}}
+\index{views\_\-process\_\-check\_\-options@{views\_\-process\_\-check\_\-options}!views.module@{views.module}}
+\subsubsection[{views\_\-process\_\-check\_\-options}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-process\_\-check\_\-options (\$ {\em element}, \/  \&\$ {\em form\_\-state})}}
+\label{views_8module_a15e88bdb192b9928200f4304f010acb1}
+process callback to see if we need to \hyperlink{group__sanitization_ga76fc67a30fd8d75ddd80565e6e65a13d}{check\_\-plain()} the options.
+
+Since FAPI is inconsistent, the options are sanitized for you in all cases \_\-except\_\- checkboxes. We have form elements that are sometimes 'select' and sometimes 'checkboxes', so we need decide late in the form rendering cycle if the options need to be sanitized before they're rendered. This callback inspects the type, and if it's still 'checkboxes', does the sanitation. \hypertarget{views_8module_a621a7deea033fadbb8de49ef7795a8b7}{
+\index{views.module@{views.module}!views\_\-query\_\-views\_\-alter@{views\_\-query\_\-views\_\-alter}}
+\index{views\_\-query\_\-views\_\-alter@{views\_\-query\_\-views\_\-alter}!views.module@{views.module}}
+\subsubsection[{views\_\-query\_\-views\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-query\_\-views\_\-alter ({\bf QueryAlterableInterface} \$ {\em query})}}
+\label{views_8module_a621a7deea033fadbb8de49ef7795a8b7}
+Implements \hyperlink{group__hooks_ga12527037deeb76adcab1000e984fdfce}{hook\_\-query\_\-TAG\_\-alter()}.
+
+This is the \hyperlink{group__hooks_gaf166f6375e9f7b5919d719eb91198d47}{hook\_\-query\_\-alter()} for queries tagged by Views and is used to add in substitutions from \hyperlink{group__views__hooks_gac3628ab1f08eee5a2bd9c3c4b5bd4c3b}{hook\_\-views\_\-query\_\-substitutions()}. \hypertarget{views_8module_a7de4aba561f47e86e405f5519a0d3dfe}{
+\index{views.module@{views.module}!views\_\-save\_\-view@{views\_\-save\_\-view}}
+\index{views\_\-save\_\-view@{views\_\-save\_\-view}!views.module@{views.module}}
+\subsubsection[{views\_\-save\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-save\_\-view (\&\$ {\em view})}}
+\label{views_8module_a7de4aba561f47e86e405f5519a0d3dfe}
+Export CRUD callback to save a \hyperlink{classview}{view}. \hypertarget{views_8module_af6970f0a92406ed61373aa9ede6b121e}{
+\index{views.module@{views.module}!views\_\-set\_\-current\_\-view@{views\_\-set\_\-current\_\-view}}
+\index{views\_\-set\_\-current\_\-view@{views\_\-set\_\-current\_\-view}!views.module@{views.module}}
+\subsubsection[{views\_\-set\_\-current\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}\& views\_\-set\_\-current\_\-view (\$ {\em view} = {\ttfamily NULL})}}
+\label{views_8module_af6970f0a92406ed61373aa9ede6b121e}
+Set the current 'current view' that is being built/rendered so that it is easy for other modules or items in drupal\_\-eval to identify
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classview}{view} 
+\end{DoxyReturn}
+\hypertarget{views_8module_a71f9684b8a0e7aae0871333881fc06c7}{
+\index{views.module@{views.module}!views\_\-set\_\-page\_\-view@{views\_\-set\_\-page\_\-view}}
+\index{views\_\-set\_\-page\_\-view@{views\_\-set\_\-page\_\-view}!views.module@{views.module}}
+\subsubsection[{views\_\-set\_\-page\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}\& views\_\-set\_\-page\_\-view (\$ {\em view} = {\ttfamily NULL})}}
+\label{views_8module_a71f9684b8a0e7aae0871333881fc06c7}
+Set the current 'page view' that is being displayed so that it is easy for other modules or the theme to identify. \hypertarget{views_8module_aff7ae737313bb2250e6c27f9ca520627}{
+\index{views.module@{views.module}!views\_\-theme@{views\_\-theme}}
+\index{views\_\-theme@{views\_\-theme}!views.module@{views.module}}
+\subsubsection[{views\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-theme (\$ {\em existing}, \/  \$ {\em type}, \/  \$ {\em theme}, \/  \$ {\em path})}}
+\label{views_8module_aff7ae737313bb2250e6c27f9ca520627}
+Implement \hyperlink{group__hooks_ga013ccb45c7aaab1c16cf9691428c910d}{hook\_\-theme()}. Register views theming functions. \hypertarget{views_8module_a5c5e28542b853cf61c0540d05d057e40}{
+\index{views.module@{views.module}!views\_\-theme\_\-functions@{views\_\-theme\_\-functions}}
+\index{views\_\-theme\_\-functions@{views\_\-theme\_\-functions}!views.module@{views.module}}
+\subsubsection[{views\_\-theme\_\-functions}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-theme\_\-functions (\$ {\em hook}, \/  \$ {\em view}, \/  \$ {\em display} = {\ttfamily NULL})}}
+\label{views_8module_a5c5e28542b853cf61c0540d05d057e40}
+Build a list of theme function names for use most everywhere. \hypertarget{views_8module_aa312b055f6206c4ba0c088e60d339d9f}{
+\index{views.module@{views.module}!views\_\-trim\_\-text@{views\_\-trim\_\-text}}
+\index{views\_\-trim\_\-text@{views\_\-trim\_\-text}!views.module@{views.module}}
+\subsubsection[{views\_\-trim\_\-text}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-trim\_\-text (\$ {\em alter}, \/  \$ {\em value})}}
+\label{views_8module_aa312b055f6206c4ba0c088e60d339d9f}
+Trim the field down to the specified length.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$alter}]
+\begin{DoxyItemize}
+\item max\_\-length: Maximum lenght of the string, the rest gets truncated.
+\item word\_\-boundary: Trim only on a word boundary.
+\item ellipsis: Show an ellipsis (...) at the end of the trimmed string.
+\item html: Take sure that the html is correct.
+\end{DoxyItemize}\item[{\em \$value}]The string which should be trimmed. \end{DoxyParams}
+\hypertarget{views_8module_af1114513b82cdc5613adc9dee41e11c7}{
+\index{views.module@{views.module}!views\_\-var\_\-export@{views\_\-var\_\-export}}
+\index{views\_\-var\_\-export@{views\_\-var\_\-export}!views.module@{views.module}}
+\subsubsection[{views\_\-var\_\-export}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-var\_\-export (\$ {\em var}, \/  \$ {\em prefix} = {\ttfamily ''}, \/  \$ {\em init} = {\ttfamily TRUE})}}
+\label{views_8module_af1114513b82cdc5613adc9dee41e11c7}
+Export a field. \hypertarget{views_8module_a5e3621086e4f50ae1e7cfe14392c6bca}{
+\index{views.module@{views.module}!views\_\-view\_\-has\_\-form\_\-elements@{views\_\-view\_\-has\_\-form\_\-elements}}
+\index{views\_\-view\_\-has\_\-form\_\-elements@{views\_\-view\_\-has\_\-form\_\-elements}!views.module@{views.module}}
+\subsubsection[{views\_\-view\_\-has\_\-form\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-view\_\-has\_\-form\_\-elements (\$ {\em view})}}
+\label{views_8module_a5e3621086e4f50ae1e7cfe14392c6bca}
+Returns TRUE if the passed-\/in \hyperlink{classview}{view} contains handlers with views form implementations, FALSE otherwise. \hypertarget{views_8module_afba08d9328467943ebfec0a583ecb214}{
+\index{views.module@{views.module}!views\_\-view\_\-is\_\-disabled@{views\_\-view\_\-is\_\-disabled}}
+\index{views\_\-view\_\-is\_\-disabled@{views\_\-view\_\-is\_\-disabled}!views.module@{views.module}}
+\subsubsection[{views\_\-view\_\-is\_\-disabled}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-view\_\-is\_\-disabled (\$ {\em view})}}
+\label{views_8module_afba08d9328467943ebfec0a583ecb214}
+Returns TRUE if a \hyperlink{classview}{view} is disabled, FALSE otherwise. \hypertarget{views_8module_a2d707888904ef7d6d0c54ff7802f8cd9}{
+\index{views.module@{views.module}!views\_\-view\_\-is\_\-enabled@{views\_\-view\_\-is\_\-enabled}}
+\index{views\_\-view\_\-is\_\-enabled@{views\_\-view\_\-is\_\-enabled}!views.module@{views.module}}
+\subsubsection[{views\_\-view\_\-is\_\-enabled}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-view\_\-is\_\-enabled (\$ {\em view})}}
+\label{views_8module_a2d707888904ef7d6d0c54ff7802f8cd9}
+Returns TRUE if a \hyperlink{classview}{view} is enabled, FALSE otherwise. \hypertarget{views_8module_a907c76d0314986d60f7e2361243eaa5d}{
+\index{views.module@{views.module}!views\_\-views\_\-api@{views\_\-views\_\-api}}
+\index{views\_\-views\_\-api@{views\_\-views\_\-api}!views.module@{views.module}}
+\subsubsection[{views\_\-views\_\-api}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-views\_\-api ()}}
+\label{views_8module_a907c76d0314986d60f7e2361243eaa5d}
+Implements \hyperlink{group__views__hooks_gac67ffd4a2f61f9814ee37b541c472c47}{hook\_\-views\_\-api()}.
+
+This one is used as the base to reduce errors when updating. \hypertarget{views_8module_a132f41fd30b74a1be5592fd178ccdd85}{
+\index{views.module@{views.module}!views\_\-views\_\-exportables@{views\_\-views\_\-exportables}}
+\index{views\_\-views\_\-exportables@{views\_\-views\_\-exportables}!views.module@{views.module}}
+\subsubsection[{views\_\-views\_\-exportables}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-views\_\-exportables (\$ {\em op} = {\ttfamily 'list'}, \/  \$ {\em views} = {\ttfamily NULL}, \/  \$ {\em name} = {\ttfamily 'foo'})}}
+\label{views_8module_a132f41fd30b74a1be5592fd178ccdd85}
+Implement hook\_\-views\_\-exportables(). \hypertarget{views_8module_af14b36b042237ca5f054fc19c44a188c}{
+\index{views.module@{views.module}!views\_\-views\_\-query\_\-substitutions@{views\_\-views\_\-query\_\-substitutions}}
+\index{views\_\-views\_\-query\_\-substitutions@{views\_\-views\_\-query\_\-substitutions}!views.module@{views.module}}
+\subsubsection[{views\_\-views\_\-query\_\-substitutions}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-views\_\-query\_\-substitutions (\$ {\em view})}}
+\label{views_8module_af14b36b042237ca5f054fc19c44a188c}
+Substitute current time; this works with cached queries. \hypertarget{views_8module_aa69e09155c17e0432a42d8e2748164ab}{
+\index{views.module@{views.module}!vpr@{vpr}}
+\index{vpr@{vpr}!views.module@{views.module}}
+\subsubsection[{vpr}]{\setlength{\rightskip}{0pt plus 5cm}vpr (\$ {\em message}, \/  \$ {\em placeholders} = {\ttfamily array()})}}
+\label{views_8module_aa69e09155c17e0432a42d8e2748164ab}
+Shortcut to \hyperlink{views_8module_adb6971e0ec522398d8262cc90438e0f9}{views\_\-debug()} \hypertarget{views_8module_a9f7435f9c80f93858758b82f6f0cc001}{
+\index{views.module@{views.module}!vsm@{vsm}}
+\index{vsm@{vsm}!views.module@{views.module}}
+\subsubsection[{vsm}]{\setlength{\rightskip}{0pt plus 5cm}vsm (\$ {\em message})}}
+\label{views_8module_a9f7435f9c80f93858758b82f6f0cc001}
+Debug messages 

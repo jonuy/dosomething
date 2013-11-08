@@ -1,0 +1,261 @@
+\hypertarget{profile_8module}{
+\section{html/modules/profile/profile.module File Reference}
+\label{profile_8module}\index{html/modules/profile/profile.module@{html/modules/profile/profile.module}}
+}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{profile_8module_a716a6e53d21c86799f2b81235a94e42e}{PROFILE\_\-PRIVATE} 
+\item 
+enum \hyperlink{profile_8module_ad05d09d0c6e6c43a423e51496f4435fd}{PROFILE\_\-PUBLIC} 
+\item 
+enum \hyperlink{profile_8module_a446618b936db915449e9bba63330ccd8}{PROFILE\_\-PUBLIC\_\-LISTINGS} 
+\item 
+enum \hyperlink{profile_8module_aa0cce9439e7000486ab39f1602fdd8ec}{PROFILE\_\-HIDDEN} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{profile_8module_a4c94451892aa2b5dd6b36c8a3f9fbe5a}{profile\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{profile_8module_a50e30bbdc9ffae1d3251a8ff035b43a9}{profile\_\-theme} ()
+\item 
+\hyperlink{profile_8module_a4703cb223d8cfa6329eda4053cd64d5a}{profile\_\-menu} ()
+\item 
+\hyperlink{profile_8module_a99f72a059a33bba9a97302fa524775ff}{profile\_\-block\_\-info} ()
+\item 
+\hyperlink{profile_8module_a26b6bb6662433ae41ee22b48f6f7ba13}{profile\_\-block\_\-configure} (\$delta= '')
+\item 
+\hyperlink{profile_8module_a245127a283b4afa8b603d759048aaf85}{profile\_\-block\_\-save} (\$delta= '', \$edit=array())
+\item 
+\hyperlink{profile_8module_a6cffc3b1748880b1606c5743d9746579}{profile\_\-block\_\-view} (\$delta= '')
+\item 
+\hyperlink{profile_8module_ac4241448415efd43523285a54e36ab85}{profile\_\-user\_\-presave} (\&\$edit, \$account, \$category)
+\item 
+\hyperlink{profile_8module_a7384c7127204e134d2be695e53681f4b}{profile\_\-user\_\-insert} (\&\$edit, \$account, \$category)
+\item 
+\hyperlink{profile_8module_a957dcbcb6fa2fcc754d06373f1c75037}{profile\_\-user\_\-cancel} (\$edit, \$account, \$method)
+\item 
+\hyperlink{profile_8module_ab27b8c7b8ab4a0a4c7b3a74f89bf800c}{profile\_\-user\_\-delete} (\$account)
+\item 
+\hyperlink{profile_8module_a8e273f03e749b1a38f2891d138675b73}{profile\_\-user\_\-load} (\$users)
+\item 
+\hypertarget{profile_8module_adcffabc919de8edbe678811f274d7588}{
+{\bfseries profile\_\-save\_\-profile} (\&\$edit, \$account, \$category, \$register=FALSE)}
+\label{profile_8module_adcffabc919de8edbe678811f274d7588}
+
+\item 
+\hypertarget{profile_8module_a3b3203b78b975b11945f0d2003f5d9ca}{
+{\bfseries profile\_\-view\_\-field} (\$account, \$field)}
+\label{profile_8module_a3b3203b78b975b11945f0d2003f5d9ca}
+
+\item 
+\hyperlink{profile_8module_a41afe6040449cd3066939e034cdd7b57}{profile\_\-user\_\-view} (\$account)
+\item 
+\hypertarget{profile_8module_a0257a44ad265c9a928a8e182b3850dd7}{
+{\bfseries \_\-profile\_\-form\_\-explanation} (\$field)}
+\label{profile_8module_a0257a44ad265c9a928a8e182b3850dd7}
+
+\item 
+\hyperlink{profile_8module_a1797a78888154f866995232f20ece3e5}{profile\_\-form\_\-alter} (\&\$form, \&\$form\_\-state, \$form\_\-id)
+\item 
+\hyperlink{profile_8module_a7c8e6c9720f8fddbddb84ae746b448ec}{\_\-profile\_\-update\_\-user\_\-fields} (\$fields, \$account)
+\item 
+\hyperlink{profile_8module_a7fc102eb762973087f36295f8427df14}{profile\_\-user\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{profile_8module_ace541ae41831d349df58b346e5945bf1}{profile\_\-user\_\-categories} ()
+\item 
+\hyperlink{profile_8module_abfe11b7a856c5a19d8e11044609cfdbf}{profile\_\-category\_\-access} (\$account, \$category)
+\item 
+\hyperlink{profile_8module_ac67229ab98fe8f88094d3db5e7918040}{template\_\-preprocess\_\-profile\_\-block} (\&\$variables)
+\item 
+\hyperlink{profile_8module_a7dc89cd06dce412d737449102c65c5d5}{template\_\-preprocess\_\-profile\_\-listing} (\&\$variables)
+\item 
+\hyperlink{profile_8module_af0ca4c9b63d8be38a0c7f354bf94ab6e}{template\_\-preprocess\_\-profile\_\-wrapper} (\&\$variables)
+\item 
+\hypertarget{profile_8module_a69e82eced76c34486e043a4575fd21bc}{
+{\bfseries \_\-profile\_\-field\_\-types} (\$type=NULL)}
+\label{profile_8module_a69e82eced76c34486e043a4575fd21bc}
+
+\item 
+\hypertarget{profile_8module_a4602bc4d9cb5579bf7a74993ba38c50c}{
+{\bfseries \_\-profile\_\-field\_\-serialize} (\$type=NULL)}
+\label{profile_8module_a4602bc4d9cb5579bf7a74993ba38c50c}
+
+\item 
+\hypertarget{profile_8module_a1770200b5c34f5c3ba4f43bd75f404fc}{
+{\bfseries \_\-profile\_\-get\_\-fields} (\$category, \$register=FALSE)}
+\label{profile_8module_a1770200b5c34f5c3ba4f43bd75f404fc}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Support for configurable user profiles. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{profile_8module_aa0cce9439e7000486ab39f1602fdd8ec}{
+\index{profile.module@{profile.module}!PROFILE\_\-HIDDEN@{PROFILE\_\-HIDDEN}}
+\index{PROFILE\_\-HIDDEN@{PROFILE\_\-HIDDEN}!profile.module@{profile.module}}
+\subsubsection[{PROFILE\_\-HIDDEN}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PROFILE\_\-HIDDEN}}}
+\label{profile_8module_aa0cce9439e7000486ab39f1602fdd8ec}
+Hidden profile field, only accessible by administrators, modules and themes. \hypertarget{profile_8module_a716a6e53d21c86799f2b81235a94e42e}{
+\index{profile.module@{profile.module}!PROFILE\_\-PRIVATE@{PROFILE\_\-PRIVATE}}
+\index{PROFILE\_\-PRIVATE@{PROFILE\_\-PRIVATE}!profile.module@{profile.module}}
+\subsubsection[{PROFILE\_\-PRIVATE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PROFILE\_\-PRIVATE}}}
+\label{profile_8module_a716a6e53d21c86799f2b81235a94e42e}
+Private field, content only available to privileged users. \hypertarget{profile_8module_ad05d09d0c6e6c43a423e51496f4435fd}{
+\index{profile.module@{profile.module}!PROFILE\_\-PUBLIC@{PROFILE\_\-PUBLIC}}
+\index{PROFILE\_\-PUBLIC@{PROFILE\_\-PUBLIC}!profile.module@{profile.module}}
+\subsubsection[{PROFILE\_\-PUBLIC}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PROFILE\_\-PUBLIC}}}
+\label{profile_8module_ad05d09d0c6e6c43a423e51496f4435fd}
+Public field, content shown on profile page but not used on member list pages. \hypertarget{profile_8module_a446618b936db915449e9bba63330ccd8}{
+\index{profile.module@{profile.module}!PROFILE\_\-PUBLIC\_\-LISTINGS@{PROFILE\_\-PUBLIC\_\-LISTINGS}}
+\index{PROFILE\_\-PUBLIC\_\-LISTINGS@{PROFILE\_\-PUBLIC\_\-LISTINGS}!profile.module@{profile.module}}
+\subsubsection[{PROFILE\_\-PUBLIC\_\-LISTINGS}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PROFILE\_\-PUBLIC\_\-LISTINGS}}}
+\label{profile_8module_a446618b936db915449e9bba63330ccd8}
+Public field, content shown on profile page and on member list pages. 
+
+\subsection{Function Documentation}
+\hypertarget{profile_8module_a7c8e6c9720f8fddbddb84ae746b448ec}{
+\index{profile.module@{profile.module}!\_\-profile\_\-update\_\-user\_\-fields@{\_\-profile\_\-update\_\-user\_\-fields}}
+\index{\_\-profile\_\-update\_\-user\_\-fields@{\_\-profile\_\-update\_\-user\_\-fields}!profile.module@{profile.module}}
+\subsubsection[{\_\-profile\_\-update\_\-user\_\-fields}]{\setlength{\rightskip}{0pt plus 5cm}\_\-profile\_\-update\_\-user\_\-fields (\$ {\em fields}, \/  \$ {\em account})}}
+\label{profile_8module_a7c8e6c9720f8fddbddb84ae746b448ec}
+Helper function: update an array of user fields by calling profile\_\-view\_\-field \hypertarget{profile_8module_a26b6bb6662433ae41ee22b48f6f7ba13}{
+\index{profile.module@{profile.module}!profile\_\-block\_\-configure@{profile\_\-block\_\-configure}}
+\index{profile\_\-block\_\-configure@{profile\_\-block\_\-configure}!profile.module@{profile.module}}
+\subsubsection[{profile\_\-block\_\-configure}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-block\_\-configure (\$ {\em delta} = {\ttfamily ''})}}
+\label{profile_8module_a26b6bb6662433ae41ee22b48f6f7ba13}
+Implements \hyperlink{group__hooks_gacc86fefd1e0299f387f79a37dd1a48b7}{hook\_\-block\_\-configure()}. \hypertarget{profile_8module_a99f72a059a33bba9a97302fa524775ff}{
+\index{profile.module@{profile.module}!profile\_\-block\_\-info@{profile\_\-block\_\-info}}
+\index{profile\_\-block\_\-info@{profile\_\-block\_\-info}!profile.module@{profile.module}}
+\subsubsection[{profile\_\-block\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-block\_\-info ()}}
+\label{profile_8module_a99f72a059a33bba9a97302fa524775ff}
+Implements \hyperlink{group__hooks_ga2bd926c3e90deeba0c3ba64fb3c64d73}{hook\_\-block\_\-info()}. \hypertarget{profile_8module_a245127a283b4afa8b603d759048aaf85}{
+\index{profile.module@{profile.module}!profile\_\-block\_\-save@{profile\_\-block\_\-save}}
+\index{profile\_\-block\_\-save@{profile\_\-block\_\-save}!profile.module@{profile.module}}
+\subsubsection[{profile\_\-block\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-block\_\-save (\$ {\em delta} = {\ttfamily ''}, \/  \$ {\em edit} = {\ttfamily array()})}}
+\label{profile_8module_a245127a283b4afa8b603d759048aaf85}
+Implements \hyperlink{group__hooks_ga622024ce4f818c241ca7a765e829f928}{hook\_\-block\_\-save()}. \hypertarget{profile_8module_a6cffc3b1748880b1606c5743d9746579}{
+\index{profile.module@{profile.module}!profile\_\-block\_\-view@{profile\_\-block\_\-view}}
+\index{profile\_\-block\_\-view@{profile\_\-block\_\-view}!profile.module@{profile.module}}
+\subsubsection[{profile\_\-block\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-block\_\-view (\$ {\em delta} = {\ttfamily ''})}}
+\label{profile_8module_a6cffc3b1748880b1606c5743d9746579}
+Implements \hyperlink{group__hooks_gaa14092a3e74cdc57aa295100cfd6860d}{hook\_\-block\_\-view()}. \hypertarget{profile_8module_abfe11b7a856c5a19d8e11044609cfdbf}{
+\index{profile.module@{profile.module}!profile\_\-category\_\-access@{profile\_\-category\_\-access}}
+\index{profile\_\-category\_\-access@{profile\_\-category\_\-access}!profile.module@{profile.module}}
+\subsubsection[{profile\_\-category\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-category\_\-access (\$ {\em account}, \/  \$ {\em category})}}
+\label{profile_8module_abfe11b7a856c5a19d8e11044609cfdbf}
+Menu item access callback -\/ check if a user has access to a profile category. \hypertarget{profile_8module_a1797a78888154f866995232f20ece3e5}{
+\index{profile.module@{profile.module}!profile\_\-form\_\-alter@{profile\_\-form\_\-alter}}
+\index{profile\_\-form\_\-alter@{profile\_\-form\_\-alter}!profile.module@{profile.module}}
+\subsubsection[{profile\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-form\_\-alter (\&\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em form\_\-id})}}
+\label{profile_8module_a1797a78888154f866995232f20ece3e5}
+Implements \hyperlink{group__hooks_ga6df3cea27ae1407aeef4eae5444cb213}{hook\_\-form\_\-alter()}. \hypertarget{profile_8module_a4c94451892aa2b5dd6b36c8a3f9fbe5a}{
+\index{profile.module@{profile.module}!profile\_\-help@{profile\_\-help}}
+\index{profile\_\-help@{profile\_\-help}!profile.module@{profile.module}}
+\subsubsection[{profile\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{profile_8module_a4c94451892aa2b5dd6b36c8a3f9fbe5a}
+Implements \hyperlink{group__hooks_ga5589c2714a782738e8851c4c90231f0e}{hook\_\-help()}. \hypertarget{profile_8module_a4703cb223d8cfa6329eda4053cd64d5a}{
+\index{profile.module@{profile.module}!profile\_\-menu@{profile\_\-menu}}
+\index{profile\_\-menu@{profile\_\-menu}!profile.module@{profile.module}}
+\subsubsection[{profile\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-menu ()}}
+\label{profile_8module_a4703cb223d8cfa6329eda4053cd64d5a}
+Implements \hyperlink{group__hooks_ga5c95244fea59b25666e409759e133ded}{hook\_\-menu()}. \hypertarget{profile_8module_a50e30bbdc9ffae1d3251a8ff035b43a9}{
+\index{profile.module@{profile.module}!profile\_\-theme@{profile\_\-theme}}
+\index{profile\_\-theme@{profile\_\-theme}!profile.module@{profile.module}}
+\subsubsection[{profile\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-theme ()}}
+\label{profile_8module_a50e30bbdc9ffae1d3251a8ff035b43a9}
+Implements \hyperlink{group__hooks_ga013ccb45c7aaab1c16cf9691428c910d}{hook\_\-theme()}. \hypertarget{profile_8module_a957dcbcb6fa2fcc754d06373f1c75037}{
+\index{profile.module@{profile.module}!profile\_\-user\_\-cancel@{profile\_\-user\_\-cancel}}
+\index{profile\_\-user\_\-cancel@{profile\_\-user\_\-cancel}!profile.module@{profile.module}}
+\subsubsection[{profile\_\-user\_\-cancel}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-user\_\-cancel (\$ {\em edit}, \/  \$ {\em account}, \/  \$ {\em method})}}
+\label{profile_8module_a957dcbcb6fa2fcc754d06373f1c75037}
+Implements \hyperlink{group__hooks_gad6223ddd2f0f52c331df8a3315d9a41e}{hook\_\-user\_\-cancel()}. \hypertarget{profile_8module_ace541ae41831d349df58b346e5945bf1}{
+\index{profile.module@{profile.module}!profile\_\-user\_\-categories@{profile\_\-user\_\-categories}}
+\index{profile\_\-user\_\-categories@{profile\_\-user\_\-categories}!profile.module@{profile.module}}
+\subsubsection[{profile\_\-user\_\-categories}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-user\_\-categories ()}}
+\label{profile_8module_ace541ae41831d349df58b346e5945bf1}
+Implements \hyperlink{group__hooks_ga166a3fe9d203a99560d10413a880ed08}{hook\_\-user\_\-categories()}. \hypertarget{profile_8module_ab27b8c7b8ab4a0a4c7b3a74f89bf800c}{
+\index{profile.module@{profile.module}!profile\_\-user\_\-delete@{profile\_\-user\_\-delete}}
+\index{profile\_\-user\_\-delete@{profile\_\-user\_\-delete}!profile.module@{profile.module}}
+\subsubsection[{profile\_\-user\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-user\_\-delete (\$ {\em account})}}
+\label{profile_8module_ab27b8c7b8ab4a0a4c7b3a74f89bf800c}
+Implements \hyperlink{group__hooks_ga2c0755857e486e8a770b44b496da9929}{hook\_\-user\_\-delete()}. \hypertarget{profile_8module_a7fc102eb762973087f36295f8427df14}{
+\index{profile.module@{profile.module}!profile\_\-user\_\-form\_\-validate@{profile\_\-user\_\-form\_\-validate}}
+\index{profile\_\-user\_\-form\_\-validate@{profile\_\-user\_\-form\_\-validate}!profile.module@{profile.module}}
+\subsubsection[{profile\_\-user\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-user\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{profile_8module_a7fc102eb762973087f36295f8427df14}
+Form validation handler for the user register/profile form.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{profile_8module_a1797a78888154f866995232f20ece3e5}{profile\_\-form\_\-alter()} 
+\end{DoxySeeAlso}
+\hypertarget{profile_8module_a7384c7127204e134d2be695e53681f4b}{
+\index{profile.module@{profile.module}!profile\_\-user\_\-insert@{profile\_\-user\_\-insert}}
+\index{profile\_\-user\_\-insert@{profile\_\-user\_\-insert}!profile.module@{profile.module}}
+\subsubsection[{profile\_\-user\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-user\_\-insert (\&\$ {\em edit}, \/  \$ {\em account}, \/  \$ {\em category})}}
+\label{profile_8module_a7384c7127204e134d2be695e53681f4b}
+Implements \hyperlink{group__hooks_gaa3e2c4c972ee796d216b15da7aaf9c2c}{hook\_\-user\_\-insert()}. \hypertarget{profile_8module_a8e273f03e749b1a38f2891d138675b73}{
+\index{profile.module@{profile.module}!profile\_\-user\_\-load@{profile\_\-user\_\-load}}
+\index{profile\_\-user\_\-load@{profile\_\-user\_\-load}!profile.module@{profile.module}}
+\subsubsection[{profile\_\-user\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-user\_\-load (\$ {\em users})}}
+\label{profile_8module_a8e273f03e749b1a38f2891d138675b73}
+Implements \hyperlink{group__hooks_ga81027843e38de3a899fa6e72f876d6b6}{hook\_\-user\_\-load()}. \hypertarget{profile_8module_ac4241448415efd43523285a54e36ab85}{
+\index{profile.module@{profile.module}!profile\_\-user\_\-presave@{profile\_\-user\_\-presave}}
+\index{profile\_\-user\_\-presave@{profile\_\-user\_\-presave}!profile.module@{profile.module}}
+\subsubsection[{profile\_\-user\_\-presave}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-user\_\-presave (\&\$ {\em edit}, \/  \$ {\em account}, \/  \$ {\em category})}}
+\label{profile_8module_ac4241448415efd43523285a54e36ab85}
+Implements \hyperlink{group__hooks_gab6b224c35d7d97259d4350a7849f1e56}{hook\_\-user\_\-presave()}. \hypertarget{profile_8module_a41afe6040449cd3066939e034cdd7b57}{
+\index{profile.module@{profile.module}!profile\_\-user\_\-view@{profile\_\-user\_\-view}}
+\index{profile\_\-user\_\-view@{profile\_\-user\_\-view}!profile.module@{profile.module}}
+\subsubsection[{profile\_\-user\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}profile\_\-user\_\-view (\$ {\em account})}}
+\label{profile_8module_a41afe6040449cd3066939e034cdd7b57}
+Implements \hyperlink{group__hooks_gaafb9e35d1f82a33918437ad7acf29541}{hook\_\-user\_\-view()}. \hypertarget{profile_8module_ac67229ab98fe8f88094d3db5e7918040}{
+\index{profile.module@{profile.module}!template\_\-preprocess\_\-profile\_\-block@{template\_\-preprocess\_\-profile\_\-block}}
+\index{template\_\-preprocess\_\-profile\_\-block@{template\_\-preprocess\_\-profile\_\-block}!profile.module@{profile.module}}
+\subsubsection[{template\_\-preprocess\_\-profile\_\-block}]{\setlength{\rightskip}{0pt plus 5cm}template\_\-preprocess\_\-profile\_\-block (\&\$ {\em variables})}}
+\label{profile_8module_ac67229ab98fe8f88094d3db5e7918040}
+Process variables for \hyperlink{profile-block_8tpl_8php}{profile-\/block.tpl.php}.
+
+The \$variables array contains the following arguments:
+\begin{DoxyItemize}
+\item \$account
+\item \$fields
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{profile-block_8tpl_8php}{profile-\/block.tpl.php} 
+\end{DoxySeeAlso}
+\hypertarget{profile_8module_a7dc89cd06dce412d737449102c65c5d5}{
+\index{profile.module@{profile.module}!template\_\-preprocess\_\-profile\_\-listing@{template\_\-preprocess\_\-profile\_\-listing}}
+\index{template\_\-preprocess\_\-profile\_\-listing@{template\_\-preprocess\_\-profile\_\-listing}!profile.module@{profile.module}}
+\subsubsection[{template\_\-preprocess\_\-profile\_\-listing}]{\setlength{\rightskip}{0pt plus 5cm}template\_\-preprocess\_\-profile\_\-listing (\&\$ {\em variables})}}
+\label{profile_8module_a7dc89cd06dce412d737449102c65c5d5}
+Process variables for \hyperlink{profile-listing_8tpl_8php}{profile-\/listing.tpl.php}.
+
+The \$variables array contains the following arguments:
+\begin{DoxyItemize}
+\item \$account
+\item \$fields
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{profile-listing_8tpl_8php}{profile-\/listing.tpl.php} 
+\end{DoxySeeAlso}
+\hypertarget{profile_8module_af0ca4c9b63d8be38a0c7f354bf94ab6e}{
+\index{profile.module@{profile.module}!template\_\-preprocess\_\-profile\_\-wrapper@{template\_\-preprocess\_\-profile\_\-wrapper}}
+\index{template\_\-preprocess\_\-profile\_\-wrapper@{template\_\-preprocess\_\-profile\_\-wrapper}!profile.module@{profile.module}}
+\subsubsection[{template\_\-preprocess\_\-profile\_\-wrapper}]{\setlength{\rightskip}{0pt plus 5cm}template\_\-preprocess\_\-profile\_\-wrapper (\&\$ {\em variables})}}
+\label{profile_8module_af0ca4c9b63d8be38a0c7f354bf94ab6e}
+Process variables for \hyperlink{profile-wrapper_8tpl_8php}{profile-\/wrapper.tpl.php}.
+
+The \$variables array contains the following arguments:
+\begin{DoxyItemize}
+\item \$content
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{profile-wrapper_8tpl_8php}{profile-\/wrapper.tpl.php} 
+\end{DoxySeeAlso}

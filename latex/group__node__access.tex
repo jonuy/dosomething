@@ -1,0 +1,484 @@
+\hypertarget{group__node__access}{
+\section{Node access rights}
+\label{group__node__access}\index{Node access rights@{Node access rights}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__node__access_gaa973f2ab6ab14c3fa14e5138c6d69ecf}{hook\_\-node\_\-grants} (\$account, \$op)
+\item 
+\hyperlink{group__node__access_ga3fe7744d74446e40e9b9ad2a782b4269}{hook\_\-node\_\-access\_\-records} (\$node)
+\item 
+\hyperlink{group__node__access_ga37c90bf0e1dccad0deefa368dd94cc83}{hook\_\-node\_\-access\_\-records\_\-alter} (\&\$grants, \$node)
+\item 
+\hyperlink{group__node__access_ga21e95e2bd0b4ed12d861aa83426a8ba3}{hook\_\-node\_\-grants\_\-alter} (\&\$grants, \$account, \$op)
+\item 
+\hyperlink{group__node__access_ga75a280ea1fbe0fb6ca034f8aad06d58d}{hook\_\-node\_\-access} (\$node, \$op, \$account)
+\item 
+\hyperlink{group__node__access_ga46f0f1ed812befada8f8e7d1b8c352db}{node\_\-access} (\$op, \$node, \$account=NULL)
+\item 
+\hyperlink{group__node__access_gae826daeafed8b20300a370c2022cc2c1}{node\_\-node\_\-access} (\$node, \$op, \$account)
+\item 
+\hyperlink{group__node__access_ga929efd16564e3cb073ee5e1ed6c6c2a7}{node\_\-list\_\-permissions} (\$type)
+\item 
+\hyperlink{group__node__access_ga75960e1cc5852c75c6347ab938938f9b}{node\_\-permissions\_\-get\_\-configured\_\-types} ()
+\item 
+\hyperlink{group__node__access_gab33de8c23b1edb657f67cb242a8ec8af}{node\_\-access\_\-grants} (\$op, \$account=NULL)
+\item 
+\hyperlink{group__node__access_gafb79200147d5087ceb32cb6b0632afd4}{node\_\-access\_\-view\_\-all\_\-nodes} (\$account=NULL)
+\item 
+\hyperlink{group__node__access_gaef7c83544718b8431d81b884ef8cc6f5}{node\_\-query\_\-node\_\-access\_\-alter} (\hyperlink{interfaceQueryAlterableInterface}{QueryAlterableInterface} \$query)
+\item 
+\hyperlink{group__node__access_gacd4162ac9ee2d2147d5212fd5e7a7319}{node\_\-query\_\-entity\_\-field\_\-access\_\-alter} (\hyperlink{interfaceQueryAlterableInterface}{QueryAlterableInterface} \$query)
+\item 
+\hyperlink{group__node__access_ga5f4838d9b5cac9f3bee9a26f39e80691}{\_\-node\_\-query\_\-node\_\-access\_\-alter} (\$query, \$type)
+\item 
+\hyperlink{group__node__access_ga6fbbc13a4098f72663c0a67f81100f67}{node\_\-access\_\-acquire\_\-grants} (\$node, \$delete=TRUE)
+\item 
+\hyperlink{group__node__access_ga735fbb5dfa05cc1aed121655a1694909}{node\_\-access\_\-write\_\-grants} (\$node, \$grants, \$realm=NULL, \$delete=TRUE)
+\item 
+\hyperlink{group__node__access_ga895d95595168709334c4eca1472c6d23}{node\_\-access\_\-needs\_\-rebuild} (\$rebuild=NULL)
+\item 
+\hyperlink{group__node__access_gaf04007aedfc3afbe074b2fe4065ab618}{node\_\-access\_\-rebuild} (\$batch\_\-mode=FALSE)
+\item 
+\hyperlink{group__node__access_ga2b720b31a5b728b16c357ab995deb5d5}{\_\-node\_\-access\_\-rebuild\_\-batch\_\-operation} (\&\$context)
+\item 
+\hyperlink{group__node__access_gaa7feee934ce635e386628b570901ff38}{\_\-node\_\-access\_\-rebuild\_\-batch\_\-finished} (\$success, \$results, \$operations)
+\item 
+\hyperlink{group__node__access_gaeedf3adea0813fb3631f26d0de83a68d}{hook\_\-node\_\-access\_\-explain} (\$row)
+\item 
+\hyperlink{group__node__access_gac5a197ac3564b867c2921fb496063ae6}{hook\_\-node\_\-access\_\-acknowledge} (\$grant)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The node access system determines who can do what to which nodes.
+
+In determining access rights for a node, \hyperlink{group__node__access_ga46f0f1ed812befada8f8e7d1b8c352db}{node\_\-access()} first checks whether the user has the \char`\"{}bypass node access\char`\"{} permission. Such users have unrestricted access to all nodes. user 1 will always pass this check.
+
+Next, all implementations of \hyperlink{group__node__access_ga75a280ea1fbe0fb6ca034f8aad06d58d}{hook\_\-node\_\-access()} will be called. Each implementation may explicitly allow, explicitly deny, or ignore the access request. If at least one module says to deny the request, it will be rejected. If no modules deny the request and at least one says to allow it, the request will be permitted.
+
+If all modules ignore the access request, then the node\_\-access table is used to determine access. All node access modules are queried using \hyperlink{group__node__access_gaa973f2ab6ab14c3fa14e5138c6d69ecf}{hook\_\-node\_\-grants()} to assemble a list of \char`\"{}grant IDs\char`\"{} for the user. This list is compared against the table. If any row contains the node ID in question (or 0, which stands for \char`\"{}all nodes\char`\"{}), one of the grant IDs returned, and a value of TRUE for the operation in question, then access is granted. Note that this table is a list of grants; any matching row is sufficient to grant access to the node.
+
+In node listings (lists of nodes generated from a select query, such as the default home page at path 'node', an RSS feed, a recent content block, etc.), the process above is followed except that \hyperlink{group__node__access_ga75a280ea1fbe0fb6ca034f8aad06d58d}{hook\_\-node\_\-access()} is not called on each node for performance reasons and for proper functioning of the pager system. When adding a node listing to your module, be sure to use a dynamic query created by \hyperlink{group__database_ga9e030cee657d64e3d8e524c65814cc9f}{db\_\-select()} and add a tag of \char`\"{}node\_\-access\char`\"{}. This will allow modules dealing with node access to ensure only nodes to which the user has access are retrieved, through the use of \hyperlink{group__hooks_ga12527037deeb76adcab1000e984fdfce}{hook\_\-query\_\-TAG\_\-alter()}.
+
+Note: Even a single module returning NODE\_\-ACCESS\_\-DENY from \hyperlink{group__node__access_ga75a280ea1fbe0fb6ca034f8aad06d58d}{hook\_\-node\_\-access()} will block access to the node. Therefore, implementers should take care to not deny access unless they really intend to. Unless a module wishes to actively deny access it should return NODE\_\-ACCESS\_\-IGNORE (or simply return nothing) to allow other modules or the node\_\-access table to control access.
+
+To see how to write a node access module of your own, see node\_\-access\_\-example.module. 
+
+\subsection{Function Documentation}
+\hypertarget{group__node__access_gaa7feee934ce635e386628b570901ff38}{
+\index{node\_\-access@{node\_\-access}!\_\-node\_\-access\_\-rebuild\_\-batch\_\-finished@{\_\-node\_\-access\_\-rebuild\_\-batch\_\-finished}}
+\index{\_\-node\_\-access\_\-rebuild\_\-batch\_\-finished@{\_\-node\_\-access\_\-rebuild\_\-batch\_\-finished}!node_access@{node\_\-access}}
+\subsubsection[{\_\-node\_\-access\_\-rebuild\_\-batch\_\-finished}]{\setlength{\rightskip}{0pt plus 5cm}\_\-node\_\-access\_\-rebuild\_\-batch\_\-finished (\$ {\em success}, \/  \$ {\em results}, \/  \$ {\em operations})}}
+\label{group__node__access_gaa7feee934ce635e386628b570901ff38}
+Performs post-\/processing for \hyperlink{group__node__access_gaf04007aedfc3afbe074b2fe4065ab618}{node\_\-access\_\-rebuild()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em bool}]\$success A boolean indicating whether the re-\/build process has completed. \item[{\em array}]\$results An array of results information. \item[{\em array}]\$operations An array of function calls (not used in this function). \end{DoxyParams}
+\hypertarget{group__node__access_ga2b720b31a5b728b16c357ab995deb5d5}{
+\index{node\_\-access@{node\_\-access}!\_\-node\_\-access\_\-rebuild\_\-batch\_\-operation@{\_\-node\_\-access\_\-rebuild\_\-batch\_\-operation}}
+\index{\_\-node\_\-access\_\-rebuild\_\-batch\_\-operation@{\_\-node\_\-access\_\-rebuild\_\-batch\_\-operation}!node_access@{node\_\-access}}
+\subsubsection[{\_\-node\_\-access\_\-rebuild\_\-batch\_\-operation}]{\setlength{\rightskip}{0pt plus 5cm}\_\-node\_\-access\_\-rebuild\_\-batch\_\-operation (\&\$ {\em context})}}
+\label{group__node__access_ga2b720b31a5b728b16c357ab995deb5d5}
+Performs batch operation for \hyperlink{group__node__access_gaf04007aedfc3afbe074b2fe4065ab618}{node\_\-access\_\-rebuild()}.
+
+This is a multistep operation: we go through all nodes by packs of 20. The batch processing engine interrupts processing and sends progress feedback after 1 second execution time.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$context An array of contextual key/value information for rebuild batch process. \end{DoxyParams}
+\hypertarget{group__node__access_ga5f4838d9b5cac9f3bee9a26f39e80691}{
+\index{node\_\-access@{node\_\-access}!\_\-node\_\-query\_\-node\_\-access\_\-alter@{\_\-node\_\-query\_\-node\_\-access\_\-alter}}
+\index{\_\-node\_\-query\_\-node\_\-access\_\-alter@{\_\-node\_\-query\_\-node\_\-access\_\-alter}!node_access@{node\_\-access}}
+\subsubsection[{\_\-node\_\-query\_\-node\_\-access\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}\_\-node\_\-query\_\-node\_\-access\_\-alter (\$ {\em query}, \/  \$ {\em type})}}
+\label{group__node__access_ga5f4838d9b5cac9f3bee9a26f39e80691}
+Helper for node access functions.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$query}]The query to add conditions to. \item[{\em \$type}]Either 'node' or 'entity' depending on what sort of query it is. See \hyperlink{group__node__access_gaef7c83544718b8431d81b884ef8cc6f5}{node\_\-query\_\-node\_\-access\_\-alter()} and \hyperlink{group__node__access_gacd4162ac9ee2d2147d5212fd5e7a7319}{node\_\-query\_\-entity\_\-field\_\-access\_\-alter()} for more. \end{DoxyParams}
+\hypertarget{group__node__access_ga75a280ea1fbe0fb6ca034f8aad06d58d}{
+\index{node\_\-access@{node\_\-access}!hook\_\-node\_\-access@{hook\_\-node\_\-access}}
+\index{hook\_\-node\_\-access@{hook\_\-node\_\-access}!node_access@{node\_\-access}}
+\subsubsection[{hook\_\-node\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-node\_\-access (\$ {\em node}, \/  \$ {\em op}, \/  \$ {\em account})}}
+\label{group__node__access_ga75a280ea1fbe0fb6ca034f8aad06d58d}
+Control access to a node.
+
+Modules may implement this hook if they want to have a say in whether or not a given user has access to perform a given operation on a node.
+
+The administrative account (user ID \#1) always passes any access check, so this hook is not called in that case. Users with the \char`\"{}bypass node access\char`\"{} permission may always \hyperlink{classview}{view} and edit content through the administrative interface.
+
+Note that not all modules will want to influence access on all node types. If your module does not want to actively grant or block access, return NODE\_\-ACCESS\_\-IGNORE or simply return nothing. Blindly returning FALSE will break other node access modules.
+
+Also note that this function isn't called for node listings (e.g., RSS feeds, the default home page at path 'node', a recent content block, etc.) See \hyperlink{group__node__access}{Node access rights } for a full explanation.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]Either a node object or the machine name of the content type on which to perform the access check. \item[{\em \$op}]The operation to be performed. Possible values:
+\begin{DoxyItemize}
+\item \char`\"{}create\char`\"{}
+\item \char`\"{}delete\char`\"{}
+\item \char`\"{}update\char`\"{}
+\item \char`\"{}view\char`\"{} 
+\end{DoxyItemize}\item[{\em \$account}]The user object to perform the access check operation on.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item NODE\_\-ACCESS\_\-ALLOW: if the operation is to be allowed.
+\item NODE\_\-ACCESS\_\-DENY: if the operation is to be denied.
+\item NODE\_\-ACCESS\_\-IGNORE: to not affect this operation at all. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{group__node__access_gac5a197ac3564b867c2921fb496063ae6}{
+\index{node\_\-access@{node\_\-access}!hook\_\-node\_\-access\_\-acknowledge@{hook\_\-node\_\-access\_\-acknowledge}}
+\index{hook\_\-node\_\-access\_\-acknowledge@{hook\_\-node\_\-access\_\-acknowledge}!node_access@{node\_\-access}}
+\subsubsection[{hook\_\-node\_\-access\_\-acknowledge}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-node\_\-access\_\-acknowledge (\$ {\em grant})}}
+\label{group__node__access_gac5a197ac3564b867c2921fb496063ae6}
+Acknowledge ownership of 'alien' grant records.
+
+Some node access modules store grant records directly into the \{node\_\-access\} table rather than returning them through \hyperlink{group__node__access_ga3fe7744d74446e40e9b9ad2a782b4269}{hook\_\-node\_\-access\_\-records()}. This practice is not recommended and DNA will flag all such records as 'alien'.
+
+If this is unavoidable, a module can confess to being the owner of these grant records, so that DNA can properly attribute them.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__node__access_ga3fe7744d74446e40e9b9ad2a782b4269}{hook\_\-node\_\-access\_\-records()} 
+\end{DoxySeeAlso}
+\hypertarget{group__node__access_gaeedf3adea0813fb3631f26d0de83a68d}{
+\index{node\_\-access@{node\_\-access}!hook\_\-node\_\-access\_\-explain@{hook\_\-node\_\-access\_\-explain}}
+\index{hook\_\-node\_\-access\_\-explain@{hook\_\-node\_\-access\_\-explain}!node_access@{node\_\-access}}
+\subsubsection[{hook\_\-node\_\-access\_\-explain}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-node\_\-access\_\-explain (\$ {\em row})}}
+\label{group__node__access_gaeedf3adea0813fb3631f26d0de83a68d}
+Explain your records in the \{node\_\-access\} table.
+
+In order to help developers and administrators understand the forces that control access to any given node, the DNA module provides the Devel Node Access block, which lists all the grant records in the \{node\_\-access\} table for that node.
+
+However, every Node Access module is free in how it defines and uses the 'realm' and 'gid' fields in its records in the \{node\_\-access\} table, and it's often difficult to interpret them. This hook passes each record that DNA wants to display, and the owning module is expected to return an explanation of that record.
+
+The explanation should not be localized (not be passed through t()), so that administrators seeking help can present English explanations.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$row}]The record from the \{node\_\-access\} table, as object. The member fields are: nid, gid, realm, grant\_\-view, grant\_\-update, grant\_\-delete.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string with a (short!) explanation of the given \{node\_\-access\} row, to be displayed in DNA's 'Devel Node Access' block. It will be displayed as HTML; any variable parts must already be sanitized.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__node__access_ga3fe7744d74446e40e9b9ad2a782b4269}{hook\_\-node\_\-access\_\-records()} 
+
+\hyperlink{devel__node__access_8module_a7b594d5b01b220abc354695853569809}{devel\_\-node\_\-access\_\-node\_\-access\_\-explain()} 
+\end{DoxySeeAlso}
+\hypertarget{group__node__access_ga3fe7744d74446e40e9b9ad2a782b4269}{
+\index{node\_\-access@{node\_\-access}!hook\_\-node\_\-access\_\-records@{hook\_\-node\_\-access\_\-records}}
+\index{hook\_\-node\_\-access\_\-records@{hook\_\-node\_\-access\_\-records}!node_access@{node\_\-access}}
+\subsubsection[{hook\_\-node\_\-access\_\-records}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-node\_\-access\_\-records (\$ {\em node})}}
+\label{group__node__access_ga3fe7744d74446e40e9b9ad2a782b4269}
+Set permissions for a node to be written to the database.
+
+When a node is saved, a module implementing \hyperlink{group__node__access_ga3fe7744d74446e40e9b9ad2a782b4269}{hook\_\-node\_\-access\_\-records()} will be asked if it is interested in the access permissions for a node. If it is interested, it must respond with an array of permissions arrays for that node.
+
+Node access grants apply regardless of the published or unpublished status of the node. Implementations must make sure not to grant access to unpublished nodes if they don't want to change the standard access control behavior. Your module may need to create a separate access realm to handle access to unpublished nodes.
+
+Note that the grant values in the return value from your hook must be integers and not boolean TRUE and FALSE.
+
+Each permissions item in the array is an array with the following elements:
+\begin{DoxyItemize}
+\item 'realm': The name of a realm that the module has defined in \hyperlink{group__node__access_gaa973f2ab6ab14c3fa14e5138c6d69ecf}{hook\_\-node\_\-grants()}.
+\item 'gid': A 'grant ID' from \hyperlink{group__node__access_gaa973f2ab6ab14c3fa14e5138c6d69ecf}{hook\_\-node\_\-grants()}.
+\item 'grant\_\-view': If set to 1 a user that has been identified as a member of this gid within this realm can \hyperlink{classview}{view} this node. This should usually be set to \$node-\/$>$status. Failure to do so may expose unpublished content to some users.
+\item 'grant\_\-update': If set to 1 a user that has been identified as a member of this gid within this realm can edit this node.
+\item 'grant\_\-delete': If set to 1 a user that has been identified as a member of this gid within this realm can delete this node.
+\item 'priority': If multiple modules seek to set permissions on a node, the realms that have the highest priority will win out, and realms with a lower priority will not be written. If there is any doubt, it is best to leave this 0.
+\end{DoxyItemize}
+
+When an implementation is interested in a node but want to deny access to everyone, it may return a \char`\"{}deny all\char`\"{} grant:
+
+
+\begin{DoxyCode}
+ $grants[] = array(
+   'realm' => 'all',
+   'gid' => 0,
+   'grant_view' => 0,
+   'grant_update' => 0,
+   'grant_delete' => 0,
+   'priority' => 1,
+ );
+\end{DoxyCode}
+
+
+Setting the priority should cancel out other grants. In the case of a conflict between modules, it is safer to use \hyperlink{group__node__access_ga37c90bf0e1dccad0deefa368dd94cc83}{hook\_\-node\_\-access\_\-records\_\-alter()} to return only the deny grant.
+
+Note: a deny all grant is not written to the database; denies are implicit.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__node__access_ga735fbb5dfa05cc1aed121655a1694909}{node\_\-access\_\-write\_\-grants()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]The node that has just been saved.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of grants as defined above.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__node__access_ga37c90bf0e1dccad0deefa368dd94cc83}{hook\_\-node\_\-access\_\-records\_\-alter()} 
+\end{DoxySeeAlso}
+\hypertarget{group__node__access_ga37c90bf0e1dccad0deefa368dd94cc83}{
+\index{node\_\-access@{node\_\-access}!hook\_\-node\_\-access\_\-records\_\-alter@{hook\_\-node\_\-access\_\-records\_\-alter}}
+\index{hook\_\-node\_\-access\_\-records\_\-alter@{hook\_\-node\_\-access\_\-records\_\-alter}!node_access@{node\_\-access}}
+\subsubsection[{hook\_\-node\_\-access\_\-records\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-node\_\-access\_\-records\_\-alter (\&\$ {\em grants}, \/  \$ {\em node})}}
+\label{group__node__access_ga37c90bf0e1dccad0deefa368dd94cc83}
+Alter permissions for a node before it is written to the database.
+
+Node access modules establish rules for user access to content. Node access records are stored in the \{node\_\-access\} table and define which permissions are required to access a node. This hook is invoked after node access modules returned their requirements via \hyperlink{group__node__access_ga3fe7744d74446e40e9b9ad2a782b4269}{hook\_\-node\_\-access\_\-records()}; doing so allows modules to modify the \$grants array by reference before it is stored, so custom or advanced business logic can be applied.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__node__access_ga3fe7744d74446e40e9b9ad2a782b4269}{hook\_\-node\_\-access\_\-records()}
+\end{DoxySeeAlso}
+Upon viewing, editing or deleting a node, \hyperlink{group__node__access_gaa973f2ab6ab14c3fa14e5138c6d69ecf}{hook\_\-node\_\-grants()} builds a permissions array that is compared against the stored access records. The user must have one or more matching permissions in order to complete the requested operation.
+
+A module may deny all access to a node by setting \$grants to an empty array.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__node__access_gaa973f2ab6ab14c3fa14e5138c6d69ecf}{hook\_\-node\_\-grants()} 
+
+\hyperlink{group__node__access_ga21e95e2bd0b4ed12d861aa83426a8ba3}{hook\_\-node\_\-grants\_\-alter()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$grants}]The \$grants array returned by \hyperlink{group__node__access_ga3fe7744d74446e40e9b9ad2a782b4269}{hook\_\-node\_\-access\_\-records()}. \item[{\em \$node}]The node for which the grants were acquired.\end{DoxyParams}
+The preferred use of this hook is in a module that bridges multiple node access modules with a configurable behavior, as shown in the example with the 'is\_\-preview' field. \hypertarget{group__node__access_gaa973f2ab6ab14c3fa14e5138c6d69ecf}{
+\index{node\_\-access@{node\_\-access}!hook\_\-node\_\-grants@{hook\_\-node\_\-grants}}
+\index{hook\_\-node\_\-grants@{hook\_\-node\_\-grants}!node_access@{node\_\-access}}
+\subsubsection[{hook\_\-node\_\-grants}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-node\_\-grants (\$ {\em account}, \/  \$ {\em op})}}
+\label{group__node__access_gaa973f2ab6ab14c3fa14e5138c6d69ecf}
+Inform the node access system what permissions the user has.
+
+This hook is for implementation by node access modules. In this hook, the module grants a user different \char`\"{}grant IDs\char`\"{} within one or more \char`\"{}realms\char`\"{}. In \hyperlink{group__node__access_ga3fe7744d74446e40e9b9ad2a782b4269}{hook\_\-node\_\-access\_\-records()}, the realms and grant IDs are associated with permission to \hyperlink{classview}{view}, edit, and delete individual nodes.
+
+The realms and grant IDs can be arbitrarily defined by your node access module; it is common to use role IDs as grant IDs, but that is not required. Your module could instead maintain its own list of users, where each list has an ID. In that case, the return value of this hook would be an array of the list IDs that this user is a member of.
+
+A node access module may implement as many realms as necessary to properly define the access privileges for the nodes. Note that the system makes no distinction between published and unpublished nodes. It is the module's responsibility to provide appropriate realms to limit access to unpublished content.
+
+Node access records are stored in the \{node\_\-access\} table and define which grants are required to access a node. There is a special case for the \hyperlink{classview}{view} operation -\/-\/ a record with node ID 0 corresponds to a \char`\"{}view all\char`\"{} grant for the realm and grant ID of that record. If there are no node access modules enabled, the core node module adds a node ID 0 record for realm 'all'. Node access modules can also grant \char`\"{}view all\char`\"{} permission on their custom realms; for example, a module could create a record in \{node\_\-access\} with: 
+\begin{DoxyCode}
+ $record = array(
+   'nid' => 0,
+   'gid' => 888,
+   'realm' => 'example_realm',
+   'grant_view' => 1,
+   'grant_update' => 0,
+   'grant_delete' => 0,
+ );
+ drupal_write_record('node_access', $record);
+\end{DoxyCode}
+ And then in its \hyperlink{group__node__access_gaa973f2ab6ab14c3fa14e5138c6d69ecf}{hook\_\-node\_\-grants()} implementation, it would need to return: 
+\begin{DoxyCode}
+ if ($op == 'view') {
+   $grants['example_realm'] = array(888);
+ }
+\end{DoxyCode}
+ If you decide to do this, be aware that the \hyperlink{group__node__access_gaf04007aedfc3afbe074b2fe4065ab618}{node\_\-access\_\-rebuild()} function will erase any node ID 0 entry when it is called, so you will need to make sure to restore your \{node\_\-access\} record after \hyperlink{group__node__access_gaf04007aedfc3afbe074b2fe4065ab618}{node\_\-access\_\-rebuild()} is called.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__node__access_gafb79200147d5087ceb32cb6b0632afd4}{node\_\-access\_\-view\_\-all\_\-nodes()} 
+
+\hyperlink{group__node__access_gaf04007aedfc3afbe074b2fe4065ab618}{node\_\-access\_\-rebuild()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$account}]The user object whose grants are requested. \item[{\em \$op}]The node operation to be performed, such as 'view', 'update', or 'delete'.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array whose keys are \char`\"{}realms\char`\"{} of grants, and whose values are arrays of the grant IDs within this realm that this user is being granted.
+\end{DoxyReturn}
+For a detailed example, see node\_\-access\_\-example.module. \hypertarget{group__node__access_ga21e95e2bd0b4ed12d861aa83426a8ba3}{
+\index{node\_\-access@{node\_\-access}!hook\_\-node\_\-grants\_\-alter@{hook\_\-node\_\-grants\_\-alter}}
+\index{hook\_\-node\_\-grants\_\-alter@{hook\_\-node\_\-grants\_\-alter}!node_access@{node\_\-access}}
+\subsubsection[{hook\_\-node\_\-grants\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-node\_\-grants\_\-alter (\&\$ {\em grants}, \/  \$ {\em account}, \/  \$ {\em op})}}
+\label{group__node__access_ga21e95e2bd0b4ed12d861aa83426a8ba3}
+Alter user access rules when trying to \hyperlink{classview}{view}, edit or delete a node.
+
+Node access modules establish rules for user access to content. \hyperlink{group__node__access_gaa973f2ab6ab14c3fa14e5138c6d69ecf}{hook\_\-node\_\-grants()} defines permissions for a user to \hyperlink{classview}{view}, edit or delete nodes by building a \$grants array that indicates the permissions assigned to the user by each node access module. This hook is called to allow modules to modify the \$grants array by reference, so the interaction of multiple node access modules can be altered or advanced business logic can be applied.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__node__access_gaa973f2ab6ab14c3fa14e5138c6d69ecf}{hook\_\-node\_\-grants()}
+\end{DoxySeeAlso}
+The resulting grants are then checked against the records stored in the \{node\_\-access\} table to determine if the operation may be completed.
+
+A module may deny all access to a user by setting \$grants to an empty array.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__node__access_ga3fe7744d74446e40e9b9ad2a782b4269}{hook\_\-node\_\-access\_\-records()} 
+
+\hyperlink{group__node__access_ga37c90bf0e1dccad0deefa368dd94cc83}{hook\_\-node\_\-access\_\-records\_\-alter()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$grants}]The \$grants array returned by \hyperlink{group__node__access_gaa973f2ab6ab14c3fa14e5138c6d69ecf}{hook\_\-node\_\-grants()}. \item[{\em \$account}]The user account requesting access to content. \item[{\em \$op}]The operation being performed, 'view', 'update' or 'delete'.\end{DoxyParams}
+Developers may use this hook to either add additional grants to a user or to remove existing grants. These rules are typically based on either the permissions assigned to a user role, or specific attributes of a user account. \hypertarget{group__node__access_ga46f0f1ed812befada8f8e7d1b8c352db}{
+\index{node\_\-access@{node\_\-access}!node\_\-access@{node\_\-access}}
+\index{node\_\-access@{node\_\-access}!node_access@{node\_\-access}}
+\subsubsection[{node\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-access (\$ {\em op}, \/  \$ {\em node}, \/  \$ {\em account} = {\ttfamily NULL})}}
+\label{group__node__access_ga46f0f1ed812befada8f8e7d1b8c352db}
+Determines whether the current user may perform the operation on the node.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$op}]The operation to be performed on the node. Possible values are:
+\begin{DoxyItemize}
+\item \char`\"{}view\char`\"{}
+\item \char`\"{}update\char`\"{}
+\item \char`\"{}delete\char`\"{}
+\item \char`\"{}create\char`\"{} 
+\end{DoxyItemize}\item[{\em \$node}]The node object on which the operation is to be performed, or node type (e.g. 'forum') for \char`\"{}create\char`\"{} operation. \item[{\em \$account}]Optional, a user object representing the user for whom the operation is to be performed. Determines access for a user other than the current user.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the operation may be performed, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{group__node__access_ga6fbbc13a4098f72663c0a67f81100f67}{
+\index{node\_\-access@{node\_\-access}!node\_\-access\_\-acquire\_\-grants@{node\_\-access\_\-acquire\_\-grants}}
+\index{node\_\-access\_\-acquire\_\-grants@{node\_\-access\_\-acquire\_\-grants}!node_access@{node\_\-access}}
+\subsubsection[{node\_\-access\_\-acquire\_\-grants}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-access\_\-acquire\_\-grants (\$ {\em node}, \/  \$ {\em delete} = {\ttfamily TRUE})}}
+\label{group__node__access_ga6fbbc13a4098f72663c0a67f81100f67}
+Gets the list of node access grants and writes them to the database.
+
+This function is called when a node is saved, and can also be called by modules if something other than a node save causes node access permissions to change. It collects all node access grants for the node from \hyperlink{group__node__access_ga3fe7744d74446e40e9b9ad2a782b4269}{hook\_\-node\_\-access\_\-records()} implementations, allows these grants to be altered via \hyperlink{group__node__access_ga37c90bf0e1dccad0deefa368dd94cc83}{hook\_\-node\_\-access\_\-records\_\-alter()} implementations, and saves the collected and altered grants to the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]The \$node to acquire grants for.\item[{\em \$delete}]Whether to delete existing node access records before inserting new ones. Defaults to TRUE. \end{DoxyParams}
+\hypertarget{group__node__access_gab33de8c23b1edb657f67cb242a8ec8af}{
+\index{node\_\-access@{node\_\-access}!node\_\-access\_\-grants@{node\_\-access\_\-grants}}
+\index{node\_\-access\_\-grants@{node\_\-access\_\-grants}!node_access@{node\_\-access}}
+\subsubsection[{node\_\-access\_\-grants}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-access\_\-grants (\$ {\em op}, \/  \$ {\em account} = {\ttfamily NULL})}}
+\label{group__node__access_gab33de8c23b1edb657f67cb242a8ec8af}
+Fetches an array of permission IDs granted to the given user ID.
+
+The implementation here provides only the universal \char`\"{}all\char`\"{} grant. A node access module should implement \hyperlink{group__node__access_gaa973f2ab6ab14c3fa14e5138c6d69ecf}{hook\_\-node\_\-grants()} to provide a grant list for the user.
+
+After the default grants have been loaded, we allow modules to alter the grants array by reference. This hook allows for complex business logic to be applied when integrating multiple node access modules.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$op}]The operation that the user is trying to perform. \item[{\em \$account}]The user object for the user performing the operation. If omitted, the current user is used.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An associative array in which the keys are realms, and the values are arrays of grants for those realms. 
+\end{DoxyReturn}
+\hypertarget{group__node__access_ga895d95595168709334c4eca1472c6d23}{
+\index{node\_\-access@{node\_\-access}!node\_\-access\_\-needs\_\-rebuild@{node\_\-access\_\-needs\_\-rebuild}}
+\index{node\_\-access\_\-needs\_\-rebuild@{node\_\-access\_\-needs\_\-rebuild}!node_access@{node\_\-access}}
+\subsubsection[{node\_\-access\_\-needs\_\-rebuild}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-access\_\-needs\_\-rebuild (\$ {\em rebuild} = {\ttfamily NULL})}}
+\label{group__node__access_ga895d95595168709334c4eca1472c6d23}
+Flags or unflags the node access grants for rebuilding.
+
+If the argument isn't specified, the current value of the flag is returned. When the flag is set, a message is displayed to users with 'access administration pages' permission, pointing to the 'rebuild' confirm form. This can be used as an alternative to direct node\_\-access\_\-rebuild calls, allowing administrators to decide when they want to perform the actual (possibly time consuming) rebuild. When unsure if the current user is an administrator, \hyperlink{group__node__access_gaf04007aedfc3afbe074b2fe4065ab618}{node\_\-access\_\-rebuild()} should be used instead.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$rebuild}](Optional) The boolean value to be written.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current value of the flag if no value was provided for \$rebuild.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__node__access_gaf04007aedfc3afbe074b2fe4065ab618}{node\_\-access\_\-rebuild()} 
+\end{DoxySeeAlso}
+\hypertarget{group__node__access_gaf04007aedfc3afbe074b2fe4065ab618}{
+\index{node\_\-access@{node\_\-access}!node\_\-access\_\-rebuild@{node\_\-access\_\-rebuild}}
+\index{node\_\-access\_\-rebuild@{node\_\-access\_\-rebuild}!node_access@{node\_\-access}}
+\subsubsection[{node\_\-access\_\-rebuild}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-access\_\-rebuild (\$ {\em batch\_\-mode} = {\ttfamily FALSE})}}
+\label{group__node__access_gaf04007aedfc3afbe074b2fe4065ab618}
+Rebuilds the node access database.
+
+This is occasionally needed by modules that make system-\/wide changes to access levels. When the rebuild is required by an admin-\/triggered action (e.g module settings form), calling node\_\-access\_\-needs\_\-rebuild(TRUE) instead of \hyperlink{group__node__access_gaf04007aedfc3afbe074b2fe4065ab618}{node\_\-access\_\-rebuild()} lets the user perform his changes and actually rebuild only once he is done.
+
+Note: As of Drupal 6, node access modules are not required to (and actually should not) call \hyperlink{group__node__access_gaf04007aedfc3afbe074b2fe4065ab618}{node\_\-access\_\-rebuild()} in hook\_\-enable/disable anymore.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__node__access_ga895d95595168709334c4eca1472c6d23}{node\_\-access\_\-needs\_\-rebuild()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$batch\_\-mode}]Set to TRUE to process in 'batch' mode, spawning processing over several HTTP requests (thus avoiding the risk of PHP timeout if the site has a large number of nodes). hook\_\-update\_\-N and any form submit handler are safe contexts to use the 'batch mode'. Less decidable cases (such as calls from hook\_\-user, hook\_\-taxonomy, etc...) might consider using the non-\/batch mode. \end{DoxyParams}
+\hypertarget{group__node__access_gafb79200147d5087ceb32cb6b0632afd4}{
+\index{node\_\-access@{node\_\-access}!node\_\-access\_\-view\_\-all\_\-nodes@{node\_\-access\_\-view\_\-all\_\-nodes}}
+\index{node\_\-access\_\-view\_\-all\_\-nodes@{node\_\-access\_\-view\_\-all\_\-nodes}!node_access@{node\_\-access}}
+\subsubsection[{node\_\-access\_\-view\_\-all\_\-nodes}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-access\_\-view\_\-all\_\-nodes (\$ {\em account} = {\ttfamily NULL})}}
+\label{group__node__access_gafb79200147d5087ceb32cb6b0632afd4}
+Determines whether the user has a global viewing grant for all nodes.
+
+Checks to see whether any module grants global 'view' access to a user account; global 'view' access is encoded in the \{node\_\-access\} table as a grant with nid=0. If no node access modules are enabled, \hyperlink{node_8module}{node.module} defines such a global 'view' access grant.
+
+This function is called when a node listing query is tagged with 'node\_\-access'; when this function returns TRUE, no node access joins are added to the query.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$account}]The user object for the user whose access is being checked. If omitted, the current user is used.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if 'view' access to all nodes is granted, FALSE otherwise.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__node__access_gaa973f2ab6ab14c3fa14e5138c6d69ecf}{hook\_\-node\_\-grants()} 
+
+\hyperlink{group__node__access_ga5f4838d9b5cac9f3bee9a26f39e80691}{\_\-node\_\-query\_\-node\_\-access\_\-alter()} 
+\end{DoxySeeAlso}
+\hypertarget{group__node__access_ga735fbb5dfa05cc1aed121655a1694909}{
+\index{node\_\-access@{node\_\-access}!node\_\-access\_\-write\_\-grants@{node\_\-access\_\-write\_\-grants}}
+\index{node\_\-access\_\-write\_\-grants@{node\_\-access\_\-write\_\-grants}!node_access@{node\_\-access}}
+\subsubsection[{node\_\-access\_\-write\_\-grants}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-access\_\-write\_\-grants (\$ {\em node}, \/  \$ {\em grants}, \/  \$ {\em realm} = {\ttfamily NULL}, \/  \$ {\em delete} = {\ttfamily TRUE})}}
+\label{group__node__access_ga735fbb5dfa05cc1aed121655a1694909}
+Writes a list of grants to the database, deleting any previously saved ones.
+
+If a realm is provided, it will only delete grants from that realm, but it will always delete a grant from the 'all' realm. Modules that utilize \hyperlink{group__node__access_ga46f0f1ed812befada8f8e7d1b8c352db}{node\_\-access()} can use this function when doing mass updates due to widespread permission changes.
+
+Note: Don't call this function directly from a contributed module. Call \hyperlink{group__node__access_ga6fbbc13a4098f72663c0a67f81100f67}{node\_\-access\_\-acquire\_\-grants()} instead.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]The node whose grants are being written. \item[{\em \$grants}]A list of grants to write. Each grant is an array that must contain the following keys: realm, gid, grant\_\-view, grant\_\-update, grant\_\-delete. The realm is specified by a particular module; the gid is as well, and is a module-\/defined id to define grant privileges. each grant\_\-$\ast$ field is a boolean value. \item[{\em \$realm}](optional) If provided, read/write grants for that realm only. Defaults to NULL. \item[{\em \$delete}](optional) If false, does not delete records. This is only for optimization purposes, and assumes the caller has already performed a mass delete of some form. Defaults to TRUE.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__node__access_ga6fbbc13a4098f72663c0a67f81100f67}{node\_\-access\_\-acquire\_\-grants()} 
+\end{DoxySeeAlso}
+\hypertarget{group__node__access_ga929efd16564e3cb073ee5e1ed6c6c2a7}{
+\index{node\_\-access@{node\_\-access}!node\_\-list\_\-permissions@{node\_\-list\_\-permissions}}
+\index{node\_\-list\_\-permissions@{node\_\-list\_\-permissions}!node_access@{node\_\-access}}
+\subsubsection[{node\_\-list\_\-permissions}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-list\_\-permissions (\$ {\em type})}}
+\label{group__node__access_ga929efd16564e3cb073ee5e1ed6c6c2a7}
+Helper function to generate standard node permission list for a given type.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]The machine-\/readable name of the node type.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of permission names and descriptions. 
+\end{DoxyReturn}
+\hypertarget{group__node__access_gae826daeafed8b20300a370c2022cc2c1}{
+\index{node\_\-access@{node\_\-access}!node\_\-node\_\-access@{node\_\-node\_\-access}}
+\index{node\_\-node\_\-access@{node\_\-node\_\-access}!node_access@{node\_\-access}}
+\subsubsection[{node\_\-node\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-node\_\-access (\$ {\em node}, \/  \$ {\em op}, \/  \$ {\em account})}}
+\label{group__node__access_gae826daeafed8b20300a370c2022cc2c1}
+Implements \hyperlink{group__node__access_ga75a280ea1fbe0fb6ca034f8aad06d58d}{hook\_\-node\_\-access()}. \hypertarget{group__node__access_ga75960e1cc5852c75c6347ab938938f9b}{
+\index{node\_\-access@{node\_\-access}!node\_\-permissions\_\-get\_\-configured\_\-types@{node\_\-permissions\_\-get\_\-configured\_\-types}}
+\index{node\_\-permissions\_\-get\_\-configured\_\-types@{node\_\-permissions\_\-get\_\-configured\_\-types}!node_access@{node\_\-access}}
+\subsubsection[{node\_\-permissions\_\-get\_\-configured\_\-types}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-permissions\_\-get\_\-configured\_\-types ()}}
+\label{group__node__access_ga75960e1cc5852c75c6347ab938938f9b}
+Returns an array of node types that should be managed by permissions.
+
+By default, this will include all node types in the system. To exclude a specific node from getting permissions defined for it, set the node\_\-permissions\_\-\$type variable to 0. Core does not provide an interface for doing so. However, contrib modules may exclude their own nodes in \hyperlink{group__hooks_ga1ecdb5a2a046ea63dc790c3ed90338e5}{hook\_\-install()}. Alternatively, contrib modules may configure all node types at once, or decide to apply some other \hyperlink{group__node__access_ga75a280ea1fbe0fb6ca034f8aad06d58d}{hook\_\-node\_\-access()} implementation to some or all node types.
+
+\begin{DoxyReturn}{Returns}
+An array of node types managed by this module. 
+\end{DoxyReturn}
+\hypertarget{group__node__access_gacd4162ac9ee2d2147d5212fd5e7a7319}{
+\index{node\_\-access@{node\_\-access}!node\_\-query\_\-entity\_\-field\_\-access\_\-alter@{node\_\-query\_\-entity\_\-field\_\-access\_\-alter}}
+\index{node\_\-query\_\-entity\_\-field\_\-access\_\-alter@{node\_\-query\_\-entity\_\-field\_\-access\_\-alter}!node_access@{node\_\-access}}
+\subsubsection[{node\_\-query\_\-entity\_\-field\_\-access\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-query\_\-entity\_\-field\_\-access\_\-alter ({\bf QueryAlterableInterface} \$ {\em query})}}
+\label{group__node__access_gacd4162ac9ee2d2147d5212fd5e7a7319}
+Implements \hyperlink{group__hooks_ga12527037deeb76adcab1000e984fdfce}{hook\_\-query\_\-TAG\_\-alter()}.
+
+This function implements the same functionality as \hyperlink{group__node__access_gaef7c83544718b8431d81b884ef8cc6f5}{node\_\-query\_\-node\_\-access\_\-alter()} for the SQL field storage engine. Node access conditions are added for field values belonging to nodes only. \hypertarget{group__node__access_gaef7c83544718b8431d81b884ef8cc6f5}{
+\index{node\_\-access@{node\_\-access}!node\_\-query\_\-node\_\-access\_\-alter@{node\_\-query\_\-node\_\-access\_\-alter}}
+\index{node\_\-query\_\-node\_\-access\_\-alter@{node\_\-query\_\-node\_\-access\_\-alter}!node_access@{node\_\-access}}
+\subsubsection[{node\_\-query\_\-node\_\-access\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}node\_\-query\_\-node\_\-access\_\-alter ({\bf QueryAlterableInterface} \$ {\em query})}}
+\label{group__node__access_gaef7c83544718b8431d81b884ef8cc6f5}
+Implements \hyperlink{group__hooks_ga12527037deeb76adcab1000e984fdfce}{hook\_\-query\_\-TAG\_\-alter()}.
+
+This is the \hyperlink{group__hooks_gaf166f6375e9f7b5919d719eb91198d47}{hook\_\-query\_\-alter()} for queries tagged with 'node\_\-access'. It adds node access checks for the user account given by the 'account' meta-\/data (or global \$user if not provided), for an operation given by the 'op' meta-\/data (or 'view' if not provided; other possible values are 'update' and 'delete'). 

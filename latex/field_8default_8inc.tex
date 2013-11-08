@@ -1,0 +1,109 @@
+\hypertarget{field_8default_8inc}{
+\section{html/modules/field/field.default.inc File Reference}
+\label{field_8default_8inc}\index{html/modules/field/field.default.inc@{html/modules/field/field.default.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{field_8default_8inc_af49a2ff85415c7a71362387e849ba28d}{field\_\-default\_\-extract\_\-form\_\-values} (\$entity\_\-type, \$entity, \$field, \$instance, \$langcode, \&\$items, \$form, \&\$form\_\-state)
+\item 
+\hyperlink{field_8default_8inc_a22b00edd6421db4d6b3c8d76e7cfa514}{field\_\-default\_\-validate} (\$entity\_\-type, \$entity, \$field, \$instance, \$langcode, \$items, \&\$errors)
+\item 
+\hypertarget{field_8default_8inc_a8e44c960eea7faa97d7497640ac98e2e}{
+{\bfseries field\_\-default\_\-submit} (\$entity\_\-type, \$entity, \$field, \$instance, \$langcode, \&\$items, \$form, \&\$form\_\-state)}
+\label{field_8default_8inc_a8e44c960eea7faa97d7497640ac98e2e}
+
+\item 
+\hyperlink{field_8default_8inc_a2948e1001ff0b624c8c367589b1c8eaa}{field\_\-default\_\-insert} (\$entity\_\-type, \$entity, \$field, \$instance, \$langcode, \&\$items)
+\item 
+\hyperlink{field_8default_8inc_a086fc3e89741c1ba19cc269191d627e5}{field\_\-default\_\-prepare\_\-view} (\$entity\_\-type, \$entities, \$field, \$instances, \$langcode, \&\$items, \$display)
+\item 
+\hyperlink{field_8default_8inc_a804bfc6de7277945228d4949f82bc429}{field\_\-default\_\-view} (\$entity\_\-type, \$entity, \$field, \$instance, \$langcode, \$items, \$display)
+\item 
+\hyperlink{field_8default_8inc_ad6fb9a8915e3da542894cf88483849ca}{field\_\-default\_\-prepare\_\-translation} (\$entity\_\-type, \$entity, \$field, \$instance, \$langcode, \&\$items, \$source\_\-entity, \$source\_\-langcode)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Default 'implementations' of hook\_\-field\_\-$\ast$(): common field housekeeping.
+
+Those implementations are special, as \hyperlink{field_8module}{field.module} does not define any field types. Those functions take care of default stuff common to all field types. They are called through the \hyperlink{group__field__attach_gaf000872e1850750f98445dfa96bfb602}{\_\-field\_\-invoke\_\-default()} iterator, generally in the corresponding field\_\-attach\_\-\mbox{[}operation\mbox{]}() function. 
+
+\subsection{Function Documentation}
+\hypertarget{field_8default_8inc_af49a2ff85415c7a71362387e849ba28d}{
+\index{field.default.inc@{field.default.inc}!field\_\-default\_\-extract\_\-form\_\-values@{field\_\-default\_\-extract\_\-form\_\-values}}
+\index{field\_\-default\_\-extract\_\-form\_\-values@{field\_\-default\_\-extract\_\-form\_\-values}!field.default.inc@{field.default.inc}}
+\subsubsection[{field\_\-default\_\-extract\_\-form\_\-values}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-default\_\-extract\_\-form\_\-values (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode}, \/  \&\$ {\em items}, \/  \$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{field_8default_8inc_af49a2ff85415c7a71362387e849ba28d}
+Extracts field values from submitted form values.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of \$entity. \item[{\em \$entity}]The entity for the operation. \item[{\em \$field}]The field structure for the operation. \item[{\em \$instance}]The instance structure for \$field on \$entity's bundle. \item[{\em \$langcode}]The language associated to \$items. \item[{\em \$items}]The field values. This parameter is altered by reference to receive the incoming form values. \item[{\em \$form}]The form structure where field elements are attached to. This might be a full form structure, or a sub-\/element of a larger form. \item[{\em \$form\_\-state}]The form state. \end{DoxyParams}
+\hypertarget{field_8default_8inc_a2948e1001ff0b624c8c367589b1c8eaa}{
+\index{field.default.inc@{field.default.inc}!field\_\-default\_\-insert@{field\_\-default\_\-insert}}
+\index{field\_\-default\_\-insert@{field\_\-default\_\-insert}!field.default.inc@{field.default.inc}}
+\subsubsection[{field\_\-default\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-default\_\-insert (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode}, \/  \&\$ {\em items})}}
+\label{field_8default_8inc_a2948e1001ff0b624c8c367589b1c8eaa}
+Default field 'insert' operation.
+
+Insert default value if no \$entity-\/$>$\$field\_\-name entry was provided. This can happen with programmatic saves, or on form-\/based creation where the current user doesn't have 'edit' permission for the field. \hypertarget{field_8default_8inc_ad6fb9a8915e3da542894cf88483849ca}{
+\index{field.default.inc@{field.default.inc}!field\_\-default\_\-prepare\_\-translation@{field\_\-default\_\-prepare\_\-translation}}
+\index{field\_\-default\_\-prepare\_\-translation@{field\_\-default\_\-prepare\_\-translation}!field.default.inc@{field.default.inc}}
+\subsubsection[{field\_\-default\_\-prepare\_\-translation}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-default\_\-prepare\_\-translation (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode}, \/  \&\$ {\em items}, \/  \$ {\em source\_\-entity}, \/  \$ {\em source\_\-langcode})}}
+\label{field_8default_8inc_ad6fb9a8915e3da542894cf88483849ca}
+Copies source field values into the entity to be prepared.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of \$entity; e.g. 'node' or 'user'. \item[{\em \$entity}]The entity to be prepared for translation. \item[{\em \$field}]The field structure for the operation. \item[{\em \$instance}]The instance structure for \$field on \$entity's bundle. \item[{\em \$langcode}]The language the entity has to be translated in. \item[{\em \$items}]\$entity-\/$>$\{\$field\mbox{[}'field\_\-name'\mbox{]}\}\mbox{[}\$langcode\mbox{]}, or an empty array if unset. \item[{\em \$source\_\-entity}]The source entity holding the field values to be translated. \item[{\em \$source\_\-langcode}]The source language from which translate. \end{DoxyParams}
+\hypertarget{field_8default_8inc_a086fc3e89741c1ba19cc269191d627e5}{
+\index{field.default.inc@{field.default.inc}!field\_\-default\_\-prepare\_\-view@{field\_\-default\_\-prepare\_\-view}}
+\index{field\_\-default\_\-prepare\_\-view@{field\_\-default\_\-prepare\_\-view}!field.default.inc@{field.default.inc}}
+\subsubsection[{field\_\-default\_\-prepare\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-default\_\-prepare\_\-view (\$ {\em entity\_\-type}, \/  \$ {\em entities}, \/  \$ {\em field}, \/  \$ {\em instances}, \/  \$ {\em langcode}, \/  \&\$ {\em items}, \/  \$ {\em display})}}
+\label{field_8default_8inc_a086fc3e89741c1ba19cc269191d627e5}
+Invokes \hyperlink{group__field__formatter_ga2c1856869caa776fd9e5db4af4e0b57b}{hook\_\-field\_\-formatter\_\-prepare\_\-view()} on the relevant formatters.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of \$entity; e.g. 'node' or 'user'. \item[{\em \$entities}]An array of entities being displayed, keyed by entity id. \item[{\em \$field}]The field structure for the operation. \item[{\em \$instances}]Array of instance structures for \$field for each entity, keyed by entity id. \item[{\em \$langcode}]The language associated to \$items. \item[{\em \$items}]Array of field values already loaded for the entities, keyed by entity id. \item[{\em \$display}]Can be either:
+\begin{DoxyItemize}
+\item the name of a \hyperlink{classview}{view} mode
+\item or an array of display settings to use for display, as found in the 'display' entry of \$instance definitions. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{field_8default_8inc_a22b00edd6421db4d6b3c8d76e7cfa514}{
+\index{field.default.inc@{field.default.inc}!field\_\-default\_\-validate@{field\_\-default\_\-validate}}
+\index{field\_\-default\_\-validate@{field\_\-default\_\-validate}!field.default.inc@{field.default.inc}}
+\subsubsection[{field\_\-default\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-default\_\-validate (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode}, \/  \$ {\em items}, \/  \&\$ {\em errors})}}
+\label{field_8default_8inc_a22b00edd6421db4d6b3c8d76e7cfa514}
+Generic field validation handler.
+
+Possible error codes:
+\begin{DoxyItemize}
+\item 'field\_\-cardinality': The number of values exceeds the field cardinality.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\_\-hook\_\-field\_\-validate()
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of \$entity. \item[{\em \$entity}]The entity for the operation. \item[{\em \$field}]The field structure for the operation. \item[{\em \$instance}]The instance structure for \$field on \$entity's bundle. \item[{\em \$langcode}]The language associated to \$items. \item[{\em \$items}]\$entity-\/$>$\{\$field\mbox{[}'field\_\-name'\mbox{]}\}\mbox{[}\$langcode\mbox{]}, or an empty array if unset. \item[{\em \$errors}]The array of errors, keyed by field name and by value delta, that have already been reported for the entity. The function should add its errors to this array. Each error is an associative array, with the following keys and values:
+\begin{DoxyItemize}
+\item 'error': an error code (should be a string, prefixed with the module name)
+\item 'message': the human readable message to be displayed. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{field_8default_8inc_a804bfc6de7277945228d4949f82bc429}{
+\index{field.default.inc@{field.default.inc}!field\_\-default\_\-view@{field\_\-default\_\-view}}
+\index{field\_\-default\_\-view@{field\_\-default\_\-view}!field.default.inc@{field.default.inc}}
+\subsubsection[{field\_\-default\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-default\_\-view (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode}, \/  \$ {\em items}, \/  \$ {\em display})}}
+\label{field_8default_8inc_a804bfc6de7277945228d4949f82bc429}
+Builds a renderable array for one field on one entity instance.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of \$entity; e.g. 'node' or 'user'. \item[{\em \$entity}]A single object of type \$entity\_\-type. \item[{\em \$field}]The field structure for the operation. \item[{\em \$instance}]An array containing each field on \$entity's bundle. \item[{\em \$langcode}]The language associated to \$items. \item[{\em \$items}]Array of field values already loaded for the entities, keyed by entity id. \item[{\em \$display}]Can be either:
+\begin{DoxyItemize}
+\item the name of a \hyperlink{classview}{view} mode;
+\item or an array of custom display settings, as found in the 'display' entry of \$instance definitions. 
+\end{DoxyItemize}\end{DoxyParams}

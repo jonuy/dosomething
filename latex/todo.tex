@@ -1,0 +1,614 @@
+\label{todo__todo000029}
+\hypertarget{todo__todo000029}{}
+ 
+\begin{DoxyDescription}
+\item[File \hyperlink{admin__menu_8map_8inc}{admin\_\-menu.map.inc} ]Replace all/most of those API functions with direct DB queries; we only need the menu arguments (keys), not fully loaded objects. 
+\end{DoxyDescription}
+
+\label{todo__todo000030}
+\hypertarget{todo__todo000030}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{admin__menu_8module_a6fe5151c8d300535152c76edffcf6f5d}{admin\_\-menu\_\-session\_\-count} ]There are mostly no anonymous sessions anymore. Split this into a separate module providing proper user statistics. 
+\end{DoxyDescription}
+
+\label{todo__todo000031}
+\hypertarget{todo__todo000031}{}
+ 
+\begin{DoxyDescription}
+\item[File \hyperlink{admin__menu__toolbar_8module}{admin\_\-menu\_\-toolbar.module} ]Separate shortcut functionality into own module/widget. 
+\end{DoxyDescription}
+
+\label{todo__todo000012}
+\hypertarget{todo__todo000012}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{aggregator_8admin_8inc_a56c1cadf416d17bd8dd8a53cc6ed5aeb}{aggregator\_\-form\_\-category\_\-submit} ]Add delete confirmation dialog. 
+\end{DoxyDescription}
+
+\label{todo__todo000011}
+\hypertarget{todo__todo000011}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{aggregator_8admin_8inc_af98f428f07034e19622342875fe30984}{aggregator\_\-form\_\-feed\_\-submit} ]Add delete confirmation dialog. 
+\end{DoxyDescription}
+
+\label{todo__todo000013}
+\hypertarget{todo__todo000013}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{block_8module_a38999f916243ed473763738bddea9a6b}{block\_\-list} ]Now that the block table has a primary key, we should use that as the array key instead of MODULE\_\-DELTA. 
+\end{DoxyDescription}
+
+\label{todo__todo000014}
+\hypertarget{todo__todo000014}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{comment_8module_a0cfb98e73c618190693b683c9bbfc0b1}{comment\_\-load\_\-multiple} ]Remove \$conditions in Drupal 8. 
+\end{DoxyDescription}
+
+\label{todo__todo000032}
+\hypertarget{todo__todo000032}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{profiles_2dosomething_2modules_2contrib_2ctools_2includes_2ajax_8inc_a00499a965fd0a192af2106a400c0e140}{ctools\_\-ajax\_\-image\_\-button} ]this should be a options array. 
+\end{DoxyDescription}
+
+\label{todo__todo000033}
+\hypertarget{todo__todo000033}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{profiles_2dosomething_2modules_2contrib_2ctools_2includes_2ajax_8inc_aa20aff28acfb85cc21e49727d3126aad}{ctools\_\-ajax\_\-text\_\-button} ]this should be a options array. 
+\end{DoxyDescription}
+
+\label{todo__todo000043}
+\hypertarget{todo__todo000043}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{php_8inc_ad173cf9e9891ef70924fad63a89396fa}{ctools\_\-php\_\-ctools\_\-access\_\-settings} ]Need a way to provide a list of all available contexts to be used by the eval-\/ed PHP. 
+\end{DoxyDescription}
+
+\label{todo__todo000035}
+\hypertarget{todo__todo000035}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{classctools__stylizer__image__processor_a1bb5df184af0c953ce5d12567ec4282f}{ctools\_\-stylizer\_\-image\_\-processor::command\_\-colorize}(\$color, \$x=NULL, \$y=NULL, \$width=NULL, \$height=NULL) ]it is possible that this colorize could allow different methods for determining how to blend colors? 
+\end{DoxyDescription}
+
+\label{todo__todo000036}
+\hypertarget{todo__todo000036}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{wizard_8inc_a0b42108018cbf45ee377a2fbbe980716}{ctools\_\-wizard\_\-multistep\_\-form} ]document the array. 
+\end{DoxyDescription}
+
+\label{todo__todo000003}
+\hypertarget{todo__todo000003}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{classDatabaseTasks__sqlite_ac546ff3ed7f1ece5726b3c5cd7a39ef9}{DatabaseTasks\_\-sqlite::minimumVersion}() ]: consider upping to 3.6.8 in Drupal 8 to get SAVEPOINT support. 
+\end{DoxyDescription}
+
+\label{todo__todo000047}
+\hypertarget{todo__todo000047}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__api_8module_ab17bb31df64a3d11cf8bddb49f5e20fd}{date\_\-granularity\_\-format} ]This function is no longer used as of \href{http://drupalcode.org/project/date.git/commit/07efbb5.}{\tt http://drupalcode.org/project/date.git/commit/07efbb5.} 
+\end{DoxyDescription}
+
+\label{todo__todo000049}
+\hypertarget{todo__todo000049}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__api__ical_8inc_a9c32ef84b7717c5f5b9333a14aab9e17}{date\_\-ical\_\-import} ]figure out how to handle this if subgroups are nested, like a VALARM nested inside a VEVENT.
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000050}
+\hypertarget{todo__todo000050}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__api__ical_8inc_a043a6a7b1c9724a27cd16750f01492c4}{date\_\-ical\_\-parse\_\-date} ]Another option for dates is the format PROPERTY;VALUE=PERIOD:XXXX. The period may include a duration, or a date and a duration, or two dates, so would have to be split into parts and run through \hyperlink{date__api__ical_8inc_a043a6a7b1c9724a27cd16750f01492c4}{date\_\-ical\_\-parse\_\-date()} and \hyperlink{date__api__ical_8inc_a8a63c8aa2158e701b01217637169440d}{date\_\-ical\_\-parse\_\-duration()}. This is not commonly used, so ignored for now. It will take more work to figure how to support that. 
+\end{DoxyDescription}
+
+\label{todo__todo000052}
+\hypertarget{todo__todo000052}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{classdate__sql__handler_add4b2f59b4d1da58336ffa0afcd97f03}{date\_\-sql\_\-handler::granularity\_\-form}(\$granularity) ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000051}
+\hypertarget{todo__todo000051}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{classdate__sql__handler_a3a8cc9c8c0f40515901e8a7bf6299439}{date\_\-sql\_\-handler::views\_\-formats}(\$granularity, \$type= 'sql') ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000053}
+\hypertarget{todo__todo000053}{}
+ 
+\begin{DoxyDescription}
+\item[File \hyperlink{date__tools_8module}{date\_\-tools.module} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000057}
+\hypertarget{todo__todo000057}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__tools_8wizard_8inc_ab7d7bbdde95f900b9b2a2eaaba98ec3f}{date\_\-tools\_\-wizard\_\-build} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000062}
+\hypertarget{todo__todo000062}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__tools_8wizard_8inc_ae162fcc781ba0aa2c1790ad4fa41cd4a}{date\_\-tools\_\-wizard\_\-create\_\-content\_\-type} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000059}
+\hypertarget{todo__todo000059}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__tools_8wizard_8inc_a7cb54be4dc0691f3869fb0d944c0a01a}{date\_\-tools\_\-wizard\_\-field\_\-types} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000054}
+\hypertarget{todo__todo000054}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__tools_8wizard_8inc_ac60f909f2de9f41bbe10fec1c67fa961}{date\_\-tools\_\-wizard\_\-form} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000056}
+\hypertarget{todo__todo000056}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__tools_8wizard_8inc_aa03335f62e6ddc5a937305158e624e14}{date\_\-tools\_\-wizard\_\-form\_\-submit} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000055}
+\hypertarget{todo__todo000055}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__tools_8wizard_8inc_abfe7527e089677e06b19dc331d5f1069}{date\_\-tools\_\-wizard\_\-form\_\-validate} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000058}
+\hypertarget{todo__todo000058}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__tools_8wizard_8inc_abbc536f1be44a6f130797f4961c5b5a0}{date\_\-tools\_\-wizard\_\-include} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000061}
+\hypertarget{todo__todo000061}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__tools_8wizard_8inc_a9e67a9593d1b2c9aeb64c1709961e4f7}{date\_\-tools\_\-wizard\_\-tz\_\-handling} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000060}
+\hypertarget{todo__todo000060}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__tools_8wizard_8inc_acfa16fe3944bb267117e0163a125679b}{date\_\-tools\_\-wizard\_\-widget\_\-types} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000048}
+\hypertarget{todo__todo000048}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{classDateObject_af83b95282617a2d2ec4dded415f84ed7}{DateObject::completeDate}() ]\$this-\/$>$completeDate does not actually exist? 
+\end{DoxyDescription}
+
+\label{todo__todo000001}
+\hypertarget{todo__todo000001}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{common_8inc_aa535ac5edd443308d3b2812caf1a1b85}{drupal\_\-get\_\-library} ]The purpose of drupal\_\-get\_\-$\ast$() is completely different to other page requisite API functions; find and use a different name. 
+\end{DoxyDescription}
+
+\label{todo__todo000008}
+\hypertarget{todo__todo000008}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{interfaceDrupalUpdaterInterface_a3ff6c92f6ed593e03f5e36788ef2d2cc}{DrupalUpdaterInterface::canUpdateDirectory}(\$directory) ]: Provide something more rational here, like a project spec file.
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000020}
+\hypertarget{todo__todo000020}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{classDrupalWebTestCase_a95c2f2a414be5f4f52688c0549ef60ec}{DrupalWebTestCase::assertOptionSelected}(\$id, \$option, \$message= '') ]\$id is unusable. Replace with \$name. 
+\end{DoxyDescription}
+
+\label{todo__todo000002}
+\hypertarget{todo__todo000002}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{common_8inc_a78b89cf93f9710a68d02f86adccf1898}{entity\_\-load} ]Remove \$conditions in Drupal 8.
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000004}
+\hypertarget{todo__todo000004}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{group__file_ga32afa29695b6da3f5d86cad18f063bfc}{file\_\-load\_\-multiple} ]Remove \$conditions in Drupal 8.
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000006}
+\hypertarget{todo__todo000006}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{group__form__api_ga1a2156b4aa18f567264d8c7aafd85dca}{form\_\-process\_\-select} ]Address the above issue in Drupal 8.
+\begin{DoxyItemize}
+\item If required is not TRUE and this value is set (most commonly to an empty string), then an extra option (see empty\_\-option above) representing a \char`\"{}non-\/selection\char`\"{} is added with this as its value.
+\end{DoxyItemize}
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000015}
+\hypertarget{todo__todo000015}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{group__field__types_gab8a2ed808857cc6f3cb661fbc99d30d4}{hook\_\-field\_\-settings\_\-form} ]: Only the field type module knows which settings will affect the field's schema, but only the field storage module knows what schema changes are permitted once a field already has data. Probably we need an easy way for a field type module to ask whether an update to a new schema will be allowed without having to build up a fake \$prior\_\-field structure for \hyperlink{group__field__crud_ga7bd0ccd40a9a3690b697b68d03f660a4}{hook\_\-field\_\-update\_\-forbid()}.
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000092}
+\hypertarget{todo__todo000092}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{wysiwyg_8api_8php_ad3605f8cb948779e59e72c711a7ff843}{hook\_\-INCLUDE\_\-editor} ]Complete this documentation. 
+\end{DoxyDescription}
+
+\label{todo__todo000037}
+\hypertarget{todo__todo000037}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{group__hooks_gadade57abdccc892f62ed6bc7f089ca29}{hook\_\-page\_\-manager\_\-operations\_\-alter} ].
+
+
+
+. 
+
+. 
+\end{DoxyDescription}
+
+\label{todo__todo000040}
+\hypertarget{todo__todo000040}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{group__hooks_gaf5d4ce054cae22b3bdca52011c6e8fbc}{hook\_\-page\_\-manager\_\-variant\_\-operations\_\-alter} ].
+
+
+
+. 
+
+. 
+\end{DoxyDescription}
+
+\label{todo__todo000066}
+\hypertarget{todo__todo000066}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{libraries_8module_ae592b03bbea251cc7c008cd5ed10c861}{libraries\_\-info} ]Re-\/introduce support for include file plugin system -\/ either by copying Wysiwyg's code, or directly switching to CTools. 
+\end{DoxyDescription}
+
+\label{todo__todo000016}
+\hypertarget{todo__todo000016}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{locale_8module_a0378f720a467d804640a979f956dd442}{locale\_\-themes\_\-enabled} ]This is technically wrong. We must not import upon enabling, but upon initial installation. The theme system is missing an installation hook. 
+\end{DoxyDescription}
+
+\label{todo__todo000067}
+\hypertarget{todo__todo000067}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{mailsystem_8module_af55c024d345c05de91cddc64ca83b7f7}{mailsystem\_\-get\_\-mail\_\-theme} ]Add some kind of hook to let other modules alter this behavior. 
+\end{DoxyDescription}
+
+\label{todo__todo000017}
+\hypertarget{todo__todo000017}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{menu_8module_aa1901dfb8654ccbacd62480ccb8c8f9e}{menu\_\-parent\_\-options} ]This has to be turned into a process form element callback. The 'menu\_\-override\_\-parent\_\-selector' variable is entirely superfluous. 
+\end{DoxyDescription}
+
+\label{todo__todo000018}
+\hypertarget{todo__todo000018}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{node_8module_a12f29f65250380f9e592d8d5497313e3}{node\_\-load\_\-multiple} ]Remove \$conditions in Drupal 8. 
+\end{DoxyDescription}
+
+\label{todo__todo000044}
+\hypertarget{todo__todo000044}{}
+ 
+\begin{DoxyDescription}
+\item[File \hyperlink{profile__fields__pane_8tpl_8php}{profile\_\-fields\_\-pane.tpl.php} ]Need definition of what variables are available here. 
+\end{DoxyDescription}
+
+\label{todo__todo000019}
+\hypertarget{todo__todo000019}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{rdf_8module_aba691a244451c05199bf3aec8736fefe}{rdf\_\-entity\_\-info\_\-alter} ]May need to move the comment below to another place. This hook should not be used by modules to alter the bundle mappings. The UI should always be authoritative. UI mappings are stored in the database and if hook\_\-entity\_\-info\_\-alter was used to override module defined mappings, it would override the user defined mapping as well. 
+\end{DoxyDescription}
+
+\label{todo__todo000005}
+\hypertarget{todo__todo000005}{}
+ 
+\begin{DoxyDescription}
+\item[Class \hyperlink{classSkipDotsRecursiveDirectoryIterator}{SkipDotsRecursiveDirectoryIterator} ]Depreciate in favor of RecursiveDirectoryIterator::SKIP\_\-DOTS once PHP 5.3 or later is required. 
+\end{DoxyDescription}
+
+\label{todo__todo000021}
+\hypertarget{todo__todo000021}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{taxonomy_8module_add67d5d48fc273cf997a650cfb376cda}{taxonomy\_\-term\_\-load\_\-multiple} ]Remove \$conditions in Drupal 8. 
+\end{DoxyDescription}
+
+\label{todo__todo000071}
+\hypertarget{todo__todo000071}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{token__test_8module_ae5274fe6510bcb89e53bd7e66c7deb43}{token\_\-test\_\-date\_\-format\_\-types} ]Remove when \href{http://drupal.org/node/1173706}{\tt http://drupal.org/node/1173706} is fixed. 
+\end{DoxyDescription}
+
+\label{todo__todo000022}
+\hypertarget{todo__todo000022}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{toolbar_8module_ae0f25c4df3fe3bc3fa83bc0bdd3a8606}{toolbar\_\-in\_\-active\_\-trail} ]Look at migrating to a menu system level function. 
+\end{DoxyDescription}
+
+\label{todo__todo000007}
+\hypertarget{todo__todo000007}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{update_8inc_a349ad25ac5547fbb44556538758988a2}{update\_\-fix\_\-d7\_\-block\_\-deltas} ]This function should be removed in 8.x.
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000009}
+\hypertarget{todo__todo000009}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{classUpdater_a092911b55da504e51b523dce6307b948}{Updater::getProjectName}(\$directory) ]: It would be nice, if projects contained an info file which could provide their canonical name.
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000010}
+\hypertarget{todo__todo000010}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{classUpdater_afdbf28100a8d3ed78cb97095fa221923}{Updater::makeBackup}(\&\$filetransfer, \$from, \$to) ]Not implemented. 
+\end{DoxyDescription}
+
+\label{todo__todo000023}
+\hypertarget{todo__todo000023}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{user_8module_a9f73ad4a543faed0e38e8ea170bff32e}{user\_\-load\_\-multiple} ]Remove \$conditions in Drupal 8. 
+\end{DoxyDescription}
+
+\label{todo__todo000024}
+\hypertarget{todo__todo000024}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{user_8module_a857b652072abb243e0b44b02c3746a99}{user\_\-save} ]D8: Drop \$edit and fix \hyperlink{user_8module_a857b652072abb243e0b44b02c3746a99}{user\_\-save()} to be consistent with others. 
+\end{DoxyDescription}
+
+\label{todo__todo000028}
+\hypertarget{todo__todo000028}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{user_8module_a4fc928f2162969ae4331773ff226e3ec}{user\_\-system\_\-info\_\-alter} ]: Remove in D8, pending upgrade path. 
+\end{DoxyDescription}
+
+\label{todo__todo000025}
+\hypertarget{todo__todo000025}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{user_8module_acafbef09764866dee15f8cf2b184aafc}{user\_\-uid\_\-only\_\-optional\_\-to\_\-arg} ]D8: Remove. 
+\end{DoxyDescription}
+
+\label{todo__todo000026}
+\hypertarget{todo__todo000026}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{user_8module_adcdb22ab09fce9b389fb10ac76e13b07}{user\_\-uid\_\-optional\_\-load} ]rethink the naming of this in Drupal 8. 
+\end{DoxyDescription}
+
+\label{todo__todo000027}
+\hypertarget{todo__todo000027}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{user_8module_a802368ee732e9da8f756d69b0830225b}{user\_\-uid\_\-optional\_\-to\_\-arg} ]rethink the naming of this in Drupal 8. 
+\end{DoxyDescription}
+
+\label{todo__todo000082}
+\hypertarget{todo__todo000082}{}
+ 
+\begin{DoxyDescription}
+\item[Group \hyperlink{group__views__access__plugins}{views\_\-access\_\-plugins} ].
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000083}
+\hypertarget{todo__todo000083}{}
+ 
+\begin{DoxyDescription}
+\item[Group \hyperlink{group__views__cache__plugins}{views\_\-cache\_\-plugins} ].
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000072}
+\hypertarget{todo__todo000072}{}
+ 
+\begin{DoxyDescription}
+\item[File \hyperlink{views__handler__argument_8inc}{views\_\-handler\_\-argument.inc} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000073}
+\hypertarget{todo__todo000073}{}
+ 
+\begin{DoxyDescription}
+\item[File \hyperlink{views__handler__field_8inc}{views\_\-handler\_\-field.inc} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000074}
+\hypertarget{todo__todo000074}{}
+ 
+\begin{DoxyDescription}
+\item[File \hyperlink{views__handler__filter_8inc}{views\_\-handler\_\-filter.inc} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000075}
+\hypertarget{todo__todo000075}{}
+ 
+\begin{DoxyDescription}
+\item[File \hyperlink{views__handler__sort_8inc}{views\_\-handler\_\-sort.inc} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000087}
+\hypertarget{todo__todo000087}{}
+ 
+\begin{DoxyDescription}
+\item[Group \hyperlink{group__views__lifetime}{views\_\-lifetime} ].
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000085}
+\hypertarget{todo__todo000085}{}
+ 
+\begin{DoxyDescription}
+\item[Group \hyperlink{group__views__localization__plugins}{views\_\-localization\_\-plugins} ].
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000080}
+\hypertarget{todo__todo000080}{}
+ 
+\begin{DoxyDescription}
+\item[Class \hyperlink{classviews__many__to__one__helper}{views\_\-many\_\-to\_\-one\_\-helper} ]This requires extensive documentation on how this class is to be used. For now, look at the arguments and filters that use it. Lots of stuff is just pass-\/through but there are definitely some interesting areas where they interact.
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000086}
+\hypertarget{todo__todo000086}{}
+ 
+\begin{DoxyDescription}
+\item[Group \hyperlink{group__views__pager__plugins}{views\_\-pager\_\-plugins} ].
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000084}
+\hypertarget{todo__todo000084}{}
+ 
+\begin{DoxyDescription}
+\item[Class \hyperlink{classviews__plugin__display__extender}{views\_\-plugin\_\-display\_\-extender} ].
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000081}
+\hypertarget{todo__todo000081}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{classviews__plugin__row__comment__rss_a62f1381c8f5def6a790685208be61dae}{views\_\-plugin\_\-row\_\-comment\_\-rss::options\_\-form\_\-summary\_\-options}() ]: Maybe provide a views\_\-plugin\_\-row\_\-rss\_\-entity and reuse this method in views\_\-plugin\_\-row\_\-comment$|$node\_\-rss.inc 
+\end{DoxyDescription}
+
+\label{todo__todo000088}
+\hypertarget{todo__todo000088}{}
+ 
+\begin{DoxyDescription}
+\item[Group \hyperlink{group__views__plugins}{views\_\-plugins} ]Finish this document.
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000078}
+\hypertarget{todo__todo000078}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{admin_8inc_a21c22d965161a3efb6b1f10570d3f9cd}{views\_\-ui\_\-add\_\-microweights} ]Submit a core patch to fix \hyperlink{common_8inc_a05798b44e8d6c496d4bee5cc32fa7851}{drupal\_\-render()} to do this, so that all render arrays automatically preserve array insertion order, as forms do. 
+\end{DoxyDescription}
+
+\label{todo__todo000076}
+\hypertarget{todo__todo000076}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{admin_8inc_a3c7bbae87e55e6a531c04c8135bd1231}{views\_\-ui\_\-edit\_\-form} ]Remove as many prefix/suffix lines as possible. Use theme\_\-wrappers instead.
+
+
+
+Rename to views\_\-ui\_\-edit\_\-view\_\-form(). See that function for the \char`\"{}old\char`\"{} version.
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000079}
+\hypertarget{todo__todo000079}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{admin_8inc_a20b56808cc1c748e9a5d95b0753367b2}{views\_\-ui\_\-get\_\-display\_\-label} ]Remove this function once editing the display title is possible. 
+\end{DoxyDescription}
+
+\label{todo__todo000091}
+\hypertarget{todo__todo000091}{}
+ 
+\begin{DoxyDescription}
+\item[File \hyperlink{wysiwyg_8api_8php}{wysiwyg.api.php} ]Icon: Recommended size and type of image.
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000093}
+\hypertarget{todo__todo000093}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{wysiwyg_8module_ab2d3844da95500eafb246c12e44593c3}{wysiwyg\_\-add\_\-plugin\_\-settings} ]Rewrite wysiwyg\_\-process\_\-form() to build a registry of effective profiles in use, so we can process plugins in multiple profiles in one shot and simplify this entire function. 
+\end{DoxyDescription}
+
+\label{todo__todo000094}
+\hypertarget{todo__todo000094}{}
+ 
+\begin{DoxyDescription}
+\item[Group \hyperlink{group__wysiwyg__api}{wysiwyg\_\-api} ]Forked from Panels; abstract into a separate API module that allows contrib modules to define supported include/plugin types. 
+\end{DoxyDescription}
+
+\label{todo__todo000089}
+\hypertarget{todo__todo000089}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{ckeditor_8inc_a333ec4086966407d90ad5ab846f44f94}{wysiwyg\_\-ckeditor\_\-settings\_\-parse\_\-styles} ]This should be a plugin setting, but Wysiwyg does not support plugin-\/specific settings yet. 
+\end{DoxyDescription}
+
+\label{todo__todo000090}
+\hypertarget{todo__todo000090}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{tinymce_8inc_a20ecffb8ac4c4df58bf2bcbada9dac13}{wysiwyg\_\-tinymce\_\-editor} ]wysiwyg\_\-$<$editor$>$\_\-alter() to add/inject optional libraries like gzip. 
+\end{DoxyDescription}

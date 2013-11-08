@@ -1,0 +1,116 @@
+\hypertarget{classviews__plugin__argument__validate}{
+\section{views\_\-plugin\_\-argument\_\-validate Class Reference}
+\label{classviews__plugin__argument__validate}\index{views\_\-plugin\_\-argument\_\-validate@{views\_\-plugin\_\-argument\_\-validate}}
+}
+Inheritance diagram for views\_\-plugin\_\-argument\_\-validate::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.14286cm]{classviews__plugin__argument__validate}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classviews__plugin__argument__validate_a36d63524ce3cc1af5fd8b1e0d56e61ad}{init} (\&\$\hyperlink{classview}{view}, \&\$argument, \$options)
+\item 
+\hyperlink{classviews__plugin__argument__validate_aebc7a373a95a76ecb64345f558453b2d}{option\_\-definition} ()
+\item 
+\hyperlink{classviews__plugin__argument__validate_a619aac79800de4535d25fd93ce1f08cc}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__argument__validate_a3b9d9986adaf8e1d57d5b1b62ab712b0}{options\_\-validate} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__argument__validate_aff1c9fc15ddc984fb1157f97274e3e6e}{options\_\-submit} (\&\$form, \&\$form\_\-state, \&\$options=array())
+\item 
+\hyperlink{classviews__plugin__argument__validate_a2de4a9571ea48105e195c483b13f5577}{convert\_\-options} (\&\$options)
+\item 
+\hyperlink{classviews__plugin__argument__validate_ab90c095a5a91dcf8dfae02dc975d974e}{access} ()
+\item 
+\hyperlink{classviews__plugin__argument__validate_ae0b2596e21cf8f576a4882bbfd634ccf}{check\_\-access} (\&\$form, \$option\_\-name)
+\item 
+\hypertarget{classviews__plugin__argument__validate_ae8f4a519d234cbc3d1398f49109b727a}{
+{\bfseries validate\_\-argument} (\$arg)}
+\label{classviews__plugin__argument__validate_ae8f4a519d234cbc3d1398f49109b727a}
+
+\item 
+\hyperlink{classviews__plugin__argument__validate_a35ebaf052ae4653ae5134afc11883c05}{process\_\-summary\_\-arguments} (\&\$args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base argument validator plugin to provide basic functionality. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__plugin__argument__validate_ab90c095a5a91dcf8dfae02dc975d974e}{
+\index{views\_\-plugin\_\-argument\_\-validate@{views\_\-plugin\_\-argument\_\-validate}!access@{access}}
+\index{access@{access}!views_plugin_argument_validate@{views\_\-plugin\_\-argument\_\-validate}}
+\subsubsection[{access}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-argument\_\-validate::access ()}}
+\label{classviews__plugin__argument__validate_ab90c095a5a91dcf8dfae02dc975d974e}
+Determine if the administrator has the privileges to use this plugin 
+
+Reimplemented in \hyperlink{classviews__plugin__argument__validate__php_a11100ee9f3e1d9ec27f3f1b151994d1c}{views\_\-plugin\_\-argument\_\-validate\_\-php}.\hypertarget{classviews__plugin__argument__validate_ae0b2596e21cf8f576a4882bbfd634ccf}{
+\index{views\_\-plugin\_\-argument\_\-validate@{views\_\-plugin\_\-argument\_\-validate}!check\_\-access@{check\_\-access}}
+\index{check\_\-access@{check\_\-access}!views_plugin_argument_validate@{views\_\-plugin\_\-argument\_\-validate}}
+\subsubsection[{check\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-argument\_\-validate::check\_\-access (\&\$ {\em form}, \/  \$ {\em option\_\-name})}}
+\label{classviews__plugin__argument__validate_ae0b2596e21cf8f576a4882bbfd634ccf}
+If we don't have access to the form but are showing it anyway, ensure that the form is safe and cannot be changed from user input.
+
+This is only called by child objects if specified in the \hyperlink{classviews__plugin__argument__validate_a619aac79800de4535d25fd93ce1f08cc}{options\_\-form()}, so it will not always be used. \hypertarget{classviews__plugin__argument__validate_a2de4a9571ea48105e195c483b13f5577}{
+\index{views\_\-plugin\_\-argument\_\-validate@{views\_\-plugin\_\-argument\_\-validate}!convert\_\-options@{convert\_\-options}}
+\index{convert\_\-options@{convert\_\-options}!views_plugin_argument_validate@{views\_\-plugin\_\-argument\_\-validate}}
+\subsubsection[{convert\_\-options}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-argument\_\-validate::convert\_\-options (\&\$ {\em options})}}
+\label{classviews__plugin__argument__validate_a2de4a9571ea48105e195c483b13f5577}
+Convert options from the older style.
+
+In Views 3, the method of storing default argument options has changed and each plugin now gets its own silo. This method can be used to move arguments from the old style to the new style. See \hyperlink{classviews__plugin__argument__default__fixed}{views\_\-plugin\_\-argument\_\-default\_\-fixed} for a good example of this method. 
+
+Reimplemented in \hyperlink{classviews__plugin__argument__validate__node_ac22f025079c1bd85bae75c522142e779}{views\_\-plugin\_\-argument\_\-validate\_\-node}, \hyperlink{classviews__plugin__argument__validate__taxonomy__term_aa4bbbfd0ccb6a907f7fa3d2c03d504c6}{views\_\-plugin\_\-argument\_\-validate\_\-taxonomy\_\-term}, \hyperlink{classviews__plugin__argument__validate__user_a0e9153f6d0cfcd5f28854731d89cce0e}{views\_\-plugin\_\-argument\_\-validate\_\-user}, and \hyperlink{classviews__plugin__argument__validate__php_a8e9620b1e226ad96a2796a313583bafe}{views\_\-plugin\_\-argument\_\-validate\_\-php}.\hypertarget{classviews__plugin__argument__validate_a36d63524ce3cc1af5fd8b1e0d56e61ad}{
+\index{views\_\-plugin\_\-argument\_\-validate@{views\_\-plugin\_\-argument\_\-validate}!init@{init}}
+\index{init@{init}!views_plugin_argument_validate@{views\_\-plugin\_\-argument\_\-validate}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-argument\_\-validate::init (\&\$ {\em view}, \/  \&\$ {\em argument}, \/  \$ {\em options})}}
+\label{classviews__plugin__argument__validate_a36d63524ce3cc1af5fd8b1e0d56e61ad}
+Initialize this plugin with the \hyperlink{classview}{view} and the argument it is linked to. 
+
+Reimplemented in \hyperlink{classviews__plugin__argument__validate__taxonomy__term_af215aeb235ee101b78ceca11f879308d}{views\_\-plugin\_\-argument\_\-validate\_\-taxonomy\_\-term}.\hypertarget{classviews__plugin__argument__validate_aebc7a373a95a76ecb64345f558453b2d}{
+\index{views\_\-plugin\_\-argument\_\-validate@{views\_\-plugin\_\-argument\_\-validate}!option\_\-definition@{option\_\-definition}}
+\index{option\_\-definition@{option\_\-definition}!views_plugin_argument_validate@{views\_\-plugin\_\-argument\_\-validate}}
+\subsubsection[{option\_\-definition}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-argument\_\-validate::option\_\-definition ()}}
+\label{classviews__plugin__argument__validate_aebc7a373a95a76ecb64345f558453b2d}
+Retrieve the options when this is a new access control plugin 
+
+Reimplemented in \hyperlink{classviews__plugin__argument__validate__node_ada2195af633d2a7ada68d41104c309aa}{views\_\-plugin\_\-argument\_\-validate\_\-node}, \hyperlink{classviews__plugin__argument__validate__taxonomy__term_a480325496a1e66f3cdeb5fb354ca8746}{views\_\-plugin\_\-argument\_\-validate\_\-taxonomy\_\-term}, \hyperlink{classviews__plugin__argument__validate__user_a58ce7613662512981f4a6996c300fa07}{views\_\-plugin\_\-argument\_\-validate\_\-user}, and \hyperlink{classviews__plugin__argument__validate__php_ac6bdb38c1985c81cc4cf6d5aac948378}{views\_\-plugin\_\-argument\_\-validate\_\-php}.\hypertarget{classviews__plugin__argument__validate_a619aac79800de4535d25fd93ce1f08cc}{
+\index{views\_\-plugin\_\-argument\_\-validate@{views\_\-plugin\_\-argument\_\-validate}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_plugin_argument_validate@{views\_\-plugin\_\-argument\_\-validate}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-argument\_\-validate::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__argument__validate_a619aac79800de4535d25fd93ce1f08cc}
+Provide the default form for setting options. 
+
+Reimplemented from \hyperlink{classviews__plugin_a1aaed8da1afd9f45293a37358c159837}{views\_\-plugin}.
+
+Reimplemented in \hyperlink{classviews__plugin__argument__validate__node_a32bc6be973ce19c867ded106753d94e7}{views\_\-plugin\_\-argument\_\-validate\_\-node}, \hyperlink{classviews__plugin__argument__validate__taxonomy__term_a01d0dacfd3e605a0466f9eef497b4e8f}{views\_\-plugin\_\-argument\_\-validate\_\-taxonomy\_\-term}, \hyperlink{classviews__plugin__argument__validate__user_a63c0da1ae23df4d74b0e38e4e27f2bd7}{views\_\-plugin\_\-argument\_\-validate\_\-user}, and \hyperlink{classviews__plugin__argument__validate__php_a150a440c5cdcbad02d6cbd5916f9f0b7}{views\_\-plugin\_\-argument\_\-validate\_\-php}.\hypertarget{classviews__plugin__argument__validate_aff1c9fc15ddc984fb1157f97274e3e6e}{
+\index{views\_\-plugin\_\-argument\_\-validate@{views\_\-plugin\_\-argument\_\-validate}!options\_\-submit@{options\_\-submit}}
+\index{options\_\-submit@{options\_\-submit}!views_plugin_argument_validate@{views\_\-plugin\_\-argument\_\-validate}}
+\subsubsection[{options\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-argument\_\-validate::options\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \&\$ {\em options} = {\ttfamily array()})}}
+\label{classviews__plugin__argument__validate_aff1c9fc15ddc984fb1157f97274e3e6e}
+Provide the default form form for submitting options 
+
+Reimplemented in \hyperlink{classviews__plugin__argument__validate__node_a81cd20811df44e2798d085a50902c5a3}{views\_\-plugin\_\-argument\_\-validate\_\-node}, \hyperlink{classviews__plugin__argument__validate__taxonomy__term_a2259ff87ac45f7a4862f89983869f580}{views\_\-plugin\_\-argument\_\-validate\_\-taxonomy\_\-term}, and \hyperlink{classviews__plugin__argument__validate__user_afdcb2900871aef06cd2263afebabe99f}{views\_\-plugin\_\-argument\_\-validate\_\-user}.\hypertarget{classviews__plugin__argument__validate_a3b9d9986adaf8e1d57d5b1b62ab712b0}{
+\index{views\_\-plugin\_\-argument\_\-validate@{views\_\-plugin\_\-argument\_\-validate}!options\_\-validate@{options\_\-validate}}
+\index{options\_\-validate@{options\_\-validate}!views_plugin_argument_validate@{views\_\-plugin\_\-argument\_\-validate}}
+\subsubsection[{options\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-argument\_\-validate::options\_\-validate (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__argument__validate_a3b9d9986adaf8e1d57d5b1b62ab712b0}
+Provide the default form form for validating options 
+
+Reimplemented from \hyperlink{classviews__plugin_a46d72eb35feea36fed83cd1355a47431}{views\_\-plugin}.\hypertarget{classviews__plugin__argument__validate_a35ebaf052ae4653ae5134afc11883c05}{
+\index{views\_\-plugin\_\-argument\_\-validate@{views\_\-plugin\_\-argument\_\-validate}!process\_\-summary\_\-arguments@{process\_\-summary\_\-arguments}}
+\index{process\_\-summary\_\-arguments@{process\_\-summary\_\-arguments}!views_plugin_argument_validate@{views\_\-plugin\_\-argument\_\-validate}}
+\subsubsection[{process\_\-summary\_\-arguments}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-argument\_\-validate::process\_\-summary\_\-arguments (\&\$ {\em args})}}
+\label{classviews__plugin__argument__validate_a35ebaf052ae4653ae5134afc11883c05}
+Process the summary arguments for displaying.
+
+Some plugins alter the argument so it uses something else interal. For example the user validation set's the argument to the uid, for a faster query. But there are use cases where you want to use the old value again, for example the summary. 
+
+Reimplemented in \hyperlink{classviews__plugin__argument__validate__taxonomy__term_a6019c52239ae10eb1023624c2db9e24f}{views\_\-plugin\_\-argument\_\-validate\_\-taxonomy\_\-term}, and \hyperlink{classviews__plugin__argument__validate__user_af49e3a8adbb930ba83d0343d7d12db0f}{views\_\-plugin\_\-argument\_\-validate\_\-user}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/plugins/\hyperlink{views__plugin__argument__validate_8inc}{views\_\-plugin\_\-argument\_\-validate.inc}\end{DoxyCompactItemize}

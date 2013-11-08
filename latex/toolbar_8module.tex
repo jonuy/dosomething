@@ -1,0 +1,180 @@
+\hypertarget{toolbar_8module}{
+\section{html/modules/toolbar/toolbar.module File Reference}
+\label{toolbar_8module}\index{html/modules/toolbar/toolbar.module@{html/modules/toolbar/toolbar.module}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{toolbar_8module_a9767153f4d8af0ed3c0a8e5d236c45be}{toolbar\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{toolbar_8module_af222824d9b7a9d28cd33800a9f2afea5}{toolbar\_\-permission} ()
+\item 
+\hyperlink{toolbar_8module_aa7b0064fb9c544ae3adb8813dd3019a0}{toolbar\_\-theme} (\$existing, \$type, \$theme, \$path)
+\item 
+\hyperlink{toolbar_8module_a3d6ba4473eecb99377495528080de652}{toolbar\_\-menu} ()
+\item 
+\hyperlink{toolbar_8module_a84504c00fcc9385a1ee4aff32d51266d}{toolbar\_\-toggle\_\-page} ()
+\item 
+\hyperlink{toolbar_8module_a14011de2326542fa3b7a2af854a774e5}{theme\_\-toolbar\_\-toggle} (\$variables)
+\item 
+\hyperlink{toolbar_8module_a4d55010e43540bac5da868dee270feaa}{\_\-toolbar\_\-is\_\-collapsed} ()
+\item 
+\hyperlink{toolbar_8module_ad5fcbe045bc4142d508108741ffe7b18}{toolbar\_\-page\_\-build} (\&\$page)
+\item 
+\hyperlink{toolbar_8module_a17db359a6a69c506729e38ab314a8b6a}{toolbar\_\-pre\_\-render} (\$toolbar)
+\item 
+\hyperlink{toolbar_8module_a2f497353c742b38175aab2bbedf75ee0}{toolbar\_\-preprocess\_\-html} (\&\$vars)
+\item 
+\hyperlink{toolbar_8module_aec79d6b1e77e3d99e8d250caf9e5615d}{toolbar\_\-preprocess\_\-toolbar} (\&\$variables)
+\item 
+\hyperlink{toolbar_8module_a6aea9fd1fb8df058eb4df4a7cb77d43e}{toolbar\_\-system\_\-info\_\-alter} (\&\$info, \$file, \$type)
+\item 
+\hyperlink{toolbar_8module_a36f95831ad601605940061ff8a51d8f4}{toolbar\_\-view} ()
+\item 
+\hyperlink{toolbar_8module_abe825f7b728aa4d86fd8326f6b5417ee}{toolbar\_\-get\_\-menu\_\-tree} ()
+\item 
+\hyperlink{toolbar_8module_a42f64eec2db73a6bcf05b1301509dd91}{toolbar\_\-menu\_\-navigation\_\-links} (\$tree)
+\item 
+\hyperlink{toolbar_8module_ae0f25c4df3fe3bc3fa83bc0bdd3a8606}{toolbar\_\-in\_\-active\_\-trail} (\$path)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Administration toolbar for quick access to top level administration items. 
+
+\subsection{Function Documentation}
+\hypertarget{toolbar_8module_a4d55010e43540bac5da868dee270feaa}{
+\index{toolbar.module@{toolbar.module}!\_\-toolbar\_\-is\_\-collapsed@{\_\-toolbar\_\-is\_\-collapsed}}
+\index{\_\-toolbar\_\-is\_\-collapsed@{\_\-toolbar\_\-is\_\-collapsed}!toolbar.module@{toolbar.module}}
+\subsubsection[{\_\-toolbar\_\-is\_\-collapsed}]{\setlength{\rightskip}{0pt plus 5cm}\_\-toolbar\_\-is\_\-collapsed ()}}
+\label{toolbar_8module_a4d55010e43540bac5da868dee270feaa}
+Determines the current state of the toolbar drawer's visibility.
+
+\begin{DoxyReturn}{Returns}
+TRUE when drawer is collapsed, FALSE when it is expanded. 
+\end{DoxyReturn}
+\hypertarget{toolbar_8module_a14011de2326542fa3b7a2af854a774e5}{
+\index{toolbar.module@{toolbar.module}!theme\_\-toolbar\_\-toggle@{theme\_\-toolbar\_\-toggle}}
+\index{theme\_\-toolbar\_\-toggle@{theme\_\-toolbar\_\-toggle}!toolbar.module@{toolbar.module}}
+\subsubsection[{theme\_\-toolbar\_\-toggle}]{\setlength{\rightskip}{0pt plus 5cm}theme\_\-toolbar\_\-toggle (\$ {\em variables})}}
+\label{toolbar_8module_a14011de2326542fa3b7a2af854a774e5}
+Formats an element used to toggle the toolbar drawer's visibility.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$variables}]An associative array containing:
+\begin{DoxyItemize}
+\item collapsed: A boolean value representing the toolbar drawer's visibility.
+\item attributes: An associative array of HTML attributes.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An HTML string representing the element for toggling. 
+\end{DoxyReturn}
+\hypertarget{toolbar_8module_abe825f7b728aa4d86fd8326f6b5417ee}{
+\index{toolbar.module@{toolbar.module}!toolbar\_\-get\_\-menu\_\-tree@{toolbar\_\-get\_\-menu\_\-tree}}
+\index{toolbar\_\-get\_\-menu\_\-tree@{toolbar\_\-get\_\-menu\_\-tree}!toolbar.module@{toolbar.module}}
+\subsubsection[{toolbar\_\-get\_\-menu\_\-tree}]{\setlength{\rightskip}{0pt plus 5cm}toolbar\_\-get\_\-menu\_\-tree ()}}
+\label{toolbar_8module_abe825f7b728aa4d86fd8326f6b5417ee}
+Gets only the top level items below the 'admin' path.
+
+\begin{DoxyReturn}{Returns}
+An array containing a menu tree of top level items below the 'admin' path. 
+\end{DoxyReturn}
+\hypertarget{toolbar_8module_a9767153f4d8af0ed3c0a8e5d236c45be}{
+\index{toolbar.module@{toolbar.module}!toolbar\_\-help@{toolbar\_\-help}}
+\index{toolbar\_\-help@{toolbar\_\-help}!toolbar.module@{toolbar.module}}
+\subsubsection[{toolbar\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}toolbar\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{toolbar_8module_a9767153f4d8af0ed3c0a8e5d236c45be}
+Implements \hyperlink{group__hooks_ga5589c2714a782738e8851c4c90231f0e}{hook\_\-help()}. \hypertarget{toolbar_8module_ae0f25c4df3fe3bc3fa83bc0bdd3a8606}{
+\index{toolbar.module@{toolbar.module}!toolbar\_\-in\_\-active\_\-trail@{toolbar\_\-in\_\-active\_\-trail}}
+\index{toolbar\_\-in\_\-active\_\-trail@{toolbar\_\-in\_\-active\_\-trail}!toolbar.module@{toolbar.module}}
+\subsubsection[{toolbar\_\-in\_\-active\_\-trail}]{\setlength{\rightskip}{0pt plus 5cm}toolbar\_\-in\_\-active\_\-trail (\$ {\em path})}}
+\label{toolbar_8module_ae0f25c4df3fe3bc3fa83bc0bdd3a8606}
+Checks whether an item is in the active trail.
+
+Useful when using a menu generated by \hyperlink{group__menu_ga4f06528e6ed613b6a885e051035b322a}{menu\_\-tree\_\-all\_\-data()} which does not set the 'in\_\-active\_\-trail' flag on items.
+
+\begin{DoxyReturn}{Returns}
+TRUE when path is in the active trail, FALSE if not.
+\end{DoxyReturn}
+\begin{Desc}
+\item[\hyperlink{todo__todo000022}{Todo}]Look at migrating to a menu system level function. \end{Desc}
+\hypertarget{toolbar_8module_a3d6ba4473eecb99377495528080de652}{
+\index{toolbar.module@{toolbar.module}!toolbar\_\-menu@{toolbar\_\-menu}}
+\index{toolbar\_\-menu@{toolbar\_\-menu}!toolbar.module@{toolbar.module}}
+\subsubsection[{toolbar\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}toolbar\_\-menu ()}}
+\label{toolbar_8module_a3d6ba4473eecb99377495528080de652}
+Implements \hyperlink{group__hooks_ga5c95244fea59b25666e409759e133ded}{hook\_\-menu()}. \hypertarget{toolbar_8module_a42f64eec2db73a6bcf05b1301509dd91}{
+\index{toolbar.module@{toolbar.module}!toolbar\_\-menu\_\-navigation\_\-links@{toolbar\_\-menu\_\-navigation\_\-links}}
+\index{toolbar\_\-menu\_\-navigation\_\-links@{toolbar\_\-menu\_\-navigation\_\-links}!toolbar.module@{toolbar.module}}
+\subsubsection[{toolbar\_\-menu\_\-navigation\_\-links}]{\setlength{\rightskip}{0pt plus 5cm}toolbar\_\-menu\_\-navigation\_\-links (\$ {\em tree})}}
+\label{toolbar_8module_a42f64eec2db73a6bcf05b1301509dd91}
+Generates a links array from a menu tree array.
+
+Based on \hyperlink{group__menu_gab4cdacc813ae9e06271aa4aa2d9495a7}{menu\_\-navigation\_\-links()}. Adds path based IDs and icon placeholders to the links.
+
+\begin{DoxyReturn}{Returns}
+An array of links as defined above. 
+\end{DoxyReturn}
+\hypertarget{toolbar_8module_ad5fcbe045bc4142d508108741ffe7b18}{
+\index{toolbar.module@{toolbar.module}!toolbar\_\-page\_\-build@{toolbar\_\-page\_\-build}}
+\index{toolbar\_\-page\_\-build@{toolbar\_\-page\_\-build}!toolbar.module@{toolbar.module}}
+\subsubsection[{toolbar\_\-page\_\-build}]{\setlength{\rightskip}{0pt plus 5cm}toolbar\_\-page\_\-build (\&\$ {\em page})}}
+\label{toolbar_8module_ad5fcbe045bc4142d508108741ffe7b18}
+Implements \hyperlink{group__hooks_ga16d8d8ae818dc759bbe539e16ff5b93b}{hook\_\-page\_\-build()}.
+
+Add admin toolbar to the page\_\-top region automatically. \hypertarget{toolbar_8module_af222824d9b7a9d28cd33800a9f2afea5}{
+\index{toolbar.module@{toolbar.module}!toolbar\_\-permission@{toolbar\_\-permission}}
+\index{toolbar\_\-permission@{toolbar\_\-permission}!toolbar.module@{toolbar.module}}
+\subsubsection[{toolbar\_\-permission}]{\setlength{\rightskip}{0pt plus 5cm}toolbar\_\-permission ()}}
+\label{toolbar_8module_af222824d9b7a9d28cd33800a9f2afea5}
+Implements \hyperlink{group__hooks_ga2b22b45f4925f2478412477bae329713}{hook\_\-permission()}. \hypertarget{toolbar_8module_a17db359a6a69c506729e38ab314a8b6a}{
+\index{toolbar.module@{toolbar.module}!toolbar\_\-pre\_\-render@{toolbar\_\-pre\_\-render}}
+\index{toolbar\_\-pre\_\-render@{toolbar\_\-pre\_\-render}!toolbar.module@{toolbar.module}}
+\subsubsection[{toolbar\_\-pre\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}toolbar\_\-pre\_\-render (\$ {\em toolbar})}}
+\label{toolbar_8module_a17db359a6a69c506729e38ab314a8b6a}
+Prerender function for the toolbar.
+
+Since building the toolbar takes some time, it is done just prior to rendering to ensure that it is built only if it will be displayed. \hypertarget{toolbar_8module_a2f497353c742b38175aab2bbedf75ee0}{
+\index{toolbar.module@{toolbar.module}!toolbar\_\-preprocess\_\-html@{toolbar\_\-preprocess\_\-html}}
+\index{toolbar\_\-preprocess\_\-html@{toolbar\_\-preprocess\_\-html}!toolbar.module@{toolbar.module}}
+\subsubsection[{toolbar\_\-preprocess\_\-html}]{\setlength{\rightskip}{0pt plus 5cm}toolbar\_\-preprocess\_\-html (\&\$ {\em vars})}}
+\label{toolbar_8module_a2f497353c742b38175aab2bbedf75ee0}
+Implements hook\_\-preprocess\_\-html().
+
+Add some page classes, so global page theming can adjust to the toolbar. \hypertarget{toolbar_8module_aec79d6b1e77e3d99e8d250caf9e5615d}{
+\index{toolbar.module@{toolbar.module}!toolbar\_\-preprocess\_\-toolbar@{toolbar\_\-preprocess\_\-toolbar}}
+\index{toolbar\_\-preprocess\_\-toolbar@{toolbar\_\-preprocess\_\-toolbar}!toolbar.module@{toolbar.module}}
+\subsubsection[{toolbar\_\-preprocess\_\-toolbar}]{\setlength{\rightskip}{0pt plus 5cm}toolbar\_\-preprocess\_\-toolbar (\&\$ {\em variables})}}
+\label{toolbar_8module_aec79d6b1e77e3d99e8d250caf9e5615d}
+Implements hook\_\-preprocess\_\-toolbar().
+
+Adding the 'overlay-\/displace-\/top' class to the toolbar pushes the overlay down, so it appears below the toolbar. \hypertarget{toolbar_8module_a6aea9fd1fb8df058eb4df4a7cb77d43e}{
+\index{toolbar.module@{toolbar.module}!toolbar\_\-system\_\-info\_\-alter@{toolbar\_\-system\_\-info\_\-alter}}
+\index{toolbar\_\-system\_\-info\_\-alter@{toolbar\_\-system\_\-info\_\-alter}!toolbar.module@{toolbar.module}}
+\subsubsection[{toolbar\_\-system\_\-info\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}toolbar\_\-system\_\-info\_\-alter (\&\$ {\em info}, \/  \$ {\em file}, \/  \$ {\em type})}}
+\label{toolbar_8module_a6aea9fd1fb8df058eb4df4a7cb77d43e}
+Implements \hyperlink{group__hooks_ga7dd7f887131916d5bbbb02ae87a9113e}{hook\_\-system\_\-info\_\-alter()}.
+
+Indicate that the 'page\_\-top' region (in which the toolbar will be displayed) is an overlay supplemental region that should be refreshed whenever its content is updated.
+
+This information is provided for any module that might need to use it, not just the core Overlay module. \hypertarget{toolbar_8module_aa7b0064fb9c544ae3adb8813dd3019a0}{
+\index{toolbar.module@{toolbar.module}!toolbar\_\-theme@{toolbar\_\-theme}}
+\index{toolbar\_\-theme@{toolbar\_\-theme}!toolbar.module@{toolbar.module}}
+\subsubsection[{toolbar\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}toolbar\_\-theme (\$ {\em existing}, \/  \$ {\em type}, \/  \$ {\em theme}, \/  \$ {\em path})}}
+\label{toolbar_8module_aa7b0064fb9c544ae3adb8813dd3019a0}
+Implements \hyperlink{group__hooks_ga013ccb45c7aaab1c16cf9691428c910d}{hook\_\-theme()}. \hypertarget{toolbar_8module_a84504c00fcc9385a1ee4aff32d51266d}{
+\index{toolbar.module@{toolbar.module}!toolbar\_\-toggle\_\-page@{toolbar\_\-toggle\_\-page}}
+\index{toolbar\_\-toggle\_\-page@{toolbar\_\-toggle\_\-page}!toolbar.module@{toolbar.module}}
+\subsubsection[{toolbar\_\-toggle\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}toolbar\_\-toggle\_\-page ()}}
+\label{toolbar_8module_a84504c00fcc9385a1ee4aff32d51266d}
+Menu callback; toggles the visibility of the toolbar drawer. \hypertarget{toolbar_8module_a36f95831ad601605940061ff8a51d8f4}{
+\index{toolbar.module@{toolbar.module}!toolbar\_\-view@{toolbar\_\-view}}
+\index{toolbar\_\-view@{toolbar\_\-view}!toolbar.module@{toolbar.module}}
+\subsubsection[{toolbar\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}toolbar\_\-view ()}}
+\label{toolbar_8module_a36f95831ad601605940061ff8a51d8f4}
+Builds the admin menu as a structured array ready for \hyperlink{common_8inc_a05798b44e8d6c496d4bee5cc32fa7851}{drupal\_\-render()}.
+
+\begin{DoxyReturn}{Returns}
+Array of links and settings relating to the admin menu. 
+\end{DoxyReturn}

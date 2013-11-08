@@ -1,0 +1,149 @@
+\hypertarget{tracker_8module}{
+\section{html/modules/tracker/tracker.module File Reference}
+\label{tracker_8module}\index{html/modules/tracker/tracker.module@{html/modules/tracker/tracker.module}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tracker_8module_a34ce08561a0ee7c41d382a89c9ad351d}{tracker\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{tracker_8module_a9f1821155039eab4ea1f8e4893113c75}{tracker\_\-menu} ()
+\item 
+\hyperlink{tracker_8module_a8c6e69f3f4bb29bcae1b0b858393839c}{tracker\_\-cron} ()
+\item 
+\hyperlink{tracker_8module_ac4856efc2417df78e8bf35c9703a057f}{\_\-tracker\_\-myrecent\_\-access} (\$account)
+\item 
+\hyperlink{tracker_8module_aaf6435001007410f28f708aba215179a}{\_\-tracker\_\-user\_\-access} (\$account)
+\item 
+\hyperlink{tracker_8module_ac8a528a31cb636901922ff27ae512a73}{tracker\_\-node\_\-insert} (\$node, \$arg=0)
+\item 
+\hyperlink{tracker_8module_a3b4c27688afa88c4f96739274091e997}{tracker\_\-node\_\-update} (\$node, \$arg=0)
+\item 
+\hyperlink{tracker_8module_a2b027e86cbf4a3b871485ba3166f54c0}{tracker\_\-node\_\-delete} (\$node, \$arg=0)
+\item 
+\hyperlink{tracker_8module_ae2eb7d292f5bc837380129a38cbe10ff}{tracker\_\-comment\_\-update} (\$comment)
+\item 
+\hyperlink{tracker_8module_aa2b8956283fed818e733b2e1ebaf79a9}{tracker\_\-comment\_\-publish} (\$comment)
+\item 
+\hyperlink{tracker_8module_affcdc2f73a4cc6a602507927d739fd94}{tracker\_\-comment\_\-unpublish} (\$comment)
+\item 
+\hyperlink{tracker_8module_abe592f3f5d21a4930f7f56177043efbb}{tracker\_\-comment\_\-delete} (\$comment)
+\item 
+\hyperlink{tracker_8module_a742289477e9eedbcebe46fd6742241b1}{\_\-tracker\_\-add} (\$nid, \$uid, \$changed)
+\item 
+\hyperlink{tracker_8module_a9595bd37607687d5271ca52aaa91eed7}{\_\-tracker\_\-calculate\_\-changed} (\$nid)
+\item 
+\hyperlink{tracker_8module_a414225e6ad54c9fa8ca5578c83599a6f}{\_\-tracker\_\-remove} (\$nid, \$uid=NULL, \$changed=NULL)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Tracks recent content posted by a user or users. 
+
+\subsection{Function Documentation}
+\hypertarget{tracker_8module_a742289477e9eedbcebe46fd6742241b1}{
+\index{tracker.module@{tracker.module}!\_\-tracker\_\-add@{\_\-tracker\_\-add}}
+\index{\_\-tracker\_\-add@{\_\-tracker\_\-add}!tracker.module@{tracker.module}}
+\subsubsection[{\_\-tracker\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}\_\-tracker\_\-add (\$ {\em nid}, \/  \$ {\em uid}, \/  \$ {\em changed})}}
+\label{tracker_8module_a742289477e9eedbcebe46fd6742241b1}
+Updates indexing tables when a node is added, updated, or commented on.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$nid}]A node ID. \item[{\em \$uid}]The node or comment author. \item[{\em \$changed}]The node updated timestamp or comment timestamp. \end{DoxyParams}
+\hypertarget{tracker_8module_a9595bd37607687d5271ca52aaa91eed7}{
+\index{tracker.module@{tracker.module}!\_\-tracker\_\-calculate\_\-changed@{\_\-tracker\_\-calculate\_\-changed}}
+\index{\_\-tracker\_\-calculate\_\-changed@{\_\-tracker\_\-calculate\_\-changed}!tracker.module@{tracker.module}}
+\subsubsection[{\_\-tracker\_\-calculate\_\-changed}]{\setlength{\rightskip}{0pt plus 5cm}\_\-tracker\_\-calculate\_\-changed (\$ {\em nid})}}
+\label{tracker_8module_a9595bd37607687d5271ca52aaa91eed7}
+Determines the max timestamp between \$node-\/$>$changed and the last comment.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$nid}]A node ID.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \$node-\/$>$changed timestamp, or most recent comment timestamp, whichever is the greatest. 
+\end{DoxyReturn}
+\hypertarget{tracker_8module_ac4856efc2417df78e8bf35c9703a057f}{
+\index{tracker.module@{tracker.module}!\_\-tracker\_\-myrecent\_\-access@{\_\-tracker\_\-myrecent\_\-access}}
+\index{\_\-tracker\_\-myrecent\_\-access@{\_\-tracker\_\-myrecent\_\-access}!tracker.module@{tracker.module}}
+\subsubsection[{\_\-tracker\_\-myrecent\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}\_\-tracker\_\-myrecent\_\-access (\$ {\em account})}}
+\label{tracker_8module_ac4856efc2417df78e8bf35c9703a057f}
+Access callback for tracker/user\_\-uid\_\-optional. \hypertarget{tracker_8module_a414225e6ad54c9fa8ca5578c83599a6f}{
+\index{tracker.module@{tracker.module}!\_\-tracker\_\-remove@{\_\-tracker\_\-remove}}
+\index{\_\-tracker\_\-remove@{\_\-tracker\_\-remove}!tracker.module@{tracker.module}}
+\subsubsection[{\_\-tracker\_\-remove}]{\setlength{\rightskip}{0pt plus 5cm}\_\-tracker\_\-remove (\$ {\em nid}, \/  \$ {\em uid} = {\ttfamily NULL}, \/  \$ {\em changed} = {\ttfamily NULL})}}
+\label{tracker_8module_a414225e6ad54c9fa8ca5578c83599a6f}
+Cleans up indexed data when nodes or comments are removed.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$nid}]The node ID. \item[{\em \$uid}]The author of the node or comment. \item[{\em \$changed}]The last changed timestamp of the node. \end{DoxyParams}
+\hypertarget{tracker_8module_aaf6435001007410f28f708aba215179a}{
+\index{tracker.module@{tracker.module}!\_\-tracker\_\-user\_\-access@{\_\-tracker\_\-user\_\-access}}
+\index{\_\-tracker\_\-user\_\-access@{\_\-tracker\_\-user\_\-access}!tracker.module@{tracker.module}}
+\subsubsection[{\_\-tracker\_\-user\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}\_\-tracker\_\-user\_\-access (\$ {\em account})}}
+\label{tracker_8module_aaf6435001007410f28f708aba215179a}
+Access callback for user/user/track. \hypertarget{tracker_8module_abe592f3f5d21a4930f7f56177043efbb}{
+\index{tracker.module@{tracker.module}!tracker\_\-comment\_\-delete@{tracker\_\-comment\_\-delete}}
+\index{tracker\_\-comment\_\-delete@{tracker\_\-comment\_\-delete}!tracker.module@{tracker.module}}
+\subsubsection[{tracker\_\-comment\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}tracker\_\-comment\_\-delete (\$ {\em comment})}}
+\label{tracker_8module_abe592f3f5d21a4930f7f56177043efbb}
+Implements \hyperlink{group__hooks_gab8d94c5665313a2d174628cc219f0395}{hook\_\-comment\_\-delete()}. \hypertarget{tracker_8module_aa2b8956283fed818e733b2e1ebaf79a9}{
+\index{tracker.module@{tracker.module}!tracker\_\-comment\_\-publish@{tracker\_\-comment\_\-publish}}
+\index{tracker\_\-comment\_\-publish@{tracker\_\-comment\_\-publish}!tracker.module@{tracker.module}}
+\subsubsection[{tracker\_\-comment\_\-publish}]{\setlength{\rightskip}{0pt plus 5cm}tracker\_\-comment\_\-publish (\$ {\em comment})}}
+\label{tracker_8module_aa2b8956283fed818e733b2e1ebaf79a9}
+Implements \hyperlink{group__hooks_ga4c4be9019e5cc7f92e8ccc03b595a64b}{hook\_\-comment\_\-publish()}.
+
+This actually handles the insert and update of published nodes since \hyperlink{comment_8module_a4ef5d3d2161511e0d09a560fb5004e82}{comment\_\-save()} calls \hyperlink{group__hooks_ga4c4be9019e5cc7f92e8ccc03b595a64b}{hook\_\-comment\_\-publish()} for all published comments. \hypertarget{tracker_8module_affcdc2f73a4cc6a602507927d739fd94}{
+\index{tracker.module@{tracker.module}!tracker\_\-comment\_\-unpublish@{tracker\_\-comment\_\-unpublish}}
+\index{tracker\_\-comment\_\-unpublish@{tracker\_\-comment\_\-unpublish}!tracker.module@{tracker.module}}
+\subsubsection[{tracker\_\-comment\_\-unpublish}]{\setlength{\rightskip}{0pt plus 5cm}tracker\_\-comment\_\-unpublish (\$ {\em comment})}}
+\label{tracker_8module_affcdc2f73a4cc6a602507927d739fd94}
+Implements \hyperlink{group__hooks_gaed97e1a1eaedd7b482f881ea2b8a3876}{hook\_\-comment\_\-unpublish()}. \hypertarget{tracker_8module_ae2eb7d292f5bc837380129a38cbe10ff}{
+\index{tracker.module@{tracker.module}!tracker\_\-comment\_\-update@{tracker\_\-comment\_\-update}}
+\index{tracker\_\-comment\_\-update@{tracker\_\-comment\_\-update}!tracker.module@{tracker.module}}
+\subsubsection[{tracker\_\-comment\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}tracker\_\-comment\_\-update (\$ {\em comment})}}
+\label{tracker_8module_ae2eb7d292f5bc837380129a38cbe10ff}
+Implements \hyperlink{group__hooks_ga63e0b41e7dbaadbf352b0a9c246d5ae5}{hook\_\-comment\_\-update()}.
+
+Comment module doesn't call \hyperlink{group__hooks_gaed97e1a1eaedd7b482f881ea2b8a3876}{hook\_\-comment\_\-unpublish()} when saving individual comments so we need to check for those here. \hypertarget{tracker_8module_a8c6e69f3f4bb29bcae1b0b858393839c}{
+\index{tracker.module@{tracker.module}!tracker\_\-cron@{tracker\_\-cron}}
+\index{tracker\_\-cron@{tracker\_\-cron}!tracker.module@{tracker.module}}
+\subsubsection[{tracker\_\-cron}]{\setlength{\rightskip}{0pt plus 5cm}tracker\_\-cron ()}}
+\label{tracker_8module_a8c6e69f3f4bb29bcae1b0b858393839c}
+Implements \hyperlink{group__hooks_gaf07f1e3d98112fc2ba6920cf7ee6fb16}{hook\_\-cron()}.
+
+Updates tracking information for any items still to be tracked. The variable 'tracker\_\-index\_\-nid' is set to ((the last node ID that was indexed) -\/ 1) and used to select the nodes to be processed. If there are no remaining nodes to process, 'tracker\_\-index\_\-nid' will be 0. \hypertarget{tracker_8module_a34ce08561a0ee7c41d382a89c9ad351d}{
+\index{tracker.module@{tracker.module}!tracker\_\-help@{tracker\_\-help}}
+\index{tracker\_\-help@{tracker\_\-help}!tracker.module@{tracker.module}}
+\subsubsection[{tracker\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}tracker\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{tracker_8module_a34ce08561a0ee7c41d382a89c9ad351d}
+Implements \hyperlink{group__hooks_ga5589c2714a782738e8851c4c90231f0e}{hook\_\-help()}. \hypertarget{tracker_8module_a9f1821155039eab4ea1f8e4893113c75}{
+\index{tracker.module@{tracker.module}!tracker\_\-menu@{tracker\_\-menu}}
+\index{tracker\_\-menu@{tracker\_\-menu}!tracker.module@{tracker.module}}
+\subsubsection[{tracker\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}tracker\_\-menu ()}}
+\label{tracker_8module_a9f1821155039eab4ea1f8e4893113c75}
+Implements \hyperlink{group__hooks_ga5c95244fea59b25666e409759e133ded}{hook\_\-menu()}. \hypertarget{tracker_8module_a2b027e86cbf4a3b871485ba3166f54c0}{
+\index{tracker.module@{tracker.module}!tracker\_\-node\_\-delete@{tracker\_\-node\_\-delete}}
+\index{tracker\_\-node\_\-delete@{tracker\_\-node\_\-delete}!tracker.module@{tracker.module}}
+\subsubsection[{tracker\_\-node\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}tracker\_\-node\_\-delete (\$ {\em node}, \/  \$ {\em arg} = {\ttfamily 0})}}
+\label{tracker_8module_a2b027e86cbf4a3b871485ba3166f54c0}
+Implements \hyperlink{group__node__api__hooks_ga66ea0473a9950dc961802e801e5042e9}{hook\_\-node\_\-delete()}.
+
+Deletes tracking information for a node. \hypertarget{tracker_8module_ac8a528a31cb636901922ff27ae512a73}{
+\index{tracker.module@{tracker.module}!tracker\_\-node\_\-insert@{tracker\_\-node\_\-insert}}
+\index{tracker\_\-node\_\-insert@{tracker\_\-node\_\-insert}!tracker.module@{tracker.module}}
+\subsubsection[{tracker\_\-node\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}tracker\_\-node\_\-insert (\$ {\em node}, \/  \$ {\em arg} = {\ttfamily 0})}}
+\label{tracker_8module_ac8a528a31cb636901922ff27ae512a73}
+Implements \hyperlink{group__node__api__hooks_ga8b40dc62e46e5055c205d2a723dc3548}{hook\_\-node\_\-insert()}.
+
+Adds new tracking information for this node since it's new. \hypertarget{tracker_8module_a3b4c27688afa88c4f96739274091e997}{
+\index{tracker.module@{tracker.module}!tracker\_\-node\_\-update@{tracker\_\-node\_\-update}}
+\index{tracker\_\-node\_\-update@{tracker\_\-node\_\-update}!tracker.module@{tracker.module}}
+\subsubsection[{tracker\_\-node\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}tracker\_\-node\_\-update (\$ {\em node}, \/  \$ {\em arg} = {\ttfamily 0})}}
+\label{tracker_8module_a3b4c27688afa88c4f96739274091e997}
+Implements \hyperlink{group__node__api__hooks_gac66c767cc922fcbfdaf17252e5d87d9d}{hook\_\-node\_\-update()}.
+
+Adds tracking information for this node since it's been updated. 

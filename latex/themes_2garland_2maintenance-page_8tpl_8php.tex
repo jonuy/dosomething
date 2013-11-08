@@ -1,0 +1,45 @@
+\hypertarget{themes_2garland_2maintenance-page_8tpl_8php}{
+\section{html/themes/garland/maintenance-\/page.tpl.php File Reference}
+\label{themes_2garland_2maintenance-page_8tpl_8php}\index{html/themes/garland/maintenance-\/page.tpl.php@{html/themes/garland/maintenance-\/page.tpl.php}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{themes_2garland_2maintenance-page_8tpl_8php_adb27e30fad2178c85e7e42beb5ba031d}{
+print \$language language print \$language language print \$language dir print \$head\_\-title print \$head print \$styles print \$scripts print \$classes print {\bfseries \$header}}
+\label{themes_2garland_2maintenance-page_8tpl_8php_adb27e30fad2178c85e7e42beb5ba031d}
+
+\item 
+\hypertarget{themes_2garland_2maintenance-page_8tpl_8php_ab85440d44aac8e0486256cf11b14a27f}{
+{\bfseries \$site\_\-fields} = array()}
+\label{themes_2garland_2maintenance-page_8tpl_8php_ab85440d44aac8e0486256cf11b14a27f}
+
+\item 
+\hypertarget{themes_2garland_2maintenance-page_8tpl_8php_abbc4f09798404930ee188927ceccb4a9}{
+if(\$site\_\-name) if(\$site\_\-slogan) {\bfseries \$site\_\-title} = implode(' ', \$site\_\-fields)}
+\label{themes_2garland_2maintenance-page_8tpl_8php_abbc4f09798404930ee188927ceccb4a9}
+
+\item 
+\hypertarget{themes_2garland_2maintenance-page_8tpl_8php_ac3aa0e93889edb67c3f21d14cdc2271a}{
+if(\$site\_\-fields) {\bfseries \$site\_\-html} = implode(' ', \$site\_\-fields)}
+\label{themes_2garland_2maintenance-page_8tpl_8php_ac3aa0e93889edb67c3f21d14cdc2271a}
+
+\item 
+\hypertarget{themes_2garland_2maintenance-page_8tpl_8php_a32a2ff358977168f16c6d7a9b9bcd284}{
+if(\$logo$|$$|$\$site\_\-title) if(\$sidebar\_\-first) if(\$title) print {\bfseries \$messages}}
+\label{themes_2garland_2maintenance-page_8tpl_8php_a32a2ff358977168f16c6d7a9b9bcd284}
+
+\item 
+\hypertarget{themes_2garland_2maintenance-page_8tpl_8php_aba6844125e75e2a6f95f76b8e833b8d3}{
+print {\bfseries \$help}}
+\label{themes_2garland_2maintenance-page_8tpl_8php_aba6844125e75e2a6f95f76b8e833b8d3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Override of the default maintenance page.
+
+This is an override of the default maintenance page. Used for Garland and Minnelli, this file should not be moved or modified since the installation and update pages depend on this file.
+
+This mirrors closely page.tpl.php for Garland in order to share the same styles. 

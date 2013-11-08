@@ -1,0 +1,261 @@
+\hypertarget{group__search}{
+\section{Search interface}
+\label{group__search}\index{Search interface@{Search interface}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__search_ga37b761616f2cad4796891008f2b374f3}{hook\_\-search\_\-info} ()
+\item 
+\hyperlink{group__search_gac49e6fd7370e65efeaf484ec992de1f0}{hook\_\-search\_\-access} ()
+\item 
+\hyperlink{group__search_gaefc7ab0e4a53a2752371dcccaec41deb}{hook\_\-search\_\-reset} ()
+\item 
+\hyperlink{group__search_gafb7f508058afed4fe670974b82b072f2}{hook\_\-search\_\-status} ()
+\item 
+\hyperlink{group__search_gae7c7a4e3d4ee63b5aab3742b0e12624e}{hook\_\-search\_\-admin} ()
+\item 
+\hyperlink{group__search_ga00be3e4a3b64ad73f8ad1304a450cee5}{hook\_\-search\_\-execute} (\$keys=NULL, \$conditions=NULL)
+\item 
+\hyperlink{group__search_ga3c935c295da9103bc7184f6ec869c533}{hook\_\-search\_\-preprocess} (\$text)
+\item 
+\hyperlink{group__search_ga23d6f6642bd53c4f033f10e9c1b12d43}{hook\_\-update\_\-index} ()
+\item 
+\hyperlink{group__search_gab59b17cb3637c3acccf3c73cd5c1195d}{callback\_\-search\_\-conditions} (\$keys)
+\item 
+\hyperlink{group__search_ga57ab9f6e1c404a8c248293e554373ae6}{search\_\-index} (\$sid, \$module, \$text)
+\item 
+\hyperlink{group__search_gae12dc9da20e7e19853dfc18f92039d98}{search\_\-form} (\$form, \&\$form\_\-state, \$action= '', \$keys= '', \$module=NULL, \$prompt=NULL)
+\item 
+\hyperlink{group__search_gaf91fe848f7f58fc3d63001198e485e00}{search\_\-box\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__search_ga545a7c7108d985d17d8b8b4054ba66ef}{template\_\-preprocess\_\-search\_\-block\_\-form} (\&\$variables)
+\item 
+\hyperlink{group__search_gadc45d10981f71a4d12879254b14c2c99}{search\_\-data} (\$keys, \$module, \$conditions=NULL)
+\item 
+\hyperlink{group__search_gaa77622185b2d7ea771cf590d76ab3ba4}{search\_\-excerpt} (\$keys, \$text)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Drupal search interface manages a global search mechanism.
+
+Modules may plug into this system to provide searches of different types of data. Most of the system is handled by \hyperlink{search_8module}{search.module}, so this must be enabled for all of the search features to work.
+
+There are three ways to interact with the search system:
+\begin{DoxyItemize}
+\item Specifically for searching nodes, you can implement \hyperlink{group__node__api__hooks_gac8420f204c69a4dc641f4d809a870b05}{hook\_\-node\_\-update\_\-index()} and \hyperlink{group__node__api__hooks_ga8644320a0e04e3a503c99626d4223725}{hook\_\-node\_\-search\_\-result()}. However, note that the search system already indexes all visible output of a node; i.e., everything displayed normally by \hyperlink{group__node__api__hooks_gab1f229603b5e0f2f9d9e2a3ab53dcbda}{hook\_\-view()} and \hyperlink{group__node__api__hooks_ga475290ee8e81a2373ea17c512cc3f9a9}{hook\_\-node\_\-view()}. This is usually sufficient. You should only use this mechanism if you want additional, non-\/visible data to be indexed.
+\item Implement \hyperlink{group__search_ga37b761616f2cad4796891008f2b374f3}{hook\_\-search\_\-info()}. This will create a search tab for your module on the /search page with a simple keyword search form. You will also need to implement \hyperlink{group__search_ga00be3e4a3b64ad73f8ad1304a450cee5}{hook\_\-search\_\-execute()} to perform the search.
+\item Implement \hyperlink{group__search_ga23d6f6642bd53c4f033f10e9c1b12d43}{hook\_\-update\_\-index()}. This allows your module to use Drupal's HTML indexing mechanism for searching full text efficiently.
+\end{DoxyItemize}
+
+If your module needs to provide a more complicated search form, then you need to implement it yourself without \hyperlink{group__search_ga37b761616f2cad4796891008f2b374f3}{hook\_\-search\_\-info()}. In that case, you should define it as a local task (tab) under the /search page (e.g. /search/mymodule) so that users can easily find it. 
+
+\subsection{Function Documentation}
+\hypertarget{group__search_gab59b17cb3637c3acccf3c73cd5c1195d}{
+\index{search@{search}!callback\_\-search\_\-conditions@{callback\_\-search\_\-conditions}}
+\index{callback\_\-search\_\-conditions@{callback\_\-search\_\-conditions}!search@{search}}
+\subsubsection[{callback\_\-search\_\-conditions}]{\setlength{\rightskip}{0pt plus 5cm}callback\_\-search\_\-conditions (\$ {\em keys})}}
+\label{group__search_gab59b17cb3637c3acccf3c73cd5c1195d}
+End of \char`\"{}addtogroup hooks\char`\"{}. Provide search query conditions.
+
+Callback for \hyperlink{group__search_ga37b761616f2cad4796891008f2b374f3}{hook\_\-search\_\-info()}.
+
+This callback is invoked by \hyperlink{search_8pages_8inc_aa4798bb08a1df2c280b943182d53892e}{search\_\-view()} to get an array of additional search conditions to pass to \hyperlink{group__search_gadc45d10981f71a4d12879254b14c2c99}{search\_\-data()}. For example, a search module may get additional keywords, filters, or modifiers for the search from the query string.
+
+This example pulls additional search keywords out of the \$\_\-REQUEST variable, (i.e. from the query string of the request). The conditions may also be generated internally -\/ for example based on a module's settings.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$keys}]The search keywords string.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of additional conditions, such as filters. 
+\end{DoxyReturn}
+\hypertarget{group__search_gac49e6fd7370e65efeaf484ec992de1f0}{
+\index{search@{search}!hook\_\-search\_\-access@{hook\_\-search\_\-access}}
+\index{hook\_\-search\_\-access@{hook\_\-search\_\-access}!search@{search}}
+\subsubsection[{hook\_\-search\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-search\_\-access ()}}
+\label{group__search_gac49e6fd7370e65efeaf484ec992de1f0}
+Define access to a custom search routine.
+
+This hook allows a module to define permissions for a search tab. \hypertarget{group__search_gae7c7a4e3d4ee63b5aab3742b0e12624e}{
+\index{search@{search}!hook\_\-search\_\-admin@{hook\_\-search\_\-admin}}
+\index{hook\_\-search\_\-admin@{hook\_\-search\_\-admin}!search@{search}}
+\subsubsection[{hook\_\-search\_\-admin}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-search\_\-admin ()}}
+\label{group__search_gae7c7a4e3d4ee63b5aab3742b0e12624e}
+Add elements to the search settings form.
+
+\begin{DoxyReturn}{Returns}
+Form array for the Search settings page at admin/config/search/settings. 
+\end{DoxyReturn}
+\hypertarget{group__search_ga00be3e4a3b64ad73f8ad1304a450cee5}{
+\index{search@{search}!hook\_\-search\_\-execute@{hook\_\-search\_\-execute}}
+\index{hook\_\-search\_\-execute@{hook\_\-search\_\-execute}!search@{search}}
+\subsubsection[{hook\_\-search\_\-execute}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-search\_\-execute (\$ {\em keys} = {\ttfamily NULL}, \/  \$ {\em conditions} = {\ttfamily NULL})}}
+\label{group__search_ga00be3e4a3b64ad73f8ad1304a450cee5}
+Execute a search for a set of key words.
+
+Use database API with the 'PagerDefault' query extension to perform your search.
+
+If your module uses \hyperlink{group__search_ga23d6f6642bd53c4f033f10e9c1b12d43}{hook\_\-update\_\-index()} and \hyperlink{group__search_ga57ab9f6e1c404a8c248293e554373ae6}{search\_\-index()} to index its items, use table 'search\_\-index' aliased to 'i' as the main table in your query, with the 'SearchQuery' extension. You can join to your module's table using the 'i.sid' field, which will contain the \$sid values you provided to \hyperlink{group__search_ga57ab9f6e1c404a8c248293e554373ae6}{search\_\-index()}. Add the main keywords to the query by using method searchExpression(). The functions \hyperlink{search_8module_a6d0e1560509bebe41ba4c6a2959ce59c}{search\_\-expression\_\-extract()} and \hyperlink{search_8module_a90b4fc5f716558dc1bf741c239fe1a0e}{search\_\-expression\_\-insert()} may also be helpful for adding custom search parameters to the search expression.
+
+See \hyperlink{node_8module_ad7047dcdd1c1934351adb73de080c640}{node\_\-search\_\-execute()} for an example of a module that uses the search index, and \hyperlink{user_8module_a04e2120f38c081b16387b631602cc47f}{user\_\-search\_\-execute()} for an example that doesn't use the search index.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$keys}]The search keywords as entered by the user. \item[{\em \$conditions}]An optional array of additional conditions, such as filters.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of search results. To use the default search result display, each item should have the following keys':
+\begin{DoxyItemize}
+\item 'link': Required. The URL of the found item.
+\item 'type': The type of item (such as the content type).
+\item 'title': Required. The name of the item.
+\item 'user': The author of the item.
+\item 'date': A timestamp when the item was last modified.
+\item 'extra': An array of optional extra information items.
+\item 'snippet': An excerpt or preview to show with the result (can be generated with \hyperlink{group__search_gaa77622185b2d7ea771cf590d76ab3ba4}{search\_\-excerpt()}).
+\item 'language': Language code for the item (usually two characters). 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{group__search_ga37b761616f2cad4796891008f2b374f3}{
+\index{search@{search}!hook\_\-search\_\-info@{hook\_\-search\_\-info}}
+\index{hook\_\-search\_\-info@{hook\_\-search\_\-info}!search@{search}}
+\subsubsection[{hook\_\-search\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-search\_\-info ()}}
+\label{group__search_ga37b761616f2cad4796891008f2b374f3}
+Define a custom search type.
+
+This hook allows a module to tell \hyperlink{search_8module}{search.module} that it wishes to perform searches on content it defines (custom node types, users, or comments for example) when a site search is performed.
+
+In order for the search to do anything, your module must also implement \hyperlink{group__search_ga00be3e4a3b64ad73f8ad1304a450cee5}{hook\_\-search\_\-execute()}, which is called when someone requests a search on your module's type of content. If you want to have your content indexed in the standard search index, your module should also implement \hyperlink{group__search_ga23d6f6642bd53c4f033f10e9c1b12d43}{hook\_\-update\_\-index()}. If your search type has settings, you can implement \hyperlink{group__search_gae7c7a4e3d4ee63b5aab3742b0e12624e}{hook\_\-search\_\-admin()} to add them to the search settings page. You can use \hyperlink{group__hooks_ga8d4a4089551493d55911bd5c4f218264}{hook\_\-form\_\-FORM\_\-ID\_\-alter()}, with FORM\_\-ID set to 'search\_\-form', to add fields to the search form (see \hyperlink{node_8module_aafba59926e9d0a8e6f81cbb776cba7ef}{node\_\-form\_\-search\_\-form\_\-alter()} for an example). You can use \hyperlink{group__search_gac49e6fd7370e65efeaf484ec992de1f0}{hook\_\-search\_\-access()} to limit access to searching, and \hyperlink{group__hooks_ga422b9506b3dfd8ed5aa8bfaea98844b9}{hook\_\-search\_\-page()} to override how search results are displayed.
+
+\begin{DoxyReturn}{Returns}
+Array with optional keys:
+\begin{DoxyItemize}
+\item title: Title for the tab on the search page for this module. Defaults to the module name if not given.
+\item path: Path component after 'search/' for searching with this module. Defaults to the module name if not given.
+\item conditions\_\-callback: An implementation of \hyperlink{group__search_gab59b17cb3637c3acccf3c73cd5c1195d}{callback\_\-search\_\-conditions()}. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{group__search_ga3c935c295da9103bc7184f6ec869c533}{
+\index{search@{search}!hook\_\-search\_\-preprocess@{hook\_\-search\_\-preprocess}}
+\index{hook\_\-search\_\-preprocess@{hook\_\-search\_\-preprocess}!search@{search}}
+\subsubsection[{hook\_\-search\_\-preprocess}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-search\_\-preprocess (\$ {\em text})}}
+\label{group__search_ga3c935c295da9103bc7184f6ec869c533}
+Preprocess text for search.
+
+This hook is called to preprocess both the text added to the search index and the keywords users have submitted for searching.
+
+Possible uses:
+\begin{DoxyItemize}
+\item Adding spaces between words of Chinese or Japanese text.
+\item Stemming words down to their root words to allow matches between, for instance, walk, walked, walking, and walks in searching.
+\item Expanding abbreviations and acronymns that occur in text.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$text}]The text to preprocess. This is a single piece of plain text extracted from between two HTML tags or from the search query. It will not contain any HTML entities or HTML tags.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The text after preprocessing. Note that if your module decides not to alter the text, it should return the original text. Also, after preprocessing, words in the text should be separated by a space. 
+\end{DoxyReturn}
+\hypertarget{group__search_gaefc7ab0e4a53a2752371dcccaec41deb}{
+\index{search@{search}!hook\_\-search\_\-reset@{hook\_\-search\_\-reset}}
+\index{hook\_\-search\_\-reset@{hook\_\-search\_\-reset}!search@{search}}
+\subsubsection[{hook\_\-search\_\-reset}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-search\_\-reset ()}}
+\label{group__search_gaefc7ab0e4a53a2752371dcccaec41deb}
+Take action when the search index is going to be rebuilt.
+
+Modules that use \hyperlink{group__search_ga23d6f6642bd53c4f033f10e9c1b12d43}{hook\_\-update\_\-index()} should update their indexing bookkeeping so that it starts from scratch the next time \hyperlink{group__search_ga23d6f6642bd53c4f033f10e9c1b12d43}{hook\_\-update\_\-index()} is called. \hypertarget{group__search_gafb7f508058afed4fe670974b82b072f2}{
+\index{search@{search}!hook\_\-search\_\-status@{hook\_\-search\_\-status}}
+\index{hook\_\-search\_\-status@{hook\_\-search\_\-status}!search@{search}}
+\subsubsection[{hook\_\-search\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-search\_\-status ()}}
+\label{group__search_gafb7f508058afed4fe670974b82b072f2}
+Report the status of indexing.
+
+The core search module only invokes this hook on active modules. Implementing modules do not need to check whether they are active when calculating their return values.
+
+\begin{DoxyReturn}{Returns}
+An associative array with the key-\/value pairs:
+\begin{DoxyItemize}
+\item 'remaining': The number of items left to index.
+\item 'total': The total number of items to index. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{group__search_ga23d6f6642bd53c4f033f10e9c1b12d43}{
+\index{search@{search}!hook\_\-update\_\-index@{hook\_\-update\_\-index}}
+\index{hook\_\-update\_\-index@{hook\_\-update\_\-index}!search@{search}}
+\subsubsection[{hook\_\-update\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-update\_\-index ()}}
+\label{group__search_ga23d6f6642bd53c4f033f10e9c1b12d43}
+Update the search index for this module.
+
+This hook is called every cron run if \hyperlink{search_8module}{search.module} is enabled, your module has implemented \hyperlink{group__search_ga37b761616f2cad4796891008f2b374f3}{hook\_\-search\_\-info()}, and your module has been set as an active search module on the Search settings page (admin/config/search/settings). It allows your module to add items to the built-\/in search index using \hyperlink{group__search_ga57ab9f6e1c404a8c248293e554373ae6}{search\_\-index()}, or to add them to your module's own indexing mechanism.
+
+When implementing this hook, your module should index content items that were modified or added since the last run. PHP has a time limit for cron, though, so it is advisable to limit how many items you index per run using variable\_\-get('search\_\-cron\_\-limit') (see example below). Also, since the cron run could time out and abort in the middle of your run, you should update your module's internal bookkeeping on when items have last been indexed as you go rather than waiting to the end of indexing. \hypertarget{group__search_gaf91fe848f7f58fc3d63001198e485e00}{
+\index{search@{search}!search\_\-box\_\-form\_\-submit@{search\_\-box\_\-form\_\-submit}}
+\index{search\_\-box\_\-form\_\-submit@{search\_\-box\_\-form\_\-submit}!search@{search}}
+\subsubsection[{search\_\-box\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-box\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__search_gaf91fe848f7f58fc3d63001198e485e00}
+Process a block search form submission. \hypertarget{group__search_gadc45d10981f71a4d12879254b14c2c99}{
+\index{search@{search}!search\_\-data@{search\_\-data}}
+\index{search\_\-data@{search\_\-data}!search@{search}}
+\subsubsection[{search\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-data (\$ {\em keys}, \/  \$ {\em module}, \/  \$ {\em conditions} = {\ttfamily NULL})}}
+\label{group__search_gadc45d10981f71a4d12879254b14c2c99}
+Performs a search by calling \hyperlink{group__search_ga00be3e4a3b64ad73f8ad1304a450cee5}{hook\_\-search\_\-execute()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$keys}]Keyword query to search on. \item[{\em \$module}]Search module to search. \item[{\em \$conditions}]Optional array of additional search conditions.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Renderable array of search results. No return value if \$keys are not supplied or if the given search module is not active. 
+\end{DoxyReturn}
+\hypertarget{group__search_gaa77622185b2d7ea771cf590d76ab3ba4}{
+\index{search@{search}!search\_\-excerpt@{search\_\-excerpt}}
+\index{search\_\-excerpt@{search\_\-excerpt}!search@{search}}
+\subsubsection[{search\_\-excerpt}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-excerpt (\$ {\em keys}, \/  \$ {\em text})}}
+\label{group__search_gaa77622185b2d7ea771cf590d76ab3ba4}
+Returns snippets from a piece of text, with certain keywords highlighted. Used for formatting search results.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$keys}]A string containing a search query.\item[{\em \$text}]The text to extract fragments from.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string containing HTML for the excerpt. 
+\end{DoxyReturn}
+\hypertarget{group__search_gae12dc9da20e7e19853dfc18f92039d98}{
+\index{search@{search}!search\_\-form@{search\_\-form}}
+\index{search\_\-form@{search\_\-form}!search@{search}}
+\subsubsection[{search\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em action} = {\ttfamily ''}, \/  \$ {\em keys} = {\ttfamily ''}, \/  \$ {\em module} = {\ttfamily NULL}, \/  \$ {\em prompt} = {\ttfamily NULL})}}
+\label{group__search_gae12dc9da20e7e19853dfc18f92039d98}
+Builds a search form.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$action}]Form action. Defaults to \char`\"{}search/\$path\char`\"{}, where \$path is the search path associated with the module in its \hyperlink{group__search_ga37b761616f2cad4796891008f2b374f3}{hook\_\-search\_\-info()}. This will be run through \hyperlink{common_8inc_a43b2a0594431556db49df980801d8807}{url()}. \item[{\em \$keys}]The search string entered by the user, containing keywords for the search. \item[{\em \$module}]The search module to render the form for: a module that implements \hyperlink{group__search_ga37b761616f2cad4796891008f2b374f3}{hook\_\-search\_\-info()}. If not supplied, the default search module is used. \item[{\em \$prompt}]Label for the keywords field. Defaults to t('Enter your keywords') if NULL. Supply '' to omit.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Form API array for the search form. 
+\end{DoxyReturn}
+\hypertarget{group__search_ga57ab9f6e1c404a8c248293e554373ae6}{
+\index{search@{search}!search\_\-index@{search\_\-index}}
+\index{search\_\-index@{search\_\-index}!search@{search}}
+\subsubsection[{search\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-index (\$ {\em sid}, \/  \$ {\em module}, \/  \$ {\em text})}}
+\label{group__search_ga57ab9f6e1c404a8c248293e554373ae6}
+Update the full-\/text search index for a particular item.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$sid}]An ID number identifying this particular item (e.g., node ID). \item[{\em \$module}]The machine-\/readable name of the module that this item comes from (a module that implements \hyperlink{group__search_ga37b761616f2cad4796891008f2b374f3}{hook\_\-search\_\-info()}). \item[{\em \$text}]The content of this item. Must be a piece of HTML or plain text. \end{DoxyParams}
+\hypertarget{group__search_ga545a7c7108d985d17d8b8b4054ba66ef}{
+\index{search@{search}!template\_\-preprocess\_\-search\_\-block\_\-form@{template\_\-preprocess\_\-search\_\-block\_\-form}}
+\index{template\_\-preprocess\_\-search\_\-block\_\-form@{template\_\-preprocess\_\-search\_\-block\_\-form}!search@{search}}
+\subsubsection[{template\_\-preprocess\_\-search\_\-block\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}template\_\-preprocess\_\-search\_\-block\_\-form (\&\$ {\em variables})}}
+\label{group__search_ga545a7c7108d985d17d8b8b4054ba66ef}
+Process variables for \hyperlink{search-block-form_8tpl_8php}{search-\/block-\/form.tpl.php}.
+
+The \$variables array contains the following arguments:
+\begin{DoxyItemize}
+\item \$form
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{search-block-form_8tpl_8php}{search-\/block-\/form.tpl.php} 
+\end{DoxySeeAlso}

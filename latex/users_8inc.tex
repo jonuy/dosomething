@@ -1,0 +1,51 @@
+\hypertarget{users_8inc}{
+\section{html/profiles/dosomething/modules/contrib/views/plugins/views\_\-wizard/users.inc File Reference}
+\label{users_8inc}\index{html/profiles/dosomething/modules/contrib/views/plugins/views\_\-wizard/users.inc@{html/profiles/dosomething/modules/contrib/views/plugins/views\_\-wizard/users.inc}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Views wizard for user views. 
+
+\subsection{Variable Documentation}
+\hypertarget{users_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{users.inc@{users.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!users.inc@{users.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{users_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'name' => 'users',
+  'base_table' => 'users',
+  'created_column' => 'created',
+  'form_wizard_class' => array(
+    'file' => 'views_ui_users_views_wizard.class.php',
+    'class' => 'ViewsUiUsersViewsWizard',
+  ),
+  'title' => t('Users'),
+  'filters' => array(
+    'status' => array(
+      'value' => '1',
+      'table' => 'users',
+      'field' => 'status',
+    ),
+  ),
+  'path_field' => array(
+    'id' => 'uid',
+    'table' => 'users',
+    'field' => 'uid',
+    'exclude' => TRUE,
+    'link_to_user' => FALSE,
+    'alter' => array(
+      'alter_text' => 1,
+      'text' => 'user/[uid]',
+    ),
+  ),
+)
+\end{DoxyCode}

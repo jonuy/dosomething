@@ -1,0 +1,54 @@
+\hypertarget{terms__from__node_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/relationships/terms\_\-from\_\-node.inc File Reference}
+\label{terms__from__node_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/relationships/terms\_\-from\_\-node.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/relationships/terms\_\-from\_\-node.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{terms__from__node_8inc_a16cd498426fdaade5d956722e1d2b8bc}{ctools\_\-terms\_\-from\_\-node\_\-context} (\$context, \$conf)
+\item 
+\hyperlink{terms__from__node_8inc_aaa1332803d1e2198d1bc147d84038734}{ctools\_\-terms\_\-from\_\-node\_\-settings\_\-form} (\$form, \&\$form\_\-state)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{terms__from__node_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide an relationship handler for all terms from node. 
+
+\subsection{Function Documentation}
+\hypertarget{terms__from__node_8inc_a16cd498426fdaade5d956722e1d2b8bc}{
+\index{terms\_\-from\_\-node.inc@{terms\_\-from\_\-node.inc}!ctools\_\-terms\_\-from\_\-node\_\-context@{ctools\_\-terms\_\-from\_\-node\_\-context}}
+\index{ctools\_\-terms\_\-from\_\-node\_\-context@{ctools\_\-terms\_\-from\_\-node\_\-context}!terms_from_node.inc@{terms\_\-from\_\-node.inc}}
+\subsubsection[{ctools\_\-terms\_\-from\_\-node\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-terms\_\-from\_\-node\_\-context (\$ {\em context}, \/  \$ {\em conf})}}
+\label{terms__from__node_8inc_a16cd498426fdaade5d956722e1d2b8bc}
+Return a new context based on an existing context. \hypertarget{terms__from__node_8inc_aaa1332803d1e2198d1bc147d84038734}{
+\index{terms\_\-from\_\-node.inc@{terms\_\-from\_\-node.inc}!ctools\_\-terms\_\-from\_\-node\_\-settings\_\-form@{ctools\_\-terms\_\-from\_\-node\_\-settings\_\-form}}
+\index{ctools\_\-terms\_\-from\_\-node\_\-settings\_\-form@{ctools\_\-terms\_\-from\_\-node\_\-settings\_\-form}!terms_from_node.inc@{terms\_\-from\_\-node.inc}}
+\subsubsection[{ctools\_\-terms\_\-from\_\-node\_\-settings\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-terms\_\-from\_\-node\_\-settings\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{terms__from__node_8inc_aaa1332803d1e2198d1bc147d84038734}
+Settings form for the relationship. 
+
+\subsection{Variable Documentation}
+\hypertarget{terms__from__node_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{terms\_\-from\_\-node.inc@{terms\_\-from\_\-node.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!terms_from_node.inc@{terms\_\-from\_\-node.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{terms__from__node_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('Multiple terms from node'),
+  'keyword' => 'terms',
+  'description' => t('Adds a taxonomy terms from a node context; if multiple term
+      s are selected, they wil be concatenated.'),
+  'required context' => new ctools_context_required(t('Node'), 'node'),
+  'context' => 'ctools_terms_from_node_context',
+  'edit form' => 'ctools_terms_from_node_settings_form',
+  'defaults' => array('vocabulary' => array(), 'concatenator' => ','),
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

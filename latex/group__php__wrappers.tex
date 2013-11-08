@@ -1,0 +1,487 @@
+\hypertarget{group__php__wrappers}{
+\section{PHP wrapper functions}
+\label{group__php__wrappers}\index{PHP wrapper functions@{PHP wrapper functions}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\& \hyperlink{group__php__wrappers_gac7eaf11b49995f7f539f5c830a65b34f}{drupal\_\-register\_\-shutdown\_\-function} (\$callback=NULL)
+\item 
+\hyperlink{group__php__wrappers_gada763092b76d70856870eb3afa2ad265}{drupal\_\-http\_\-build\_\-query} (array \$query, \$parent= '')
+\item 
+\hyperlink{group__php__wrappers_ga77e7930986edc614b20850a0a281609d}{drupal\_\-parse\_\-url} (\$url)
+\item 
+\hyperlink{group__php__wrappers_ga0507eefd9cd1db602b2184d0fae35097}{drupal\_\-set\_\-time\_\-limit} (\$time\_\-limit)
+\item 
+\hyperlink{group__php__wrappers_gaf09c80fb758b9f3657772e26817e37b9}{drupal\_\-json\_\-encode} (\$var)
+\item 
+\hyperlink{group__php__wrappers_gae065f2a8115ef999b74d765c8e7f35ff}{drupal\_\-json\_\-decode} (\$var)
+\item 
+\hyperlink{group__php__wrappers_gad2a800badd2c93efbff2a2905507e685}{drupal\_\-move\_\-uploaded\_\-file} (\$filename, \$uri)
+\item 
+\hyperlink{group__php__wrappers_ga5fc93f1c4e81ea4f5b1b32775fca489c}{drupal\_\-chmod} (\$uri, \$mode=NULL)
+\item 
+\hyperlink{group__php__wrappers_ga533bc32da8860919d20d60ada655e494}{drupal\_\-unlink} (\$uri, \$context=NULL)
+\item 
+\hyperlink{group__php__wrappers_gafaa5b186c9e78f53b39aae12633eea44}{drupal\_\-realpath} (\$uri)
+\item 
+\hyperlink{group__php__wrappers_gad00418a5880c03f43e5eccfaa62863f6}{drupal\_\-dirname} (\$uri)
+\item 
+\hyperlink{group__php__wrappers_ga0125d5e205f50be86146a8df58c2bc5f}{drupal\_\-basename} (\$uri, \$suffix=NULL)
+\item 
+\hyperlink{group__php__wrappers_ga0cd03adb94eea525f87fb061c9a33340}{drupal\_\-mkdir} (\$uri, \$mode=NULL, \$recursive=FALSE, \$context=NULL)
+\item 
+\hyperlink{group__php__wrappers_ga394629431629976febfae765abd63e48}{drupal\_\-rmdir} (\$uri, \$context=NULL)
+\item 
+\hyperlink{group__php__wrappers_ga47b9f13fc4bed06501c52d1808de1661}{drupal\_\-tempnam} (\$directory, \$prefix)
+\item 
+\hyperlink{group__php__wrappers_gaef664546ab6308e639e0d6f6b363ae57}{drupal\_\-session\_\-start} ()
+\item 
+\hyperlink{group__php__wrappers_ga144f983d31722d56cef8cdf259d2f68f}{drupal\_\-session\_\-regenerate} ()
+\item 
+\hyperlink{group__php__wrappers_gab0e9cf694d0d48e586c117be348f1e24}{drupal\_\-xml\_\-parser\_\-create} (\&\$data)
+\item 
+\hyperlink{group__php__wrappers_gae8a4670a2f9b1c67d02259a49ee3ec7e}{drupal\_\-strlen} (\$text)
+\item 
+\hyperlink{group__php__wrappers_ga14c13d4684fa3dbed977bdcbf8f3a5d5}{drupal\_\-strtoupper} (\$text)
+\item 
+\hyperlink{group__php__wrappers_gad97b9d0b7d26db7c62671e9ddce98f8f}{drupal\_\-strtolower} (\$text)
+\item 
+\hyperlink{group__php__wrappers_ga15c15887a3e78bd69a50439373823517}{drupal\_\-ucfirst} (\$text)
+\item 
+\hyperlink{group__php__wrappers_gabe05f7e9107211f3ad82b564b1d7d598}{drupal\_\-substr} (\$text, \$start, \$length=NULL)
+\item 
+\hyperlink{group__php__wrappers_ga116b8b70b569d3b04f7e0717c8984ed6}{php\_\-eval} (\$code)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions that are wrappers or custom implementations of PHP functions.
+
+Certain PHP functions should not be used in Drupal. Instead, Drupal's replacement functions should be used.
+
+For example, for improved or more secure UTF8-\/handling, or RFC-\/compliant handling of URLs in Drupal.
+
+For ease of use and memorizing, all these wrapper functions use the same name as the original PHP function, but prefixed with \char`\"{}drupal\_\-\char`\"{}. Beware, however, that not all wrapper functions support the same arguments as the original functions.
+
+You should always use these wrapper functions in your code.
+
+Wrong: 
+\begin{DoxyCode}
+   $my_substring = substr($original_string, 0, 5);
+\end{DoxyCode}
+
+
+Correct: 
+\begin{DoxyCode}
+   $my_substring = drupal_substr($original_string, 0, 5);
+\end{DoxyCode}
+ 
+
+\subsection{Function Documentation}
+\hypertarget{group__php__wrappers_ga0125d5e205f50be86146a8df58c2bc5f}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-basename@{drupal\_\-basename}}
+\index{drupal\_\-basename@{drupal\_\-basename}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-basename}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-basename (\$ {\em uri}, \/  \$ {\em suffix} = {\ttfamily NULL})}}
+\label{group__php__wrappers_ga0125d5e205f50be86146a8df58c2bc5f}
+Gets the filename from a given path.
+
+PHP's basename() does not properly support streams or filenames beginning with a non-\/US-\/ASCII character.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://bugs.php.net/bug.php?id=37738}{\tt http://bugs.php.net/bug.php?id=37738} 
+
+basename() 
+\end{DoxySeeAlso}
+\hypertarget{group__php__wrappers_ga5fc93f1c4e81ea4f5b1b32775fca489c}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-chmod@{drupal\_\-chmod}}
+\index{drupal\_\-chmod@{drupal\_\-chmod}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-chmod}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-chmod (\$ {\em uri}, \/  \$ {\em mode} = {\ttfamily NULL})}}
+\label{group__php__wrappers_ga5fc93f1c4e81ea4f5b1b32775fca489c}
+Sets the permissions on a file or directory.
+
+This function will use the 'file\_\-chmod\_\-directory' and 'file\_\-chmod\_\-file' variables for the default modes for directories and uploaded/generated files. By default these will give everyone read access so that users accessing the files with a user account without the webserver group (e.g. via FTP) can read these files, and give group write permissions so webserver group members (e.g. a vhost account) can alter files uploaded and owned by the webserver.
+
+PHP's chmod does not support stream wrappers so we use our wrapper implementation which interfaces with chmod() by default. Contrib wrappers may override this behavior in their implementations as needed.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$uri}]A string containing a URI file, or directory path. \item[{\em \$mode}]Integer value for the permissions. Consult PHP chmod() documentation for more information.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE for success, FALSE in the event of an error. 
+\end{DoxyReturn}
+\hypertarget{group__php__wrappers_gad00418a5880c03f43e5eccfaa62863f6}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-dirname@{drupal\_\-dirname}}
+\index{drupal\_\-dirname@{drupal\_\-dirname}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-dirname}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-dirname (\$ {\em uri})}}
+\label{group__php__wrappers_gad00418a5880c03f43e5eccfaa62863f6}
+Gets the name of the directory from a given path.
+
+PHP's dirname() does not properly pass streams, so this function fills that gap. It is backwards compatible with normal paths and will use PHP's dirname() as a fallback.
+
+Compatibility: normal paths and stream wrappers.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$uri}]A URI or path.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string containing the directory name.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+dirname() 
+
+\href{http://drupal.org/node/515192}{\tt http://drupal.org/node/515192} 
+\end{DoxySeeAlso}
+\hypertarget{group__php__wrappers_gada763092b76d70856870eb3afa2ad265}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-http\_\-build\_\-query@{drupal\_\-http\_\-build\_\-query}}
+\index{drupal\_\-http\_\-build\_\-query@{drupal\_\-http\_\-build\_\-query}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-http\_\-build\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-http\_\-build\_\-query (array \$ {\em query}, \/  \$ {\em parent} = {\ttfamily ''})}}
+\label{group__php__wrappers_gada763092b76d70856870eb3afa2ad265}
+Parses an array into a valid, rawurlencoded query string.
+
+This differs from http\_\-build\_\-query() as we need to rawurlencode() (instead of urlencode()) all query parameters.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$query}]The query parameter array to be processed, e.g. \$\_\-GET. \item[{\em \$parent}]Internal use only. Used to build the \$query array key for nested items.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A rawurlencoded string which can be used as or appended to the URL query string.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__http__handling_ga2e632373cf469e513c0b6b7095f0e4dd}{drupal\_\-get\_\-query\_\-parameters()} 
+\end{DoxySeeAlso}
+\hypertarget{group__php__wrappers_gae065f2a8115ef999b74d765c8e7f35ff}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-json\_\-decode@{drupal\_\-json\_\-decode}}
+\index{drupal\_\-json\_\-decode@{drupal\_\-json\_\-decode}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-json\_\-decode}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-json\_\-decode (\$ {\em var})}}
+\label{group__php__wrappers_gae065f2a8115ef999b74d765c8e7f35ff}
+Converts an HTML-\/safe JSON string into its PHP equivalent.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__php__wrappers_gaf09c80fb758b9f3657772e26817e37b9}{drupal\_\-json\_\-encode()} 
+\end{DoxySeeAlso}
+\hypertarget{group__php__wrappers_gaf09c80fb758b9f3657772e26817e37b9}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-json\_\-encode@{drupal\_\-json\_\-encode}}
+\index{drupal\_\-json\_\-encode@{drupal\_\-json\_\-encode}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-json\_\-encode}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-json\_\-encode (\$ {\em var})}}
+\label{group__php__wrappers_gaf09c80fb758b9f3657772e26817e37b9}
+Converts a PHP variable into its JavaScript equivalent.
+
+We use HTML-\/safe strings, with several characters escaped.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__php__wrappers_gae065f2a8115ef999b74d765c8e7f35ff}{drupal\_\-json\_\-decode()} 
+
+\hyperlink{json-encode_8inc_a96f15d8dc7b543c3f7568ed07f592ff3}{drupal\_\-json\_\-encode\_\-helper()} 
+\end{DoxySeeAlso}
+\hypertarget{group__php__wrappers_ga0cd03adb94eea525f87fb061c9a33340}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-mkdir@{drupal\_\-mkdir}}
+\index{drupal\_\-mkdir@{drupal\_\-mkdir}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-mkdir}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-mkdir (\$ {\em uri}, \/  \$ {\em mode} = {\ttfamily NULL}, \/  \$ {\em recursive} = {\ttfamily FALSE}, \/  \$ {\em context} = {\ttfamily NULL})}}
+\label{group__php__wrappers_ga0cd03adb94eea525f87fb061c9a33340}
+Creates a directory using Drupal's default mode.
+
+PHP's mkdir() does not respect Drupal's default permissions mode. If a mode is not provided, this function will make sure that Drupal's is used.
+
+Compatibility: normal paths and stream wrappers.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$uri}]A URI or pathname. \item[{\em \$mode}]By default the Drupal mode is used. \item[{\em \$recursive}]Default to FALSE. \item[{\em \$context}]Refer to \href{http://php.net/manual/en/ref.stream.php}{\tt http://php.net/manual/en/ref.stream.php}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean TRUE on success, or FALSE on failure.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+mkdir() 
+
+\href{http://drupal.org/node/515192}{\tt http://drupal.org/node/515192} 
+\end{DoxySeeAlso}
+\hypertarget{group__php__wrappers_gad2a800badd2c93efbff2a2905507e685}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-move\_\-uploaded\_\-file@{drupal\_\-move\_\-uploaded\_\-file}}
+\index{drupal\_\-move\_\-uploaded\_\-file@{drupal\_\-move\_\-uploaded\_\-file}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-move\_\-uploaded\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-move\_\-uploaded\_\-file (\$ {\em filename}, \/  \$ {\em uri})}}
+\label{group__php__wrappers_gad2a800badd2c93efbff2a2905507e685}
+Moves an uploaded file to a new location.
+
+PHP's move\_\-uploaded\_\-file() does not properly support streams if safe\_\-mode or open\_\-basedir are enabled, so this function fills that gap.
+
+Compatibility: normal paths and stream wrappers.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$filename}]The filename of the uploaded file. \item[{\em \$uri}]A string containing the destination URI of the file.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success, or FALSE on failure.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+move\_\-uploaded\_\-file() 
+
+\href{http://drupal.org/node/515192}{\tt http://drupal.org/node/515192} 
+\end{DoxySeeAlso}
+\hypertarget{group__php__wrappers_ga77e7930986edc614b20850a0a281609d}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-parse\_\-url@{drupal\_\-parse\_\-url}}
+\index{drupal\_\-parse\_\-url@{drupal\_\-parse\_\-url}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-parse\_\-url}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-parse\_\-url (\$ {\em url})}}
+\label{group__php__wrappers_ga77e7930986edc614b20850a0a281609d}
+Parses a system URL string into an associative array suitable for \hyperlink{common_8inc_a43b2a0594431556db49df980801d8807}{url()}.
+
+This function should only be used for URLs that have been generated by the system, such as via \hyperlink{common_8inc_a43b2a0594431556db49df980801d8807}{url()}. It should not be used for URLs that come from external sources, or URLs that link to external resources.
+
+The returned array contains a 'path' that may be passed separately to \hyperlink{common_8inc_a43b2a0594431556db49df980801d8807}{url()}. For example: 
+\begin{DoxyCode}
+   $options = drupal_parse_url($_GET['destination']);
+   $my_url = url($options['path'], $options);
+   $my_link = l('Example link', $options['path'], $options);
+\end{DoxyCode}
+
+
+This is required, because \hyperlink{common_8inc_a43b2a0594431556db49df980801d8807}{url()} does not support relative URLs containing a query string or fragment in its \$path argument. Instead, any query string needs to be parsed into an associative query parameter array in \$options\mbox{[}'query'\mbox{]} and the fragment into \$options\mbox{[}'fragment'\mbox{]}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$url}]The URL string to parse, f.e. \$\_\-GET\mbox{[}'destination'\mbox{]}.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An associative array containing the keys:
+\begin{DoxyItemize}
+\item 'path': The path of the URL. If the given \$url is external, this includes the scheme and host.
+\item 'query': An array of query parameters of \$url, if existent.
+\item 'fragment': The fragment of \$url, if existent.
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{common_8inc_a43b2a0594431556db49df980801d8807}{url()} 
+
+\hyperlink{group__http__handling_ga5b68d7a934713d1d623b2b32a732235d}{drupal\_\-goto()} 
+\end{DoxySeeAlso}
+\hypertarget{group__php__wrappers_gafaa5b186c9e78f53b39aae12633eea44}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-realpath@{drupal\_\-realpath}}
+\index{drupal\_\-realpath@{drupal\_\-realpath}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-realpath}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-realpath (\$ {\em uri})}}
+\label{group__php__wrappers_gafaa5b186c9e78f53b39aae12633eea44}
+Resolves the absolute filepath of a local URI or filepath.
+
+The use of \hyperlink{group__php__wrappers_gafaa5b186c9e78f53b39aae12633eea44}{drupal\_\-realpath()} is discouraged, because it does not work for remote URIs. Except in rare cases, URIs should not be manually resolved.
+
+Only use this function if you know that the stream wrapper in the URI uses the local file system, and you need to pass an absolute path to a function that is incompatible with stream URIs.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$uri A stream wrapper URI or a filepath, possibly including one or more symbolic links.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$|$false The absolute local filepath (with no symbolic links), or FALSE on failure.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{interfaceDrupalStreamWrapperInterface_adb16cd1ac42f9d7a273546f5cbf0d9d3}{DrupalStreamWrapperInterface::realpath()} 
+
+\href{http://php.net/manual/function.realpath.php}{\tt http://php.net/manual/function.realpath.php} 
+\end{DoxySeeAlso}
+\hypertarget{group__php__wrappers_gac7eaf11b49995f7f539f5c830a65b34f}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-register\_\-shutdown\_\-function@{drupal\_\-register\_\-shutdown\_\-function}}
+\index{drupal\_\-register\_\-shutdown\_\-function@{drupal\_\-register\_\-shutdown\_\-function}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-register\_\-shutdown\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}\& drupal\_\-register\_\-shutdown\_\-function (\$ {\em callback} = {\ttfamily NULL})}}
+\label{group__php__wrappers_gac7eaf11b49995f7f539f5c830a65b34f}
+Registers a function for execution on shutdown.
+
+Wrapper for register\_\-shutdown\_\-function() that catches thrown exceptions to avoid \char`\"{}Exception thrown without a stack frame in Unknown\char`\"{}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$callback}]The shutdown function to register. \item[{\em ...}]Additional arguments to pass to the shutdown function.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array of shutdown functions to be executed.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+register\_\-shutdown\_\-function() 
+\end{DoxySeeAlso}
+\hypertarget{group__php__wrappers_ga394629431629976febfae765abd63e48}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-rmdir@{drupal\_\-rmdir}}
+\index{drupal\_\-rmdir@{drupal\_\-rmdir}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-rmdir}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-rmdir (\$ {\em uri}, \/  \$ {\em context} = {\ttfamily NULL})}}
+\label{group__php__wrappers_ga394629431629976febfae765abd63e48}
+Removes a directory.
+
+PHP's rmdir() is broken on Windows, as it can fail to remove a directory when it has a read-\/only flag set.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$uri}]A URI or pathname. \item[{\em \$context}]Refer to \href{http://php.net/manual/en/ref.stream.php}{\tt http://php.net/manual/en/ref.stream.php}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean TRUE on success, or FALSE on failure.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+rmdir() 
+\end{DoxySeeAlso}
+\hypertarget{group__php__wrappers_ga144f983d31722d56cef8cdf259d2f68f}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-session\_\-regenerate@{drupal\_\-session\_\-regenerate}}
+\index{drupal\_\-session\_\-regenerate@{drupal\_\-session\_\-regenerate}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-session\_\-regenerate}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-session\_\-regenerate ()}}
+\label{group__php__wrappers_ga144f983d31722d56cef8cdf259d2f68f}
+Called when an anonymous user becomes authenticated or vice-\/versa. \hypertarget{group__php__wrappers_gaef664546ab6308e639e0d6f6b363ae57}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-session\_\-start@{drupal\_\-session\_\-start}}
+\index{drupal\_\-session\_\-start@{drupal\_\-session\_\-start}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-session\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-session\_\-start ()}}
+\label{group__php__wrappers_gaef664546ab6308e639e0d6f6b363ae57}
+Starts a session forcefully, preserving already set session data. \hypertarget{group__php__wrappers_ga0507eefd9cd1db602b2184d0fae35097}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-set\_\-time\_\-limit@{drupal\_\-set\_\-time\_\-limit}}
+\index{drupal\_\-set\_\-time\_\-limit@{drupal\_\-set\_\-time\_\-limit}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-set\_\-time\_\-limit}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-set\_\-time\_\-limit (\$ {\em time\_\-limit})}}
+\label{group__php__wrappers_ga0507eefd9cd1db602b2184d0fae35097}
+Attempts to set the PHP maximum execution time.
+
+This function is a wrapper around the PHP function set\_\-time\_\-limit(). When called, set\_\-time\_\-limit() restarts the timeout counter from zero. In other words, if the timeout is the default 30 seconds, and 25 seconds into script execution a call such as set\_\-time\_\-limit(20) is made, the script will run for a total of 45 seconds before timing out.
+
+It also means that it is possible to decrease the total time limit if the sum of the new time limit and the current time spent running the script is inferior to the original time limit. It is inherent to the way set\_\-time\_\-limit() works, it should rather be called with an appropriate value every time you need to allocate a certain amount of time to execute a task than only once at the beginning of the script.
+
+Before calling set\_\-time\_\-limit(), we check if this function is available because it could be disabled by the server administrator. We also hide all the errors that could occur when calling set\_\-time\_\-limit(), because it is not possible to reliably ensure that PHP or a security extension will not issue a warning/error if they prevent the use of this function.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$time\_\-limit}]An integer specifying the new time limit, in seconds. A value of 0 indicates unlimited execution time. \end{DoxyParams}
+\hypertarget{group__php__wrappers_gae8a4670a2f9b1c67d02259a49ee3ec7e}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-strlen@{drupal\_\-strlen}}
+\index{drupal\_\-strlen@{drupal\_\-strlen}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-strlen}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-strlen (\$ {\em text})}}
+\label{group__php__wrappers_gae8a4670a2f9b1c67d02259a49ee3ec7e}
+Counts the number of characters in a UTF-\/8 string.
+
+This is less than or equal to the byte count.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$text}]The string to run the operation on.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer The length of the string. 
+\end{DoxyReturn}
+\hypertarget{group__php__wrappers_gad97b9d0b7d26db7c62671e9ddce98f8f}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-strtolower@{drupal\_\-strtolower}}
+\index{drupal\_\-strtolower@{drupal\_\-strtolower}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-strtolower}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-strtolower (\$ {\em text})}}
+\label{group__php__wrappers_gad97b9d0b7d26db7c62671e9ddce98f8f}
+Lowercase a UTF-\/8 string.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$text}]The string to run the operation on.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The string in lowercase. 
+\end{DoxyReturn}
+\hypertarget{group__php__wrappers_ga14c13d4684fa3dbed977bdcbf8f3a5d5}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-strtoupper@{drupal\_\-strtoupper}}
+\index{drupal\_\-strtoupper@{drupal\_\-strtoupper}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-strtoupper}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-strtoupper (\$ {\em text})}}
+\label{group__php__wrappers_ga14c13d4684fa3dbed977bdcbf8f3a5d5}
+Uppercase a UTF-\/8 string.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$text}]The string to run the operation on.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The string in uppercase. 
+\end{DoxyReturn}
+\hypertarget{group__php__wrappers_gabe05f7e9107211f3ad82b564b1d7d598}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-substr@{drupal\_\-substr}}
+\index{drupal\_\-substr@{drupal\_\-substr}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-substr}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-substr (\$ {\em text}, \/  \$ {\em start}, \/  \$ {\em length} = {\ttfamily NULL})}}
+\label{group__php__wrappers_gabe05f7e9107211f3ad82b564b1d7d598}
+Cuts off a piece of a string based on character indices and counts.
+
+Follows the same behavior as PHP's own substr() function. Note that for cutting off a string at a known character/substring location, the usage of PHP's normal strpos/substr is safe and much faster.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$text}]The input string. \item[{\em \$start}]The position at which to start reading. \item[{\em \$length}]The number of characters to read.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The shortened string. 
+\end{DoxyReturn}
+\hypertarget{group__php__wrappers_ga47b9f13fc4bed06501c52d1808de1661}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-tempnam@{drupal\_\-tempnam}}
+\index{drupal\_\-tempnam@{drupal\_\-tempnam}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-tempnam}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-tempnam (\$ {\em directory}, \/  \$ {\em prefix})}}
+\label{group__php__wrappers_ga47b9f13fc4bed06501c52d1808de1661}
+Creates a file with a unique filename in the specified directory.
+
+PHP's tempnam() does not return a URI like we want. This function will return a URI if given a URI, or it will return a filepath if given a filepath.
+
+Compatibility: normal paths and stream wrappers.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$directory}]The directory where the temporary filename will be created. \item[{\em \$prefix}]The prefix of the generated temporary filename. Note: Windows uses only the first three characters of prefix.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new temporary filename, or FALSE on failure.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+tempnam() 
+
+\href{http://drupal.org/node/515192}{\tt http://drupal.org/node/515192} 
+\end{DoxySeeAlso}
+\hypertarget{group__php__wrappers_ga15c15887a3e78bd69a50439373823517}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-ucfirst@{drupal\_\-ucfirst}}
+\index{drupal\_\-ucfirst@{drupal\_\-ucfirst}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-ucfirst}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-ucfirst (\$ {\em text})}}
+\label{group__php__wrappers_ga15c15887a3e78bd69a50439373823517}
+Capitalizes the first letter of a UTF-\/8 string.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$text}]The string to convert.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string with the first letter as uppercase. 
+\end{DoxyReturn}
+\hypertarget{group__php__wrappers_ga533bc32da8860919d20d60ada655e494}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-unlink@{drupal\_\-unlink}}
+\index{drupal\_\-unlink@{drupal\_\-unlink}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-unlink}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-unlink (\$ {\em uri}, \/  \$ {\em context} = {\ttfamily NULL})}}
+\label{group__php__wrappers_ga533bc32da8860919d20d60ada655e494}
+Deletes a file.
+
+PHP's unlink() is broken on Windows, as it can fail to remove a file when it has a read-\/only flag set.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$uri}]A URI or pathname. \item[{\em \$context}]Refer to \href{http://php.net/manual/en/ref.stream.php}{\tt http://php.net/manual/en/ref.stream.php}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean TRUE on success, or FALSE on failure.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+unlink() 
+\end{DoxySeeAlso}
+\hypertarget{group__php__wrappers_gab0e9cf694d0d48e586c117be348f1e24}{
+\index{php\_\-wrappers@{php\_\-wrappers}!drupal\_\-xml\_\-parser\_\-create@{drupal\_\-xml\_\-parser\_\-create}}
+\index{drupal\_\-xml\_\-parser\_\-create@{drupal\_\-xml\_\-parser\_\-create}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{drupal\_\-xml\_\-parser\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-xml\_\-parser\_\-create (\&\$ {\em data})}}
+\label{group__php__wrappers_gab0e9cf694d0d48e586c117be348f1e24}
+Prepares a new XML parser.
+
+This is a wrapper around xml\_\-parser\_\-create() which extracts the encoding from the XML data first and sets the output encoding to UTF-\/8. This function should be used instead of xml\_\-parser\_\-create(), because PHP 4's XML parser doesn't check the input encoding itself. Starting from PHP 5, the input encoding is automatically detected, so that the encoding parameter specifies only the output encoding.
+
+This is also where unsupported encodings will be converted. Callers should take this into account: \$data might have been changed after the call.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$data}]The XML data which will be parsed later.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An XML parser object or FALSE on error. 
+\end{DoxyReturn}
+\hypertarget{group__php__wrappers_ga116b8b70b569d3b04f7e0717c8984ed6}{
+\index{php\_\-wrappers@{php\_\-wrappers}!php\_\-eval@{php\_\-eval}}
+\index{php\_\-eval@{php\_\-eval}!php_wrappers@{php\_\-wrappers}}
+\subsubsection[{php\_\-eval}]{\setlength{\rightskip}{0pt plus 5cm}php\_\-eval (\$ {\em code})}}
+\label{group__php__wrappers_ga116b8b70b569d3b04f7e0717c8984ed6}
+Evaluates a string of PHP code.
+
+This is a wrapper around PHP's eval(). It uses output buffering to capture both returned and printed text. Unlike eval(), we require code to be surrounded by $<$?php ?$>$ tags; in other words, we evaluate the code as if it were a stand-\/alone PHP file.
+
+Using this wrapper also ensures that the PHP code which is evaluated can not overwrite any variables in the calling code, unlike a regular eval() call.
+
+This function is also used as an implementation of \hyperlink{group__callbacks_ga5f82accd878d144a22ea2dfec253f91d}{callback\_\-filter\_\-process()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$code}]The code to evaluate.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string containing the printed output of the code, followed by the returned output of the code.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{php_8module_a623699ac83c3473534eb2b8a96f052d2}{php\_\-filter\_\-info()} 
+\end{DoxySeeAlso}

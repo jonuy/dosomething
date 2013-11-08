@@ -1,0 +1,93 @@
+\hypertarget{group__update__status__cache}{
+\section{Private update status cache system}
+\label{group__update__status__cache}\index{Private update status cache system@{Private update status cache system}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__update__status__cache_ga3610ff1515f81f28c69b019e5482b77b}{\_\-update\_\-cache\_\-set} (\$cid, \$data, \$expire)
+\item 
+\hyperlink{group__update__status__cache_ga3f305bb51be069556fa20d692e286f40}{\_\-update\_\-cache\_\-get} (\$cid)
+\item 
+\hyperlink{group__update__status__cache_ga11c5e3cca6cd9eb1dc328f757448885f}{\_\-update\_\-get\_\-cache\_\-multiple} (\$cid\_\-prefix)
+\item 
+\hyperlink{group__update__status__cache_ga45fc31b5f9949fc0081ed148a9f378dd}{\_\-update\_\-cache\_\-clear} (\$cid=NULL, \$wildcard=FALSE)
+\item 
+\hyperlink{group__update__status__cache_ga9c94b82fd5dfa8483267b9af6042bbb2}{update\_\-flush\_\-caches} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions to manage the update status cache.
+
+We specifically do NOT use the core cache API for saving the fetched data about available updates. It is vitally important that this cache is only cleared when we're populating it after successfully fetching new available update data. Usage of the core cache API results in all sorts of potential problems that would result in attempting to fetch available update data all the time, including if a site has a \char`\"{}minimum cache lifetime\char`\"{} (which is both a minimum and a maximum) defined, or if a site uses memcache or another pluggable cache system that assumes volatile caches.
+
+The Update Manager module still uses the \{cache\_\-update\} table, but instead of using \hyperlink{includes_2cache_8inc_a48081f36334909f561ef4f538fa640d2}{cache\_\-set()}, \hyperlink{includes_2cache_8inc_a9d873815c28909b61c3a6188b383f8a3}{cache\_\-get()}, and \hyperlink{includes_2cache_8inc_a409b34dd629640d791a11736a9de8125}{cache\_\-clear\_\-all()}, there are private helper functions that implement these same basic tasks but ensure that the cache is not prematurely cleared, and that the data is always stored in the database, even if memcache or another cache backend is in use. 
+
+\subsection{Function Documentation}
+\hypertarget{group__update__status__cache_ga45fc31b5f9949fc0081ed148a9f378dd}{
+\index{update\_\-status\_\-cache@{update\_\-status\_\-cache}!\_\-update\_\-cache\_\-clear@{\_\-update\_\-cache\_\-clear}}
+\index{\_\-update\_\-cache\_\-clear@{\_\-update\_\-cache\_\-clear}!update_status_cache@{update\_\-status\_\-cache}}
+\subsubsection[{\_\-update\_\-cache\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}\_\-update\_\-cache\_\-clear (\$ {\em cid} = {\ttfamily NULL}, \/  \$ {\em wildcard} = {\ttfamily FALSE})}}
+\label{group__update__status__cache_ga45fc31b5f9949fc0081ed148a9f378dd}
+Invalidates cached data relating to update status.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cid}](optional) Cache ID of the record to clear from the private update module cache. If empty, all records will be cleared from the table except fetch tasks. Defaults to NULL. \item[{\em \$wildcard}](optional) If TRUE, cache IDs starting with \$cid are deleted in addition to the exact cache ID specified by \$cid. Defaults to FALSE. \end{DoxyParams}
+\hypertarget{group__update__status__cache_ga3f305bb51be069556fa20d692e286f40}{
+\index{update\_\-status\_\-cache@{update\_\-status\_\-cache}!\_\-update\_\-cache\_\-get@{\_\-update\_\-cache\_\-get}}
+\index{\_\-update\_\-cache\_\-get@{\_\-update\_\-cache\_\-get}!update_status_cache@{update\_\-status\_\-cache}}
+\subsubsection[{\_\-update\_\-cache\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}\_\-update\_\-cache\_\-get (\$ {\em cid})}}
+\label{group__update__status__cache_ga3f305bb51be069556fa20d692e286f40}
+Retrieves data from the private update status cache table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cid}]The cache ID to retrieve.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of data for the given cache ID, or NULL if the ID was not found.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__update__status__cache_ga3610ff1515f81f28c69b019e5482b77b}{\_\-update\_\-cache\_\-set()} 
+\end{DoxySeeAlso}
+\hypertarget{group__update__status__cache_ga3610ff1515f81f28c69b019e5482b77b}{
+\index{update\_\-status\_\-cache@{update\_\-status\_\-cache}!\_\-update\_\-cache\_\-set@{\_\-update\_\-cache\_\-set}}
+\index{\_\-update\_\-cache\_\-set@{\_\-update\_\-cache\_\-set}!update_status_cache@{update\_\-status\_\-cache}}
+\subsubsection[{\_\-update\_\-cache\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}\_\-update\_\-cache\_\-set (\$ {\em cid}, \/  \$ {\em data}, \/  \$ {\em expire})}}
+\label{group__update__status__cache_ga3610ff1515f81f28c69b019e5482b77b}
+Stores data in the private update status cache table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cid}]The cache ID to save the data with. \item[{\em \$data}]The data to store. \item[{\em \$expire}]One of the following values:
+\begin{DoxyItemize}
+\item CACHE\_\-PERMANENT: Indicates that the item should never be removed except by explicitly using \hyperlink{group__update__status__cache_ga45fc31b5f9949fc0081ed148a9f378dd}{\_\-update\_\-cache\_\-clear()}.
+\item A Unix timestamp: Indicates that the item should be kept at least until the given time, after which it will be invalidated.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__update__status__cache_ga3f305bb51be069556fa20d692e286f40}{\_\-update\_\-cache\_\-get()} 
+\end{DoxySeeAlso}
+\hypertarget{group__update__status__cache_ga11c5e3cca6cd9eb1dc328f757448885f}{
+\index{update\_\-status\_\-cache@{update\_\-status\_\-cache}!\_\-update\_\-get\_\-cache\_\-multiple@{\_\-update\_\-get\_\-cache\_\-multiple}}
+\index{\_\-update\_\-get\_\-cache\_\-multiple@{\_\-update\_\-get\_\-cache\_\-multiple}!update_status_cache@{update\_\-status\_\-cache}}
+\subsubsection[{\_\-update\_\-get\_\-cache\_\-multiple}]{\setlength{\rightskip}{0pt plus 5cm}\_\-update\_\-get\_\-cache\_\-multiple (\$ {\em cid\_\-prefix})}}
+\label{group__update__status__cache_ga11c5e3cca6cd9eb1dc328f757448885f}
+Returns an array of cache items with a given cache ID prefix.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$cid\_\-prefix The cache ID prefix.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Associative array of cache items, keyed by cache ID. 
+\end{DoxyReturn}
+\hypertarget{group__update__status__cache_ga9c94b82fd5dfa8483267b9af6042bbb2}{
+\index{update\_\-status\_\-cache@{update\_\-status\_\-cache}!update\_\-flush\_\-caches@{update\_\-flush\_\-caches}}
+\index{update\_\-flush\_\-caches@{update\_\-flush\_\-caches}!update_status_cache@{update\_\-status\_\-cache}}
+\subsubsection[{update\_\-flush\_\-caches}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-flush\_\-caches ()}}
+\label{group__update__status__cache_ga9c94b82fd5dfa8483267b9af6042bbb2}
+Implements \hyperlink{group__hooks_ga66531e6e564157b7ca45ed07549c9b97}{hook\_\-flush\_\-caches()}.
+
+Called from \hyperlink{update_8php}{update.php} (among others) to flush the caches. Since we're running \hyperlink{update_8php}{update.php}, we are likely to install a new version of something, in which case, we want to check for available update data again. However, because we have our own caching system, we need to directly clear the database table ourselves at this point and return nothing, for example, on sites that use memcache where \hyperlink{includes_2cache_8inc_a409b34dd629640d791a11736a9de8125}{cache\_\-clear\_\-all()} won't know how to purge this data.
+
+However, we only want to do this from \hyperlink{update_8php}{update.php}, since otherwise, we'd lose all the available update data on every cron run. So, we specifically check if the site is in MAINTENANCE\_\-MODE == 'update' (which indicates \hyperlink{update_8php}{update.php} is running, not update module... alas for overloaded names). 

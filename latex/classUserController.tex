@@ -1,0 +1,42 @@
+\hypertarget{classUserController}{
+\section{UserController Class Reference}
+\label{classUserController}\index{UserController@{UserController}}
+}
+Inheritance diagram for UserController::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classUserController}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classUserController_a3be247594b3793977c74fc29241502ec}{attachLoad} (\&\$queried\_\-users, \$revision\_\-id=FALSE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controller class for users.
+
+This extends the \hyperlink{classDrupalDefaultEntityController}{DrupalDefaultEntityController} class, adding required special handling for user objects. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classUserController_a3be247594b3793977c74fc29241502ec}{
+\index{UserController@{UserController}!attachLoad@{attachLoad}}
+\index{attachLoad@{attachLoad}!UserController@{UserController}}
+\subsubsection[{attachLoad}]{\setlength{\rightskip}{0pt plus 5cm}UserController::attachLoad (\&\$ {\em queried\_\-entities}, \/  \$ {\em revision\_\-id} = {\ttfamily FALSE})}}
+\label{classUserController_a3be247594b3793977c74fc29241502ec}
+Attaches data to entities upon loading.
+
+This will attach fields, if the entity is fieldable. It calls \hyperlink{group__hooks_ga1f594647c8cbb27f75b77cc4118da8d6}{hook\_\-entity\_\-load()} for modules which need to add data to all entities. It also calls hook\_\-TYPE\_\-load() on the loaded entities. For example \hyperlink{group__node__api__hooks_gad48bb14b68ed38526029d1f7ac2d2de4}{hook\_\-node\_\-load()} or \hyperlink{group__hooks_ga81027843e38de3a899fa6e72f876d6b6}{hook\_\-user\_\-load()}. If your hook\_\-TYPE\_\-load() expects special parameters apart from the queried entities, you can set \$this-\/$>$hookLoadArguments prior to calling the method. See \hyperlink{classNodeController_abdc7525854d61d63fa6ee79bb2409359}{NodeController::attachLoad()} for an example.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$queried\_\-entities}]Associative array of query results, keyed on the entity ID. \item[{\em \$revision\_\-id}]ID of the revision that was loaded, or FALSE if the most current revision was loaded. \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classDrupalDefaultEntityController_a68735c41d2ba655a073c64983754edf7}{DrupalDefaultEntityController}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/modules/user/\hyperlink{user_8module}{user.module}\end{DoxyCompactItemize}

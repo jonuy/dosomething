@@ -1,0 +1,42 @@
+\hypertarget{classDeleteQuery__sqlite}{
+\section{DeleteQuery\_\-sqlite Class Reference}
+\label{classDeleteQuery__sqlite}\index{DeleteQuery\_\-sqlite@{DeleteQuery\_\-sqlite}}
+}
+Inheritance diagram for DeleteQuery\_\-sqlite::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classDeleteQuery__sqlite}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDeleteQuery__sqlite_adfbc9a2783273c02c450bb0d7ff853a8}{execute} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+SQLite specific implementation of \hyperlink{classDeleteQuery}{DeleteQuery}.
+
+When the WHERE is omitted from a DELETE statement and the table being deleted has no triggers, SQLite uses an optimization to erase the entire table content without having to visit each row of the table individually.
+
+Prior to SQLite 3.6.5, SQLite does not return the actual number of rows deleted by that optimized \char`\"{}truncate\char`\"{} optimization. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classDeleteQuery__sqlite_adfbc9a2783273c02c450bb0d7ff853a8}{
+\index{DeleteQuery\_\-sqlite@{DeleteQuery\_\-sqlite}!execute@{execute}}
+\index{execute@{execute}!DeleteQuery_sqlite@{DeleteQuery\_\-sqlite}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}DeleteQuery\_\-sqlite::execute ()}}
+\label{classDeleteQuery__sqlite_adfbc9a2783273c02c450bb0d7ff853a8}
+Executes the DELETE query.
+
+\begin{DoxyReturn}{Returns}
+The return value is dependent on the database connection. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDeleteQuery_a77b0690ed162255ae8a765fed7db0766}{DeleteQuery}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/database/sqlite/\hyperlink{sqlite_2query_8inc}{query.inc}\end{DoxyCompactItemize}

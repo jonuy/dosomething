@@ -1,0 +1,208 @@
+\hypertarget{classSearchQuery}{
+\section{SearchQuery Class Reference}
+\label{classSearchQuery}\index{SearchQuery@{SearchQuery}}
+}
+Inheritance diagram for SearchQuery::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.02299cm]{classSearchQuery}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSearchQuery_a29e645e6deda9aa994b9b6e24384e21a}{searchExpression} (\$expression, \$module)
+\item 
+\hyperlink{classSearchQuery_a8923957ea4c9d231d1975c249ebe2601}{setOption} (\$option, \$column)
+\item 
+\hyperlink{classSearchQuery_a26f4f25d5720b6858c06fed4785914d7}{executeFirstPass} ()
+\item 
+\hyperlink{classSearchQuery_a72dc185ab8034f0979d877b6b9c57b1c}{addScore} (\$score, \$arguments=array(), \$multiply=FALSE)
+\item 
+\hyperlink{classSearchQuery_acedd13d6590d0013488873ec33fc6482}{execute} ()
+\item 
+\hyperlink{classSearchQuery_a01dea1649b1e99312abf12760b1b89e2}{countQuery} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSearchQuery_adbb7c8e1b7f6ff56b168cce84b4b38d0}{parseSearchExpression} ()
+\item 
+\hyperlink{classSearchQuery_a5a2743ed22476b614f9feed7d7bb7df9}{parseWord} (\$word)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSearchQuery_ad0cb499ade38edaec619b28e6bc8e3ca}{
+{\bfseries \$searchExpression}}
+\label{classSearchQuery_ad0cb499ade38edaec619b28e6bc8e3ca}
+
+\item 
+\hypertarget{classSearchQuery_aa11cd8f3aeac111651d8d684a38abbb6}{
+{\bfseries \$type}}
+\label{classSearchQuery_aa11cd8f3aeac111651d8d684a38abbb6}
+
+\item 
+\hypertarget{classSearchQuery_aebeff130762baf103ec80e6f4bed456f}{
+{\bfseries \$keys} = array('positive' =$>$ array(), 'negative' =$>$ array())}
+\label{classSearchQuery_aebeff130762baf103ec80e6f4bed456f}
+
+\item 
+\hypertarget{classSearchQuery_a03d493c77b9827a15e94fcfc4eb04aac}{
+{\bfseries \$simple} = TRUE}
+\label{classSearchQuery_a03d493c77b9827a15e94fcfc4eb04aac}
+
+\item 
+\hypertarget{classSearchQuery_af4d201bc2dfe24fadefc06d823bd3e90}{
+{\bfseries \$conditions}}
+\label{classSearchQuery_af4d201bc2dfe24fadefc06d823bd3e90}
+
+\item 
+\hypertarget{classSearchQuery_a59772bbb73a535cd078c7c21bf8d3e11}{
+{\bfseries \$matches} = 0}
+\label{classSearchQuery_a59772bbb73a535cd078c7c21bf8d3e11}
+
+\item 
+\hypertarget{classSearchQuery_a0ccd9db4b8afa4d116089214e0baba7d}{
+{\bfseries \$words} = array()}
+\label{classSearchQuery_a0ccd9db4b8afa4d116089214e0baba7d}
+
+\item 
+\hypertarget{classSearchQuery_a6ad9a09d4f843074aa0356d1324942d9}{
+{\bfseries \$normalize}}
+\label{classSearchQuery_a6ad9a09d4f843074aa0356d1324942d9}
+
+\item 
+\hypertarget{classSearchQuery_a957ee8e3e0af3eb28ecca0a2b980958b}{
+{\bfseries \$executedFirstPass} = FALSE}
+\label{classSearchQuery_a957ee8e3e0af3eb28ecca0a2b980958b}
+
+\item 
+\hypertarget{classSearchQuery_a575979ad149528ff5b2ef10d380b22ae}{
+{\bfseries \$scores} = array()}
+\label{classSearchQuery_a575979ad149528ff5b2ef10d380b22ae}
+
+\item 
+\hypertarget{classSearchQuery_a66c9cfd32ac9541cfd2e87034098b475}{
+{\bfseries \$scoresArguments} = array()}
+\label{classSearchQuery_a66c9cfd32ac9541cfd2e87034098b475}
+
+\item 
+\hypertarget{classSearchQuery_a2d0be8480223985157ed08505a03e7d4}{
+{\bfseries \$multiply} = array()}
+\label{classSearchQuery_a2d0be8480223985157ed08505a03e7d4}
+
+\item 
+\hypertarget{classSearchQuery_a17e47ab267e1cff78c3f2f036692818c}{
+{\bfseries \$expressionsIgnored} = FALSE}
+\label{classSearchQuery_a17e47ab267e1cff78c3f2f036692818c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Do a query on the full-\/text search index for a word or words.
+
+This function is normally only called by each module that supports the indexed search (and thus, implements \hyperlink{group__search_ga23d6f6642bd53c4f033f10e9c1b12d43}{hook\_\-update\_\-index()}).
+
+Results are retrieved in two logical passes. However, the two passes are joined together into a single query. And in the case of most simple queries the second pass is not even used.
+
+The first pass selects a set of all possible matches, which has the benefit of also providing the exact result set for simple \char`\"{}AND\char`\"{} or \char`\"{}OR\char`\"{} searches.
+
+The second portion of the query further refines this set by verifying advanced text conditions (such as negative or phrase matches).
+
+The used query object has the tag 'search\_\-\$module' and can be further extended with \hyperlink{group__hooks_gaf166f6375e9f7b5919d719eb91198d47}{hook\_\-query\_\-alter()}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classSearchQuery_a72dc185ab8034f0979d877b6b9c57b1c}{
+\index{SearchQuery@{SearchQuery}!addScore@{addScore}}
+\index{addScore@{addScore}!SearchQuery@{SearchQuery}}
+\subsubsection[{addScore}]{\setlength{\rightskip}{0pt plus 5cm}SearchQuery::addScore (\$ {\em score}, \/  \$ {\em arguments} = {\ttfamily array()}, \/  \$ {\em multiply} = {\ttfamily FALSE})}}
+\label{classSearchQuery_a72dc185ab8034f0979d877b6b9c57b1c}
+Adds a custom score expression to the search query.
+
+Each score expression can optionally use a multiplier, and multiple expressions are combined.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$score}]The score expression. \item[{\em \$arguments}]Custom query arguments for that expression. \item[{\em \$multiply}]If set, the score is multiplied with that value. Search query ensures that the search scores are still normalized. \end{DoxyParams}
+\hypertarget{classSearchQuery_a01dea1649b1e99312abf12760b1b89e2}{
+\index{SearchQuery@{SearchQuery}!countQuery@{countQuery}}
+\index{countQuery@{countQuery}!SearchQuery@{SearchQuery}}
+\subsubsection[{countQuery}]{\setlength{\rightskip}{0pt plus 5cm}SearchQuery::countQuery ()}}
+\label{classSearchQuery_a01dea1649b1e99312abf12760b1b89e2}
+Builds the default count query for \hyperlink{classSearchQuery}{SearchQuery}.
+
+Since \hyperlink{classSearchQuery}{SearchQuery} always uses GROUP BY, we can default to a subquery. We also add the same conditions as \hyperlink{classSearchQuery_acedd13d6590d0013488873ec33fc6482}{execute()} because \hyperlink{classSearchQuery_a01dea1649b1e99312abf12760b1b89e2}{countQuery()} is called first. 
+
+Reimplemented from \hyperlink{classSelectQueryExtender_a4c222f9407cc787f41b49be4b8ee26a5}{SelectQueryExtender}.\hypertarget{classSearchQuery_acedd13d6590d0013488873ec33fc6482}{
+\index{SearchQuery@{SearchQuery}!execute@{execute}}
+\index{execute@{execute}!SearchQuery@{SearchQuery}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}SearchQuery::execute ()}}
+\label{classSearchQuery_acedd13d6590d0013488873ec33fc6482}
+Executes the search.
+
+If not already done, this executes the first pass query. Then the complex conditions are applied to the query including score expressions and ordering.
+
+\begin{DoxyReturn}{Returns}
+FALSE if the first pass query returned no results, and a database result set if there were results. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classSelectQueryExtender}{SelectQueryExtender}.\hypertarget{classSearchQuery_a26f4f25d5720b6858c06fed4785914d7}{
+\index{SearchQuery@{SearchQuery}!executeFirstPass@{executeFirstPass}}
+\index{executeFirstPass@{executeFirstPass}!SearchQuery@{SearchQuery}}
+\subsubsection[{executeFirstPass}]{\setlength{\rightskip}{0pt plus 5cm}SearchQuery::executeFirstPass ()}}
+\label{classSearchQuery_a26f4f25d5720b6858c06fed4785914d7}
+Executes the first pass query.
+
+This can either be done explicitly, so that additional scores and conditions can be applied to the second pass query, or implicitly by \hyperlink{classSearchQuery_a72dc185ab8034f0979d877b6b9c57b1c}{addScore()} or \hyperlink{classSearchQuery_acedd13d6590d0013488873ec33fc6482}{execute()}.
+
+\begin{DoxyReturn}{Returns}
+TRUE if search items exist, FALSE if not. 
+\end{DoxyReturn}
+\hypertarget{classSearchQuery_adbb7c8e1b7f6ff56b168cce84b4b38d0}{
+\index{SearchQuery@{SearchQuery}!parseSearchExpression@{parseSearchExpression}}
+\index{parseSearchExpression@{parseSearchExpression}!SearchQuery@{SearchQuery}}
+\subsubsection[{parseSearchExpression}]{\setlength{\rightskip}{0pt plus 5cm}SearchQuery::parseSearchExpression ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classSearchQuery_adbb7c8e1b7f6ff56b168cce84b4b38d0}
+Parses the search query into SQL conditions.
+
+We build two queries that match the dataset bodies. \hypertarget{classSearchQuery_a5a2743ed22476b614f9feed7d7bb7df9}{
+\index{SearchQuery@{SearchQuery}!parseWord@{parseWord}}
+\index{parseWord@{parseWord}!SearchQuery@{SearchQuery}}
+\subsubsection[{parseWord}]{\setlength{\rightskip}{0pt plus 5cm}SearchQuery::parseWord (\$ {\em word})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classSearchQuery_a5a2743ed22476b614f9feed7d7bb7df9}
+Helper function for parseQuery(). \hypertarget{classSearchQuery_a29e645e6deda9aa994b9b6e24384e21a}{
+\index{SearchQuery@{SearchQuery}!searchExpression@{searchExpression}}
+\index{searchExpression@{searchExpression}!SearchQuery@{SearchQuery}}
+\subsubsection[{searchExpression}]{\setlength{\rightskip}{0pt plus 5cm}SearchQuery::searchExpression (\$ {\em expression}, \/  \$ {\em module})}}
+\label{classSearchQuery_a29e645e6deda9aa994b9b6e24384e21a}
+Sets up the search query expression.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$query}]A search query string, which can contain options. \item[{\em \$module}]The search module. This maps to \{search\_\-index\}.type in the database.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{classSearchQuery}{SearchQuery} object. 
+\end{DoxyReturn}
+\hypertarget{classSearchQuery_a8923957ea4c9d231d1975c249ebe2601}{
+\index{SearchQuery@{SearchQuery}!setOption@{setOption}}
+\index{setOption@{setOption}!SearchQuery@{SearchQuery}}
+\subsubsection[{setOption}]{\setlength{\rightskip}{0pt plus 5cm}SearchQuery::setOption (\$ {\em option}, \/  \$ {\em column})}}
+\label{classSearchQuery_a8923957ea4c9d231d1975c249ebe2601}
+Applies a search option and removes it from the search query string.
+
+These options are in the form option:value,value2,value3.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$option}]Name of the option. \item[{\em \$column}]Name of the database column to which the value should be applied.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if a value for that option was found, FALSE if not. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/modules/search/\hyperlink{search_8extender_8inc}{search.extender.inc}\end{DoxyCompactItemize}

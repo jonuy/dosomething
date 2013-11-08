@@ -1,0 +1,91 @@
+\hypertarget{modules_2comment_2comment_8tpl_8php}{
+\section{html/modules/comment/comment.tpl.php File Reference}
+\label{modules_2comment_2comment_8tpl_8php}\index{html/modules/comment/comment.tpl.php@{html/modules/comment/comment.tpl.php}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{modules_2comment_2comment_8tpl_8php_a6d48ecbdbc70ca1812e665169b5fa1e2}{
+print {\bfseries \$classes}}
+\label{modules_2comment_2comment_8tpl_8php_a6d48ecbdbc70ca1812e665169b5fa1e2}
+
+\item 
+\hypertarget{modules_2comment_2comment_8tpl_8php_a9c88c4272fa40546577b45392a0b3cd3}{
+print {\bfseries \$attributes}}
+\label{modules_2comment_2comment_8tpl_8php_a9c88c4272fa40546577b45392a0b3cd3}
+
+\item 
+\hypertarget{modules_2comment_2comment_8tpl_8php_a938746e3da4238c45247505b2d7bd89f}{
+print {\bfseries \$title\_\-attributes}}
+\label{modules_2comment_2comment_8tpl_8php_a938746e3da4238c45247505b2d7bd89f}
+
+\item 
+\hypertarget{modules_2comment_2comment_8tpl_8php_aa6e866865d65b663d634e32df9f1d64a}{
+print {\bfseries \$permalink}}
+\label{modules_2comment_2comment_8tpl_8php_aa6e866865d65b663d634e32df9f1d64a}
+
+\item 
+\hypertarget{modules_2comment_2comment_8tpl_8php_ae85ca26e14730f19b36558d432c90201}{
+print {\bfseries \$submitted}}
+\label{modules_2comment_2comment_8tpl_8php_ae85ca26e14730f19b36558d432c90201}
+
+\item 
+\hypertarget{modules_2comment_2comment_8tpl_8php_ae2ee2e16f11937564281332a76a658e8}{
+print {\bfseries \$content\_\-attributes}}
+\label{modules_2comment_2comment_8tpl_8php_ae2ee2e16f11937564281332a76a658e8}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Default theme implementation for comments.
+
+Available variables:
+\begin{DoxyItemize}
+\item \$author: Comment author. Can be link or plain text.
+\item content}
+An array of comment items. Use render(content) to print them all, or print a subset such as render(\$content\mbox{[}'field\_\-example'\mbox{]}). Use hide(\$content\mbox{[}'field\_\-example'\mbox{]}) to temporarily suppress the printing of a given element.
+\item \$created: Formatted date and time for when the comment was created. Preprocess functions can reformat it by calling \hyperlink{group__format_ga40553742a67f9c79c4669b9053fe202c}{format\_\-date()} with the desired parameters on the \$comment-\/$>$created variable.
+\item \$changed: Formatted date and time for when the comment was last changed. Preprocess functions can reformat it by calling \hyperlink{group__format_ga40553742a67f9c79c4669b9053fe202c}{format\_\-date()} with the desired parameters on the \$comment-\/$>$changed variable.
+\item \$new: New comment marker.
+\item \$permalink: Comment permalink.
+\item submitted}
+Submission information created from author and \$created during \hyperlink{comment_8module_a48adb63c53357fde9aea892ba131f3db}{template\_\-preprocess\_\-comment()}.
+\item \$picture: Authors picture.
+\item \$signature: Authors signature.
+\item \$status: Comment status. Possible values are: comment-\/unpublished, comment-\/published or comment-\/preview.
+\item \$title: Linked title.
+\item \$classes: String of classes that can be used to style contextually through CSS. It can be manipulated through the variable \$classes\_\-array from preprocess functions. The default values can be one or more of the following:
+\begin{DoxyItemize}
+\item comment: The current template type, i.e., \char`\"{}theming hook\char`\"{}.
+\item comment-\/by-\/anonymous: Comment by an unregistered user.
+\item comment-\/by-\/node-\/author: Comment by the author of the parent node.
+\item comment-\/preview: When previewing a new or edited comment. The following applies only to viewers who are registered users:
+\item comment-\/unpublished: An unpublished comment visible only to administrators.
+\item comment-\/by-\/viewer: Comment by the user currently viewing the page.
+\item comment-\/new: New comment since last the visit.
+\end{DoxyItemize}
+\item \$title\_\-prefix (array): An array containing additional output populated by modules, intended to be displayed in front of the main title tag that appears in the template.
+\item \$title\_\-suffix (array): An array containing additional output populated by modules, intended to be displayed after the main title tag that appears in the template.
+\end{DoxyItemize}
+
+These two variables are provided for context:
+\begin{DoxyItemize}
+\item \$comment: Full comment object.
+\item \$node: Node object the comments are attached to.
+\end{DoxyItemize}
+
+Other variables:
+\begin{DoxyItemize}
+\item \$classes\_\-array: Array of html class attribute values. It is flattened into a string within the variable \$classes.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{includes_2theme_8inc_a3eeb7bcdba7ef4859f99586da264d347}{template\_\-preprocess()} 
+
+\hyperlink{comment_8module_a48adb63c53357fde9aea892ba131f3db}{template\_\-preprocess\_\-comment()} 
+
+\hyperlink{includes_2theme_8inc_a9b4d56c55dab2c59b7af6f71d6b1a940}{template\_\-process()} 
+
+theme\_\-comment() 
+\end{DoxySeeAlso}

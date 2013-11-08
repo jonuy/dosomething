@@ -1,0 +1,72 @@
+\hypertarget{group__menu__item__types}{
+\section{Menu item types}
+\label{group__menu__item__types}\index{Menu item types@{Menu item types}}
+}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__menu__item__types_gac42144282c42a943b05511b38c451e4c}{MENU\_\-NORMAL\_\-ITEM} 
+\item 
+enum \hyperlink{group__menu__item__types_ga92850b428279a637ce9bac5c1757700f}{MENU\_\-CALLBACK} 
+\item 
+enum \hyperlink{group__menu__item__types_ga0860a2534ce61dc1334dc7ede68e20b3}{MENU\_\-SUGGESTED\_\-ITEM} 
+\item 
+enum \hyperlink{group__menu__item__types_ga4dc67226400f237bd3c0a5ef7126008b}{MENU\_\-LOCAL\_\-TASK} 
+\item 
+enum \hyperlink{group__menu__item__types_ga251e324e062f2e4c703f51231c0d7dc5}{MENU\_\-DEFAULT\_\-LOCAL\_\-TASK} 
+\item 
+enum \hyperlink{group__menu__item__types_gac627fc26dd1719748fa8aec50300ef16}{MENU\_\-LOCAL\_\-ACTION} 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+End of \char`\"{}Menu flags\char`\"{}.
+
+Definitions for various menu item types.
+
+Menu item definitions provide one of these constants, which are shortcuts for combinations of \hyperlink{group__menu__flags}{Menu flags }. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__menu__item__types_ga92850b428279a637ce9bac5c1757700f}{
+\index{menu\_\-item\_\-types@{menu\_\-item\_\-types}!MENU\_\-CALLBACK@{MENU\_\-CALLBACK}}
+\index{MENU\_\-CALLBACK@{MENU\_\-CALLBACK}!menu_item_types@{menu\_\-item\_\-types}}
+\subsubsection[{MENU\_\-CALLBACK}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf MENU\_\-CALLBACK}}}
+\label{group__menu__item__types_ga92850b428279a637ce9bac5c1757700f}
+Menu type -\/-\/ A hidden, internal callback, typically used for API calls.
+
+Callbacks simply register a path so that the correct function is fired when the URL is accessed. They do not appear in menus or breadcrumbs. \hypertarget{group__menu__item__types_ga251e324e062f2e4c703f51231c0d7dc5}{
+\index{menu\_\-item\_\-types@{menu\_\-item\_\-types}!MENU\_\-DEFAULT\_\-LOCAL\_\-TASK@{MENU\_\-DEFAULT\_\-LOCAL\_\-TASK}}
+\index{MENU\_\-DEFAULT\_\-LOCAL\_\-TASK@{MENU\_\-DEFAULT\_\-LOCAL\_\-TASK}!menu_item_types@{menu\_\-item\_\-types}}
+\subsubsection[{MENU\_\-DEFAULT\_\-LOCAL\_\-TASK}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf MENU\_\-DEFAULT\_\-LOCAL\_\-TASK}}}
+\label{group__menu__item__types_ga251e324e062f2e4c703f51231c0d7dc5}
+Menu type -\/-\/ The \char`\"{}default\char`\"{} local task, which is initially active.
+
+Every set of local tasks should provide one \char`\"{}default\char`\"{} task, that links to the same path as its parent when clicked. \hypertarget{group__menu__item__types_gac627fc26dd1719748fa8aec50300ef16}{
+\index{menu\_\-item\_\-types@{menu\_\-item\_\-types}!MENU\_\-LOCAL\_\-ACTION@{MENU\_\-LOCAL\_\-ACTION}}
+\index{MENU\_\-LOCAL\_\-ACTION@{MENU\_\-LOCAL\_\-ACTION}!menu_item_types@{menu\_\-item\_\-types}}
+\subsubsection[{MENU\_\-LOCAL\_\-ACTION}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf MENU\_\-LOCAL\_\-ACTION}}}
+\label{group__menu__item__types_gac627fc26dd1719748fa8aec50300ef16}
+Menu type -\/-\/ An action specific to the parent, usually rendered as a link.
+
+Local actions are menu items that describe actions on the parent item such as adding a new user, taxonomy term, etc. \hypertarget{group__menu__item__types_ga4dc67226400f237bd3c0a5ef7126008b}{
+\index{menu\_\-item\_\-types@{menu\_\-item\_\-types}!MENU\_\-LOCAL\_\-TASK@{MENU\_\-LOCAL\_\-TASK}}
+\index{MENU\_\-LOCAL\_\-TASK@{MENU\_\-LOCAL\_\-TASK}!menu_item_types@{menu\_\-item\_\-types}}
+\subsubsection[{MENU\_\-LOCAL\_\-TASK}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf MENU\_\-LOCAL\_\-TASK}}}
+\label{group__menu__item__types_ga4dc67226400f237bd3c0a5ef7126008b}
+Menu type -\/-\/ A task specific to the parent item, usually rendered as a tab.
+
+Local tasks are menu items that describe actions to be performed on their parent item. An example is the path \char`\"{}node/52/edit\char`\"{}, which performs the \char`\"{}edit\char`\"{} task on \char`\"{}node/52\char`\"{}. \hypertarget{group__menu__item__types_gac42144282c42a943b05511b38c451e4c}{
+\index{menu\_\-item\_\-types@{menu\_\-item\_\-types}!MENU\_\-NORMAL\_\-ITEM@{MENU\_\-NORMAL\_\-ITEM}}
+\index{MENU\_\-NORMAL\_\-ITEM@{MENU\_\-NORMAL\_\-ITEM}!menu_item_types@{menu\_\-item\_\-types}}
+\subsubsection[{MENU\_\-NORMAL\_\-ITEM}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf MENU\_\-NORMAL\_\-ITEM}}}
+\label{group__menu__item__types_gac42144282c42a943b05511b38c451e4c}
+Menu type -\/-\/ A \char`\"{}normal\char`\"{} menu item that's shown in menu and breadcrumbs.
+
+Normal menu items show up in the menu tree and can be moved/hidden by the administrator. Use this for most menu items. It is the default value if no menu item type is specified. \hypertarget{group__menu__item__types_ga0860a2534ce61dc1334dc7ede68e20b3}{
+\index{menu\_\-item\_\-types@{menu\_\-item\_\-types}!MENU\_\-SUGGESTED\_\-ITEM@{MENU\_\-SUGGESTED\_\-ITEM}}
+\index{MENU\_\-SUGGESTED\_\-ITEM@{MENU\_\-SUGGESTED\_\-ITEM}!menu_item_types@{menu\_\-item\_\-types}}
+\subsubsection[{MENU\_\-SUGGESTED\_\-ITEM}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf MENU\_\-SUGGESTED\_\-ITEM}}}
+\label{group__menu__item__types_ga0860a2534ce61dc1334dc7ede68e20b3}
+Menu type -\/-\/ A normal menu item, hidden until enabled by an administrator.
+
+Modules may \char`\"{}suggest\char`\"{} menu items that the administrator may enable. They act just as callbacks do until enabled, at which time they act like normal items. Note for the value: 0x0010 was a flag which is no longer used, but this way the values of MENU\_\-CALLBACK and MENU\_\-SUGGESTED\_\-ITEM are separate. 

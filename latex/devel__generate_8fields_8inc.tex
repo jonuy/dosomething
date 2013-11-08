@@ -1,0 +1,28 @@
+\hypertarget{devel__generate_8fields_8inc}{
+\section{html/profiles/dosomething/modules/contrib/devel/devel\_\-generate/devel\_\-generate.fields.inc File Reference}
+\label{devel__generate_8fields_8inc}\index{html/profiles/dosomething/modules/contrib/devel/devel\_\-generate/devel\_\-generate.fields.inc@{html/profiles/dosomething/modules/contrib/devel/devel\_\-generate/devel\_\-generate.fields.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{devel__generate_8fields_8inc_ac5b4458ddf3e6b773f24ea286bd67af2}{devel\_\-generate\_\-fields} (\&\$object, \$obj\_\-type, \$bundle)
+\item 
+\hyperlink{devel__generate_8fields_8inc_ad2eb6952df779dbc62e145d7cc2f86c0}{devel\_\-generate\_\-multiple} (\$function, \$object, \$field, \$instance, \$bundle)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions needed for devel\_\-generate Fields API integration. 
+
+\subsection{Function Documentation}
+\hypertarget{devel__generate_8fields_8inc_ac5b4458ddf3e6b773f24ea286bd67af2}{
+\index{devel\_\-generate.fields.inc@{devel\_\-generate.fields.inc}!devel\_\-generate\_\-fields@{devel\_\-generate\_\-fields}}
+\index{devel\_\-generate\_\-fields@{devel\_\-generate\_\-fields}!devel_generate.fields.inc@{devel\_\-generate.fields.inc}}
+\subsubsection[{devel\_\-generate\_\-fields}]{\setlength{\rightskip}{0pt plus 5cm}devel\_\-generate\_\-fields (\&\$ {\em object}, \/  \$ {\em obj\_\-type}, \/  \$ {\em bundle})}}
+\label{devel__generate_8fields_8inc_ac5b4458ddf3e6b773f24ea286bd67af2}
+Enrich the \$object that is about to be saved with arbitrary information in each of its fields. \hypertarget{devel__generate_8fields_8inc_ad2eb6952df779dbc62e145d7cc2f86c0}{
+\index{devel\_\-generate.fields.inc@{devel\_\-generate.fields.inc}!devel\_\-generate\_\-multiple@{devel\_\-generate\_\-multiple}}
+\index{devel\_\-generate\_\-multiple@{devel\_\-generate\_\-multiple}!devel_generate.fields.inc@{devel\_\-generate.fields.inc}}
+\subsubsection[{devel\_\-generate\_\-multiple}]{\setlength{\rightskip}{0pt plus 5cm}devel\_\-generate\_\-multiple (\$ {\em function}, \/  \$ {\em object}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em bundle})}}
+\label{devel__generate_8fields_8inc_ad2eb6952df779dbc62e145d7cc2f86c0}
+A simple function to return multiple values for fields that use custom multiple value widgets but don't need any other special multiple values handling. This will call the field generation function a random number of times and compile the results into a node array. 

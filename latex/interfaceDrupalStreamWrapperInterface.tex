@@ -1,0 +1,153 @@
+\hypertarget{interfaceDrupalStreamWrapperInterface}{
+\section{DrupalStreamWrapperInterface Interface Reference}
+\label{interfaceDrupalStreamWrapperInterface}\index{DrupalStreamWrapperInterface@{DrupalStreamWrapperInterface}}
+}
+Inheritance diagram for DrupalStreamWrapperInterface::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.07018cm]{interfaceDrupalStreamWrapperInterface}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfaceDrupalStreamWrapperInterface_aa04b517df51d24252e656d67515224f6}{setUri} (\$uri)
+\item 
+\hyperlink{interfaceDrupalStreamWrapperInterface_aeedd16f8876b4b3a0cad73a2759db6ca}{getUri} ()
+\item 
+\hyperlink{interfaceDrupalStreamWrapperInterface_af8474357b8c79f1a7629084a05541d16}{getExternalUrl} ()
+\item 
+\hyperlink{interfaceDrupalStreamWrapperInterface_a1b1e5436bc2d310b1d340f389f7484b3}{chmod} (\$mode)
+\item 
+\hyperlink{interfaceDrupalStreamWrapperInterface_adb16cd1ac42f9d7a273546f5cbf0d9d3}{realpath} ()
+\item 
+\hyperlink{interfaceDrupalStreamWrapperInterface_a4d189eb40075b3873752c7706e41aac6}{dirname} (\$uri=NULL)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{interfaceDrupalStreamWrapperInterface_a7c239b7827b124425e655deb257d34b7}{getMimeType} (\$uri, \$mapping=NULL)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Drupal stream wrapper extension.
+
+Extend the \hyperlink{interfaceStreamWrapperInterface}{StreamWrapperInterface} with methods expected by Drupal stream wrapper classes. 
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceDrupalStreamWrapperInterface_a1b1e5436bc2d310b1d340f389f7484b3}{
+\index{DrupalStreamWrapperInterface@{DrupalStreamWrapperInterface}!chmod@{chmod}}
+\index{chmod@{chmod}!DrupalStreamWrapperInterface@{DrupalStreamWrapperInterface}}
+\subsubsection[{chmod}]{\setlength{\rightskip}{0pt plus 5cm}DrupalStreamWrapperInterface::chmod (\$ {\em mode})}}
+\label{interfaceDrupalStreamWrapperInterface_a1b1e5436bc2d310b1d340f389f7484b3}
+Changes permissions of the resource.
+
+PHP lacks this functionality and it is not part of the official stream wrapper interface. This is a custom implementation for Drupal.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$mode}]Integer value for the permissions. Consult PHP \hyperlink{interfaceDrupalStreamWrapperInterface_a1b1e5436bc2d310b1d340f389f7484b3}{chmod()} documentation for more information.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns TRUE on success or FALSE on failure. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classDrupalLocalStreamWrapper_a7ea693783119ad777d54d447bddcee8f}{DrupalLocalStreamWrapper}.\hypertarget{interfaceDrupalStreamWrapperInterface_a4d189eb40075b3873752c7706e41aac6}{
+\index{DrupalStreamWrapperInterface@{DrupalStreamWrapperInterface}!dirname@{dirname}}
+\index{dirname@{dirname}!DrupalStreamWrapperInterface@{DrupalStreamWrapperInterface}}
+\subsubsection[{dirname}]{\setlength{\rightskip}{0pt plus 5cm}DrupalStreamWrapperInterface::dirname (\$ {\em uri} = {\ttfamily NULL})}}
+\label{interfaceDrupalStreamWrapperInterface_a4d189eb40075b3873752c7706e41aac6}
+Gets the name of the directory from a given path.
+
+This method is usually accessed through \hyperlink{group__php__wrappers_gad00418a5880c03f43e5eccfaa62863f6}{drupal\_\-dirname()}, which wraps around the normal PHP \hyperlink{interfaceDrupalStreamWrapperInterface_a4d189eb40075b3873752c7706e41aac6}{dirname()} function, which does not support stream wrappers.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$uri}]An optional URI.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string containing the directory name, or FALSE if not applicable.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__php__wrappers_gad00418a5880c03f43e5eccfaa62863f6}{drupal\_\-dirname()} 
+\end{DoxySeeAlso}
+
+
+Implemented in \hyperlink{classDrupalLocalStreamWrapper_ab98ad39ce1745a24c760abf3e4297577}{DrupalLocalStreamWrapper}.\hypertarget{interfaceDrupalStreamWrapperInterface_af8474357b8c79f1a7629084a05541d16}{
+\index{DrupalStreamWrapperInterface@{DrupalStreamWrapperInterface}!getExternalUrl@{getExternalUrl}}
+\index{getExternalUrl@{getExternalUrl}!DrupalStreamWrapperInterface@{DrupalStreamWrapperInterface}}
+\subsubsection[{getExternalUrl}]{\setlength{\rightskip}{0pt plus 5cm}DrupalStreamWrapperInterface::getExternalUrl ()}}
+\label{interfaceDrupalStreamWrapperInterface_af8474357b8c79f1a7629084a05541d16}
+Returns a web accessible URL for the resource.
+
+This function should return a URL that can be embedded in a web page and accessed from a browser. For example, the external URL of \char`\"{}youtube://xIpLd0WQKCY\char`\"{} might be \char`\"{}http://www.youtube.com/watch?v=xIpLd0WQKCY\char`\"{}.
+
+\begin{DoxyReturn}{Returns}
+Returns a string containing a web accessible URL for the resource. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classDrupalPublicStreamWrapper_a226f45aed9d947aa34aa0b3c7053fdaf}{DrupalPublicStreamWrapper}, \hyperlink{classDrupalPrivateStreamWrapper_a1c1ee83f635dd12b6e806f1d1b1d1de3}{DrupalPrivateStreamWrapper}, \hyperlink{classDrupalTemporaryStreamWrapper_a289ebf62f0ba1a495cb7682812abba05}{DrupalTemporaryStreamWrapper}, and \hyperlink{classDrupalDummyStreamWrapper_a0ab51a9f3ec32db594a32ef4083ae6db}{DrupalDummyStreamWrapper}.\hypertarget{interfaceDrupalStreamWrapperInterface_a7c239b7827b124425e655deb257d34b7}{
+\index{DrupalStreamWrapperInterface@{DrupalStreamWrapperInterface}!getMimeType@{getMimeType}}
+\index{getMimeType@{getMimeType}!DrupalStreamWrapperInterface@{DrupalStreamWrapperInterface}}
+\subsubsection[{getMimeType}]{\setlength{\rightskip}{0pt plus 5cm}static DrupalStreamWrapperInterface::getMimeType (\$ {\em uri}, \/  \$ {\em mapping} = {\ttfamily NULL})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{interfaceDrupalStreamWrapperInterface_a7c239b7827b124425e655deb257d34b7}
+Returns the MIME type of the resource.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$uri}]The URI, path, or filename. \item[{\em \$mapping}]An optional map of extensions to their mimetypes, in the form:
+\begin{DoxyItemize}
+\item 'mimetypes': a list of mimetypes, keyed by an identifier,
+\item 'extensions': the mapping itself, an associative array in which the key is the extension and the value is the mimetype identifier.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a string containing the MIME type of the resource. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classDrupalLocalStreamWrapper_ae6baa873a904204192636830d2bacaac}{DrupalLocalStreamWrapper}.\hypertarget{interfaceDrupalStreamWrapperInterface_aeedd16f8876b4b3a0cad73a2759db6ca}{
+\index{DrupalStreamWrapperInterface@{DrupalStreamWrapperInterface}!getUri@{getUri}}
+\index{getUri@{getUri}!DrupalStreamWrapperInterface@{DrupalStreamWrapperInterface}}
+\subsubsection[{getUri}]{\setlength{\rightskip}{0pt plus 5cm}DrupalStreamWrapperInterface::getUri ()}}
+\label{interfaceDrupalStreamWrapperInterface_aeedd16f8876b4b3a0cad73a2759db6ca}
+Returns the stream resource URI.
+
+\begin{DoxyReturn}{Returns}
+Returns the current URI of the instance. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classDrupalLocalStreamWrapper_a8dc69c121105a00949acfdcce0474aaa}{DrupalLocalStreamWrapper}.\hypertarget{interfaceDrupalStreamWrapperInterface_adb16cd1ac42f9d7a273546f5cbf0d9d3}{
+\index{DrupalStreamWrapperInterface@{DrupalStreamWrapperInterface}!realpath@{realpath}}
+\index{realpath@{realpath}!DrupalStreamWrapperInterface@{DrupalStreamWrapperInterface}}
+\subsubsection[{realpath}]{\setlength{\rightskip}{0pt plus 5cm}DrupalStreamWrapperInterface::realpath ()}}
+\label{interfaceDrupalStreamWrapperInterface_adb16cd1ac42f9d7a273546f5cbf0d9d3}
+Returns canonical, absolute path of the resource.
+
+Implementation placeholder. PHP's \hyperlink{interfaceDrupalStreamWrapperInterface_adb16cd1ac42f9d7a273546f5cbf0d9d3}{realpath()} does not support stream wrappers. We provide this as a default so that individual wrappers may implement their own solutions.
+
+\begin{DoxyReturn}{Returns}
+Returns a string with absolute pathname on success (implemented by core wrappers), or FALSE on failure or if the registered wrapper does not provide an implementation. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classDrupalLocalStreamWrapper_a61f0d0ef6a489e3fca2152eb64174237}{DrupalLocalStreamWrapper}, and \hyperlink{classDrupalDummyRemoteStreamWrapper_afda5b6262eed01b4f22523af92ea6f9b}{DrupalDummyRemoteStreamWrapper}.\hypertarget{interfaceDrupalStreamWrapperInterface_aa04b517df51d24252e656d67515224f6}{
+\index{DrupalStreamWrapperInterface@{DrupalStreamWrapperInterface}!setUri@{setUri}}
+\index{setUri@{setUri}!DrupalStreamWrapperInterface@{DrupalStreamWrapperInterface}}
+\subsubsection[{setUri}]{\setlength{\rightskip}{0pt plus 5cm}DrupalStreamWrapperInterface::setUri (\$ {\em uri})}}
+\label{interfaceDrupalStreamWrapperInterface_aa04b517df51d24252e656d67515224f6}
+Set the absolute stream resource URI.
+
+This allows you to set the URI. Generally is only called by the factory method.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$uri}]A string containing the URI that should be used for this instance. \end{DoxyParams}
+
+
+Implemented in \hyperlink{classDrupalLocalStreamWrapper_ae9502ad74b2498b9c93e4affc43e7109}{DrupalLocalStreamWrapper}.
+
+The documentation for this interface was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/\hyperlink{stream__wrappers_8inc}{stream\_\-wrappers.inc}\end{DoxyCompactItemize}

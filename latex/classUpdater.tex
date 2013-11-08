@@ -1,0 +1,255 @@
+\hypertarget{classUpdater}{
+\section{Updater Class Reference}
+\label{classUpdater}\index{Updater@{Updater}}
+}
+Inheritance diagram for Updater::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classUpdater}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classUpdater_a0e12354a02be64d98c2fd4a829df3a1c}{
+{\bfseries \_\-\_\-construct} (\$source)}
+\label{classUpdater_a0e12354a02be64d98c2fd4a829df3a1c}
+
+\item 
+\hyperlink{classUpdater_a3129525aef507bdf5c3f8abf278b8e88}{update} (\&\$filetransfer, \$overrides=array())
+\item 
+\hyperlink{classUpdater_ae48337676acbe63592adf17ed629c72a}{install} (\&\$filetransfer, \$overrides=array())
+\item 
+\hyperlink{classUpdater_a79c3ae76bfdfa5f763978196055086dd}{prepareInstallDirectory} (\&\$filetransfer, \$directory)
+\item 
+\hyperlink{classUpdater_a8218fada74db8a896a3a87ffc2d6f9bf}{makeWorldReadable} (\&\$filetransfer, \$path, \$recursive=TRUE)
+\item 
+\hyperlink{classUpdater_afdbf28100a8d3ed78cb97095fa221923}{makeBackup} (\&\$filetransfer, \$from, \$to)
+\item 
+\hyperlink{classUpdater_a0384d0bc433f259a81db0f61bd49d9c8}{getBackupDir} ()
+\item 
+\hyperlink{classUpdater_a68cf9e613e06963f0fa6d0f1779f36e7}{postUpdate} ()
+\item 
+\hyperlink{classUpdater_a5d46854a6a9fb7b22a71d6da5fdf0c8f}{postInstall} ()
+\item 
+\hyperlink{classUpdater_a59eb832c6bb80dd9f04fc85c8ebe8905}{postInstallTasks} ()
+\item 
+\hyperlink{classUpdater_a377feb2830d31884f8ff1ff152d94576}{postUpdateTasks} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classUpdater_a83e2eb6b587a2302d54f0bf36c1940d7}{factory} (\$source)
+\item 
+static \hyperlink{classUpdater_a84f76400d1eb8fc288c6544028044e11}{getUpdaterFromDirectory} (\$directory)
+\item 
+static \hyperlink{classUpdater_a863027ebe605c77fe1c9b7676eb031f1}{findInfoFile} (\$directory)
+\item 
+static \hyperlink{classUpdater_a092911b55da504e51b523dce6307b948}{getProjectName} (\$directory)
+\item 
+static \hyperlink{classUpdater_ae54d59f8b1bc166661a9393004c2d5f1}{getProjectTitle} (\$directory)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classUpdater_a3388dd45f12f22a43ed104cb9df6b2ce}{
+{\bfseries \$source}}
+\label{classUpdater_a3388dd45f12f22a43ed104cb9df6b2ce}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classUpdater_a540e2f8213091a530b45d1bb4edbc36a}{getInstallArgs} (\$overrides=array())
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for Updaters used in Drupal. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classUpdater_a83e2eb6b587a2302d54f0bf36c1940d7}{
+\index{Updater@{Updater}!factory@{factory}}
+\index{factory@{factory}!Updater@{Updater}}
+\subsubsection[{factory}]{\setlength{\rightskip}{0pt plus 5cm}static Updater::factory (\$ {\em source})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classUpdater_a83e2eb6b587a2302d54f0bf36c1940d7}
+Return an \hyperlink{classUpdater}{Updater} of the appropriate type depending on the source.
+
+If a directory is provided which contains a module, will return a \hyperlink{classModuleUpdater}{ModuleUpdater}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$source Directory of a Drupal project.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classUpdater}{Updater} 
+\end{DoxyReturn}
+\hypertarget{classUpdater_a863027ebe605c77fe1c9b7676eb031f1}{
+\index{Updater@{Updater}!findInfoFile@{findInfoFile}}
+\index{findInfoFile@{findInfoFile}!Updater@{Updater}}
+\subsubsection[{findInfoFile}]{\setlength{\rightskip}{0pt plus 5cm}static Updater::findInfoFile (\$ {\em directory})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classUpdater_a863027ebe605c77fe1c9b7676eb031f1}
+Figure out what the most important (or only) info file is in a directory.
+
+Since there is no enforcement of which info file is the project's \char`\"{}main\char`\"{} info file, this will get one with the same name as the directory, or the first one it finds. Not ideal, but needs a larger solution.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$directory Directory to search in.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Path to the info file. 
+\end{DoxyReturn}
+\hypertarget{classUpdater_a0384d0bc433f259a81db0f61bd49d9c8}{
+\index{Updater@{Updater}!getBackupDir@{getBackupDir}}
+\index{getBackupDir@{getBackupDir}!Updater@{Updater}}
+\subsubsection[{getBackupDir}]{\setlength{\rightskip}{0pt plus 5cm}Updater::getBackupDir ()}}
+\label{classUpdater_a0384d0bc433f259a81db0f61bd49d9c8}
+Return the full path to a directory where backups should be written. \hypertarget{classUpdater_a540e2f8213091a530b45d1bb4edbc36a}{
+\index{Updater@{Updater}!getInstallArgs@{getInstallArgs}}
+\index{getInstallArgs@{getInstallArgs}!Updater@{Updater}}
+\subsubsection[{getInstallArgs}]{\setlength{\rightskip}{0pt plus 5cm}Updater::getInstallArgs (\$ {\em overrides} = {\ttfamily array()})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classUpdater_a540e2f8213091a530b45d1bb4edbc36a}
+Store the default parameters for the \hyperlink{classUpdater}{Updater}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$overrides An array of overrides for the default parameters.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of configuration parameters for an update or install operation. 
+\end{DoxyReturn}
+\hypertarget{classUpdater_a092911b55da504e51b523dce6307b948}{
+\index{Updater@{Updater}!getProjectName@{getProjectName}}
+\index{getProjectName@{getProjectName}!Updater@{Updater}}
+\subsubsection[{getProjectName}]{\setlength{\rightskip}{0pt plus 5cm}static Updater::getProjectName (\$ {\em directory})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classUpdater_a092911b55da504e51b523dce6307b948}
+Get the name of the project directory (basename).
+
+\begin{Desc}
+\item[\hyperlink{todo__todo000009}{Todo}]: It would be nice, if projects contained an info file which could provide their canonical name.\end{Desc}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$directory\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The name of the project. 
+\end{DoxyReturn}
+\hypertarget{classUpdater_ae54d59f8b1bc166661a9393004c2d5f1}{
+\index{Updater@{Updater}!getProjectTitle@{getProjectTitle}}
+\index{getProjectTitle@{getProjectTitle}!Updater@{Updater}}
+\subsubsection[{getProjectTitle}]{\setlength{\rightskip}{0pt plus 5cm}static Updater::getProjectTitle (\$ {\em directory})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classUpdater_ae54d59f8b1bc166661a9393004c2d5f1}
+Return the project name from a Drupal info file.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$directory Directory to search for the info file.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The title of the project. 
+\end{DoxyReturn}
+\hypertarget{classUpdater_a84f76400d1eb8fc288c6544028044e11}{
+\index{Updater@{Updater}!getUpdaterFromDirectory@{getUpdaterFromDirectory}}
+\index{getUpdaterFromDirectory@{getUpdaterFromDirectory}!Updater@{Updater}}
+\subsubsection[{getUpdaterFromDirectory}]{\setlength{\rightskip}{0pt plus 5cm}static Updater::getUpdaterFromDirectory (\$ {\em directory})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classUpdater_a84f76400d1eb8fc288c6544028044e11}
+Determine which \hyperlink{classUpdater}{Updater} class can operate on the given directory.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$directory Extracted Drupal project.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The class name which can work with this project type. 
+\end{DoxyReturn}
+\hypertarget{classUpdater_ae48337676acbe63592adf17ed629c72a}{
+\index{Updater@{Updater}!install@{install}}
+\index{install@{install}!Updater@{Updater}}
+\subsubsection[{install}]{\setlength{\rightskip}{0pt plus 5cm}Updater::install (\&\$ {\em filetransfer}, \/  \$ {\em overrides} = {\ttfamily array()})}}
+\label{classUpdater_ae48337676acbe63592adf17ed629c72a}
+Installs a Drupal project, returns a list of next actions.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{classFileTransfer}{FileTransfer}}]\$filetransfer Object that is a child of \hyperlink{classFileTransfer}{FileTransfer}. \item[{\em array}]\$overrides An array of settings to override defaults; see self::getInstallArgs().\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of links which the user may need to complete the install. 
+\end{DoxyReturn}
+\hypertarget{classUpdater_afdbf28100a8d3ed78cb97095fa221923}{
+\index{Updater@{Updater}!makeBackup@{makeBackup}}
+\index{makeBackup@{makeBackup}!Updater@{Updater}}
+\subsubsection[{makeBackup}]{\setlength{\rightskip}{0pt plus 5cm}Updater::makeBackup (\&\$ {\em filetransfer}, \/  \$ {\em from}, \/  \$ {\em to})}}
+\label{classUpdater_afdbf28100a8d3ed78cb97095fa221923}
+Perform a backup.
+
+\begin{Desc}
+\item[\hyperlink{todo__todo000010}{Todo}]Not implemented. \end{Desc}
+\hypertarget{classUpdater_a8218fada74db8a896a3a87ffc2d6f9bf}{
+\index{Updater@{Updater}!makeWorldReadable@{makeWorldReadable}}
+\index{makeWorldReadable@{makeWorldReadable}!Updater@{Updater}}
+\subsubsection[{makeWorldReadable}]{\setlength{\rightskip}{0pt plus 5cm}Updater::makeWorldReadable (\&\$ {\em filetransfer}, \/  \$ {\em path}, \/  \$ {\em recursive} = {\ttfamily TRUE})}}
+\label{classUpdater_a8218fada74db8a896a3a87ffc2d6f9bf}
+Ensure that a given directory is world readable.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{classFileTransfer}{FileTransfer}}]\$filetransfer Object which is a child of \hyperlink{classFileTransfer}{FileTransfer}. \item[{\em string}]\$path The file path to make world readable. \item[{\em bool}]\$recursive If the chmod should be applied recursively. \end{DoxyParams}
+\hypertarget{classUpdater_a5d46854a6a9fb7b22a71d6da5fdf0c8f}{
+\index{Updater@{Updater}!postInstall@{postInstall}}
+\index{postInstall@{postInstall}!Updater@{Updater}}
+\subsubsection[{postInstall}]{\setlength{\rightskip}{0pt plus 5cm}Updater::postInstall ()}}
+\label{classUpdater_a5d46854a6a9fb7b22a71d6da5fdf0c8f}
+Perform actions after installation. 
+
+Reimplemented in \hyperlink{classThemeUpdater_a66e74f3e7f7116e77355947e11d038e1}{ThemeUpdater}.\hypertarget{classUpdater_a59eb832c6bb80dd9f04fc85c8ebe8905}{
+\index{Updater@{Updater}!postInstallTasks@{postInstallTasks}}
+\index{postInstallTasks@{postInstallTasks}!Updater@{Updater}}
+\subsubsection[{postInstallTasks}]{\setlength{\rightskip}{0pt plus 5cm}Updater::postInstallTasks ()}}
+\label{classUpdater_a59eb832c6bb80dd9f04fc85c8ebe8905}
+Return an array of links to pages that should be visited post operation.
+
+\begin{DoxyReturn}{Returns}
+array Links which provide actions to take after the install is finished. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classModuleUpdater_aca197ac3c04662e4c56c26e839fe01d7}{ModuleUpdater}, and \hyperlink{classThemeUpdater_a0ed994865cfa41230a515aa3d759e693}{ThemeUpdater}.\hypertarget{classUpdater_a68cf9e613e06963f0fa6d0f1779f36e7}{
+\index{Updater@{Updater}!postUpdate@{postUpdate}}
+\index{postUpdate@{postUpdate}!Updater@{Updater}}
+\subsubsection[{postUpdate}]{\setlength{\rightskip}{0pt plus 5cm}Updater::postUpdate ()}}
+\label{classUpdater_a68cf9e613e06963f0fa6d0f1779f36e7}
+Perform actions after new code is updated. \hypertarget{classUpdater_a377feb2830d31884f8ff1ff152d94576}{
+\index{Updater@{Updater}!postUpdateTasks@{postUpdateTasks}}
+\index{postUpdateTasks@{postUpdateTasks}!Updater@{Updater}}
+\subsubsection[{postUpdateTasks}]{\setlength{\rightskip}{0pt plus 5cm}Updater::postUpdateTasks ()}}
+\label{classUpdater_a377feb2830d31884f8ff1ff152d94576}
+Return an array of links to pages that should be visited post operation.
+
+\begin{DoxyReturn}{Returns}
+array Links which provide actions to take after the update is finished. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classModuleUpdater_a120524659a6f049fd27dbf487a61af0e}{ModuleUpdater}.\hypertarget{classUpdater_a79c3ae76bfdfa5f763978196055086dd}{
+\index{Updater@{Updater}!prepareInstallDirectory@{prepareInstallDirectory}}
+\index{prepareInstallDirectory@{prepareInstallDirectory}!Updater@{Updater}}
+\subsubsection[{prepareInstallDirectory}]{\setlength{\rightskip}{0pt plus 5cm}Updater::prepareInstallDirectory (\&\$ {\em filetransfer}, \/  \$ {\em directory})}}
+\label{classUpdater_a79c3ae76bfdfa5f763978196055086dd}
+Make sure the installation parent directory exists and is writable.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{classFileTransfer}{FileTransfer}}]\$filetransfer Object which is a child of \hyperlink{classFileTransfer}{FileTransfer}. \item[{\em string}]\$directory The installation directory to prepare. \end{DoxyParams}
+\hypertarget{classUpdater_a3129525aef507bdf5c3f8abf278b8e88}{
+\index{Updater@{Updater}!update@{update}}
+\index{update@{update}!Updater@{Updater}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}Updater::update (\&\$ {\em filetransfer}, \/  \$ {\em overrides} = {\ttfamily array()})}}
+\label{classUpdater_a3129525aef507bdf5c3f8abf278b8e88}
+Updates a Drupal project, returns a list of next actions.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{classFileTransfer}{FileTransfer}}]\$filetransfer Object that is a child of \hyperlink{classFileTransfer}{FileTransfer}. Used for moving files to the server. \item[{\em array}]\$overrides An array of settings to override defaults; see self::getInstallArgs().\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of links which the user may need to complete the update 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/\hyperlink{updater_8inc}{updater.inc}\end{DoxyCompactItemize}

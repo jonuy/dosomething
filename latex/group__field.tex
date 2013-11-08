@@ -1,0 +1,601 @@
+\hypertarget{group__field}{
+\section{Field API}
+\label{group__field}\index{Field API@{Field API}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classFieldUpdateForbiddenException}{FieldUpdateForbiddenException}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__field_gac14c9ab18aca82aebcbc6cfa511964fc}{FIELD\_\-CARDINALITY\_\-UNLIMITED} 
+\item 
+enum \hyperlink{group__field_gabff95904b186d355153ceda1f3941975}{FIELD\_\-BEHAVIOR\_\-NONE} 
+\item 
+enum \hyperlink{group__field_ga9549af1a8f86107fbafc0e3425ec7629}{FIELD\_\-BEHAVIOR\_\-DEFAULT} 
+\item 
+enum \hyperlink{group__field_gae4cb2db55750703aae033c7b2cd8c465}{FIELD\_\-BEHAVIOR\_\-CUSTOM} 
+\item 
+enum \hyperlink{group__field_ga39b9fb0d47b181607a4d981a9bccbe8a}{FIELD\_\-LOAD\_\-CURRENT} 
+\item 
+enum \hyperlink{group__field_ga6eae4d17256be446f837da1a360f0096}{FIELD\_\-LOAD\_\-REVISION} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__field_ga8a225102daf78db5ed14900af54e795a}{field\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{group__field_ga1babb2e6f8b678938c3834f2df5240d4}{field\_\-theme} ()
+\item 
+\hyperlink{group__field_ga146e4e160374875d10cdf1fdcaf688e3}{field\_\-cron} ()
+\item 
+\hyperlink{group__field_gacc7e883a1a3d5103fe4284be28547450}{field\_\-modules\_\-uninstalled} (\$modules)
+\item 
+\hyperlink{group__field_ga5b151da09ab45e0f72989bc7bb6acc79}{field\_\-system\_\-info\_\-alter} (\&\$info, \$file, \$type)
+\item 
+\hyperlink{group__field_ga756e79c6b9be66a9ea28b6d9c97a4ad9}{field\_\-flush\_\-caches} ()
+\item 
+\hyperlink{group__field_ga9cc8250f001fdb464340cbf7a0e548af}{field\_\-modules\_\-enabled} (\$modules)
+\item 
+\hyperlink{group__field_ga608c655389025a251db0881706d70d59}{field\_\-modules\_\-disabled} (\$modules)
+\item 
+\hyperlink{group__field_ga8b6774c994bfbdd751d0e0aa83facfce}{field\_\-sync\_\-field\_\-status} ()
+\item 
+\hyperlink{group__field_gaf3444a608af81b62af5be3dbc72a7d7d}{field\_\-associate\_\-fields} (\$module)
+\item 
+\hyperlink{group__field_gac80e479e60b75dd09dfb706e04c05899}{field\_\-get\_\-default\_\-value} (\$entity\_\-type, \$entity, \$field, \$instance, \$langcode=NULL)
+\item 
+\hyperlink{group__field_gabff946d3aa40a032f913ad2f336cbd05}{\_\-field\_\-filter\_\-items} (\$field, \$items)
+\item 
+\hyperlink{group__field_ga8ce2774a8371d5435ef06e13bfc93246}{\_\-field\_\-sort\_\-items} (\$field, \$items)
+\item 
+\hyperlink{group__field_gae7d9330807ba1d474f79b67a3dae6113}{\_\-field\_\-sort\_\-items\_\-helper} (\$a, \$b)
+\item 
+\hyperlink{group__field_ga45c6b3ea588e59013c78e1b74e1b94a5}{\_\-field\_\-sort\_\-items\_\-value\_\-helper} (\$a, \$b)
+\item 
+\hyperlink{group__field_gab6416216c1491d34f1bdc7ce38abfe8c}{field\_\-bundle\_\-settings} (\$entity\_\-type, \$bundle, \$settings=NULL)
+\item 
+\hyperlink{group__field_ga43d37035f8764e021f18821d46a92341}{field\_\-view\_\-mode\_\-settings} (\$entity\_\-type, \$bundle)
+\item 
+\hyperlink{group__field_ga2dca22263fe45c35bceca2186c7ccc77}{field\_\-get\_\-display} (\$instance, \$view\_\-mode, \$entity)
+\item 
+\hyperlink{group__field_ga3ec2b23abfecffb6a85e203b6233b84b}{field\_\-extra\_\-fields\_\-get\_\-display} (\$entity\_\-type, \$bundle, \$view\_\-mode)
+\item 
+\hyperlink{group__field_gaf9008661a037c20fca58ad9738495325}{\_\-field\_\-extra\_\-fields\_\-pre\_\-render} (\$elements)
+\item 
+\hyperlink{group__field_ga48d2c3c37e58251cd5abb49d38f8f039}{field\_\-cache\_\-clear} ()
+\item 
+\hyperlink{group__field_ga181095248684b8b5a45c08ab8d22a813}{field\_\-filter\_\-xss} (\$string)
+\item 
+\hyperlink{group__field_ga7ae8de4fae20a2142bb4c8d1e007cda5}{\_\-field\_\-filter\_\-xss\_\-allowed\_\-tags} ()
+\item 
+\hyperlink{group__field_ga047cdec864ecb94587790aa3ed5fbd18}{\_\-field\_\-filter\_\-xss\_\-display\_\-allowed\_\-tags} ()
+\item 
+\hyperlink{group__field_gab716b21eb481e4f9d9f5f2af71093d81}{field\_\-view\_\-value} (\$entity\_\-type, \$entity, \$field\_\-name, \$item, \$display=array(), \$langcode=NULL)
+\item 
+\hyperlink{group__field_gacb7c7349bbe181c174421e23210ae1ba}{field\_\-view\_\-field} (\$entity\_\-type, \$entity, \$field\_\-name, \$display=array(), \$langcode=NULL)
+\item 
+\hyperlink{group__field_ga32f621685ff4bccfb3fa51e43f27ea57}{field\_\-get\_\-items} (\$entity\_\-type, \$entity, \$field\_\-name, \$langcode=NULL)
+\item 
+\hyperlink{group__field_ga7545752dd04141d053f69416742a1ea4}{field\_\-has\_\-data} (\$field)
+\item 
+\hyperlink{group__field_gad363d4b50f9326e85cbf1180cd848b3b}{field\_\-access} (\$op, \$field, \$entity\_\-type, \$entity=NULL, \$account=NULL)
+\item 
+\hyperlink{group__field_gade5f766418eabc45894d745b3b4541c4}{field\_\-extract\_\-bundle} (\$entity\_\-type, \$bundle)
+\item 
+\hyperlink{group__field_ga6dc60d3c482230f380dd3b112487d717}{template\_\-preprocess\_\-field} (\&\$variables, \$hook)
+\item 
+\hyperlink{group__field_ga4fd3ce05ef61810b1f66283302ab7cad}{template\_\-process\_\-field} (\&\$variables, \$hook)
+\item 
+\hyperlink{group__field_gac2e5ac493328c146f17164168de40492}{field\_\-ui\_\-menu\_\-load} (\$field\_\-name, \$entity\_\-type, \$bundle\_\-name, \$bundle\_\-pos, \$map)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Attach custom data fields to Drupal entities.
+
+The Field API allows custom data fields to be attached to Drupal entities and takes care of storing, loading, editing, and rendering field data. Any entity type (node, user, etc.) can use the Field API to make itself \char`\"{}fieldable\char`\"{} and thus allow fields to be attached to it. Other modules can provide a user interface for managing custom fields via a web browser as well as a wide and flexible variety of data type, form element, and display format capabilities.
+
+The Field API defines two primary data structures, Field and Instance, and the concept of a Bundle. A Field defines a particular type of data that can be attached to entities. A Field Instance is a Field attached to a single Bundle. A Bundle is a set of fields that are treated as a group by the Field Attach API and is related to a single fieldable entity type.
+
+For example, suppose a site administrator wants Article nodes to have a subtitle and photo. Using the Field API or Field UI module, the administrator creates a field named 'subtitle' of type 'text' and a field named 'photo' of type 'image'. The administrator (again, via a UI) creates two Field Instances, one attaching the field 'subtitle' to the 'node' bundle 'article' and one attaching the field 'photo' to the 'node' bundle 'article'. When the node system uses the Field Attach API to load all fields for an Article node, it passes the node's entity type (which is 'node') and content type (which is 'article') as the node's bundle. \hyperlink{group__field__attach_ga1e92543395961c912eb293b50e991586}{field\_\-attach\_\-load()} then loads the 'subtitle' and 'photo' fields because they are both attached to the 'node' bundle 'article'.
+
+Field definitions are represented as an array of key/value pairs.
+
+array \$field:
+\begin{DoxyItemize}
+\item id (integer, read-\/only): The primary identifier of the field. It is assigned automatically by \hyperlink{group__field__crud_ga0f879889d2da2b5d638252d7eb027746}{field\_\-create\_\-field()}.
+\item field\_\-name (string): The name of the field. Each field name is unique within Field API. When a field is attached to an entity, the field's data is stored in \$entity-\/$>$\$field\_\-name. Maximum length is 32 characters.
+\item type (string): The type of the field, such as 'text' or 'image'. Field types are defined by modules that implement \hyperlink{group__field__types_gad3eb779f26f41b520f19af011ece3eb1}{hook\_\-field\_\-info()}.
+\item entity\_\-types (array): The array of entity types that can hold instances of this field. If empty or not specified, the field can have instances in any entity type.
+\item cardinality (integer): The number of values the field can hold. Legal values are any positive integer or FIELD\_\-CARDINALITY\_\-UNLIMITED.
+\item translatable (integer): Whether the field is translatable.
+\item locked (integer): Whether or not the field is available for editing. If TRUE, users can't change field settings or create new instances of the field in the UI. Defaults to FALSE.
+\item module (string, read-\/only): The name of the module that implements the field type.
+\item active (integer, read-\/only): TRUE if the module that implements the field type is currently enabled, FALSE otherwise.
+\item deleted (integer, read-\/only): TRUE if this field has been deleted, FALSE otherwise. Deleted fields are ignored by the Field Attach API. This property exists because fields can be marked for deletion but only actually destroyed by a separate garbage-\/collection process.
+\item columns (array, read-\/only): An array of the Field API columns used to store each value of this field. The column list may depend on field settings; it is not constant per field type. Field API column specifications are exactly like Schema API column specifications but, depending on the field storage module in use, the name of the column may not represent an actual column in an SQL database.
+\item indexes (array): An array of indexes on data columns, using the same definition format as Schema API index specifications. Only columns that appear in the 'columns' setting are allowed. Note that field types can specify default indexes, which can be modified or added to when creating a field.
+\item foreign keys: (optional) An associative array of relations, using the same structure as the 'foreign keys' definition of \hyperlink{group__schemaapi_ga9abd926ddaf68a22e6dca28a25d0c6f5}{hook\_\-schema()}. Note, however, that the field data is not necessarily stored in SQL. Also, the possible usage is limited, as you cannot specify another field as related, only existing SQL tables, such as filter formats.
+\item settings (array): A sub-\/array of key/value pairs of field-\/type-\/specific settings. Each field type module defines and documents its own field settings.
+\item storage (array): A sub-\/array of key/value pairs identifying the storage backend to use for the for the field:
+\begin{DoxyItemize}
+\item type (string): The storage backend used by the field. Storage backends are defined by modules that implement \hyperlink{group__field__storage_gadc5bfde3133504e946bb0aae8babe6f3}{hook\_\-field\_\-storage\_\-info()}.
+\item module (string, read-\/only): The name of the module that implements the storage backend.
+\item active (integer, read-\/only): TRUE if the module that implements the storage backend is currently enabled, FALSE otherwise.
+\item settings (array): A sub-\/array of key/value pairs of settings. Each storage backend defines and documents its own settings.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Field instance definitions are represented as an array of key/value pairs.
+
+array \$instance:
+\begin{DoxyItemize}
+\item id (integer, read-\/only): The primary identifier of this field instance. It is assigned automatically by \hyperlink{group__field__crud_ga3a1e23613d572a6e908e063c3a0335f8}{field\_\-create\_\-instance()}.
+\item field\_\-id (integer, read-\/only): The foreign key of the field attached to the bundle by this instance. It is populated automatically by \hyperlink{group__field__crud_ga3a1e23613d572a6e908e063c3a0335f8}{field\_\-create\_\-instance()}.
+\item field\_\-name (string): The name of the field attached to the bundle by this instance.
+\item entity\_\-type (string): The name of the entity type the instance is attached to.
+\item bundle (string): The name of the bundle that the field is attached to.
+\item label (string): A human-\/readable label for the field when used with this bundle. For example, the label will be the title of Form API elements for this instance.
+\item description (string): A human-\/readable description for the field when used with this bundle. For example, the description will be the help text of Form API elements for this instance.
+\item required (integer): TRUE if a value for this field is required when used with this bundle, FALSE otherwise. Currently, required-\/ness is only enforced during Form API operations, not by \hyperlink{group__field__attach_ga1e92543395961c912eb293b50e991586}{field\_\-attach\_\-load()}, \hyperlink{group__field__attach_gad7c37d577b97db5e0c182bc570ed7cf4}{field\_\-attach\_\-insert()}, or \hyperlink{group__field__attach_ga8d15efdca36306ea04552bed4986e77b}{field\_\-attach\_\-update()}.
+\item default\_\-value\_\-function (string): The name of the function, if any, that will provide a default value.
+\item default\_\-value (array): If default\_\-value\_\-function is not set, then fixed values can be provided.
+\item deleted (integer, read-\/only): TRUE if this instance has been deleted, FALSE otherwise. Deleted instances are ignored by the Field Attach API. This property exists because instances can be marked for deletion but only actually destroyed by a separate garbage-\/collection process.
+\item settings (array): A sub-\/array of key/value pairs of field-\/type-\/specific instance settings. Each field type module defines and documents its own instance settings.
+\item widget (array): A sub-\/array of key/value pairs identifying the Form API input widget for the field when used by this bundle:
+\begin{DoxyItemize}
+\item type (string): The type of the widget, such as text\_\-textfield. Widget types are defined by modules that implement \hyperlink{group__field__widget_gac53aa6c2a4ac1215660d25b5d7f20792}{hook\_\-field\_\-widget\_\-info()}.
+\item settings (array): A sub-\/array of key/value pairs of widget-\/type-\/specific settings. Each field widget type module defines and documents its own widget settings.
+\item weight (float): The weight of the widget relative to the other elements in entity edit forms.
+\item module (string, read-\/only): The name of the module that implements the widget type.
+\end{DoxyItemize}
+\item display (array): A sub-\/array of key/value pairs identifying the way field values should be displayed in each of the entity type's \hyperlink{classview}{view} modes, plus the 'default' mode. For each \hyperlink{classview}{view} mode, Field UI lets site administrators define whether they want to use a dedicated set of display options or the 'default' options to reduce the number of displays to maintain as they add new fields. For nodes, on a fresh install, only the 'teaser' \hyperlink{classview}{view} mode is configured to use custom display options, all other \hyperlink{classview}{view} modes defined use the 'default' options by default. When programmatically adding field instances on nodes, it is therefore recommended to at least specify display options for 'default' and 'teaser':
+\begin{DoxyItemize}
+\item default (array): A sub-\/array of key/value pairs describing the display options to be used when the field is being displayed in \hyperlink{classview}{view} modes that are not configured to use dedicated display options:
+\begin{DoxyItemize}
+\item label (string): Position of the label. 'inline', 'above' and 'hidden' are the values recognized by the default 'field' theme implementation.
+\item type (string): The type of the display formatter, or 'hidden' for no display.
+\item settings (array): A sub-\/array of key/value pairs of display options specific to the formatter.
+\item weight (float): The weight of the field relative to the other entity components displayed in this \hyperlink{classview}{view} mode.
+\item module (string, read-\/only): The name of the module which implements the display formatter.
+\end{DoxyItemize}
+\item some\_\-mode: A sub-\/array of key/value pairs describing the display options to be used when the field is being displayed in the 'some\_\-mode' \hyperlink{classview}{view} mode. Those options will only be actually applied at run time if the \hyperlink{classview}{view} mode is not configured to use default settings for this bundle:
+\begin{DoxyItemize}
+\item ...
+\end{DoxyItemize}
+\item other\_\-mode:
+\begin{DoxyItemize}
+\item ...
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+The (default) render arrays produced for field instances are documented at \hyperlink{group__field__attach_gaa752a8fd31173fd2308d71eb059e00c7}{field\_\-attach\_\-view()}.
+
+Bundles are represented by two strings, an entity type and a bundle name.
+
+
+\begin{DoxyItemize}
+\item \hyperlink{group__field__types}{Field Types API }. Defines field types, widget types, and display formatters. Field modules use this API to provide field types like Text and Node Reference along with the associated form elements and display formatters.
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item \hyperlink{group__field__crud}{Field CRUD API }. Create, updates, and deletes fields, bundles (a.k.a. \char`\"{}content types\char`\"{}), and instances. Modules use this API, often in \hyperlink{group__hooks_ga1ecdb5a2a046ea63dc790c3ed90338e5}{hook\_\-install()}, to create custom data structures.
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item \hyperlink{group__field__attach}{Field Attach API }. Connects entity types to the Field API. Field Attach API functions load, store, generate Form API structures, display, and perform a variety of other functions for field data connected to individual entities. Fieldable entity types like node and user use this API to make themselves fieldable.
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item \hyperlink{group__field__info}{Field Info API }. Exposes information about all fields, instances, widgets, and related information defined by or with the Field API.
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item \hyperlink{group__field__storage}{Field Storage API }. Provides a pluggable back-\/end storage system for actual field data. The default implementation, \hyperlink{field__sql__storage_8module}{field\_\-sql\_\-storage.module}, stores field data in the local SQL database.
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item \hyperlink{group__field__purge}{Field API bulk data deletion }. Cleans up after bulk deletion operations such as \hyperlink{group__field__crud_gaa4792fd8f5f651b985dec7eca250f0f1}{field\_\-delete\_\-field()} and \hyperlink{group__field__crud_ga16bf0e2a15b20b066ff84403b5f24bf5}{field\_\-delete\_\-instance()}.
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item \hyperlink{group__field__language}{Field language API }. Provides native multilingual support for the Field API. 
+\end{DoxyItemize}
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__field_gae4cb2db55750703aae033c7b2cd8c465}{
+\index{field@{field}!FIELD\_\-BEHAVIOR\_\-CUSTOM@{FIELD\_\-BEHAVIOR\_\-CUSTOM}}
+\index{FIELD\_\-BEHAVIOR\_\-CUSTOM@{FIELD\_\-BEHAVIOR\_\-CUSTOM}!field@{field}}
+\subsubsection[{FIELD\_\-BEHAVIOR\_\-CUSTOM}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf FIELD\_\-BEHAVIOR\_\-CUSTOM}}}
+\label{group__field_gae4cb2db55750703aae033c7b2cd8c465}
+Value for field API indicating a widget can receive several field values.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__field__widget_gac53aa6c2a4ac1215660d25b5d7f20792}{hook\_\-field\_\-widget\_\-info()} 
+\end{DoxySeeAlso}
+\hypertarget{group__field_ga9549af1a8f86107fbafc0e3425ec7629}{
+\index{field@{field}!FIELD\_\-BEHAVIOR\_\-DEFAULT@{FIELD\_\-BEHAVIOR\_\-DEFAULT}}
+\index{FIELD\_\-BEHAVIOR\_\-DEFAULT@{FIELD\_\-BEHAVIOR\_\-DEFAULT}!field@{field}}
+\subsubsection[{FIELD\_\-BEHAVIOR\_\-DEFAULT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf FIELD\_\-BEHAVIOR\_\-DEFAULT}}}
+\label{group__field_ga9549af1a8f86107fbafc0e3425ec7629}
+Value for field API concerning widget default and multiple value settings.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__field__widget_gac53aa6c2a4ac1215660d25b5d7f20792}{hook\_\-field\_\-widget\_\-info()}
+\end{DoxySeeAlso}
+When used in a widget default context, indicates the widget accepts default values. When used in a multiple value context for a widget that allows the input of one single field value, indicates that the widget will be repeated for each value input. \hypertarget{group__field_gabff95904b186d355153ceda1f3941975}{
+\index{field@{field}!FIELD\_\-BEHAVIOR\_\-NONE@{FIELD\_\-BEHAVIOR\_\-NONE}}
+\index{FIELD\_\-BEHAVIOR\_\-NONE@{FIELD\_\-BEHAVIOR\_\-NONE}!field@{field}}
+\subsubsection[{FIELD\_\-BEHAVIOR\_\-NONE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf FIELD\_\-BEHAVIOR\_\-NONE}}}
+\label{group__field_gabff95904b186d355153ceda1f3941975}
+Value for field API indicating a widget doesn't accept default values.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__field__widget_gac53aa6c2a4ac1215660d25b5d7f20792}{hook\_\-field\_\-widget\_\-info()} 
+\end{DoxySeeAlso}
+\hypertarget{group__field_gac14c9ab18aca82aebcbc6cfa511964fc}{
+\index{field@{field}!FIELD\_\-CARDINALITY\_\-UNLIMITED@{FIELD\_\-CARDINALITY\_\-UNLIMITED}}
+\index{FIELD\_\-CARDINALITY\_\-UNLIMITED@{FIELD\_\-CARDINALITY\_\-UNLIMITED}!field@{field}}
+\subsubsection[{FIELD\_\-CARDINALITY\_\-UNLIMITED}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf FIELD\_\-CARDINALITY\_\-UNLIMITED}}}
+\label{group__field_gac14c9ab18aca82aebcbc6cfa511964fc}
+Value for field API indicating a field accepts an unlimited number of values. \hypertarget{group__field_ga39b9fb0d47b181607a4d981a9bccbe8a}{
+\index{field@{field}!FIELD\_\-LOAD\_\-CURRENT@{FIELD\_\-LOAD\_\-CURRENT}}
+\index{FIELD\_\-LOAD\_\-CURRENT@{FIELD\_\-LOAD\_\-CURRENT}!field@{field}}
+\subsubsection[{FIELD\_\-LOAD\_\-CURRENT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf FIELD\_\-LOAD\_\-CURRENT}}}
+\label{group__field_ga39b9fb0d47b181607a4d981a9bccbe8a}
+Age argument for loading the most recent version of an entity's field data with \hyperlink{group__field__attach_ga1e92543395961c912eb293b50e991586}{field\_\-attach\_\-load()}. \hypertarget{group__field_ga6eae4d17256be446f837da1a360f0096}{
+\index{field@{field}!FIELD\_\-LOAD\_\-REVISION@{FIELD\_\-LOAD\_\-REVISION}}
+\index{FIELD\_\-LOAD\_\-REVISION@{FIELD\_\-LOAD\_\-REVISION}!field@{field}}
+\subsubsection[{FIELD\_\-LOAD\_\-REVISION}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf FIELD\_\-LOAD\_\-REVISION}}}
+\label{group__field_ga6eae4d17256be446f837da1a360f0096}
+Age argument for loading the version of an entity's field data specified in the entity with \hyperlink{group__field__attach_ga1e92543395961c912eb293b50e991586}{field\_\-attach\_\-load()}. 
+
+\subsection{Function Documentation}
+\hypertarget{group__field_gaf9008661a037c20fca58ad9738495325}{
+\index{field@{field}!\_\-field\_\-extra\_\-fields\_\-pre\_\-render@{\_\-field\_\-extra\_\-fields\_\-pre\_\-render}}
+\index{\_\-field\_\-extra\_\-fields\_\-pre\_\-render@{\_\-field\_\-extra\_\-fields\_\-pre\_\-render}!field@{field}}
+\subsubsection[{\_\-field\_\-extra\_\-fields\_\-pre\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}\_\-field\_\-extra\_\-fields\_\-pre\_\-render (\$ {\em elements})}}
+\label{group__field_gaf9008661a037c20fca58ad9738495325}
+Pre-\/render callback to adjust weights and visibility of non-\/field elements. \hypertarget{group__field_gabff946d3aa40a032f913ad2f336cbd05}{
+\index{field@{field}!\_\-field\_\-filter\_\-items@{\_\-field\_\-filter\_\-items}}
+\index{\_\-field\_\-filter\_\-items@{\_\-field\_\-filter\_\-items}!field@{field}}
+\subsubsection[{\_\-field\_\-filter\_\-items}]{\setlength{\rightskip}{0pt plus 5cm}\_\-field\_\-filter\_\-items (\$ {\em field}, \/  \$ {\em items})}}
+\label{group__field_gabff946d3aa40a032f913ad2f336cbd05}
+Helper function to filter out empty field values.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field}]The field definition. \item[{\em \$items}]The field values to filter.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The array of items without empty field values. The function also renumbers the array keys to ensure sequential deltas. 
+\end{DoxyReturn}
+\hypertarget{group__field_ga7ae8de4fae20a2142bb4c8d1e007cda5}{
+\index{field@{field}!\_\-field\_\-filter\_\-xss\_\-allowed\_\-tags@{\_\-field\_\-filter\_\-xss\_\-allowed\_\-tags}}
+\index{\_\-field\_\-filter\_\-xss\_\-allowed\_\-tags@{\_\-field\_\-filter\_\-xss\_\-allowed\_\-tags}!field@{field}}
+\subsubsection[{\_\-field\_\-filter\_\-xss\_\-allowed\_\-tags}]{\setlength{\rightskip}{0pt plus 5cm}\_\-field\_\-filter\_\-xss\_\-allowed\_\-tags ()}}
+\label{group__field_ga7ae8de4fae20a2142bb4c8d1e007cda5}
+List of tags allowed by \hyperlink{group__field_ga181095248684b8b5a45c08ab8d22a813}{field\_\-filter\_\-xss()}. \hypertarget{group__field_ga047cdec864ecb94587790aa3ed5fbd18}{
+\index{field@{field}!\_\-field\_\-filter\_\-xss\_\-display\_\-allowed\_\-tags@{\_\-field\_\-filter\_\-xss\_\-display\_\-allowed\_\-tags}}
+\index{\_\-field\_\-filter\_\-xss\_\-display\_\-allowed\_\-tags@{\_\-field\_\-filter\_\-xss\_\-display\_\-allowed\_\-tags}!field@{field}}
+\subsubsection[{\_\-field\_\-filter\_\-xss\_\-display\_\-allowed\_\-tags}]{\setlength{\rightskip}{0pt plus 5cm}\_\-field\_\-filter\_\-xss\_\-display\_\-allowed\_\-tags ()}}
+\label{group__field_ga047cdec864ecb94587790aa3ed5fbd18}
+Human-\/readable list of allowed tags, for display in help texts. \hypertarget{group__field_ga8ce2774a8371d5435ef06e13bfc93246}{
+\index{field@{field}!\_\-field\_\-sort\_\-items@{\_\-field\_\-sort\_\-items}}
+\index{\_\-field\_\-sort\_\-items@{\_\-field\_\-sort\_\-items}!field@{field}}
+\subsubsection[{\_\-field\_\-sort\_\-items}]{\setlength{\rightskip}{0pt plus 5cm}\_\-field\_\-sort\_\-items (\$ {\em field}, \/  \$ {\em items})}}
+\label{group__field_ga8ce2774a8371d5435ef06e13bfc93246}
+Helper function to sort items in a field according to user drag-\/n-\/drop reordering. \hypertarget{group__field_gae7d9330807ba1d474f79b67a3dae6113}{
+\index{field@{field}!\_\-field\_\-sort\_\-items\_\-helper@{\_\-field\_\-sort\_\-items\_\-helper}}
+\index{\_\-field\_\-sort\_\-items\_\-helper@{\_\-field\_\-sort\_\-items\_\-helper}!field@{field}}
+\subsubsection[{\_\-field\_\-sort\_\-items\_\-helper}]{\setlength{\rightskip}{0pt plus 5cm}\_\-field\_\-sort\_\-items\_\-helper (\$ {\em a}, \/  \$ {\em b})}}
+\label{group__field_gae7d9330807ba1d474f79b67a3dae6113}
+Sort function for items order. (copied form \hyperlink{common_8inc_a61f0cc62072ab44aa349478fb7219c74}{element\_\-sort()}, which acts on weight keys) \hypertarget{group__field_ga45c6b3ea588e59013c78e1b74e1b94a5}{
+\index{field@{field}!\_\-field\_\-sort\_\-items\_\-value\_\-helper@{\_\-field\_\-sort\_\-items\_\-value\_\-helper}}
+\index{\_\-field\_\-sort\_\-items\_\-value\_\-helper@{\_\-field\_\-sort\_\-items\_\-value\_\-helper}!field@{field}}
+\subsubsection[{\_\-field\_\-sort\_\-items\_\-value\_\-helper}]{\setlength{\rightskip}{0pt plus 5cm}\_\-field\_\-sort\_\-items\_\-value\_\-helper (\$ {\em a}, \/  \$ {\em b})}}
+\label{group__field_ga45c6b3ea588e59013c78e1b74e1b94a5}
+Same as above, using \mbox{[}'\_\-weight'\mbox{]}\mbox{[}'value'\mbox{]} \hypertarget{group__field_gad363d4b50f9326e85cbf1180cd848b3b}{
+\index{field@{field}!field\_\-access@{field\_\-access}}
+\index{field\_\-access@{field\_\-access}!field@{field}}
+\subsubsection[{field\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-access (\$ {\em op}, \/  \$ {\em field}, \/  \$ {\em entity\_\-type}, \/  \$ {\em entity} = {\ttfamily NULL}, \/  \$ {\em account} = {\ttfamily NULL})}}
+\label{group__field_gad363d4b50f9326e85cbf1180cd848b3b}
+Determine whether the user has access to a given field.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$op}]The operation to be performed. Possible values:
+\begin{DoxyItemize}
+\item 'edit'
+\item 'view' 
+\end{DoxyItemize}\item[{\em \$field}]The full field structure array for the field on which the operation is to be performed. See \hyperlink{group__field__info_ga74cfc942cd2baa5c49780b08c5d357d4}{field\_\-info\_\-field()}. \item[{\em \$entity\_\-type}]The type of \$entity; e.g., 'node' or 'user'. \item[{\em \$entity}](optional) The entity for the operation. \item[{\em \$account}](optional) The account to check, if not given use currently logged in user.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the operation is allowed; FALSE if the operation is denied. 
+\end{DoxyReturn}
+\hypertarget{group__field_gaf3444a608af81b62af5be3dbc72a7d7d}{
+\index{field@{field}!field\_\-associate\_\-fields@{field\_\-associate\_\-fields}}
+\index{field\_\-associate\_\-fields@{field\_\-associate\_\-fields}!field@{field}}
+\subsubsection[{field\_\-associate\_\-fields}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-associate\_\-fields (\$ {\em module})}}
+\label{group__field_gaf3444a608af81b62af5be3dbc72a7d7d}
+Allows a module to update the database for fields and columns it controls.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$module}]The name of the module to update on. \end{DoxyParams}
+\hypertarget{group__field_gab6416216c1491d34f1bdc7ce38abfe8c}{
+\index{field@{field}!field\_\-bundle\_\-settings@{field\_\-bundle\_\-settings}}
+\index{field\_\-bundle\_\-settings@{field\_\-bundle\_\-settings}!field@{field}}
+\subsubsection[{field\_\-bundle\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-bundle\_\-settings (\$ {\em entity\_\-type}, \/  \$ {\em bundle}, \/  \$ {\em settings} = {\ttfamily NULL})}}
+\label{group__field_gab6416216c1491d34f1bdc7ce38abfe8c}
+Gets or sets administratively defined bundle settings.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$entity\_\-type The type of \$entity; e.g., 'node' or 'user'. \item[{\em string}]\$bundle The bundle name. \item[{\em array$|$null}]\$settings (optional) The settings to store, an associative array with the following elements:
+\begin{DoxyItemize}
+\item view\_\-modes: An associative array keyed by \hyperlink{classview}{view} mode, with the following key/value pairs:
+\begin{DoxyItemize}
+\item custom\_\-settings: Boolean specifying whether the \hyperlink{classview}{view} mode uses a dedicated set of display options (TRUE), or the 'default' options (FALSE). Defaults to FALSE.
+\end{DoxyItemize}
+\item extra\_\-fields: An associative array containing the form and display settings for extra fields (also known as pseudo-\/fields):
+\begin{DoxyItemize}
+\item form: An associative array whose keys are the names of extra fields, and whose values are associative arrays with the following elements:
+\begin{DoxyItemize}
+\item weight: The weight of the extra field, determining its position on an entity form.
+\end{DoxyItemize}
+\item display: An associative array whose keys are the names of extra fields, and whose values are associative arrays keyed by the name of \hyperlink{classview}{view} modes. This array must include an item for the 'default' \hyperlink{classview}{view} mode. Each \hyperlink{classview}{view} mode sub-\/array contains the following elements:
+\begin{DoxyItemize}
+\item weight: The weight of the extra field, determining its position when an entity is viewed.
+\item visible: TRUE if the extra field is visible, FALSE otherwise.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$|$null If no \$settings are passed, the current settings are returned. 
+\end{DoxyReturn}
+\hypertarget{group__field_ga48d2c3c37e58251cd5abb49d38f8f039}{
+\index{field@{field}!field\_\-cache\_\-clear@{field\_\-cache\_\-clear}}
+\index{field\_\-cache\_\-clear@{field\_\-cache\_\-clear}!field@{field}}
+\subsubsection[{field\_\-cache\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-cache\_\-clear ()}}
+\label{group__field_ga48d2c3c37e58251cd5abb49d38f8f039}
+Clear the field info and field data caches. \hypertarget{group__field_ga146e4e160374875d10cdf1fdcaf688e3}{
+\index{field@{field}!field\_\-cron@{field\_\-cron}}
+\index{field\_\-cron@{field\_\-cron}!field@{field}}
+\subsubsection[{field\_\-cron}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-cron ()}}
+\label{group__field_ga146e4e160374875d10cdf1fdcaf688e3}
+Implements \hyperlink{group__hooks_gaf07f1e3d98112fc2ba6920cf7ee6fb16}{hook\_\-cron()}. \hypertarget{group__field_ga3ec2b23abfecffb6a85e203b6233b84b}{
+\index{field@{field}!field\_\-extra\_\-fields\_\-get\_\-display@{field\_\-extra\_\-fields\_\-get\_\-display}}
+\index{field\_\-extra\_\-fields\_\-get\_\-display@{field\_\-extra\_\-fields\_\-get\_\-display}!field@{field}}
+\subsubsection[{field\_\-extra\_\-fields\_\-get\_\-display}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-extra\_\-fields\_\-get\_\-display (\$ {\em entity\_\-type}, \/  \$ {\em bundle}, \/  \$ {\em view\_\-mode})}}
+\label{group__field_ga3ec2b23abfecffb6a85e203b6233b84b}
+Returns the display settings to use for pseudo-\/fields in a given \hyperlink{classview}{view} mode.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of \$entity; e.g., 'node' or 'user'. \item[{\em \$bundle}]The bundle name. \item[{\em \$view\_\-mode}]The \hyperlink{classview}{view} mode.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The display settings to be used when viewing the bundle's pseudo-\/fields. 
+\end{DoxyReturn}
+\hypertarget{group__field_gade5f766418eabc45894d745b3b4541c4}{
+\index{field@{field}!field\_\-extract\_\-bundle@{field\_\-extract\_\-bundle}}
+\index{field\_\-extract\_\-bundle@{field\_\-extract\_\-bundle}!field@{field}}
+\subsubsection[{field\_\-extract\_\-bundle}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-extract\_\-bundle (\$ {\em entity\_\-type}, \/  \$ {\em bundle})}}
+\label{group__field_gade5f766418eabc45894d745b3b4541c4}
+Helper function to extract the bundle name of from a bundle object.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of \$entity; e.g., 'node' or 'user'. \item[{\em \$bundle}]The bundle object (or string if bundles for this entity type do not exist as standalone objects). \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The bundle name. 
+\end{DoxyReturn}
+\hypertarget{group__field_ga181095248684b8b5a45c08ab8d22a813}{
+\index{field@{field}!field\_\-filter\_\-xss@{field\_\-filter\_\-xss}}
+\index{field\_\-filter\_\-xss@{field\_\-filter\_\-xss}!field@{field}}
+\subsubsection[{field\_\-filter\_\-xss}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-filter\_\-xss (\$ {\em string})}}
+\label{group__field_ga181095248684b8b5a45c08ab8d22a813}
+Like \hyperlink{group__sanitization_ga97dcceb77b76539219af2a85eacbe18d}{filter\_\-xss\_\-admin()}, but with a shorter list of allowed tags.
+
+Used for items entered by administrators, like field descriptions, allowed values, where some (mainly inline) mark-\/up may be desired (so \hyperlink{group__sanitization_ga76fc67a30fd8d75ddd80565e6e65a13d}{check\_\-plain()} is not acceptable). \hypertarget{group__field_ga756e79c6b9be66a9ea28b6d9c97a4ad9}{
+\index{field@{field}!field\_\-flush\_\-caches@{field\_\-flush\_\-caches}}
+\index{field\_\-flush\_\-caches@{field\_\-flush\_\-caches}!field@{field}}
+\subsubsection[{field\_\-flush\_\-caches}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-flush\_\-caches ()}}
+\label{group__field_ga756e79c6b9be66a9ea28b6d9c97a4ad9}
+Implements \hyperlink{group__hooks_ga66531e6e564157b7ca45ed07549c9b97}{hook\_\-flush\_\-caches()}. \hypertarget{group__field_gac80e479e60b75dd09dfb706e04c05899}{
+\index{field@{field}!field\_\-get\_\-default\_\-value@{field\_\-get\_\-default\_\-value}}
+\index{field\_\-get\_\-default\_\-value@{field\_\-get\_\-default\_\-value}!field@{field}}
+\subsubsection[{field\_\-get\_\-default\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-get\_\-default\_\-value (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode} = {\ttfamily NULL})}}
+\label{group__field_gac80e479e60b75dd09dfb706e04c05899}
+Helper function to get the default value for a field on an entity.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of \$entity; e.g., 'node' or 'user'. \item[{\em \$entity}]The entity for the operation. \item[{\em \$field}]The field structure. \item[{\em \$instance}]The instance structure. \item[{\em \$langcode}]The field language to fill-\/in with the default value. \end{DoxyParams}
+\hypertarget{group__field_ga2dca22263fe45c35bceca2186c7ccc77}{
+\index{field@{field}!field\_\-get\_\-display@{field\_\-get\_\-display}}
+\index{field\_\-get\_\-display@{field\_\-get\_\-display}!field@{field}}
+\subsubsection[{field\_\-get\_\-display}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-get\_\-display (\$ {\em instance}, \/  \$ {\em view\_\-mode}, \/  \$ {\em entity})}}
+\label{group__field_ga2dca22263fe45c35bceca2186c7ccc77}
+Returns the display settings to use for an instance in a given \hyperlink{classview}{view} mode.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$instance}]The field instance being displayed. \item[{\em \$view\_\-mode}]The \hyperlink{classview}{view} mode. \item[{\em \$entity}]The entity being displayed.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The display settings to be used when displaying the field values. 
+\end{DoxyReturn}
+\hypertarget{group__field_ga32f621685ff4bccfb3fa51e43f27ea57}{
+\index{field@{field}!field\_\-get\_\-items@{field\_\-get\_\-items}}
+\index{field\_\-get\_\-items@{field\_\-get\_\-items}!field@{field}}
+\subsubsection[{field\_\-get\_\-items}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-get\_\-items (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field\_\-name}, \/  \$ {\em langcode} = {\ttfamily NULL})}}
+\label{group__field_ga32f621685ff4bccfb3fa51e43f27ea57}
+Returns the field items in the language they currently would be displayed.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of \$entity; e.g., 'node' or 'user'. \item[{\em \$entity}]The entity containing the data to be displayed. \item[{\em \$field\_\-name}]The field to be displayed. \item[{\em \$langcode}](optional) The language code \$entity-\/$>$\{\$field\_\-name\} has to be displayed in. Defaults to the current language.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of field items keyed by delta if available, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{group__field_ga7545752dd04141d053f69416742a1ea4}{
+\index{field@{field}!field\_\-has\_\-data@{field\_\-has\_\-data}}
+\index{field\_\-has\_\-data@{field\_\-has\_\-data}!field@{field}}
+\subsubsection[{field\_\-has\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-has\_\-data (\$ {\em field})}}
+\label{group__field_ga7545752dd04141d053f69416742a1ea4}
+Determine whether a field has any data.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field}]A field structure. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the field has data for any entity; FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{group__field_ga8a225102daf78db5ed14900af54e795a}{
+\index{field@{field}!field\_\-help@{field\_\-help}}
+\index{field\_\-help@{field\_\-help}!field@{field}}
+\subsubsection[{field\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{group__field_ga8a225102daf78db5ed14900af54e795a}
+Implements \hyperlink{group__hooks_ga5589c2714a782738e8851c4c90231f0e}{hook\_\-help()}. \hypertarget{group__field_ga608c655389025a251db0881706d70d59}{
+\index{field@{field}!field\_\-modules\_\-disabled@{field\_\-modules\_\-disabled}}
+\index{field\_\-modules\_\-disabled@{field\_\-modules\_\-disabled}!field@{field}}
+\subsubsection[{field\_\-modules\_\-disabled}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-modules\_\-disabled (\$ {\em modules})}}
+\label{group__field_ga608c655389025a251db0881706d70d59}
+Implements \hyperlink{group__hooks_ga591c577fba8ca8dc8ec17f8bf80bdc4c}{hook\_\-modules\_\-disabled()}. \hypertarget{group__field_ga9cc8250f001fdb464340cbf7a0e548af}{
+\index{field@{field}!field\_\-modules\_\-enabled@{field\_\-modules\_\-enabled}}
+\index{field\_\-modules\_\-enabled@{field\_\-modules\_\-enabled}!field@{field}}
+\subsubsection[{field\_\-modules\_\-enabled}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-modules\_\-enabled (\$ {\em modules})}}
+\label{group__field_ga9cc8250f001fdb464340cbf7a0e548af}
+Implements \hyperlink{group__hooks_ga0eb7c67333e0f40b4a46c0dc4c4a92f3}{hook\_\-modules\_\-enabled()}. \hypertarget{group__field_gacc7e883a1a3d5103fe4284be28547450}{
+\index{field@{field}!field\_\-modules\_\-uninstalled@{field\_\-modules\_\-uninstalled}}
+\index{field\_\-modules\_\-uninstalled@{field\_\-modules\_\-uninstalled}!field@{field}}
+\subsubsection[{field\_\-modules\_\-uninstalled}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-modules\_\-uninstalled (\$ {\em modules})}}
+\label{group__field_gacc7e883a1a3d5103fe4284be28547450}
+Implements \hyperlink{group__hooks_ga4f29c7343438068a922459cbe0810279}{hook\_\-modules\_\-uninstalled()}. \hypertarget{group__field_ga8b6774c994bfbdd751d0e0aa83facfce}{
+\index{field@{field}!field\_\-sync\_\-field\_\-status@{field\_\-sync\_\-field\_\-status}}
+\index{field\_\-sync\_\-field\_\-status@{field\_\-sync\_\-field\_\-status}!field@{field}}
+\subsubsection[{field\_\-sync\_\-field\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-sync\_\-field\_\-status ()}}
+\label{group__field_ga8b6774c994bfbdd751d0e0aa83facfce}
+Refreshes the 'active' and 'storage\_\-active' columns for fields. \hypertarget{group__field_ga5b151da09ab45e0f72989bc7bb6acc79}{
+\index{field@{field}!field\_\-system\_\-info\_\-alter@{field\_\-system\_\-info\_\-alter}}
+\index{field\_\-system\_\-info\_\-alter@{field\_\-system\_\-info\_\-alter}!field@{field}}
+\subsubsection[{field\_\-system\_\-info\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-system\_\-info\_\-alter (\&\$ {\em info}, \/  \$ {\em file}, \/  \$ {\em type})}}
+\label{group__field_ga5b151da09ab45e0f72989bc7bb6acc79}
+Implements \hyperlink{group__hooks_ga7dd7f887131916d5bbbb02ae87a9113e}{hook\_\-system\_\-info\_\-alter()}.
+
+Goes through a list of all modules that provide a field type, and makes them required if there are any active fields of that type. \hypertarget{group__field_ga1babb2e6f8b678938c3834f2df5240d4}{
+\index{field@{field}!field\_\-theme@{field\_\-theme}}
+\index{field\_\-theme@{field\_\-theme}!field@{field}}
+\subsubsection[{field\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-theme ()}}
+\label{group__field_ga1babb2e6f8b678938c3834f2df5240d4}
+Implements \hyperlink{group__hooks_ga013ccb45c7aaab1c16cf9691428c910d}{hook\_\-theme()}. \hypertarget{group__field_gac2e5ac493328c146f17164168de40492}{
+\index{field@{field}!field\_\-ui\_\-menu\_\-load@{field\_\-ui\_\-menu\_\-load}}
+\index{field\_\-ui\_\-menu\_\-load@{field\_\-ui\_\-menu\_\-load}!field@{field}}
+\subsubsection[{field\_\-ui\_\-menu\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-ui\_\-menu\_\-load (\$ {\em field\_\-name}, \/  \$ {\em entity\_\-type}, \/  \$ {\em bundle\_\-name}, \/  \$ {\em bundle\_\-pos}, \/  \$ {\em map})}}
+\label{group__field_gac2e5ac493328c146f17164168de40492}
+Menu loader; Load a field instance based on field and bundle name.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field\_\-name}]The name of the field, as contained in the path. \item[{\em \$entity\_\-type}]The name of the entity. \item[{\em \$bundle\_\-name}]The name of the bundle, as contained in the path. \item[{\em \$bundle\_\-pos}]The position of \$bundle\_\-name in \$map. \item[{\em \$map}]The translated menu router path argument map.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The field instance array. 
+\end{DoxyReturn}
+\hypertarget{group__field_gacb7c7349bbe181c174421e23210ae1ba}{
+\index{field@{field}!field\_\-view\_\-field@{field\_\-view\_\-field}}
+\index{field\_\-view\_\-field@{field\_\-view\_\-field}!field@{field}}
+\subsubsection[{field\_\-view\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-view\_\-field (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field\_\-name}, \/  \$ {\em display} = {\ttfamily array()}, \/  \$ {\em langcode} = {\ttfamily NULL})}}
+\label{group__field_gacb7c7349bbe181c174421e23210ae1ba}
+Returns a renderable array for the value of a single field in an entity.
+
+The resulting output is a fully themed field with label and multiple values.
+
+This function can be used by third-\/party modules that need to output an isolated field.
+\begin{DoxyItemize}
+\item Do not use inside node (or other entities) templates, use render(\$content\mbox{[}FIELD\_\-NAME\mbox{]}) instead.
+\item Do not use to display all fields in an entity, use \hyperlink{group__field__attach_ga12b5fce5e2b2adb487c485c63bfe0298}{field\_\-attach\_\-prepare\_\-view()} and \hyperlink{group__field__attach_gaa752a8fd31173fd2308d71eb059e00c7}{field\_\-attach\_\-view()} instead.
+\item The \hyperlink{group__field_gab716b21eb481e4f9d9f5f2af71093d81}{field\_\-view\_\-value()} function can be used to output a single formatted field value, without label or wrapping field markup.
+\end{DoxyItemize}
+
+The function takes care of invoking the prepare\_\-view steps. It also respects field access permissions.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of \$entity; e.g., 'node' or 'user'. \item[{\em \$entity}]The entity containing the field to display. Must at least contain the id key and the field data to display. \item[{\em \$field\_\-name}]The name of the field to display. \item[{\em \$display}]Can be either:
+\begin{DoxyItemize}
+\item The name of a \hyperlink{classview}{view} mode. The field will be displayed according to the display settings specified for this \hyperlink{classview}{view} mode in the \$instance definition for the field in the entity's bundle. If no display settings are found for the \hyperlink{classview}{view} mode, the settings for the 'default' \hyperlink{classview}{view} mode will be used.
+\item An array of display settings, as found in the 'display' entry of \$instance definitions. The following key/value pairs are allowed:
+\begin{DoxyItemize}
+\item label: (string) Position of the label. The default 'field' theme implementation supports the values 'inline', 'above' and 'hidden'. Defaults to 'above'.
+\item type: (string) The formatter to use. Defaults to the 'default\_\-formatter' for the field type, specified in \hyperlink{group__field__types_gad3eb779f26f41b520f19af011ece3eb1}{hook\_\-field\_\-info()}. The default formatter will also be used if the requested formatter is not available.
+\item settings: (array) Settings specific to the formatter. Defaults to the formatter's default settings, specified in \hyperlink{group__field__formatter_ga2f5aa1c7455f55dffd84a48efa57f987}{hook\_\-field\_\-formatter\_\-info()}.
+\item weight: (float) The weight to assign to the renderable element. Defaults to 0. 
+\end{DoxyItemize}
+\end{DoxyItemize}\item[{\em \$langcode}](Optional) The language the field values are to be shown in. The site's current language fallback logic will be applied no values are available for the language. If no language is provided the current language will be used. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A renderable array for the field value.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__field_gab716b21eb481e4f9d9f5f2af71093d81}{field\_\-view\_\-value()} 
+\end{DoxySeeAlso}
+\hypertarget{group__field_ga43d37035f8764e021f18821d46a92341}{
+\index{field@{field}!field\_\-view\_\-mode\_\-settings@{field\_\-view\_\-mode\_\-settings}}
+\index{field\_\-view\_\-mode\_\-settings@{field\_\-view\_\-mode\_\-settings}!field@{field}}
+\subsubsection[{field\_\-view\_\-mode\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-view\_\-mode\_\-settings (\$ {\em entity\_\-type}, \/  \$ {\em bundle})}}
+\label{group__field_ga43d37035f8764e021f18821d46a92341}
+Returns \hyperlink{classview}{view} mode settings in a given bundle.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of entity; e.g. 'node' or 'user'. \item[{\em \$bundle}]The bundle name to return \hyperlink{classview}{view} mode settings for.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array keyed by \hyperlink{classview}{view} mode, with the following key/value pairs:
+\begin{DoxyItemize}
+\item custom\_\-settings: Boolean specifying whether the \hyperlink{classview}{view} mode uses a dedicated set of display options (TRUE), or the 'default' options (FALSE). Defaults to FALSE. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{group__field_gab716b21eb481e4f9d9f5f2af71093d81}{
+\index{field@{field}!field\_\-view\_\-value@{field\_\-view\_\-value}}
+\index{field\_\-view\_\-value@{field\_\-view\_\-value}!field@{field}}
+\subsubsection[{field\_\-view\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-view\_\-value (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field\_\-name}, \/  \$ {\em item}, \/  \$ {\em display} = {\ttfamily array()}, \/  \$ {\em langcode} = {\ttfamily NULL})}}
+\label{group__field_gab716b21eb481e4f9d9f5f2af71093d81}
+Returns a renderable array for a single field value.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entity\_\-type}]The type of \$entity; e.g., 'node' or 'user'. \item[{\em \$entity}]The entity containing the field to display. Must at least contain the id key and the field data to display. \item[{\em \$field\_\-name}]The name of the field to display. \item[{\em \$item}]The field value to display, as found in \$entity-\/$>$field\_\-name\mbox{[}\$langcode\mbox{]}\mbox{[}\$delta\mbox{]}. \item[{\em \$display}]Can be either the name of a \hyperlink{classview}{view} mode, or an array of display settings. See \hyperlink{group__field_gacb7c7349bbe181c174421e23210ae1ba}{field\_\-view\_\-field()} for more information. \item[{\em \$langcode}](Optional) The language of the value in \$item. If not provided, the current language will be assumed. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A renderable array for the field value. 
+\end{DoxyReturn}
+\hypertarget{group__field_ga6dc60d3c482230f380dd3b112487d717}{
+\index{field@{field}!template\_\-preprocess\_\-field@{template\_\-preprocess\_\-field}}
+\index{template\_\-preprocess\_\-field@{template\_\-preprocess\_\-field}!field@{field}}
+\subsubsection[{template\_\-preprocess\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}template\_\-preprocess\_\-field (\&\$ {\em variables}, \/  \$ {\em hook})}}
+\label{group__field_ga6dc60d3c482230f380dd3b112487d717}
+Theme preprocess function for \hyperlink{group__themeable_gaee35966f09683ab054aef8f6fd022d2c}{theme\_\-field()} and \hyperlink{field_8tpl_8php}{field.tpl.php}.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__themeable_gaee35966f09683ab054aef8f6fd022d2c}{theme\_\-field()} 
+
+\hyperlink{field_8tpl_8php}{field.tpl.php} 
+\end{DoxySeeAlso}
+\hypertarget{group__field_ga4fd3ce05ef61810b1f66283302ab7cad}{
+\index{field@{field}!template\_\-process\_\-field@{template\_\-process\_\-field}}
+\index{template\_\-process\_\-field@{template\_\-process\_\-field}!field@{field}}
+\subsubsection[{template\_\-process\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}template\_\-process\_\-field (\&\$ {\em variables}, \/  \$ {\em hook})}}
+\label{group__field_ga4fd3ce05ef61810b1f66283302ab7cad}
+Theme process function for \hyperlink{group__themeable_gaee35966f09683ab054aef8f6fd022d2c}{theme\_\-field()} and \hyperlink{field_8tpl_8php}{field.tpl.php}.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__themeable_gaee35966f09683ab054aef8f6fd022d2c}{theme\_\-field()} 
+
+\hyperlink{field_8tpl_8php}{field.tpl.php} 
+\end{DoxySeeAlso}

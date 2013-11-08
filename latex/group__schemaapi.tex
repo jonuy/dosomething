@@ -1,0 +1,873 @@
+\hypertarget{group__schemaapi}{
+\section{Schema API}
+\label{group__schemaapi}\index{Schema API@{Schema API}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classSchemaCache}{SchemaCache}
+\item 
+class \hyperlink{classDatabaseSchema__mysql}{DatabaseSchema\_\-mysql}
+\item 
+class \hyperlink{classDatabaseSchema__pgsql}{DatabaseSchema\_\-pgsql}
+\item 
+class \hyperlink{classDatabaseSchema}{DatabaseSchema}
+\item 
+class \hyperlink{classDatabaseSchemaObjectExistsException}{DatabaseSchemaObjectExistsException}
+\item 
+class \hyperlink{classDatabaseSchemaObjectDoesNotExistException}{DatabaseSchemaObjectDoesNotExistException}
+\item 
+class \hyperlink{classDatabaseSchema__sqlite}{DatabaseSchema\_\-sqlite}
+\end{DoxyCompactItemize}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__registry}{Code registry}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__schemaapi_gadbc374d9057276944d38062e769a1a99}{DrupalCacheArray::\_\-\_\-construct} (\$cid, \$bin)
+\item 
+\hyperlink{group__schemaapi_gabec90ca8c02f7c14dfbf66fd9e6bb5dd}{DrupalCacheArray::offsetExists} (\$offset)
+\item 
+\hyperlink{group__schemaapi_ga57be4d1b39bee68ee1c395c1cd9a2de5}{DrupalCacheArray::offsetGet} (\$offset)
+\item 
+\hyperlink{group__schemaapi_ga0d3377e6f4b8c592f006a75f8eadf21a}{DrupalCacheArray::offsetSet} (\$offset, \$value)
+\item 
+\hyperlink{group__schemaapi_ga8bb43551e89c35590c56a49f8fb54e3f}{DrupalCacheArray::offsetUnset} (\$offset)
+\item 
+\hyperlink{group__schemaapi_ga27687007f42979bdb8999683f3270c4a}{DrupalCacheArray::persist} (\$offset, \$persist=TRUE)
+\item 
+\hyperlink{group__schemaapi_ga33d892a839b353177e2483f6946178e9}{DrupalCacheArray::resolveCacheMiss} (\$offset)
+\item 
+\hyperlink{group__schemaapi_ga9d99af903ba2660c09ca835e63c79118}{DrupalCacheArray::set} (\$data, \$lock=TRUE)
+\item 
+\hyperlink{group__schemaapi_ga63c3aa47f3a451f0c5182800d29d5d9f}{DrupalCacheArray::\_\-\_\-destruct} ()
+\item 
+\hyperlink{group__schemaapi_gadb0a973c0269c37d3389946d5b57c01c}{SchemaCache::resolveCacheMiss} (\$offset)
+\item 
+\& \hyperlink{group__schemaapi_ga498392997d598f196f35805de85d8b21}{drupal\_\-static} (\$name, \$default\_\-value=NULL, \$reset=FALSE)
+\item 
+\hyperlink{group__schemaapi_ga714b5ed0b14c43b61eef0c895598c5c4}{drupal\_\-static\_\-reset} (\$name=NULL)
+\item 
+\hyperlink{group__schemaapi_gac880b82ae302f9d15c64d264a269d1f4}{drupal\_\-is\_\-cli} ()
+\item 
+\hyperlink{group__schemaapi_ga4ab49ad51d8b93bb296a8492296d655b}{drupal\_\-placeholder} (\$text)
+\item 
+\hyperlink{group__schemaapi_ga8da38564ce2a3c92aa5103da6ae2a315}{\_\-drupal\_\-shutdown\_\-function} ()
+\item 
+\hyperlink{group__schemaapi_gad3a1c91d672f6e9cf9be66557db148fe}{drupal\_\-check\_\-memory\_\-limit} (\$required, \$memory\_\-limit=NULL)
+\item 
+\hyperlink{group__schemaapi_ga9706b8d6ecdac10302d83bd50935a698}{drupal\_\-install\_\-schema} (\$module)
+\item 
+\hyperlink{group__schemaapi_ga0688b6627af9dc05f2618f81489c3db0}{drupal\_\-uninstall\_\-schema} (\$module)
+\item 
+\hyperlink{group__schemaapi_gaecb0d63f03b96dd1426298804e091d3b}{drupal\_\-get\_\-schema\_\-unprocessed} (\$module, \$table=NULL)
+\item 
+\hyperlink{group__schemaapi_gad4ce891e1e944b1d6eee7253448a0178}{\_\-drupal\_\-schema\_\-initialize} (\&\$schema, \$module, \$remove\_\-descriptions=TRUE)
+\item 
+\hyperlink{group__schemaapi_gaacfcd6f676ee9062f0ba50a008a05443}{drupal\_\-schema\_\-fields\_\-sql} (\$table, \$prefix=NULL)
+\item 
+\hyperlink{group__schemaapi_ga96f707de751a962bf21b6cb0cb4f2ae6}{drupal\_\-write\_\-record} (\$table, \&\$record, \$primary\_\-keys=array())
+\item 
+\hyperlink{group__schemaapi_gaf3a8307693d6b28374665c72531b429f}{db\_\-create\_\-table} (\$name, \$table)
+\item 
+\hyperlink{group__schemaapi_gaeb423ba53e5133548abe3d999f86e787}{db\_\-field\_\-names} (\$fields)
+\item 
+\hyperlink{group__schemaapi_ga0c10c365922d538e4d5d17fb314d4b79}{db\_\-index\_\-exists} (\$table, \$name)
+\item 
+\hyperlink{group__schemaapi_ga78809300cee80db034832825aed55b70}{db\_\-table\_\-exists} (\$table)
+\item 
+\hyperlink{group__schemaapi_ga6b39d7c0876ab53b1588ff9e40677c42}{db\_\-field\_\-exists} (\$table, \$field)
+\item 
+\hyperlink{group__schemaapi_gac723bfddd5f133eb4d3dcec84c3c3f3c}{db\_\-find\_\-tables} (\$table\_\-expression)
+\item 
+\hypertarget{group__schemaapi_gaa4be538758cb8279d3aeed18e1b25c2d}{
+{\bfseries \_\-db\_\-create\_\-keys\_\-sql} (\$spec)}
+\label{group__schemaapi_gaa4be538758cb8279d3aeed18e1b25c2d}
+
+\item 
+\hyperlink{group__schemaapi_ga629fe4d738f4caeb9d8c8acc2cc4d05b}{db\_\-rename\_\-table} (\$table, \$new\_\-name)
+\item 
+\hyperlink{group__schemaapi_ga5d744ae7a6fe2c9eaa1c7bd350a071d3}{db\_\-drop\_\-table} (\$table)
+\item 
+\hyperlink{group__schemaapi_ga10bc9c435dd6d36c112d7ec179840cff}{db\_\-add\_\-field} (\$table, \$field, \$spec, \$keys\_\-new=array())
+\item 
+\hyperlink{group__schemaapi_ga0e404d9200bf56fbed738aa4f57b3ec4}{db\_\-drop\_\-field} (\$table, \$field)
+\item 
+\hyperlink{group__schemaapi_ga63a499297d184dba68309dcd1b7e17d4}{db\_\-field\_\-set\_\-default} (\$table, \$field, \$default)
+\item 
+\hyperlink{group__schemaapi_gad1714b6920155f673f4291845fdb5f62}{db\_\-field\_\-set\_\-no\_\-default} (\$table, \$field)
+\item 
+\hyperlink{group__schemaapi_ga666b117ebedc9b50dacf193c6ba4dcf8}{db\_\-add\_\-primary\_\-key} (\$table, \$fields)
+\item 
+\hyperlink{group__schemaapi_ga733a41de3d8b74798a8cf3c87ae33715}{db\_\-drop\_\-primary\_\-key} (\$table)
+\item 
+\hyperlink{group__schemaapi_gad6dd1c6f39d180bc21853ac6118a8f40}{db\_\-add\_\-unique\_\-key} (\$table, \$name, \$fields)
+\item 
+\hyperlink{group__schemaapi_gab06ca0fe63625f37a649cf3432fd8ffe}{db\_\-drop\_\-unique\_\-key} (\$table, \$name)
+\item 
+\hyperlink{group__schemaapi_gafb7153a65df9b5a0877a602cde86a0cc}{db\_\-add\_\-index} (\$table, \$name, \$fields)
+\item 
+\hyperlink{group__schemaapi_gaa59d447eb4a7b25350fb7404f9a70ec0}{db\_\-drop\_\-index} (\$table, \$name)
+\item 
+\hyperlink{group__schemaapi_ga9e0a4211eb8137e187d5f3f4fa716cea}{db\_\-change\_\-field} (\$table, \$field, \$field\_\-new, \$spec, \$keys\_\-new=array())
+\item 
+\hyperlink{group__schemaapi_ga9abd926ddaf68a22e6dca28a25d0c6f5}{hook\_\-schema} ()
+\item 
+\hyperlink{group__schemaapi_ga4a00aaeabd6903f707d8385476b9ae2a}{hook\_\-schema\_\-alter} (\&\$schema)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__schemaapi_ga29eeef3160c70f129c447e796e330cdb}{DrupalCacheArray::\$bin}
+\item 
+\hyperlink{group__schemaapi_ga0ba2e712f18ec2c8ee8bf97d115c85d1}{DrupalCacheArray::\$keysToPersist} = array()
+\item 
+\hyperlink{group__schemaapi_ga696fd96aa3639a9d7d968961db9d5819}{DrupalCacheArray::\$storage} = array()
+\end{DoxyCompactItemize}
+\subsection*{into your string, and t() will}
+\label{_amgrpc24520cd0c9d113d5113bfec581ba6b9}
+ Translates a string to the current language or to a given language.
+
+The t() function serves two purposes. First, at run-\/time it translates user-\/visible text into the appropriate language. Second, various mechanisms that figure out what text needs to be translated work off t() -\/-\/ the text inside t() calls is added to the database of strings to be translated. These strings are expected to be in English, so the first argument should always be in English. To enable a fully-\/translatable site, it is important that all human-\/readable text that will be displayed on the site or sent to a user is passed through the t() function, or a related function. See the \hyperlink{}{Localization API } pages for more information, including recommendations on how to break up or not break up strings for translation.\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__schemaapi_ga979670bd6bd2e34337ffc5f0810f2d71}{drupal\_\-get\_\-schema} (\$table=NULL, \$rebuild=FALSE)
+\item 
+\hyperlink{group__schemaapi_ga31cee7d4c13fafc15c69304f16e34686}{drupal\_\-get\_\-complete\_\-schema} (\$rebuild=FALSE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+API to handle database schemas.
+
+A Drupal schema definition is an array structure representing one or more tables and their related keys and indexes. A schema is defined by \hyperlink{group__schemaapi_ga9abd926ddaf68a22e6dca28a25d0c6f5}{hook\_\-schema()}, which usually lives in a modulename.install file.
+
+By implementing \hyperlink{group__schemaapi_ga9abd926ddaf68a22e6dca28a25d0c6f5}{hook\_\-schema()} and specifying the tables your module declares, you can easily create and drop these tables on all supported database engines. You don't have to deal with the different SQL dialects for table creation and alteration of the supported database engines.
+
+\hyperlink{group__schemaapi_ga9abd926ddaf68a22e6dca28a25d0c6f5}{hook\_\-schema()} should return an array with a key for each table that the module defines.
+
+The following keys are defined:
+\begin{DoxyItemize}
+\item 'description': A string in non-\/markup plain text describing this table and its purpose. References to other tables should be enclosed in curly-\/brackets. For example, the node\_\-revisions table description field might contain \char`\"{}Stores per-\/revision title and
+     body data for each \{node\}.\char`\"{}
+\item 'fields': An associative array ('fieldname' =$>$ specification) that describes the table's database columns. The specification is also an array. The following specification parameters are defined:
+\begin{DoxyItemize}
+\item 'description': A string in non-\/markup plain text describing this field and its purpose. References to other tables should be enclosed in curly-\/brackets. For example, the node table vid field description might contain \char`\"{}Always holds the largest (most
+       recent) \{node\_\-revision\}.vid value for this nid.\char`\"{}
+\item 'type': The generic datatype: 'char', 'varchar', 'text', 'blob', 'int', 'float', 'numeric', or 'serial'. Most types just map to the according database engine specific datatypes. Use 'serial' for auto incrementing fields. This will expand to 'INT auto\_\-increment' on MySQL.
+\item 'mysql\_\-type', 'pgsql\_\-type', 'sqlite\_\-type', etc.: If you need to use a record type not included in the officially supported list of types above, you can specify a type for each database backend. In this case, you can leave out the type parameter, but be advised that your schema will fail to load on backends that do not have a type specified. A possible solution can be to use the \char`\"{}text\char`\"{} type as a fallback.
+\item 'serialize': A boolean indicating whether the field will be stored as a serialized string.
+\item 'size': The data size: 'tiny', 'small', 'medium', 'normal', 'big'. This is a hint about the largest value the field will store and determines which of the database engine specific datatypes will be used (e.g. on MySQL, TINYINT vs. INT vs. BIGINT). 'normal', the default, selects the base type (e.g. on MySQL, INT, VARCHAR, BLOB, etc.). Not all sizes are available for all data types. See \hyperlink{classDatabaseSchema_a82022c76c3131c4d745736d08321b788}{DatabaseSchema::getFieldTypeMap()} for possible combinations.
+\item 'not null': If true, no NULL values will be allowed in this database column. Defaults to false.
+\item 'default': The field's default value. The PHP type of the value matters: '', '0', and 0 are all different. If you specify '0' as the default value for a type 'int' field it will not work because '0' is a string containing the character \char`\"{}zero\char`\"{}, not an integer.
+\item 'length': The maximal length of a type 'char', 'varchar' or 'text' field. Ignored for other field types.
+\item 'unsigned': A boolean indicating whether a type 'int', 'float' and 'numeric' only is signed or unsigned. Defaults to FALSE. Ignored for other field types.
+\item 'precision', 'scale': For type 'numeric' fields, indicates the precision (total number of significant digits) and scale (decimal digits right of the decimal point). Both values are mandatory. Ignored for other field types.
+\item 'binary': A boolean indicating that MySQL should force 'char', 'varchar' or 'text' fields to use case-\/sensitive binary collation. This has no effect on other database types for which case sensitivity is already the default behavior. All parameters apart from 'type' are optional except that type 'numeric' columns must specify 'precision' and 'scale', and type 'varchar' must specify the 'length' parameter.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+'primary key': An array of one or more key column specifiers (see below) that form the primary key.
+\begin{DoxyItemize}
+\item 'unique keys': An associative array of unique keys ('keyname' =$>$ specification). Each specification is an array of one or more key column specifiers (see below) that form a unique key on the table.
+\item 'foreign keys': An associative array of relations ('my\_\-relation' =$>$ specification). Each specification is an array containing the name of the referenced table ('table'), and an array of column mappings ('columns'). Column mappings are defined by key pairs ('source\_\-column' =$>$ 'referenced\_\-column').
+\item 'indexes': An associative array of indexes ('indexname' =$>$ specification). Each specification is an array of one or more key column specifiers (see below) that form an index on the table.
+\end{DoxyItemize}
+
+A key column specifier is either a string naming a column or an array of two elements, column name and length, specifying a prefix of the named column.
+
+As an example, here is a SUBSET of the schema definition for Drupal's 'node' table. It show four fields (nid, vid, type, and title), the primary key on field 'nid', a unique key named 'vid' on field 'vid', and two indexes, one named 'nid' on field 'nid' and one named 'node\_\-title\_\-type' on the field 'title' and the first four bytes of the field 'type':
+
+
+\begin{DoxyCode}
+ $schema['node'] = array(
+   'description' => 'The base table for nodes.',
+   'fields' => array(
+     'nid'       => array('type' => 'serial', 'unsigned' => TRUE, 'not null' => T
+      RUE),
+     'vid'       => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE
+      ,'default' => 0),
+     'type'      => array('type' => 'varchar','length' => 32,'not null' => TRUE, 
+      'default' => ''),
+     'language'  => array('type' => 'varchar','length' => 12,'not null' => TRUE,'
+      default' => ''),
+     'title'     => array('type' => 'varchar','length' => 255,'not null' => TRUE,
+       'default' => ''),
+     'uid'       => array('type' => 'int', 'not null' => TRUE, 'default' => 0),
+     'status'    => array('type' => 'int', 'not null' => TRUE, 'default' => 1),
+     'created'   => array('type' => 'int', 'not null' => TRUE, 'default' => 0),
+     'changed'   => array('type' => 'int', 'not null' => TRUE, 'default' => 0),
+     'comment'   => array('type' => 'int', 'not null' => TRUE, 'default' => 0),
+     'promote'   => array('type' => 'int', 'not null' => TRUE, 'default' => 0),
+     'moderate'  => array('type' => 'int', 'not null' => TRUE,'default' => 0),
+     'sticky'    => array('type' => 'int', 'not null' => TRUE, 'default' => 0),
+     'tnid'      => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE
+      , 'default' => 0),
+     'translate' => array('type' => 'int', 'not null' => TRUE, 'default' => 0),
+   ),
+   'indexes' => array(
+     'node_changed'        => array('changed'),
+     'node_created'        => array('created'),
+     'node_moderate'       => array('moderate'),
+     'node_frontpage'      => array('promote', 'status', 'sticky', 'created'),
+     'node_status_type'    => array('status', 'type', 'nid'),
+     'node_title_type'     => array('title', array('type', 4)),
+     'node_type'           => array(array('type', 4)),
+     'uid'                 => array('uid'),
+     'tnid'                => array('tnid'),
+     'translate'           => array('translate'),
+   ),
+   'unique keys' => array(
+     'vid' => array('vid'),
+   ),
+   'foreign keys' => array(
+     'node_revision' => array(
+       'table' => 'node_revision',
+       'columns' => array('vid' => 'vid'),
+      ),
+     'node_author' => array(
+       'table' => 'users',
+       'columns' => array('uid' => 'uid'),
+      ),
+    ),
+   'primary key' => array('nid'),
+ );
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__schemaapi_ga9706b8d6ecdac10302d83bd50935a698}{drupal\_\-install\_\-schema()}
+\end{DoxySeeAlso}
+End of \char`\"{}defgroup database\char`\"{}. 
+
+\subsection{Function Documentation}
+\hypertarget{group__schemaapi_gadbc374d9057276944d38062e769a1a99}{
+\index{schemaapi@{schemaapi}!\_\-\_\-construct@{\_\-\_\-construct}}
+\index{\_\-\_\-construct@{\_\-\_\-construct}!schemaapi@{schemaapi}}
+\subsubsection[{\_\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}DrupalCacheArray::\_\-\_\-construct (\$ {\em cid}, \/  \$ {\em bin})\hspace{0.3cm}{\ttfamily  \mbox{[}inherited\mbox{]}}}}
+\label{group__schemaapi_gadbc374d9057276944d38062e769a1a99}
+Constructs a \hyperlink{classDrupalCacheArray}{DrupalCacheArray} object.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cid}]The cid for the array being cached. \item[{\em \$bin}]The bin to cache the array. \end{DoxyParams}
+\hypertarget{group__schemaapi_ga63c3aa47f3a451f0c5182800d29d5d9f}{
+\index{schemaapi@{schemaapi}!\_\-\_\-destruct@{\_\-\_\-destruct}}
+\index{\_\-\_\-destruct@{\_\-\_\-destruct}!schemaapi@{schemaapi}}
+\subsubsection[{\_\-\_\-destruct}]{\setlength{\rightskip}{0pt plus 5cm}DrupalCacheArray::\_\-\_\-destruct ()\hspace{0.3cm}{\ttfamily  \mbox{[}inherited\mbox{]}}}}
+\label{group__schemaapi_ga63c3aa47f3a451f0c5182800d29d5d9f}
+Destructs the \hyperlink{classDrupalCacheArray}{DrupalCacheArray} object. \hypertarget{group__schemaapi_gad4ce891e1e944b1d6eee7253448a0178}{
+\index{schemaapi@{schemaapi}!\_\-drupal\_\-schema\_\-initialize@{\_\-drupal\_\-schema\_\-initialize}}
+\index{\_\-drupal\_\-schema\_\-initialize@{\_\-drupal\_\-schema\_\-initialize}!schemaapi@{schemaapi}}
+\subsubsection[{\_\-drupal\_\-schema\_\-initialize}]{\setlength{\rightskip}{0pt plus 5cm}\_\-drupal\_\-schema\_\-initialize (\&\$ {\em schema}, \/  \$ {\em module}, \/  \$ {\em remove\_\-descriptions} = {\ttfamily TRUE})}}
+\label{group__schemaapi_gad4ce891e1e944b1d6eee7253448a0178}
+Fills in required default values for table definitions from \hyperlink{group__schemaapi_ga9abd926ddaf68a22e6dca28a25d0c6f5}{hook\_\-schema()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$schema}]The schema definition array as it was returned by the module's \hyperlink{group__schemaapi_ga9abd926ddaf68a22e6dca28a25d0c6f5}{hook\_\-schema()}. \item[{\em \$module}]The module for which \hyperlink{group__schemaapi_ga9abd926ddaf68a22e6dca28a25d0c6f5}{hook\_\-schema()} was invoked. \item[{\em \$remove\_\-descriptions}](optional) Whether to additionally remove 'description' keys of all tables and fields to improve performance of serialize() and unserialize(). Defaults to TRUE. \end{DoxyParams}
+\hypertarget{group__schemaapi_ga8da38564ce2a3c92aa5103da6ae2a315}{
+\index{schemaapi@{schemaapi}!\_\-drupal\_\-shutdown\_\-function@{\_\-drupal\_\-shutdown\_\-function}}
+\index{\_\-drupal\_\-shutdown\_\-function@{\_\-drupal\_\-shutdown\_\-function}!schemaapi@{schemaapi}}
+\subsubsection[{\_\-drupal\_\-shutdown\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}\_\-drupal\_\-shutdown\_\-function ()}}
+\label{group__schemaapi_ga8da38564ce2a3c92aa5103da6ae2a315}
+Executes registered shutdown functions. \hypertarget{group__schemaapi_ga10bc9c435dd6d36c112d7ec179840cff}{
+\index{schemaapi@{schemaapi}!db\_\-add\_\-field@{db\_\-add\_\-field}}
+\index{db\_\-add\_\-field@{db\_\-add\_\-field}!schemaapi@{schemaapi}}
+\subsubsection[{db\_\-add\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}db\_\-add\_\-field (\$ {\em table}, \/  \$ {\em field}, \/  \$ {\em spec}, \/  \$ {\em keys\_\-new} = {\ttfamily array()})}}
+\label{group__schemaapi_ga10bc9c435dd6d36c112d7ec179840cff}
+Adds a new field to a table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]Name of the table to be altered. \item[{\em \$field}]Name of the field to be added. \item[{\em \$spec}]The field specification array, as taken from a schema definition. The specification may also contain the key 'initial'; the newly-\/created field will be set to the value of the key in all rows. This is most useful for creating NOT NULL columns with no default value in existing tables. \item[{\em \$keys\_\-new}]Optional keys and indexes specification to be created on the table along with adding the field. The format is the same as a table specification, but without the 'fields' element. If you are adding a type 'serial' field, you MUST specify at least one key or index including it in this array. See \hyperlink{group__schemaapi_ga9e0a4211eb8137e187d5f3f4fa716cea}{db\_\-change\_\-field()} for more explanation why.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__schemaapi_ga9e0a4211eb8137e187d5f3f4fa716cea}{db\_\-change\_\-field()} 
+\end{DoxySeeAlso}
+\hypertarget{group__schemaapi_gafb7153a65df9b5a0877a602cde86a0cc}{
+\index{schemaapi@{schemaapi}!db\_\-add\_\-index@{db\_\-add\_\-index}}
+\index{db\_\-add\_\-index@{db\_\-add\_\-index}!schemaapi@{schemaapi}}
+\subsubsection[{db\_\-add\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}db\_\-add\_\-index (\$ {\em table}, \/  \$ {\em name}, \/  \$ {\em fields})}}
+\label{group__schemaapi_gafb7153a65df9b5a0877a602cde86a0cc}
+Adds an index.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$name}]The name of the index. \item[{\em \$fields}]An array of field names. \end{DoxyParams}
+\hypertarget{group__schemaapi_ga666b117ebedc9b50dacf193c6ba4dcf8}{
+\index{schemaapi@{schemaapi}!db\_\-add\_\-primary\_\-key@{db\_\-add\_\-primary\_\-key}}
+\index{db\_\-add\_\-primary\_\-key@{db\_\-add\_\-primary\_\-key}!schemaapi@{schemaapi}}
+\subsubsection[{db\_\-add\_\-primary\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}db\_\-add\_\-primary\_\-key (\$ {\em table}, \/  \$ {\em fields})}}
+\label{group__schemaapi_ga666b117ebedc9b50dacf193c6ba4dcf8}
+Adds a primary key to a database table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]Name of the table to be altered. \item[{\em \$fields}]Array of fields for the primary key. \end{DoxyParams}
+\hypertarget{group__schemaapi_gad6dd1c6f39d180bc21853ac6118a8f40}{
+\index{schemaapi@{schemaapi}!db\_\-add\_\-unique\_\-key@{db\_\-add\_\-unique\_\-key}}
+\index{db\_\-add\_\-unique\_\-key@{db\_\-add\_\-unique\_\-key}!schemaapi@{schemaapi}}
+\subsubsection[{db\_\-add\_\-unique\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}db\_\-add\_\-unique\_\-key (\$ {\em table}, \/  \$ {\em name}, \/  \$ {\em fields})}}
+\label{group__schemaapi_gad6dd1c6f39d180bc21853ac6118a8f40}
+Adds a unique key.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$name}]The name of the key. \item[{\em \$fields}]An array of field names. \end{DoxyParams}
+\hypertarget{group__schemaapi_ga9e0a4211eb8137e187d5f3f4fa716cea}{
+\index{schemaapi@{schemaapi}!db\_\-change\_\-field@{db\_\-change\_\-field}}
+\index{db\_\-change\_\-field@{db\_\-change\_\-field}!schemaapi@{schemaapi}}
+\subsubsection[{db\_\-change\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}db\_\-change\_\-field (\$ {\em table}, \/  \$ {\em field}, \/  \$ {\em field\_\-new}, \/  \$ {\em spec}, \/  \$ {\em keys\_\-new} = {\ttfamily array()})}}
+\label{group__schemaapi_ga9e0a4211eb8137e187d5f3f4fa716cea}
+Changes a field definition.
+
+IMPORTANT NOTE: To maintain database portability, you have to explicitly recreate all indices and primary keys that are using the changed field.
+
+That means that you have to drop all affected keys and indexes with db\_\-drop\_\-\{primary\_\-key,unique\_\-key,index\}() before calling \hyperlink{group__schemaapi_ga9e0a4211eb8137e187d5f3f4fa716cea}{db\_\-change\_\-field()}. To recreate the keys and indices, pass the key definitions as the optional \$keys\_\-new argument directly to \hyperlink{group__schemaapi_ga9e0a4211eb8137e187d5f3f4fa716cea}{db\_\-change\_\-field()}.
+
+For example, suppose you have: 
+\begin{DoxyCode}
+ $schema['foo'] = array(
+   'fields' => array(
+     'bar' => array('type' => 'int', 'not null' => TRUE)
+   ),
+   'primary key' => array('bar')
+ );
+\end{DoxyCode}
+ and you want to change foo.bar to be type serial, leaving it as the primary key. The correct sequence is: 
+\begin{DoxyCode}
+ db_drop_primary_key('foo');
+ db_change_field('foo', 'bar', 'bar',
+   array('type' => 'serial', 'not null' => TRUE),
+   array('primary key' => array('bar')));
+\end{DoxyCode}
+
+
+The reasons for this are due to the different database engines:
+
+On PostgreSQL, changing a field definition involves adding a new field and dropping an old one which causes any indices, primary keys and sequences (from serial-\/type fields) that use the changed field to be dropped.
+
+On MySQL, all type 'serial' fields must be part of at least one key or index as soon as they are created. You cannot use db\_\-add\_\-\{primary\_\-key,unique\_\-key,index\}() for this purpose because the ALTER TABLE command will fail to add the column without a key or index specification. The solution is to use the optional \$keys\_\-new argument to create the key or index at the same time as field.
+
+You could use db\_\-add\_\-\{primary\_\-key,unique\_\-key,index\}() in all cases unless you are converting a field to be type serial. You can use the \$keys\_\-new argument in all cases.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]Name of the table. \item[{\em \$field}]Name of the field to change. \item[{\em \$field\_\-new}]New name for the field (set to the same as \$field if you don't want to change the name). \item[{\em \$spec}]The field specification for the new field. \item[{\em \$keys\_\-new}]Optional keys and indexes specification to be created on the table along with changing the field. The format is the same as a table specification but without the 'fields' element. \end{DoxyParams}
+\hypertarget{group__schemaapi_gaf3a8307693d6b28374665c72531b429f}{
+\index{schemaapi@{schemaapi}!db\_\-create\_\-table@{db\_\-create\_\-table}}
+\index{db\_\-create\_\-table@{db\_\-create\_\-table}!schemaapi@{schemaapi}}
+\subsubsection[{db\_\-create\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}db\_\-create\_\-table (\$ {\em name}, \/  \$ {\em table})}}
+\label{group__schemaapi_gaf3a8307693d6b28374665c72531b429f}
+Creates a new table from a Drupal table definition.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]The name of the table to create. \item[{\em \$table}]A Schema API table definition array. \end{DoxyParams}
+\hypertarget{group__schemaapi_ga0e404d9200bf56fbed738aa4f57b3ec4}{
+\index{schemaapi@{schemaapi}!db\_\-drop\_\-field@{db\_\-drop\_\-field}}
+\index{db\_\-drop\_\-field@{db\_\-drop\_\-field}!schemaapi@{schemaapi}}
+\subsubsection[{db\_\-drop\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}db\_\-drop\_\-field (\$ {\em table}, \/  \$ {\em field})}}
+\label{group__schemaapi_ga0e404d9200bf56fbed738aa4f57b3ec4}
+Drops a field.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$field}]The field to be dropped. \end{DoxyParams}
+\hypertarget{group__schemaapi_gaa59d447eb4a7b25350fb7404f9a70ec0}{
+\index{schemaapi@{schemaapi}!db\_\-drop\_\-index@{db\_\-drop\_\-index}}
+\index{db\_\-drop\_\-index@{db\_\-drop\_\-index}!schemaapi@{schemaapi}}
+\subsubsection[{db\_\-drop\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}db\_\-drop\_\-index (\$ {\em table}, \/  \$ {\em name})}}
+\label{group__schemaapi_gaa59d447eb4a7b25350fb7404f9a70ec0}
+Drops an index.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$name}]The name of the index. \end{DoxyParams}
+\hypertarget{group__schemaapi_ga733a41de3d8b74798a8cf3c87ae33715}{
+\index{schemaapi@{schemaapi}!db\_\-drop\_\-primary\_\-key@{db\_\-drop\_\-primary\_\-key}}
+\index{db\_\-drop\_\-primary\_\-key@{db\_\-drop\_\-primary\_\-key}!schemaapi@{schemaapi}}
+\subsubsection[{db\_\-drop\_\-primary\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}db\_\-drop\_\-primary\_\-key (\$ {\em table})}}
+\label{group__schemaapi_ga733a41de3d8b74798a8cf3c87ae33715}
+Drops the primary key of a database table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]Name of the table to be altered. \end{DoxyParams}
+\hypertarget{group__schemaapi_ga5d744ae7a6fe2c9eaa1c7bd350a071d3}{
+\index{schemaapi@{schemaapi}!db\_\-drop\_\-table@{db\_\-drop\_\-table}}
+\index{db\_\-drop\_\-table@{db\_\-drop\_\-table}!schemaapi@{schemaapi}}
+\subsubsection[{db\_\-drop\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}db\_\-drop\_\-table (\$ {\em table})}}
+\label{group__schemaapi_ga5d744ae7a6fe2c9eaa1c7bd350a071d3}
+Drops a table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be dropped. \end{DoxyParams}
+\hypertarget{group__schemaapi_gab06ca0fe63625f37a649cf3432fd8ffe}{
+\index{schemaapi@{schemaapi}!db\_\-drop\_\-unique\_\-key@{db\_\-drop\_\-unique\_\-key}}
+\index{db\_\-drop\_\-unique\_\-key@{db\_\-drop\_\-unique\_\-key}!schemaapi@{schemaapi}}
+\subsubsection[{db\_\-drop\_\-unique\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}db\_\-drop\_\-unique\_\-key (\$ {\em table}, \/  \$ {\em name})}}
+\label{group__schemaapi_gab06ca0fe63625f37a649cf3432fd8ffe}
+Drops a unique key.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$name}]The name of the key. \end{DoxyParams}
+\hypertarget{group__schemaapi_ga6b39d7c0876ab53b1588ff9e40677c42}{
+\index{schemaapi@{schemaapi}!db\_\-field\_\-exists@{db\_\-field\_\-exists}}
+\index{db\_\-field\_\-exists@{db\_\-field\_\-exists}!schemaapi@{schemaapi}}
+\subsubsection[{db\_\-field\_\-exists}]{\setlength{\rightskip}{0pt plus 5cm}db\_\-field\_\-exists (\$ {\em table}, \/  \$ {\em field})}}
+\label{group__schemaapi_ga6b39d7c0876ab53b1588ff9e40677c42}
+Checks if a column exists in the given table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The name of the table in drupal (no prefixing). \item[{\em \$field}]The name of the field.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the given column exists, otherwise FALSE. 
+\end{DoxyReturn}
+\hypertarget{group__schemaapi_gaeb423ba53e5133548abe3d999f86e787}{
+\index{schemaapi@{schemaapi}!db\_\-field\_\-names@{db\_\-field\_\-names}}
+\index{db\_\-field\_\-names@{db\_\-field\_\-names}!schemaapi@{schemaapi}}
+\subsubsection[{db\_\-field\_\-names}]{\setlength{\rightskip}{0pt plus 5cm}db\_\-field\_\-names (\$ {\em fields})}}
+\label{group__schemaapi_gaeb423ba53e5133548abe3d999f86e787}
+Returns an array of field names from an array of key/index column specifiers.
+
+This is usually an identity function but if a key/index uses a column prefix specification, this function extracts just the name.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$fields}]An array of key/index column specifiers.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of field names. 
+\end{DoxyReturn}
+\hypertarget{group__schemaapi_ga63a499297d184dba68309dcd1b7e17d4}{
+\index{schemaapi@{schemaapi}!db\_\-field\_\-set\_\-default@{db\_\-field\_\-set\_\-default}}
+\index{db\_\-field\_\-set\_\-default@{db\_\-field\_\-set\_\-default}!schemaapi@{schemaapi}}
+\subsubsection[{db\_\-field\_\-set\_\-default}]{\setlength{\rightskip}{0pt plus 5cm}db\_\-field\_\-set\_\-default (\$ {\em table}, \/  \$ {\em field}, \/  \$ {\em default})}}
+\label{group__schemaapi_ga63a499297d184dba68309dcd1b7e17d4}
+Sets the default value for a field.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$field}]The field to be altered. \item[{\em \$default}]Default value to be set. NULL for 'default NULL'. \end{DoxyParams}
+\hypertarget{group__schemaapi_gad1714b6920155f673f4291845fdb5f62}{
+\index{schemaapi@{schemaapi}!db\_\-field\_\-set\_\-no\_\-default@{db\_\-field\_\-set\_\-no\_\-default}}
+\index{db\_\-field\_\-set\_\-no\_\-default@{db\_\-field\_\-set\_\-no\_\-default}!schemaapi@{schemaapi}}
+\subsubsection[{db\_\-field\_\-set\_\-no\_\-default}]{\setlength{\rightskip}{0pt plus 5cm}db\_\-field\_\-set\_\-no\_\-default (\$ {\em table}, \/  \$ {\em field})}}
+\label{group__schemaapi_gad1714b6920155f673f4291845fdb5f62}
+Sets a field to have no default value.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table to be altered. \item[{\em \$field}]The field to be altered. \end{DoxyParams}
+\hypertarget{group__schemaapi_gac723bfddd5f133eb4d3dcec84c3c3f3c}{
+\index{schemaapi@{schemaapi}!db\_\-find\_\-tables@{db\_\-find\_\-tables}}
+\index{db\_\-find\_\-tables@{db\_\-find\_\-tables}!schemaapi@{schemaapi}}
+\subsubsection[{db\_\-find\_\-tables}]{\setlength{\rightskip}{0pt plus 5cm}db\_\-find\_\-tables (\$ {\em table\_\-expression})}}
+\label{group__schemaapi_gac723bfddd5f133eb4d3dcec84c3c3f3c}
+Finds all tables that are like the specified base table name.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table\_\-expression}]An SQL expression, for example \char`\"{}simpletest\%\char`\"{} (without the quotes). BEWARE: this is not prefixed, the caller should take care of that.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array, both the keys and the values are the matching tables. 
+\end{DoxyReturn}
+\hypertarget{group__schemaapi_ga0c10c365922d538e4d5d17fb314d4b79}{
+\index{schemaapi@{schemaapi}!db\_\-index\_\-exists@{db\_\-index\_\-exists}}
+\index{db\_\-index\_\-exists@{db\_\-index\_\-exists}!schemaapi@{schemaapi}}
+\subsubsection[{db\_\-index\_\-exists}]{\setlength{\rightskip}{0pt plus 5cm}db\_\-index\_\-exists (\$ {\em table}, \/  \$ {\em name})}}
+\label{group__schemaapi_ga0c10c365922d538e4d5d17fb314d4b79}
+Checks if an index exists in the given table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The name of the table in drupal (no prefixing). \item[{\em \$name}]The name of the index in drupal (no prefixing).\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the given index exists, otherwise FALSE. 
+\end{DoxyReturn}
+\hypertarget{group__schemaapi_ga629fe4d738f4caeb9d8c8acc2cc4d05b}{
+\index{schemaapi@{schemaapi}!db\_\-rename\_\-table@{db\_\-rename\_\-table}}
+\index{db\_\-rename\_\-table@{db\_\-rename\_\-table}!schemaapi@{schemaapi}}
+\subsubsection[{db\_\-rename\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}db\_\-rename\_\-table (\$ {\em table}, \/  \$ {\em new\_\-name})}}
+\label{group__schemaapi_ga629fe4d738f4caeb9d8c8acc2cc4d05b}
+Renames a table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The current name of the table to be renamed. \item[{\em \$new\_\-name}]The new name for the table. \end{DoxyParams}
+\hypertarget{group__schemaapi_ga78809300cee80db034832825aed55b70}{
+\index{schemaapi@{schemaapi}!db\_\-table\_\-exists@{db\_\-table\_\-exists}}
+\index{db\_\-table\_\-exists@{db\_\-table\_\-exists}!schemaapi@{schemaapi}}
+\subsubsection[{db\_\-table\_\-exists}]{\setlength{\rightskip}{0pt plus 5cm}db\_\-table\_\-exists (\$ {\em table})}}
+\label{group__schemaapi_ga78809300cee80db034832825aed55b70}
+Checks if a table exists.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The name of the table in drupal (no prefixing).\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the given table exists, otherwise FALSE. 
+\end{DoxyReturn}
+\hypertarget{group__schemaapi_gad3a1c91d672f6e9cf9be66557db148fe}{
+\index{schemaapi@{schemaapi}!drupal\_\-check\_\-memory\_\-limit@{drupal\_\-check\_\-memory\_\-limit}}
+\index{drupal\_\-check\_\-memory\_\-limit@{drupal\_\-check\_\-memory\_\-limit}!schemaapi@{schemaapi}}
+\subsubsection[{drupal\_\-check\_\-memory\_\-limit}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-check\_\-memory\_\-limit (\$ {\em required}, \/  \$ {\em memory\_\-limit} = {\ttfamily NULL})}}
+\label{group__schemaapi_gad3a1c91d672f6e9cf9be66557db148fe}
+Compares the memory required for an operation to the available memory.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$required}]The memory required for the operation, expressed as a number of bytes with optional SI or IEC binary unit prefix (e.g. 2, 3K, 5MB, 10G, 6GiB, 8bytes, 9mbytes). \item[{\em \$memory\_\-limit}](optional) The memory limit for the operation, expressed as a number of bytes with optional SI or IEC binary unit prefix (e.g. 2, 3K, 5MB, 10G, 6GiB, 8bytes, 9mbytes). If no value is passed, the current PHP memory\_\-limit will be used. Defaults to NULL.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if there is sufficient memory to allow the operation, or FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{group__schemaapi_ga31cee7d4c13fafc15c69304f16e34686}{
+\index{schemaapi@{schemaapi}!drupal\_\-get\_\-complete\_\-schema@{drupal\_\-get\_\-complete\_\-schema}}
+\index{drupal\_\-get\_\-complete\_\-schema@{drupal\_\-get\_\-complete\_\-schema}!schemaapi@{schemaapi}}
+\subsubsection[{drupal\_\-get\_\-complete\_\-schema}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-get\_\-complete\_\-schema (\$ {\em rebuild} = {\ttfamily FALSE})}}
+\label{group__schemaapi_ga31cee7d4c13fafc15c69304f16e34686}
+Gets the whole database schema.
+
+The returned schema will include any modifications made by any module that implements \hyperlink{group__schemaapi_ga4a00aaeabd6903f707d8385476b9ae2a}{hook\_\-schema\_\-alter()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$rebuild}]If true, the schema will be rebuilt instead of retrieved from the cache. \end{DoxyParams}
+\hypertarget{group__schemaapi_ga979670bd6bd2e34337ffc5f0810f2d71}{
+\index{schemaapi@{schemaapi}!drupal\_\-get\_\-schema@{drupal\_\-get\_\-schema}}
+\index{drupal\_\-get\_\-schema@{drupal\_\-get\_\-schema}!schemaapi@{schemaapi}}
+\subsubsection[{drupal\_\-get\_\-schema}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-get\_\-schema (\$ {\em table} = {\ttfamily NULL}, \/  \$ {\em rebuild} = {\ttfamily FALSE})}}
+\label{group__schemaapi_ga979670bd6bd2e34337ffc5f0810f2d71}
+Gets the schema definition of a table, or the whole database schema.
+
+The returned schema will include any modifications made by any module that implements \hyperlink{group__schemaapi_ga4a00aaeabd6903f707d8385476b9ae2a}{hook\_\-schema\_\-alter()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The name of the table. If not given, the schema of all tables is returned. \item[{\em \$rebuild}]If true, the schema will be rebuilt instead of retrieved from the cache. \end{DoxyParams}
+\hypertarget{group__schemaapi_gaecb0d63f03b96dd1426298804e091d3b}{
+\index{schemaapi@{schemaapi}!drupal\_\-get\_\-schema\_\-unprocessed@{drupal\_\-get\_\-schema\_\-unprocessed}}
+\index{drupal\_\-get\_\-schema\_\-unprocessed@{drupal\_\-get\_\-schema\_\-unprocessed}!schemaapi@{schemaapi}}
+\subsubsection[{drupal\_\-get\_\-schema\_\-unprocessed}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-get\_\-schema\_\-unprocessed (\$ {\em module}, \/  \$ {\em table} = {\ttfamily NULL})}}
+\label{group__schemaapi_gaecb0d63f03b96dd1426298804e091d3b}
+Returns the unprocessed and unaltered version of a module's schema.
+
+Use this function only if you explicitly need the original specification of a schema, as it was defined in a module's \hyperlink{group__schemaapi_ga9abd926ddaf68a22e6dca28a25d0c6f5}{hook\_\-schema()}. No additional default values will be set, \hyperlink{group__schemaapi_ga4a00aaeabd6903f707d8385476b9ae2a}{hook\_\-schema\_\-alter()} is not invoked and these unprocessed definitions won't be cached.
+
+This function can be used to retrieve a schema specification in \hyperlink{group__schemaapi_ga9abd926ddaf68a22e6dca28a25d0c6f5}{hook\_\-schema()}, so it allows you to derive your tables from existing specifications.
+
+It is also used by \hyperlink{group__schemaapi_ga9706b8d6ecdac10302d83bd50935a698}{drupal\_\-install\_\-schema()} and \hyperlink{group__schemaapi_ga0688b6627af9dc05f2618f81489c3db0}{drupal\_\-uninstall\_\-schema()} to ensure that a module's tables are created exactly as specified without any changes introduced by a module that implements \hyperlink{group__schemaapi_ga4a00aaeabd6903f707d8385476b9ae2a}{hook\_\-schema\_\-alter()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$module}]The module to which the table belongs. \item[{\em \$table}]The name of the table. If not given, the module's complete schema is returned. \end{DoxyParams}
+\hypertarget{group__schemaapi_ga9706b8d6ecdac10302d83bd50935a698}{
+\index{schemaapi@{schemaapi}!drupal\_\-install\_\-schema@{drupal\_\-install\_\-schema}}
+\index{drupal\_\-install\_\-schema@{drupal\_\-install\_\-schema}!schemaapi@{schemaapi}}
+\subsubsection[{drupal\_\-install\_\-schema}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-install\_\-schema (\$ {\em module})}}
+\label{group__schemaapi_ga9706b8d6ecdac10302d83bd50935a698}
+Creates all tables defined in a module's \hyperlink{group__schemaapi_ga9abd926ddaf68a22e6dca28a25d0c6f5}{hook\_\-schema()}.
+
+Note: This function does not pass the module's schema through \hyperlink{group__schemaapi_ga4a00aaeabd6903f707d8385476b9ae2a}{hook\_\-schema\_\-alter()}. The module's tables will be created exactly as the module defines them.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$module}]The module for which the tables will be created. \end{DoxyParams}
+\hypertarget{group__schemaapi_gac880b82ae302f9d15c64d264a269d1f4}{
+\index{schemaapi@{schemaapi}!drupal\_\-is\_\-cli@{drupal\_\-is\_\-cli}}
+\index{drupal\_\-is\_\-cli@{drupal\_\-is\_\-cli}!schemaapi@{schemaapi}}
+\subsubsection[{drupal\_\-is\_\-cli}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-is\_\-cli ()}}
+\label{group__schemaapi_gac880b82ae302f9d15c64d264a269d1f4}
+Detects whether the current script is running in a command-\/line environment. \hypertarget{group__schemaapi_ga4ab49ad51d8b93bb296a8492296d655b}{
+\index{schemaapi@{schemaapi}!drupal\_\-placeholder@{drupal\_\-placeholder}}
+\index{drupal\_\-placeholder@{drupal\_\-placeholder}!schemaapi@{schemaapi}}
+\subsubsection[{drupal\_\-placeholder}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-placeholder (\$ {\em text})}}
+\label{group__schemaapi_ga4ab49ad51d8b93bb296a8492296d655b}
+Formats text for emphasized display in a placeholder inside a sentence.
+
+Used automatically by \hyperlink{group__sanitization_ga8da272cf93fb6ba229eca7c0b06ea4d2}{format\_\-string()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$text}]The text to format (plain-\/text).\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The formatted text (html). 
+\end{DoxyReturn}
+\hypertarget{group__schemaapi_gaacfcd6f676ee9062f0ba50a008a05443}{
+\index{schemaapi@{schemaapi}!drupal\_\-schema\_\-fields\_\-sql@{drupal\_\-schema\_\-fields\_\-sql}}
+\index{drupal\_\-schema\_\-fields\_\-sql@{drupal\_\-schema\_\-fields\_\-sql}!schemaapi@{schemaapi}}
+\subsubsection[{drupal\_\-schema\_\-fields\_\-sql}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-schema\_\-fields\_\-sql (\$ {\em table}, \/  \$ {\em prefix} = {\ttfamily NULL})}}
+\label{group__schemaapi_gaacfcd6f676ee9062f0ba50a008a05443}
+Retrieves a list of fields from a table schema.
+
+The returned list is suitable for use in an SQL query.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The name of the table from which to retrieve fields. \item[{\em An}]optional prefix to to all fields.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of fields. 
+\end{DoxyReturn}
+\hypertarget{group__schemaapi_ga498392997d598f196f35805de85d8b21}{
+\index{schemaapi@{schemaapi}!drupal\_\-static@{drupal\_\-static}}
+\index{drupal\_\-static@{drupal\_\-static}!schemaapi@{schemaapi}}
+\subsubsection[{drupal\_\-static}]{\setlength{\rightskip}{0pt plus 5cm}\& drupal\_\-static (\$ {\em name}, \/  \$ {\em default\_\-value} = {\ttfamily NULL}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{group__schemaapi_ga498392997d598f196f35805de85d8b21}
+End of \char`\"{}addtogroup registry\char`\"{}. Provides central static variable storage.
+
+All functions requiring a static variable to persist or cache data within a single page request are encouraged to use this function unless it is absolutely certain that the static variable will not need to be reset during the page request. By centralizing static variable storage through this function, other functions can rely on a consistent API for resetting any other function's static variables.
+
+Example: 
+\begin{DoxyCode}
+ function language_list($field = 'language') {
+   $languages = &drupal_static(__FUNCTION__);
+   if (!isset($languages)) {
+     // If this function is being called for the first time after a reset,
+     // query the database and execute any other code needed to retrieve
+     // information about the supported languages.
+     ...
+   }
+   if (!isset($languages[$field])) {
+     // If this function is being called for the first time for a particular
+     // index field, then execute code needed to index the information already
+     // available in $languages by the desired field.
+     ...
+   }
+   // Subsequent invocations of this function for a particular index field
+   // skip the above two code blocks and quickly return the already indexed
+   // information.
+   return $languages[$field];
+ }
+ function locale_translate_overview_screen() {
+   // When building the content for the translations overview page, make
+   // sure to get completely fresh information about the supported languages.
+   drupal_static_reset('language_list');
+   ...
+ }
+\end{DoxyCode}
+
+
+In a few cases, a function can have certainty that there is no legitimate use-\/case for resetting that function's static variable. This is rare, because when writing a function, it's hard to forecast all the situations in which it will be used. A guideline is that if a function's static variable does not depend on any information outside of the function that might change during a single page request, then it's ok to use the \char`\"{}static\char`\"{} keyword instead of the \hyperlink{group__schemaapi_ga498392997d598f196f35805de85d8b21}{drupal\_\-static()} function.
+
+Example: 
+\begin{DoxyCode}
+ function actions_do(...) {
+   // $stack tracks the number of recursive calls.
+   static $stack;
+   $stack++;
+   if ($stack > variable_get('actions_max_stack', 35)) {
+     ...
+     return;
+   }
+   ...
+   $stack--;
+ }
+\end{DoxyCode}
+
+
+In a few cases, a function needs a resettable static variable, but the function is called many times (100+) during a single page request, so every microsecond of execution time that can be removed from the function counts. These functions can use a more cumbersome, but faster variant of calling \hyperlink{group__schemaapi_ga498392997d598f196f35805de85d8b21}{drupal\_\-static()}. It works by storing the reference returned by \hyperlink{group__schemaapi_ga498392997d598f196f35805de85d8b21}{drupal\_\-static()} in the calling function's own static variable, thereby removing the need to call \hyperlink{group__schemaapi_ga498392997d598f196f35805de85d8b21}{drupal\_\-static()} for each iteration of the function. Conceptually, it replaces: 
+\begin{DoxyCode}
+ $foo = &drupal_static(__FUNCTION__);
+\end{DoxyCode}
+ with: 
+\begin{DoxyCode}
+ // Unfortunately, this does not work.
+ static $foo = &drupal_static(__FUNCTION__);
+\end{DoxyCode}
+ However, the above line of code does not work, because PHP only allows static variables to be initializied by literal values, and does not allow static variables to be assigned to references.
+\begin{DoxyItemize}
+\item \href{http://php.net/manual/en/language.variables.scope.php#language.variables.scope.static}{\tt http://php.net/manual/en/language.variables.scope.php\#language.variables.scope.static}
+\item \href{http://php.net/manual/en/language.variables.scope.php#language.variables.scope.references}{\tt http://php.net/manual/en/language.variables.scope.php\#language.variables.scope.references} The example below shows the syntax needed to work around both limitations. For benchmarks and more information, see \href{http://drupal.org/node/619666.}{\tt http://drupal.org/node/619666.}
+\end{DoxyItemize}
+
+Example: 
+\begin{DoxyCode}
+ function user_access($string, $account = NULL) {
+   // Use the advanced drupal_static() pattern, since this is called very often.
+   static $drupal_static_fast;
+   if (!isset($drupal_static_fast)) {
+     $drupal_static_fast['perm'] = &drupal_static(__FUNCTION__);
+   }
+   $perm = &$drupal_static_fast['perm'];
+   ...
+ }
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]Globally unique name for the variable. For a function with only one static, variable, the function name (e.g. via the PHP magic \_\-\_\-FUNCTION\_\-\_\- constant) is recommended. For a function with multiple static variables add a distinguishing suffix to the function name for each one. \item[{\em \$default\_\-value}]Optional default value. \item[{\em \$reset}]TRUE to reset a specific named variable, or all variables if \$name is NULL. Resetting every variable should only be used, for example, for running unit tests with a clean environment. Should be used only though via function \hyperlink{group__schemaapi_ga714b5ed0b14c43b61eef0c895598c5c4}{drupal\_\-static\_\-reset()} and the return value should not be used in this case.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a variable by reference.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__schemaapi_ga714b5ed0b14c43b61eef0c895598c5c4}{drupal\_\-static\_\-reset()} 
+\end{DoxySeeAlso}
+\hypertarget{group__schemaapi_ga714b5ed0b14c43b61eef0c895598c5c4}{
+\index{schemaapi@{schemaapi}!drupal\_\-static\_\-reset@{drupal\_\-static\_\-reset}}
+\index{drupal\_\-static\_\-reset@{drupal\_\-static\_\-reset}!schemaapi@{schemaapi}}
+\subsubsection[{drupal\_\-static\_\-reset}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-static\_\-reset (\$ {\em name} = {\ttfamily NULL})}}
+\label{group__schemaapi_ga714b5ed0b14c43b61eef0c895598c5c4}
+Resets one or all centrally stored static variable(s).
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]Name of the static variable to reset. Omit to reset all variables. \end{DoxyParams}
+\hypertarget{group__schemaapi_ga0688b6627af9dc05f2618f81489c3db0}{
+\index{schemaapi@{schemaapi}!drupal\_\-uninstall\_\-schema@{drupal\_\-uninstall\_\-schema}}
+\index{drupal\_\-uninstall\_\-schema@{drupal\_\-uninstall\_\-schema}!schemaapi@{schemaapi}}
+\subsubsection[{drupal\_\-uninstall\_\-schema}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-uninstall\_\-schema (\$ {\em module})}}
+\label{group__schemaapi_ga0688b6627af9dc05f2618f81489c3db0}
+Removes all tables defined in a module's \hyperlink{group__schemaapi_ga9abd926ddaf68a22e6dca28a25d0c6f5}{hook\_\-schema()}.
+
+Note: This function does not pass the module's schema through \hyperlink{group__schemaapi_ga4a00aaeabd6903f707d8385476b9ae2a}{hook\_\-schema\_\-alter()}. The module's tables will be created exactly as the module defines them.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$module}]The module for which the tables will be removed.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of arrays with the following key/value pairs:
+\begin{DoxyItemize}
+\item success: a boolean indicating whether the query succeeded.
+\item query: the SQL query(s) executed, passed through \hyperlink{group__sanitization_ga76fc67a30fd8d75ddd80565e6e65a13d}{check\_\-plain()}. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{group__schemaapi_ga96f707de751a962bf21b6cb0cb4f2ae6}{
+\index{schemaapi@{schemaapi}!drupal\_\-write\_\-record@{drupal\_\-write\_\-record}}
+\index{drupal\_\-write\_\-record@{drupal\_\-write\_\-record}!schemaapi@{schemaapi}}
+\subsubsection[{drupal\_\-write\_\-record}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-write\_\-record (\$ {\em table}, \/  \&\$ {\em record}, \/  \$ {\em primary\_\-keys} = {\ttfamily array()})}}
+\label{group__schemaapi_ga96f707de751a962bf21b6cb0cb4f2ae6}
+Saves (inserts or updates) a record to the database based upon the schema.
+
+Do not use \hyperlink{group__schemaapi_ga96f707de751a962bf21b6cb0cb4f2ae6}{drupal\_\-write\_\-record()} within \hyperlink{group__hooks_ga908950689e6b85cd0fae3b780d69a41f}{hook\_\-update\_\-N()} functions, since the database schema cannot be relied upon when a user is running a series of updates. Instead, use \hyperlink{group__database_gaadfbffaf30ff5eb14f1bd88619351345}{db\_\-insert()} or \hyperlink{group__database_ga40967197ee5d6a23a5c5a77e627067fe}{db\_\-update()} to save the record.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The name of the table; this must be defined by a \hyperlink{group__schemaapi_ga9abd926ddaf68a22e6dca28a25d0c6f5}{hook\_\-schema()} implementation. \item[{\em \$record}]An object or array representing the record to write, passed in by reference. If inserting a new record, values not provided in \$record will be populated in \$record and in the database with the default values from the schema, as well as a single serial (auto-\/increment) field (if present). If updating an existing record, only provided values are updated in the database, and \$record is not modified. \item[{\em \$primary\_\-keys}]To indicate that this is a new record to be inserted, omit this argument. If this is an update, this argument specifies the primary keys' field names. If there is only 1 field in the key, you may pass in a string; if there are multiple fields in the key, pass in an array.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the record insert or update failed, returns FALSE. If it succeeded, returns SAVED\_\-NEW or SAVED\_\-UPDATED, depending on the operation performed. 
+\end{DoxyReturn}
+\hypertarget{group__schemaapi_ga9abd926ddaf68a22e6dca28a25d0c6f5}{
+\index{schemaapi@{schemaapi}!hook\_\-schema@{hook\_\-schema}}
+\index{hook\_\-schema@{hook\_\-schema}!schemaapi@{schemaapi}}
+\subsubsection[{hook\_\-schema}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-schema ()}}
+\label{group__schemaapi_ga9abd926ddaf68a22e6dca28a25d0c6f5}
+Define the current version of the database schema.
+
+A Drupal schema definition is an array structure representing one or more tables and their related keys and indexes. A schema is defined by \hyperlink{group__schemaapi_ga9abd926ddaf68a22e6dca28a25d0c6f5}{hook\_\-schema()} which must live in your module's .install file.
+
+This hook is called at install and uninstall time, and in the latter case, it cannot rely on the .module file being loaded or hooks being known. If the .module file is needed, it may be loaded with \hyperlink{bootstrap_8inc_a13a2254228f213a980dc1f09886b8802}{drupal\_\-load()}.
+
+The tables declared by this hook will be automatically created when the module is first enabled, and removed when the module is uninstalled. This happens before \hyperlink{group__hooks_ga1ecdb5a2a046ea63dc790c3ed90338e5}{hook\_\-install()} is invoked, and after \hyperlink{group__hooks_ga3fb24f6923b3e585d6326ff5abdcc57c}{hook\_\-uninstall()} is invoked, respectively.
+
+By declaring the tables used by your module via an implementation of \hyperlink{group__schemaapi_ga9abd926ddaf68a22e6dca28a25d0c6f5}{hook\_\-schema()}, these tables will be available on all supported database engines. You don't have to deal with the different SQL dialects for table creation and alteration of the supported database engines.
+
+See the Schema API Handbook at \href{http://drupal.org/node/146843}{\tt http://drupal.org/node/146843} for details on schema definition structures.
+
+\begin{DoxyReturn}{Returns}
+A schema definition structure array. For each element of the array, the key is a table name and the value is a table structure definition. 
+\end{DoxyReturn}
+\hypertarget{group__schemaapi_ga4a00aaeabd6903f707d8385476b9ae2a}{
+\index{schemaapi@{schemaapi}!hook\_\-schema\_\-alter@{hook\_\-schema\_\-alter}}
+\index{hook\_\-schema\_\-alter@{hook\_\-schema\_\-alter}!schemaapi@{schemaapi}}
+\subsubsection[{hook\_\-schema\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-schema\_\-alter (\&\$ {\em schema})}}
+\label{group__schemaapi_ga4a00aaeabd6903f707d8385476b9ae2a}
+Perform alterations to existing database schemas.
+
+When a module modifies the database structure of another module (by changing, adding or removing fields, keys or indexes), it should implement \hyperlink{group__schemaapi_ga4a00aaeabd6903f707d8385476b9ae2a}{hook\_\-schema\_\-alter()} to update the default \$schema to take its changes into account.
+
+See \hyperlink{group__schemaapi_ga9abd926ddaf68a22e6dca28a25d0c6f5}{hook\_\-schema()} for details on the schema definition structure.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$schema}]Nested array describing the schemas for all modules. \end{DoxyParams}
+\hypertarget{group__schemaapi_gabec90ca8c02f7c14dfbf66fd9e6bb5dd}{
+\index{schemaapi@{schemaapi}!offsetExists@{offsetExists}}
+\index{offsetExists@{offsetExists}!schemaapi@{schemaapi}}
+\subsubsection[{offsetExists}]{\setlength{\rightskip}{0pt plus 5cm}DrupalCacheArray::offsetExists (\$ {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}inherited\mbox{]}}}}
+\label{group__schemaapi_gabec90ca8c02f7c14dfbf66fd9e6bb5dd}
+Implements ArrayAccess::offsetExists(). \hypertarget{group__schemaapi_ga57be4d1b39bee68ee1c395c1cd9a2de5}{
+\index{schemaapi@{schemaapi}!offsetGet@{offsetGet}}
+\index{offsetGet@{offsetGet}!schemaapi@{schemaapi}}
+\subsubsection[{offsetGet}]{\setlength{\rightskip}{0pt plus 5cm}DrupalCacheArray::offsetGet (\$ {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}inherited\mbox{]}}}}
+\label{group__schemaapi_ga57be4d1b39bee68ee1c395c1cd9a2de5}
+Implements ArrayAccess::offsetGet(). \hypertarget{group__schemaapi_ga0d3377e6f4b8c592f006a75f8eadf21a}{
+\index{schemaapi@{schemaapi}!offsetSet@{offsetSet}}
+\index{offsetSet@{offsetSet}!schemaapi@{schemaapi}}
+\subsubsection[{offsetSet}]{\setlength{\rightskip}{0pt plus 5cm}DrupalCacheArray::offsetSet (\$ {\em offset}, \/  \$ {\em value})\hspace{0.3cm}{\ttfamily  \mbox{[}inherited\mbox{]}}}}
+\label{group__schemaapi_ga0d3377e6f4b8c592f006a75f8eadf21a}
+Implements ArrayAccess::offsetSet(). \hypertarget{group__schemaapi_ga8bb43551e89c35590c56a49f8fb54e3f}{
+\index{schemaapi@{schemaapi}!offsetUnset@{offsetUnset}}
+\index{offsetUnset@{offsetUnset}!schemaapi@{schemaapi}}
+\subsubsection[{offsetUnset}]{\setlength{\rightskip}{0pt plus 5cm}DrupalCacheArray::offsetUnset (\$ {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}inherited\mbox{]}}}}
+\label{group__schemaapi_ga8bb43551e89c35590c56a49f8fb54e3f}
+Implements ArrayAccess::offsetUnset(). \hypertarget{group__schemaapi_ga27687007f42979bdb8999683f3270c4a}{
+\index{schemaapi@{schemaapi}!persist@{persist}}
+\index{persist@{persist}!schemaapi@{schemaapi}}
+\subsubsection[{persist}]{\setlength{\rightskip}{0pt plus 5cm}DrupalCacheArray::persist (\$ {\em offset}, \/  \$ {\em persist} = {\ttfamily TRUE})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, inherited\mbox{]}}}}
+\label{group__schemaapi_ga27687007f42979bdb8999683f3270c4a}
+Flags an offset value to be written to the persistent cache.
+
+If a value is assigned to a cache object with \hyperlink{group__schemaapi_ga0d3377e6f4b8c592f006a75f8eadf21a}{offsetSet()}, by default it will not be written to the persistent cache unless it is flagged with this method. This allows items to be cached for the duration of a request, without necessarily writing back to the persistent cache at the end.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$offset}]The array offset that was requested. \item[{\em \$persist}]Optional boolean to specify whether the offset should be persisted or not, defaults to TRUE. When called with \$persist = FALSE the offset will be unflagged so that it will not be written at the end of the request. \end{DoxyParams}
+\hypertarget{group__schemaapi_gadb0a973c0269c37d3389946d5b57c01c}{
+\index{schemaapi@{schemaapi}!resolveCacheMiss@{resolveCacheMiss}}
+\index{resolveCacheMiss@{resolveCacheMiss}!schemaapi@{schemaapi}}
+\subsubsection[{resolveCacheMiss}]{\setlength{\rightskip}{0pt plus 5cm}SchemaCache::resolveCacheMiss (\$ {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, inherited\mbox{]}}}}
+\label{group__schemaapi_gadb0a973c0269c37d3389946d5b57c01c}
+Overrides \hyperlink{group__schemaapi_ga33d892a839b353177e2483f6946178e9}{DrupalCacheArray::resolveCacheMiss()}. 
+
+Reimplemented from \hyperlink{group__schemaapi_ga33d892a839b353177e2483f6946178e9}{DrupalCacheArray}.\hypertarget{group__schemaapi_ga33d892a839b353177e2483f6946178e9}{
+\index{schemaapi@{schemaapi}!resolveCacheMiss@{resolveCacheMiss}}
+\index{resolveCacheMiss@{resolveCacheMiss}!schemaapi@{schemaapi}}
+\subsubsection[{resolveCacheMiss}]{\setlength{\rightskip}{0pt plus 5cm}DrupalCacheArray::resolveCacheMiss (\$ {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}abstract, protected, inherited\mbox{]}}}}
+\label{group__schemaapi_ga33d892a839b353177e2483f6946178e9}
+Resolves a cache miss.
+
+When an offset is not found in the object, this is treated as a cache miss. This method allows classes implementing the interface to look up the actual value and allow it to be cached.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$offset}]The offset that was requested.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the offset, or NULL if no value was found. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{group__schemaapi_gadb0a973c0269c37d3389946d5b57c01c}{SchemaCache}.\hypertarget{group__schemaapi_ga9d99af903ba2660c09ca835e63c79118}{
+\index{schemaapi@{schemaapi}!set@{set}}
+\index{set@{set}!schemaapi@{schemaapi}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}DrupalCacheArray::set (\$ {\em data}, \/  \$ {\em lock} = {\ttfamily TRUE})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, inherited\mbox{]}}}}
+\label{group__schemaapi_ga9d99af903ba2660c09ca835e63c79118}
+Writes a value to the persistent cache immediately.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$data}]The data to write to the persistent cache. \item[{\em \$lock}]Whether to acquire a lock before writing to cache. \end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\hypertarget{group__schemaapi_ga29eeef3160c70f129c447e796e330cdb}{
+\index{schemaapi@{schemaapi}!\$bin@{\$bin}}
+\index{\$bin@{\$bin}!schemaapi@{schemaapi}}
+\subsubsection[{\$bin}]{\setlength{\rightskip}{0pt plus 5cm}DrupalCacheArray::\$bin\hspace{0.3cm}{\ttfamily  \mbox{[}protected, inherited\mbox{]}}}}
+\label{group__schemaapi_ga29eeef3160c70f129c447e796e330cdb}
+A bin to pass to \hyperlink{includes_2cache_8inc_a48081f36334909f561ef4f538fa640d2}{cache\_\-set()} and \hyperlink{includes_2cache_8inc_a9d873815c28909b61c3a6188b383f8a3}{cache\_\-get()}. \hypertarget{group__schemaapi_ga0ba2e712f18ec2c8ee8bf97d115c85d1}{
+\index{schemaapi@{schemaapi}!\$keysToPersist@{\$keysToPersist}}
+\index{\$keysToPersist@{\$keysToPersist}!schemaapi@{schemaapi}}
+\subsubsection[{\$keysToPersist}]{\setlength{\rightskip}{0pt plus 5cm}DrupalCacheArray::\$keysToPersist = array()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, inherited\mbox{]}}}}
+\label{group__schemaapi_ga0ba2e712f18ec2c8ee8bf97d115c85d1}
+An array of keys to add to the cache at the end of the request. \hypertarget{group__schemaapi_ga696fd96aa3639a9d7d968961db9d5819}{
+\index{schemaapi@{schemaapi}!\$storage@{\$storage}}
+\index{\$storage@{\$storage}!schemaapi@{schemaapi}}
+\subsubsection[{\$storage}]{\setlength{\rightskip}{0pt plus 5cm}DrupalCacheArray::\$storage = array()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, inherited\mbox{]}}}}
+\label{group__schemaapi_ga696fd96aa3639a9d7d968961db9d5819}
+Storage for the data itself. 

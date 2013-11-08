@@ -1,0 +1,179 @@
+\hypertarget{field__test_8module}{
+\section{html/modules/field/tests/field\_\-test.module File Reference}
+\label{field__test_8module}\index{html/modules/field/tests/field\_\-test.module@{html/modules/field/tests/field\_\-test.module}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{field__test_8module_a503ace608465fba9f475e888bdad3877}{field\_\-test\_\-permission} ()
+\item 
+\hyperlink{field__test_8module_aa880119cd376662b76b8106183cbc6a3}{field\_\-test\_\-menu} ()
+\item 
+\hyperlink{field__test_8module_acf091a4178bd84d202a69e32e2b46a12}{field\_\-test\_\-field\_\-test\_\-op} (\$entity\_\-type, \$entity, \$field, \$instance, \$langcode, \&\$items)
+\item 
+\hyperlink{field__test_8module_a9bd2f4a0811ce446841803c46aa58517}{field\_\-test\_\-field\_\-test\_\-op\_\-multiple} (\$entity\_\-type, \$entities, \$field, \$instances, \$langcode, \&\$items)
+\item 
+\hyperlink{field__test_8module_a0a6f85b074751f24280d72b415dab142}{field\_\-test\_\-field\_\-available\_\-languages\_\-alter} (\&\$languages, \$context)
+\item 
+\hyperlink{field__test_8module_a79a1254b2e78af563bb7d87e5f36fdd9}{field\_\-test\_\-field\_\-language\_\-alter} (\&\$display\_\-language, \$context)
+\item 
+\hyperlink{field__test_8module_ad47dcd73d5f7aeb1f49a0bb0e302ef93}{field\_\-test\_\-memorize} (\$key=NULL, \$value=NULL)
+\item 
+\hyperlink{field__test_8module_a7932459be94e84648d5dbcd0f5607879}{field\_\-test\_\-field\_\-create\_\-field} (\$field)
+\item 
+\hyperlink{field__test_8module_a2d15737af11f252dd9227af814f0f2b1}{field\_\-test\_\-entity\_\-query\_\-alter} (\&\$query)
+\item 
+\hyperlink{field__test_8module_a775d055844d9136ac44a68c9c254ef05}{field\_\-test\_\-dummy\_\-field\_\-storage\_\-query} (\hyperlink{classEntityFieldQuery}{EntityFieldQuery} \$query)
+\item 
+\hyperlink{field__test_8module_a0a7edfbc235c467287808743d0970c06}{field\_\-test\_\-entity\_\-label\_\-callback} (\$entity)
+\item 
+\hyperlink{field__test_8module_ab4836ef0c380beae6ac246620f3c3b9b}{field\_\-test\_\-field\_\-attach\_\-view\_\-alter} (\&\$output, \$context)
+\item 
+\hyperlink{field__test_8module_a9ae0d3439f5afbd93be40ff21b229985}{field\_\-test\_\-field\_\-widget\_\-properties\_\-alter} (\&\$widget, \$context)
+\item 
+\hyperlink{field__test_8module_a7b260f9df700defdebb5dd957512f799}{field\_\-test\_\-field\_\-widget\_\-properties\_\-user\_\-alter} (\&\$widget, \$context)
+\item 
+\hyperlink{field__test_8module_ab697abc140bc395e9712230bb49e10b7}{field\_\-test\_\-field\_\-widget\_\-form\_\-alter} (\&\$element, \&\$form\_\-state, \$context)
+\item 
+\hyperlink{field__test_8module_afb32a3e4eb6fcc25c526997ccb48cba1}{field\_\-test\_\-query\_\-efq\_\-table\_\-prefixing\_\-test\_\-alter} (\&\$query)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper module for the Field API tests.
+
+The module defines
+\begin{DoxyItemize}
+\item an entity type (\hyperlink{field__test_8entity_8inc}{field\_\-test.entity.inc})
+\item a field type and its formatters and widgets (\hyperlink{field__test_8field_8inc}{field\_\-test.field.inc})
+\item a field storage backend (\hyperlink{field__test_8storage_8inc}{field\_\-test.storage.inc})
+\end{DoxyItemize}
+
+The main \hyperlink{field__test_8module}{field\_\-test.module} file implements generic hooks and provides some test helper functions 
+
+\subsection{Function Documentation}
+\hypertarget{field__test_8module_a775d055844d9136ac44a68c9c254ef05}{
+\index{field\_\-test.module@{field\_\-test.module}!field\_\-test\_\-dummy\_\-field\_\-storage\_\-query@{field\_\-test\_\-dummy\_\-field\_\-storage\_\-query}}
+\index{field\_\-test\_\-dummy\_\-field\_\-storage\_\-query@{field\_\-test\_\-dummy\_\-field\_\-storage\_\-query}!field_test.module@{field\_\-test.module}}
+\subsubsection[{field\_\-test\_\-dummy\_\-field\_\-storage\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-dummy\_\-field\_\-storage\_\-query ({\bf EntityFieldQuery} \$ {\em query})}}
+\label{field__test_8module_a775d055844d9136ac44a68c9c254ef05}
+Pseudo-\/implements \hyperlink{group__field__storage_gaf46795ee1b678a72b4457b524303c794}{hook\_\-field\_\-storage\_\-query()}. \hypertarget{field__test_8module_a0a7edfbc235c467287808743d0970c06}{
+\index{field\_\-test.module@{field\_\-test.module}!field\_\-test\_\-entity\_\-label\_\-callback@{field\_\-test\_\-entity\_\-label\_\-callback}}
+\index{field\_\-test\_\-entity\_\-label\_\-callback@{field\_\-test\_\-entity\_\-label\_\-callback}!field_test.module@{field\_\-test.module}}
+\subsubsection[{field\_\-test\_\-entity\_\-label\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-entity\_\-label\_\-callback (\$ {\em entity})}}
+\label{field__test_8module_a0a7edfbc235c467287808743d0970c06}
+Implements \hyperlink{group__callbacks_gae9464157712e8322955f45a671a8403d}{callback\_\-entity\_\-info\_\-label()}.
+
+\begin{DoxyReturn}{Returns}
+The label of the entity prefixed with \char`\"{}label callback\char`\"{}. 
+\end{DoxyReturn}
+\hypertarget{field__test_8module_a2d15737af11f252dd9227af814f0f2b1}{
+\index{field\_\-test.module@{field\_\-test.module}!field\_\-test\_\-entity\_\-query\_\-alter@{field\_\-test\_\-entity\_\-query\_\-alter}}
+\index{field\_\-test\_\-entity\_\-query\_\-alter@{field\_\-test\_\-entity\_\-query\_\-alter}!field_test.module@{field\_\-test.module}}
+\subsubsection[{field\_\-test\_\-entity\_\-query\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-entity\_\-query\_\-alter (\&\$ {\em query})}}
+\label{field__test_8module_a2d15737af11f252dd9227af814f0f2b1}
+Implements \hyperlink{group__hooks_ga22d97ef7297e17697cdaa8b32483f412}{hook\_\-entity\_\-query\_\-alter()}. \hypertarget{field__test_8module_ab4836ef0c380beae6ac246620f3c3b9b}{
+\index{field\_\-test.module@{field\_\-test.module}!field\_\-test\_\-field\_\-attach\_\-view\_\-alter@{field\_\-test\_\-field\_\-attach\_\-view\_\-alter}}
+\index{field\_\-test\_\-field\_\-attach\_\-view\_\-alter@{field\_\-test\_\-field\_\-attach\_\-view\_\-alter}!field_test.module@{field\_\-test.module}}
+\subsubsection[{field\_\-test\_\-field\_\-attach\_\-view\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-attach\_\-view\_\-alter (\&\$ {\em output}, \/  \$ {\em context})}}
+\label{field__test_8module_ab4836ef0c380beae6ac246620f3c3b9b}
+Implements \hyperlink{group__field__attach_ga0c415aacfd70903f556fb67517dfe1ee}{hook\_\-field\_\-attach\_\-view\_\-alter()}. \hypertarget{field__test_8module_a0a6f85b074751f24280d72b415dab142}{
+\index{field\_\-test.module@{field\_\-test.module}!field\_\-test\_\-field\_\-available\_\-languages\_\-alter@{field\_\-test\_\-field\_\-available\_\-languages\_\-alter}}
+\index{field\_\-test\_\-field\_\-available\_\-languages\_\-alter@{field\_\-test\_\-field\_\-available\_\-languages\_\-alter}!field_test.module@{field\_\-test.module}}
+\subsubsection[{field\_\-test\_\-field\_\-available\_\-languages\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-available\_\-languages\_\-alter (\&\$ {\em languages}, \/  \$ {\em context})}}
+\label{field__test_8module_a0a6f85b074751f24280d72b415dab142}
+Implements \hyperlink{group__field__attach_gaea2e719de3ad070e161d0d386dd18303}{hook\_\-field\_\-available\_\-languages\_\-alter()}. \hypertarget{field__test_8module_a7932459be94e84648d5dbcd0f5607879}{
+\index{field\_\-test.module@{field\_\-test.module}!field\_\-test\_\-field\_\-create\_\-field@{field\_\-test\_\-field\_\-create\_\-field}}
+\index{field\_\-test\_\-field\_\-create\_\-field@{field\_\-test\_\-field\_\-create\_\-field}!field_test.module@{field\_\-test.module}}
+\subsubsection[{field\_\-test\_\-field\_\-create\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-create\_\-field (\$ {\em field})}}
+\label{field__test_8module_a7932459be94e84648d5dbcd0f5607879}
+Memorize calls to \hyperlink{group__field__crud_ga925648157864b55f553f5d2d31e2bf1b}{hook\_\-field\_\-create\_\-field()}. \hypertarget{field__test_8module_a79a1254b2e78af563bb7d87e5f36fdd9}{
+\index{field\_\-test.module@{field\_\-test.module}!field\_\-test\_\-field\_\-language\_\-alter@{field\_\-test\_\-field\_\-language\_\-alter}}
+\index{field\_\-test\_\-field\_\-language\_\-alter@{field\_\-test\_\-field\_\-language\_\-alter}!field_test.module@{field\_\-test.module}}
+\subsubsection[{field\_\-test\_\-field\_\-language\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-language\_\-alter (\&\$ {\em display\_\-language}, \/  \$ {\em context})}}
+\label{field__test_8module_a79a1254b2e78af563bb7d87e5f36fdd9}
+Implements \hyperlink{group__field__attach_ga6411d5b5a528850a6e53c87ff899cabc}{hook\_\-field\_\-language\_\-alter()}. \hypertarget{field__test_8module_acf091a4178bd84d202a69e32e2b46a12}{
+\index{field\_\-test.module@{field\_\-test.module}!field\_\-test\_\-field\_\-test\_\-op@{field\_\-test\_\-field\_\-test\_\-op}}
+\index{field\_\-test\_\-field\_\-test\_\-op@{field\_\-test\_\-field\_\-test\_\-op}!field_test.module@{field\_\-test.module}}
+\subsubsection[{field\_\-test\_\-field\_\-test\_\-op}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-test\_\-op (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode}, \/  \&\$ {\em items})}}
+\label{field__test_8module_acf091a4178bd84d202a69e32e2b46a12}
+Generic op to test \_\-field\_\-invoke behavior.
+
+This simulates a field operation callback to be invoked by \hyperlink{group__field__attach_ga65f891a5eea6513f8505f5cfc5894896}{\_\-field\_\-invoke()}. \hypertarget{field__test_8module_a9bd2f4a0811ce446841803c46aa58517}{
+\index{field\_\-test.module@{field\_\-test.module}!field\_\-test\_\-field\_\-test\_\-op\_\-multiple@{field\_\-test\_\-field\_\-test\_\-op\_\-multiple}}
+\index{field\_\-test\_\-field\_\-test\_\-op\_\-multiple@{field\_\-test\_\-field\_\-test\_\-op\_\-multiple}!field_test.module@{field\_\-test.module}}
+\subsubsection[{field\_\-test\_\-field\_\-test\_\-op\_\-multiple}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-test\_\-op\_\-multiple (\$ {\em entity\_\-type}, \/  \$ {\em entities}, \/  \$ {\em field}, \/  \$ {\em instances}, \/  \$ {\em langcode}, \/  \&\$ {\em items})}}
+\label{field__test_8module_a9bd2f4a0811ce446841803c46aa58517}
+Generic op to test \_\-field\_\-invoke\_\-multiple behavior.
+
+This simulates a multiple field operation callback to be invoked by \hyperlink{group__field__attach_ga791aeba11e29038daf3e798dbea0df60}{\_\-field\_\-invoke\_\-multiple()}. \hypertarget{field__test_8module_ab697abc140bc395e9712230bb49e10b7}{
+\index{field\_\-test.module@{field\_\-test.module}!field\_\-test\_\-field\_\-widget\_\-form\_\-alter@{field\_\-test\_\-field\_\-widget\_\-form\_\-alter}}
+\index{field\_\-test\_\-field\_\-widget\_\-form\_\-alter@{field\_\-test\_\-field\_\-widget\_\-form\_\-alter}!field_test.module@{field\_\-test.module}}
+\subsubsection[{field\_\-test\_\-field\_\-widget\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-widget\_\-form\_\-alter (\&\$ {\em element}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em context})}}
+\label{field__test_8module_ab697abc140bc395e9712230bb49e10b7}
+Implements \hyperlink{group__field__widget_gaca9d517ab0584fa2428779d8aa24a441}{hook\_\-field\_\-widget\_\-form\_\-alter()}. \hypertarget{field__test_8module_a9ae0d3439f5afbd93be40ff21b229985}{
+\index{field\_\-test.module@{field\_\-test.module}!field\_\-test\_\-field\_\-widget\_\-properties\_\-alter@{field\_\-test\_\-field\_\-widget\_\-properties\_\-alter}}
+\index{field\_\-test\_\-field\_\-widget\_\-properties\_\-alter@{field\_\-test\_\-field\_\-widget\_\-properties\_\-alter}!field_test.module@{field\_\-test.module}}
+\subsubsection[{field\_\-test\_\-field\_\-widget\_\-properties\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-widget\_\-properties\_\-alter (\&\$ {\em widget}, \/  \$ {\em context})}}
+\label{field__test_8module_a9ae0d3439f5afbd93be40ff21b229985}
+Implements \hyperlink{group__field__widget_gaa88988bce1ffbec1f481ec7a3ba87e51}{hook\_\-field\_\-widget\_\-properties\_\-alter()}. \hypertarget{field__test_8module_a7b260f9df700defdebb5dd957512f799}{
+\index{field\_\-test.module@{field\_\-test.module}!field\_\-test\_\-field\_\-widget\_\-properties\_\-user\_\-alter@{field\_\-test\_\-field\_\-widget\_\-properties\_\-user\_\-alter}}
+\index{field\_\-test\_\-field\_\-widget\_\-properties\_\-user\_\-alter@{field\_\-test\_\-field\_\-widget\_\-properties\_\-user\_\-alter}!field_test.module@{field\_\-test.module}}
+\subsubsection[{field\_\-test\_\-field\_\-widget\_\-properties\_\-user\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-field\_\-widget\_\-properties\_\-user\_\-alter (\&\$ {\em widget}, \/  \$ {\em context})}}
+\label{field__test_8module_a7b260f9df700defdebb5dd957512f799}
+Implements \hyperlink{group__field__storage_gafbf6029d00ade9df41649d247531f3ba}{hook\_\-field\_\-widget\_\-properties\_\-ENTITY\_\-TYPE\_\-alter()}. \hypertarget{field__test_8module_ad47dcd73d5f7aeb1f49a0bb0e302ef93}{
+\index{field\_\-test.module@{field\_\-test.module}!field\_\-test\_\-memorize@{field\_\-test\_\-memorize}}
+\index{field\_\-test\_\-memorize@{field\_\-test\_\-memorize}!field_test.module@{field\_\-test.module}}
+\subsubsection[{field\_\-test\_\-memorize}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-memorize (\$ {\em key} = {\ttfamily NULL}, \/  \$ {\em value} = {\ttfamily NULL})}}
+\label{field__test_8module_ad47dcd73d5f7aeb1f49a0bb0e302ef93}
+Store and retrieve keyed data for later verification by unit tests.
+
+This function is a simple in-\/memory key-\/value store with the distinction that it stores all values for a given key instead of just the most recently set value. field\_\-test module hooks call this function to record their arguments, keyed by hook name. The unit tests later call this function to verify that the correct hooks were called and were passed the correct arguments.
+
+This function ignores all calls until the first time it is called with \$key of NULL. Each time it is called with \$key of NULL, it erases all previously stored data from its internal cache, but also returns the previously stored data to the caller. A typical usage scenario is:
+
+
+\begin{DoxyCode}
+   // calls to field_test_memorize() here are ignored
+
+   // turn on memorization
+   field_test_memorize();
+
+   // call some Field API functions that invoke field_test hooks
+   $field = field_create_field(...);
+
+   // retrieve and reset the memorized hook call data
+   $mem = field_test_memorize();
+
+   // make sure hook_field_create_field() is invoked correctly
+   assertEqual(count($mem['field_test_field_create_field']), 1);
+   assertEqual($mem['field_test_field_create_field'][0], array($field));
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$key}]The key under which to store to \$value, or NULL as described above. \item[{\em \$value}]A value to store for \$key. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array mapping each \$key to an array of each \$value passed in for that key. 
+\end{DoxyReturn}
+\hypertarget{field__test_8module_aa880119cd376662b76b8106183cbc6a3}{
+\index{field\_\-test.module@{field\_\-test.module}!field\_\-test\_\-menu@{field\_\-test\_\-menu}}
+\index{field\_\-test\_\-menu@{field\_\-test\_\-menu}!field_test.module@{field\_\-test.module}}
+\subsubsection[{field\_\-test\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-menu ()}}
+\label{field__test_8module_aa880119cd376662b76b8106183cbc6a3}
+Implements \hyperlink{group__hooks_ga5c95244fea59b25666e409759e133ded}{hook\_\-menu()}. \hypertarget{field__test_8module_a503ace608465fba9f475e888bdad3877}{
+\index{field\_\-test.module@{field\_\-test.module}!field\_\-test\_\-permission@{field\_\-test\_\-permission}}
+\index{field\_\-test\_\-permission@{field\_\-test\_\-permission}!field_test.module@{field\_\-test.module}}
+\subsubsection[{field\_\-test\_\-permission}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-permission ()}}
+\label{field__test_8module_a503ace608465fba9f475e888bdad3877}
+Implements \hyperlink{group__hooks_ga2b22b45f4925f2478412477bae329713}{hook\_\-permission()}. \hypertarget{field__test_8module_afb32a3e4eb6fcc25c526997ccb48cba1}{
+\index{field\_\-test.module@{field\_\-test.module}!field\_\-test\_\-query\_\-efq\_\-table\_\-prefixing\_\-test\_\-alter@{field\_\-test\_\-query\_\-efq\_\-table\_\-prefixing\_\-test\_\-alter}}
+\index{field\_\-test\_\-query\_\-efq\_\-table\_\-prefixing\_\-test\_\-alter@{field\_\-test\_\-query\_\-efq\_\-table\_\-prefixing\_\-test\_\-alter}!field_test.module@{field\_\-test.module}}
+\subsubsection[{field\_\-test\_\-query\_\-efq\_\-table\_\-prefixing\_\-test\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-test\_\-query\_\-efq\_\-table\_\-prefixing\_\-test\_\-alter (\&\$ {\em query})}}
+\label{field__test_8module_afb32a3e4eb6fcc25c526997ccb48cba1}
+Implements \hyperlink{group__hooks_ga12527037deeb76adcab1000e984fdfce}{hook\_\-query\_\-TAG\_\-alter()} for tag 'efq\_\-table\_\-prefixing\_\-test'.
+
+\begin{DoxySeeAlso}{See also}
+EntityFieldQueryTestCase::testTablePrefixing() 
+\end{DoxySeeAlso}

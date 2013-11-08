@@ -1,0 +1,542 @@
+\hypertarget{classEntityFieldQuery}{
+\section{EntityFieldQuery Class Reference}
+\label{classEntityFieldQuery}\index{EntityFieldQuery@{EntityFieldQuery}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classEntityFieldQuery_a08559bd2f164f707a7ad18eff6622017}{entityCondition} (\$name, \$value, \$operator=NULL)
+\item 
+\hyperlink{classEntityFieldQuery_aa8f9660691c0ff6aca2e535c3df78e92}{fieldCondition} (\$field, \$column=NULL, \$value=NULL, \$operator=NULL, \$delta\_\-group=NULL, \$language\_\-group=NULL)
+\item 
+\hyperlink{classEntityFieldQuery_a4c09c59b7bea2f57e8c8b50ef641fbf4}{fieldLanguageCondition} (\$field, \$value=NULL, \$operator=NULL, \$delta\_\-group=NULL, \$language\_\-group=NULL)
+\item 
+\hyperlink{classEntityFieldQuery_a2008e72f472747354332f0b42971032f}{fieldDeltaCondition} (\$field, \$value=NULL, \$operator=NULL, \$delta\_\-group=NULL, \$language\_\-group=NULL)
+\item 
+\hyperlink{classEntityFieldQuery_a732e6068c9fdba15a8142cc03328973e}{propertyCondition} (\$column, \$value, \$operator=NULL)
+\item 
+\hyperlink{classEntityFieldQuery_aaec910a18a4d4d168dcb1f6a004a604e}{entityOrderBy} (\$name, \$direction= 'ASC')
+\item 
+\hyperlink{classEntityFieldQuery_ad2256f83946cc87c91a960f7a81ce833}{fieldOrderBy} (\$field, \$column, \$direction= 'ASC')
+\item 
+\hyperlink{classEntityFieldQuery_af53f3f1b5da41238638389da6e153dbe}{propertyOrderBy} (\$column, \$direction= 'ASC')
+\item 
+\hyperlink{classEntityFieldQuery_afa3972b551da6115ad5749646df151d4}{count} ()
+\item 
+\hyperlink{classEntityFieldQuery_abcea9c7dece049640ef9034f703bd9d7}{range} (\$start=NULL, \$length=NULL)
+\item 
+\hyperlink{classEntityFieldQuery_a31f0215e7fc7a6469e97bfd850430fb7}{pager} (\$limit=10, \$element=NULL)
+\item 
+\hyperlink{classEntityFieldQuery_a582ffe2a0a08dc4def3076af2bc6563a}{tableSort} (\&\$headers)
+\item 
+\hyperlink{classEntityFieldQuery_a49543cc7ea0841ba46d4ebe310695ce3}{deleted} (\$deleted=TRUE)
+\item 
+\hyperlink{classEntityFieldQuery_af6fbd7296e3c833f8a31769e0c1c866a}{age} (\$age)
+\item 
+\hyperlink{classEntityFieldQuery_a7cfe2a721e0aee895516cd46a59c872e}{addTag} (\$tag)
+\item 
+\hyperlink{classEntityFieldQuery_a143d69ef04486e7b78e0f7536b89ee53}{addMetaData} (\$key, \$object)
+\item 
+\hyperlink{classEntityFieldQuery_ac90614418d7fb3a0c81134889fe1bcbd}{execute} ()
+\item 
+\hyperlink{classEntityFieldQuery_a79642d38a928c05d6741ec0948e08ddb}{queryCallback} ()
+\item 
+\hyperlink{classEntityFieldQuery_a53c95c5a7f8a4a419aa85fa5d6529524}{initializePager} ()
+\item 
+\hyperlink{classEntityFieldQuery_a764b73a57d7b7186d219d859cbf87ddd}{finishQuery} (\$select\_\-query, \$id\_\-key= 'entity\_\-id')
+\item 
+\hyperlink{classEntityFieldQuery_ace9480802a8dbdf23f1d7091aaf7d336}{addCondition} (\hyperlink{classSelectQuery}{SelectQuery} \$select\_\-query, \$sql\_\-field, \$condition, \$having=FALSE)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classEntityFieldQuery_a1d63c58e6b1d99e6034d96875305fe0d}{RETURN\_\-ALL} = NULL
+\item 
+\hypertarget{classEntityFieldQuery_aa66daa06e91cd337c4045ac8e4dd4b7a}{
+{\bfseries \$altered} = FALSE}
+\label{classEntityFieldQuery_aa66daa06e91cd337c4045ac8e4dd4b7a}
+
+\item 
+\hypertarget{classEntityFieldQuery_a6a1f5e64764ac49535250c873ddc169e}{
+{\bfseries \$entityConditions} = array()}
+\label{classEntityFieldQuery_a6a1f5e64764ac49535250c873ddc169e}
+
+\item 
+\hypertarget{classEntityFieldQuery_a62513023c5cfe1a0ea78adc49722f0d2}{
+{\bfseries \$fieldConditions} = array()}
+\label{classEntityFieldQuery_a62513023c5cfe1a0ea78adc49722f0d2}
+
+\item 
+\hypertarget{classEntityFieldQuery_ac8e3cc1b46a9041245ec6ec77d18f9de}{
+{\bfseries \$fieldMetaConditions} = array()}
+\label{classEntityFieldQuery_ac8e3cc1b46a9041245ec6ec77d18f9de}
+
+\item 
+\hypertarget{classEntityFieldQuery_a007295a12afa8adf152f9548ad248165}{
+{\bfseries \$propertyConditions} = array()}
+\label{classEntityFieldQuery_a007295a12afa8adf152f9548ad248165}
+
+\item 
+\hypertarget{classEntityFieldQuery_ae94b590f6a8408cc7eb501b865feca3b}{
+{\bfseries \$order} = array()}
+\label{classEntityFieldQuery_ae94b590f6a8408cc7eb501b865feca3b}
+
+\item 
+\hypertarget{classEntityFieldQuery_ad37cea9d2eeb464519444b9b8df9e102}{
+{\bfseries \$range} = array()}
+\label{classEntityFieldQuery_ad37cea9d2eeb464519444b9b8df9e102}
+
+\item 
+\hypertarget{classEntityFieldQuery_a996e85b1aee86eae7e72664f363b1bc6}{
+{\bfseries \$pager} = array()}
+\label{classEntityFieldQuery_a996e85b1aee86eae7e72664f363b1bc6}
+
+\item 
+\hyperlink{classEntityFieldQuery_a87e043391f89270b6d1902acf9184e14}{\$deleted} = FALSE
+\item 
+\hypertarget{classEntityFieldQuery_af5058d540ed2184e8efcdcc037680342}{
+{\bfseries \$fields} = array()}
+\label{classEntityFieldQuery_af5058d540ed2184e8efcdcc037680342}
+
+\item 
+\hypertarget{classEntityFieldQuery_ae08dbba5615ea921ec5a72e42e0824ce}{
+{\bfseries \$count} = FALSE}
+\label{classEntityFieldQuery_ae08dbba5615ea921ec5a72e42e0824ce}
+
+\item 
+\hypertarget{classEntityFieldQuery_aa437a76efdf79e46fe7ac3a4760a1d73}{
+{\bfseries \$age} = \hyperlink{group__field_ga39b9fb0d47b181607a4d981a9bccbe8a}{FIELD\_\-LOAD\_\-CURRENT}}
+\label{classEntityFieldQuery_aa437a76efdf79e46fe7ac3a4760a1d73}
+
+\item 
+\hypertarget{classEntityFieldQuery_a1aa12ecd2effd5dad6ba77803c46c81d}{
+{\bfseries \$tags} = array()}
+\label{classEntityFieldQuery_a1aa12ecd2effd5dad6ba77803c46c81d}
+
+\item 
+\hypertarget{classEntityFieldQuery_a7b2b0567133edfa3afbb37c7ba2b463a}{
+{\bfseries \$metaData} = array()}
+\label{classEntityFieldQuery_a7b2b0567133edfa3afbb37c7ba2b463a}
+
+\item 
+\hypertarget{classEntityFieldQuery_ac6e597534a9aa8b18895e6a26b8e82d0}{
+{\bfseries \$orderedResults} = array()}
+\label{classEntityFieldQuery_ac6e597534a9aa8b18895e6a26b8e82d0}
+
+\item 
+\hypertarget{classEntityFieldQuery_a0a811479c18a4bb1ec5697cd4a1a321b}{
+{\bfseries \$executeCallback} = ''}
+\label{classEntityFieldQuery_a0a811479c18a4bb1ec5697cd4a1a321b}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classEntityFieldQuery_addc28605e17a54c0198f3cd6e2753489}{addFieldCondition} (\&\$conditions, \$field, \$column=NULL, \$value=NULL, \$operator=NULL, \$delta\_\-group=NULL, \$language\_\-group=NULL)
+\item 
+\hyperlink{classEntityFieldQuery_ab3bb269b65934d2aaa0fb2fb3bd884e4}{propertyQuery} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Retrieves entities matching a given set of conditions.
+
+This class allows finding entities based on entity properties (for example, node-\/$>$changed), field values, and generic entity meta data (bundle, entity type, entity id, and revision ID). It is not possible to query across multiple entity types. For example, there is no facility to find published nodes written by users created in the last hour, as this would require querying both node-\/$>$status and user-\/$>$created.
+
+Normally we would not want to have public properties on the object, as that allows the object's state to become inconsistent too easily. However, this class's standard use case involves primarily code that does need to have direct access to the collected properties in order to handle alternate execution routines. We therefore use public properties for simplicity. Note that code that is simply creating and running a field query should still use the appropriate methods to add conditions on the query.
+
+Storage engines are not required to support every type of query. By default, an \hyperlink{classEntityFieldQueryException}{EntityFieldQueryException} will be raised if an unsupported condition is specified or if the query has field conditions or sorts that are stored in different field storage engines. However, this logic can be overridden in \hyperlink{group__hooks_ga22d97ef7297e17697cdaa8b32483f412}{hook\_\-entity\_\-query\_\-alter()}.
+
+Also note that this query does not automatically respect entity access restrictions. Node access control is performed by the SQL storage engine but other storage engines might not do this. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classEntityFieldQuery_ace9480802a8dbdf23f1d7091aaf7d336}{
+\index{EntityFieldQuery@{EntityFieldQuery}!addCondition@{addCondition}}
+\index{addCondition@{addCondition}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{addCondition}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::addCondition ({\bf SelectQuery} \$ {\em select\_\-query}, \/  \$ {\em sql\_\-field}, \/  \$ {\em condition}, \/  \$ {\em having} = {\ttfamily FALSE})}}
+\label{classEntityFieldQuery_ace9480802a8dbdf23f1d7091aaf7d336}
+Adds a condition to an already built \hyperlink{classSelectQuery}{SelectQuery} (internal function).
+
+This is a helper for hook\_\-entity\_\-query() and \hyperlink{group__field__storage_gaf46795ee1b678a72b4457b524303c794}{hook\_\-field\_\-storage\_\-query()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{classSelectQuery}{SelectQuery}}]\$select\_\-query A \hyperlink{classSelectQuery}{SelectQuery} object. \item[{\em \$sql\_\-field}]The name of the field. \item[{\em \$condition}]A condition as described in \hyperlink{classEntityFieldQuery_aa8f9660691c0ff6aca2e535c3df78e92}{EntityFieldQuery::fieldCondition()} and \hyperlink{classEntityFieldQuery_a08559bd2f164f707a7ad18eff6622017}{EntityFieldQuery::entityCondition()}. \item[{\em \$having}]HAVING or WHERE. This is necessary because SQL can't handle WHERE conditions on aliased columns. \end{DoxyParams}
+\hypertarget{classEntityFieldQuery_addc28605e17a54c0198f3cd6e2753489}{
+\index{EntityFieldQuery@{EntityFieldQuery}!addFieldCondition@{addFieldCondition}}
+\index{addFieldCondition@{addFieldCondition}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{addFieldCondition}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::addFieldCondition (\&\$ {\em conditions}, \/  \$ {\em field}, \/  \$ {\em column} = {\ttfamily NULL}, \/  \$ {\em value} = {\ttfamily NULL}, \/  \$ {\em operator} = {\ttfamily NULL}, \/  \$ {\em delta\_\-group} = {\ttfamily NULL}, \/  \$ {\em language\_\-group} = {\ttfamily NULL})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classEntityFieldQuery_addc28605e17a54c0198f3cd6e2753489}
+Adds the given condition to the proper condition array.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$conditions}]A reference to an array of conditions. \item[{\em \$field}]Either a field name or a field array. \item[{\em \$column}]A column defined in the \hyperlink{group__field__types_gaae7d9348e56f207a8be0b866d25252b7}{hook\_\-field\_\-schema()} of this field. If this is omitted then the query will find only entities that have data in this field, using the entity and property conditions if there are any. \item[{\em \$value}]The value to test the column value against. In most cases, this is a scalar. For more complex options, it is an array. The meaning of each element in the array is dependent on \$operator. \item[{\em \$operator}]Possible values:
+\begin{DoxyItemize}
+\item '=', '$<$$>$', '$>$', '$>$=', '$<$', '$<$=', 'STARTS\_\-WITH', 'CONTAINS': These operators expect \$value to be a literal of the same type as the column.
+\item 'IN', 'NOT IN': These operators expect \$value to be an array of literals of the same type as the column.
+\item 'BETWEEN': This operator expects \$value to be an array of two literals of the same type as the column. The operator can be omitted, and will default to 'IN' if the value is an array, or to '=' otherwise. 
+\end{DoxyItemize}\item[{\em \$delta\_\-group}]An arbitrary identifier: conditions in the same group must have the same \$delta\_\-group. For example, let's presume a multivalue field which has two columns, 'color' and 'shape', and for entity id 1, there are two values: red/square and blue/circle. Entity ID 1 does not have values corresponding to 'red circle', however if you pass 'red' and 'circle' as conditions, it will appear in the results -\/ by default queries will run against any combination of deltas. By passing the conditions with the same \$delta\_\-group it will ensure that only values attached to the same delta are matched, and entity 1 would then be excluded from the results. \item[{\em \$language\_\-group}]An arbitrary identifier: conditions in the same group must have the same \$language\_\-group.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classEntityFieldQuery}{EntityFieldQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classEntityFieldQuery_a143d69ef04486e7b78e0f7536b89ee53}{
+\index{EntityFieldQuery@{EntityFieldQuery}!addMetaData@{addMetaData}}
+\index{addMetaData@{addMetaData}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{addMetaData}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::addMetaData (\$ {\em key}, \/  \$ {\em object})}}
+\label{classEntityFieldQuery_a143d69ef04486e7b78e0f7536b89ee53}
+Adds additional metadata to the query.
+
+Sometimes a query may need to provide additional contextual data for the alter hook. The alter hook implementations may then use that information to decide if and how to take action.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$key}]The unique identifier for this piece of metadata. Must be a string that follows the same rules as any other PHP identifier. \item[{\em \$object}]The additional data to add to the query. May be any valid PHP variable.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classEntityFieldQuery}{EntityFieldQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classEntityFieldQuery_a7cfe2a721e0aee895516cd46a59c872e}{
+\index{EntityFieldQuery@{EntityFieldQuery}!addTag@{addTag}}
+\index{addTag@{addTag}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{addTag}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::addTag (\$ {\em tag})}}
+\label{classEntityFieldQuery_a7cfe2a721e0aee895516cd46a59c872e}
+Adds a tag to the query.
+
+Tags are strings that mark a query so that \hyperlink{group__hooks_gaf166f6375e9f7b5919d719eb91198d47}{hook\_\-query\_\-alter()} and \hyperlink{group__hooks_ga12527037deeb76adcab1000e984fdfce}{hook\_\-query\_\-TAG\_\-alter()} implementations may decide if they wish to alter the query. A query may have any number of tags, and they must be valid PHP identifiers (composed of letters, numbers, and underscores). For example, queries involving nodes that will be displayed for a user need to add the tag 'node\_\-access', so that the node module can add access restrictions to the query.
+
+If an entity field query has tags, it must also have an entity type specified, because the alter hook will need the entity base table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$tag The tag to add.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classEntityFieldQuery}{EntityFieldQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classEntityFieldQuery_af6fbd7296e3c833f8a31769e0c1c866a}{
+\index{EntityFieldQuery@{EntityFieldQuery}!age@{age}}
+\index{age@{age}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{age}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::age (\$ {\em age})}}
+\label{classEntityFieldQuery_af6fbd7296e3c833f8a31769e0c1c866a}
+Queries the current or every revision.
+
+Note that this only affects field conditions. Property conditions always apply to the current revision. : Once revision tables have been cleaned up, revisit this.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$age}]
+\begin{DoxyItemize}
+\item FIELD\_\-LOAD\_\-CURRENT (default): \hyperlink{classQuery}{Query} the most recent revisions for all entities. The results will be keyed by entity type and entity ID.
+\item FIELD\_\-LOAD\_\-REVISION: \hyperlink{classQuery}{Query} all revisions. The results will be keyed by entity type and entity revision ID.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classEntityFieldQuery}{EntityFieldQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classEntityFieldQuery_afa3972b551da6115ad5749646df151d4}{
+\index{EntityFieldQuery@{EntityFieldQuery}!count@{count}}
+\index{count@{count}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::count ()}}
+\label{classEntityFieldQuery_afa3972b551da6115ad5749646df151d4}
+Sets the query to be a count query only.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classEntityFieldQuery}{EntityFieldQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classEntityFieldQuery_a49543cc7ea0841ba46d4ebe310695ce3}{
+\index{EntityFieldQuery@{EntityFieldQuery}!deleted@{deleted}}
+\index{deleted@{deleted}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{deleted}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::deleted (\$ {\em deleted} = {\ttfamily TRUE})}}
+\label{classEntityFieldQuery_a49543cc7ea0841ba46d4ebe310695ce3}
+Filters on the data being deleted.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$deleted}]TRUE to only return deleted data, FALSE to return non-\/deleted data, \hyperlink{classEntityFieldQuery_a1d63c58e6b1d99e6034d96875305fe0d}{EntityFieldQuery::RETURN\_\-ALL} to return everything. Defaults to FALSE.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classEntityFieldQuery}{EntityFieldQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classEntityFieldQuery_a08559bd2f164f707a7ad18eff6622017}{
+\index{EntityFieldQuery@{EntityFieldQuery}!entityCondition@{entityCondition}}
+\index{entityCondition@{entityCondition}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{entityCondition}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::entityCondition (\$ {\em name}, \/  \$ {\em value}, \/  \$ {\em operator} = {\ttfamily NULL})}}
+\label{classEntityFieldQuery_a08559bd2f164f707a7ad18eff6622017}
+Adds a condition on entity-\/generic metadata.
+
+If the overall query contains only entity conditions or ordering, or if there are property conditions, then specifying the entity type is mandatory. If there are field conditions or ordering but no property conditions or ordering, then specifying an entity type is optional. While the field storage engine might support field conditions on more than one entity type, there is no way to query across multiple entity base tables by default. To specify the entity type, pass in 'entity\_\-type' for \$name, the type as a string for \$value, and no \$operator (it's disregarded).
+
+'bundle', 'revision\_\-id' and 'entity\_\-id' have no such restrictions.
+
+Note: The \char`\"{}comment\char`\"{} entity type does not support bundle conditions.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]'entity\_\-type', 'bundle', 'revision\_\-id' or 'entity\_\-id'. \item[{\em \$value}]The value for \$name. In most cases, this is a scalar. For more complex options, it is an array. The meaning of each element in the array is dependent on \$operator. \item[{\em \$operator}]Possible values:
+\begin{DoxyItemize}
+\item '=', '$<$$>$', '$>$', '$>$=', '$<$', '$<$=', 'STARTS\_\-WITH', 'CONTAINS': These operators expect \$value to be a literal of the same type as the column.
+\item 'IN', 'NOT IN': These operators expect \$value to be an array of literals of the same type as the column.
+\item 'BETWEEN': This operator expects \$value to be an array of two literals of the same type as the column. The operator can be omitted, and will default to 'IN' if the value is an array, or to '=' otherwise.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classEntityFieldQuery}{EntityFieldQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classEntityFieldQuery_aaec910a18a4d4d168dcb1f6a004a604e}{
+\index{EntityFieldQuery@{EntityFieldQuery}!entityOrderBy@{entityOrderBy}}
+\index{entityOrderBy@{entityOrderBy}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{entityOrderBy}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::entityOrderBy (\$ {\em name}, \/  \$ {\em direction} = {\ttfamily 'ASC'})}}
+\label{classEntityFieldQuery_aaec910a18a4d4d168dcb1f6a004a604e}
+Orders the result set by entity-\/generic metadata.
+
+If called multiple times, the query will order by each specified column in the order this method is called.
+
+Note: The \char`\"{}comment\char`\"{} and \char`\"{}taxonomy\_\-term\char`\"{} entity types don't support ordering by bundle. For \char`\"{}taxonomy\_\-term\char`\"{}, propertyOrderBy('vid') can be used instead.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]'entity\_\-type', 'bundle', 'revision\_\-id' or 'entity\_\-id'. \item[{\em \$direction}]The direction to sort. Legal values are \char`\"{}ASC\char`\"{} and \char`\"{}DESC\char`\"{}.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classEntityFieldQuery}{EntityFieldQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classEntityFieldQuery_ac90614418d7fb3a0c81134889fe1bcbd}{
+\index{EntityFieldQuery@{EntityFieldQuery}!execute@{execute}}
+\index{execute@{execute}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::execute ()}}
+\label{classEntityFieldQuery_ac90614418d7fb3a0c81134889fe1bcbd}
+Executes the query.
+
+After executing the query, \$this-\/$>$orderedResults will contain a list of the same stub entities in the order returned by the query. This is only relevant if there are multiple entity types in the returned value and a field ordering was requested. In every other case, the returned value contains everything necessary for processing.
+
+\begin{DoxyReturn}{Returns}
+Either a number if \hyperlink{classEntityFieldQuery_afa3972b551da6115ad5749646df151d4}{count()} was called or an array of associative arrays of stub entities. The outer array keys are entity types, and the inner array keys are the relevant ID. (In most cases this will be the entity ID. The only exception is when age=FIELD\_\-LOAD\_\-REVISION is used and field conditions or sorts are present -\/-\/ in this case, the key will be the revision ID.) The entity type will only exist in the outer array if results were found. The inner array values are always stub entities, as returned by \hyperlink{common_8inc_af0b338fb292ad46545a3d35178a0155b}{entity\_\-create\_\-stub\_\-entity()}. To traverse the returned array: 
+\begin{DoxyCode}
+     foreach ($query->execute() as $entity_type => $entities) {
+       foreach ($entities as $entity_id => $entity) {
+\end{DoxyCode}
+ Note if the entity type is known, then the following snippet will load the entities found: 
+\begin{DoxyCode}
+     $result = $query->execute();
+     if (!empty($result[$my_type])) {
+       $entities = entity_load($my_type, array_keys($result[$my_type]));
+     }
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\hypertarget{classEntityFieldQuery_aa8f9660691c0ff6aca2e535c3df78e92}{
+\index{EntityFieldQuery@{EntityFieldQuery}!fieldCondition@{fieldCondition}}
+\index{fieldCondition@{fieldCondition}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{fieldCondition}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::fieldCondition (\$ {\em field}, \/  \$ {\em column} = {\ttfamily NULL}, \/  \$ {\em value} = {\ttfamily NULL}, \/  \$ {\em operator} = {\ttfamily NULL}, \/  \$ {\em delta\_\-group} = {\ttfamily NULL}, \/  \$ {\em language\_\-group} = {\ttfamily NULL})}}
+\label{classEntityFieldQuery_aa8f9660691c0ff6aca2e535c3df78e92}
+Adds a condition on field values.
+
+Note that entities with empty field values will be excluded from the \hyperlink{classEntityFieldQuery}{EntityFieldQuery} results when using this method.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field}]Either a field name or a field array. \item[{\em \$column}]The column that should hold the value to be matched. \item[{\em \$value}]The value to test the column value against. \item[{\em \$operator}]The operator to be used to test the given value. \item[{\em \$delta\_\-group}]An arbitrary identifier: conditions in the same group must have the same \$delta\_\-group. \item[{\em \$language\_\-group}]An arbitrary identifier: conditions in the same group must have the same \$language\_\-group.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classEntityFieldQuery}{EntityFieldQuery} The called object.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classEntityFieldQuery_addc28605e17a54c0198f3cd6e2753489}{EntityFieldQuery::addFieldCondition} 
+
+\hyperlink{classEntityFieldQuery_a49543cc7ea0841ba46d4ebe310695ce3}{EntityFieldQuery::deleted} 
+\end{DoxySeeAlso}
+\hypertarget{classEntityFieldQuery_a2008e72f472747354332f0b42971032f}{
+\index{EntityFieldQuery@{EntityFieldQuery}!fieldDeltaCondition@{fieldDeltaCondition}}
+\index{fieldDeltaCondition@{fieldDeltaCondition}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{fieldDeltaCondition}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::fieldDeltaCondition (\$ {\em field}, \/  \$ {\em value} = {\ttfamily NULL}, \/  \$ {\em operator} = {\ttfamily NULL}, \/  \$ {\em delta\_\-group} = {\ttfamily NULL}, \/  \$ {\em language\_\-group} = {\ttfamily NULL})}}
+\label{classEntityFieldQuery_a2008e72f472747354332f0b42971032f}
+Adds a condition on the field delta column.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field}]Either a field name or a field array. \item[{\em \$value}]The value to test the column value against. \item[{\em \$operator}]The operator to be used to test the given value. \item[{\em \$delta\_\-group}]An arbitrary identifier: conditions in the same group must have the same \$delta\_\-group. \item[{\em \$language\_\-group}]An arbitrary identifier: conditions in the same group must have the same \$language\_\-group.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classEntityFieldQuery}{EntityFieldQuery} The called object.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classEntityFieldQuery_addc28605e17a54c0198f3cd6e2753489}{EntityFieldQuery::addFieldCondition} 
+
+\hyperlink{classEntityFieldQuery_a49543cc7ea0841ba46d4ebe310695ce3}{EntityFieldQuery::deleted} 
+\end{DoxySeeAlso}
+\hypertarget{classEntityFieldQuery_a4c09c59b7bea2f57e8c8b50ef641fbf4}{
+\index{EntityFieldQuery@{EntityFieldQuery}!fieldLanguageCondition@{fieldLanguageCondition}}
+\index{fieldLanguageCondition@{fieldLanguageCondition}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{fieldLanguageCondition}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::fieldLanguageCondition (\$ {\em field}, \/  \$ {\em value} = {\ttfamily NULL}, \/  \$ {\em operator} = {\ttfamily NULL}, \/  \$ {\em delta\_\-group} = {\ttfamily NULL}, \/  \$ {\em language\_\-group} = {\ttfamily NULL})}}
+\label{classEntityFieldQuery_a4c09c59b7bea2f57e8c8b50ef641fbf4}
+Adds a condition on the field language column.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field}]Either a field name or a field array. \item[{\em \$value}]The value to test the column value against. \item[{\em \$operator}]The operator to be used to test the given value. \item[{\em \$delta\_\-group}]An arbitrary identifier: conditions in the same group must have the same \$delta\_\-group. \item[{\em \$language\_\-group}]An arbitrary identifier: conditions in the same group must have the same \$language\_\-group.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classEntityFieldQuery}{EntityFieldQuery} The called object.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classEntityFieldQuery_addc28605e17a54c0198f3cd6e2753489}{EntityFieldQuery::addFieldCondition} 
+
+\hyperlink{classEntityFieldQuery_a49543cc7ea0841ba46d4ebe310695ce3}{EntityFieldQuery::deleted} 
+\end{DoxySeeAlso}
+\hypertarget{classEntityFieldQuery_ad2256f83946cc87c91a960f7a81ce833}{
+\index{EntityFieldQuery@{EntityFieldQuery}!fieldOrderBy@{fieldOrderBy}}
+\index{fieldOrderBy@{fieldOrderBy}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{fieldOrderBy}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::fieldOrderBy (\$ {\em field}, \/  \$ {\em column}, \/  \$ {\em direction} = {\ttfamily 'ASC'})}}
+\label{classEntityFieldQuery_ad2256f83946cc87c91a960f7a81ce833}
+Orders the result set by a given field column.
+
+If called multiple times, the query will order by each specified column in the order this method is called. Note that entities with empty field values will be excluded from the \hyperlink{classEntityFieldQuery}{EntityFieldQuery} results when using this method.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field}]Either a field name or a field array. \item[{\em \$column}]A column defined in the \hyperlink{group__field__types_gaae7d9348e56f207a8be0b866d25252b7}{hook\_\-field\_\-schema()} of this field. entity\_\-id and bundle can also be used. \item[{\em \$direction}]The direction to sort. Legal values are \char`\"{}ASC\char`\"{} and \char`\"{}DESC\char`\"{}.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classEntityFieldQuery}{EntityFieldQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classEntityFieldQuery_a764b73a57d7b7186d219d859cbf87ddd}{
+\index{EntityFieldQuery@{EntityFieldQuery}!finishQuery@{finishQuery}}
+\index{finishQuery@{finishQuery}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{finishQuery}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::finishQuery (\$ {\em select\_\-query}, \/  \$ {\em id\_\-key} = {\ttfamily 'entity\_\-id'})}}
+\label{classEntityFieldQuery_a764b73a57d7b7186d219d859cbf87ddd}
+Finishes the query.
+
+Adds tags, metaData, range and returns the requested list or count.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{classSelectQuery}{SelectQuery}}]\$select\_\-query A \hyperlink{classSelectQuery}{SelectQuery} which has entity\_\-type, entity\_\-id, revision\_\-id and bundle fields added. \item[{\em \$id\_\-key}]Which field's values to use as the returned array keys.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+See \hyperlink{classEntityFieldQuery_ac90614418d7fb3a0c81134889fe1bcbd}{EntityFieldQuery::execute()}. 
+\end{DoxyReturn}
+\hypertarget{classEntityFieldQuery_a53c95c5a7f8a4a419aa85fa5d6529524}{
+\index{EntityFieldQuery@{EntityFieldQuery}!initializePager@{initializePager}}
+\index{initializePager@{initializePager}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{initializePager}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::initializePager ()}}
+\label{classEntityFieldQuery_a53c95c5a7f8a4a419aa85fa5d6529524}
+Gets the total number of results and initializes a pager for the query.
+
+The pager can be disabled by either setting the pager limit to 0, or by setting this query to be a count query. \hypertarget{classEntityFieldQuery_a31f0215e7fc7a6469e97bfd850430fb7}{
+\index{EntityFieldQuery@{EntityFieldQuery}!pager@{pager}}
+\index{pager@{pager}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{pager}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::pager (\$ {\em limit} = {\ttfamily 10}, \/  \$ {\em element} = {\ttfamily NULL})}}
+\label{classEntityFieldQuery_a31f0215e7fc7a6469e97bfd850430fb7}
+Enables a pager for the query.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$limit}]An integer specifying the number of elements per page. If passed a false value (FALSE, 0, NULL), the pager is disabled. \item[{\em \$element}]An optional integer to distinguish between multiple pagers on one page. If not provided, one is automatically calculated.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classEntityFieldQuery}{EntityFieldQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classEntityFieldQuery_a732e6068c9fdba15a8142cc03328973e}{
+\index{EntityFieldQuery@{EntityFieldQuery}!propertyCondition@{propertyCondition}}
+\index{propertyCondition@{propertyCondition}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{propertyCondition}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::propertyCondition (\$ {\em column}, \/  \$ {\em value}, \/  \$ {\em operator} = {\ttfamily NULL})}}
+\label{classEntityFieldQuery_a732e6068c9fdba15a8142cc03328973e}
+Adds a condition on an entity-\/specific property.
+
+An \$entity\_\-type must be specified by calling EntityFieldCondition::entityCondition('entity\_\-type', \$entity\_\-type) before executing the query. Also, by default only entities stored in SQL are supported; however, EntityFieldQuery::executeCallback can be set to handle different entity storage.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$column}]A column defined in the \hyperlink{group__schemaapi_ga9abd926ddaf68a22e6dca28a25d0c6f5}{hook\_\-schema()} of the base table of the entity. \item[{\em \$value}]The value to test the field against. In most cases, this is a scalar. For more complex options, it is an array. The meaning of each element in the array is dependent on \$operator. \item[{\em \$operator}]Possible values:
+\begin{DoxyItemize}
+\item '=', '$<$$>$', '$>$', '$>$=', '$<$', '$<$=', 'STARTS\_\-WITH', 'CONTAINS': These operators expect \$value to be a literal of the same type as the column.
+\item 'IN', 'NOT IN': These operators expect \$value to be an array of literals of the same type as the column.
+\item 'BETWEEN': This operator expects \$value to be an array of two literals of the same type as the column. The operator can be omitted, and will default to 'IN' if the value is an array, or to '=' otherwise.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classEntityFieldQuery}{EntityFieldQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classEntityFieldQuery_af53f3f1b5da41238638389da6e153dbe}{
+\index{EntityFieldQuery@{EntityFieldQuery}!propertyOrderBy@{propertyOrderBy}}
+\index{propertyOrderBy@{propertyOrderBy}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{propertyOrderBy}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::propertyOrderBy (\$ {\em column}, \/  \$ {\em direction} = {\ttfamily 'ASC'})}}
+\label{classEntityFieldQuery_af53f3f1b5da41238638389da6e153dbe}
+Orders the result set by an entity-\/specific property.
+
+An \$entity\_\-type must be specified by calling EntityFieldCondition::entityCondition('entity\_\-type', \$entity\_\-type) before executing the query.
+
+If called multiple times, the query will order by each specified column in the order this method is called.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$column}]The column on which to order. \item[{\em \$direction}]The direction to sort. Legal values are \char`\"{}ASC\char`\"{} and \char`\"{}DESC\char`\"{}.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classEntityFieldQuery}{EntityFieldQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classEntityFieldQuery_ab3bb269b65934d2aaa0fb2fb3bd884e4}{
+\index{EntityFieldQuery@{EntityFieldQuery}!propertyQuery@{propertyQuery}}
+\index{propertyQuery@{propertyQuery}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{propertyQuery}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::propertyQuery ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classEntityFieldQuery_ab3bb269b65934d2aaa0fb2fb3bd884e4}
+Queries entity tables in SQL for property conditions and sorts.
+
+This method is only used if there are no field conditions and sorts.
+
+\begin{DoxyReturn}{Returns}
+See \hyperlink{classEntityFieldQuery_ac90614418d7fb3a0c81134889fe1bcbd}{EntityFieldQuery::execute()}. 
+\end{DoxyReturn}
+\hypertarget{classEntityFieldQuery_a79642d38a928c05d6741ec0948e08ddb}{
+\index{EntityFieldQuery@{EntityFieldQuery}!queryCallback@{queryCallback}}
+\index{queryCallback@{queryCallback}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{queryCallback}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::queryCallback ()}}
+\label{classEntityFieldQuery_a79642d38a928c05d6741ec0948e08ddb}
+Determines the query callback to use for this entity query.
+
+\begin{DoxyReturn}{Returns}
+A callback that can be used with call\_\-user\_\-func(). 
+\end{DoxyReturn}
+\hypertarget{classEntityFieldQuery_abcea9c7dece049640ef9034f703bd9d7}{
+\index{EntityFieldQuery@{EntityFieldQuery}!range@{range}}
+\index{range@{range}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{range}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::range (\$ {\em start} = {\ttfamily NULL}, \/  \$ {\em length} = {\ttfamily NULL})}}
+\label{classEntityFieldQuery_abcea9c7dece049640ef9034f703bd9d7}
+Restricts a query to a given range in the result set.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$start}]The first entity from the result set to return. If NULL, removes any range directives that are set. \item[{\em \$length}]The number of entities to return from the result set.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classEntityFieldQuery}{EntityFieldQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classEntityFieldQuery_a582ffe2a0a08dc4def3076af2bc6563a}{
+\index{EntityFieldQuery@{EntityFieldQuery}!tableSort@{tableSort}}
+\index{tableSort@{tableSort}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{tableSort}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::tableSort (\&\$ {\em headers})}}
+\label{classEntityFieldQuery_a582ffe2a0a08dc4def3076af2bc6563a}
+Enables sortable tables for this query.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$headers}]An EFQ Header array based on which the order clause is added to the query.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classEntityFieldQuery}{EntityFieldQuery} The called object. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classEntityFieldQuery_a87e043391f89270b6d1902acf9184e14}{
+\index{EntityFieldQuery@{EntityFieldQuery}!\$deleted@{\$deleted}}
+\index{\$deleted@{\$deleted}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{\$deleted}]{\setlength{\rightskip}{0pt plus 5cm}EntityFieldQuery::\$deleted = FALSE}}
+\label{classEntityFieldQuery_a87e043391f89270b6d1902acf9184e14}
+\hyperlink{classQuery}{Query} behavior for deleted data.
+
+TRUE to return only deleted data, FALSE to return only non-\/deleted data, \hyperlink{classEntityFieldQuery_a1d63c58e6b1d99e6034d96875305fe0d}{EntityFieldQuery::RETURN\_\-ALL} to return everything.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classEntityFieldQuery_a49543cc7ea0841ba46d4ebe310695ce3}{EntityFieldQuery::deleted()} 
+\end{DoxySeeAlso}
+\hypertarget{classEntityFieldQuery_a1d63c58e6b1d99e6034d96875305fe0d}{
+\index{EntityFieldQuery@{EntityFieldQuery}!RETURN\_\-ALL@{RETURN\_\-ALL}}
+\index{RETURN\_\-ALL@{RETURN\_\-ALL}!EntityFieldQuery@{EntityFieldQuery}}
+\subsubsection[{RETURN\_\-ALL}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf EntityFieldQuery::RETURN\_\-ALL} = NULL}}
+\label{classEntityFieldQuery_a1d63c58e6b1d99e6034d96875305fe0d}
+Indicates that both deleted and non-\/deleted fields should be returned.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classEntityFieldQuery_a49543cc7ea0841ba46d4ebe310695ce3}{EntityFieldQuery::deleted()} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/entity.inc\end{DoxyCompactItemize}

@@ -1,0 +1,53 @@
+\hypertarget{profile-listing_8tpl_8php}{
+\section{html/modules/profile/profile-\/listing.tpl.php File Reference}
+\label{profile-listing_8tpl_8php}\index{html/modules/profile/profile-\/listing.tpl.php@{html/modules/profile/profile-\/listing.tpl.php}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{profile-listing_8tpl_8php_a2662269aca0f9faedd1ee9e41828ea4c}{
+print {\bfseries \$user\_\-picture}}
+\label{profile-listing_8tpl_8php_a2662269aca0f9faedd1ee9e41828ea4c}
+
+\item 
+\hypertarget{profile-listing_8tpl_8php_a3b6a989206ad4aa65f2a35310530d052}{
+print {\bfseries \$name}}
+\label{profile-listing_8tpl_8php_a3b6a989206ad4aa65f2a35310530d052}
+
+\item 
+\hypertarget{profile-listing_8tpl_8php_a786bc7397fe2b18f739bbd3f5a92ff47}{
+foreach(\$profile as \$field) {\bfseries endforeach}}
+\label{profile-listing_8tpl_8php_a786bc7397fe2b18f739bbd3f5a92ff47}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Default theme implementation for displaying a user and their profile data for member listing pages.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{profile-wrapper_8tpl_8php}{profile-\/wrapper.tpl.php} where all the data is collected and printed out.
+\end{DoxySeeAlso}
+Available variables:
+\begin{DoxyItemize}
+\item \$account: User's account object.
+\item \$user\_\-picture: Image configured for the account linking to the users page.
+\item \$name: User's account name linking to the users page.
+\item \$profile: Keyed array of all profile fields that are set as visible in member list pages (configured by site administrators). It also needs to have a value in order to be present.
+\end{DoxyItemize}
+
+Each \$field in \$profile contains:
+\begin{DoxyItemize}
+\item \$field-\/$>$title: Title of the profile field.
+\item \$field-\/$>$value: Value of the profile field.
+\item \$field-\/$>$type: Type of the profile field, i.e., checkbox, textfield, textarea, selection, list, url or date.
+\end{DoxyItemize}
+
+Since \$profile is keyed, a direct print of the field is possible. Not all accounts may have a value for a profile so do a check first. If a field of \char`\"{}last\_\-name\char`\"{} was set for the site, the following can be used.
+
+$<$?php if (isset(\$profile\mbox{[}'last\_\-name'\mbox{]})): ?$>$  $<$?php print \$profile\mbox{[}'last\_\-name'\mbox{]}-\/$>$title; ?$>$:\par
+ $<$?php print \$profile\mbox{[}'last\_\-name'\mbox{]}-\/$>$value; ?$>$  $<$?php endif; ?$>$
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{profile_8module_a7dc89cd06dce412d737449102c65c5d5}{template\_\-preprocess\_\-profile\_\-listing()} 
+\end{DoxySeeAlso}

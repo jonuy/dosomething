@@ -1,0 +1,60 @@
+\hypertarget{views-exposed-form_8tpl_8php}{
+\section{html/profiles/dosomething/modules/contrib/views/theme/views-\/exposed-\/form.tpl.php File Reference}
+\label{views-exposed-form_8tpl_8php}\index{html/profiles/dosomething/modules/contrib/views/theme/views-\/exposed-\/form.tpl.php@{html/profiles/dosomething/modules/contrib/views/theme/views-\/exposed-\/form.tpl.php}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{views-exposed-form_8tpl_8php_aa2cbf3d18320e72113738a0aac58a048}{
+if(!empty(\$q)) {\bfseries endif}}
+\label{views-exposed-form_8tpl_8php_aa2cbf3d18320e72113738a0aac58a048}
+
+\item 
+\hypertarget{views-exposed-form_8tpl_8php_afb50f6bd39cc445d89a7f76368ae8a65}{
+foreach(\$widgets as \$id=$>$ \$widget) print {\bfseries \$id}}
+\label{views-exposed-form_8tpl_8php_afb50f6bd39cc445d89a7f76368ae8a65}
+
+\item 
+\hypertarget{views-exposed-form_8tpl_8php_a715d99dc689c8c847ee23619ffa9495b}{
+if(!empty(\$widget-\/$>$label)) print \$widget {\bfseries label}}
+\label{views-exposed-form_8tpl_8php_a715d99dc689c8c847ee23619ffa9495b}
+
+\item 
+\hypertarget{views-exposed-form_8tpl_8php_a36d328c3630d51e9dcdf8d9532b8b14c}{
+print \$widget {\bfseries widget}}
+\label{views-exposed-form_8tpl_8php_a36d328c3630d51e9dcdf8d9532b8b14c}
+
+\item 
+\hypertarget{views-exposed-form_8tpl_8php_a672d9707ef91db026c210f98cc601123}{
+{\bfseries endforeach}}
+\label{views-exposed-form_8tpl_8php_a672d9707ef91db026c210f98cc601123}
+
+\item 
+\hypertarget{views-exposed-form_8tpl_8php_afe2f42554c9f98a7c79fda26be118718}{
+if(!empty(\$sort\_\-by)) print {\bfseries \$sort\_\-order}}
+\label{views-exposed-form_8tpl_8php_afe2f42554c9f98a7c79fda26be118718}
+
+\item 
+\hypertarget{views-exposed-form_8tpl_8php_a6fc2d49e6a14767e126038af79c13e2b}{
+print {\bfseries \$button}}
+\label{views-exposed-form_8tpl_8php_a6fc2d49e6a14767e126038af79c13e2b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This template handles the layout of the views exposed filter form.
+
+Variables available:
+\begin{DoxyItemize}
+\item \$widgets: An array of exposed form widgets. Each widget contains:
+\item \$widget-\/$>$label: The visible label to print. May be optional.
+\item \$widget-\/$>$operator: The operator for the widget. May be optional.
+\item \$widget-\/$>$widget: The widget itself.
+\item \$sort\_\-by: The select box to sort the \hyperlink{classview}{view} using an exposed form.
+\item \$sort\_\-order: The select box with the ASC, DESC options to define order. May be optional.
+\item \$items\_\-per\_\-page: The select box with the available items per page. May be optional.
+\item \$offset: A textfield to define the offset of the \hyperlink{classview}{view}. May be optional.
+\item \$reset\_\-button: A button to reset the exposed filter applied. May be optional.
+\item \$button: The submit button for the form. 
+\end{DoxyItemize}

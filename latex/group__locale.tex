@@ -1,0 +1,825 @@
+\hypertarget{group__locale}{
+\section{-\/languages-\/negotiation Language negotiation options}
+\label{group__locale}\index{-\/languages-\/negotiation Language negotiation options@{-\/languages-\/negotiation Language negotiation options}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__locale_ga951d63c38235f5186fe6165589c4303f}{locale\_\-language\_\-from\_\-interface} ()
+\item 
+\hyperlink{group__locale_ga07f1b17e9dd116d07f6a2a02bfd6915e}{locale\_\-language\_\-from\_\-browser} (\$languages)
+\item 
+\hyperlink{group__locale_gae7cfd386cb96e33f7728374ef2e3dc42}{locale\_\-language\_\-from\_\-user} (\$languages)
+\item 
+\hyperlink{group__locale_ga4a15e35684fc4fe7a9486b5beee06f1b}{locale\_\-language\_\-from\_\-session} (\$languages)
+\item 
+\hyperlink{group__locale_gaf8f7a2acb2a80fbd8897437ab8eba1d6}{locale\_\-language\_\-from\_\-url} (\$languages)
+\item 
+\hyperlink{group__locale_ga0fe34148ed5e348c43882bcb3f9e418c}{locale\_\-language\_\-url\_\-fallback} (\$language=NULL, \$language\_\-type=\hyperlink{bootstrap_8inc_adcc8b40b0d1ee5cd37f1c7314cc541dc}{LANGUAGE\_\-TYPE\_\-INTERFACE})
+\item 
+\hyperlink{group__locale_ga73c68f3cdad0f635f29bdd5268d81af5}{locale\_\-language\_\-switcher\_\-url} (\$type, \$path)
+\item 
+\hyperlink{group__locale_ga62ade6d961ed1194a462bc27873fee64}{locale\_\-language\_\-switcher\_\-session} (\$type, \$path)
+\item 
+\hyperlink{group__locale_gaafdcd20ea42d6ce5573ece18d3fb9cdd}{locale\_\-language\_\-url\_\-rewrite\_\-url} (\&\$path, \&\$options)
+\item 
+\hyperlink{group__locale_ga510f99d2bec3b7011fe45efed603b1d5}{locale\_\-language\_\-url\_\-rewrite\_\-session} (\&\$path, \&\$options)
+\item 
+\hyperlink{group__locale_ga9fc28b9f10f5aaa7cb733dc0145018a2}{locale\_\-add\_\-language} (\$langcode, \$name=NULL, \$native=NULL, \$direction=\hyperlink{bootstrap_8inc_a8790965df4de009fe8bdcf17f6a5c738}{LANGUAGE\_\-LTR}, \$domain= '', \$prefix= '', \$enabled=TRUE, \$default=FALSE)
+\item 
+\hyperlink{group__locale_ga5d3d163017bea9499839ef6be09807de}{\_\-locale\_\-import\_\-po} (\$file, \$langcode, \$mode, \$group=NULL)
+\item 
+\hyperlink{group__locale_ga97099fd0b115843fd4d443686a3ca35d}{\_\-locale\_\-import\_\-read\_\-po} (\$op, \$file, \$mode=NULL, \$lang=NULL, \$group= 'default')
+\item 
+\hyperlink{group__locale_gaa6bdc2dc6954e30cabefa65ca596e9d0}{\_\-locale\_\-import\_\-message} (\$message, \$file, \$lineno=NULL)
+\item 
+\hyperlink{group__locale_gac065dc774e2258493b661c45c455c709}{\_\-locale\_\-import\_\-one\_\-string} (\$op, \$value=NULL, \$mode=NULL, \$lang=NULL, \$file=NULL, \$group= 'default')
+\item 
+\hyperlink{group__locale_ga3f27e3894d1e98f2a0580834ebf51e4e}{\_\-locale\_\-import\_\-one\_\-string\_\-db} (\&\$report, \$langcode, \$context, \$source, \$translation, \$textgroup, \$location, \$mode, \$plid=0, \$plural=0)
+\item 
+\hyperlink{group__locale_ga1381fc54e922fe478d8ee5cfbe0c3c16}{\_\-locale\_\-import\_\-parse\_\-header} (\$header)
+\item 
+\hyperlink{group__locale_ga7693cf526c48e5dcb6dffabac7deb775}{\_\-locale\_\-import\_\-parse\_\-plural\_\-forms} (\$pluralforms, \$filepath)
+\item 
+\hyperlink{group__locale_gafec8dc8c1a6f8a0c70b5280c3a520c63}{\_\-locale\_\-import\_\-parse\_\-arithmetic} (\$string)
+\item 
+\hyperlink{group__locale_ga53c242ca7adfb5ccc25ebfedab8214a5}{\_\-locale\_\-import\_\-tokenize\_\-formula} (\$formula)
+\item 
+\hyperlink{group__locale_gad0abff75e696db162d5b90acda071371}{\_\-locale\_\-import\_\-append\_\-plural} (\$entry, \$key)
+\item 
+\hyperlink{group__locale_ga1cba05a4c159b1ed844f18ba484cc8e7}{\_\-locale\_\-import\_\-shorten\_\-comments} (\$comment)
+\item 
+\hyperlink{group__locale_gaac1954e79c57539b5599ff4ed7379df7}{\_\-locale\_\-import\_\-parse\_\-quoted} (\$string)
+\item 
+\hyperlink{group__locale_gade17be27a5240ba4804dc51eccf40246}{\_\-locale\_\-export\_\-get\_\-strings} (\$language=NULL, \$group= 'default')
+\item 
+\hyperlink{group__locale_ga694b7e78936d2875e18ef4c8171b7eb8}{\_\-locale\_\-export\_\-po\_\-generate} (\$language=NULL, \$strings=array(), \$header=NULL)
+\item 
+\hyperlink{group__locale_gac152719d6aeadee6074247100424e145}{\_\-locale\_\-export\_\-po} (\$language=NULL, \$output=NULL)
+\item 
+\hyperlink{group__locale_ga8203c2c5a4f964da2395889920934fae}{\_\-locale\_\-export\_\-string} (\$str)
+\item 
+\hyperlink{group__locale_gaae41274b64222185a36a42dbc0ff4b94}{\_\-locale\_\-export\_\-wrap} (\$str, \$len)
+\item 
+\hyperlink{group__locale_gaa18a14faeb8268aee1530afb6b03cca1}{\_\-locale\_\-export\_\-remove\_\-plural} (\$entry)
+\item 
+\hyperlink{group__locale_ga006049082d29be75fd8ad396beda5883}{\_\-locale\_\-translate\_\-seek} ()
+\item 
+\hyperlink{group__locale_ga3afc18d03a7b2355e9328bc211acc4d1}{\_\-locale\_\-translate\_\-seek\_\-query} ()
+\item 
+\hyperlink{group__locale_gae1eec455fe9fcd01af98bb37ff4096ae}{\_\-locale\_\-invalidate\_\-js} (\$langcode=NULL)
+\item 
+\hyperlink{group__locale_ga1235873f9a64b606895cd77628bffabc}{\_\-locale\_\-rebuild\_\-js} (\$langcode=NULL)
+\item 
+\hyperlink{group__locale_gacf9e97475d1e1ffaaf336e3a943163a2}{\_\-locale\_\-translate\_\-language\_\-list} (\$translation, \$limit\_\-language)
+\item 
+\hyperlink{group__locale_gadf3279a1c940efe6955edc1899a97aad}{\_\-locale\_\-prepare\_\-predefined\_\-list} ()
+\item 
+\hyperlink{group__locale_ga2c34cb914394a45fb4e94561bfc26b71}{locale\_\-batch\_\-by\_\-language} (\$langcode, \$finished=NULL, \$skip=array())
+\item 
+\hyperlink{group__locale_gaa6ec98b4c2d6b82b6f206bafcf7d2ce6}{locale\_\-batch\_\-by\_\-component} (\$components, \$finished= '\_\-locale\_\-batch\_\-system\_\-finished')
+\item 
+\hyperlink{group__locale_ga4f10893e8ed214fe4739b9415a06948a}{\_\-locale\_\-batch\_\-build} (\$files, \$finished=NULL, \$components=array())
+\item 
+\hyperlink{group__locale_ga97c8b79262e3aa8af4e5ea3b7908b99b}{\_\-locale\_\-batch\_\-import} (\$filepath, \&\$context)
+\item 
+\hyperlink{group__locale_ga3b7cc14a5735d2aee066dd4f6bb517b8}{\_\-locale\_\-batch\_\-system\_\-finished} (\$success, \$results)
+\item 
+\hyperlink{group__locale_ga06bd6310727083246869907515bea547}{\_\-locale\_\-batch\_\-language\_\-finished} (\$success, \$results)
+\item 
+\hyperlink{group__locale_ga6cdda3c5c776e4c263ace510317cdeed}{locale\_\-languages\_\-overview\_\-form} ()
+\item 
+\hyperlink{group__locale_ga957be3bb6cd02af2ff2acd887fc2b3fe}{locale\_\-languages\_\-overview\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__locale_ga717959709d412fc1039f7436501dbf49}{locale\_\-languages\_\-add\_\-screen} ()
+\item 
+\hyperlink{group__locale_ga06a3fbf820480d99d755aee5ae6a74dc}{locale\_\-languages\_\-predefined\_\-form} (\$form)
+\item 
+\hyperlink{group__locale_ga38e919c4e98aba3e12136c2ac35b92f3}{locale\_\-languages\_\-custom\_\-form} (\$form)
+\item 
+\hyperlink{group__locale_ga32b1bc378b3343f57cf3632acd8701f6}{locale\_\-languages\_\-edit\_\-form} (\$form, \&\$form\_\-state, \$langcode)
+\item 
+\hyperlink{group__locale_gaa662af294a8422d2b73e6e05288b1b8d}{\_\-locale\_\-languages\_\-common\_\-controls} (\&\$form, \$language=NULL)
+\item 
+\hyperlink{group__locale_ga4298724abc57b7d2622a2c9642b4f742}{locale\_\-languages\_\-predefined\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__locale_ga83df19c32a63b094d033d0802d74d7cd}{locale\_\-languages\_\-predefined\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__locale_ga0d97a3815fcd49bb49ed59dc77ebb802}{locale\_\-languages\_\-edit\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__locale_ga749200a912dbb5d31c5403d3fd909741}{locale\_\-languages\_\-edit\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__locale_gae91146ea73b4fde0a5584e4a9e502903}{locale\_\-languages\_\-delete\_\-form} (\$form, \&\$form\_\-state, \$langcode)
+\item 
+\hyperlink{group__locale_gadbf1eb80de38d65bda55e63699822e3c}{locale\_\-languages\_\-delete\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__locale_gad4a0fb5717a5318793af57ec86169949}{locale\_\-languages\_\-configure\_\-form} ()
+\item 
+\hyperlink{group__locale_ga3aeae5dacd89af2116019f5964787c48}{\_\-locale\_\-languages\_\-configure\_\-form\_\-language\_\-table} (\&\$form, \$type)
+\item 
+\hyperlink{group__locale_gad11520d8b7d086b4b801b4a51068ed11}{locale\_\-languages\_\-configure\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__locale_ga8317379be8d1288234df3c3ffb7d39ee}{locale\_\-language\_\-providers\_\-url\_\-form} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__locale_ga16437fdd6666d431070599a6243cfb11}{locale\_\-language\_\-providers\_\-session\_\-form} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__locale_gac36ea050ad5c0a75624c1a9b63c343a0}{locale\_\-translate\_\-overview\_\-screen} ()
+\item 
+\hyperlink{group__locale_gaa34fbb14f95e9ae562772895b284d170}{locale\_\-translate\_\-seek\_\-screen} ()
+\item 
+\hyperlink{group__locale_gacc11c165dc42516edefdca5eab092a28}{locale\_\-translation\_\-filters} ()
+\item 
+\hyperlink{group__locale_ga853ff354fb4c4c637123251916ccb4ae}{locale\_\-translation\_\-filter\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__locale_gac578de2fae636045173446f2aa26bd0f}{locale\_\-translation\_\-filter\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__locale_gaceb2c6612ad9bc1472e4d3c71618c9b3}{locale\_\-translate\_\-import\_\-form} (\$form)
+\item 
+\hyperlink{group__locale_gab96d979ef16a3468061ebb7e11e3210e}{locale\_\-translate\_\-import\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__locale_gaa04044044d6c484553a41432db3924b4}{locale\_\-translate\_\-export\_\-screen} ()
+\item 
+\hyperlink{group__locale_ga5cac42d032877eb9c827b8ec0477a22e}{locale\_\-translate\_\-export\_\-po\_\-form} (\$form, \&\$form\_\-state, \$names)
+\item 
+\hyperlink{group__locale_ga670f0a541fc0b97da4bf4624c2afb434}{locale\_\-translate\_\-export\_\-pot\_\-form} ()
+\item 
+\hyperlink{group__locale_gaa8f71c53db9e03719bdeae8f594fb0ee}{locale\_\-translate\_\-export\_\-po\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__locale_ga438cdd0b99e54bd87cd7058c6037db0e}{locale\_\-translate\_\-edit\_\-form} (\$form, \&\$form\_\-state, \$lid)
+\item 
+\hyperlink{group__locale_ga93fc48be446148e648c9a1d0f630726e}{locale\_\-translate\_\-edit\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__locale_gadbeab4019dcbf389a12af893cdaad5d5}{locale\_\-translate\_\-edit\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__locale_gade9664489526c09d68def1897631f4fa}{locale\_\-translate\_\-delete\_\-page} (\$lid)
+\item 
+\hyperlink{group__locale_gaf40a5c539ee94ae8b089275bf74e1bfe}{locale\_\-translate\_\-delete\_\-form} (\$form, \&\$form\_\-state, \$source)
+\item 
+\hyperlink{group__locale_ga26d7aa049b06d9de384175698f5761c7}{locale\_\-translate\_\-delete\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\end{DoxyCompactItemize}
+\label{_amgrpd41d8cd98f00b204e9800998ecf8427e}
+ \begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__locale_gafac9d59fd436286a3f3738140ce96e82}{\_\-locale\_\-get\_\-predefined\_\-list} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for language negotiation.
+
+There are functions that provide the ability to identify the language. This behavior can be controlled by various options.
+
+Add a language.
+
+The language addition API is used to create languages and store them.
+
+End of \char`\"{}locale-\/api-\/add\char`\"{}
+
+Functions to import and export translations.
+
+These functions provide the ability to import translations from external files and to export translations and translation templates.
+
+End of \char`\"{}locale-\/api-\/import-\/export\char`\"{}
+
+Functions to search in translation files.
+
+These functions provide the functionality to search for specific translations.
+
+End of \char`\"{}locale-\/api-\/seek\char`\"{}
+
+API to provide a list of predefined languages.
+
+End of \char`\"{}locale-\/api-\/languages-\/predefined\char`\"{}
+
+Functions to create batches for importing translations.
+
+These functions can be used to import translations for installed modules.
+
+Administration interface for languages.
+
+These functions provide the user interface to show, add, edit and delete languages as well as providing options for language negotiation.
+
+End of \char`\"{}locale-\/language-\/administration\char`\"{}
+
+Screens for translation administration.
+
+These functions provide various screens as administration interface to import, export and \hyperlink{classview}{view} translations.
+
+End of \char`\"{}locale-\/translate-\/administration-\/screens\char`\"{}
+
+Edit and delete translation strings.
+
+These functions provide the user interface to edit and delete translation strings. 
+
+\subsection{Function Documentation}
+\hypertarget{group__locale_ga4f10893e8ed214fe4739b9415a06948a}{
+\index{locale@{locale}!\_\-locale\_\-batch\_\-build@{\_\-locale\_\-batch\_\-build}}
+\index{\_\-locale\_\-batch\_\-build@{\_\-locale\_\-batch\_\-build}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-batch\_\-build}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-batch\_\-build (\$ {\em files}, \/  \$ {\em finished} = {\ttfamily NULL}, \/  \$ {\em components} = {\ttfamily array()})}}
+\label{group__locale_ga4f10893e8ed214fe4739b9415a06948a}
+Build a locale batch from an array of files.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$files}]Array of files to import. \item[{\em \$finished}]Optional finished callback for the batch. \item[{\em \$components}]Optional list of component names the batch covers. Used in the installer.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A batch structure. 
+\end{DoxyReturn}
+\hypertarget{group__locale_ga97c8b79262e3aa8af4e5ea3b7908b99b}{
+\index{locale@{locale}!\_\-locale\_\-batch\_\-import@{\_\-locale\_\-batch\_\-import}}
+\index{\_\-locale\_\-batch\_\-import@{\_\-locale\_\-batch\_\-import}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-batch\_\-import}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-batch\_\-import (\$ {\em filepath}, \/  \&\$ {\em context})}}
+\label{group__locale_ga97c8b79262e3aa8af4e5ea3b7908b99b}
+Perform interface translation import as a batch step.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$filepath}]Path to a file to import. \item[{\em \$results}]Contains a list of files imported. \end{DoxyParams}
+\hypertarget{group__locale_ga06bd6310727083246869907515bea547}{
+\index{locale@{locale}!\_\-locale\_\-batch\_\-language\_\-finished@{\_\-locale\_\-batch\_\-language\_\-finished}}
+\index{\_\-locale\_\-batch\_\-language\_\-finished@{\_\-locale\_\-batch\_\-language\_\-finished}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-batch\_\-language\_\-finished}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-batch\_\-language\_\-finished (\$ {\em success}, \/  \$ {\em results})}}
+\label{group__locale_ga06bd6310727083246869907515bea547}
+Finished callback of language addition locale import batch. Inform the user of translation files imported. \hypertarget{group__locale_ga3b7cc14a5735d2aee066dd4f6bb517b8}{
+\index{locale@{locale}!\_\-locale\_\-batch\_\-system\_\-finished@{\_\-locale\_\-batch\_\-system\_\-finished}}
+\index{\_\-locale\_\-batch\_\-system\_\-finished@{\_\-locale\_\-batch\_\-system\_\-finished}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-batch\_\-system\_\-finished}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-batch\_\-system\_\-finished (\$ {\em success}, \/  \$ {\em results})}}
+\label{group__locale_ga3b7cc14a5735d2aee066dd4f6bb517b8}
+Finished callback of system page locale import batch. Inform the user of translation files imported. \hypertarget{group__locale_gade17be27a5240ba4804dc51eccf40246}{
+\index{locale@{locale}!\_\-locale\_\-export\_\-get\_\-strings@{\_\-locale\_\-export\_\-get\_\-strings}}
+\index{\_\-locale\_\-export\_\-get\_\-strings@{\_\-locale\_\-export\_\-get\_\-strings}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-export\_\-get\_\-strings}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-export\_\-get\_\-strings (\$ {\em language} = {\ttfamily NULL}, \/  \$ {\em group} = {\ttfamily 'default'})}}
+\label{group__locale_gade17be27a5240ba4804dc51eccf40246}
+Generates a structured array of all strings with translations in \$language, if given. This array can be used to generate an export of the string in the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$language}]Language object to generate the output for, or NULL if generating translation template. \item[{\em \$group}]Text group to export PO file from (eg. 'default' for interface translations). \end{DoxyParams}
+\hypertarget{group__locale_gac152719d6aeadee6074247100424e145}{
+\index{locale@{locale}!\_\-locale\_\-export\_\-po@{\_\-locale\_\-export\_\-po}}
+\index{\_\-locale\_\-export\_\-po@{\_\-locale\_\-export\_\-po}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-export\_\-po}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-export\_\-po (\$ {\em language} = {\ttfamily NULL}, \/  \$ {\em output} = {\ttfamily NULL})}}
+\label{group__locale_gac152719d6aeadee6074247100424e145}
+Write a generated PO or POT file to the output.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$language}]Language object to generate the output for, or NULL if generating translation template. \item[{\em \$output}]The PO(T) file to output as a string. See \_\-locale\_\-export\_\-generate\_\-po() on how it can be generated. \end{DoxyParams}
+\hypertarget{group__locale_ga694b7e78936d2875e18ef4c8171b7eb8}{
+\index{locale@{locale}!\_\-locale\_\-export\_\-po\_\-generate@{\_\-locale\_\-export\_\-po\_\-generate}}
+\index{\_\-locale\_\-export\_\-po\_\-generate@{\_\-locale\_\-export\_\-po\_\-generate}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-export\_\-po\_\-generate}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-export\_\-po\_\-generate (\$ {\em language} = {\ttfamily NULL}, \/  \$ {\em strings} = {\ttfamily array()}, \/  \$ {\em header} = {\ttfamily NULL})}}
+\label{group__locale_ga694b7e78936d2875e18ef4c8171b7eb8}
+Generates the PO(T) file contents for given strings.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$language}]Language object to generate the output for, or NULL if generating translation template. \item[{\em \$strings}]Array of strings to export. See \hyperlink{group__locale_gade17be27a5240ba4804dc51eccf40246}{\_\-locale\_\-export\_\-get\_\-strings()} on how it should be formatted. \item[{\em \$header}]The header portion to use for the output file. Defaults are provided for PO and POT files. \end{DoxyParams}
+\hypertarget{group__locale_gaa18a14faeb8268aee1530afb6b03cca1}{
+\index{locale@{locale}!\_\-locale\_\-export\_\-remove\_\-plural@{\_\-locale\_\-export\_\-remove\_\-plural}}
+\index{\_\-locale\_\-export\_\-remove\_\-plural@{\_\-locale\_\-export\_\-remove\_\-plural}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-export\_\-remove\_\-plural}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-export\_\-remove\_\-plural (\$ {\em entry})}}
+\label{group__locale_gaa18a14faeb8268aee1530afb6b03cca1}
+Removes plural index information from a string \hypertarget{group__locale_ga8203c2c5a4f964da2395889920934fae}{
+\index{locale@{locale}!\_\-locale\_\-export\_\-string@{\_\-locale\_\-export\_\-string}}
+\index{\_\-locale\_\-export\_\-string@{\_\-locale\_\-export\_\-string}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-export\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-export\_\-string (\$ {\em str})}}
+\label{group__locale_ga8203c2c5a4f964da2395889920934fae}
+Print out a string on multiple lines \hypertarget{group__locale_gaae41274b64222185a36a42dbc0ff4b94}{
+\index{locale@{locale}!\_\-locale\_\-export\_\-wrap@{\_\-locale\_\-export\_\-wrap}}
+\index{\_\-locale\_\-export\_\-wrap@{\_\-locale\_\-export\_\-wrap}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-export\_\-wrap}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-export\_\-wrap (\$ {\em str}, \/  \$ {\em len})}}
+\label{group__locale_gaae41274b64222185a36a42dbc0ff4b94}
+Custom word wrapping for Portable Object (Template) files. \hypertarget{group__locale_gafac9d59fd436286a3f3738140ce96e82}{
+\index{locale@{locale}!\_\-locale\_\-get\_\-predefined\_\-list@{\_\-locale\_\-get\_\-predefined\_\-list}}
+\index{\_\-locale\_\-get\_\-predefined\_\-list@{\_\-locale\_\-get\_\-predefined\_\-list}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-get\_\-predefined\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-get\_\-predefined\_\-list ()}}
+\label{group__locale_gafac9d59fd436286a3f3738140ce96e82}
+-\/-\/ Some of the common languages with their English and native names
+
+Based on ISO 639 and \href{http://people.w3.org/rishida/names/languages.html}{\tt http://people.w3.org/rishida/names/languages.html} \hypertarget{group__locale_gad0abff75e696db162d5b90acda071371}{
+\index{locale@{locale}!\_\-locale\_\-import\_\-append\_\-plural@{\_\-locale\_\-import\_\-append\_\-plural}}
+\index{\_\-locale\_\-import\_\-append\_\-plural@{\_\-locale\_\-import\_\-append\_\-plural}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-import\_\-append\_\-plural}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-import\_\-append\_\-plural (\$ {\em entry}, \/  \$ {\em key})}}
+\label{group__locale_gad0abff75e696db162d5b90acda071371}
+Modify a string to contain proper count indices
+
+This is a callback function used via array\_\-map()
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$entry}]An array element. \item[{\em \$key}]Index of the array element. \end{DoxyParams}
+\hypertarget{group__locale_gaa6bdc2dc6954e30cabefa65ca596e9d0}{
+\index{locale@{locale}!\_\-locale\_\-import\_\-message@{\_\-locale\_\-import\_\-message}}
+\index{\_\-locale\_\-import\_\-message@{\_\-locale\_\-import\_\-message}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-import\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-import\_\-message (\$ {\em message}, \/  \$ {\em file}, \/  \$ {\em lineno} = {\ttfamily NULL})}}
+\label{group__locale_gaa6bdc2dc6954e30cabefa65ca596e9d0}
+Sets an error message occurred during locale file parsing.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$message}]The message to be translated. \item[{\em \$file}]Drupal file object corresponding to the PO file to import. \item[{\em \$lineno}]An optional line number argument. \end{DoxyParams}
+\hypertarget{group__locale_gac065dc774e2258493b661c45c455c709}{
+\index{locale@{locale}!\_\-locale\_\-import\_\-one\_\-string@{\_\-locale\_\-import\_\-one\_\-string}}
+\index{\_\-locale\_\-import\_\-one\_\-string@{\_\-locale\_\-import\_\-one\_\-string}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-import\_\-one\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-import\_\-one\_\-string (\$ {\em op}, \/  \$ {\em value} = {\ttfamily NULL}, \/  \$ {\em mode} = {\ttfamily NULL}, \/  \$ {\em lang} = {\ttfamily NULL}, \/  \$ {\em file} = {\ttfamily NULL}, \/  \$ {\em group} = {\ttfamily 'default'})}}
+\label{group__locale_gac065dc774e2258493b661c45c455c709}
+Imports a string into the database
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$op}]Operation to perform: 'db-\/store', 'db-\/report', 'mem-\/store' or 'mem-\/report'. \item[{\em \$value}]Details of the string stored. \item[{\em \$mode}]Should existing translations be replaced LOCALE\_\-IMPORT\_\-KEEP or LOCALE\_\-IMPORT\_\-OVERWRITE. \item[{\em \$lang}]Language to store the string in. \item[{\em \$file}]Object representation of file being imported, only required when op is 'db-\/store'. \item[{\em \$group}]Text group to import PO file into (eg. 'default' for interface translations). \end{DoxyParams}
+\hypertarget{group__locale_ga3f27e3894d1e98f2a0580834ebf51e4e}{
+\index{locale@{locale}!\_\-locale\_\-import\_\-one\_\-string\_\-db@{\_\-locale\_\-import\_\-one\_\-string\_\-db}}
+\index{\_\-locale\_\-import\_\-one\_\-string\_\-db@{\_\-locale\_\-import\_\-one\_\-string\_\-db}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-import\_\-one\_\-string\_\-db}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-import\_\-one\_\-string\_\-db (\&\$ {\em report}, \/  \$ {\em langcode}, \/  \$ {\em context}, \/  \$ {\em source}, \/  \$ {\em translation}, \/  \$ {\em textgroup}, \/  \$ {\em location}, \/  \$ {\em mode}, \/  \$ {\em plid} = {\ttfamily 0}, \/  \$ {\em plural} = {\ttfamily 0})}}
+\label{group__locale_ga3f27e3894d1e98f2a0580834ebf51e4e}
+Import one string into the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$report}]Report array summarizing the number of changes done in the form: array(inserts, updates, deletes). \item[{\em \$langcode}]Language code to import string into. \item[{\em \$context}]The context of this string. \item[{\em \$source}]Source string. \item[{\em \$translation}]Translation to language specified in \$langcode. \item[{\em \$textgroup}]Name of textgroup to store translation in. \item[{\em \$location}]Location value to save with source string. \item[{\em \$mode}]Import mode to use, LOCALE\_\-IMPORT\_\-KEEP or LOCALE\_\-IMPORT\_\-OVERWRITE. \item[{\em \$plid}]Optional plural ID to use. \item[{\em \$plural}]Optional plural value to use.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string ID of the existing string modified or the new string added. 
+\end{DoxyReturn}
+\hypertarget{group__locale_gafec8dc8c1a6f8a0c70b5280c3a520c63}{
+\index{locale@{locale}!\_\-locale\_\-import\_\-parse\_\-arithmetic@{\_\-locale\_\-import\_\-parse\_\-arithmetic}}
+\index{\_\-locale\_\-import\_\-parse\_\-arithmetic@{\_\-locale\_\-import\_\-parse\_\-arithmetic}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-import\_\-parse\_\-arithmetic}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-import\_\-parse\_\-arithmetic (\$ {\em string})}}
+\label{group__locale_gafec8dc8c1a6f8a0c70b5280c3a520c63}
+Parses and sanitizes an arithmetic formula into a PHP expression
+
+While parsing, we ensure, that the operators have the right precedence and associativity.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$string}]A string containing the arithmetic formula.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The PHP version of the formula. 
+\end{DoxyReturn}
+\hypertarget{group__locale_ga1381fc54e922fe478d8ee5cfbe0c3c16}{
+\index{locale@{locale}!\_\-locale\_\-import\_\-parse\_\-header@{\_\-locale\_\-import\_\-parse\_\-header}}
+\index{\_\-locale\_\-import\_\-parse\_\-header@{\_\-locale\_\-import\_\-parse\_\-header}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-import\_\-parse\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-import\_\-parse\_\-header (\$ {\em header})}}
+\label{group__locale_ga1381fc54e922fe478d8ee5cfbe0c3c16}
+Parses a Gettext Portable Object file header
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$header}]A string containing the complete header.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An associative array of key-\/value pairs. 
+\end{DoxyReturn}
+\hypertarget{group__locale_ga7693cf526c48e5dcb6dffabac7deb775}{
+\index{locale@{locale}!\_\-locale\_\-import\_\-parse\_\-plural\_\-forms@{\_\-locale\_\-import\_\-parse\_\-plural\_\-forms}}
+\index{\_\-locale\_\-import\_\-parse\_\-plural\_\-forms@{\_\-locale\_\-import\_\-parse\_\-plural\_\-forms}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-import\_\-parse\_\-plural\_\-forms}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-import\_\-parse\_\-plural\_\-forms (\$ {\em pluralforms}, \/  \$ {\em filepath})}}
+\label{group__locale_ga7693cf526c48e5dcb6dffabac7deb775}
+Parses a Plural-\/Forms entry from a Gettext Portable Object file header
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$pluralforms}]A string containing the Plural-\/Forms entry. \item[{\em \$filepath}]A string containing the filepath.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array containing the number of plurals and a formula in PHP for computing the plural form. 
+\end{DoxyReturn}
+\hypertarget{group__locale_gaac1954e79c57539b5599ff4ed7379df7}{
+\index{locale@{locale}!\_\-locale\_\-import\_\-parse\_\-quoted@{\_\-locale\_\-import\_\-parse\_\-quoted}}
+\index{\_\-locale\_\-import\_\-parse\_\-quoted@{\_\-locale\_\-import\_\-parse\_\-quoted}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-import\_\-parse\_\-quoted}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-import\_\-parse\_\-quoted (\$ {\em string})}}
+\label{group__locale_gaac1954e79c57539b5599ff4ed7379df7}
+Parses a string in quotes
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$string}]A string specified with enclosing quotes.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string parsed from inside the quotes. 
+\end{DoxyReturn}
+\hypertarget{group__locale_ga5d3d163017bea9499839ef6be09807de}{
+\index{locale@{locale}!\_\-locale\_\-import\_\-po@{\_\-locale\_\-import\_\-po}}
+\index{\_\-locale\_\-import\_\-po@{\_\-locale\_\-import\_\-po}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-import\_\-po}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-import\_\-po (\$ {\em file}, \/  \$ {\em langcode}, \/  \$ {\em mode}, \/  \$ {\em group} = {\ttfamily NULL})}}
+\label{group__locale_ga5d3d163017bea9499839ef6be09807de}
+Parses Gettext Portable Object file information and inserts into database
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$file}]Drupal file object corresponding to the PO file to import. \item[{\em \$langcode}]Language code. \item[{\em \$mode}]Should existing translations be replaced LOCALE\_\-IMPORT\_\-KEEP or LOCALE\_\-IMPORT\_\-OVERWRITE. \item[{\em \$group}]Text group to import PO file into (eg. 'default' for interface translations). \end{DoxyParams}
+\hypertarget{group__locale_ga97099fd0b115843fd4d443686a3ca35d}{
+\index{locale@{locale}!\_\-locale\_\-import\_\-read\_\-po@{\_\-locale\_\-import\_\-read\_\-po}}
+\index{\_\-locale\_\-import\_\-read\_\-po@{\_\-locale\_\-import\_\-read\_\-po}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-import\_\-read\_\-po}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-import\_\-read\_\-po (\$ {\em op}, \/  \$ {\em file}, \/  \$ {\em mode} = {\ttfamily NULL}, \/  \$ {\em lang} = {\ttfamily NULL}, \/  \$ {\em group} = {\ttfamily 'default'})}}
+\label{group__locale_ga97099fd0b115843fd4d443686a3ca35d}
+Parses Gettext Portable Object file into an array
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$op}]Storage operation type: db-\/store or mem-\/store. \item[{\em \$file}]Drupal file object corresponding to the PO file to import. \item[{\em \$mode}]Should existing translations be replaced LOCALE\_\-IMPORT\_\-KEEP or LOCALE\_\-IMPORT\_\-OVERWRITE. \item[{\em \$lang}]Language code. \item[{\em \$group}]Text group to import PO file into (eg. 'default' for interface translations). \end{DoxyParams}
+\hypertarget{group__locale_ga1cba05a4c159b1ed844f18ba484cc8e7}{
+\index{locale@{locale}!\_\-locale\_\-import\_\-shorten\_\-comments@{\_\-locale\_\-import\_\-shorten\_\-comments}}
+\index{\_\-locale\_\-import\_\-shorten\_\-comments@{\_\-locale\_\-import\_\-shorten\_\-comments}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-import\_\-shorten\_\-comments}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-import\_\-shorten\_\-comments (\$ {\em comment})}}
+\label{group__locale_ga1cba05a4c159b1ed844f18ba484cc8e7}
+Generate a short, one string version of the passed comment array
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$comment}]An array of strings containing a comment.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Short one string version of the comment. 
+\end{DoxyReturn}
+\hypertarget{group__locale_ga53c242ca7adfb5ccc25ebfedab8214a5}{
+\index{locale@{locale}!\_\-locale\_\-import\_\-tokenize\_\-formula@{\_\-locale\_\-import\_\-tokenize\_\-formula}}
+\index{\_\-locale\_\-import\_\-tokenize\_\-formula@{\_\-locale\_\-import\_\-tokenize\_\-formula}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-import\_\-tokenize\_\-formula}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-import\_\-tokenize\_\-formula (\$ {\em formula})}}
+\label{group__locale_ga53c242ca7adfb5ccc25ebfedab8214a5}
+Backward compatible implementation of token\_\-get\_\-all() for formula parsing
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$string}]A string containing the arithmetic formula.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The PHP version of the formula. 
+\end{DoxyReturn}
+\hypertarget{group__locale_gae1eec455fe9fcd01af98bb37ff4096ae}{
+\index{locale@{locale}!\_\-locale\_\-invalidate\_\-js@{\_\-locale\_\-invalidate\_\-js}}
+\index{\_\-locale\_\-invalidate\_\-js@{\_\-locale\_\-invalidate\_\-js}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-invalidate\_\-js}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-invalidate\_\-js (\$ {\em langcode} = {\ttfamily NULL})}}
+\label{group__locale_gae1eec455fe9fcd01af98bb37ff4096ae}
+Force the JavaScript translation file(s) to be refreshed.
+
+This function sets a refresh flag for a specified language, or all languages except English, if none specified. JavaScript translation files are rebuilt (with locale\_\-update\_\-js\_\-files()) the next time a request is served in that language.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$langcode}]The language code for which the file needs to be refreshed.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New content of the 'javascript\_\-parsed' variable. 
+\end{DoxyReturn}
+\hypertarget{group__locale_gaa662af294a8422d2b73e6e05288b1b8d}{
+\index{locale@{locale}!\_\-locale\_\-languages\_\-common\_\-controls@{\_\-locale\_\-languages\_\-common\_\-controls}}
+\index{\_\-locale\_\-languages\_\-common\_\-controls@{\_\-locale\_\-languages\_\-common\_\-controls}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-languages\_\-common\_\-controls}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-languages\_\-common\_\-controls (\&\$ {\em form}, \/  \$ {\em language} = {\ttfamily NULL})}}
+\label{group__locale_gaa662af294a8422d2b73e6e05288b1b8d}
+Common elements of the language addition and editing form.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$form}]A parent form item (or empty array) to add items below. \item[{\em \$language}]Language object to edit. \end{DoxyParams}
+\hypertarget{group__locale_ga3aeae5dacd89af2116019f5964787c48}{
+\index{locale@{locale}!\_\-locale\_\-languages\_\-configure\_\-form\_\-language\_\-table@{\_\-locale\_\-languages\_\-configure\_\-form\_\-language\_\-table}}
+\index{\_\-locale\_\-languages\_\-configure\_\-form\_\-language\_\-table@{\_\-locale\_\-languages\_\-configure\_\-form\_\-language\_\-table}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-languages\_\-configure\_\-form\_\-language\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-languages\_\-configure\_\-form\_\-language\_\-table (\&\$ {\em form}, \/  \$ {\em type})}}
+\label{group__locale_ga3aeae5dacd89af2116019f5964787c48}
+Helper function to build a language provider table. \hypertarget{group__locale_gadf3279a1c940efe6955edc1899a97aad}{
+\index{locale@{locale}!\_\-locale\_\-prepare\_\-predefined\_\-list@{\_\-locale\_\-prepare\_\-predefined\_\-list}}
+\index{\_\-locale\_\-prepare\_\-predefined\_\-list@{\_\-locale\_\-prepare\_\-predefined\_\-list}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-prepare\_\-predefined\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-prepare\_\-predefined\_\-list ()}}
+\label{group__locale_gadf3279a1c940efe6955edc1899a97aad}
+Prepares the language code list for a select form item with only the unsupported ones \hypertarget{group__locale_ga1235873f9a64b606895cd77628bffabc}{
+\index{locale@{locale}!\_\-locale\_\-rebuild\_\-js@{\_\-locale\_\-rebuild\_\-js}}
+\index{\_\-locale\_\-rebuild\_\-js@{\_\-locale\_\-rebuild\_\-js}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-rebuild\_\-js}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-rebuild\_\-js (\$ {\em langcode} = {\ttfamily NULL})}}
+\label{group__locale_ga1235873f9a64b606895cd77628bffabc}
+(Re-\/)Creates the JavaScript translation file for a language.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$language}]The language, the translation file should be (re)created for. \end{DoxyParams}
+\hypertarget{group__locale_gacf9e97475d1e1ffaaf336e3a943163a2}{
+\index{locale@{locale}!\_\-locale\_\-translate\_\-language\_\-list@{\_\-locale\_\-translate\_\-language\_\-list}}
+\index{\_\-locale\_\-translate\_\-language\_\-list@{\_\-locale\_\-translate\_\-language\_\-list}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-translate\_\-language\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-translate\_\-language\_\-list (\$ {\em translation}, \/  \$ {\em limit\_\-language})}}
+\label{group__locale_gacf9e97475d1e1ffaaf336e3a943163a2}
+List languages in search result table \hypertarget{group__locale_ga006049082d29be75fd8ad396beda5883}{
+\index{locale@{locale}!\_\-locale\_\-translate\_\-seek@{\_\-locale\_\-translate\_\-seek}}
+\index{\_\-locale\_\-translate\_\-seek@{\_\-locale\_\-translate\_\-seek}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-translate\_\-seek}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-translate\_\-seek ()}}
+\label{group__locale_ga006049082d29be75fd8ad396beda5883}
+Perform a string search and display results in a table \hypertarget{group__locale_ga3afc18d03a7b2355e9328bc211acc4d1}{
+\index{locale@{locale}!\_\-locale\_\-translate\_\-seek\_\-query@{\_\-locale\_\-translate\_\-seek\_\-query}}
+\index{\_\-locale\_\-translate\_\-seek\_\-query@{\_\-locale\_\-translate\_\-seek\_\-query}!locale@{locale}}
+\subsubsection[{\_\-locale\_\-translate\_\-seek\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}\_\-locale\_\-translate\_\-seek\_\-query ()}}
+\label{group__locale_ga3afc18d03a7b2355e9328bc211acc4d1}
+Build array out of search criteria specified in request variables \hypertarget{group__locale_ga9fc28b9f10f5aaa7cb733dc0145018a2}{
+\index{locale@{locale}!locale\_\-add\_\-language@{locale\_\-add\_\-language}}
+\index{locale\_\-add\_\-language@{locale\_\-add\_\-language}!locale@{locale}}
+\subsubsection[{locale\_\-add\_\-language}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-add\_\-language (\$ {\em langcode}, \/  \$ {\em name} = {\ttfamily NULL}, \/  \$ {\em native} = {\ttfamily NULL}, \/  \$ {\em direction} = {\ttfamily {\bf LANGUAGE\_\-LTR}}, \/  \$ {\em domain} = {\ttfamily ''}, \/  \$ {\em prefix} = {\ttfamily ''}, \/  \$ {\em enabled} = {\ttfamily TRUE}, \/  \$ {\em default} = {\ttfamily FALSE})}}
+\label{group__locale_ga9fc28b9f10f5aaa7cb733dc0145018a2}
+API function to add a language.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$langcode}]Language code. \item[{\em \$name}]English name of the language \item[{\em \$native}]Native name of the language \item[{\em \$direction}]LANGUAGE\_\-LTR or LANGUAGE\_\-RTL \item[{\em \$domain}]Optional custom domain name with protocol, without trailing slash (eg. \href{http://de.example.com}{\tt http://de.example.com}). \item[{\em \$prefix}]Optional path prefix for the language. Defaults to the language code if omitted. \item[{\em \$enabled}]Optionally TRUE to enable the language when created or FALSE to disable. \item[{\em \$default}]Optionally set this language to be the default. \end{DoxyParams}
+\hypertarget{group__locale_gaa6ec98b4c2d6b82b6f206bafcf7d2ce6}{
+\index{locale@{locale}!locale\_\-batch\_\-by\_\-component@{locale\_\-batch\_\-by\_\-component}}
+\index{locale\_\-batch\_\-by\_\-component@{locale\_\-batch\_\-by\_\-component}!locale@{locale}}
+\subsubsection[{locale\_\-batch\_\-by\_\-component}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-batch\_\-by\_\-component (\$ {\em components}, \/  \$ {\em finished} = {\ttfamily '\_\-locale\_\-batch\_\-system\_\-finished'})}}
+\label{group__locale_gaa6ec98b4c2d6b82b6f206bafcf7d2ce6}
+Prepare a batch to run when installing modules or enabling themes.
+
+This batch will import translations for the newly added components in all the languages already set up on the site.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$components}]An array of component (theme and/or module) names to import translations for. \item[{\em \$finished}]Optional finished callback for the batch. \end{DoxyParams}
+\hypertarget{group__locale_ga2c34cb914394a45fb4e94561bfc26b71}{
+\index{locale@{locale}!locale\_\-batch\_\-by\_\-language@{locale\_\-batch\_\-by\_\-language}}
+\index{locale\_\-batch\_\-by\_\-language@{locale\_\-batch\_\-by\_\-language}!locale@{locale}}
+\subsubsection[{locale\_\-batch\_\-by\_\-language}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-batch\_\-by\_\-language (\$ {\em langcode}, \/  \$ {\em finished} = {\ttfamily NULL}, \/  \$ {\em skip} = {\ttfamily array()})}}
+\label{group__locale_ga2c34cb914394a45fb4e94561bfc26b71}
+Prepare a batch to import translations for all enabled modules in a given language.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$langcode}]Language code to import translations for. \item[{\em \$finished}]Optional finished callback for the batch. \item[{\em \$skip}]Array of component names to skip. Used in the installer for the second pass import, when most components are already imported.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A batch structure or FALSE if no files found. 
+\end{DoxyReturn}
+\hypertarget{group__locale_ga07f1b17e9dd116d07f6a2a02bfd6915e}{
+\index{locale@{locale}!locale\_\-language\_\-from\_\-browser@{locale\_\-language\_\-from\_\-browser}}
+\index{locale\_\-language\_\-from\_\-browser@{locale\_\-language\_\-from\_\-browser}!locale@{locale}}
+\subsubsection[{locale\_\-language\_\-from\_\-browser}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-language\_\-from\_\-browser (\$ {\em languages})}}
+\label{group__locale_ga07f1b17e9dd116d07f6a2a02bfd6915e}
+Identify language from the Accept-\/language HTTP header we got.
+
+We perform browser accept-\/language parsing only if page cache is disabled, otherwise we would cache a user-\/specific preference.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$languages}]An array of language objects for enabled languages ordered by weight.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A valid language code on success, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{group__locale_ga951d63c38235f5186fe6165589c4303f}{
+\index{locale@{locale}!locale\_\-language\_\-from\_\-interface@{locale\_\-language\_\-from\_\-interface}}
+\index{locale\_\-language\_\-from\_\-interface@{locale\_\-language\_\-from\_\-interface}!locale@{locale}}
+\subsubsection[{locale\_\-language\_\-from\_\-interface}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-language\_\-from\_\-interface ()}}
+\label{group__locale_ga951d63c38235f5186fe6165589c4303f}
+Identifies the language from the current interface language.
+
+\begin{DoxyReturn}{Returns}
+The current interface language code. 
+\end{DoxyReturn}
+\hypertarget{group__locale_ga4a15e35684fc4fe7a9486b5beee06f1b}{
+\index{locale@{locale}!locale\_\-language\_\-from\_\-session@{locale\_\-language\_\-from\_\-session}}
+\index{locale\_\-language\_\-from\_\-session@{locale\_\-language\_\-from\_\-session}!locale@{locale}}
+\subsubsection[{locale\_\-language\_\-from\_\-session}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-language\_\-from\_\-session (\$ {\em languages})}}
+\label{group__locale_ga4a15e35684fc4fe7a9486b5beee06f1b}
+Identify language from a request/session parameter.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$languages}]An array of valid language objects.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A valid language code on success, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{group__locale_gaf8f7a2acb2a80fbd8897437ab8eba1d6}{
+\index{locale@{locale}!locale\_\-language\_\-from\_\-url@{locale\_\-language\_\-from\_\-url}}
+\index{locale\_\-language\_\-from\_\-url@{locale\_\-language\_\-from\_\-url}!locale@{locale}}
+\subsubsection[{locale\_\-language\_\-from\_\-url}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-language\_\-from\_\-url (\$ {\em languages})}}
+\label{group__locale_gaf8f7a2acb2a80fbd8897437ab8eba1d6}
+Identify language via URL prefix or domain.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$languages}]An array of valid language objects.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A valid language code on success, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{group__locale_gae7cfd386cb96e33f7728374ef2e3dc42}{
+\index{locale@{locale}!locale\_\-language\_\-from\_\-user@{locale\_\-language\_\-from\_\-user}}
+\index{locale\_\-language\_\-from\_\-user@{locale\_\-language\_\-from\_\-user}!locale@{locale}}
+\subsubsection[{locale\_\-language\_\-from\_\-user}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-language\_\-from\_\-user (\$ {\em languages})}}
+\label{group__locale_gae7cfd386cb96e33f7728374ef2e3dc42}
+Identify language from the user preferences.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$languages}]An array of valid language objects.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A valid language code on success, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{group__locale_ga16437fdd6666d431070599a6243cfb11}{
+\index{locale@{locale}!locale\_\-language\_\-providers\_\-session\_\-form@{locale\_\-language\_\-providers\_\-session\_\-form}}
+\index{locale\_\-language\_\-providers\_\-session\_\-form@{locale\_\-language\_\-providers\_\-session\_\-form}!locale@{locale}}
+\subsubsection[{locale\_\-language\_\-providers\_\-session\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-language\_\-providers\_\-session\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__locale_ga16437fdd6666d431070599a6243cfb11}
+The URL language provider configuration form. \hypertarget{group__locale_ga8317379be8d1288234df3c3ffb7d39ee}{
+\index{locale@{locale}!locale\_\-language\_\-providers\_\-url\_\-form@{locale\_\-language\_\-providers\_\-url\_\-form}}
+\index{locale\_\-language\_\-providers\_\-url\_\-form@{locale\_\-language\_\-providers\_\-url\_\-form}!locale@{locale}}
+\subsubsection[{locale\_\-language\_\-providers\_\-url\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-language\_\-providers\_\-url\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__locale_ga8317379be8d1288234df3c3ffb7d39ee}
+The URL language provider configuration form. \hypertarget{group__locale_ga62ade6d961ed1194a462bc27873fee64}{
+\index{locale@{locale}!locale\_\-language\_\-switcher\_\-session@{locale\_\-language\_\-switcher\_\-session}}
+\index{locale\_\-language\_\-switcher\_\-session@{locale\_\-language\_\-switcher\_\-session}!locale@{locale}}
+\subsubsection[{locale\_\-language\_\-switcher\_\-session}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-language\_\-switcher\_\-session (\$ {\em type}, \/  \$ {\em path})}}
+\label{group__locale_ga62ade6d961ed1194a462bc27873fee64}
+Return the session language switcher block. \hypertarget{group__locale_ga73c68f3cdad0f635f29bdd5268d81af5}{
+\index{locale@{locale}!locale\_\-language\_\-switcher\_\-url@{locale\_\-language\_\-switcher\_\-url}}
+\index{locale\_\-language\_\-switcher\_\-url@{locale\_\-language\_\-switcher\_\-url}!locale@{locale}}
+\subsubsection[{locale\_\-language\_\-switcher\_\-url}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-language\_\-switcher\_\-url (\$ {\em type}, \/  \$ {\em path})}}
+\label{group__locale_ga73c68f3cdad0f635f29bdd5268d81af5}
+Return the URL language switcher block. Translation links may be provided by other modules. \hypertarget{group__locale_ga0fe34148ed5e348c43882bcb3f9e418c}{
+\index{locale@{locale}!locale\_\-language\_\-url\_\-fallback@{locale\_\-language\_\-url\_\-fallback}}
+\index{locale\_\-language\_\-url\_\-fallback@{locale\_\-language\_\-url\_\-fallback}!locale@{locale}}
+\subsubsection[{locale\_\-language\_\-url\_\-fallback}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-language\_\-url\_\-fallback (\$ {\em language} = {\ttfamily NULL}, \/  \$ {\em language\_\-type} = {\ttfamily {\bf LANGUAGE\_\-TYPE\_\-INTERFACE}})}}
+\label{group__locale_ga0fe34148ed5e348c43882bcb3f9e418c}
+Determines the language to be assigned to URLs when none is detected.
+
+The language negotiation process has a fallback chain that ends with the default language provider. Each built-\/in language type has a separate initialization:
+\begin{DoxyItemize}
+\item Interface language, which is the only configurable one, always gets a valid value. If no request-\/specific language is detected, the default language will be used.
+\item Content language merely inherits the interface language by default.
+\item URL language is detected from the requested URL and will be used to rewrite URLs appearing in the page being rendered. If no language can be detected, there are two possibilities:
+\begin{DoxyItemize}
+\item If the default language has no configured path prefix or domain, then the default language is used. This guarantees that (missing) URL prefixes are preserved when navigating through the site.
+\item If the default language has a configured path prefix or domain, a requested URL having an empty prefix or domain is an anomaly that must be fixed. This is done by introducing a prefix or domain in the rendered page matching the detected interface language.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$languages}](optional) An array of valid language objects. This is passed by \hyperlink{group__language__negotiation_ga031f4e0102fa2365a45709ff6935fee2}{language\_\-provider\_\-invoke()} to every language provider callback, but it is not actually needed here. Defaults to NULL. \item[{\em \$language\_\-type}](optional) The language type to fall back to. Defaults to the interface language.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A valid language code. 
+\end{DoxyReturn}
+\hypertarget{group__locale_ga510f99d2bec3b7011fe45efed603b1d5}{
+\index{locale@{locale}!locale\_\-language\_\-url\_\-rewrite\_\-session@{locale\_\-language\_\-url\_\-rewrite\_\-session}}
+\index{locale\_\-language\_\-url\_\-rewrite\_\-session@{locale\_\-language\_\-url\_\-rewrite\_\-session}!locale@{locale}}
+\subsubsection[{locale\_\-language\_\-url\_\-rewrite\_\-session}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-language\_\-url\_\-rewrite\_\-session (\&\$ {\em path}, \/  \&\$ {\em options})}}
+\label{group__locale_ga510f99d2bec3b7011fe45efed603b1d5}
+Rewrite URLs for the Session language provider. \hypertarget{group__locale_gaafdcd20ea42d6ce5573ece18d3fb9cdd}{
+\index{locale@{locale}!locale\_\-language\_\-url\_\-rewrite\_\-url@{locale\_\-language\_\-url\_\-rewrite\_\-url}}
+\index{locale\_\-language\_\-url\_\-rewrite\_\-url@{locale\_\-language\_\-url\_\-rewrite\_\-url}!locale@{locale}}
+\subsubsection[{locale\_\-language\_\-url\_\-rewrite\_\-url}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-language\_\-url\_\-rewrite\_\-url (\&\$ {\em path}, \/  \&\$ {\em options})}}
+\label{group__locale_gaafdcd20ea42d6ce5573ece18d3fb9cdd}
+Rewrite URLs for the URL language provider. \hypertarget{group__locale_ga717959709d412fc1039f7436501dbf49}{
+\index{locale@{locale}!locale\_\-languages\_\-add\_\-screen@{locale\_\-languages\_\-add\_\-screen}}
+\index{locale\_\-languages\_\-add\_\-screen@{locale\_\-languages\_\-add\_\-screen}!locale@{locale}}
+\subsubsection[{locale\_\-languages\_\-add\_\-screen}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-languages\_\-add\_\-screen ()}}
+\label{group__locale_ga717959709d412fc1039f7436501dbf49}
+User interface for the language addition screen. \hypertarget{group__locale_gad4a0fb5717a5318793af57ec86169949}{
+\index{locale@{locale}!locale\_\-languages\_\-configure\_\-form@{locale\_\-languages\_\-configure\_\-form}}
+\index{locale\_\-languages\_\-configure\_\-form@{locale\_\-languages\_\-configure\_\-form}!locale@{locale}}
+\subsubsection[{locale\_\-languages\_\-configure\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-languages\_\-configure\_\-form ()}}
+\label{group__locale_gad4a0fb5717a5318793af57ec86169949}
+Setting for language negotiation options \hypertarget{group__locale_gad11520d8b7d086b4b801b4a51068ed11}{
+\index{locale@{locale}!locale\_\-languages\_\-configure\_\-form\_\-submit@{locale\_\-languages\_\-configure\_\-form\_\-submit}}
+\index{locale\_\-languages\_\-configure\_\-form\_\-submit@{locale\_\-languages\_\-configure\_\-form\_\-submit}!locale@{locale}}
+\subsubsection[{locale\_\-languages\_\-configure\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-languages\_\-configure\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__locale_gad11520d8b7d086b4b801b4a51068ed11}
+Submit handler for language negotiation settings. \hypertarget{group__locale_ga38e919c4e98aba3e12136c2ac35b92f3}{
+\index{locale@{locale}!locale\_\-languages\_\-custom\_\-form@{locale\_\-languages\_\-custom\_\-form}}
+\index{locale\_\-languages\_\-custom\_\-form@{locale\_\-languages\_\-custom\_\-form}!locale@{locale}}
+\subsubsection[{locale\_\-languages\_\-custom\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-languages\_\-custom\_\-form (\$ {\em form})}}
+\label{group__locale_ga38e919c4e98aba3e12136c2ac35b92f3}
+Custom language addition form. \hypertarget{group__locale_gae91146ea73b4fde0a5584e4a9e502903}{
+\index{locale@{locale}!locale\_\-languages\_\-delete\_\-form@{locale\_\-languages\_\-delete\_\-form}}
+\index{locale\_\-languages\_\-delete\_\-form@{locale\_\-languages\_\-delete\_\-form}!locale@{locale}}
+\subsubsection[{locale\_\-languages\_\-delete\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-languages\_\-delete\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em langcode})}}
+\label{group__locale_gae91146ea73b4fde0a5584e4a9e502903}
+User interface for the language deletion confirmation screen. \hypertarget{group__locale_gadbf1eb80de38d65bda55e63699822e3c}{
+\index{locale@{locale}!locale\_\-languages\_\-delete\_\-form\_\-submit@{locale\_\-languages\_\-delete\_\-form\_\-submit}}
+\index{locale\_\-languages\_\-delete\_\-form\_\-submit@{locale\_\-languages\_\-delete\_\-form\_\-submit}!locale@{locale}}
+\subsubsection[{locale\_\-languages\_\-delete\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-languages\_\-delete\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__locale_gadbf1eb80de38d65bda55e63699822e3c}
+Process language deletion submissions. \hypertarget{group__locale_ga32b1bc378b3343f57cf3632acd8701f6}{
+\index{locale@{locale}!locale\_\-languages\_\-edit\_\-form@{locale\_\-languages\_\-edit\_\-form}}
+\index{locale\_\-languages\_\-edit\_\-form@{locale\_\-languages\_\-edit\_\-form}!locale@{locale}}
+\subsubsection[{locale\_\-languages\_\-edit\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-languages\_\-edit\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em langcode})}}
+\label{group__locale_ga32b1bc378b3343f57cf3632acd8701f6}
+Editing screen for a particular language.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$langcode}]Language code of the language to edit. \end{DoxyParams}
+\hypertarget{group__locale_ga749200a912dbb5d31c5403d3fd909741}{
+\index{locale@{locale}!locale\_\-languages\_\-edit\_\-form\_\-submit@{locale\_\-languages\_\-edit\_\-form\_\-submit}}
+\index{locale\_\-languages\_\-edit\_\-form\_\-submit@{locale\_\-languages\_\-edit\_\-form\_\-submit}!locale@{locale}}
+\subsubsection[{locale\_\-languages\_\-edit\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-languages\_\-edit\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__locale_ga749200a912dbb5d31c5403d3fd909741}
+Process the language editing form submission. \hypertarget{group__locale_ga0d97a3815fcd49bb49ed59dc77ebb802}{
+\index{locale@{locale}!locale\_\-languages\_\-edit\_\-form\_\-validate@{locale\_\-languages\_\-edit\_\-form\_\-validate}}
+\index{locale\_\-languages\_\-edit\_\-form\_\-validate@{locale\_\-languages\_\-edit\_\-form\_\-validate}!locale@{locale}}
+\subsubsection[{locale\_\-languages\_\-edit\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-languages\_\-edit\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__locale_ga0d97a3815fcd49bb49ed59dc77ebb802}
+Validate the language editing form. Reused for custom language addition too. \hypertarget{group__locale_ga6cdda3c5c776e4c263ace510317cdeed}{
+\index{locale@{locale}!locale\_\-languages\_\-overview\_\-form@{locale\_\-languages\_\-overview\_\-form}}
+\index{locale\_\-languages\_\-overview\_\-form@{locale\_\-languages\_\-overview\_\-form}!locale@{locale}}
+\subsubsection[{locale\_\-languages\_\-overview\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-languages\_\-overview\_\-form ()}}
+\label{group__locale_ga6cdda3c5c776e4c263ace510317cdeed}
+User interface for the language overview screen. \hypertarget{group__locale_ga957be3bb6cd02af2ff2acd887fc2b3fe}{
+\index{locale@{locale}!locale\_\-languages\_\-overview\_\-form\_\-submit@{locale\_\-languages\_\-overview\_\-form\_\-submit}}
+\index{locale\_\-languages\_\-overview\_\-form\_\-submit@{locale\_\-languages\_\-overview\_\-form\_\-submit}!locale@{locale}}
+\subsubsection[{locale\_\-languages\_\-overview\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-languages\_\-overview\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__locale_ga957be3bb6cd02af2ff2acd887fc2b3fe}
+Process language overview form submissions, updating existing languages. \hypertarget{group__locale_ga06a3fbf820480d99d755aee5ae6a74dc}{
+\index{locale@{locale}!locale\_\-languages\_\-predefined\_\-form@{locale\_\-languages\_\-predefined\_\-form}}
+\index{locale\_\-languages\_\-predefined\_\-form@{locale\_\-languages\_\-predefined\_\-form}!locale@{locale}}
+\subsubsection[{locale\_\-languages\_\-predefined\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-languages\_\-predefined\_\-form (\$ {\em form})}}
+\label{group__locale_ga06a3fbf820480d99d755aee5ae6a74dc}
+Predefined language setup form. \hypertarget{group__locale_ga83df19c32a63b094d033d0802d74d7cd}{
+\index{locale@{locale}!locale\_\-languages\_\-predefined\_\-form\_\-submit@{locale\_\-languages\_\-predefined\_\-form\_\-submit}}
+\index{locale\_\-languages\_\-predefined\_\-form\_\-submit@{locale\_\-languages\_\-predefined\_\-form\_\-submit}!locale@{locale}}
+\subsubsection[{locale\_\-languages\_\-predefined\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-languages\_\-predefined\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__locale_ga83df19c32a63b094d033d0802d74d7cd}
+Process the language addition form submission. \hypertarget{group__locale_ga4298724abc57b7d2622a2c9642b4f742}{
+\index{locale@{locale}!locale\_\-languages\_\-predefined\_\-form\_\-validate@{locale\_\-languages\_\-predefined\_\-form\_\-validate}}
+\index{locale\_\-languages\_\-predefined\_\-form\_\-validate@{locale\_\-languages\_\-predefined\_\-form\_\-validate}!locale@{locale}}
+\subsubsection[{locale\_\-languages\_\-predefined\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-languages\_\-predefined\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__locale_ga4298724abc57b7d2622a2c9642b4f742}
+Validate the language addition form. \hypertarget{group__locale_gaf40a5c539ee94ae8b089275bf74e1bfe}{
+\index{locale@{locale}!locale\_\-translate\_\-delete\_\-form@{locale\_\-translate\_\-delete\_\-form}}
+\index{locale\_\-translate\_\-delete\_\-form@{locale\_\-translate\_\-delete\_\-form}!locale@{locale}}
+\subsubsection[{locale\_\-translate\_\-delete\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-translate\_\-delete\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em source})}}
+\label{group__locale_gaf40a5c539ee94ae8b089275bf74e1bfe}
+User interface for the string deletion confirmation screen. \hypertarget{group__locale_ga26d7aa049b06d9de384175698f5761c7}{
+\index{locale@{locale}!locale\_\-translate\_\-delete\_\-form\_\-submit@{locale\_\-translate\_\-delete\_\-form\_\-submit}}
+\index{locale\_\-translate\_\-delete\_\-form\_\-submit@{locale\_\-translate\_\-delete\_\-form\_\-submit}!locale@{locale}}
+\subsubsection[{locale\_\-translate\_\-delete\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-translate\_\-delete\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__locale_ga26d7aa049b06d9de384175698f5761c7}
+Process string deletion submissions. \hypertarget{group__locale_gade9664489526c09d68def1897631f4fa}{
+\index{locale@{locale}!locale\_\-translate\_\-delete\_\-page@{locale\_\-translate\_\-delete\_\-page}}
+\index{locale\_\-translate\_\-delete\_\-page@{locale\_\-translate\_\-delete\_\-page}!locale@{locale}}
+\subsubsection[{locale\_\-translate\_\-delete\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-translate\_\-delete\_\-page (\$ {\em lid})}}
+\label{group__locale_gade9664489526c09d68def1897631f4fa}
+String deletion confirmation page. \hypertarget{group__locale_ga438cdd0b99e54bd87cd7058c6037db0e}{
+\index{locale@{locale}!locale\_\-translate\_\-edit\_\-form@{locale\_\-translate\_\-edit\_\-form}}
+\index{locale\_\-translate\_\-edit\_\-form@{locale\_\-translate\_\-edit\_\-form}!locale@{locale}}
+\subsubsection[{locale\_\-translate\_\-edit\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-translate\_\-edit\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em lid})}}
+\label{group__locale_ga438cdd0b99e54bd87cd7058c6037db0e}
+User interface for string editing. \hypertarget{group__locale_gadbeab4019dcbf389a12af893cdaad5d5}{
+\index{locale@{locale}!locale\_\-translate\_\-edit\_\-form\_\-submit@{locale\_\-translate\_\-edit\_\-form\_\-submit}}
+\index{locale\_\-translate\_\-edit\_\-form\_\-submit@{locale\_\-translate\_\-edit\_\-form\_\-submit}!locale@{locale}}
+\subsubsection[{locale\_\-translate\_\-edit\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-translate\_\-edit\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__locale_gadbeab4019dcbf389a12af893cdaad5d5}
+Process string editing form submissions.
+
+Saves all translations of one string submitted from a form. \hypertarget{group__locale_ga93fc48be446148e648c9a1d0f630726e}{
+\index{locale@{locale}!locale\_\-translate\_\-edit\_\-form\_\-validate@{locale\_\-translate\_\-edit\_\-form\_\-validate}}
+\index{locale\_\-translate\_\-edit\_\-form\_\-validate@{locale\_\-translate\_\-edit\_\-form\_\-validate}!locale@{locale}}
+\subsubsection[{locale\_\-translate\_\-edit\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-translate\_\-edit\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__locale_ga93fc48be446148e648c9a1d0f630726e}
+Validate string editing form submissions. \hypertarget{group__locale_ga5cac42d032877eb9c827b8ec0477a22e}{
+\index{locale@{locale}!locale\_\-translate\_\-export\_\-po\_\-form@{locale\_\-translate\_\-export\_\-po\_\-form}}
+\index{locale\_\-translate\_\-export\_\-po\_\-form@{locale\_\-translate\_\-export\_\-po\_\-form}!locale@{locale}}
+\subsubsection[{locale\_\-translate\_\-export\_\-po\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-translate\_\-export\_\-po\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em names})}}
+\label{group__locale_ga5cac42d032877eb9c827b8ec0477a22e}
+Form to export PO files for the languages provided.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$names}]An associate array with localized language names \end{DoxyParams}
+\hypertarget{group__locale_gaa8f71c53db9e03719bdeae8f594fb0ee}{
+\index{locale@{locale}!locale\_\-translate\_\-export\_\-po\_\-form\_\-submit@{locale\_\-translate\_\-export\_\-po\_\-form\_\-submit}}
+\index{locale\_\-translate\_\-export\_\-po\_\-form\_\-submit@{locale\_\-translate\_\-export\_\-po\_\-form\_\-submit}!locale@{locale}}
+\subsubsection[{locale\_\-translate\_\-export\_\-po\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-translate\_\-export\_\-po\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__locale_gaa8f71c53db9e03719bdeae8f594fb0ee}
+Process a translation (or template) export form submission. \hypertarget{group__locale_ga670f0a541fc0b97da4bf4624c2afb434}{
+\index{locale@{locale}!locale\_\-translate\_\-export\_\-pot\_\-form@{locale\_\-translate\_\-export\_\-pot\_\-form}}
+\index{locale\_\-translate\_\-export\_\-pot\_\-form@{locale\_\-translate\_\-export\_\-pot\_\-form}!locale@{locale}}
+\subsubsection[{locale\_\-translate\_\-export\_\-pot\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-translate\_\-export\_\-pot\_\-form ()}}
+\label{group__locale_ga670f0a541fc0b97da4bf4624c2afb434}
+Translation template export form. \hypertarget{group__locale_gaa04044044d6c484553a41432db3924b4}{
+\index{locale@{locale}!locale\_\-translate\_\-export\_\-screen@{locale\_\-translate\_\-export\_\-screen}}
+\index{locale\_\-translate\_\-export\_\-screen@{locale\_\-translate\_\-export\_\-screen}!locale@{locale}}
+\subsubsection[{locale\_\-translate\_\-export\_\-screen}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-translate\_\-export\_\-screen ()}}
+\label{group__locale_gaa04044044d6c484553a41432db3924b4}
+User interface for the translation export screen. \hypertarget{group__locale_gaceb2c6612ad9bc1472e4d3c71618c9b3}{
+\index{locale@{locale}!locale\_\-translate\_\-import\_\-form@{locale\_\-translate\_\-import\_\-form}}
+\index{locale\_\-translate\_\-import\_\-form@{locale\_\-translate\_\-import\_\-form}!locale@{locale}}
+\subsubsection[{locale\_\-translate\_\-import\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-translate\_\-import\_\-form (\$ {\em form})}}
+\label{group__locale_gaceb2c6612ad9bc1472e4d3c71618c9b3}
+User interface for the translation import screen. \hypertarget{group__locale_gab96d979ef16a3468061ebb7e11e3210e}{
+\index{locale@{locale}!locale\_\-translate\_\-import\_\-form\_\-submit@{locale\_\-translate\_\-import\_\-form\_\-submit}}
+\index{locale\_\-translate\_\-import\_\-form\_\-submit@{locale\_\-translate\_\-import\_\-form\_\-submit}!locale@{locale}}
+\subsubsection[{locale\_\-translate\_\-import\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-translate\_\-import\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__locale_gab96d979ef16a3468061ebb7e11e3210e}
+Process the locale import form submission. \hypertarget{group__locale_gac36ea050ad5c0a75624c1a9b63c343a0}{
+\index{locale@{locale}!locale\_\-translate\_\-overview\_\-screen@{locale\_\-translate\_\-overview\_\-screen}}
+\index{locale\_\-translate\_\-overview\_\-screen@{locale\_\-translate\_\-overview\_\-screen}!locale@{locale}}
+\subsubsection[{locale\_\-translate\_\-overview\_\-screen}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-translate\_\-overview\_\-screen ()}}
+\label{group__locale_gac36ea050ad5c0a75624c1a9b63c343a0}
+Overview screen for translations. \hypertarget{group__locale_gaa34fbb14f95e9ae562772895b284d170}{
+\index{locale@{locale}!locale\_\-translate\_\-seek\_\-screen@{locale\_\-translate\_\-seek\_\-screen}}
+\index{locale\_\-translate\_\-seek\_\-screen@{locale\_\-translate\_\-seek\_\-screen}!locale@{locale}}
+\subsubsection[{locale\_\-translate\_\-seek\_\-screen}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-translate\_\-seek\_\-screen ()}}
+\label{group__locale_gaa34fbb14f95e9ae562772895b284d170}
+String search screen. \hypertarget{group__locale_gac578de2fae636045173446f2aa26bd0f}{
+\index{locale@{locale}!locale\_\-translation\_\-filter\_\-form\_\-submit@{locale\_\-translation\_\-filter\_\-form\_\-submit}}
+\index{locale\_\-translation\_\-filter\_\-form\_\-submit@{locale\_\-translation\_\-filter\_\-form\_\-submit}!locale@{locale}}
+\subsubsection[{locale\_\-translation\_\-filter\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-translation\_\-filter\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__locale_gac578de2fae636045173446f2aa26bd0f}
+Process result from locale translation filter form. \hypertarget{group__locale_ga853ff354fb4c4c637123251916ccb4ae}{
+\index{locale@{locale}!locale\_\-translation\_\-filter\_\-form\_\-validate@{locale\_\-translation\_\-filter\_\-form\_\-validate}}
+\index{locale\_\-translation\_\-filter\_\-form\_\-validate@{locale\_\-translation\_\-filter\_\-form\_\-validate}!locale@{locale}}
+\subsubsection[{locale\_\-translation\_\-filter\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-translation\_\-filter\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__locale_ga853ff354fb4c4c637123251916ccb4ae}
+Validate result from locale translation filter form. \hypertarget{group__locale_gacc11c165dc42516edefdca5eab092a28}{
+\index{locale@{locale}!locale\_\-translation\_\-filters@{locale\_\-translation\_\-filters}}
+\index{locale\_\-translation\_\-filters@{locale\_\-translation\_\-filters}!locale@{locale}}
+\subsubsection[{locale\_\-translation\_\-filters}]{\setlength{\rightskip}{0pt plus 5cm}locale\_\-translation\_\-filters ()}}
+\label{group__locale_gacc11c165dc42516edefdca5eab092a28}
+List locale translation filters that can be applied. 

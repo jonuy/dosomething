@@ -1,0 +1,41 @@
+\hypertarget{classDrupalQueue}{
+\section{DrupalQueue Class Reference}
+\label{classDrupalQueue}\index{DrupalQueue@{DrupalQueue}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classDrupalQueue_a3fc2acf7d419fdf67c2e84966402b1e9}{get} (\$name, \$reliable=FALSE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Factory class for interacting with queues. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classDrupalQueue_a3fc2acf7d419fdf67c2e84966402b1e9}{
+\index{DrupalQueue@{DrupalQueue}!get@{get}}
+\index{get@{get}!DrupalQueue@{DrupalQueue}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}static DrupalQueue::get (\$ {\em name}, \/  \$ {\em reliable} = {\ttfamily FALSE})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classDrupalQueue_a3fc2acf7d419fdf67c2e84966402b1e9}
+Returns the queue object for a given name.
+
+The following variables can be set by variable\_\-set or \$conf overrides:
+\begin{DoxyItemize}
+\item queue\_\-class\_\-name}
+the class to be used for the queue name.
+\item queue\_\-default\_\-class: the class to use when queue\_\-class\_\-\$name is not defined. Defaults to \hyperlink{classSystemQueue}{SystemQueue}, a reliable backend using SQL.
+\item queue\_\-default\_\-reliable\_\-class: the class to use when queue\_\-class\_\-\$name is not defined and the queue\_\-default\_\-class is not reliable. Defaults to \hyperlink{classSystemQueue}{SystemQueue}.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]Arbitrary string. The name of the queue to work with. \item[{\em \$reliable}]TRUE if the ordering of items and guaranteeing every item executes at least once is important, FALSE if scalability is the main concern.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The queue object for a given name. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/modules/system/\hyperlink{system_8queue_8inc}{system.queue.inc}\end{DoxyCompactItemize}

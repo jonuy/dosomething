@@ -1,0 +1,54 @@
+\hypertarget{classInsertQuery__sqlite}{
+\section{InsertQuery\_\-sqlite Class Reference}
+\label{classInsertQuery__sqlite}\index{InsertQuery\_\-sqlite@{InsertQuery\_\-sqlite}}
+}
+Inheritance diagram for InsertQuery\_\-sqlite::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classInsertQuery__sqlite}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classInsertQuery__sqlite_a95e8f7db8b3517715f222bf958e39ab9}{execute} ()
+\item 
+\hyperlink{classInsertQuery__sqlite_a67c0e3204921c1a8af4edc3fb60ba97c}{\_\-\_\-toString} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+SQLite specific implementation of \hyperlink{classInsertQuery}{InsertQuery}.
+
+We ignore all the default fields and use the clever SQLite syntax: INSERT INTO table DEFAULT VALUES for degenerated \char`\"{}default only\char`\"{} queries. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classInsertQuery__sqlite_a67c0e3204921c1a8af4edc3fb60ba97c}{
+\index{InsertQuery\_\-sqlite@{InsertQuery\_\-sqlite}!\_\-\_\-toString@{\_\-\_\-toString}}
+\index{\_\-\_\-toString@{\_\-\_\-toString}!InsertQuery_sqlite@{InsertQuery\_\-sqlite}}
+\subsubsection[{\_\-\_\-toString}]{\setlength{\rightskip}{0pt plus 5cm}InsertQuery\_\-sqlite::\_\-\_\-toString ()}}
+\label{classInsertQuery__sqlite_a67c0e3204921c1a8af4edc3fb60ba97c}
+Implements PHP magic \_\-\_\-toString method to convert the query to a string.
+
+\begin{DoxyReturn}{Returns}
+string The prepared statement. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classInsertQuery_a996fb0719632b8861284683c1ff711fa}{InsertQuery}.\hypertarget{classInsertQuery__sqlite_a95e8f7db8b3517715f222bf958e39ab9}{
+\index{InsertQuery\_\-sqlite@{InsertQuery\_\-sqlite}!execute@{execute}}
+\index{execute@{execute}!InsertQuery_sqlite@{InsertQuery\_\-sqlite}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}InsertQuery\_\-sqlite::execute ()}}
+\label{classInsertQuery__sqlite_a95e8f7db8b3517715f222bf958e39ab9}
+Executes the insert query.
+
+\begin{DoxyReturn}{Returns}
+The last insert ID of the query, if one exists. If the query was given multiple sets of values to insert, the return value is undefined. If no fields are specified, this method will do nothing and return NULL. That makes it safe to use in multi-\/insert loops. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classInsertQuery_a9bcd2f989e2ae0173bd6f58b6ede12fc}{InsertQuery}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/database/sqlite/\hyperlink{sqlite_2query_8inc}{query.inc}\end{DoxyCompactItemize}

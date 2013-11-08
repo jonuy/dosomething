@@ -1,0 +1,60 @@
+\hypertarget{views__empty_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/content\_\-types/views\_\-empty.inc File Reference}
+\label{views__empty_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/content\_\-types/views\_\-empty.inc@{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/content\_\-types/views\_\-empty.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{views__empty_8inc_ae4a5f1ba3896fe55d9ffab3e59c89eeb}{views\_\-content\_\-views\_\-empty\_\-content\_\-type\_\-render} (\$subtype, \$conf, \$panel\_\-args, \$context)
+\item 
+\hypertarget{views__empty_8inc_ad552e0d6c56d2d369fcf5627742a7d2a}{
+{\bfseries views\_\-content\_\-views\_\-empty\_\-content\_\-type\_\-edit\_\-form} (\$form, \&\$form\_\-state)}
+\label{views__empty_8inc_ad552e0d6c56d2d369fcf5627742a7d2a}
+
+\item 
+\hypertarget{views__empty_8inc_a366cbf2f62cee5c72c49643cd3d574f1}{
+{\bfseries views\_\-content\_\-views\_\-empty\_\-content\_\-type\_\-edit\_\-form\_\-submit} (\&\$form, \&\$form\_\-state)}
+\label{views__empty_8inc_a366cbf2f62cee5c72c49643cd3d574f1}
+
+\item 
+\hyperlink{views__empty_8inc_a29ded606f108650610541efca6dda275}{views\_\-content\_\-views\_\-empty\_\-content\_\-type\_\-admin\_\-title} (\$subtype, \$conf, \$context)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Allow a \hyperlink{classview}{view} context to display its attachment(s). 
+
+\subsection{Function Documentation}
+\hypertarget{views__empty_8inc_a29ded606f108650610541efca6dda275}{
+\index{views\_\-empty.inc@{views\_\-empty.inc}!views\_\-content\_\-views\_\-empty\_\-content\_\-type\_\-admin\_\-title@{views\_\-content\_\-views\_\-empty\_\-content\_\-type\_\-admin\_\-title}}
+\index{views\_\-content\_\-views\_\-empty\_\-content\_\-type\_\-admin\_\-title@{views\_\-content\_\-views\_\-empty\_\-content\_\-type\_\-admin\_\-title}!views_empty.inc@{views\_\-empty.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-empty\_\-content\_\-type\_\-admin\_\-title}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-empty\_\-content\_\-type\_\-admin\_\-title (\$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em context})}}
+\label{views__empty_8inc_a29ded606f108650610541efca6dda275}
+Returns the administrative title for a type. \hypertarget{views__empty_8inc_ae4a5f1ba3896fe55d9ffab3e59c89eeb}{
+\index{views\_\-empty.inc@{views\_\-empty.inc}!views\_\-content\_\-views\_\-empty\_\-content\_\-type\_\-render@{views\_\-content\_\-views\_\-empty\_\-content\_\-type\_\-render}}
+\index{views\_\-content\_\-views\_\-empty\_\-content\_\-type\_\-render@{views\_\-content\_\-views\_\-empty\_\-content\_\-type\_\-render}!views_empty.inc@{views\_\-empty.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-empty\_\-content\_\-type\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-empty\_\-content\_\-type\_\-render (\$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em panel\_\-args}, \/  \$ {\em context})}}
+\label{views__empty_8inc_ae4a5f1ba3896fe55d9ffab3e59c89eeb}
+Render the node\_\-terms content type. 
+
+\subsection{Variable Documentation}
+\hypertarget{views__empty_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{views\_\-empty.inc@{views\_\-empty.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!views_empty.inc@{views\_\-empty.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{views__empty_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('View empty text'),
+  'category' => t('View context'),
+  'icon' => 'icon_views_page.png',
+  'description' => t('Display the view empty text if there are no results.'),
+  'required context' => new ctools_context_required(t('View'), 'view'),
+)
+\end{DoxyCode}

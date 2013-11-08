@@ -1,0 +1,837 @@
+\hypertarget{comment_8module}{
+\section{html/modules/comment/comment.module File Reference}
+\label{comment_8module}\index{html/modules/comment/comment.module@{html/modules/comment/comment.module}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCommentController}{CommentController}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{comment_8module_a7676ab23ca9d0f0b4d22c02b55eb65e8}{COMMENT\_\-NOT\_\-PUBLISHED} 
+\item 
+enum \hyperlink{comment_8module_a96f12d706e4ce5b60b90141d07b02c5f}{COMMENT\_\-PUBLISHED} 
+\item 
+enum \hyperlink{comment_8module_aaff50a0f429a31a0fc9ecf35198eb7d9}{COMMENT\_\-MODE\_\-FLAT} 
+\item 
+enum \hyperlink{comment_8module_a0d8620524afbb2361870c03c1c9d95dc}{COMMENT\_\-MODE\_\-THREADED} 
+\item 
+enum \hyperlink{comment_8module_a434cd95ddfa8fce4da883c5ced78dba4}{COMMENT\_\-ANONYMOUS\_\-MAYNOT\_\-CONTACT} 
+\item 
+enum \hyperlink{comment_8module_a4c2165b321b42d7a819a45338702d1f0}{COMMENT\_\-ANONYMOUS\_\-MAY\_\-CONTACT} 
+\item 
+enum \hyperlink{comment_8module_a41a3f08b14c97f4603e336ba7173deae}{COMMENT\_\-ANONYMOUS\_\-MUST\_\-CONTACT} 
+\item 
+enum \hyperlink{comment_8module_a7b303650179b46414b9809bac9f15e33}{COMMENT\_\-FORM\_\-SEPARATE\_\-PAGE} 
+\item 
+enum \hyperlink{comment_8module_a1d93fd4a39f5ec90008efb08cde55d45}{COMMENT\_\-FORM\_\-BELOW} 
+\item 
+enum \hyperlink{comment_8module_a685d9e48203a970ba98b5a734eb0c2b5}{COMMENT\_\-NODE\_\-HIDDEN} 
+\item 
+enum \hyperlink{comment_8module_a02cedc820778a12afc48724a53acc228}{COMMENT\_\-NODE\_\-CLOSED} 
+\item 
+enum \hyperlink{comment_8module_aff2d44a87e79044004ed35b97ab84582}{COMMENT\_\-NODE\_\-OPEN} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{comment_8module_a63915d30d11256dcdcd0c7e170aeefcd}{comment\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{comment_8module_a4cdb7636ced52ebf5d0af7dd42ca83d1}{comment\_\-entity\_\-info} ()
+\item 
+\hyperlink{comment_8module_a05a5d2b61a4656fba57a93489c4bcd3b}{comment\_\-node\_\-type\_\-load} (\$name)
+\item 
+\hyperlink{comment_8module_a40e0250c18ea32c201bb1abef9bb1a0a}{comment\_\-uri} (\$comment)
+\item 
+\hyperlink{comment_8module_ae1d74e0f7764e4be5fa2fa6d66b12e3c}{comment\_\-field\_\-extra\_\-fields} ()
+\item 
+\hyperlink{comment_8module_a55ab29f2d9bfd7b05965e42a9fde98b7}{comment\_\-theme} ()
+\item 
+\hyperlink{comment_8module_a94a9be33c58ee31519a160b07d52d4d0}{comment\_\-menu} ()
+\item 
+\hyperlink{comment_8module_a8ba809cd66487e3390673abf3fde59a9}{comment\_\-menu\_\-alter} (\&\$items)
+\item 
+\hyperlink{comment_8module_a820a1c431691e6fe98c711d9a55b8081}{comment\_\-count\_\-unpublished} ()
+\item 
+\hyperlink{comment_8module_a7a86654032864f38a6c672c7fd0a15d9}{comment\_\-node\_\-type\_\-insert} (\$info)
+\item 
+\hyperlink{comment_8module_a8019cc0abaad27a1b5e5086f60a3c9ab}{comment\_\-node\_\-type\_\-update} (\$info)
+\item 
+\hyperlink{comment_8module_a91ec97379602d78b57140003c9d380f4}{comment\_\-node\_\-type\_\-delete} (\$info)
+\item 
+\hyperlink{comment_8module_a202aee66aac992dace1513fcf1432562}{\_\-comment\_\-body\_\-field\_\-create} (\$info)
+\item 
+\hyperlink{comment_8module_a387b3124043febad12f7f0aff06a1443}{comment\_\-permission} ()
+\item 
+\hyperlink{comment_8module_a5ae66e2c95e26f6694418807241fac4c}{comment\_\-block\_\-info} ()
+\item 
+\hyperlink{comment_8module_a3da253fa805d0d75f18d87635dbb562a}{comment\_\-block\_\-configure} (\$delta= '')
+\item 
+\hyperlink{comment_8module_a565b5b4ebd9bb223e1e51ea00716b904}{comment\_\-block\_\-save} (\$delta= '', \$edit=array())
+\item 
+\hyperlink{comment_8module_a2087016cf9189eaf4d5563a08ce6a3ac}{comment\_\-block\_\-view} (\$delta= '')
+\item 
+\hyperlink{comment_8module_a2d3e88d7b6cb088dcc526dbb88fd9460}{comment\_\-permalink} (\$cid)
+\item 
+\hyperlink{comment_8module_aee855cbdc8d4b528e4d54817039fc760}{comment\_\-get\_\-recent} (\$number=10)
+\item 
+\hyperlink{comment_8module_a96371e6a82f797cdd2241ba5af50b590}{comment\_\-new\_\-page\_\-count} (\$num\_\-comments, \$new\_\-replies, \$node)
+\item 
+\hyperlink{group__themeable_gaa980a6cc6eeb012e7255fe0351a332ba}{theme\_\-comment\_\-block} ()
+\item 
+\hyperlink{comment_8module_af67cef07b57f84e54b8b26c38fe0fda0}{comment\_\-node\_\-view} (\$node, \$view\_\-mode)
+\item 
+\hyperlink{comment_8module_a6244e5c333fc28d69fd0283dd62935bc}{comment\_\-node\_\-page\_\-additions} (\$node)
+\item 
+\hyperlink{comment_8module_a7a7849475c35ea0266611552e0feba9c}{comment\_\-get\_\-thread} (\$node, \$mode, \$comments\_\-per\_\-page)
+\item 
+\hyperlink{comment_8module_a8fca2690aec83615ca65cb9f7f3b9438}{comment\_\-prepare\_\-thread} (\&\$comments)
+\item 
+\hyperlink{comment_8module_a68dd73af772c948e0f8a6cb144bef2cf}{comment\_\-view} (\$comment, \$node, \$view\_\-mode= 'full', \$langcode=NULL)
+\item 
+\hyperlink{comment_8module_a1ce48571361156189d7ce6f90c9465f8}{comment\_\-build\_\-content} (\$comment, \$node, \$view\_\-mode= 'full', \$langcode=NULL)
+\item 
+\hyperlink{comment_8module_a35585b785d03763c2ecc3f0cda6c0cf9}{comment\_\-links} (\$comment, \$node)
+\item 
+\hyperlink{comment_8module_add3fefcb6c60f8785d2c11cd49994681}{comment\_\-view\_\-multiple} (\$comments, \$node, \$view\_\-mode= 'full', \$weight=0, \$langcode=NULL)
+\item 
+\hyperlink{comment_8module_a81daa60b30cc06df7a8d08d075eb77eb}{comment\_\-form\_\-node\_\-type\_\-form\_\-alter} (\&\$form, \$form\_\-state)
+\item 
+\hyperlink{comment_8module_ab319853b494144007980b7e728ea09f2}{comment\_\-form\_\-node\_\-form\_\-alter} (\&\$form, \$form\_\-state)
+\item 
+\hyperlink{comment_8module_a3b04740955116c2ec6ec12db5f991d7c}{comment\_\-node\_\-load} (\$nodes, \$types)
+\item 
+\hyperlink{comment_8module_ad676dbb6ef26ede2da251447dc02f692}{comment\_\-node\_\-prepare} (\$node)
+\item 
+\hyperlink{comment_8module_ab1014a4769b972b796b1934da70fdf1f}{comment\_\-node\_\-insert} (\$node)
+\item 
+\hyperlink{comment_8module_a39ec63a49e728160e7a6ee16cb94c98d}{comment\_\-node\_\-delete} (\$node)
+\item 
+\hyperlink{comment_8module_a8810ffc5ce0ed7c78b997fe4e712913d}{comment\_\-node\_\-update\_\-index} (\$node)
+\item 
+\hyperlink{comment_8module_a50b866fc4c5da2c4a30a84ef4e2aac2d}{comment\_\-update\_\-index} ()
+\item 
+\hyperlink{comment_8module_a2f8892368f9c2044dab49523e87bbf7e}{comment\_\-node\_\-search\_\-result} (\$node)
+\item 
+\hyperlink{comment_8module_a8a9c4215c802259786fcb2a5526a1313}{comment\_\-user\_\-cancel} (\$edit, \$account, \$method)
+\item 
+\hyperlink{comment_8module_a9534e778a7cbfe56fd750997c8998ad8}{comment\_\-user\_\-delete} (\$account)
+\item 
+\hyperlink{comment_8module_a08e4627f1aaa3a4b06ec01b7c00a98e5}{comment\_\-access} (\$op, \$comment)
+\item 
+\hyperlink{comment_8module_a4ef5d3d2161511e0d09a560fb5004e82}{comment\_\-save} (\$comment)
+\item 
+\hyperlink{comment_8module_a6d3b67392abba22fa52fe27b9b3d0481}{comment\_\-delete} (\$cid)
+\item 
+\hyperlink{comment_8module_addaa817d25b383e341236a805ae6bea1}{comment\_\-delete\_\-multiple} (\$cids)
+\item 
+\hyperlink{comment_8module_a0cfb98e73c618190693b683c9bbfc0b1}{comment\_\-load\_\-multiple} (\$cids=array(), \$conditions=array(), \$reset=FALSE)
+\item 
+\hyperlink{comment_8module_ac1c8a5b8709abdfce125d928a4381c7e}{comment\_\-load} (\$cid, \$reset=FALSE)
+\item 
+\hyperlink{comment_8module_aea0352c132a14dde4c550fd2321ee67d}{comment\_\-num\_\-new} (\$nid, \$timestamp=0)
+\item 
+\hyperlink{comment_8module_ab171028b3ac34f4aa94800451582e997}{comment\_\-get\_\-display\_\-ordinal} (\$cid, \$node\_\-type)
+\item 
+\hyperlink{comment_8module_aa5aea9dcbfe48d409e40e1a37b5a9e50}{comment\_\-get\_\-display\_\-page} (\$cid, \$node\_\-type)
+\item 
+\hyperlink{comment_8module_aaa18c174bbfaca41a522bf30fa17cffa}{comment\_\-edit\_\-page} (\$comment)
+\item 
+\hyperlink{comment_8module_aab24607a770dc7049e1408597bc4de44}{comment\_\-forms} ()
+\item 
+\hyperlink{group__forms_ga86e714d86cac517f85b3cadf42ba2977}{comment\_\-form} (\$form, \&\$form\_\-state, \$comment)
+\item 
+\hyperlink{comment_8module_a70a0f5820c8a9e01dec5112b716a9062}{comment\_\-form\_\-build\_\-preview} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{comment_8module_a032c5623dc97e32faf726eeea5618a36}{comment\_\-preview} (\$comment)
+\item 
+\hyperlink{comment_8module_a37f7362a827269fc4d3f11bf4feae277}{comment\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{comment_8module_af9a31d3ab86177a7ac7999d049dc0b5f}{comment\_\-submit} (\$comment)
+\item 
+\hyperlink{comment_8module_abd5446f38e07ea95441adc78dbd3c968}{comment\_\-form\_\-submit\_\-build\_\-comment} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{comment_8module_abb91789dc7f908120219fc645e7e1612}{comment\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{comment_8module_a48adb63c53357fde9aea892ba131f3db}{template\_\-preprocess\_\-comment} (\&\$variables)
+\item 
+\hyperlink{group__themeable_ga161f469ee8e0de3c126729f154863a11}{theme\_\-comment\_\-post\_\-forbidden} (\$variables)
+\item 
+\hyperlink{comment_8module_aeccd0447ccb1d7a888c63c47444d54fc}{template\_\-preprocess\_\-comment\_\-wrapper} (\&\$variables)
+\item 
+\hyperlink{comment_8module_a7a3a5128d41e8563f0649eae12b777c6}{\_\-comment\_\-get\_\-modes} ()
+\item 
+\hyperlink{comment_8module_a1e6475bf270340be547ae0776f25aee8}{\_\-comment\_\-per\_\-page} ()
+\item 
+\hyperlink{comment_8module_ac56251d7cb10cf61b8ee999bbbb50547}{\_\-comment\_\-update\_\-node\_\-statistics} (\$nid)
+\item 
+\hyperlink{comment_8module_a30537163d28e0425bc93b2fb1ec4aa54}{int2vancode} (\$i=0)
+\item 
+\hyperlink{comment_8module_a4882cec0ad94842b2e7f9eb1b7ec27d2}{vancode2int} (\$c= '00')
+\item 
+\hyperlink{comment_8module_ab37670c10a61b72e8a861c547f1770ab}{comment\_\-action\_\-info} ()
+\item 
+\hyperlink{group__actions_gab4b880ee11ea9075bf10e6e29d21ba25}{comment\_\-publish\_\-action} (\$comment, \$context=array())
+\item 
+\hyperlink{group__actions_gaa4f6361d453bff4f865f19bc369ecdfe}{comment\_\-unpublish\_\-action} (\$comment, \$context=array())
+\item 
+\hyperlink{group__actions_gaf5c19c791a33e0dc2b0bd3eb4fa79ba5}{comment\_\-unpublish\_\-by\_\-keyword\_\-action} (\$comment, \$context)
+\item 
+\hyperlink{group__forms_gad0012e675df965329fce2570a6be8f46}{comment\_\-unpublish\_\-by\_\-keyword\_\-action\_\-form} (\$context)
+\item 
+\hyperlink{comment_8module_ad94091cb95aec2dd607bde68a07e0dd1}{comment\_\-unpublish\_\-by\_\-keyword\_\-action\_\-submit} (\$form, \$form\_\-state)
+\item 
+\hyperlink{group__actions_ga074553675107cf7c8cac925d76666922}{comment\_\-save\_\-action} (\$comment)
+\item 
+\hyperlink{comment_8module_a7599b61c6ed28e6424dc51f9311539c5}{comment\_\-ranking} ()
+\item 
+\hyperlink{comment_8module_a7a0a7125c95b61cea16f18f800880cf2}{comment\_\-rdf\_\-mapping} ()
+\item 
+\hyperlink{comment_8module_a5632b449cf518ee83511f74ac061c644}{comment\_\-file\_\-download\_\-access} (\$field, \$entity\_\-type, \$entity)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Enables users to comment on published content.
+
+When enabled, the Drupal comment module creates a discussion board for each Drupal node. Users can post comments to discuss a forum topic, weblog post, story, collaborative book page, etc. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{comment_8module_a4c2165b321b42d7a819a45338702d1f0}{
+\index{comment.module@{comment.module}!COMMENT\_\-ANONYMOUS\_\-MAY\_\-CONTACT@{COMMENT\_\-ANONYMOUS\_\-MAY\_\-CONTACT}}
+\index{COMMENT\_\-ANONYMOUS\_\-MAY\_\-CONTACT@{COMMENT\_\-ANONYMOUS\_\-MAY\_\-CONTACT}!comment.module@{comment.module}}
+\subsubsection[{COMMENT\_\-ANONYMOUS\_\-MAY\_\-CONTACT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf COMMENT\_\-ANONYMOUS\_\-MAY\_\-CONTACT}}}
+\label{comment_8module_a4c2165b321b42d7a819a45338702d1f0}
+Anonymous posters may leave their contact information. \hypertarget{comment_8module_a434cd95ddfa8fce4da883c5ced78dba4}{
+\index{comment.module@{comment.module}!COMMENT\_\-ANONYMOUS\_\-MAYNOT\_\-CONTACT@{COMMENT\_\-ANONYMOUS\_\-MAYNOT\_\-CONTACT}}
+\index{COMMENT\_\-ANONYMOUS\_\-MAYNOT\_\-CONTACT@{COMMENT\_\-ANONYMOUS\_\-MAYNOT\_\-CONTACT}!comment.module@{comment.module}}
+\subsubsection[{COMMENT\_\-ANONYMOUS\_\-MAYNOT\_\-CONTACT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf COMMENT\_\-ANONYMOUS\_\-MAYNOT\_\-CONTACT}}}
+\label{comment_8module_a434cd95ddfa8fce4da883c5ced78dba4}
+Anonymous posters cannot enter their contact information. \hypertarget{comment_8module_a41a3f08b14c97f4603e336ba7173deae}{
+\index{comment.module@{comment.module}!COMMENT\_\-ANONYMOUS\_\-MUST\_\-CONTACT@{COMMENT\_\-ANONYMOUS\_\-MUST\_\-CONTACT}}
+\index{COMMENT\_\-ANONYMOUS\_\-MUST\_\-CONTACT@{COMMENT\_\-ANONYMOUS\_\-MUST\_\-CONTACT}!comment.module@{comment.module}}
+\subsubsection[{COMMENT\_\-ANONYMOUS\_\-MUST\_\-CONTACT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf COMMENT\_\-ANONYMOUS\_\-MUST\_\-CONTACT}}}
+\label{comment_8module_a41a3f08b14c97f4603e336ba7173deae}
+Anonymous posters are required to leave their contact information. \hypertarget{comment_8module_a1d93fd4a39f5ec90008efb08cde55d45}{
+\index{comment.module@{comment.module}!COMMENT\_\-FORM\_\-BELOW@{COMMENT\_\-FORM\_\-BELOW}}
+\index{COMMENT\_\-FORM\_\-BELOW@{COMMENT\_\-FORM\_\-BELOW}!comment.module@{comment.module}}
+\subsubsection[{COMMENT\_\-FORM\_\-BELOW}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf COMMENT\_\-FORM\_\-BELOW}}}
+\label{comment_8module_a1d93fd4a39f5ec90008efb08cde55d45}
+Comment form should be shown below post or list of comments. \hypertarget{comment_8module_a7b303650179b46414b9809bac9f15e33}{
+\index{comment.module@{comment.module}!COMMENT\_\-FORM\_\-SEPARATE\_\-PAGE@{COMMENT\_\-FORM\_\-SEPARATE\_\-PAGE}}
+\index{COMMENT\_\-FORM\_\-SEPARATE\_\-PAGE@{COMMENT\_\-FORM\_\-SEPARATE\_\-PAGE}!comment.module@{comment.module}}
+\subsubsection[{COMMENT\_\-FORM\_\-SEPARATE\_\-PAGE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf COMMENT\_\-FORM\_\-SEPARATE\_\-PAGE}}}
+\label{comment_8module_a7b303650179b46414b9809bac9f15e33}
+Comment form should be displayed on a separate page. \hypertarget{comment_8module_aaff50a0f429a31a0fc9ecf35198eb7d9}{
+\index{comment.module@{comment.module}!COMMENT\_\-MODE\_\-FLAT@{COMMENT\_\-MODE\_\-FLAT}}
+\index{COMMENT\_\-MODE\_\-FLAT@{COMMENT\_\-MODE\_\-FLAT}!comment.module@{comment.module}}
+\subsubsection[{COMMENT\_\-MODE\_\-FLAT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf COMMENT\_\-MODE\_\-FLAT}}}
+\label{comment_8module_aaff50a0f429a31a0fc9ecf35198eb7d9}
+Comments are displayed in a flat list -\/ expanded. \hypertarget{comment_8module_a0d8620524afbb2361870c03c1c9d95dc}{
+\index{comment.module@{comment.module}!COMMENT\_\-MODE\_\-THREADED@{COMMENT\_\-MODE\_\-THREADED}}
+\index{COMMENT\_\-MODE\_\-THREADED@{COMMENT\_\-MODE\_\-THREADED}!comment.module@{comment.module}}
+\subsubsection[{COMMENT\_\-MODE\_\-THREADED}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf COMMENT\_\-MODE\_\-THREADED}}}
+\label{comment_8module_a0d8620524afbb2361870c03c1c9d95dc}
+Comments are displayed as a threaded list -\/ expanded. \hypertarget{comment_8module_a02cedc820778a12afc48724a53acc228}{
+\index{comment.module@{comment.module}!COMMENT\_\-NODE\_\-CLOSED@{COMMENT\_\-NODE\_\-CLOSED}}
+\index{COMMENT\_\-NODE\_\-CLOSED@{COMMENT\_\-NODE\_\-CLOSED}!comment.module@{comment.module}}
+\subsubsection[{COMMENT\_\-NODE\_\-CLOSED}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf COMMENT\_\-NODE\_\-CLOSED}}}
+\label{comment_8module_a02cedc820778a12afc48724a53acc228}
+Comments for this node are closed. \hypertarget{comment_8module_a685d9e48203a970ba98b5a734eb0c2b5}{
+\index{comment.module@{comment.module}!COMMENT\_\-NODE\_\-HIDDEN@{COMMENT\_\-NODE\_\-HIDDEN}}
+\index{COMMENT\_\-NODE\_\-HIDDEN@{COMMENT\_\-NODE\_\-HIDDEN}!comment.module@{comment.module}}
+\subsubsection[{COMMENT\_\-NODE\_\-HIDDEN}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf COMMENT\_\-NODE\_\-HIDDEN}}}
+\label{comment_8module_a685d9e48203a970ba98b5a734eb0c2b5}
+Comments for this node are hidden. \hypertarget{comment_8module_aff2d44a87e79044004ed35b97ab84582}{
+\index{comment.module@{comment.module}!COMMENT\_\-NODE\_\-OPEN@{COMMENT\_\-NODE\_\-OPEN}}
+\index{COMMENT\_\-NODE\_\-OPEN@{COMMENT\_\-NODE\_\-OPEN}!comment.module@{comment.module}}
+\subsubsection[{COMMENT\_\-NODE\_\-OPEN}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf COMMENT\_\-NODE\_\-OPEN}}}
+\label{comment_8module_aff2d44a87e79044004ed35b97ab84582}
+Comments for this node are open. \hypertarget{comment_8module_a7676ab23ca9d0f0b4d22c02b55eb65e8}{
+\index{comment.module@{comment.module}!COMMENT\_\-NOT\_\-PUBLISHED@{COMMENT\_\-NOT\_\-PUBLISHED}}
+\index{COMMENT\_\-NOT\_\-PUBLISHED@{COMMENT\_\-NOT\_\-PUBLISHED}!comment.module@{comment.module}}
+\subsubsection[{COMMENT\_\-NOT\_\-PUBLISHED}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf COMMENT\_\-NOT\_\-PUBLISHED}}}
+\label{comment_8module_a7676ab23ca9d0f0b4d22c02b55eb65e8}
+Comment is awaiting approval. \hypertarget{comment_8module_a96f12d706e4ce5b60b90141d07b02c5f}{
+\index{comment.module@{comment.module}!COMMENT\_\-PUBLISHED@{COMMENT\_\-PUBLISHED}}
+\index{COMMENT\_\-PUBLISHED@{COMMENT\_\-PUBLISHED}!comment.module@{comment.module}}
+\subsubsection[{COMMENT\_\-PUBLISHED}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf COMMENT\_\-PUBLISHED}}}
+\label{comment_8module_a96f12d706e4ce5b60b90141d07b02c5f}
+Comment is published. 
+
+\subsection{Function Documentation}
+\hypertarget{comment_8module_a202aee66aac992dace1513fcf1432562}{
+\index{comment.module@{comment.module}!\_\-comment\_\-body\_\-field\_\-create@{\_\-comment\_\-body\_\-field\_\-create}}
+\index{\_\-comment\_\-body\_\-field\_\-create@{\_\-comment\_\-body\_\-field\_\-create}!comment.module@{comment.module}}
+\subsubsection[{\_\-comment\_\-body\_\-field\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}\_\-comment\_\-body\_\-field\_\-create (\$ {\em info})}}
+\label{comment_8module_a202aee66aac992dace1513fcf1432562}
+Creates a comment\_\-body field instance for a given node type. \hypertarget{comment_8module_a7a3a5128d41e8563f0649eae12b777c6}{
+\index{comment.module@{comment.module}!\_\-comment\_\-get\_\-modes@{\_\-comment\_\-get\_\-modes}}
+\index{\_\-comment\_\-get\_\-modes@{\_\-comment\_\-get\_\-modes}!comment.module@{comment.module}}
+\subsubsection[{\_\-comment\_\-get\_\-modes}]{\setlength{\rightskip}{0pt plus 5cm}\_\-comment\_\-get\_\-modes ()}}
+\label{comment_8module_a7a3a5128d41e8563f0649eae12b777c6}
+Return an array of viewing modes for comment listings.
+
+We can't use a global variable array because the locale system is not initialized yet when the comment module is loaded. \hypertarget{comment_8module_a1e6475bf270340be547ae0776f25aee8}{
+\index{comment.module@{comment.module}!\_\-comment\_\-per\_\-page@{\_\-comment\_\-per\_\-page}}
+\index{\_\-comment\_\-per\_\-page@{\_\-comment\_\-per\_\-page}!comment.module@{comment.module}}
+\subsubsection[{\_\-comment\_\-per\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}\_\-comment\_\-per\_\-page ()}}
+\label{comment_8module_a1e6475bf270340be547ae0776f25aee8}
+Return an array of \char`\"{}comments per page\char`\"{} settings from which the user can choose. \hypertarget{comment_8module_ac56251d7cb10cf61b8ee999bbbb50547}{
+\index{comment.module@{comment.module}!\_\-comment\_\-update\_\-node\_\-statistics@{\_\-comment\_\-update\_\-node\_\-statistics}}
+\index{\_\-comment\_\-update\_\-node\_\-statistics@{\_\-comment\_\-update\_\-node\_\-statistics}!comment.module@{comment.module}}
+\subsubsection[{\_\-comment\_\-update\_\-node\_\-statistics}]{\setlength{\rightskip}{0pt plus 5cm}\_\-comment\_\-update\_\-node\_\-statistics (\$ {\em nid})}}
+\label{comment_8module_ac56251d7cb10cf61b8ee999bbbb50547}
+Updates the comment statistics for a given node. This should be called any time a comment is added, deleted, or updated.
+
+The following fields are contained in the node\_\-comment\_\-statistics table.
+\begin{DoxyItemize}
+\item last\_\-comment\_\-timestamp: the timestamp of the last comment for this node or the node create stamp if no comments exist for the node.
+\item last\_\-comment\_\-name: the name of the anonymous poster for the last comment
+\item last\_\-comment\_\-uid: the uid of the poster for the last comment for this node or the node authors uid if no comments exists for the node.
+\item comment\_\-count: the total number of approved/published comments on this node. 
+\end{DoxyItemize}\hypertarget{comment_8module_a08e4627f1aaa3a4b06ec01b7c00a98e5}{
+\index{comment.module@{comment.module}!comment\_\-access@{comment\_\-access}}
+\index{comment\_\-access@{comment\_\-access}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-access (\$ {\em op}, \/  \$ {\em comment})}}
+\label{comment_8module_a08e4627f1aaa3a4b06ec01b7c00a98e5}
+Determines whether the current user has access to a particular comment.
+
+Authenticated users can edit their comments as long they have not been replied to. This prevents people from changing or revising their statements based on the replies to their posts.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$op}]The operation that is to be performed on the comment. Only 'edit' is recognized now. \item[{\em \$comment}]The comment object. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the current user has acces to the comment, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{comment_8module_ab37670c10a61b72e8a861c547f1770ab}{
+\index{comment.module@{comment.module}!comment\_\-action\_\-info@{comment\_\-action\_\-info}}
+\index{comment\_\-action\_\-info@{comment\_\-action\_\-info}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-action\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-action\_\-info ()}}
+\label{comment_8module_ab37670c10a61b72e8a861c547f1770ab}
+Implements \hyperlink{group__actions_ga3df26c5d6496c91fcd0edd8648023fb4}{hook\_\-action\_\-info()}. \hypertarget{comment_8module_a3da253fa805d0d75f18d87635dbb562a}{
+\index{comment.module@{comment.module}!comment\_\-block\_\-configure@{comment\_\-block\_\-configure}}
+\index{comment\_\-block\_\-configure@{comment\_\-block\_\-configure}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-block\_\-configure}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-block\_\-configure (\$ {\em delta} = {\ttfamily ''})}}
+\label{comment_8module_a3da253fa805d0d75f18d87635dbb562a}
+Implements \hyperlink{group__hooks_gacc86fefd1e0299f387f79a37dd1a48b7}{hook\_\-block\_\-configure()}. \hypertarget{comment_8module_a5ae66e2c95e26f6694418807241fac4c}{
+\index{comment.module@{comment.module}!comment\_\-block\_\-info@{comment\_\-block\_\-info}}
+\index{comment\_\-block\_\-info@{comment\_\-block\_\-info}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-block\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-block\_\-info ()}}
+\label{comment_8module_a5ae66e2c95e26f6694418807241fac4c}
+Implements \hyperlink{group__hooks_ga2bd926c3e90deeba0c3ba64fb3c64d73}{hook\_\-block\_\-info()}. \hypertarget{comment_8module_a565b5b4ebd9bb223e1e51ea00716b904}{
+\index{comment.module@{comment.module}!comment\_\-block\_\-save@{comment\_\-block\_\-save}}
+\index{comment\_\-block\_\-save@{comment\_\-block\_\-save}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-block\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-block\_\-save (\$ {\em delta} = {\ttfamily ''}, \/  \$ {\em edit} = {\ttfamily array()})}}
+\label{comment_8module_a565b5b4ebd9bb223e1e51ea00716b904}
+Implements \hyperlink{group__hooks_ga622024ce4f818c241ca7a765e829f928}{hook\_\-block\_\-save()}. \hypertarget{comment_8module_a2087016cf9189eaf4d5563a08ce6a3ac}{
+\index{comment.module@{comment.module}!comment\_\-block\_\-view@{comment\_\-block\_\-view}}
+\index{comment\_\-block\_\-view@{comment\_\-block\_\-view}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-block\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-block\_\-view (\$ {\em delta} = {\ttfamily ''})}}
+\label{comment_8module_a2087016cf9189eaf4d5563a08ce6a3ac}
+Implements \hyperlink{group__hooks_gaa14092a3e74cdc57aa295100cfd6860d}{hook\_\-block\_\-view()}.
+
+Generates a block with the most recent comments. \hypertarget{comment_8module_a1ce48571361156189d7ce6f90c9465f8}{
+\index{comment.module@{comment.module}!comment\_\-build\_\-content@{comment\_\-build\_\-content}}
+\index{comment\_\-build\_\-content@{comment\_\-build\_\-content}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-build\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-build\_\-content (\$ {\em comment}, \/  \$ {\em node}, \/  \$ {\em view\_\-mode} = {\ttfamily 'full'}, \/  \$ {\em langcode} = {\ttfamily NULL})}}
+\label{comment_8module_a1ce48571361156189d7ce6f90c9465f8}
+Builds a structured array representing the comment's content.
+
+The content built for the comment (field values, comments, file attachments or other comment components) will vary depending on the \$view\_\-mode parameter.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$comment}]A comment object. \item[{\em \$node}]The node the comment is attached to. \item[{\em \$view\_\-mode}]View mode, e.g. 'full', 'teaser'... \item[{\em \$langcode}](optional) A language code to use for rendering. Defaults to the global content language of the current request. \end{DoxyParams}
+\hypertarget{comment_8module_a820a1c431691e6fe98c711d9a55b8081}{
+\index{comment.module@{comment.module}!comment\_\-count\_\-unpublished@{comment\_\-count\_\-unpublished}}
+\index{comment\_\-count\_\-unpublished@{comment\_\-count\_\-unpublished}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-count\_\-unpublished}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-count\_\-unpublished ()}}
+\label{comment_8module_a820a1c431691e6fe98c711d9a55b8081}
+Returns a menu title which includes the number of unapproved comments. \hypertarget{comment_8module_a6d3b67392abba22fa52fe27b9b3d0481}{
+\index{comment.module@{comment.module}!comment\_\-delete@{comment\_\-delete}}
+\index{comment\_\-delete@{comment\_\-delete}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-delete (\$ {\em cid})}}
+\label{comment_8module_a6d3b67392abba22fa52fe27b9b3d0481}
+Delete a comment and all its replies.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cid}]The comment to delete. \end{DoxyParams}
+\hypertarget{comment_8module_addaa817d25b383e341236a805ae6bea1}{
+\index{comment.module@{comment.module}!comment\_\-delete\_\-multiple@{comment\_\-delete\_\-multiple}}
+\index{comment\_\-delete\_\-multiple@{comment\_\-delete\_\-multiple}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-delete\_\-multiple}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-delete\_\-multiple (\$ {\em cids})}}
+\label{comment_8module_addaa817d25b383e341236a805ae6bea1}
+Delete comments and all their replies.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cids}]The comment to delete. \end{DoxyParams}
+\hypertarget{comment_8module_aaa18c174bbfaca41a522bf30fa17cffa}{
+\index{comment.module@{comment.module}!comment\_\-edit\_\-page@{comment\_\-edit\_\-page}}
+\index{comment\_\-edit\_\-page@{comment\_\-edit\_\-page}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-edit\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-edit\_\-page (\$ {\em comment})}}
+\label{comment_8module_aaa18c174bbfaca41a522bf30fa17cffa}
+Page callback for comment editing. \hypertarget{comment_8module_a4cdb7636ced52ebf5d0af7dd42ca83d1}{
+\index{comment.module@{comment.module}!comment\_\-entity\_\-info@{comment\_\-entity\_\-info}}
+\index{comment\_\-entity\_\-info@{comment\_\-entity\_\-info}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-entity\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-entity\_\-info ()}}
+\label{comment_8module_a4cdb7636ced52ebf5d0af7dd42ca83d1}
+Implements \hyperlink{group__hooks_gaf02318e9d0e8cdbf6d187b271b9969a8}{hook\_\-entity\_\-info()}. \hypertarget{comment_8module_ae1d74e0f7764e4be5fa2fa6d66b12e3c}{
+\index{comment.module@{comment.module}!comment\_\-field\_\-extra\_\-fields@{comment\_\-field\_\-extra\_\-fields}}
+\index{comment\_\-field\_\-extra\_\-fields@{comment\_\-field\_\-extra\_\-fields}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-field\_\-extra\_\-fields}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-field\_\-extra\_\-fields ()}}
+\label{comment_8module_ae1d74e0f7764e4be5fa2fa6d66b12e3c}
+Implements \hyperlink{group__hooks_ga7100332aa5b4d5f6ba72534599d133e5}{hook\_\-field\_\-extra\_\-fields()}. \hypertarget{comment_8module_a5632b449cf518ee83511f74ac061c644}{
+\index{comment.module@{comment.module}!comment\_\-file\_\-download\_\-access@{comment\_\-file\_\-download\_\-access}}
+\index{comment\_\-file\_\-download\_\-access@{comment\_\-file\_\-download\_\-access}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-file\_\-download\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-file\_\-download\_\-access (\$ {\em field}, \/  \$ {\em entity\_\-type}, \/  \$ {\em entity})}}
+\label{comment_8module_a5632b449cf518ee83511f74ac061c644}
+Implements \hyperlink{file_8api_8php_ae72c8feceec1072762bffc3ba020aa2a}{hook\_\-file\_\-download\_\-access()}. \hypertarget{comment_8module_a70a0f5820c8a9e01dec5112b716a9062}{
+\index{comment.module@{comment.module}!comment\_\-form\_\-build\_\-preview@{comment\_\-form\_\-build\_\-preview}}
+\index{comment\_\-form\_\-build\_\-preview@{comment\_\-form\_\-build\_\-preview}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-form\_\-build\_\-preview}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-form\_\-build\_\-preview (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{comment_8module_a70a0f5820c8a9e01dec5112b716a9062}
+Build a preview from submitted form values. \hypertarget{comment_8module_ab319853b494144007980b7e728ea09f2}{
+\index{comment.module@{comment.module}!comment\_\-form\_\-node\_\-form\_\-alter@{comment\_\-form\_\-node\_\-form\_\-alter}}
+\index{comment\_\-form\_\-node\_\-form\_\-alter@{comment\_\-form\_\-node\_\-form\_\-alter}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-form\_\-node\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-form\_\-node\_\-form\_\-alter (\&\$ {\em form}, \/  \$ {\em form\_\-state})}}
+\label{comment_8module_ab319853b494144007980b7e728ea09f2}
+Implements \hyperlink{group__hooks_gaf0cfc224a88c8823da68856c30a4841a}{hook\_\-form\_\-BASE\_\-FORM\_\-ID\_\-alter()}. \hypertarget{comment_8module_a81daa60b30cc06df7a8d08d075eb77eb}{
+\index{comment.module@{comment.module}!comment\_\-form\_\-node\_\-type\_\-form\_\-alter@{comment\_\-form\_\-node\_\-type\_\-form\_\-alter}}
+\index{comment\_\-form\_\-node\_\-type\_\-form\_\-alter@{comment\_\-form\_\-node\_\-type\_\-form\_\-alter}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-form\_\-node\_\-type\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-form\_\-node\_\-type\_\-form\_\-alter (\&\$ {\em form}, \/  \$ {\em form\_\-state})}}
+\label{comment_8module_a81daa60b30cc06df7a8d08d075eb77eb}
+Implements \hyperlink{group__hooks_ga8d4a4089551493d55911bd5c4f218264}{hook\_\-form\_\-FORM\_\-ID\_\-alter()}. \hypertarget{comment_8module_abb91789dc7f908120219fc645e7e1612}{
+\index{comment.module@{comment.module}!comment\_\-form\_\-submit@{comment\_\-form\_\-submit}}
+\index{comment\_\-form\_\-submit@{comment\_\-form\_\-submit}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{comment_8module_abb91789dc7f908120219fc645e7e1612}
+Process comment form submissions; prepare the comment, store it, and set a redirection target. \hypertarget{comment_8module_abd5446f38e07ea95441adc78dbd3c968}{
+\index{comment.module@{comment.module}!comment\_\-form\_\-submit\_\-build\_\-comment@{comment\_\-form\_\-submit\_\-build\_\-comment}}
+\index{comment\_\-form\_\-submit\_\-build\_\-comment@{comment\_\-form\_\-submit\_\-build\_\-comment}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-form\_\-submit\_\-build\_\-comment}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-form\_\-submit\_\-build\_\-comment (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{comment_8module_abd5446f38e07ea95441adc78dbd3c968}
+Updates the form state's comment entity by processing this submission's values.
+
+This is the default builder function for the comment form. It is called during the \char`\"{}Save\char`\"{} and \char`\"{}Preview\char`\"{} submit handlers to retrieve the entity to save or preview. This function can also be called by a \char`\"{}Next\char`\"{} button of a wizard to update the form state's entity with the current step's values before proceeding to the next step.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__forms_ga86e714d86cac517f85b3cadf42ba2977}{comment\_\-form()} 
+\end{DoxySeeAlso}
+\hypertarget{comment_8module_a37f7362a827269fc4d3f11bf4feae277}{
+\index{comment.module@{comment.module}!comment\_\-form\_\-validate@{comment\_\-form\_\-validate}}
+\index{comment\_\-form\_\-validate@{comment\_\-form\_\-validate}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{comment_8module_a37f7362a827269fc4d3f11bf4feae277}
+Validate comment form submissions. \hypertarget{comment_8module_aab24607a770dc7049e1408597bc4de44}{
+\index{comment.module@{comment.module}!comment\_\-forms@{comment\_\-forms}}
+\index{comment\_\-forms@{comment\_\-forms}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-forms}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-forms ()}}
+\label{comment_8module_aab24607a770dc7049e1408597bc4de44}
+Implements \hyperlink{group__hooks_gaa764fee74b85797f75c0c923cad628d5}{hook\_\-forms()}. \hypertarget{comment_8module_ab171028b3ac34f4aa94800451582e997}{
+\index{comment.module@{comment.module}!comment\_\-get\_\-display\_\-ordinal@{comment\_\-get\_\-display\_\-ordinal}}
+\index{comment\_\-get\_\-display\_\-ordinal@{comment\_\-get\_\-display\_\-ordinal}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-get\_\-display\_\-ordinal}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-get\_\-display\_\-ordinal (\$ {\em cid}, \/  \$ {\em node\_\-type})}}
+\label{comment_8module_ab171028b3ac34f4aa94800451582e997}
+Get the display ordinal for a comment, starting from 0.
+
+Count the number of comments which appear before the comment we want to display, taking into account display settings and threading.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cid}]The comment ID. \item[{\em \$node\_\-type}]The node type of the comment's parent. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The display ordinal for the comment. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{comment_8module_aa5aea9dcbfe48d409e40e1a37b5a9e50}{comment\_\-get\_\-display\_\-page()} 
+\end{DoxySeeAlso}
+\hypertarget{comment_8module_aa5aea9dcbfe48d409e40e1a37b5a9e50}{
+\index{comment.module@{comment.module}!comment\_\-get\_\-display\_\-page@{comment\_\-get\_\-display\_\-page}}
+\index{comment\_\-get\_\-display\_\-page@{comment\_\-get\_\-display\_\-page}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-get\_\-display\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-get\_\-display\_\-page (\$ {\em cid}, \/  \$ {\em node\_\-type})}}
+\label{comment_8module_aa5aea9dcbfe48d409e40e1a37b5a9e50}
+Return the page number for a comment.
+
+Finds the correct page number for a comment taking into account display and paging settings.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cid}]The comment ID. \item[{\em \$node\_\-type}]The node type the comment is attached to. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The page number. 
+\end{DoxyReturn}
+\hypertarget{comment_8module_aee855cbdc8d4b528e4d54817039fc760}{
+\index{comment.module@{comment.module}!comment\_\-get\_\-recent@{comment\_\-get\_\-recent}}
+\index{comment\_\-get\_\-recent@{comment\_\-get\_\-recent}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-get\_\-recent}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-get\_\-recent (\$ {\em number} = {\ttfamily 10})}}
+\label{comment_8module_aee855cbdc8d4b528e4d54817039fc760}
+Find the most recent comments that are available to the current user.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em integer}]\$number (optional) The maximum number of comments to find. Defaults to 10.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of comment objects or an empty array if there are no recent comments visible to the current user. 
+\end{DoxyReturn}
+\hypertarget{comment_8module_a7a7849475c35ea0266611552e0feba9c}{
+\index{comment.module@{comment.module}!comment\_\-get\_\-thread@{comment\_\-get\_\-thread}}
+\index{comment\_\-get\_\-thread@{comment\_\-get\_\-thread}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-get\_\-thread}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-get\_\-thread (\$ {\em node}, \/  \$ {\em mode}, \/  \$ {\em comments\_\-per\_\-page})}}
+\label{comment_8module_a7a7849475c35ea0266611552e0feba9c}
+Retrieve comments for a thread.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]The node whose comment(s) needs rendering. \item[{\em \$mode}]The comment display mode; COMMENT\_\-MODE\_\-FLAT or COMMENT\_\-MODE\_\-THREADED. \item[{\em \$comments\_\-per\_\-page}]The amount of comments to display per page.\end{DoxyParams}
+To display threaded comments in the correct order we keep a 'thread' field and order by that value. This field keeps this data in a way which is easy to update and convenient to use.
+
+A \char`\"{}thread\char`\"{} value starts at \char`\"{}1\char`\"{}. If we add a child (A) to this comment, we assign it a \char`\"{}thread\char`\"{} = \char`\"{}1.1\char`\"{}. A child of (A) will have \char`\"{}1.1.1\char`\"{}. Next brother of (A) will get \char`\"{}1.2\char`\"{}. Next brother of the parent of (A) will get \char`\"{}2\char`\"{} and so on.
+
+First of all note that the thread field stores the depth of the comment: depth 0 will be \char`\"{}X\char`\"{}, depth 1 \char`\"{}X.X\char`\"{}, depth 2 \char`\"{}X.X.X\char`\"{}, etc.
+
+Now to get the ordering right, consider this example:
+
+1 1.1 1.1.1 1.2 2
+
+If we \char`\"{}ORDER BY thread ASC\char`\"{} we get the above result, and this is the natural order sorted by time. However, if we \char`\"{}ORDER BY thread DESC\char`\"{} we get:
+
+2 1.2 1.1.1 1.1 1
+
+Clearly, this is not a natural way to see a thread, and users will get confused. The natural order to show a thread by time desc would be:
+
+2 1 1.2 1.1 1.1.1
+
+which is what we already did before the standard pager patch. To achieve this we simply add a \char`\"{}/\char`\"{} at the end of each \char`\"{}thread\char`\"{} value. This way, the thread fields will look like this:
+
+1/ 1.1/ 1.1.1/ 1.2/ 2/
+
+we add \char`\"{}/\char`\"{} since this char is, in ASCII, higher than every number, so if now we \char`\"{}ORDER BY thread DESC\char`\"{} we get the correct order. However this would spoil the reverse ordering, \char`\"{}ORDER BY thread ASC\char`\"{} -\/-\/ here, we do not need to consider the trailing \char`\"{}/\char`\"{} so we use a substring only. \hypertarget{comment_8module_a63915d30d11256dcdcd0c7e170aeefcd}{
+\index{comment.module@{comment.module}!comment\_\-help@{comment\_\-help}}
+\index{comment\_\-help@{comment\_\-help}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{comment_8module_a63915d30d11256dcdcd0c7e170aeefcd}
+Implements \hyperlink{group__hooks_ga5589c2714a782738e8851c4c90231f0e}{hook\_\-help()}. \hypertarget{comment_8module_a35585b785d03763c2ecc3f0cda6c0cf9}{
+\index{comment.module@{comment.module}!comment\_\-links@{comment\_\-links}}
+\index{comment\_\-links@{comment\_\-links}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-links}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-links (\$ {\em comment}, \/  \$ {\em node})}}
+\label{comment_8module_a35585b785d03763c2ecc3f0cda6c0cf9}
+Helper function, build links for an individual comment.
+
+Adds reply, edit, delete etc. depending on the current user permissions.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$comment}]The comment object. \item[{\em \$node}]The node the comment is attached to. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A structured array of links. 
+\end{DoxyReturn}
+\hypertarget{comment_8module_ac1c8a5b8709abdfce125d928a4381c7e}{
+\index{comment.module@{comment.module}!comment\_\-load@{comment\_\-load}}
+\index{comment\_\-load@{comment\_\-load}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-load (\$ {\em cid}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{comment_8module_ac1c8a5b8709abdfce125d928a4381c7e}
+Load the entire comment by cid.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cid}]The identifying comment id. \item[{\em \$reset}]Whether to reset the internal static entity cache. Note that the static cache is disabled in \hyperlink{comment_8module_a4cdb7636ced52ebf5d0af7dd42ca83d1}{comment\_\-entity\_\-info()} by default.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The comment object. 
+\end{DoxyReturn}
+\hypertarget{comment_8module_a0cfb98e73c618190693b683c9bbfc0b1}{
+\index{comment.module@{comment.module}!comment\_\-load\_\-multiple@{comment\_\-load\_\-multiple}}
+\index{comment\_\-load\_\-multiple@{comment\_\-load\_\-multiple}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-load\_\-multiple}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-load\_\-multiple (\$ {\em cids} = {\ttfamily array()}, \/  \$ {\em conditions} = {\ttfamily array()}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{comment_8module_a0cfb98e73c618190693b683c9bbfc0b1}
+Load comments from the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cids}]An array of comment IDs. \item[{\em \$conditions}](deprecated) An associative array of conditions on the \{comments\} table, where the keys are the database fields and the values are the values those fields must have. Instead, it is preferable to use \hyperlink{classEntityFieldQuery}{EntityFieldQuery} to retrieve a list of entity IDs loadable by this function. \item[{\em \$reset}]Whether to reset the internal static entity cache. Note that the static cache is disabled in \hyperlink{comment_8module_a4cdb7636ced52ebf5d0af7dd42ca83d1}{comment\_\-entity\_\-info()} by default.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of comment objects, indexed by comment ID.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{common_8inc_a78b89cf93f9710a68d02f86adccf1898}{entity\_\-load()} 
+
+\hyperlink{classEntityFieldQuery}{EntityFieldQuery}
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[\hyperlink{todo__todo000014}{Todo}]Remove \$conditions in Drupal 8. \end{Desc}
+\hypertarget{comment_8module_a94a9be33c58ee31519a160b07d52d4d0}{
+\index{comment.module@{comment.module}!comment\_\-menu@{comment\_\-menu}}
+\index{comment\_\-menu@{comment\_\-menu}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-menu ()}}
+\label{comment_8module_a94a9be33c58ee31519a160b07d52d4d0}
+Implements \hyperlink{group__hooks_ga5c95244fea59b25666e409759e133ded}{hook\_\-menu()}. \hypertarget{comment_8module_a8ba809cd66487e3390673abf3fde59a9}{
+\index{comment.module@{comment.module}!comment\_\-menu\_\-alter@{comment\_\-menu\_\-alter}}
+\index{comment\_\-menu\_\-alter@{comment\_\-menu\_\-alter}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-menu\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-menu\_\-alter (\&\$ {\em items})}}
+\label{comment_8module_a8ba809cd66487e3390673abf3fde59a9}
+Implements \hyperlink{group__hooks_ga4c37deddcf48dbfe6f3081df1652f6fa}{hook\_\-menu\_\-alter()}. \hypertarget{comment_8module_a96371e6a82f797cdd2241ba5af50b590}{
+\index{comment.module@{comment.module}!comment\_\-new\_\-page\_\-count@{comment\_\-new\_\-page\_\-count}}
+\index{comment\_\-new\_\-page\_\-count@{comment\_\-new\_\-page\_\-count}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-new\_\-page\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-new\_\-page\_\-count (\$ {\em num\_\-comments}, \/  \$ {\em new\_\-replies}, \/  \$ {\em node})}}
+\label{comment_8module_a96371e6a82f797cdd2241ba5af50b590}
+Calculate page number for first new comment.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$num\_\-comments}]Number of comments. \item[{\em \$new\_\-replies}]Number of new replies. \item[{\em \$node}]The first new comment node. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\char`\"{}page=X\char`\"{} if the page number is greater than zero; empty string otherwise. 
+\end{DoxyReturn}
+\hypertarget{comment_8module_a39ec63a49e728160e7a6ee16cb94c98d}{
+\index{comment.module@{comment.module}!comment\_\-node\_\-delete@{comment\_\-node\_\-delete}}
+\index{comment\_\-node\_\-delete@{comment\_\-node\_\-delete}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-node\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-node\_\-delete (\$ {\em node})}}
+\label{comment_8module_a39ec63a49e728160e7a6ee16cb94c98d}
+Implements \hyperlink{group__node__api__hooks_ga66ea0473a9950dc961802e801e5042e9}{hook\_\-node\_\-delete()}. \hypertarget{comment_8module_ab1014a4769b972b796b1934da70fdf1f}{
+\index{comment.module@{comment.module}!comment\_\-node\_\-insert@{comment\_\-node\_\-insert}}
+\index{comment\_\-node\_\-insert@{comment\_\-node\_\-insert}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-node\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-node\_\-insert (\$ {\em node})}}
+\label{comment_8module_ab1014a4769b972b796b1934da70fdf1f}
+Implements \hyperlink{group__node__api__hooks_ga8b40dc62e46e5055c205d2a723dc3548}{hook\_\-node\_\-insert()}. \hypertarget{comment_8module_a3b04740955116c2ec6ec12db5f991d7c}{
+\index{comment.module@{comment.module}!comment\_\-node\_\-load@{comment\_\-node\_\-load}}
+\index{comment\_\-node\_\-load@{comment\_\-node\_\-load}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-node\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-node\_\-load (\$ {\em nodes}, \/  \$ {\em types})}}
+\label{comment_8module_a3b04740955116c2ec6ec12db5f991d7c}
+Implements \hyperlink{group__node__api__hooks_gad48bb14b68ed38526029d1f7ac2d2de4}{hook\_\-node\_\-load()}. \hypertarget{comment_8module_a6244e5c333fc28d69fd0283dd62935bc}{
+\index{comment.module@{comment.module}!comment\_\-node\_\-page\_\-additions@{comment\_\-node\_\-page\_\-additions}}
+\index{comment\_\-node\_\-page\_\-additions@{comment\_\-node\_\-page\_\-additions}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-node\_\-page\_\-additions}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-node\_\-page\_\-additions (\$ {\em node})}}
+\label{comment_8module_a6244e5c333fc28d69fd0283dd62935bc}
+Build the comment-\/related elements for node detail pages.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]A node object. \end{DoxyParams}
+\hypertarget{comment_8module_ad676dbb6ef26ede2da251447dc02f692}{
+\index{comment.module@{comment.module}!comment\_\-node\_\-prepare@{comment\_\-node\_\-prepare}}
+\index{comment\_\-node\_\-prepare@{comment\_\-node\_\-prepare}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-node\_\-prepare}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-node\_\-prepare (\$ {\em node})}}
+\label{comment_8module_ad676dbb6ef26ede2da251447dc02f692}
+Implements \hyperlink{group__node__api__hooks_ga4bbe7320bd52fc6183920c8be2d9d4f6}{hook\_\-node\_\-prepare()}. \hypertarget{comment_8module_a2f8892368f9c2044dab49523e87bbf7e}{
+\index{comment.module@{comment.module}!comment\_\-node\_\-search\_\-result@{comment\_\-node\_\-search\_\-result}}
+\index{comment\_\-node\_\-search\_\-result@{comment\_\-node\_\-search\_\-result}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-node\_\-search\_\-result}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-node\_\-search\_\-result (\$ {\em node})}}
+\label{comment_8module_a2f8892368f9c2044dab49523e87bbf7e}
+Implements \hyperlink{group__node__api__hooks_ga8644320a0e04e3a503c99626d4223725}{hook\_\-node\_\-search\_\-result()}.
+
+Formats a comment count string and returns it, for display with search results. \hypertarget{comment_8module_a91ec97379602d78b57140003c9d380f4}{
+\index{comment.module@{comment.module}!comment\_\-node\_\-type\_\-delete@{comment\_\-node\_\-type\_\-delete}}
+\index{comment\_\-node\_\-type\_\-delete@{comment\_\-node\_\-type\_\-delete}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-node\_\-type\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-node\_\-type\_\-delete (\$ {\em info})}}
+\label{comment_8module_a91ec97379602d78b57140003c9d380f4}
+Implements \hyperlink{group__hooks_ga35ae5b1a494322b02d03ae00a98ac77b}{hook\_\-node\_\-type\_\-delete()}. \hypertarget{comment_8module_a7a86654032864f38a6c672c7fd0a15d9}{
+\index{comment.module@{comment.module}!comment\_\-node\_\-type\_\-insert@{comment\_\-node\_\-type\_\-insert}}
+\index{comment\_\-node\_\-type\_\-insert@{comment\_\-node\_\-type\_\-insert}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-node\_\-type\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-node\_\-type\_\-insert (\$ {\em info})}}
+\label{comment_8module_a7a86654032864f38a6c672c7fd0a15d9}
+Implements \hyperlink{group__hooks_ga8941b418846350a7edbd67ac388a5dfb}{hook\_\-node\_\-type\_\-insert()}.
+
+Creates a comment body field for a node type created while the comment module is enabled. For node types created before the comment module is enabled, \hyperlink{group__hooks_ga0eb7c67333e0f40b4a46c0dc4c4a92f3}{hook\_\-modules\_\-enabled()} serves to create the body fields.
+
+\begin{DoxySeeAlso}{See also}
+comment\_\-modules\_\-enabled() 
+\end{DoxySeeAlso}
+\hypertarget{comment_8module_a05a5d2b61a4656fba57a93489c4bcd3b}{
+\index{comment.module@{comment.module}!comment\_\-node\_\-type\_\-load@{comment\_\-node\_\-type\_\-load}}
+\index{comment\_\-node\_\-type\_\-load@{comment\_\-node\_\-type\_\-load}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-node\_\-type\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-node\_\-type\_\-load (\$ {\em name})}}
+\label{comment_8module_a05a5d2b61a4656fba57a93489c4bcd3b}
+Menu loader callback for Field UI paths.
+
+Return a comment bundle name from a node type in the URL. \hypertarget{comment_8module_a8019cc0abaad27a1b5e5086f60a3c9ab}{
+\index{comment.module@{comment.module}!comment\_\-node\_\-type\_\-update@{comment\_\-node\_\-type\_\-update}}
+\index{comment\_\-node\_\-type\_\-update@{comment\_\-node\_\-type\_\-update}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-node\_\-type\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-node\_\-type\_\-update (\$ {\em info})}}
+\label{comment_8module_a8019cc0abaad27a1b5e5086f60a3c9ab}
+Implements \hyperlink{group__hooks_ga7518f336bfbd131259f520fcd45ba710}{hook\_\-node\_\-type\_\-update()}. \hypertarget{comment_8module_a8810ffc5ce0ed7c78b997fe4e712913d}{
+\index{comment.module@{comment.module}!comment\_\-node\_\-update\_\-index@{comment\_\-node\_\-update\_\-index}}
+\index{comment\_\-node\_\-update\_\-index@{comment\_\-node\_\-update\_\-index}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-node\_\-update\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-node\_\-update\_\-index (\$ {\em node})}}
+\label{comment_8module_a8810ffc5ce0ed7c78b997fe4e712913d}
+Implements \hyperlink{group__node__api__hooks_gac8420f204c69a4dc641f4d809a870b05}{hook\_\-node\_\-update\_\-index()}. \hypertarget{comment_8module_af67cef07b57f84e54b8b26c38fe0fda0}{
+\index{comment.module@{comment.module}!comment\_\-node\_\-view@{comment\_\-node\_\-view}}
+\index{comment\_\-node\_\-view@{comment\_\-node\_\-view}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-node\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-node\_\-view (\$ {\em node}, \/  \$ {\em view\_\-mode})}}
+\label{comment_8module_af67cef07b57f84e54b8b26c38fe0fda0}
+Implements \hyperlink{group__node__api__hooks_ga475290ee8e81a2373ea17c512cc3f9a9}{hook\_\-node\_\-view()}. \hypertarget{comment_8module_aea0352c132a14dde4c550fd2321ee67d}{
+\index{comment.module@{comment.module}!comment\_\-num\_\-new@{comment\_\-num\_\-new}}
+\index{comment\_\-num\_\-new@{comment\_\-num\_\-new}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-num\_\-new}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-num\_\-new (\$ {\em nid}, \/  \$ {\em timestamp} = {\ttfamily 0})}}
+\label{comment_8module_aea0352c132a14dde4c550fd2321ee67d}
+Get number of new comments for current user and specified node.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$nid}]Node-\/id to count comments for. \item[{\em \$timestamp}]Time to count from (defaults to time of last user access to node). \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result or FALSE on error. 
+\end{DoxyReturn}
+\hypertarget{comment_8module_a2d3e88d7b6cb088dcc526dbb88fd9460}{
+\index{comment.module@{comment.module}!comment\_\-permalink@{comment\_\-permalink}}
+\index{comment\_\-permalink@{comment\_\-permalink}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-permalink}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-permalink (\$ {\em cid})}}
+\label{comment_8module_a2d3e88d7b6cb088dcc526dbb88fd9460}
+Redirects comment links to the correct page depending on comment settings.
+
+Since comments are paged there is no way to guarantee which page a comment appears on. Comment paging and threading settings may be changed at any time. With threaded comments, an individual comment may move between pages as comments can be added either before or after it in the overall discussion. Therefore we use a central routing function for comment links, which calculates the page number based on current comment settings and returns the full comment \hyperlink{classview}{view} with the pager set dynamically.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cid}]A comment identifier. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The comment listing set to the page on which the comment appears. 
+\end{DoxyReturn}
+\hypertarget{comment_8module_a387b3124043febad12f7f0aff06a1443}{
+\index{comment.module@{comment.module}!comment\_\-permission@{comment\_\-permission}}
+\index{comment\_\-permission@{comment\_\-permission}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-permission}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-permission ()}}
+\label{comment_8module_a387b3124043febad12f7f0aff06a1443}
+Implements \hyperlink{group__hooks_ga2b22b45f4925f2478412477bae329713}{hook\_\-permission()}. \hypertarget{comment_8module_a8fca2690aec83615ca65cb9f7f3b9438}{
+\index{comment.module@{comment.module}!comment\_\-prepare\_\-thread@{comment\_\-prepare\_\-thread}}
+\index{comment\_\-prepare\_\-thread@{comment\_\-prepare\_\-thread}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-prepare\_\-thread}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-prepare\_\-thread (\&\$ {\em comments})}}
+\label{comment_8module_a8fca2690aec83615ca65cb9f7f3b9438}
+Loop over comment thread, noting indentation level.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$comments An array of comment objects, keyed by cid. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \$comments argument is altered by reference with indentation information. 
+\end{DoxyReturn}
+\hypertarget{comment_8module_a032c5623dc97e32faf726eeea5618a36}{
+\index{comment.module@{comment.module}!comment\_\-preview@{comment\_\-preview}}
+\index{comment\_\-preview@{comment\_\-preview}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-preview}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-preview (\$ {\em comment})}}
+\label{comment_8module_a032c5623dc97e32faf726eeea5618a36}
+Generate a comment preview. \hypertarget{comment_8module_a7599b61c6ed28e6424dc51f9311539c5}{
+\index{comment.module@{comment.module}!comment\_\-ranking@{comment\_\-ranking}}
+\index{comment\_\-ranking@{comment\_\-ranking}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-ranking}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-ranking ()}}
+\label{comment_8module_a7599b61c6ed28e6424dc51f9311539c5}
+Implements \hyperlink{group__node__api__hooks_gaf7a28ce3230dc96833ea5338fd26f43c}{hook\_\-ranking()}. \hypertarget{comment_8module_a7a0a7125c95b61cea16f18f800880cf2}{
+\index{comment.module@{comment.module}!comment\_\-rdf\_\-mapping@{comment\_\-rdf\_\-mapping}}
+\index{comment\_\-rdf\_\-mapping@{comment\_\-rdf\_\-mapping}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-rdf\_\-mapping}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-rdf\_\-mapping ()}}
+\label{comment_8module_a7a0a7125c95b61cea16f18f800880cf2}
+Implements \hyperlink{group__rdf_gae3e7f047bdcb9309b323e2af09966765}{hook\_\-rdf\_\-mapping()}. \hypertarget{comment_8module_a4ef5d3d2161511e0d09a560fb5004e82}{
+\index{comment.module@{comment.module}!comment\_\-save@{comment\_\-save}}
+\index{comment\_\-save@{comment\_\-save}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-save (\$ {\em comment})}}
+\label{comment_8module_a4ef5d3d2161511e0d09a560fb5004e82}
+Accepts a submission of new or changed comment content.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$comment}]A comment object. \end{DoxyParams}
+\hypertarget{comment_8module_af9a31d3ab86177a7ac7999d049dc0b5f}{
+\index{comment.module@{comment.module}!comment\_\-submit@{comment\_\-submit}}
+\index{comment\_\-submit@{comment\_\-submit}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-submit (\$ {\em comment})}}
+\label{comment_8module_af9a31d3ab86177a7ac7999d049dc0b5f}
+Prepare a comment for submission. \hypertarget{comment_8module_a55ab29f2d9bfd7b05965e42a9fde98b7}{
+\index{comment.module@{comment.module}!comment\_\-theme@{comment\_\-theme}}
+\index{comment\_\-theme@{comment\_\-theme}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-theme ()}}
+\label{comment_8module_a55ab29f2d9bfd7b05965e42a9fde98b7}
+Implements \hyperlink{group__hooks_ga013ccb45c7aaab1c16cf9691428c910d}{hook\_\-theme()}. \hypertarget{comment_8module_ad94091cb95aec2dd607bde68a07e0dd1}{
+\index{comment.module@{comment.module}!comment\_\-unpublish\_\-by\_\-keyword\_\-action\_\-submit@{comment\_\-unpublish\_\-by\_\-keyword\_\-action\_\-submit}}
+\index{comment\_\-unpublish\_\-by\_\-keyword\_\-action\_\-submit@{comment\_\-unpublish\_\-by\_\-keyword\_\-action\_\-submit}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-unpublish\_\-by\_\-keyword\_\-action\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-unpublish\_\-by\_\-keyword\_\-action\_\-submit (\$ {\em form}, \/  \$ {\em form\_\-state})}}
+\label{comment_8module_ad94091cb95aec2dd607bde68a07e0dd1}
+Process comment\_\-unpublish\_\-by\_\-keyword\_\-action\_\-form form submissions.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__actions_gaf5c19c791a33e0dc2b0bd3eb4fa79ba5}{comment\_\-unpublish\_\-by\_\-keyword\_\-action()} 
+\end{DoxySeeAlso}
+\hypertarget{comment_8module_a50b866fc4c5da2c4a30a84ef4e2aac2d}{
+\index{comment.module@{comment.module}!comment\_\-update\_\-index@{comment\_\-update\_\-index}}
+\index{comment\_\-update\_\-index@{comment\_\-update\_\-index}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-update\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-update\_\-index ()}}
+\label{comment_8module_a50b866fc4c5da2c4a30a84ef4e2aac2d}
+Implements \hyperlink{group__search_ga23d6f6642bd53c4f033f10e9c1b12d43}{hook\_\-update\_\-index()}. \hypertarget{comment_8module_a40e0250c18ea32c201bb1abef9bb1a0a}{
+\index{comment.module@{comment.module}!comment\_\-uri@{comment\_\-uri}}
+\index{comment\_\-uri@{comment\_\-uri}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-uri}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-uri (\$ {\em comment})}}
+\label{comment_8module_a40e0250c18ea32c201bb1abef9bb1a0a}
+Implements \hyperlink{group__callbacks_ga42bf4e69ee32b2bc99d0d774d4917254}{callback\_\-entity\_\-info\_\-uri()}. \hypertarget{comment_8module_a8a9c4215c802259786fcb2a5526a1313}{
+\index{comment.module@{comment.module}!comment\_\-user\_\-cancel@{comment\_\-user\_\-cancel}}
+\index{comment\_\-user\_\-cancel@{comment\_\-user\_\-cancel}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-user\_\-cancel}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-user\_\-cancel (\$ {\em edit}, \/  \$ {\em account}, \/  \$ {\em method})}}
+\label{comment_8module_a8a9c4215c802259786fcb2a5526a1313}
+Implements \hyperlink{group__hooks_gad6223ddd2f0f52c331df8a3315d9a41e}{hook\_\-user\_\-cancel()}. \hypertarget{comment_8module_a9534e778a7cbfe56fd750997c8998ad8}{
+\index{comment.module@{comment.module}!comment\_\-user\_\-delete@{comment\_\-user\_\-delete}}
+\index{comment\_\-user\_\-delete@{comment\_\-user\_\-delete}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-user\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-user\_\-delete (\$ {\em account})}}
+\label{comment_8module_a9534e778a7cbfe56fd750997c8998ad8}
+Implements \hyperlink{group__hooks_ga2c0755857e486e8a770b44b496da9929}{hook\_\-user\_\-delete()}. \hypertarget{comment_8module_a68dd73af772c948e0f8a6cb144bef2cf}{
+\index{comment.module@{comment.module}!comment\_\-view@{comment\_\-view}}
+\index{comment\_\-view@{comment\_\-view}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-view (\$ {\em comment}, \/  \$ {\em node}, \/  \$ {\em view\_\-mode} = {\ttfamily 'full'}, \/  \$ {\em langcode} = {\ttfamily NULL})}}
+\label{comment_8module_a68dd73af772c948e0f8a6cb144bef2cf}
+Generate an array for rendering the given comment.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$comment}]A comment object. \item[{\em \$node}]The node the comment is attached to. \item[{\em \$view\_\-mode}]View mode, e.g. 'full', 'teaser'... \item[{\em \$langcode}](optional) A language code to use for rendering. Defaults to the global content language of the current request.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array as expected by \hyperlink{common_8inc_a05798b44e8d6c496d4bee5cc32fa7851}{drupal\_\-render()}. 
+\end{DoxyReturn}
+\hypertarget{comment_8module_add3fefcb6c60f8785d2c11cd49994681}{
+\index{comment.module@{comment.module}!comment\_\-view\_\-multiple@{comment\_\-view\_\-multiple}}
+\index{comment\_\-view\_\-multiple@{comment\_\-view\_\-multiple}!comment.module@{comment.module}}
+\subsubsection[{comment\_\-view\_\-multiple}]{\setlength{\rightskip}{0pt plus 5cm}comment\_\-view\_\-multiple (\$ {\em comments}, \/  \$ {\em node}, \/  \$ {\em view\_\-mode} = {\ttfamily 'full'}, \/  \$ {\em weight} = {\ttfamily 0}, \/  \$ {\em langcode} = {\ttfamily NULL})}}
+\label{comment_8module_add3fefcb6c60f8785d2c11cd49994681}
+Construct a \hyperlink{common_8inc_a05798b44e8d6c496d4bee5cc32fa7851}{drupal\_\-render()} style array from an array of loaded comments.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$comments}]An array of comments as returned by \hyperlink{comment_8module_a0cfb98e73c618190693b683c9bbfc0b1}{comment\_\-load\_\-multiple()}. \item[{\em \$node}]The node the comments are attached to. \item[{\em \$view\_\-mode}]View mode, e.g. 'full', 'teaser'... \item[{\em \$weight}]An integer representing the weight of the first comment in the list. \item[{\em \$langcode}]A string indicating the language field values are to be shown in. If no language is provided the current content language is used.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array in the format expected by \hyperlink{common_8inc_a05798b44e8d6c496d4bee5cc32fa7851}{drupal\_\-render()}. 
+\end{DoxyReturn}
+\hypertarget{comment_8module_a30537163d28e0425bc93b2fb1ec4aa54}{
+\index{comment.module@{comment.module}!int2vancode@{int2vancode}}
+\index{int2vancode@{int2vancode}!comment.module@{comment.module}}
+\subsubsection[{int2vancode}]{\setlength{\rightskip}{0pt plus 5cm}int2vancode (\$ {\em i} = {\ttfamily 0})}}
+\label{comment_8module_a30537163d28e0425bc93b2fb1ec4aa54}
+Generate vancode.
+
+Consists of a leading character indicating length, followed by N digits with a numerical value in base 36. Vancodes can be sorted as strings without messing up numerical order.
+
+It goes: 00, 01, 02, ..., 0y, 0z, 110, 111, ... , 1zy, 1zz, 2100, 2101, ..., 2zzy, 2zzz, 31000, 31001, ... \hypertarget{comment_8module_a48adb63c53357fde9aea892ba131f3db}{
+\index{comment.module@{comment.module}!template\_\-preprocess\_\-comment@{template\_\-preprocess\_\-comment}}
+\index{template\_\-preprocess\_\-comment@{template\_\-preprocess\_\-comment}!comment.module@{comment.module}}
+\subsubsection[{template\_\-preprocess\_\-comment}]{\setlength{\rightskip}{0pt plus 5cm}template\_\-preprocess\_\-comment (\&\$ {\em variables})}}
+\label{comment_8module_a48adb63c53357fde9aea892ba131f3db}
+Process variables for comment.tpl.php.
+
+\begin{DoxySeeAlso}{See also}
+comment.tpl.php 
+\end{DoxySeeAlso}
+\hypertarget{comment_8module_aeccd0447ccb1d7a888c63c47444d54fc}{
+\index{comment.module@{comment.module}!template\_\-preprocess\_\-comment\_\-wrapper@{template\_\-preprocess\_\-comment\_\-wrapper}}
+\index{template\_\-preprocess\_\-comment\_\-wrapper@{template\_\-preprocess\_\-comment\_\-wrapper}!comment.module@{comment.module}}
+\subsubsection[{template\_\-preprocess\_\-comment\_\-wrapper}]{\setlength{\rightskip}{0pt plus 5cm}template\_\-preprocess\_\-comment\_\-wrapper (\&\$ {\em variables})}}
+\label{comment_8module_aeccd0447ccb1d7a888c63c47444d54fc}
+Process variables for comment-\/wrapper.tpl.php.
+
+\begin{DoxySeeAlso}{See also}
+comment-\/wrapper.tpl.php 
+\end{DoxySeeAlso}
+\hypertarget{comment_8module_a4882cec0ad94842b2e7f9eb1b7ec27d2}{
+\index{comment.module@{comment.module}!vancode2int@{vancode2int}}
+\index{vancode2int@{vancode2int}!comment.module@{comment.module}}
+\subsubsection[{vancode2int}]{\setlength{\rightskip}{0pt plus 5cm}vancode2int (\$ {\em c} = {\ttfamily '00'})}}
+\label{comment_8module_a4882cec0ad94842b2e7f9eb1b7ec27d2}
+Decode vancode back to an integer. 

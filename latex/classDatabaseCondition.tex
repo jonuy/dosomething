@@ -1,0 +1,207 @@
+\hypertarget{classDatabaseCondition}{
+\section{DatabaseCondition Class Reference}
+\label{classDatabaseCondition}\index{DatabaseCondition@{DatabaseCondition}}
+}
+Inheritance diagram for DatabaseCondition::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classDatabaseCondition}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDatabaseCondition_aa5312271d36dcf3d3719cc44563a1056}{\_\-\_\-construct} (\$conjunction)
+\item 
+\hyperlink{classDatabaseCondition_a5eafb9a93459b1f1da6e93c1104c3a1c}{count} ()
+\item 
+\hyperlink{classDatabaseCondition_a0cb79d38e9978eb08eb863f6564d0b1d}{condition} (\$field, \$value=NULL, \$operator=NULL)
+\item 
+\hyperlink{classDatabaseCondition_ade864c6825d48205a1a6ec6fb1c3076f}{where} (\$snippet, \$args=array())
+\item 
+\hyperlink{classDatabaseCondition_af4ff7dba8bee46426fbc8b5930d860f0}{isNull} (\$field)
+\item 
+\hyperlink{classDatabaseCondition_aa7499e52cbf791273890fe3e1c47177b}{isNotNull} (\$field)
+\item 
+\hyperlink{classDatabaseCondition_ab3f1025c61cd359b097f3c1e949d4b05}{exists} (\hyperlink{interfaceSelectQueryInterface}{SelectQueryInterface} \$select)
+\item 
+\hyperlink{classDatabaseCondition_a435abef28b40645e5939eb521ac5407b}{notExists} (\hyperlink{interfaceSelectQueryInterface}{SelectQueryInterface} \$select)
+\item 
+\& \hyperlink{classDatabaseCondition_a9a399f85011d31611a0a01f9d2b30f10}{conditions} ()
+\item 
+\hyperlink{classDatabaseCondition_abfffa491de7087f1521e9868915f0169}{arguments} ()
+\item 
+\hyperlink{classDatabaseCondition_a286df1af0dfaa7ab6b8b30ed4e96a830}{compile} (\hyperlink{classDatabaseConnection}{DatabaseConnection} \$connection, \hyperlink{interfaceQueryPlaceholderInterface}{QueryPlaceholderInterface} \$queryPlaceholder)
+\item 
+\hyperlink{classDatabaseCondition_ac084ec53fb54ca89446acffda50b2e6a}{compiled} ()
+\item 
+\hyperlink{classDatabaseCondition_ac892cebcde8a71570e3a22c35fa98592}{\_\-\_\-toString} ()
+\item 
+\hyperlink{classDatabaseCondition_a7d229e52b09544a9ecd3a875f186f1b9}{\_\-\_\-clone} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDatabaseCondition_afb4e820b6d1719bf940526beef27dc7a}{mapConditionOperator} (\$operator)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDatabaseCondition_adfeee786f36c04ab6872755932bfeec5}{
+{\bfseries \$conditions} = array()}
+\label{classDatabaseCondition_adfeee786f36c04ab6872755932bfeec5}
+
+\item 
+\hypertarget{classDatabaseCondition_ae233af91e5b9fbb483439bfd97a03c71}{
+{\bfseries \$arguments} = array()}
+\label{classDatabaseCondition_ae233af91e5b9fbb483439bfd97a03c71}
+
+\item 
+\hypertarget{classDatabaseCondition_a55b7976ace5a04d766941ebd08793cab}{
+{\bfseries \$changed} = TRUE}
+\label{classDatabaseCondition_a55b7976ace5a04d766941ebd08793cab}
+
+\item 
+\hyperlink{classDatabaseCondition_a282f36ef640252385cb9e1d7872151b1}{\$queryPlaceholderIdentifier}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic class for a series of conditions in a query. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDatabaseCondition_aa5312271d36dcf3d3719cc44563a1056}{
+\index{DatabaseCondition@{DatabaseCondition}!\_\-\_\-construct@{\_\-\_\-construct}}
+\index{\_\-\_\-construct@{\_\-\_\-construct}!DatabaseCondition@{DatabaseCondition}}
+\subsubsection[{\_\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseCondition::\_\-\_\-construct (\$ {\em conjunction})}}
+\label{classDatabaseCondition_aa5312271d36dcf3d3719cc44563a1056}
+Constructs a DataBaseCondition object.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$conjunction The operator to use to combine conditions: 'AND' or 'OR'. \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDatabaseCondition_a7d229e52b09544a9ecd3a875f186f1b9}{
+\index{DatabaseCondition@{DatabaseCondition}!\_\-\_\-clone@{\_\-\_\-clone}}
+\index{\_\-\_\-clone@{\_\-\_\-clone}!DatabaseCondition@{DatabaseCondition}}
+\subsubsection[{\_\-\_\-clone}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseCondition::\_\-\_\-clone ()}}
+\label{classDatabaseCondition_a7d229e52b09544a9ecd3a875f186f1b9}
+PHP magic \hyperlink{classDatabaseCondition_a7d229e52b09544a9ecd3a875f186f1b9}{\_\-\_\-clone()} method.
+
+Only copies fields that implement \hyperlink{interfaceQueryConditionInterface}{QueryConditionInterface}. Also sets \$this-\/$>$changed to TRUE. \hypertarget{classDatabaseCondition_ac892cebcde8a71570e3a22c35fa98592}{
+\index{DatabaseCondition@{DatabaseCondition}!\_\-\_\-toString@{\_\-\_\-toString}}
+\index{\_\-\_\-toString@{\_\-\_\-toString}!DatabaseCondition@{DatabaseCondition}}
+\subsubsection[{\_\-\_\-toString}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseCondition::\_\-\_\-toString ()}}
+\label{classDatabaseCondition_ac892cebcde8a71570e3a22c35fa98592}
+Implements PHP magic \_\-\_\-toString method to convert the conditions to string.
+
+\begin{DoxyReturn}{Returns}
+string A string version of the conditions. 
+\end{DoxyReturn}
+\hypertarget{classDatabaseCondition_abfffa491de7087f1521e9868915f0169}{
+\index{DatabaseCondition@{DatabaseCondition}!arguments@{arguments}}
+\index{arguments@{arguments}!DatabaseCondition@{DatabaseCondition}}
+\subsubsection[{arguments}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseCondition::arguments ()}}
+\label{classDatabaseCondition_abfffa491de7087f1521e9868915f0169}
+Implements \hyperlink{interfaceQueryConditionInterface_ac2349e02d5332412182cf472ba1a1b1e}{QueryConditionInterface::arguments()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_ac2349e02d5332412182cf472ba1a1b1e}{QueryConditionInterface}.\hypertarget{classDatabaseCondition_a286df1af0dfaa7ab6b8b30ed4e96a830}{
+\index{DatabaseCondition@{DatabaseCondition}!compile@{compile}}
+\index{compile@{compile}!DatabaseCondition@{DatabaseCondition}}
+\subsubsection[{compile}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseCondition::compile ({\bf DatabaseConnection} \$ {\em connection}, \/  {\bf QueryPlaceholderInterface} \$ {\em queryPlaceholder})}}
+\label{classDatabaseCondition_a286df1af0dfaa7ab6b8b30ed4e96a830}
+Implements \hyperlink{interfaceQueryConditionInterface_ad409672ac9ac50787eec52ecdf5a60b1}{QueryConditionInterface::compile()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_ad409672ac9ac50787eec52ecdf5a60b1}{QueryConditionInterface}.\hypertarget{classDatabaseCondition_ac084ec53fb54ca89446acffda50b2e6a}{
+\index{DatabaseCondition@{DatabaseCondition}!compiled@{compiled}}
+\index{compiled@{compiled}!DatabaseCondition@{DatabaseCondition}}
+\subsubsection[{compiled}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseCondition::compiled ()}}
+\label{classDatabaseCondition_ac084ec53fb54ca89446acffda50b2e6a}
+Implements \hyperlink{interfaceQueryConditionInterface_a4aac3f4505275edecad9c22351e591cb}{QueryConditionInterface::compiled()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_a4aac3f4505275edecad9c22351e591cb}{QueryConditionInterface}.\hypertarget{classDatabaseCondition_a0cb79d38e9978eb08eb863f6564d0b1d}{
+\index{DatabaseCondition@{DatabaseCondition}!condition@{condition}}
+\index{condition@{condition}!DatabaseCondition@{DatabaseCondition}}
+\subsubsection[{condition}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseCondition::condition (\$ {\em field}, \/  \$ {\em value} = {\ttfamily NULL}, \/  \$ {\em operator} = {\ttfamily NULL})}}
+\label{classDatabaseCondition_a0cb79d38e9978eb08eb863f6564d0b1d}
+Implements \hyperlink{interfaceQueryConditionInterface_aa6d9d96fa17441b5222d1ffddd4c1799}{QueryConditionInterface::condition()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_aa6d9d96fa17441b5222d1ffddd4c1799}{QueryConditionInterface}.\hypertarget{classDatabaseCondition_a9a399f85011d31611a0a01f9d2b30f10}{
+\index{DatabaseCondition@{DatabaseCondition}!conditions@{conditions}}
+\index{conditions@{conditions}!DatabaseCondition@{DatabaseCondition}}
+\subsubsection[{conditions}]{\setlength{\rightskip}{0pt plus 5cm}\& DatabaseCondition::conditions ()}}
+\label{classDatabaseCondition_a9a399f85011d31611a0a01f9d2b30f10}
+Implements \hyperlink{interfaceQueryConditionInterface_a894cc290ed61feb3693b1d459ae86888}{QueryConditionInterface::conditions()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_a894cc290ed61feb3693b1d459ae86888}{QueryConditionInterface}.\hypertarget{classDatabaseCondition_a5eafb9a93459b1f1da6e93c1104c3a1c}{
+\index{DatabaseCondition@{DatabaseCondition}!count@{count}}
+\index{count@{count}!DatabaseCondition@{DatabaseCondition}}
+\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseCondition::count ()}}
+\label{classDatabaseCondition_a5eafb9a93459b1f1da6e93c1104c3a1c}
+Implements Countable::count().
+
+Returns the size of this conditional. The size of the conditional is the size of its conditional array minus one, because one element is the the conjunction. \hypertarget{classDatabaseCondition_ab3f1025c61cd359b097f3c1e949d4b05}{
+\index{DatabaseCondition@{DatabaseCondition}!exists@{exists}}
+\index{exists@{exists}!DatabaseCondition@{DatabaseCondition}}
+\subsubsection[{exists}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseCondition::exists ({\bf SelectQueryInterface} \$ {\em select})}}
+\label{classDatabaseCondition_ab3f1025c61cd359b097f3c1e949d4b05}
+Implements \hyperlink{interfaceQueryConditionInterface_a27a52b6e84393275ad2c54eaf1bd764a}{QueryConditionInterface::exists()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_a27a52b6e84393275ad2c54eaf1bd764a}{QueryConditionInterface}.\hypertarget{classDatabaseCondition_aa7499e52cbf791273890fe3e1c47177b}{
+\index{DatabaseCondition@{DatabaseCondition}!isNotNull@{isNotNull}}
+\index{isNotNull@{isNotNull}!DatabaseCondition@{DatabaseCondition}}
+\subsubsection[{isNotNull}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseCondition::isNotNull (\$ {\em field})}}
+\label{classDatabaseCondition_aa7499e52cbf791273890fe3e1c47177b}
+Implements \hyperlink{interfaceQueryConditionInterface_a8bbb6acc9c72911b165cf6eb1dc31453}{QueryConditionInterface::isNotNull()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_a8bbb6acc9c72911b165cf6eb1dc31453}{QueryConditionInterface}.\hypertarget{classDatabaseCondition_af4ff7dba8bee46426fbc8b5930d860f0}{
+\index{DatabaseCondition@{DatabaseCondition}!isNull@{isNull}}
+\index{isNull@{isNull}!DatabaseCondition@{DatabaseCondition}}
+\subsubsection[{isNull}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseCondition::isNull (\$ {\em field})}}
+\label{classDatabaseCondition_af4ff7dba8bee46426fbc8b5930d860f0}
+Implements \hyperlink{interfaceQueryConditionInterface_a2978b536a3fe62b21e940366c9cb5923}{QueryConditionInterface::isNull()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_a2978b536a3fe62b21e940366c9cb5923}{QueryConditionInterface}.\hypertarget{classDatabaseCondition_afb4e820b6d1719bf940526beef27dc7a}{
+\index{DatabaseCondition@{DatabaseCondition}!mapConditionOperator@{mapConditionOperator}}
+\index{mapConditionOperator@{mapConditionOperator}!DatabaseCondition@{DatabaseCondition}}
+\subsubsection[{mapConditionOperator}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseCondition::mapConditionOperator (\$ {\em operator})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseCondition_afb4e820b6d1719bf940526beef27dc7a}
+Gets any special processing requirements for the condition operator.
+
+Some condition types require special processing, such as IN, because the value data they pass in is not a simple value. This is a simple overridable lookup function.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$operator}]The condition operator, such as \char`\"{}IN\char`\"{}, \char`\"{}BETWEEN\char`\"{}, etc. Case-\/sensitive.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The extra handling directives for the specified operator, or NULL. 
+\end{DoxyReturn}
+\hypertarget{classDatabaseCondition_a435abef28b40645e5939eb521ac5407b}{
+\index{DatabaseCondition@{DatabaseCondition}!notExists@{notExists}}
+\index{notExists@{notExists}!DatabaseCondition@{DatabaseCondition}}
+\subsubsection[{notExists}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseCondition::notExists ({\bf SelectQueryInterface} \$ {\em select})}}
+\label{classDatabaseCondition_a435abef28b40645e5939eb521ac5407b}
+Implements \hyperlink{interfaceQueryConditionInterface_a8aae11796846850edbf8caa3a9d4afcd}{QueryConditionInterface::notExists()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_a8aae11796846850edbf8caa3a9d4afcd}{QueryConditionInterface}.\hypertarget{classDatabaseCondition_ade864c6825d48205a1a6ec6fb1c3076f}{
+\index{DatabaseCondition@{DatabaseCondition}!where@{where}}
+\index{where@{where}!DatabaseCondition@{DatabaseCondition}}
+\subsubsection[{where}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseCondition::where (\$ {\em snippet}, \/  \$ {\em args} = {\ttfamily array()})}}
+\label{classDatabaseCondition_ade864c6825d48205a1a6ec6fb1c3076f}
+Implements \hyperlink{interfaceQueryConditionInterface_a42c03c74dd81ef6d77041e67ec12e735}{QueryConditionInterface::where()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_a42c03c74dd81ef6d77041e67ec12e735}{QueryConditionInterface}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classDatabaseCondition_a282f36ef640252385cb9e1d7872151b1}{
+\index{DatabaseCondition@{DatabaseCondition}!\$queryPlaceholderIdentifier@{\$queryPlaceholderIdentifier}}
+\index{\$queryPlaceholderIdentifier@{\$queryPlaceholderIdentifier}!DatabaseCondition@{DatabaseCondition}}
+\subsubsection[{\$queryPlaceholderIdentifier}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseCondition::\$queryPlaceholderIdentifier\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseCondition_a282f36ef640252385cb9e1d7872151b1}
+The identifier of the query placeholder this condition has been compiled against. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/database/\hyperlink{query_8inc}{query.inc}\end{DoxyCompactItemize}

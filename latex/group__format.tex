@@ -1,0 +1,206 @@
+\hypertarget{group__format}{
+\section{Formatting}
+\label{group__format}\index{Formatting@{Formatting}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__format_ga44992b971aed4a6a5b8457678f57de50}{format\_\-rss\_\-channel} (\$title, \$link, \$description, \$items, \$langcode=NULL, \$args=array())
+\item 
+\hyperlink{group__format_ga4ecc9b876a9eaa65abb24ef513b217ad}{format\_\-rss\_\-item} (\$title, \$link, \$description, \$args=array())
+\item 
+\hyperlink{group__format_gafb344c648e6b63c35950d2889430e4c7}{format\_\-xml\_\-elements} (\$array)
+\item 
+\hyperlink{group__format_ga215a60b10cd70858e7a268eaf04cbed7}{format\_\-plural} (\$count, \$singular, \$plural, array \$args=array(), array \$options=array())
+\item 
+\hyperlink{group__format_ga08382023ada29bae2a6a94f22196b066}{parse\_\-size} (\$size)
+\item 
+\hyperlink{group__format_ga2a0075e7646fa2f399286272faa2956e}{format\_\-size} (\$size, \$langcode=NULL)
+\item 
+\hyperlink{group__format_ga0615263857988e35c25d84c59a9733a4}{format\_\-interval} (\$interval, \$granularity=2, \$langcode=NULL)
+\item 
+\hyperlink{group__format_ga40553742a67f9c79c4669b9053fe202c}{format\_\-date} (\$timestamp, \$type= 'medium', \$format= '', \$timezone=NULL, \$langcode=NULL)
+\item 
+\hyperlink{group__format_gabb13004721c9ab696704c968887d9d79}{date\_\-iso8601} (\$date)
+\item 
+\hyperlink{group__format_gafbd5625a63c5da6e62dd6a53a314dfcd}{\_\-format\_\-date\_\-callback} (array \$matches=NULL, \$new\_\-langcode=NULL)
+\item 
+\hyperlink{group__format_ga7124a026ecfacc51c57a75fcc083f136}{format\_\-username} (\$account)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+End of \char`\"{}defgroup sanitization\char`\"{}.
+
+Functions to format numbers, strings, dates, etc. 
+
+\subsection{Function Documentation}
+\hypertarget{group__format_gafbd5625a63c5da6e62dd6a53a314dfcd}{
+\index{format@{format}!\_\-format\_\-date\_\-callback@{\_\-format\_\-date\_\-callback}}
+\index{\_\-format\_\-date\_\-callback@{\_\-format\_\-date\_\-callback}!format@{format}}
+\subsubsection[{\_\-format\_\-date\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}\_\-format\_\-date\_\-callback (array \$ {\em matches} = {\ttfamily NULL}, \/  \$ {\em new\_\-langcode} = {\ttfamily NULL})}}
+\label{group__format_gafbd5625a63c5da6e62dd6a53a314dfcd}
+Translates a formatted date string.
+
+Callback for preg\_\-replace\_\-callback() within \hyperlink{group__format_ga40553742a67f9c79c4669b9053fe202c}{format\_\-date()}. \hypertarget{group__format_gabb13004721c9ab696704c968887d9d79}{
+\index{format@{format}!date\_\-iso8601@{date\_\-iso8601}}
+\index{date\_\-iso8601@{date\_\-iso8601}!format@{format}}
+\subsubsection[{date\_\-iso8601}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-iso8601 (\$ {\em date})}}
+\label{group__format_gabb13004721c9ab696704c968887d9d79}
+Returns an ISO8601 formatted date based on the given date.
+
+Callback for use within \hyperlink{group__rdf_gae3e7f047bdcb9309b323e2af09966765}{hook\_\-rdf\_\-mapping()} implementations.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$date}]A UNIX timestamp.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string An ISO8601 formatted date. 
+\end{DoxyReturn}
+\hypertarget{group__format_ga40553742a67f9c79c4669b9053fe202c}{
+\index{format@{format}!format\_\-date@{format\_\-date}}
+\index{format\_\-date@{format\_\-date}!format@{format}}
+\subsubsection[{format\_\-date}]{\setlength{\rightskip}{0pt plus 5cm}format\_\-date (\$ {\em timestamp}, \/  \$ {\em type} = {\ttfamily 'medium'}, \/  \$ {\em format} = {\ttfamily ''}, \/  \$ {\em timezone} = {\ttfamily NULL}, \/  \$ {\em langcode} = {\ttfamily NULL})}}
+\label{group__format_ga40553742a67f9c79c4669b9053fe202c}
+Formats a date, using a date type or a custom date format string.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$timestamp}]A UNIX timestamp to format. \item[{\em \$type}](optional) The format to use, one of:
+\begin{DoxyItemize}
+\item 'short', 'medium', or 'long' (the corresponding built-\/in date formats).
+\item The name of a date type defined by a module in \hyperlink{group__hooks_gaadde7af71d0b4f827cf7aac1c88c4d23}{hook\_\-date\_\-format\_\-types()}, if it's been assigned a format.
+\item The machine name of an administrator-\/defined date format.
+\item 'custom', to use \$format. Defaults to 'medium'. 
+\end{DoxyItemize}\item[{\em \$format}](optional) If \$type is 'custom', a PHP date format string suitable for input to date(). Use a backslash to escape ordinary text, so it does not get interpreted as date format characters. \item[{\em \$timezone}](optional) Time zone identifier, as described at \href{http://php.net/manual/en/timezones.php}{\tt http://php.net/manual/en/timezones.php} Defaults to the time zone used to display the page. \item[{\em \$langcode}](optional) Language code to translate to. Defaults to the language used to display the page.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A translated date string in the requested format. 
+\end{DoxyReturn}
+\hypertarget{group__format_ga0615263857988e35c25d84c59a9733a4}{
+\index{format@{format}!format\_\-interval@{format\_\-interval}}
+\index{format\_\-interval@{format\_\-interval}!format@{format}}
+\subsubsection[{format\_\-interval}]{\setlength{\rightskip}{0pt plus 5cm}format\_\-interval (\$ {\em interval}, \/  \$ {\em granularity} = {\ttfamily 2}, \/  \$ {\em langcode} = {\ttfamily NULL})}}
+\label{group__format_ga0615263857988e35c25d84c59a9733a4}
+Formats a time interval with the requested granularity.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$interval}]The length of the interval in seconds. \item[{\em \$granularity}]How many different units to display in the string. \item[{\em \$langcode}]Optional language code to translate to a language other than what is used to display the page.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A translated string representation of the interval. 
+\end{DoxyReturn}
+\hypertarget{group__format_ga215a60b10cd70858e7a268eaf04cbed7}{
+\index{format@{format}!format\_\-plural@{format\_\-plural}}
+\index{format\_\-plural@{format\_\-plural}!format@{format}}
+\subsubsection[{format\_\-plural}]{\setlength{\rightskip}{0pt plus 5cm}format\_\-plural (\$ {\em count}, \/  \$ {\em singular}, \/  \$ {\em plural}, \/  array \$ {\em args} = {\ttfamily array()}, \/  array \$ {\em options} = {\ttfamily array()})}}
+\label{group__format_ga215a60b10cd70858e7a268eaf04cbed7}
+Formats a string containing a count of items.
+
+This function ensures that the string is pluralized correctly. Since t() is called by this function, make sure not to pass already-\/localized strings to it.
+
+For example: 
+\begin{DoxyCode}
+   $output = format_plural($node->comment_count, '1 comment', '@count comments');
+      
+\end{DoxyCode}
+
+
+Example with additional replacements: 
+\begin{DoxyCode}
+   $output = format_plural($update_count,
+     'Changed the content type of 1 post from %old-type to %new-type.',
+     'Changed the content type of @count posts from %old-type to %new-type.',
+     array('%old-type' => $info->old_type, '%new-type' => $info->new_type));
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$count}]The item count to display. \item[{\em \$singular}]The string for the singular case. Make sure it is clear this is singular, to ease translation (e.g. use \char`\"{}1 new comment\char`\"{} instead of \char`\"{}1 new\char`\"{}). Do not use  in the singular string. \item[{\em \$plural}]The string for the plural case. Make sure it is clear this is plural, to ease translation. Use  in place of the item count, as in \char`\"{}@count new comments\char`\"{}. \item[{\em \$args}]An associative array of replacements to make after translation. Instances of any key in this array are replaced with the corresponding value. Based on the first character of the key, the value is escaped and/or themed. See \hyperlink{group__sanitization_ga8da272cf93fb6ba229eca7c0b06ea4d2}{format\_\-string()}. Note that you do not need to include  in this array; this replacement is done automatically for the plural case. \item[{\em \$options}]An associative array of additional options. See t() for allowed keys.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A translated string.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+t() 
+
+\hyperlink{group__sanitization_ga8da272cf93fb6ba229eca7c0b06ea4d2}{format\_\-string()} 
+\end{DoxySeeAlso}
+\hypertarget{group__format_ga44992b971aed4a6a5b8457678f57de50}{
+\index{format@{format}!format\_\-rss\_\-channel@{format\_\-rss\_\-channel}}
+\index{format\_\-rss\_\-channel@{format\_\-rss\_\-channel}!format@{format}}
+\subsubsection[{format\_\-rss\_\-channel}]{\setlength{\rightskip}{0pt plus 5cm}format\_\-rss\_\-channel (\$ {\em title}, \/  \$ {\em link}, \/  \$ {\em description}, \/  \$ {\em items}, \/  \$ {\em langcode} = {\ttfamily NULL}, \/  \$ {\em args} = {\ttfamily array()})}}
+\label{group__format_ga44992b971aed4a6a5b8457678f57de50}
+Formats an RSS channel.
+
+Arbitrary elements may be added using the \$args associative array. \hypertarget{group__format_ga4ecc9b876a9eaa65abb24ef513b217ad}{
+\index{format@{format}!format\_\-rss\_\-item@{format\_\-rss\_\-item}}
+\index{format\_\-rss\_\-item@{format\_\-rss\_\-item}!format@{format}}
+\subsubsection[{format\_\-rss\_\-item}]{\setlength{\rightskip}{0pt plus 5cm}format\_\-rss\_\-item (\$ {\em title}, \/  \$ {\em link}, \/  \$ {\em description}, \/  \$ {\em args} = {\ttfamily array()})}}
+\label{group__format_ga4ecc9b876a9eaa65abb24ef513b217ad}
+Formats a single RSS item.
+
+Arbitrary elements may be added using the \$args associative array. \hypertarget{group__format_ga2a0075e7646fa2f399286272faa2956e}{
+\index{format@{format}!format\_\-size@{format\_\-size}}
+\index{format\_\-size@{format\_\-size}!format@{format}}
+\subsubsection[{format\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}format\_\-size (\$ {\em size}, \/  \$ {\em langcode} = {\ttfamily NULL})}}
+\label{group__format_ga2a0075e7646fa2f399286272faa2956e}
+Generates a string representation for the given byte count.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$size}]A size in bytes. \item[{\em \$langcode}]Optional language code to translate to a language other than what is used to display the page.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A translated string representation of the size. 
+\end{DoxyReturn}
+\hypertarget{group__format_ga7124a026ecfacc51c57a75fcc083f136}{
+\index{format@{format}!format\_\-username@{format\_\-username}}
+\index{format\_\-username@{format\_\-username}!format@{format}}
+\subsubsection[{format\_\-username}]{\setlength{\rightskip}{0pt plus 5cm}format\_\-username (\$ {\em account})}}
+\label{group__format_ga7124a026ecfacc51c57a75fcc083f136}
+Format a username.
+
+This is also the label callback implementation of \hyperlink{group__callbacks_gae9464157712e8322955f45a671a8403d}{callback\_\-entity\_\-info\_\-label()} for \hyperlink{user_8module_a1dd64aa2b09d172ccab380135acb6af4}{user\_\-entity\_\-info()}.
+
+By default, the passed-\/in object's 'name' property is used if it exists, or else, the site-\/defined value for the 'anonymous' variable. However, a module may override this by implementing hook\_\-username\_\-alter(\&\$name, \$account).
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__hooks_ga877faf93c9acc42bb54cbd01cd8d9453}{hook\_\-username\_\-alter()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$account}]The account object for the user whose name is to be formatted.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An unsanitized string with the username to display. The code receiving this result must ensure that \hyperlink{group__sanitization_ga76fc67a30fd8d75ddd80565e6e65a13d}{check\_\-plain()} is called on it before it is printed to the page. 
+\end{DoxyReturn}
+\hypertarget{group__format_gafb344c648e6b63c35950d2889430e4c7}{
+\index{format@{format}!format\_\-xml\_\-elements@{format\_\-xml\_\-elements}}
+\index{format\_\-xml\_\-elements@{format\_\-xml\_\-elements}!format@{format}}
+\subsubsection[{format\_\-xml\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}format\_\-xml\_\-elements (\$ {\em array})}}
+\label{group__format_gafb344c648e6b63c35950d2889430e4c7}
+Formats XML elements.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$array}]An array where each item represents an element and is either a:
+\begin{DoxyItemize}
+\item (key =$>$ value) pair ($<$key$>$value$<$/key$>$)
+\item Associative array with fields:
+\begin{DoxyItemize}
+\item 'key': element name
+\item 'value': element contents
+\item 'attributes': associative array of element attributes
+\end{DoxyItemize}
+\end{DoxyItemize}\end{DoxyParams}
+In both cases, 'value' can be a simple string, or it can be another array with the same format as \$array itself for nesting. \hypertarget{group__format_ga08382023ada29bae2a6a94f22196b066}{
+\index{format@{format}!parse\_\-size@{parse\_\-size}}
+\index{parse\_\-size@{parse\_\-size}!format@{format}}
+\subsubsection[{parse\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}parse\_\-size (\$ {\em size})}}
+\label{group__format_ga08382023ada29bae2a6a94f22196b066}
+Parses a given byte count.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$size}]A size expressed as a number of bytes with optional SI or IEC binary unit prefix (e.g. 2, 3K, 5MB, 10G, 6GiB, 8 bytes, 9mbytes).\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer representation of the size in bytes. 
+\end{DoxyReturn}

@@ -1,0 +1,380 @@
+\hypertarget{search_8module}{
+\section{html/modules/search/search.module File Reference}
+\label{search_8module}\index{html/modules/search/search.module@{html/modules/search/search.module}}
+}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{search_8module_af45ac30323578ac282a5fc1927d96305}{PREG\_\-CLASS\_\-NUMBERS} 
+\item 
+enum \hyperlink{search_8module_ad6f3e596c60aa0865b379d88905a6ed5}{PREG\_\-CLASS\_\-PUNCTUATION} 
+\item 
+enum \hyperlink{search_8module_a44dc2b3df8c066a2d2ce47f25218f126}{PREG\_\-CLASS\_\-CJK} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{search_8module_aa8106bfd7c3a1254dcb89195ab219b5b}{search\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{search_8module_a8522ae1e4902ce2907b7515e340b711e}{search\_\-theme} ()
+\item 
+\hyperlink{search_8module_a56dd5c08835642b32744dfea3762a419}{search\_\-permission} ()
+\item 
+\hyperlink{search_8module_a2f13d2fc1d549a040d7bdbda511710a0}{search\_\-block\_\-info} ()
+\item 
+\hyperlink{search_8module_a04d7ad10e5af7a7053b386f9b5e70304}{search\_\-block\_\-view} (\$delta= '')
+\item 
+\hyperlink{search_8module_ac0cbdaa688ee15c024867c96b54a4036}{search\_\-menu} ()
+\item 
+\hyperlink{search_8module_ade9a3743480b1b0ea05d80f54b466442}{search\_\-is\_\-active} ()
+\item 
+\hyperlink{search_8module_aa36af44ad9f887b93fdfcf33daa9cb1e}{search\_\-get\_\-info} (\$all=FALSE)
+\item 
+\hyperlink{search_8module_abb3b45a6704ffdb16799bdd5e69a39ef}{search\_\-get\_\-default\_\-module\_\-info} ()
+\item 
+\hyperlink{search_8module_ad23d575da2f572416a56555fe51fc565}{\_\-search\_\-menu\_\-access} (\$name)
+\item 
+\hyperlink{search_8module_a66509986c2ec235db1bf94f010d6675d}{search\_\-reindex} (\$sid=NULL, \$module=NULL, \$reindex=FALSE)
+\item 
+\hyperlink{search_8module_ab872d5ac0d09e2de39d856606092ed02}{search\_\-dirty} (\$word=NULL)
+\item 
+\hyperlink{search_8module_a60454d8bc91689e5d91b1a8c4e02c412}{search\_\-cron} ()
+\item 
+\hyperlink{search_8module_a60e12125cc5e7713d2e73ad944b3ac24}{search\_\-update\_\-totals} ()
+\item 
+\hyperlink{search_8module_ac33f1e93d9bed7ebf9b4908287618beb}{search\_\-simplify} (\$text)
+\item 
+\hyperlink{search_8module_a7088ffdfda833c7047b38f470a806a24}{search\_\-expand\_\-cjk} (\$matches)
+\item 
+\hyperlink{search_8module_a5435e73f4dc935b243e2e08f34a57d1d}{search\_\-index\_\-split} (\$text)
+\item 
+\hyperlink{search_8module_a8cad6e5cadb04b33e53bd4872b8f37b4}{\_\-search\_\-index\_\-truncate} (\&\$text)
+\item 
+\hyperlink{search_8module_ae0bcee62601fbc35d2651764a04e5591}{search\_\-invoke\_\-preprocess} (\&\$text)
+\item 
+\hyperlink{group__search_ga57ab9f6e1c404a8c248293e554373ae6}{search\_\-index} (\$sid, \$module, \$text)
+\item 
+\hyperlink{search_8module_a7f33ab55bf14157d58997bbe149e515d}{search\_\-touch\_\-node} (\$nid)
+\item 
+\hyperlink{search_8module_ad314916727aaf74780b647fa381c89f6}{search\_\-node\_\-update\_\-index} (\$node)
+\item 
+\hyperlink{search_8module_a1067f1570b24d9647ec628bd93762bdd}{search\_\-node\_\-update} (\$node)
+\item 
+\hyperlink{search_8module_ade210f9ad2bba0665dfa46416c4b5377}{search\_\-comment\_\-insert} (\$comment)
+\item 
+\hyperlink{search_8module_a7bafc7986e46077bb7a03f9a5eeb05b2}{search\_\-comment\_\-update} (\$comment)
+\item 
+\hyperlink{search_8module_aafce819db105850b1570206f6dde2797}{search\_\-comment\_\-delete} (\$comment)
+\item 
+\hyperlink{search_8module_a33789acc1f4a944bf59f439e50eda30c}{search\_\-comment\_\-publish} (\$comment)
+\item 
+\hyperlink{search_8module_a6f61fc78d6436593fffa74762fb281b1}{search\_\-comment\_\-unpublish} (\$comment)
+\item 
+\hyperlink{search_8module_a6d0e1560509bebe41ba4c6a2959ce59c}{search\_\-expression\_\-extract} (\$expression, \$option)
+\item 
+\hyperlink{search_8module_a90b4fc5f716558dc1bf741c239fe1a0e}{search\_\-expression\_\-insert} (\$expression, \$option, \$value=NULL)
+\item 
+\hyperlink{group__search_gae12dc9da20e7e19853dfc18f92039d98}{search\_\-form} (\$form, \&\$form\_\-state, \$action= '', \$keys= '', \$module=NULL, \$prompt=NULL)
+\item 
+\hyperlink{group__forms_ga745b25ef751b20947460eb353f3be2af}{search\_\-box} (\$form, \&\$form\_\-state, \$form\_\-id)
+\item 
+\hyperlink{group__search_gaf91fe848f7f58fc3d63001198e485e00}{search\_\-box\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__search_ga545a7c7108d985d17d8b8b4054ba66ef}{template\_\-preprocess\_\-search\_\-block\_\-form} (\&\$variables)
+\item 
+\hyperlink{group__search_gadc45d10981f71a4d12879254b14c2c99}{search\_\-data} (\$keys, \$module, \$conditions=NULL)
+\item 
+\hyperlink{group__search_gaa77622185b2d7ea771cf590d76ab3ba4}{search\_\-excerpt} (\$keys, \$text)
+\item 
+\hyperlink{search_8module_a7aff627bdbf0ad6208ded5e75e53f67f}{\_\-search\_\-excerpt\_\-replace} (\&\$text)
+\item 
+\hyperlink{search_8module_a1224b2795f1334faa26bbb552f4f5856}{search\_\-simplify\_\-excerpt\_\-match} (\$key, \$text, \$offset, \$boundary)
+\item 
+\hyperlink{search_8module_abc952f2f6920f7647e15e1bde8330414}{\_\-search\_\-excerpt\_\-match\_\-filter} (\$var)
+\item 
+\hyperlink{search_8module_a3396c4111908648bd2d0ddff911449fa}{search\_\-forms} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Enables site-\/wide keyword searching. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{search_8module_a44dc2b3df8c066a2d2ce47f25218f126}{
+\index{search.module@{search.module}!PREG\_\-CLASS\_\-CJK@{PREG\_\-CLASS\_\-CJK}}
+\index{PREG\_\-CLASS\_\-CJK@{PREG\_\-CLASS\_\-CJK}!search.module@{search.module}}
+\subsubsection[{PREG\_\-CLASS\_\-CJK}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PREG\_\-CLASS\_\-CJK}}}
+\label{search_8module_a44dc2b3df8c066a2d2ce47f25218f126}
+Matches CJK (Chinese, Japanese, Korean) letter-\/like characters.
+
+This list is derived from the \char`\"{}East Asian Scripts\char`\"{} section of \href{http://www.unicode.org/charts/index.html,}{\tt http://www.unicode.org/charts/index.html,} as well as a comment on \href{http://unicode.org/reports/tr11/tr11-11.html}{\tt http://unicode.org/reports/tr11/tr11-\/11.html} listing some character ranges that are reserved for additional CJK ideographs.
+
+The character ranges do not include numbers, punctuation, or symbols, since these are handled separately in search. Note that radicals and strokes are considered symbols. (See \href{http://www.unicode.org/Public/UNIDATA/extracted/DerivedGeneralCategory.txt}{\tt http://www.unicode.org/Public/UNIDATA/extracted/DerivedGeneralCategory.txt})
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{search_8module_a7088ffdfda833c7047b38f470a806a24}{search\_\-expand\_\-cjk()} 
+\end{DoxySeeAlso}
+\hypertarget{search_8module_af45ac30323578ac282a5fc1927d96305}{
+\index{search.module@{search.module}!PREG\_\-CLASS\_\-NUMBERS@{PREG\_\-CLASS\_\-NUMBERS}}
+\index{PREG\_\-CLASS\_\-NUMBERS@{PREG\_\-CLASS\_\-NUMBERS}!search.module@{search.module}}
+\subsubsection[{PREG\_\-CLASS\_\-NUMBERS}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PREG\_\-CLASS\_\-NUMBERS}}}
+\label{search_8module_af45ac30323578ac282a5fc1927d96305}
+Matches all 'N' Unicode character classes (numbers) \hypertarget{search_8module_ad6f3e596c60aa0865b379d88905a6ed5}{
+\index{search.module@{search.module}!PREG\_\-CLASS\_\-PUNCTUATION@{PREG\_\-CLASS\_\-PUNCTUATION}}
+\index{PREG\_\-CLASS\_\-PUNCTUATION@{PREG\_\-CLASS\_\-PUNCTUATION}!search.module@{search.module}}
+\subsubsection[{PREG\_\-CLASS\_\-PUNCTUATION}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PREG\_\-CLASS\_\-PUNCTUATION}}}
+\label{search_8module_ad6f3e596c60aa0865b379d88905a6ed5}
+Matches all 'P' Unicode character classes (punctuation) 
+
+\subsection{Function Documentation}
+\hypertarget{search_8module_abc952f2f6920f7647e15e1bde8330414}{
+\index{search.module@{search.module}!\_\-search\_\-excerpt\_\-match\_\-filter@{\_\-search\_\-excerpt\_\-match\_\-filter}}
+\index{\_\-search\_\-excerpt\_\-match\_\-filter@{\_\-search\_\-excerpt\_\-match\_\-filter}!search.module@{search.module}}
+\subsubsection[{\_\-search\_\-excerpt\_\-match\_\-filter}]{\setlength{\rightskip}{0pt plus 5cm}\_\-search\_\-excerpt\_\-match\_\-filter (\$ {\em var})}}
+\label{search_8module_abc952f2f6920f7647e15e1bde8330414}
+Helper function for array\_\-filter() in search\_\-search\_\-excerpt\_\-match(). \hypertarget{search_8module_a7aff627bdbf0ad6208ded5e75e53f67f}{
+\index{search.module@{search.module}!\_\-search\_\-excerpt\_\-replace@{\_\-search\_\-excerpt\_\-replace}}
+\index{\_\-search\_\-excerpt\_\-replace@{\_\-search\_\-excerpt\_\-replace}!search.module@{search.module}}
+\subsubsection[{\_\-search\_\-excerpt\_\-replace}]{\setlength{\rightskip}{0pt plus 5cm}\_\-search\_\-excerpt\_\-replace (\&\$ {\em text})}}
+\label{search_8module_a7aff627bdbf0ad6208ded5e75e53f67f}
+End of \char`\"{}defgroup search\char`\"{}. Helper function for array\_\-walk() in \hyperlink{group__search_gaa77622185b2d7ea771cf590d76ab3ba4}{search\_\-excerpt()}. \hypertarget{search_8module_a8cad6e5cadb04b33e53bd4872b8f37b4}{
+\index{search.module@{search.module}!\_\-search\_\-index\_\-truncate@{\_\-search\_\-index\_\-truncate}}
+\index{\_\-search\_\-index\_\-truncate@{\_\-search\_\-index\_\-truncate}!search.module@{search.module}}
+\subsubsection[{\_\-search\_\-index\_\-truncate}]{\setlength{\rightskip}{0pt plus 5cm}\_\-search\_\-index\_\-truncate (\&\$ {\em text})}}
+\label{search_8module_a8cad6e5cadb04b33e53bd4872b8f37b4}
+Helper function for array\_\-walk in search\_\-index\_\-split. \hypertarget{search_8module_ad23d575da2f572416a56555fe51fc565}{
+\index{search.module@{search.module}!\_\-search\_\-menu\_\-access@{\_\-search\_\-menu\_\-access}}
+\index{\_\-search\_\-menu\_\-access@{\_\-search\_\-menu\_\-access}!search.module@{search.module}}
+\subsubsection[{\_\-search\_\-menu\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}\_\-search\_\-menu\_\-access (\$ {\em name})}}
+\label{search_8module_ad23d575da2f572416a56555fe51fc565}
+Access callback for search tabs. \hypertarget{search_8module_a2f13d2fc1d549a040d7bdbda511710a0}{
+\index{search.module@{search.module}!search\_\-block\_\-info@{search\_\-block\_\-info}}
+\index{search\_\-block\_\-info@{search\_\-block\_\-info}!search.module@{search.module}}
+\subsubsection[{search\_\-block\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-block\_\-info ()}}
+\label{search_8module_a2f13d2fc1d549a040d7bdbda511710a0}
+Implements \hyperlink{group__hooks_ga2bd926c3e90deeba0c3ba64fb3c64d73}{hook\_\-block\_\-info()}. \hypertarget{search_8module_a04d7ad10e5af7a7053b386f9b5e70304}{
+\index{search.module@{search.module}!search\_\-block\_\-view@{search\_\-block\_\-view}}
+\index{search\_\-block\_\-view@{search\_\-block\_\-view}!search.module@{search.module}}
+\subsubsection[{search\_\-block\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-block\_\-view (\$ {\em delta} = {\ttfamily ''})}}
+\label{search_8module_a04d7ad10e5af7a7053b386f9b5e70304}
+Implements \hyperlink{group__hooks_gaa14092a3e74cdc57aa295100cfd6860d}{hook\_\-block\_\-view()}. \hypertarget{search_8module_aafce819db105850b1570206f6dde2797}{
+\index{search.module@{search.module}!search\_\-comment\_\-delete@{search\_\-comment\_\-delete}}
+\index{search\_\-comment\_\-delete@{search\_\-comment\_\-delete}!search.module@{search.module}}
+\subsubsection[{search\_\-comment\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-comment\_\-delete (\$ {\em comment})}}
+\label{search_8module_aafce819db105850b1570206f6dde2797}
+Implements \hyperlink{group__hooks_gab8d94c5665313a2d174628cc219f0395}{hook\_\-comment\_\-delete()}. \hypertarget{search_8module_ade210f9ad2bba0665dfa46416c4b5377}{
+\index{search.module@{search.module}!search\_\-comment\_\-insert@{search\_\-comment\_\-insert}}
+\index{search\_\-comment\_\-insert@{search\_\-comment\_\-insert}!search.module@{search.module}}
+\subsubsection[{search\_\-comment\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-comment\_\-insert (\$ {\em comment})}}
+\label{search_8module_ade210f9ad2bba0665dfa46416c4b5377}
+Implements \hyperlink{group__hooks_ga3f972e92f09b1c9e8797fc9037e8c75d}{hook\_\-comment\_\-insert()}. \hypertarget{search_8module_a33789acc1f4a944bf59f439e50eda30c}{
+\index{search.module@{search.module}!search\_\-comment\_\-publish@{search\_\-comment\_\-publish}}
+\index{search\_\-comment\_\-publish@{search\_\-comment\_\-publish}!search.module@{search.module}}
+\subsubsection[{search\_\-comment\_\-publish}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-comment\_\-publish (\$ {\em comment})}}
+\label{search_8module_a33789acc1f4a944bf59f439e50eda30c}
+Implements \hyperlink{group__hooks_ga4c4be9019e5cc7f92e8ccc03b595a64b}{hook\_\-comment\_\-publish()}. \hypertarget{search_8module_a6f61fc78d6436593fffa74762fb281b1}{
+\index{search.module@{search.module}!search\_\-comment\_\-unpublish@{search\_\-comment\_\-unpublish}}
+\index{search\_\-comment\_\-unpublish@{search\_\-comment\_\-unpublish}!search.module@{search.module}}
+\subsubsection[{search\_\-comment\_\-unpublish}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-comment\_\-unpublish (\$ {\em comment})}}
+\label{search_8module_a6f61fc78d6436593fffa74762fb281b1}
+Implements \hyperlink{group__hooks_gaed97e1a1eaedd7b482f881ea2b8a3876}{hook\_\-comment\_\-unpublish()}. \hypertarget{search_8module_a7bafc7986e46077bb7a03f9a5eeb05b2}{
+\index{search.module@{search.module}!search\_\-comment\_\-update@{search\_\-comment\_\-update}}
+\index{search\_\-comment\_\-update@{search\_\-comment\_\-update}!search.module@{search.module}}
+\subsubsection[{search\_\-comment\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-comment\_\-update (\$ {\em comment})}}
+\label{search_8module_a7bafc7986e46077bb7a03f9a5eeb05b2}
+Implements \hyperlink{group__hooks_ga63e0b41e7dbaadbf352b0a9c246d5ae5}{hook\_\-comment\_\-update()}. \hypertarget{search_8module_a60454d8bc91689e5d91b1a8c4e02c412}{
+\index{search.module@{search.module}!search\_\-cron@{search\_\-cron}}
+\index{search\_\-cron@{search\_\-cron}!search.module@{search.module}}
+\subsubsection[{search\_\-cron}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-cron ()}}
+\label{search_8module_a60454d8bc91689e5d91b1a8c4e02c412}
+Implements \hyperlink{group__hooks_gaf07f1e3d98112fc2ba6920cf7ee6fb16}{hook\_\-cron()}.
+
+Fires \hyperlink{group__search_ga23d6f6642bd53c4f033f10e9c1b12d43}{hook\_\-update\_\-index()} in all modules and cleans up dirty words.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{search_8module_ab872d5ac0d09e2de39d856606092ed02}{search\_\-dirty()} 
+\end{DoxySeeAlso}
+\hypertarget{search_8module_ab872d5ac0d09e2de39d856606092ed02}{
+\index{search.module@{search.module}!search\_\-dirty@{search\_\-dirty}}
+\index{search\_\-dirty@{search\_\-dirty}!search.module@{search.module}}
+\subsubsection[{search\_\-dirty}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-dirty (\$ {\em word} = {\ttfamily NULL})}}
+\label{search_8module_ab872d5ac0d09e2de39d856606092ed02}
+Marks a word as \char`\"{}dirty\char`\"{} (changed), or retrieves the list of dirty words.
+
+This is used during indexing (cron). Words that are dirty have outdated total counts in the search\_\-total table, and need to be recounted. \hypertarget{search_8module_a7088ffdfda833c7047b38f470a806a24}{
+\index{search.module@{search.module}!search\_\-expand\_\-cjk@{search\_\-expand\_\-cjk}}
+\index{search\_\-expand\_\-cjk@{search\_\-expand\_\-cjk}!search.module@{search.module}}
+\subsubsection[{search\_\-expand\_\-cjk}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-expand\_\-cjk (\$ {\em matches})}}
+\label{search_8module_a7088ffdfda833c7047b38f470a806a24}
+Splits CJK (Chinese, Japanese, Korean) text into tokens.
+
+The Search module matches exact words, where a word is defined to be a sequence of characters delimited by spaces or punctuation. CJK languages are written in long strings of characters, though, not split up into words. So in order to allow search matching, we split up CJK text into tokens consisting of consecutive, overlapping sequences of characters whose length is equal to the 'minimum\_\-word\_\-size' variable. This tokenizing is only done if the 'overlap\_\-cjk' variable is TRUE.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$matches}]This function is a callback for preg\_\-replace\_\-callback(), which is called from \hyperlink{search_8module_ac33f1e93d9bed7ebf9b4908287618beb}{search\_\-simplify()}. So, \$matches is an array of regular expression matches, which means that \$matches\mbox{[}0\mbox{]} contains the matched text -\/-\/ a string of CJK characters to tokenize.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tokenized text, starting and ending with a space character. 
+\end{DoxyReturn}
+\hypertarget{search_8module_a6d0e1560509bebe41ba4c6a2959ce59c}{
+\index{search.module@{search.module}!search\_\-expression\_\-extract@{search\_\-expression\_\-extract}}
+\index{search\_\-expression\_\-extract@{search\_\-expression\_\-extract}!search.module@{search.module}}
+\subsubsection[{search\_\-expression\_\-extract}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-expression\_\-extract (\$ {\em expression}, \/  \$ {\em option})}}
+\label{search_8module_a6d0e1560509bebe41ba4c6a2959ce59c}
+Extracts a module-\/specific search option from a search expression.
+
+Search options are added using \hyperlink{search_8module_a90b4fc5f716558dc1bf741c239fe1a0e}{search\_\-expression\_\-insert()}, and retrieved using \hyperlink{search_8module_a6d0e1560509bebe41ba4c6a2959ce59c}{search\_\-expression\_\-extract()}. They take the form option:value, and are added to the ordinary keywords in the search expression.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$expression}]The search expression to extract from. \item[{\em \$option}]The name of the option to retrieve from the search expression.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value previously stored in the search expression for option \$option, if any. Trailing spaces in values will not be included. 
+\end{DoxyReturn}
+\hypertarget{search_8module_a90b4fc5f716558dc1bf741c239fe1a0e}{
+\index{search.module@{search.module}!search\_\-expression\_\-insert@{search\_\-expression\_\-insert}}
+\index{search\_\-expression\_\-insert@{search\_\-expression\_\-insert}!search.module@{search.module}}
+\subsubsection[{search\_\-expression\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-expression\_\-insert (\$ {\em expression}, \/  \$ {\em option}, \/  \$ {\em value} = {\ttfamily NULL})}}
+\label{search_8module_a90b4fc5f716558dc1bf741c239fe1a0e}
+Adds a module-\/specific search option to a search expression.
+
+Search options are added using \hyperlink{search_8module_a90b4fc5f716558dc1bf741c239fe1a0e}{search\_\-expression\_\-insert()}, and retrieved using \hyperlink{search_8module_a6d0e1560509bebe41ba4c6a2959ce59c}{search\_\-expression\_\-extract()}. They take the form option:value, and are added to the ordinary keywords in the search expression.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$expression}]The search expression to add to. \item[{\em \$option}]The name of the option to add to the search expression. \item[{\em \$value}]The value to add for the option. If present, it will replace any previous value added for the option. Cannot contain any spaces or $|$ characters, as these are used as delimiters. If you want to add a blank value \$option: to the search expression, pass in an empty string or a string that is composed of only spaces. To clear a previously-\/stored option without adding a replacement, pass in NULL for \$value or omit.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$expression, with any previous value for this option removed, and a new \$option:\$value pair added if \$value was provided. 
+\end{DoxyReturn}
+\hypertarget{search_8module_a3396c4111908648bd2d0ddff911449fa}{
+\index{search.module@{search.module}!search\_\-forms@{search\_\-forms}}
+\index{search\_\-forms@{search\_\-forms}!search.module@{search.module}}
+\subsubsection[{search\_\-forms}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-forms ()}}
+\label{search_8module_a3396c4111908648bd2d0ddff911449fa}
+Implements \hyperlink{group__hooks_gaa764fee74b85797f75c0c923cad628d5}{hook\_\-forms()}. \hypertarget{search_8module_abb3b45a6704ffdb16799bdd5e69a39ef}{
+\index{search.module@{search.module}!search\_\-get\_\-default\_\-module\_\-info@{search\_\-get\_\-default\_\-module\_\-info}}
+\index{search\_\-get\_\-default\_\-module\_\-info@{search\_\-get\_\-default\_\-module\_\-info}!search.module@{search.module}}
+\subsubsection[{search\_\-get\_\-default\_\-module\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-get\_\-default\_\-module\_\-info ()}}
+\label{search_8module_abb3b45a6704ffdb16799bdd5e69a39ef}
+Returns information about the default search module.
+
+\begin{DoxyReturn}{Returns}
+The \hyperlink{search_8module_aa36af44ad9f887b93fdfcf33daa9cb1e}{search\_\-get\_\-info()} array element for the default search module, if any. 
+\end{DoxyReturn}
+\hypertarget{search_8module_aa36af44ad9f887b93fdfcf33daa9cb1e}{
+\index{search.module@{search.module}!search\_\-get\_\-info@{search\_\-get\_\-info}}
+\index{search\_\-get\_\-info@{search\_\-get\_\-info}!search.module@{search.module}}
+\subsubsection[{search\_\-get\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-get\_\-info (\$ {\em all} = {\ttfamily FALSE})}}
+\label{search_8module_aa36af44ad9f887b93fdfcf33daa9cb1e}
+Returns information about available search modules.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$all}]If TRUE, information about all enabled modules implementing \hyperlink{group__search_ga37b761616f2cad4796891008f2b374f3}{hook\_\-search\_\-info()} will be returned. If FALSE (default), only modules that have been set to active on the search settings page will be returned.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array of \hyperlink{group__search_ga37b761616f2cad4796891008f2b374f3}{hook\_\-search\_\-info()} return values, keyed by module name. The 'title' and 'path' array elements will be set to defaults for each module if not supplied by \hyperlink{group__search_ga37b761616f2cad4796891008f2b374f3}{hook\_\-search\_\-info()}, and an additional array element of 'module' will be added (set to the module name). 
+\end{DoxyReturn}
+\hypertarget{search_8module_aa8106bfd7c3a1254dcb89195ab219b5b}{
+\index{search.module@{search.module}!search\_\-help@{search\_\-help}}
+\index{search\_\-help@{search\_\-help}!search.module@{search.module}}
+\subsubsection[{search\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{search_8module_aa8106bfd7c3a1254dcb89195ab219b5b}
+Implements \hyperlink{group__hooks_ga5589c2714a782738e8851c4c90231f0e}{hook\_\-help()}. \hypertarget{search_8module_a5435e73f4dc935b243e2e08f34a57d1d}{
+\index{search.module@{search.module}!search\_\-index\_\-split@{search\_\-index\_\-split}}
+\index{search\_\-index\_\-split@{search\_\-index\_\-split}!search.module@{search.module}}
+\subsubsection[{search\_\-index\_\-split}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-index\_\-split (\$ {\em text})}}
+\label{search_8module_a5435e73f4dc935b243e2e08f34a57d1d}
+Simplifies and splits a string into tokens for indexing. \hypertarget{search_8module_ae0bcee62601fbc35d2651764a04e5591}{
+\index{search.module@{search.module}!search\_\-invoke\_\-preprocess@{search\_\-invoke\_\-preprocess}}
+\index{search\_\-invoke\_\-preprocess@{search\_\-invoke\_\-preprocess}!search.module@{search.module}}
+\subsubsection[{search\_\-invoke\_\-preprocess}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-invoke\_\-preprocess (\&\$ {\em text})}}
+\label{search_8module_ae0bcee62601fbc35d2651764a04e5591}
+Invokes \hyperlink{group__search_ga3c935c295da9103bc7184f6ec869c533}{hook\_\-search\_\-preprocess()} in modules. \hypertarget{search_8module_ade9a3743480b1b0ea05d80f54b466442}{
+\index{search.module@{search.module}!search\_\-is\_\-active@{search\_\-is\_\-active}}
+\index{search\_\-is\_\-active@{search\_\-is\_\-active}!search.module@{search.module}}
+\subsubsection[{search\_\-is\_\-active}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-is\_\-active ()}}
+\label{search_8module_ade9a3743480b1b0ea05d80f54b466442}
+Determines access for the ?q=search path. \hypertarget{search_8module_ac0cbdaa688ee15c024867c96b54a4036}{
+\index{search.module@{search.module}!search\_\-menu@{search\_\-menu}}
+\index{search\_\-menu@{search\_\-menu}!search.module@{search.module}}
+\subsubsection[{search\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-menu ()}}
+\label{search_8module_ac0cbdaa688ee15c024867c96b54a4036}
+Implements \hyperlink{group__hooks_ga5c95244fea59b25666e409759e133ded}{hook\_\-menu()}. \hypertarget{search_8module_a1067f1570b24d9647ec628bd93762bdd}{
+\index{search.module@{search.module}!search\_\-node\_\-update@{search\_\-node\_\-update}}
+\index{search\_\-node\_\-update@{search\_\-node\_\-update}!search.module@{search.module}}
+\subsubsection[{search\_\-node\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-node\_\-update (\$ {\em node})}}
+\label{search_8module_a1067f1570b24d9647ec628bd93762bdd}
+Implements \hyperlink{group__node__api__hooks_gac66c767cc922fcbfdaf17252e5d87d9d}{hook\_\-node\_\-update()}. \hypertarget{search_8module_ad314916727aaf74780b647fa381c89f6}{
+\index{search.module@{search.module}!search\_\-node\_\-update\_\-index@{search\_\-node\_\-update\_\-index}}
+\index{search\_\-node\_\-update\_\-index@{search\_\-node\_\-update\_\-index}!search.module@{search.module}}
+\subsubsection[{search\_\-node\_\-update\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-node\_\-update\_\-index (\$ {\em node})}}
+\label{search_8module_ad314916727aaf74780b647fa381c89f6}
+Implements \hyperlink{group__node__api__hooks_gac8420f204c69a4dc641f4d809a870b05}{hook\_\-node\_\-update\_\-index()}. \hypertarget{search_8module_a56dd5c08835642b32744dfea3762a419}{
+\index{search.module@{search.module}!search\_\-permission@{search\_\-permission}}
+\index{search\_\-permission@{search\_\-permission}!search.module@{search.module}}
+\subsubsection[{search\_\-permission}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-permission ()}}
+\label{search_8module_a56dd5c08835642b32744dfea3762a419}
+Implements \hyperlink{group__hooks_ga2b22b45f4925f2478412477bae329713}{hook\_\-permission()}. \hypertarget{search_8module_a66509986c2ec235db1bf94f010d6675d}{
+\index{search.module@{search.module}!search\_\-reindex@{search\_\-reindex}}
+\index{search\_\-reindex@{search\_\-reindex}!search.module@{search.module}}
+\subsubsection[{search\_\-reindex}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-reindex (\$ {\em sid} = {\ttfamily NULL}, \/  \$ {\em module} = {\ttfamily NULL}, \/  \$ {\em reindex} = {\ttfamily FALSE})}}
+\label{search_8module_a66509986c2ec235db1bf94f010d6675d}
+Clears a part of or the entire search index.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$sid}](optional) The ID of the item to remove from the search index. If specified, \$module must also be given. Omit both \$sid and \$module to clear the entire search index. \item[{\em \$module}](optional) The machine-\/readable name of the module for the item to remove from the search index. \end{DoxyParams}
+\hypertarget{search_8module_ac33f1e93d9bed7ebf9b4908287618beb}{
+\index{search.module@{search.module}!search\_\-simplify@{search\_\-simplify}}
+\index{search\_\-simplify@{search\_\-simplify}!search.module@{search.module}}
+\subsubsection[{search\_\-simplify}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-simplify (\$ {\em text})}}
+\label{search_8module_ac33f1e93d9bed7ebf9b4908287618beb}
+Simplifies a string according to indexing rules.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$text}]Text to simplify.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Simplified text.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__search_ga3c935c295da9103bc7184f6ec869c533}{hook\_\-search\_\-preprocess()} 
+\end{DoxySeeAlso}
+\hypertarget{search_8module_a1224b2795f1334faa26bbb552f4f5856}{
+\index{search.module@{search.module}!search\_\-simplify\_\-excerpt\_\-match@{search\_\-simplify\_\-excerpt\_\-match}}
+\index{search\_\-simplify\_\-excerpt\_\-match@{search\_\-simplify\_\-excerpt\_\-match}!search.module@{search.module}}
+\subsubsection[{search\_\-simplify\_\-excerpt\_\-match}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-simplify\_\-excerpt\_\-match (\$ {\em key}, \/  \$ {\em text}, \/  \$ {\em offset}, \/  \$ {\em boundary})}}
+\label{search_8module_a1224b2795f1334faa26bbb552f4f5856}
+Find words in the original text that matched via \hyperlink{search_8module_ac33f1e93d9bed7ebf9b4908287618beb}{search\_\-simplify()}.
+
+This is called in \hyperlink{group__search_gaa77622185b2d7ea771cf590d76ab3ba4}{search\_\-excerpt()} if an exact match is not found in the text, so that we can find the derived form that matches.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$key}]The keyword to find. \item[{\em \$text}]The text to search for the keyword. \item[{\em \$offset}]Offset position in \$text to start searching at. \item[{\em \$boundary}]Text to include in a regular expression that will match a word boundary.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+FALSE if no match is found. If a match is found, return an associative array with element 'where' giving the position of the match, and element 'keyword' giving the actual word found in the text at that position. 
+\end{DoxyReturn}
+\hypertarget{search_8module_a8522ae1e4902ce2907b7515e340b711e}{
+\index{search.module@{search.module}!search\_\-theme@{search\_\-theme}}
+\index{search\_\-theme@{search\_\-theme}!search.module@{search.module}}
+\subsubsection[{search\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-theme ()}}
+\label{search_8module_a8522ae1e4902ce2907b7515e340b711e}
+Implements \hyperlink{group__hooks_ga013ccb45c7aaab1c16cf9691428c910d}{hook\_\-theme()}. \hypertarget{search_8module_a7f33ab55bf14157d58997bbe149e515d}{
+\index{search.module@{search.module}!search\_\-touch\_\-node@{search\_\-touch\_\-node}}
+\index{search\_\-touch\_\-node@{search\_\-touch\_\-node}!search.module@{search.module}}
+\subsubsection[{search\_\-touch\_\-node}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-touch\_\-node (\$ {\em nid})}}
+\label{search_8module_a7f33ab55bf14157d58997bbe149e515d}
+Changes a node's changed timestamp to 'now' to force reindexing.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$nid}]The node ID of the node that needs reindexing. \end{DoxyParams}
+\hypertarget{search_8module_a60e12125cc5e7713d2e73ad944b3ac24}{
+\index{search.module@{search.module}!search\_\-update\_\-totals@{search\_\-update\_\-totals}}
+\index{search\_\-update\_\-totals@{search\_\-update\_\-totals}!search.module@{search.module}}
+\subsubsection[{search\_\-update\_\-totals}]{\setlength{\rightskip}{0pt plus 5cm}search\_\-update\_\-totals ()}}
+\label{search_8module_a60e12125cc5e7713d2e73ad944b3ac24}
+Updates the \{search\_\-total\} database table.
+
+This function is called on shutdown to ensure that \{search\_\-total\} is always up to date (even if cron times out or otherwise fails). 

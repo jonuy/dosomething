@@ -1,0 +1,228 @@
+\hypertarget{file__test_8module}{
+\section{html/modules/simpletest/tests/file\_\-test.module File Reference}
+\label{file__test_8module}\index{html/modules/simpletest/tests/file\_\-test.module@{html/modules/simpletest/tests/file\_\-test.module}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDrupalDummyStreamWrapper}{DrupalDummyStreamWrapper}
+\item 
+class \hyperlink{classDrupalDummyRemoteStreamWrapper}{DrupalDummyRemoteStreamWrapper}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries FILE\_\-URL\_\-TEST\_\-CDN\_\-1} 
+\item 
+enum {\bfseries FILE\_\-URL\_\-TEST\_\-CDN\_\-2} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{file__test_8module_ad70b9163a9b65cb4aecdd0e82a964925}{file\_\-test\_\-menu} ()
+\item 
+\hyperlink{file__test_8module_a76102017424892a480ae784238ca1c6d}{file\_\-test\_\-stream\_\-wrappers} ()
+\item 
+\hyperlink{file__test_8module_a655f98b0e48e5f05b6bd0d7171bd7388}{\_\-file\_\-test\_\-form} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{file__test_8module_a9b7757f4f5643b488de8a846328c991d}{\_\-file\_\-test\_\-form\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{file__test_8module_ac3231cdae85b5f6631a201a2f56e9d84}{file\_\-test\_\-reset} ()
+\item 
+\hyperlink{file__test_8module_a43842b551a9a076a33290c02b9c567b0}{file\_\-test\_\-get\_\-calls} (\$op)
+\item 
+\hyperlink{file__test_8module_a0905605238cea95f9ed131fcf0c7ed2e}{file\_\-test\_\-get\_\-all\_\-calls} ()
+\item 
+\hyperlink{file__test_8module_a102b88df111a0197411b9b651e0ef7d5}{\_\-file\_\-test\_\-log\_\-call} (\$op, \$args)
+\item 
+\hyperlink{file__test_8module_a7102eea8d64b4742d521968ca7653bdd}{\_\-file\_\-test\_\-get\_\-return} (\$op)
+\item 
+\hyperlink{file__test_8module_a5af89506d8703c84616e6595bc088a7f}{file\_\-test\_\-set\_\-return} (\$op, \$value)
+\item 
+\hyperlink{file__test_8module_a31927dacc1e6dd41f9e0bceba1beffe8}{file\_\-test\_\-file\_\-load} (\$files)
+\item 
+\hyperlink{file__test_8module_a19d202e5144e3c74153486c1e789e6c7}{file\_\-test\_\-file\_\-validate} (\$file)
+\item 
+\hyperlink{file__test_8module_a4692e5cdf927263bb8957f7f23218114}{file\_\-test\_\-file\_\-download} (\$uri)
+\item 
+\hyperlink{file__test_8module_a59a51b53083d4fd3a629c35e18cea73b}{file\_\-test\_\-file\_\-insert} (\$file)
+\item 
+\hyperlink{file__test_8module_aec3d536bef294fb196d59259eee975b3}{file\_\-test\_\-file\_\-update} (\$file)
+\item 
+\hyperlink{file__test_8module_af7f578a32030bdda21981e4453c1f6a2}{file\_\-test\_\-file\_\-copy} (\$file, \$source)
+\item 
+\hyperlink{file__test_8module_ada5a3deac30182fc0536a3834347be02}{file\_\-test\_\-file\_\-move} (\$file, \$source)
+\item 
+\hyperlink{file__test_8module_a26c064534c5098f4d1956918a8f370fb}{file\_\-test\_\-file\_\-delete} (\$file)
+\item 
+\hyperlink{file__test_8module_a10ba220fc77db12e5ff62d90d7cccd95}{file\_\-test\_\-file\_\-url\_\-alter} (\&\$uri)
+\item 
+\hyperlink{file__test_8module_af6864b64bb65463d96cc4de823bdc694}{file\_\-test\_\-file\_\-mimetype\_\-mapping\_\-alter} (\&\$mapping)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper module for the file tests.
+
+The caller is must call \hyperlink{file__test_8module_ac3231cdae85b5f6631a201a2f56e9d84}{file\_\-test\_\-reset()} to initializing this module before calling \hyperlink{file__test_8module_a43842b551a9a076a33290c02b9c567b0}{file\_\-test\_\-get\_\-calls()} or \hyperlink{file__test_8module_a5af89506d8703c84616e6595bc088a7f}{file\_\-test\_\-set\_\-return()}. 
+
+\subsection{Function Documentation}
+\hypertarget{file__test_8module_a655f98b0e48e5f05b6bd0d7171bd7388}{
+\index{file\_\-test.module@{file\_\-test.module}!\_\-file\_\-test\_\-form@{\_\-file\_\-test\_\-form}}
+\index{\_\-file\_\-test\_\-form@{\_\-file\_\-test\_\-form}!file_test.module@{file\_\-test.module}}
+\subsubsection[{\_\-file\_\-test\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}\_\-file\_\-test\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{file__test_8module_a655f98b0e48e5f05b6bd0d7171bd7388}
+Form to test file uploads. \hypertarget{file__test_8module_a9b7757f4f5643b488de8a846328c991d}{
+\index{file\_\-test.module@{file\_\-test.module}!\_\-file\_\-test\_\-form\_\-submit@{\_\-file\_\-test\_\-form\_\-submit}}
+\index{\_\-file\_\-test\_\-form\_\-submit@{\_\-file\_\-test\_\-form\_\-submit}!file_test.module@{file\_\-test.module}}
+\subsubsection[{\_\-file\_\-test\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}\_\-file\_\-test\_\-form\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{file__test_8module_a9b7757f4f5643b488de8a846328c991d}
+Process the upload. \hypertarget{file__test_8module_a7102eea8d64b4742d521968ca7653bdd}{
+\index{file\_\-test.module@{file\_\-test.module}!\_\-file\_\-test\_\-get\_\-return@{\_\-file\_\-test\_\-get\_\-return}}
+\index{\_\-file\_\-test\_\-get\_\-return@{\_\-file\_\-test\_\-get\_\-return}!file_test.module@{file\_\-test.module}}
+\subsubsection[{\_\-file\_\-test\_\-get\_\-return}]{\setlength{\rightskip}{0pt plus 5cm}\_\-file\_\-test\_\-get\_\-return (\$ {\em op})}}
+\label{file__test_8module_a7102eea8d64b4742d521968ca7653bdd}
+Load the appropriate return value.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$op}]One of the hook\_\-file\_\-\mbox{[}validate,download\mbox{]} operations.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value set by \hyperlink{file__test_8module_a5af89506d8703c84616e6595bc088a7f}{file\_\-test\_\-set\_\-return()}.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{file__test_8module_a5af89506d8703c84616e6595bc088a7f}{file\_\-test\_\-set\_\-return()} 
+
+\hyperlink{file__test_8module_ac3231cdae85b5f6631a201a2f56e9d84}{file\_\-test\_\-reset()} 
+\end{DoxySeeAlso}
+\hypertarget{file__test_8module_a102b88df111a0197411b9b651e0ef7d5}{
+\index{file\_\-test.module@{file\_\-test.module}!\_\-file\_\-test\_\-log\_\-call@{\_\-file\_\-test\_\-log\_\-call}}
+\index{\_\-file\_\-test\_\-log\_\-call@{\_\-file\_\-test\_\-log\_\-call}!file_test.module@{file\_\-test.module}}
+\subsubsection[{\_\-file\_\-test\_\-log\_\-call}]{\setlength{\rightskip}{0pt plus 5cm}\_\-file\_\-test\_\-log\_\-call (\$ {\em op}, \/  \$ {\em args})}}
+\label{file__test_8module_a102b88df111a0197411b9b651e0ef7d5}
+Store the values passed to a hook invocation.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$op}]One of the hook\_\-file\_\-$\ast$ operations: 'load', 'validate', 'download', 'insert', 'update', 'copy', 'move', 'delete'. \item[{\em \$args}]Values passed to hook.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{file__test_8module_a43842b551a9a076a33290c02b9c567b0}{file\_\-test\_\-get\_\-calls()} 
+
+\hyperlink{file__test_8module_ac3231cdae85b5f6631a201a2f56e9d84}{file\_\-test\_\-reset()} 
+\end{DoxySeeAlso}
+\hypertarget{file__test_8module_af7f578a32030bdda21981e4453c1f6a2}{
+\index{file\_\-test.module@{file\_\-test.module}!file\_\-test\_\-file\_\-copy@{file\_\-test\_\-file\_\-copy}}
+\index{file\_\-test\_\-file\_\-copy@{file\_\-test\_\-file\_\-copy}!file_test.module@{file\_\-test.module}}
+\subsubsection[{file\_\-test\_\-file\_\-copy}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-test\_\-file\_\-copy (\$ {\em file}, \/  \$ {\em source})}}
+\label{file__test_8module_af7f578a32030bdda21981e4453c1f6a2}
+Implements \hyperlink{group__hooks_ga49e2e5f9993e98da69c3434999242711}{hook\_\-file\_\-copy()}. \hypertarget{file__test_8module_a26c064534c5098f4d1956918a8f370fb}{
+\index{file\_\-test.module@{file\_\-test.module}!file\_\-test\_\-file\_\-delete@{file\_\-test\_\-file\_\-delete}}
+\index{file\_\-test\_\-file\_\-delete@{file\_\-test\_\-file\_\-delete}!file_test.module@{file\_\-test.module}}
+\subsubsection[{file\_\-test\_\-file\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-test\_\-file\_\-delete (\$ {\em file})}}
+\label{file__test_8module_a26c064534c5098f4d1956918a8f370fb}
+Implements \hyperlink{group__hooks_gafa88683ad014451b3fbc9ca9bb80afdd}{hook\_\-file\_\-delete()}. \hypertarget{file__test_8module_a4692e5cdf927263bb8957f7f23218114}{
+\index{file\_\-test.module@{file\_\-test.module}!file\_\-test\_\-file\_\-download@{file\_\-test\_\-file\_\-download}}
+\index{file\_\-test\_\-file\_\-download@{file\_\-test\_\-file\_\-download}!file_test.module@{file\_\-test.module}}
+\subsubsection[{file\_\-test\_\-file\_\-download}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-test\_\-file\_\-download (\$ {\em uri})}}
+\label{file__test_8module_a4692e5cdf927263bb8957f7f23218114}
+Implements \hyperlink{group__hooks_gab73f0e658d6630220ba7836ccd011ecc}{hook\_\-file\_\-download()}. \hypertarget{file__test_8module_a59a51b53083d4fd3a629c35e18cea73b}{
+\index{file\_\-test.module@{file\_\-test.module}!file\_\-test\_\-file\_\-insert@{file\_\-test\_\-file\_\-insert}}
+\index{file\_\-test\_\-file\_\-insert@{file\_\-test\_\-file\_\-insert}!file_test.module@{file\_\-test.module}}
+\subsubsection[{file\_\-test\_\-file\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-test\_\-file\_\-insert (\$ {\em file})}}
+\label{file__test_8module_a59a51b53083d4fd3a629c35e18cea73b}
+Implements \hyperlink{group__hooks_gac40fa27583fc4cba927f486098eaa79b}{hook\_\-file\_\-insert()}. \hypertarget{file__test_8module_a31927dacc1e6dd41f9e0bceba1beffe8}{
+\index{file\_\-test.module@{file\_\-test.module}!file\_\-test\_\-file\_\-load@{file\_\-test\_\-file\_\-load}}
+\index{file\_\-test\_\-file\_\-load@{file\_\-test\_\-file\_\-load}!file_test.module@{file\_\-test.module}}
+\subsubsection[{file\_\-test\_\-file\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-test\_\-file\_\-load (\$ {\em files})}}
+\label{file__test_8module_a31927dacc1e6dd41f9e0bceba1beffe8}
+Implements \hyperlink{group__hooks_ga9f6bf6919600b83a565421f6a7faf678}{hook\_\-file\_\-load()}. \hypertarget{file__test_8module_af6864b64bb65463d96cc4de823bdc694}{
+\index{file\_\-test.module@{file\_\-test.module}!file\_\-test\_\-file\_\-mimetype\_\-mapping\_\-alter@{file\_\-test\_\-file\_\-mimetype\_\-mapping\_\-alter}}
+\index{file\_\-test\_\-file\_\-mimetype\_\-mapping\_\-alter@{file\_\-test\_\-file\_\-mimetype\_\-mapping\_\-alter}!file_test.module@{file\_\-test.module}}
+\subsubsection[{file\_\-test\_\-file\_\-mimetype\_\-mapping\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-test\_\-file\_\-mimetype\_\-mapping\_\-alter (\&\$ {\em mapping})}}
+\label{file__test_8module_af6864b64bb65463d96cc4de823bdc694}
+Implements \hyperlink{group__hooks_gaac5bb0122941c0b10df08d65ec358e99}{hook\_\-file\_\-mimetype\_\-mapping\_\-alter()}. \hypertarget{file__test_8module_ada5a3deac30182fc0536a3834347be02}{
+\index{file\_\-test.module@{file\_\-test.module}!file\_\-test\_\-file\_\-move@{file\_\-test\_\-file\_\-move}}
+\index{file\_\-test\_\-file\_\-move@{file\_\-test\_\-file\_\-move}!file_test.module@{file\_\-test.module}}
+\subsubsection[{file\_\-test\_\-file\_\-move}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-test\_\-file\_\-move (\$ {\em file}, \/  \$ {\em source})}}
+\label{file__test_8module_ada5a3deac30182fc0536a3834347be02}
+Implements \hyperlink{group__hooks_ga7053514a7a923b43960b31cacfa9ce95}{hook\_\-file\_\-move()}. \hypertarget{file__test_8module_aec3d536bef294fb196d59259eee975b3}{
+\index{file\_\-test.module@{file\_\-test.module}!file\_\-test\_\-file\_\-update@{file\_\-test\_\-file\_\-update}}
+\index{file\_\-test\_\-file\_\-update@{file\_\-test\_\-file\_\-update}!file_test.module@{file\_\-test.module}}
+\subsubsection[{file\_\-test\_\-file\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-test\_\-file\_\-update (\$ {\em file})}}
+\label{file__test_8module_aec3d536bef294fb196d59259eee975b3}
+Implements \hyperlink{group__hooks_ga604abda1f5df3f041f7ef748b9762475}{hook\_\-file\_\-update()}. \hypertarget{file__test_8module_a10ba220fc77db12e5ff62d90d7cccd95}{
+\index{file\_\-test.module@{file\_\-test.module}!file\_\-test\_\-file\_\-url\_\-alter@{file\_\-test\_\-file\_\-url\_\-alter}}
+\index{file\_\-test\_\-file\_\-url\_\-alter@{file\_\-test\_\-file\_\-url\_\-alter}!file_test.module@{file\_\-test.module}}
+\subsubsection[{file\_\-test\_\-file\_\-url\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-test\_\-file\_\-url\_\-alter (\&\$ {\em uri})}}
+\label{file__test_8module_a10ba220fc77db12e5ff62d90d7cccd95}
+Implements \hyperlink{group__hooks_ga996bb014bd4944c0e468c1525768a96c}{hook\_\-file\_\-url\_\-alter()}. \hypertarget{file__test_8module_a19d202e5144e3c74153486c1e789e6c7}{
+\index{file\_\-test.module@{file\_\-test.module}!file\_\-test\_\-file\_\-validate@{file\_\-test\_\-file\_\-validate}}
+\index{file\_\-test\_\-file\_\-validate@{file\_\-test\_\-file\_\-validate}!file_test.module@{file\_\-test.module}}
+\subsubsection[{file\_\-test\_\-file\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-test\_\-file\_\-validate (\$ {\em file})}}
+\label{file__test_8module_a19d202e5144e3c74153486c1e789e6c7}
+Implements \hyperlink{group__hooks_gab1491b52a117229913448d787156e013}{hook\_\-file\_\-validate()}. \hypertarget{file__test_8module_a0905605238cea95f9ed131fcf0c7ed2e}{
+\index{file\_\-test.module@{file\_\-test.module}!file\_\-test\_\-get\_\-all\_\-calls@{file\_\-test\_\-get\_\-all\_\-calls}}
+\index{file\_\-test\_\-get\_\-all\_\-calls@{file\_\-test\_\-get\_\-all\_\-calls}!file_test.module@{file\_\-test.module}}
+\subsubsection[{file\_\-test\_\-get\_\-all\_\-calls}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-test\_\-get\_\-all\_\-calls ()}}
+\label{file__test_8module_a0905605238cea95f9ed131fcf0c7ed2e}
+Get an array with the calls for all hooks.
+
+\begin{DoxyReturn}{Returns}
+An array keyed by hook name ('load', 'validate', 'download', 'insert', 'update', 'copy', 'move', 'delete') with values being arrays of parameters passed to each call. 
+\end{DoxyReturn}
+\hypertarget{file__test_8module_a43842b551a9a076a33290c02b9c567b0}{
+\index{file\_\-test.module@{file\_\-test.module}!file\_\-test\_\-get\_\-calls@{file\_\-test\_\-get\_\-calls}}
+\index{file\_\-test\_\-get\_\-calls@{file\_\-test\_\-get\_\-calls}!file_test.module@{file\_\-test.module}}
+\subsubsection[{file\_\-test\_\-get\_\-calls}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-test\_\-get\_\-calls (\$ {\em op})}}
+\label{file__test_8module_a43842b551a9a076a33290c02b9c567b0}
+Get the arguments passed to invocation of a given hook since \hyperlink{file__test_8module_ac3231cdae85b5f6631a201a2f56e9d84}{file\_\-test\_\-reset()} was last called.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$op}]One of the hook\_\-file\_\-$\ast$ operations: 'load', 'validate', 'download', 'insert', 'update', 'copy', 'move', 'delete'.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array of the parameters passed to each call.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{file__test_8module_a102b88df111a0197411b9b651e0ef7d5}{\_\-file\_\-test\_\-log\_\-call()} 
+
+\hyperlink{file__test_8module_ac3231cdae85b5f6631a201a2f56e9d84}{file\_\-test\_\-reset()} 
+\end{DoxySeeAlso}
+\hypertarget{file__test_8module_ad70b9163a9b65cb4aecdd0e82a964925}{
+\index{file\_\-test.module@{file\_\-test.module}!file\_\-test\_\-menu@{file\_\-test\_\-menu}}
+\index{file\_\-test\_\-menu@{file\_\-test\_\-menu}!file_test.module@{file\_\-test.module}}
+\subsubsection[{file\_\-test\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-test\_\-menu ()}}
+\label{file__test_8module_ad70b9163a9b65cb4aecdd0e82a964925}
+Implements \hyperlink{group__hooks_ga5c95244fea59b25666e409759e133ded}{hook\_\-menu()}. \hypertarget{file__test_8module_ac3231cdae85b5f6631a201a2f56e9d84}{
+\index{file\_\-test.module@{file\_\-test.module}!file\_\-test\_\-reset@{file\_\-test\_\-reset}}
+\index{file\_\-test\_\-reset@{file\_\-test\_\-reset}!file_test.module@{file\_\-test.module}}
+\subsubsection[{file\_\-test\_\-reset}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-test\_\-reset ()}}
+\label{file__test_8module_ac3231cdae85b5f6631a201a2f56e9d84}
+Reset/initialize the history of calls to the file\_\-$\ast$ hooks.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{file__test_8module_a43842b551a9a076a33290c02b9c567b0}{file\_\-test\_\-get\_\-calls()} 
+
+\hyperlink{file__test_8module_ac3231cdae85b5f6631a201a2f56e9d84}{file\_\-test\_\-reset()} 
+\end{DoxySeeAlso}
+\hypertarget{file__test_8module_a5af89506d8703c84616e6595bc088a7f}{
+\index{file\_\-test.module@{file\_\-test.module}!file\_\-test\_\-set\_\-return@{file\_\-test\_\-set\_\-return}}
+\index{file\_\-test\_\-set\_\-return@{file\_\-test\_\-set\_\-return}!file_test.module@{file\_\-test.module}}
+\subsubsection[{file\_\-test\_\-set\_\-return}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-test\_\-set\_\-return (\$ {\em op}, \/  \$ {\em value})}}
+\label{file__test_8module_a5af89506d8703c84616e6595bc088a7f}
+Assign a return value for a given operation.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$op}]One of the hook\_\-file\_\-\mbox{[}validate,download\mbox{]} operations. \item[{\em \$value}]Value for the hook to return.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{file__test_8module_a7102eea8d64b4742d521968ca7653bdd}{\_\-file\_\-test\_\-get\_\-return()} 
+
+\hyperlink{file__test_8module_ac3231cdae85b5f6631a201a2f56e9d84}{file\_\-test\_\-reset()} 
+\end{DoxySeeAlso}
+\hypertarget{file__test_8module_a76102017424892a480ae784238ca1c6d}{
+\index{file\_\-test.module@{file\_\-test.module}!file\_\-test\_\-stream\_\-wrappers@{file\_\-test\_\-stream\_\-wrappers}}
+\index{file\_\-test\_\-stream\_\-wrappers@{file\_\-test\_\-stream\_\-wrappers}!file_test.module@{file\_\-test.module}}
+\subsubsection[{file\_\-test\_\-stream\_\-wrappers}]{\setlength{\rightskip}{0pt plus 5cm}file\_\-test\_\-stream\_\-wrappers ()}}
+\label{file__test_8module_a76102017424892a480ae784238ca1c6d}
+Implements \hyperlink{group__hooks_ga6fadcf625a4766e7f0d97b1628b294dc}{hook\_\-stream\_\-wrappers()}. 

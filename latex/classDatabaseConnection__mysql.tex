@@ -1,0 +1,152 @@
+\hypertarget{classDatabaseConnection__mysql}{
+\section{DatabaseConnection\_\-mysql Class Reference}
+\label{classDatabaseConnection__mysql}\index{DatabaseConnection\_\-mysql@{DatabaseConnection\_\-mysql}}
+}
+Inheritance diagram for DatabaseConnection\_\-mysql::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classDatabaseConnection__mysql}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDatabaseConnection__mysql_afae51ae3fa57a905589607e88ef00576}{
+{\bfseries \_\-\_\-construct} (array \$connection\_\-options=array())}
+\label{classDatabaseConnection__mysql_afae51ae3fa57a905589607e88ef00576}
+
+\item 
+\hyperlink{classDatabaseConnection__mysql_a8fa3e83f5a5e85e85d2b06247a8d8a24}{queryRange} (\$query, \$from, \$count, array \$args=array(), array \$options=array())
+\item 
+\hyperlink{classDatabaseConnection__mysql_a928309f48ddbeeca25328fec33c4ab9e}{queryTemporary} (\$query, array \$args=array(), array \$options=array())
+\item 
+\hyperlink{classDatabaseConnection__mysql_a84daa0617157e0c291b081c7c648dc05}{driver} ()
+\item 
+\hyperlink{classDatabaseConnection__mysql_a983f8932fcaa5f3806c78e28841e7a5b}{databaseType} ()
+\item 
+\hyperlink{classDatabaseConnection__mysql_a8d36611a923f44b9dd5d1ed05ba84eb3}{mapConditionOperator} (\$operator)
+\item 
+\hyperlink{classDatabaseConnection__mysql_a89a5362c5a53f7e2a60e75076a4cba11}{nextId} (\$existing\_\-id=0)
+\item 
+\hypertarget{classDatabaseConnection__mysql_a59aa65d392fbd8ba63a455e43b5e94ac}{
+{\bfseries nextIdDelete} ()}
+\label{classDatabaseConnection__mysql_a59aa65d392fbd8ba63a455e43b5e94ac}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDatabaseConnection__mysql_ad63915bedc73d668f05295b8572a33c0}{popCommittableTransactions} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDatabaseConnection__mysql_a4725a9f792e8c0c5e544eb0d2cc346cc}{
+{\bfseries \$needsCleanup} = FALSE}
+\label{classDatabaseConnection__mysql_a4725a9f792e8c0c5e544eb0d2cc346cc}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDatabaseConnection__mysql_a983f8932fcaa5f3806c78e28841e7a5b}{
+\index{DatabaseConnection\_\-mysql@{DatabaseConnection\_\-mysql}!databaseType@{databaseType}}
+\index{databaseType@{databaseType}!DatabaseConnection_mysql@{DatabaseConnection\_\-mysql}}
+\subsubsection[{databaseType}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-mysql::databaseType ()}}
+\label{classDatabaseConnection__mysql_a983f8932fcaa5f3806c78e28841e7a5b}
+Returns the name of the PDO driver for this connection. 
+
+Reimplemented from \hyperlink{classDatabaseConnection_a7dd7e76bc813c6a90a6d26a5529d67b0}{DatabaseConnection}.\hypertarget{classDatabaseConnection__mysql_a84daa0617157e0c291b081c7c648dc05}{
+\index{DatabaseConnection\_\-mysql@{DatabaseConnection\_\-mysql}!driver@{driver}}
+\index{driver@{driver}!DatabaseConnection_mysql@{DatabaseConnection\_\-mysql}}
+\subsubsection[{driver}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-mysql::driver ()}}
+\label{classDatabaseConnection__mysql_a84daa0617157e0c291b081c7c648dc05}
+Returns the type of database driver.
+
+This is not necessarily the same as the type of the database itself. For instance, there could be two MySQL drivers, mysql and mysql\_\-mock. This function would return different values for each, but both would return \char`\"{}mysql\char`\"{} for \hyperlink{classDatabaseConnection__mysql_a983f8932fcaa5f3806c78e28841e7a5b}{databaseType()}. 
+
+Reimplemented from \hyperlink{classDatabaseConnection_a4a36a8d7352108c837c51a7172f966c3}{DatabaseConnection}.\hypertarget{classDatabaseConnection__mysql_a8d36611a923f44b9dd5d1ed05ba84eb3}{
+\index{DatabaseConnection\_\-mysql@{DatabaseConnection\_\-mysql}!mapConditionOperator@{mapConditionOperator}}
+\index{mapConditionOperator@{mapConditionOperator}!DatabaseConnection_mysql@{DatabaseConnection\_\-mysql}}
+\subsubsection[{mapConditionOperator}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-mysql::mapConditionOperator (\$ {\em operator})}}
+\label{classDatabaseConnection__mysql_a8d36611a923f44b9dd5d1ed05ba84eb3}
+Gets any special processing requirements for the condition operator.
+
+Some condition types require special processing, such as IN, because the value data they pass in is not a simple value. This is a simple overridable lookup function. \hyperlink{classDatabase}{Database} connections should define only those operators they wish to be handled differently than the default.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$operator}]The condition operator, such as \char`\"{}IN\char`\"{}, \char`\"{}BETWEEN\char`\"{}, etc. Case-\/sensitive.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The extra handling directives for the specified operator, or NULL.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classDatabaseCondition_a286df1af0dfaa7ab6b8b30ed4e96a830}{DatabaseCondition::compile()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{classDatabaseConnection_aef82436b30fa08a6c81c34e11f3b1717}{DatabaseConnection}.\hypertarget{classDatabaseConnection__mysql_a89a5362c5a53f7e2a60e75076a4cba11}{
+\index{DatabaseConnection\_\-mysql@{DatabaseConnection\_\-mysql}!nextId@{nextId}}
+\index{nextId@{nextId}!DatabaseConnection_mysql@{DatabaseConnection\_\-mysql}}
+\subsubsection[{nextId}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-mysql::nextId (\$ {\em existing\_\-id} = {\ttfamily 0})}}
+\label{classDatabaseConnection__mysql_a89a5362c5a53f7e2a60e75076a4cba11}
+Retrieves an unique id from a given sequence.
+
+Use this function if for some reason you can't use a serial field. For example, MySQL has no ways of reading of the current value of a sequence and PostgreSQL can not advance the sequence to be larger than a given value. Or sometimes you just need a unique integer.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$existing\_\-id}]After a database import, it might be that the sequences table is behind, so by passing in the maximum existing id, it can be assured that we never issue the same id.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer number larger than any number returned by earlier calls and also larger than the \$existing\_\-id if one was passed in. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseConnection_a173e333ef1b61541cf37125468a37231}{DatabaseConnection}.\hypertarget{classDatabaseConnection__mysql_ad63915bedc73d668f05295b8572a33c0}{
+\index{DatabaseConnection\_\-mysql@{DatabaseConnection\_\-mysql}!popCommittableTransactions@{popCommittableTransactions}}
+\index{popCommittableTransactions@{popCommittableTransactions}!DatabaseConnection_mysql@{DatabaseConnection\_\-mysql}}
+\subsubsection[{popCommittableTransactions}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-mysql::popCommittableTransactions ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDatabaseConnection__mysql_ad63915bedc73d668f05295b8572a33c0}
+Overridden to work around issues to MySQL not supporting transactional DDL. 
+
+Reimplemented from \hyperlink{classDatabaseConnection_ade8d68cea197dc7703042ab505ed940d}{DatabaseConnection}.\hypertarget{classDatabaseConnection__mysql_a8fa3e83f5a5e85e85d2b06247a8d8a24}{
+\index{DatabaseConnection\_\-mysql@{DatabaseConnection\_\-mysql}!queryRange@{queryRange}}
+\index{queryRange@{queryRange}!DatabaseConnection_mysql@{DatabaseConnection\_\-mysql}}
+\subsubsection[{queryRange}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-mysql::queryRange (\$ {\em query}, \/  \$ {\em from}, \/  \$ {\em count}, \/  array \$ {\em args} = {\ttfamily array()}, \/  array \$ {\em options} = {\ttfamily array()})}}
+\label{classDatabaseConnection__mysql_a8fa3e83f5a5e85e85d2b06247a8d8a24}
+Runs a limited-\/range query on this database object.
+
+Use this as a substitute for -\/$>$\hyperlink{classDatabaseConnection_aff564097281c4496e9d10cb1bccbe98d}{query()} when a subset of the query is to be returned. User-\/supplied arguments to the query should be passed in as separate parameters so that they can be properly escaped to avoid SQL injection attacks.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$query}]A string containing an SQL query. \item[{\em \$args}]An array of values to substitute into the query at placeholder markers. \item[{\em \$from}]The first result row to return. \item[{\em \$count}]The maximum number of result rows to return. \item[{\em \$options}]An array of options on the query.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{interfaceDatabaseStatementInterface}{DatabaseStatementInterface} A database query result resource, or NULL if the query was not executed correctly. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseConnection_a1c97c77517b969270bb92c5c7e022a5d}{DatabaseConnection}.\hypertarget{classDatabaseConnection__mysql_a928309f48ddbeeca25328fec33c4ab9e}{
+\index{DatabaseConnection\_\-mysql@{DatabaseConnection\_\-mysql}!queryTemporary@{queryTemporary}}
+\index{queryTemporary@{queryTemporary}!DatabaseConnection_mysql@{DatabaseConnection\_\-mysql}}
+\subsubsection[{queryTemporary}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-mysql::queryTemporary (\$ {\em query}, \/  array \$ {\em args} = {\ttfamily array()}, \/  array \$ {\em options} = {\ttfamily array()})}}
+\label{classDatabaseConnection__mysql_a928309f48ddbeeca25328fec33c4ab9e}
+Runs a SELECT query and stores its results in a temporary table.
+
+Use this as a substitute for -\/$>$\hyperlink{classDatabaseConnection_aff564097281c4496e9d10cb1bccbe98d}{query()} when the results need to stored in a temporary table. Temporary tables exist for the duration of the page request. User-\/supplied arguments to the query should be passed in as separate parameters so that they can be properly escaped to avoid SQL injection attacks.
+
+Note that if you need to know how many results were returned, you should do a SELECT COUNT($\ast$) on the temporary table afterwards.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$query}]A string containing a normal SELECT SQL query. \item[{\em \$args}]An array of values to substitute into the query at placeholder markers. \item[{\em \$options}]An associative array of options to control how the query is run. See the documentation for \hyperlink{classDatabaseConnection_a190539d6c494ef2d7ac90d21226de5a5}{DatabaseConnection::defaultOptions()} for details.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name of the temporary table. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseConnection_ae4d9ad286187f493172da04fca77ca8f}{DatabaseConnection}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/database/mysql/\hyperlink{mysql_2database_8inc}{database.inc}\end{DoxyCompactItemize}

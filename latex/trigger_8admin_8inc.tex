@@ -1,0 +1,71 @@
+\hypertarget{trigger_8admin_8inc}{
+\section{html/modules/trigger/trigger.admin.inc File Reference}
+\label{trigger_8admin_8inc}\index{html/modules/trigger/trigger.admin.inc@{html/modules/trigger/trigger.admin.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{trigger_8admin_8inc_a36d9aef026f4ce04b4d1df7e706d133c}{trigger\_\-assign} (\$module\_\-to\_\-display=NULL)
+\item 
+\hyperlink{group__forms_ga0ffa8d4daef7b89cd984be08c612856b}{trigger\_\-unassign} (\$form, \$form\_\-state, \$module, \$hook=NULL, \$aid=NULL)
+\item 
+\hyperlink{trigger_8admin_8inc_ae0e1a6cb2c032a6650a19c8d898896c0}{trigger\_\-unassign\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__forms_gab1bcec33dbc9ec1071f889662dfca03c}{trigger\_\-assign\_\-form} (\$form, \$form\_\-state, \$module, \$hook, \$label)
+\item 
+\hyperlink{trigger_8admin_8inc_ab8f232934437a99af0903a397c090934}{trigger\_\-assign\_\-form\_\-validate} (\$form, \$form\_\-state)
+\item 
+\hyperlink{trigger_8admin_8inc_adbb964aba3db9ae31067feff7af230ab}{trigger\_\-assign\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__themeable_gae3ba9f8ddcdcd9514c5988e072a9334c}{theme\_\-trigger\_\-display} (\$variables)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Admin page callbacks for the trigger module. 
+
+\subsection{Function Documentation}
+\hypertarget{trigger_8admin_8inc_a36d9aef026f4ce04b4d1df7e706d133c}{
+\index{trigger.admin.inc@{trigger.admin.inc}!trigger\_\-assign@{trigger\_\-assign}}
+\index{trigger\_\-assign@{trigger\_\-assign}!trigger.admin.inc@{trigger.admin.inc}}
+\subsubsection[{trigger\_\-assign}]{\setlength{\rightskip}{0pt plus 5cm}trigger\_\-assign (\$ {\em module\_\-to\_\-display} = {\ttfamily NULL})}}
+\label{trigger_8admin_8inc_a36d9aef026f4ce04b4d1df7e706d133c}
+Builds a form that allows users to assign actions to triggers.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$module\_\-to\_\-display}]Which tab of triggers to display. E.g., 'node' for all node-\/related triggers.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+HTML form.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{trigger_8module_a467708b4dec3a4e2c9eba80d0c94db3c}{trigger\_\-menu()} 
+\end{DoxySeeAlso}
+\hypertarget{trigger_8admin_8inc_adbb964aba3db9ae31067feff7af230ab}{
+\index{trigger.admin.inc@{trigger.admin.inc}!trigger\_\-assign\_\-form\_\-submit@{trigger\_\-assign\_\-form\_\-submit}}
+\index{trigger\_\-assign\_\-form\_\-submit@{trigger\_\-assign\_\-form\_\-submit}!trigger.admin.inc@{trigger.admin.inc}}
+\subsubsection[{trigger\_\-assign\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}trigger\_\-assign\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{trigger_8admin_8inc_adbb964aba3db9ae31067feff7af230ab}
+Form submission handler for \hyperlink{group__forms_gab1bcec33dbc9ec1071f889662dfca03c}{trigger\_\-assign\_\-form()}.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{trigger_8admin_8inc_ab8f232934437a99af0903a397c090934}{trigger\_\-assign\_\-form\_\-validate()} 
+\end{DoxySeeAlso}
+\hypertarget{trigger_8admin_8inc_ab8f232934437a99af0903a397c090934}{
+\index{trigger.admin.inc@{trigger.admin.inc}!trigger\_\-assign\_\-form\_\-validate@{trigger\_\-assign\_\-form\_\-validate}}
+\index{trigger\_\-assign\_\-form\_\-validate@{trigger\_\-assign\_\-form\_\-validate}!trigger.admin.inc@{trigger.admin.inc}}
+\subsubsection[{trigger\_\-assign\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}trigger\_\-assign\_\-form\_\-validate (\$ {\em form}, \/  \$ {\em form\_\-state})}}
+\label{trigger_8admin_8inc_ab8f232934437a99af0903a397c090934}
+Form validation handler for \hyperlink{group__forms_gab1bcec33dbc9ec1071f889662dfca03c}{trigger\_\-assign\_\-form()}.
+
+Makes sure that the user is not re-\/assigning an action to an event.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{trigger_8admin_8inc_adbb964aba3db9ae31067feff7af230ab}{trigger\_\-assign\_\-form\_\-submit()} 
+\end{DoxySeeAlso}
+\hypertarget{trigger_8admin_8inc_ae0e1a6cb2c032a6650a19c8d898896c0}{
+\index{trigger.admin.inc@{trigger.admin.inc}!trigger\_\-unassign\_\-submit@{trigger\_\-unassign\_\-submit}}
+\index{trigger\_\-unassign\_\-submit@{trigger\_\-unassign\_\-submit}!trigger.admin.inc@{trigger.admin.inc}}
+\subsubsection[{trigger\_\-unassign\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}trigger\_\-unassign\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{trigger_8admin_8inc_ae0e1a6cb2c032a6650a19c8d898896c0}
+Form submission handler for \hyperlink{group__forms_ga0ffa8d4daef7b89cd984be08c612856b}{trigger\_\-unassign()}. 

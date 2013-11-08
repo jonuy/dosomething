@@ -1,0 +1,180 @@
+\hypertarget{list_8module}{
+\section{html/modules/field/modules/list/list.module File Reference}
+\label{list_8module}\index{html/modules/field/modules/list/list.module@{html/modules/field/modules/list/list.module}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{list_8module_a46b480544753f929da4823a51ec5693e}{list\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{list_8module_a063622318fd99746c6ea7b806334d006}{list\_\-field\_\-info} ()
+\item 
+\hyperlink{list_8module_a17f5bcfffcb1264c027462c2d931f71e}{list\_\-field\_\-settings\_\-form} (\$field, \$instance, \$has\_\-data)
+\item 
+\hyperlink{list_8module_a87f1b0175d4b11b5d441e3b512749b58}{list\_\-allowed\_\-values\_\-setting\_\-validate} (\$element, \&\$form\_\-state)
+\item 
+\hyperlink{list_8module_add00f68e77cd0894cdb7d41fcbed95f0}{list\_\-boolean\_\-allowed\_\-values\_\-callback} (\$element, \$input, \$form\_\-state)
+\item 
+\hyperlink{list_8module_affec6e81ffd24248ec77ad48fb659e78}{list\_\-field\_\-update\_\-field} (\$field, \$prior\_\-field, \$has\_\-data)
+\item 
+\hyperlink{list_8module_a218d8f625fd18ca24e8cf7e3770bc576}{list\_\-allowed\_\-values} (\$field, \$instance=NULL, \$entity\_\-type=NULL, \$entity=NULL)
+\item 
+\hyperlink{list_8module_afcca93c49a8a373704672f52fae831a6}{list\_\-extract\_\-allowed\_\-values} (\$string, \$field\_\-type, \$generate\_\-keys)
+\item 
+\hyperlink{list_8module_a398a1526738a574db51cad98a20b5590}{list\_\-allowed\_\-values\_\-string} (\$values)
+\item 
+\hyperlink{list_8module_a358175e4b86e8774e0c60d827bbe8367}{list\_\-field\_\-update\_\-forbid} (\$field, \$prior\_\-field, \$has\_\-data)
+\item 
+\hyperlink{list_8module_a0b84a7d7dd9ccad6ee17784192eb5b9b}{\_\-list\_\-values\_\-in\_\-use} (\$field, \$values)
+\item 
+\hyperlink{list_8module_accbb5465b471c4b4e888dd703f34fc45}{list\_\-field\_\-validate} (\$entity\_\-type, \$entity, \$field, \$instance, \$langcode, \$items, \&\$errors)
+\item 
+\hyperlink{list_8module_a786db9c0c17b7e8be8f308ad9270deb6}{list\_\-field\_\-is\_\-empty} (\$item, \$field)
+\item 
+\hyperlink{list_8module_a083f26acdff7696710aefa11970801bd}{list\_\-field\_\-widget\_\-info\_\-alter} (\&\$info)
+\item 
+\hyperlink{list_8module_a3f9af78b260cdcf9c3a2f44df102e7e4}{list\_\-options\_\-list} (\$field, \$instance, \$entity\_\-type, \$entity)
+\item 
+\hyperlink{list_8module_a12250051f9751c4016a9e7fa0403223b}{list\_\-field\_\-formatter\_\-info} ()
+\item 
+\hyperlink{list_8module_a8747111b6404b34d812a851224ea2062}{list\_\-field\_\-formatter\_\-view} (\$entity\_\-type, \$entity, \$field, \$instance, \$langcode, \$items, \$display)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines list field types that can be used with the Options module. 
+
+\subsection{Function Documentation}
+\hypertarget{list_8module_a0b84a7d7dd9ccad6ee17784192eb5b9b}{
+\index{list.module@{list.module}!\_\-list\_\-values\_\-in\_\-use@{\_\-list\_\-values\_\-in\_\-use}}
+\index{\_\-list\_\-values\_\-in\_\-use@{\_\-list\_\-values\_\-in\_\-use}!list.module@{list.module}}
+\subsubsection[{\_\-list\_\-values\_\-in\_\-use}]{\setlength{\rightskip}{0pt plus 5cm}\_\-list\_\-values\_\-in\_\-use (\$ {\em field}, \/  \$ {\em values})}}
+\label{list_8module_a0b84a7d7dd9ccad6ee17784192eb5b9b}
+Checks if a list of values are being used in actual field values. \hypertarget{list_8module_a218d8f625fd18ca24e8cf7e3770bc576}{
+\index{list.module@{list.module}!list\_\-allowed\_\-values@{list\_\-allowed\_\-values}}
+\index{list\_\-allowed\_\-values@{list\_\-allowed\_\-values}!list.module@{list.module}}
+\subsubsection[{list\_\-allowed\_\-values}]{\setlength{\rightskip}{0pt plus 5cm}list\_\-allowed\_\-values (\$ {\em field}, \/  \$ {\em instance} = {\ttfamily NULL}, \/  \$ {\em entity\_\-type} = {\ttfamily NULL}, \/  \$ {\em entity} = {\ttfamily NULL})}}
+\label{list_8module_a218d8f625fd18ca24e8cf7e3770bc576}
+Returns the array of allowed values for a list field.
+
+The strings are not safe for output. Keys and values of the array should be sanitized through \hyperlink{group__field_ga181095248684b8b5a45c08ab8d22a813}{field\_\-filter\_\-xss()} before being displayed.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field}]The field definition. \item[{\em \$instance}](optional) A field instance array. Defaults to NULL. \item[{\em \$entity\_\-type}](optional) The type of entity; e.g. 'node' or 'user'. Defaults to NULL. \item[{\em \$entity}](optional) The entity object. Defaults to NULL.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The array of allowed values. Keys of the array are the raw stored values (number or text), values of the array are the display labels. 
+\end{DoxyReturn}
+\hypertarget{list_8module_a87f1b0175d4b11b5d441e3b512749b58}{
+\index{list.module@{list.module}!list\_\-allowed\_\-values\_\-setting\_\-validate@{list\_\-allowed\_\-values\_\-setting\_\-validate}}
+\index{list\_\-allowed\_\-values\_\-setting\_\-validate@{list\_\-allowed\_\-values\_\-setting\_\-validate}!list.module@{list.module}}
+\subsubsection[{list\_\-allowed\_\-values\_\-setting\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}list\_\-allowed\_\-values\_\-setting\_\-validate (\$ {\em element}, \/  \&\$ {\em form\_\-state})}}
+\label{list_8module_a87f1b0175d4b11b5d441e3b512749b58}
+Element validate callback; check that the entered values are valid. \hypertarget{list_8module_a398a1526738a574db51cad98a20b5590}{
+\index{list.module@{list.module}!list\_\-allowed\_\-values\_\-string@{list\_\-allowed\_\-values\_\-string}}
+\index{list\_\-allowed\_\-values\_\-string@{list\_\-allowed\_\-values\_\-string}!list.module@{list.module}}
+\subsubsection[{list\_\-allowed\_\-values\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}list\_\-allowed\_\-values\_\-string (\$ {\em values})}}
+\label{list_8module_a398a1526738a574db51cad98a20b5590}
+Generates a string representation of an array of 'allowed values'.
+
+This string format is suitable for edition in a textarea.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$values}]An array of values, where array keys are values and array values are labels.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string representation of the \$values array:
+\begin{DoxyItemize}
+\item Values are separated by a carriage return.
+\item Each value is in the format \char`\"{}value$|$label\char`\"{} or \char`\"{}value\char`\"{}. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{list_8module_add00f68e77cd0894cdb7d41fcbed95f0}{
+\index{list.module@{list.module}!list\_\-boolean\_\-allowed\_\-values\_\-callback@{list\_\-boolean\_\-allowed\_\-values\_\-callback}}
+\index{list\_\-boolean\_\-allowed\_\-values\_\-callback@{list\_\-boolean\_\-allowed\_\-values\_\-callback}!list.module@{list.module}}
+\subsubsection[{list\_\-boolean\_\-allowed\_\-values\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}list\_\-boolean\_\-allowed\_\-values\_\-callback (\$ {\em element}, \/  \$ {\em input}, \/  \$ {\em form\_\-state})}}
+\label{list_8module_add00f68e77cd0894cdb7d41fcbed95f0}
+Form element value\_\-callback: assembles the allowed values for 'boolean' fields. \hypertarget{list_8module_afcca93c49a8a373704672f52fae831a6}{
+\index{list.module@{list.module}!list\_\-extract\_\-allowed\_\-values@{list\_\-extract\_\-allowed\_\-values}}
+\index{list\_\-extract\_\-allowed\_\-values@{list\_\-extract\_\-allowed\_\-values}!list.module@{list.module}}
+\subsubsection[{list\_\-extract\_\-allowed\_\-values}]{\setlength{\rightskip}{0pt plus 5cm}list\_\-extract\_\-allowed\_\-values (\$ {\em string}, \/  \$ {\em field\_\-type}, \/  \$ {\em generate\_\-keys})}}
+\label{list_8module_afcca93c49a8a373704672f52fae831a6}
+Parses a string of 'allowed values' into an array.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$string}]The list of allowed values in string format described in \hyperlink{list_8module_a398a1526738a574db51cad98a20b5590}{list\_\-allowed\_\-values\_\-string()}. \item[{\em \$field\_\-type}]The field type. Either 'list\_\-number' or 'list\_\-text'. \item[{\em \$generate\_\-keys}]Boolean value indicating whether to generate keys based on the position of the value if a key is not manually specified, and if the value cannot be used as a key. This should only be TRUE for fields of type 'list\_\-number'.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The array of extracted key/value pairs, or NULL if the string is invalid.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{list_8module_a398a1526738a574db51cad98a20b5590}{list\_\-allowed\_\-values\_\-string()} 
+\end{DoxySeeAlso}
+\hypertarget{list_8module_a12250051f9751c4016a9e7fa0403223b}{
+\index{list.module@{list.module}!list\_\-field\_\-formatter\_\-info@{list\_\-field\_\-formatter\_\-info}}
+\index{list\_\-field\_\-formatter\_\-info@{list\_\-field\_\-formatter\_\-info}!list.module@{list.module}}
+\subsubsection[{list\_\-field\_\-formatter\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}list\_\-field\_\-formatter\_\-info ()}}
+\label{list_8module_a12250051f9751c4016a9e7fa0403223b}
+Implements \hyperlink{group__field__formatter_ga2f5aa1c7455f55dffd84a48efa57f987}{hook\_\-field\_\-formatter\_\-info()}. \hypertarget{list_8module_a8747111b6404b34d812a851224ea2062}{
+\index{list.module@{list.module}!list\_\-field\_\-formatter\_\-view@{list\_\-field\_\-formatter\_\-view}}
+\index{list\_\-field\_\-formatter\_\-view@{list\_\-field\_\-formatter\_\-view}!list.module@{list.module}}
+\subsubsection[{list\_\-field\_\-formatter\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}list\_\-field\_\-formatter\_\-view (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode}, \/  \$ {\em items}, \/  \$ {\em display})}}
+\label{list_8module_a8747111b6404b34d812a851224ea2062}
+Implements \hyperlink{group__field__formatter_gaa588d99481fa147a1c88416e55fdfad6}{hook\_\-field\_\-formatter\_\-view()}. \hypertarget{list_8module_a063622318fd99746c6ea7b806334d006}{
+\index{list.module@{list.module}!list\_\-field\_\-info@{list\_\-field\_\-info}}
+\index{list\_\-field\_\-info@{list\_\-field\_\-info}!list.module@{list.module}}
+\subsubsection[{list\_\-field\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}list\_\-field\_\-info ()}}
+\label{list_8module_a063622318fd99746c6ea7b806334d006}
+Implements \hyperlink{group__field__types_gad3eb779f26f41b520f19af011ece3eb1}{hook\_\-field\_\-info()}. \hypertarget{list_8module_a786db9c0c17b7e8be8f308ad9270deb6}{
+\index{list.module@{list.module}!list\_\-field\_\-is\_\-empty@{list\_\-field\_\-is\_\-empty}}
+\index{list\_\-field\_\-is\_\-empty@{list\_\-field\_\-is\_\-empty}!list.module@{list.module}}
+\subsubsection[{list\_\-field\_\-is\_\-empty}]{\setlength{\rightskip}{0pt plus 5cm}list\_\-field\_\-is\_\-empty (\$ {\em item}, \/  \$ {\em field})}}
+\label{list_8module_a786db9c0c17b7e8be8f308ad9270deb6}
+Implements \hyperlink{group__field__types_ga192dd7e7a02a7bc9e0af8b67b187b071}{hook\_\-field\_\-is\_\-empty()}. \hypertarget{list_8module_a17f5bcfffcb1264c027462c2d931f71e}{
+\index{list.module@{list.module}!list\_\-field\_\-settings\_\-form@{list\_\-field\_\-settings\_\-form}}
+\index{list\_\-field\_\-settings\_\-form@{list\_\-field\_\-settings\_\-form}!list.module@{list.module}}
+\subsubsection[{list\_\-field\_\-settings\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}list\_\-field\_\-settings\_\-form (\$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em has\_\-data})}}
+\label{list_8module_a17f5bcfffcb1264c027462c2d931f71e}
+Implements \hyperlink{group__field__types_gab8a2ed808857cc6f3cb661fbc99d30d4}{hook\_\-field\_\-settings\_\-form()}. \hypertarget{list_8module_affec6e81ffd24248ec77ad48fb659e78}{
+\index{list.module@{list.module}!list\_\-field\_\-update\_\-field@{list\_\-field\_\-update\_\-field}}
+\index{list\_\-field\_\-update\_\-field@{list\_\-field\_\-update\_\-field}!list.module@{list.module}}
+\subsubsection[{list\_\-field\_\-update\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}list\_\-field\_\-update\_\-field (\$ {\em field}, \/  \$ {\em prior\_\-field}, \/  \$ {\em has\_\-data})}}
+\label{list_8module_affec6e81ffd24248ec77ad48fb659e78}
+Implements \hyperlink{group__field__crud_ga4f06c14e6fb60ec1903c005ddbb4ee83}{hook\_\-field\_\-update\_\-field()}. \hypertarget{list_8module_a358175e4b86e8774e0c60d827bbe8367}{
+\index{list.module@{list.module}!list\_\-field\_\-update\_\-forbid@{list\_\-field\_\-update\_\-forbid}}
+\index{list\_\-field\_\-update\_\-forbid@{list\_\-field\_\-update\_\-forbid}!list.module@{list.module}}
+\subsubsection[{list\_\-field\_\-update\_\-forbid}]{\setlength{\rightskip}{0pt plus 5cm}list\_\-field\_\-update\_\-forbid (\$ {\em field}, \/  \$ {\em prior\_\-field}, \/  \$ {\em has\_\-data})}}
+\label{list_8module_a358175e4b86e8774e0c60d827bbe8367}
+Implements \hyperlink{group__field__crud_ga7bd0ccd40a9a3690b697b68d03f660a4}{hook\_\-field\_\-update\_\-forbid()}. \hypertarget{list_8module_accbb5465b471c4b4e888dd703f34fc45}{
+\index{list.module@{list.module}!list\_\-field\_\-validate@{list\_\-field\_\-validate}}
+\index{list\_\-field\_\-validate@{list\_\-field\_\-validate}!list.module@{list.module}}
+\subsubsection[{list\_\-field\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}list\_\-field\_\-validate (\$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode}, \/  \$ {\em items}, \/  \&\$ {\em errors})}}
+\label{list_8module_accbb5465b471c4b4e888dd703f34fc45}
+Implements \hyperlink{group__field__types_gaa7d8846e8fe3766e1b3435cd50b965be}{hook\_\-field\_\-validate()}.
+
+Possible error codes:
+\begin{DoxyItemize}
+\item 'list\_\-illegal\_\-value': The value is not part of the list of allowed values. 
+\end{DoxyItemize}\hypertarget{list_8module_a083f26acdff7696710aefa11970801bd}{
+\index{list.module@{list.module}!list\_\-field\_\-widget\_\-info\_\-alter@{list\_\-field\_\-widget\_\-info\_\-alter}}
+\index{list\_\-field\_\-widget\_\-info\_\-alter@{list\_\-field\_\-widget\_\-info\_\-alter}!list.module@{list.module}}
+\subsubsection[{list\_\-field\_\-widget\_\-info\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}list\_\-field\_\-widget\_\-info\_\-alter (\&\$ {\em info})}}
+\label{list_8module_a083f26acdff7696710aefa11970801bd}
+Implements \hyperlink{group__field__widget_ga2e74ac1b4b45e9f31b58b86d01892e7e}{hook\_\-field\_\-widget\_\-info\_\-alter()}.
+
+The List module does not implement widgets of its own, but reuses the widgets defined in \hyperlink{options_8module}{options.module}.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{list_8module_a3f9af78b260cdcf9c3a2f44df102e7e4}{list\_\-options\_\-list()} 
+\end{DoxySeeAlso}
+\hypertarget{list_8module_a46b480544753f929da4823a51ec5693e}{
+\index{list.module@{list.module}!list\_\-help@{list\_\-help}}
+\index{list\_\-help@{list\_\-help}!list.module@{list.module}}
+\subsubsection[{list\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}list\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{list_8module_a46b480544753f929da4823a51ec5693e}
+Implements \hyperlink{group__hooks_ga5589c2714a782738e8851c4c90231f0e}{hook\_\-help()}. \hypertarget{list_8module_a3f9af78b260cdcf9c3a2f44df102e7e4}{
+\index{list.module@{list.module}!list\_\-options\_\-list@{list\_\-options\_\-list}}
+\index{list\_\-options\_\-list@{list\_\-options\_\-list}!list.module@{list.module}}
+\subsubsection[{list\_\-options\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}list\_\-options\_\-list (\$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em entity\_\-type}, \/  \$ {\em entity})}}
+\label{list_8module_a3f9af78b260cdcf9c3a2f44df102e7e4}
+Implements \hyperlink{options_8api_8php_aa25d7440810f3dc0c137ef0e5747b485}{hook\_\-options\_\-list()}. 

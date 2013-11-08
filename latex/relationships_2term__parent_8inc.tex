@@ -1,0 +1,54 @@
+\hypertarget{relationships_2term__parent_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/relationships/term\_\-parent.inc File Reference}
+\label{relationships_2term__parent_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/relationships/term\_\-parent.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/relationships/term\_\-parent.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{relationships_2term__parent_8inc_ab8a342117f0788bec94767974ec73484}{ctools\_\-term\_\-parent\_\-context} (\$context, \$conf)
+\item 
+\hyperlink{relationships_2term__parent_8inc_a05b2f9f6619b4ced6b6176b7de6c2940}{ctools\_\-term\_\-parent\_\-settings\_\-form} (\$form, \&\$form\_\-state)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{relationships_2term__parent_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide an relationship handler for term parent. 
+
+\subsection{Function Documentation}
+\hypertarget{relationships_2term__parent_8inc_ab8a342117f0788bec94767974ec73484}{
+\index{relationships/term\_\-parent.inc@{relationships/term\_\-parent.inc}!ctools\_\-term\_\-parent\_\-context@{ctools\_\-term\_\-parent\_\-context}}
+\index{ctools\_\-term\_\-parent\_\-context@{ctools\_\-term\_\-parent\_\-context}!relationships/term_parent.inc@{relationships/term\_\-parent.inc}}
+\subsubsection[{ctools\_\-term\_\-parent\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-term\_\-parent\_\-context (\$ {\em context}, \/  \$ {\em conf})}}
+\label{relationships_2term__parent_8inc_ab8a342117f0788bec94767974ec73484}
+Return a new context based on an existing context. \hypertarget{relationships_2term__parent_8inc_a05b2f9f6619b4ced6b6176b7de6c2940}{
+\index{relationships/term\_\-parent.inc@{relationships/term\_\-parent.inc}!ctools\_\-term\_\-parent\_\-settings\_\-form@{ctools\_\-term\_\-parent\_\-settings\_\-form}}
+\index{ctools\_\-term\_\-parent\_\-settings\_\-form@{ctools\_\-term\_\-parent\_\-settings\_\-form}!relationships/term_parent.inc@{relationships/term\_\-parent.inc}}
+\subsubsection[{ctools\_\-term\_\-parent\_\-settings\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-term\_\-parent\_\-settings\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{relationships_2term__parent_8inc_a05b2f9f6619b4ced6b6176b7de6c2940}
+Settings form for the relationship. 
+
+\subsection{Variable Documentation}
+\hypertarget{relationships_2term__parent_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{relationships/term\_\-parent.inc@{relationships/term\_\-parent.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!relationships/term_parent.inc@{relationships/term\_\-parent.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{relationships_2term__parent_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('Term parent'),
+  'keyword' => 'parent_term',
+  'description' => t('Adds a taxonomy term parent from a term context.'),
+  'required context' => new ctools_context_required(t('Term'), 'entity:taxonomy_t
+      erm'),
+  'context' => 'ctools_term_parent_context',
+  'edit form' => 'ctools_term_parent_settings_form',
+  'defaults' => array('type' => 'top'),
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

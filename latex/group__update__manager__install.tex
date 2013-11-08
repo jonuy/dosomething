@@ -1,0 +1,64 @@
+\hypertarget{group__update__manager__install}{
+\section{Update Manager module: install}
+\label{group__update__manager__install}\index{Update Manager module: install@{Update Manager module: install}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__update__manager__install_gad9962bc5fd3a9c0eb86cb469d247d7dc}{\_\-update\_\-manager\_\-check\_\-backends} (\&\$form, \$operation)
+\item 
+\hyperlink{group__update__manager__install_ga56ab9860e1bc481b261a24c6ef480f75}{update\_\-manager\_\-install\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__update__manager__install_ga52e9f2cddddddccf921284b01f9505b0}{update\_\-manager\_\-install\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+End of \char`\"{}defgroup update\_\-manager\_\-update\char`\"{}.
+
+Update Manager module functionality for installing new code.
+
+Provides a user interface to install new code. 
+
+\subsection{Function Documentation}
+\hypertarget{group__update__manager__install_gad9962bc5fd3a9c0eb86cb469d247d7dc}{
+\index{update\_\-manager\_\-install@{update\_\-manager\_\-install}!\_\-update\_\-manager\_\-check\_\-backends@{\_\-update\_\-manager\_\-check\_\-backends}}
+\index{\_\-update\_\-manager\_\-check\_\-backends@{\_\-update\_\-manager\_\-check\_\-backends}!update_manager_install@{update\_\-manager\_\-install}}
+\subsubsection[{\_\-update\_\-manager\_\-check\_\-backends}]{\setlength{\rightskip}{0pt plus 5cm}\_\-update\_\-manager\_\-check\_\-backends (\&\$ {\em form}, \/  \$ {\em operation})}}
+\label{group__update__manager__install_gad9962bc5fd3a9c0eb86cb469d247d7dc}
+Checks for file transfer backends and prepares a form fragment about them.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$form Reference to the form array we're building. \item[{\em string}]\$operation The update manager operation we're in the middle of. Can be either 'update' or 'install'. Use to provide operation-\/specific interface text.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the update manager should continue to the next step in the workflow, or FALSE if we've hit a fatal configuration and must halt the workflow. 
+\end{DoxyReturn}
+\hypertarget{group__update__manager__install_ga52e9f2cddddddccf921284b01f9505b0}{
+\index{update\_\-manager\_\-install@{update\_\-manager\_\-install}!update\_\-manager\_\-install\_\-form\_\-submit@{update\_\-manager\_\-install\_\-form\_\-submit}}
+\index{update\_\-manager\_\-install\_\-form\_\-submit@{update\_\-manager\_\-install\_\-form\_\-submit}!update_manager_install@{update\_\-manager\_\-install}}
+\subsubsection[{update\_\-manager\_\-install\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-manager\_\-install\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__update__manager__install_ga52e9f2cddddddccf921284b01f9505b0}
+Form submission handler for \hyperlink{group__forms_ga5905518e0d54228827271f90dcd8c5c3}{update\_\-manager\_\-install\_\-form()}.
+
+Either downloads the file specified in the URL to a temporary cache, or uploads the file attached to the form, then attempts to extract the archive into a temporary location and verify it. Instantiate the appropriate \hyperlink{classUpdater}{Updater} class for this project and make sure it is not already installed in the live webroot. If everything is successful, setup an operation to run via \hyperlink{authorize_8php}{authorize.php} which will copy the extracted files from the temporary location into the live site.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__update__manager__install_ga56ab9860e1bc481b261a24c6ef480f75}{update\_\-manager\_\-install\_\-form\_\-validate()} 
+
+\hyperlink{update_8authorize_8inc_a284ce6e21de87c3f0e39bbde1a1b6556}{update\_\-authorize\_\-run\_\-install()} 
+
+\hyperlink{group__authorize_ga17756b29805705dbea25798d6004d5dd}{system\_\-authorized\_\-init()} 
+
+\hyperlink{group__authorize_gab59393fbd369097724650dec4be9c1dd}{system\_\-authorized\_\-get\_\-url()} 
+\end{DoxySeeAlso}
+\hypertarget{group__update__manager__install_ga56ab9860e1bc481b261a24c6ef480f75}{
+\index{update\_\-manager\_\-install@{update\_\-manager\_\-install}!update\_\-manager\_\-install\_\-form\_\-validate@{update\_\-manager\_\-install\_\-form\_\-validate}}
+\index{update\_\-manager\_\-install\_\-form\_\-validate@{update\_\-manager\_\-install\_\-form\_\-validate}!update_manager_install@{update\_\-manager\_\-install}}
+\subsubsection[{update\_\-manager\_\-install\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-manager\_\-install\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__update__manager__install_ga56ab9860e1bc481b261a24c6ef480f75}
+Form validation handler for \hyperlink{group__forms_ga5905518e0d54228827271f90dcd8c5c3}{update\_\-manager\_\-install\_\-form()}.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__update__manager__install_ga52e9f2cddddddccf921284b01f9505b0}{update\_\-manager\_\-install\_\-form\_\-submit()} 
+\end{DoxySeeAlso}

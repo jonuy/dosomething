@@ -1,0 +1,462 @@
+\hypertarget{group__image}{
+\section{Image toolkits}
+\label{group__image}\index{Image toolkits@{Image toolkits}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__image_ga190b9b90f931916a5766ed11c29b9326}{image\_\-get\_\-available\_\-toolkits} ()
+\item 
+\hyperlink{group__image_ga08b3ce83f3526f248c1e08b4ee249a3a}{image\_\-get\_\-toolkit} ()
+\item 
+\hyperlink{group__image_ga49dd01a9f7b8037f15b99e098f068cb7}{image\_\-toolkit\_\-invoke} (\$method, stdClass \$image, array \$params=array())
+\item 
+\hyperlink{group__image_ga7b2603b2b9d073cc4db9a6200aa9c2a4}{image\_\-get\_\-info} (\$filepath, \$toolkit=FALSE)
+\item 
+\hyperlink{group__image_ga8d6850eecb498cf1683808eb66b74465}{image\_\-scale\_\-and\_\-crop} (stdClass \$image, \$width, \$height)
+\item 
+\hyperlink{group__image_gaf85b92c29d7c70328ccc3401357eaee9}{image\_\-dimensions\_\-scale} (array \&\$dimensions, \$width=NULL, \$height=NULL, \$upscale=FALSE)
+\item 
+\hyperlink{group__image_ga2eac147bb70d14d9439d6b0d54023ce3}{image\_\-scale} (stdClass \$image, \$width=NULL, \$height=NULL, \$upscale=FALSE)
+\item 
+\hyperlink{group__image_ga991594ed9388b740bc98a162b6bbc449}{image\_\-resize} (stdClass \$image, \$width, \$height)
+\item 
+\hyperlink{group__image_gaccf6671cd3ed866c6463ef6ae6436dc3}{image\_\-rotate} (stdClass \$image, \$degrees, \$background=NULL)
+\item 
+\hyperlink{group__image_gaaf7d382a8ec190f746478848ed309fe7}{image\_\-crop} (stdClass \$image, \$x, \$y, \$width, \$height)
+\item 
+\hyperlink{group__image_gadfcfdfcf1521b26ec790fc017c151aff}{image\_\-desaturate} (stdClass \$image)
+\item 
+\hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load} (\$file, \$toolkit=FALSE)
+\item 
+\hyperlink{group__image_ga134df2e4d035378b52e866618c164f3b}{image\_\-save} (stdClass \$image, \$destination=NULL)
+\item 
+\hyperlink{group__image_ga2a492c31e41c59af2b7e976e28886b15}{image\_\-gd\_\-settings} ()
+\item 
+\hyperlink{group__image_gaab4f4ec4e8bc9abc51939a4194848fbb}{image\_\-gd\_\-settings\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__image_ga1926e8b1932480b81427c1301e8eb4dc}{image\_\-gd\_\-check\_\-settings} ()
+\item 
+\hyperlink{group__image_ga8d0c1abb541e01ec7a76a57add14a0b2}{image\_\-gd\_\-resize} (stdClass \$image, \$width, \$height)
+\item 
+\hyperlink{group__image_gadfe1dec9bcb15c4b223acc64f35631d2}{image\_\-gd\_\-rotate} (stdClass \$image, \$degrees, \$background=NULL)
+\item 
+\hyperlink{group__image_ga80d6e99f7b538e40dac6b917bfff1bb1}{image\_\-gd\_\-crop} (stdClass \$image, \$x, \$y, \$width, \$height)
+\item 
+\hyperlink{group__image_ga2cb8090035dbb1a1e6a9c82cb52c9789}{image\_\-gd\_\-desaturate} (stdClass \$image)
+\item 
+\hyperlink{group__image_gaa3b2912916ff9cfec8c7c8df8f3f1d75}{image\_\-gd\_\-load} (stdClass \$image)
+\item 
+\hyperlink{group__image_ga840179ad0e5ef2ea7619de19cab2d225}{image\_\-gd\_\-save} (stdClass \$image, \$destination)
+\item 
+\hyperlink{group__image_gabb63f813bf7d644843d7fc9024b6e1ea}{image\_\-gd\_\-create\_\-tmp} (stdClass \$image, \$width, \$height)
+\item 
+\hyperlink{group__image_gae5b31eb967a96b6b109dd5ddf720ab42}{image\_\-gd\_\-get\_\-info} (stdClass \$image)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for image file manipulations.
+
+Drupal's image toolkits provide an abstraction layer for common image file manipulations like scaling, cropping, and rotating. The abstraction frees module authors from the need to support multiple image libraries, and it allows site administrators to choose the library that's best for them.
+
+PHP includes the GD library by default so a GD toolkit is installed with Drupal. Other toolkits like ImageMagick are available from contrib modules. GD works well for small images, but using it with larger files may cause PHP to run out of memory. In contrast the ImageMagick library does not suffer from this problem, but it requires the ISP to have installed additional software.
+
+Image toolkits are discovered based on the associated module's hook\_\-image\_\-toolkits. Additionally the image toolkit include file must be identified in the files array in the module.info file. The toolkit must then be enabled using the admin/config/media/image-\/toolkit form.
+
+Only one toolkit may be selected at a time. If a module author wishes to call a specific toolkit they can check that it is installed by calling \hyperlink{group__image_ga190b9b90f931916a5766ed11c29b9326}{image\_\-get\_\-available\_\-toolkits()}, and then calling its functions directly. 
+
+\subsection{Function Documentation}
+\hypertarget{group__image_gaaf7d382a8ec190f746478848ed309fe7}{
+\index{image@{image}!image\_\-crop@{image\_\-crop}}
+\index{image\_\-crop@{image\_\-crop}!image@{image}}
+\subsubsection[{image\_\-crop}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-crop (stdClass \$ {\em image}, \/  \$ {\em x}, \/  \$ {\em y}, \/  \$ {\em width}, \/  \$ {\em height})}}
+\label{group__image_gaaf7d382a8ec190f746478848ed309fe7}
+Crops an image to a rectangle specified by the given dimensions.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object returned by \hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()}. \item[{\em \$x}]The top left coordinate, in pixels, of the crop area (x axis value). \item[{\em \$y}]The top left coordinate, in pixels, of the crop area (y axis value). \item[{\em \$width}]The target width, in pixels. \item[{\em \$height}]The target height, in pixels.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success, FALSE on failure.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()} 
+
+\hyperlink{group__image_ga8d6850eecb498cf1683808eb66b74465}{image\_\-scale\_\-and\_\-crop()} 
+
+\hyperlink{group__image_ga80d6e99f7b538e40dac6b917bfff1bb1}{image\_\-gd\_\-crop()} 
+\end{DoxySeeAlso}
+\hypertarget{group__image_gadfcfdfcf1521b26ec790fc017c151aff}{
+\index{image@{image}!image\_\-desaturate@{image\_\-desaturate}}
+\index{image\_\-desaturate@{image\_\-desaturate}!image@{image}}
+\subsubsection[{image\_\-desaturate}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-desaturate (stdClass \$ {\em image})}}
+\label{group__image_gadfcfdfcf1521b26ec790fc017c151aff}
+Converts an image to grayscale.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object returned by \hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()}.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success, FALSE on failure.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()} 
+
+\hyperlink{group__image_ga2cb8090035dbb1a1e6a9c82cb52c9789}{image\_\-gd\_\-desaturate()} 
+\end{DoxySeeAlso}
+\hypertarget{group__image_gaf85b92c29d7c70328ccc3401357eaee9}{
+\index{image@{image}!image\_\-dimensions\_\-scale@{image\_\-dimensions\_\-scale}}
+\index{image\_\-dimensions\_\-scale@{image\_\-dimensions\_\-scale}!image@{image}}
+\subsubsection[{image\_\-dimensions\_\-scale}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-dimensions\_\-scale (array \&\$ {\em dimensions}, \/  \$ {\em width} = {\ttfamily NULL}, \/  \$ {\em height} = {\ttfamily NULL}, \/  \$ {\em upscale} = {\ttfamily FALSE})}}
+\label{group__image_gaf85b92c29d7c70328ccc3401357eaee9}
+Scales image dimensions while maintaining aspect ratio.
+
+The resulting dimensions can be smaller for one or both target dimensions.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$dimensions}]Dimensions to be modified -\/ an array with components width and height, in pixels. \item[{\em \$width}]The target width, in pixels. If this value is NULL then the scaling will be based only on the height value. \item[{\em \$height}]The target height, in pixels. If this value is NULL then the scaling will be based only on the width value. \item[{\em \$upscale}]Boolean indicating that images smaller than the target dimensions will be scaled up. This generally results in a low quality image.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if \$dimensions was modified, FALSE otherwise.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_ga2eac147bb70d14d9439d6b0d54023ce3}{image\_\-scale()} 
+\end{DoxySeeAlso}
+\hypertarget{group__image_ga1926e8b1932480b81427c1301e8eb4dc}{
+\index{image@{image}!image\_\-gd\_\-check\_\-settings@{image\_\-gd\_\-check\_\-settings}}
+\index{image\_\-gd\_\-check\_\-settings@{image\_\-gd\_\-check\_\-settings}!image@{image}}
+\subsubsection[{image\_\-gd\_\-check\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-gd\_\-check\_\-settings ()}}
+\label{group__image_ga1926e8b1932480b81427c1301e8eb4dc}
+Verify GD2 settings (that the right version is actually installed).
+
+\begin{DoxyReturn}{Returns}
+A boolean indicating if the GD toolkit is available on this machine. 
+\end{DoxyReturn}
+\hypertarget{group__image_gabb63f813bf7d644843d7fc9024b6e1ea}{
+\index{image@{image}!image\_\-gd\_\-create\_\-tmp@{image\_\-gd\_\-create\_\-tmp}}
+\index{image\_\-gd\_\-create\_\-tmp@{image\_\-gd\_\-create\_\-tmp}!image@{image}}
+\subsubsection[{image\_\-gd\_\-create\_\-tmp}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-gd\_\-create\_\-tmp (stdClass \$ {\em image}, \/  \$ {\em width}, \/  \$ {\em height})}}
+\label{group__image_gabb63f813bf7d644843d7fc9024b6e1ea}
+Create a truecolor image preserving transparency from a provided image.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object. \item[{\em \$width}]The new width of the new image, in pixels. \item[{\em \$height}]The new height of the new image, in pixels. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A GD image handle. 
+\end{DoxyReturn}
+\hypertarget{group__image_ga80d6e99f7b538e40dac6b917bfff1bb1}{
+\index{image@{image}!image\_\-gd\_\-crop@{image\_\-gd\_\-crop}}
+\index{image\_\-gd\_\-crop@{image\_\-gd\_\-crop}!image@{image}}
+\subsubsection[{image\_\-gd\_\-crop}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-gd\_\-crop (stdClass \$ {\em image}, \/  \$ {\em x}, \/  \$ {\em y}, \/  \$ {\em width}, \/  \$ {\em height})}}
+\label{group__image_ga80d6e99f7b538e40dac6b917bfff1bb1}
+Crop an image using the GD toolkit.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object. The \$image-\/$>$resource, \$image-\/$>$info\mbox{[}'width'\mbox{]}, and \$image-\/$>$info\mbox{[}'height'\mbox{]} values will be modified by this call. \item[{\em \$x}]The starting x offset at which to start the crop, in pixels. \item[{\em \$y}]The starting y offset at which to start the crop, in pixels. \item[{\em \$width}]The width of the cropped area, in pixels. \item[{\em \$height}]The height of the cropped area, in pixels. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE or FALSE, based on success.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_gaaf7d382a8ec190f746478848ed309fe7}{image\_\-crop()} 
+\end{DoxySeeAlso}
+\hypertarget{group__image_ga2cb8090035dbb1a1e6a9c82cb52c9789}{
+\index{image@{image}!image\_\-gd\_\-desaturate@{image\_\-gd\_\-desaturate}}
+\index{image\_\-gd\_\-desaturate@{image\_\-gd\_\-desaturate}!image@{image}}
+\subsubsection[{image\_\-gd\_\-desaturate}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-gd\_\-desaturate (stdClass \$ {\em image})}}
+\label{group__image_ga2cb8090035dbb1a1e6a9c82cb52c9789}
+Convert an image resource to grayscale.
+
+Note that transparent GIFs loose transparency when desaturated.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object. The \$image-\/$>$resource value will be modified by this call. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE or FALSE, based on success.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_gadfcfdfcf1521b26ec790fc017c151aff}{image\_\-desaturate()} 
+\end{DoxySeeAlso}
+\hypertarget{group__image_gae5b31eb967a96b6b109dd5ddf720ab42}{
+\index{image@{image}!image\_\-gd\_\-get\_\-info@{image\_\-gd\_\-get\_\-info}}
+\index{image\_\-gd\_\-get\_\-info@{image\_\-gd\_\-get\_\-info}!image@{image}}
+\subsubsection[{image\_\-gd\_\-get\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-gd\_\-get\_\-info (stdClass \$ {\em image})}}
+\label{group__image_gae5b31eb967a96b6b109dd5ddf720ab42}
+Get details about an image.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+FALSE, if the file could not be found or is not an image. Otherwise, a keyed array containing information about the image:
+\begin{DoxyItemize}
+\item \char`\"{}width\char`\"{}: Width, in pixels.
+\item \char`\"{}height\char`\"{}: Height, in pixels.
+\item \char`\"{}extension\char`\"{}: Commonly used file extension for the image.
+\item \char`\"{}mime\_\-type\char`\"{}: MIME type ('image/jpeg', 'image/gif', 'image/png').
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_ga7b2603b2b9d073cc4db9a6200aa9c2a4}{image\_\-get\_\-info()} 
+\end{DoxySeeAlso}
+\hypertarget{group__image_gaa3b2912916ff9cfec8c7c8df8f3f1d75}{
+\index{image@{image}!image\_\-gd\_\-load@{image\_\-gd\_\-load}}
+\index{image\_\-gd\_\-load@{image\_\-gd\_\-load}!image@{image}}
+\subsubsection[{image\_\-gd\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-gd\_\-load (stdClass \$ {\em image})}}
+\label{group__image_gaa3b2912916ff9cfec8c7c8df8f3f1d75}
+GD helper function to create an image resource from a file.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object. The \$image-\/$>$resource value will populated by this call. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE or FALSE, based on success.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()} 
+\end{DoxySeeAlso}
+\hypertarget{group__image_ga8d0c1abb541e01ec7a76a57add14a0b2}{
+\index{image@{image}!image\_\-gd\_\-resize@{image\_\-gd\_\-resize}}
+\index{image\_\-gd\_\-resize@{image\_\-gd\_\-resize}!image@{image}}
+\subsubsection[{image\_\-gd\_\-resize}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-gd\_\-resize (stdClass \$ {\em image}, \/  \$ {\em width}, \/  \$ {\em height})}}
+\label{group__image_ga8d0c1abb541e01ec7a76a57add14a0b2}
+Scale an image to the specified size using GD.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object. The \$image-\/$>$resource, \$image-\/$>$info\mbox{[}'width'\mbox{]}, and \$image-\/$>$info\mbox{[}'height'\mbox{]} values will be modified by this call. \item[{\em \$width}]The new width of the resized image, in pixels. \item[{\em \$height}]The new height of the resized image, in pixels. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE or FALSE, based on success.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_ga991594ed9388b740bc98a162b6bbc449}{image\_\-resize()} 
+\end{DoxySeeAlso}
+\hypertarget{group__image_gadfe1dec9bcb15c4b223acc64f35631d2}{
+\index{image@{image}!image\_\-gd\_\-rotate@{image\_\-gd\_\-rotate}}
+\index{image\_\-gd\_\-rotate@{image\_\-gd\_\-rotate}!image@{image}}
+\subsubsection[{image\_\-gd\_\-rotate}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-gd\_\-rotate (stdClass \$ {\em image}, \/  \$ {\em degrees}, \/  \$ {\em background} = {\ttfamily NULL})}}
+\label{group__image_gadfe1dec9bcb15c4b223acc64f35631d2}
+Rotate an image the given number of degrees.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object. The \$image-\/$>$resource, \$image-\/$>$info\mbox{[}'width'\mbox{]}, and \$image-\/$>$info\mbox{[}'height'\mbox{]} values will be modified by this call. \item[{\em \$degrees}]The number of (clockwise) degrees to rotate the image. \item[{\em \$background}]An hexadecimal integer specifying the background color to use for the uncovered area of the image after the rotation. E.g. 0x000000 for black, 0xff00ff for magenta, and 0xffffff for white. For images that support transparency, this will default to transparent. Otherwise it will be white. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE or FALSE, based on success.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_gaccf6671cd3ed866c6463ef6ae6436dc3}{image\_\-rotate()} 
+\end{DoxySeeAlso}
+\hypertarget{group__image_ga840179ad0e5ef2ea7619de19cab2d225}{
+\index{image@{image}!image\_\-gd\_\-save@{image\_\-gd\_\-save}}
+\index{image\_\-gd\_\-save@{image\_\-gd\_\-save}!image@{image}}
+\subsubsection[{image\_\-gd\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-gd\_\-save (stdClass \$ {\em image}, \/  \$ {\em destination})}}
+\label{group__image_ga840179ad0e5ef2ea7619de19cab2d225}
+GD helper to write an image resource to a destination file.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object. \item[{\em \$destination}]A string file URI or path where the image should be saved. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE or FALSE, based on success.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_ga134df2e4d035378b52e866618c164f3b}{image\_\-save()} 
+\end{DoxySeeAlso}
+\hypertarget{group__image_ga2a492c31e41c59af2b7e976e28886b15}{
+\index{image@{image}!image\_\-gd\_\-settings@{image\_\-gd\_\-settings}}
+\index{image\_\-gd\_\-settings@{image\_\-gd\_\-settings}!image@{image}}
+\subsubsection[{image\_\-gd\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-gd\_\-settings ()}}
+\label{group__image_ga2a492c31e41c59af2b7e976e28886b15}
+Retrieve settings for the GD2 toolkit. \hypertarget{group__image_gaab4f4ec4e8bc9abc51939a4194848fbb}{
+\index{image@{image}!image\_\-gd\_\-settings\_\-validate@{image\_\-gd\_\-settings\_\-validate}}
+\index{image\_\-gd\_\-settings\_\-validate@{image\_\-gd\_\-settings\_\-validate}!image@{image}}
+\subsubsection[{image\_\-gd\_\-settings\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-gd\_\-settings\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__image_gaab4f4ec4e8bc9abc51939a4194848fbb}
+Validate the submitted GD settings. \hypertarget{group__image_ga190b9b90f931916a5766ed11c29b9326}{
+\index{image@{image}!image\_\-get\_\-available\_\-toolkits@{image\_\-get\_\-available\_\-toolkits}}
+\index{image\_\-get\_\-available\_\-toolkits@{image\_\-get\_\-available\_\-toolkits}!image@{image}}
+\subsubsection[{image\_\-get\_\-available\_\-toolkits}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-get\_\-available\_\-toolkits ()}}
+\label{group__image_ga190b9b90f931916a5766ed11c29b9326}
+Gets a list of available toolkits.
+
+\begin{DoxyReturn}{Returns}
+An array with the toolkit names as keys and the descriptions as values. 
+\end{DoxyReturn}
+\hypertarget{group__image_ga7b2603b2b9d073cc4db9a6200aa9c2a4}{
+\index{image@{image}!image\_\-get\_\-info@{image\_\-get\_\-info}}
+\index{image\_\-get\_\-info@{image\_\-get\_\-info}!image@{image}}
+\subsubsection[{image\_\-get\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-get\_\-info (\$ {\em filepath}, \/  \$ {\em toolkit} = {\ttfamily FALSE})}}
+\label{group__image_ga7b2603b2b9d073cc4db9a6200aa9c2a4}
+Gets details about an image.
+
+Drupal supports GIF, JPG and PNG file formats when used with the GD toolkit, and may support others, depending on which toolkits are installed.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$filepath}]String specifying the path of the image file. \item[{\em \$toolkit}]An optional image toolkit name to override the default.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+FALSE, if the file could not be found or is not an image. Otherwise, a keyed array containing information about the image:
+\begin{DoxyItemize}
+\item \char`\"{}width\char`\"{}: Width, in pixels.
+\item \char`\"{}height\char`\"{}: Height, in pixels.
+\item \char`\"{}extension\char`\"{}: Commonly used file extension for the image.
+\item \char`\"{}mime\_\-type\char`\"{}: MIME type ('image/jpeg', 'image/gif', 'image/png').
+\item \char`\"{}file\_\-size\char`\"{}: File size in bytes. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{group__image_ga08b3ce83f3526f248c1e08b4ee249a3a}{
+\index{image@{image}!image\_\-get\_\-toolkit@{image\_\-get\_\-toolkit}}
+\index{image\_\-get\_\-toolkit@{image\_\-get\_\-toolkit}!image@{image}}
+\subsubsection[{image\_\-get\_\-toolkit}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-get\_\-toolkit ()}}
+\label{group__image_ga08b3ce83f3526f248c1e08b4ee249a3a}
+Gets the name of the currently used toolkit.
+
+\begin{DoxyReturn}{Returns}
+String containing the name of the selected toolkit, or FALSE on error. 
+\end{DoxyReturn}
+\hypertarget{group__image_ga96098e5b039dc3906a656fa889a04776}{
+\index{image@{image}!image\_\-load@{image\_\-load}}
+\index{image\_\-load@{image\_\-load}!image@{image}}
+\subsubsection[{image\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-load (\$ {\em file}, \/  \$ {\em toolkit} = {\ttfamily FALSE})}}
+\label{group__image_ga96098e5b039dc3906a656fa889a04776}
+Loads an image file and returns an image object.
+
+Any changes to the file are not saved until \hyperlink{group__image_ga134df2e4d035378b52e866618c164f3b}{image\_\-save()} is called.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$file}]Path to an image file. \item[{\em \$toolkit}]An optional, image toolkit name to override the default.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An image object or FALSE if there was a problem loading the file. The image object has the following properties:
+\begin{DoxyItemize}
+\item 'source' -\/ The original file path.
+\item 'info' -\/ The array of information returned by \hyperlink{group__image_ga7b2603b2b9d073cc4db9a6200aa9c2a4}{image\_\-get\_\-info()}
+\item 'toolkit' -\/ The name of the image toolkit requested when the image was loaded. Image toolkits may add additional properties. The caller is advised not to monkey about with them.
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_ga134df2e4d035378b52e866618c164f3b}{image\_\-save()} 
+
+\hyperlink{group__image_ga7b2603b2b9d073cc4db9a6200aa9c2a4}{image\_\-get\_\-info()} 
+
+\hyperlink{group__image_ga190b9b90f931916a5766ed11c29b9326}{image\_\-get\_\-available\_\-toolkits()} 
+
+\hyperlink{group__image_gaa3b2912916ff9cfec8c7c8df8f3f1d75}{image\_\-gd\_\-load()} 
+\end{DoxySeeAlso}
+\hypertarget{group__image_ga991594ed9388b740bc98a162b6bbc449}{
+\index{image@{image}!image\_\-resize@{image\_\-resize}}
+\index{image\_\-resize@{image\_\-resize}!image@{image}}
+\subsubsection[{image\_\-resize}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-resize (stdClass \$ {\em image}, \/  \$ {\em width}, \/  \$ {\em height})}}
+\label{group__image_ga991594ed9388b740bc98a162b6bbc449}
+Resizes an image to the given dimensions (ignoring aspect ratio).
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object returned by \hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()}. \item[{\em \$width}]The target width, in pixels. \item[{\em \$height}]The target height, in pixels.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success, FALSE on failure.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()} 
+
+\hyperlink{group__image_ga8d0c1abb541e01ec7a76a57add14a0b2}{image\_\-gd\_\-resize()} 
+\end{DoxySeeAlso}
+\hypertarget{group__image_gaccf6671cd3ed866c6463ef6ae6436dc3}{
+\index{image@{image}!image\_\-rotate@{image\_\-rotate}}
+\index{image\_\-rotate@{image\_\-rotate}!image@{image}}
+\subsubsection[{image\_\-rotate}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-rotate (stdClass \$ {\em image}, \/  \$ {\em degrees}, \/  \$ {\em background} = {\ttfamily NULL})}}
+\label{group__image_gaccf6671cd3ed866c6463ef6ae6436dc3}
+Rotates an image by the given number of degrees.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object returned by \hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()}. \item[{\em \$degrees}]The number of (clockwise) degrees to rotate the image. \item[{\em \$background}]An hexadecimal integer specifying the background color to use for the uncovered area of the image after the rotation. E.g. 0x000000 for black, 0xff00ff for magenta, and 0xffffff for white. For images that support transparency, this will default to transparent. Otherwise it will be white.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success, FALSE on failure.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()} 
+
+\hyperlink{group__image_gadfe1dec9bcb15c4b223acc64f35631d2}{image\_\-gd\_\-rotate()} 
+\end{DoxySeeAlso}
+\hypertarget{group__image_ga134df2e4d035378b52e866618c164f3b}{
+\index{image@{image}!image\_\-save@{image\_\-save}}
+\index{image\_\-save@{image\_\-save}!image@{image}}
+\subsubsection[{image\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-save (stdClass \$ {\em image}, \/  \$ {\em destination} = {\ttfamily NULL})}}
+\label{group__image_ga134df2e4d035378b52e866618c164f3b}
+Closes the image and saves the changes to a file.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object returned by \hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()}. The object's 'info' property will be updated if the file is saved successfully. \item[{\em \$destination}]Destination path where the image should be saved. If it is empty the original image file will be overwritten.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success, FALSE on failure.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()} 
+
+\hyperlink{group__image_ga840179ad0e5ef2ea7619de19cab2d225}{image\_\-gd\_\-save()} 
+\end{DoxySeeAlso}
+\hypertarget{group__image_ga2eac147bb70d14d9439d6b0d54023ce3}{
+\index{image@{image}!image\_\-scale@{image\_\-scale}}
+\index{image\_\-scale@{image\_\-scale}!image@{image}}
+\subsubsection[{image\_\-scale}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-scale (stdClass \$ {\em image}, \/  \$ {\em width} = {\ttfamily NULL}, \/  \$ {\em height} = {\ttfamily NULL}, \/  \$ {\em upscale} = {\ttfamily FALSE})}}
+\label{group__image_ga2eac147bb70d14d9439d6b0d54023ce3}
+Scales an image while maintaining aspect ratio.
+
+The resulting image can be smaller for one or both target dimensions.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object returned by \hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()}. \item[{\em \$width}]The target width, in pixels. If this value is NULL then the scaling will be based only on the height value. \item[{\em \$height}]The target height, in pixels. If this value is NULL then the scaling will be based only on the width value. \item[{\em \$upscale}]Boolean indicating that files smaller than the dimensions will be scaled up. This generally results in a low quality image.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success, FALSE on failure.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_gaf85b92c29d7c70328ccc3401357eaee9}{image\_\-dimensions\_\-scale()} 
+
+\hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()} 
+
+\hyperlink{group__image_ga8d6850eecb498cf1683808eb66b74465}{image\_\-scale\_\-and\_\-crop()} 
+\end{DoxySeeAlso}
+\hypertarget{group__image_ga8d6850eecb498cf1683808eb66b74465}{
+\index{image@{image}!image\_\-scale\_\-and\_\-crop@{image\_\-scale\_\-and\_\-crop}}
+\index{image\_\-scale\_\-and\_\-crop@{image\_\-scale\_\-and\_\-crop}!image@{image}}
+\subsubsection[{image\_\-scale\_\-and\_\-crop}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-scale\_\-and\_\-crop (stdClass \$ {\em image}, \/  \$ {\em width}, \/  \$ {\em height})}}
+\label{group__image_ga8d6850eecb498cf1683808eb66b74465}
+Scales an image to the exact width and height given.
+
+This function achieves the target aspect ratio by cropping the original image equally on both sides, or equally on the top and bottom. This function is useful to create uniform sized avatars from larger images.
+
+The resulting image always has the exact target dimensions.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]An image object returned by \hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()}. \item[{\em \$width}]The target width, in pixels. \item[{\em \$height}]The target height, in pixels.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success, FALSE on failure.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()} 
+
+\hyperlink{group__image_ga991594ed9388b740bc98a162b6bbc449}{image\_\-resize()} 
+
+\hyperlink{group__image_gaaf7d382a8ec190f746478848ed309fe7}{image\_\-crop()} 
+\end{DoxySeeAlso}
+\hypertarget{group__image_ga49dd01a9f7b8037f15b99e098f068cb7}{
+\index{image@{image}!image\_\-toolkit\_\-invoke@{image\_\-toolkit\_\-invoke}}
+\index{image\_\-toolkit\_\-invoke@{image\_\-toolkit\_\-invoke}!image@{image}}
+\subsubsection[{image\_\-toolkit\_\-invoke}]{\setlength{\rightskip}{0pt plus 5cm}image\_\-toolkit\_\-invoke (\$ {\em method}, \/  stdClass \$ {\em image}, \/  array \$ {\em params} = {\ttfamily array()})}}
+\label{group__image_ga49dd01a9f7b8037f15b99e098f068cb7}
+Invokes the given method using the currently selected toolkit.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$method}]A string containing the method to invoke. \item[{\em \$image}]An image object returned by \hyperlink{group__image_ga96098e5b039dc3906a656fa889a04776}{image\_\-load()}. \item[{\em \$params}]An optional array of parameters to pass to the toolkit method.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mixed values (typically Boolean indicating successful operation). 
+\end{DoxyReturn}

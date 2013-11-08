@@ -1,0 +1,359 @@
+\hypertarget{classMergeQuery}{
+\section{MergeQuery Class Reference}
+\label{classMergeQuery}\index{MergeQuery@{MergeQuery}}
+}
+Inheritance diagram for MergeQuery::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classMergeQuery}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMergeQuery_a05ba5cf13796317567a0344cf58a028c}{\_\-\_\-construct} (\hyperlink{classDatabaseConnection}{DatabaseConnection} \$connection, \$table, array \$options=array())
+\item 
+\hyperlink{classMergeQuery_ad5b51b48eaec3821181cf8e6c09bf29e}{updateFields} (array \$fields)
+\item 
+\hyperlink{classMergeQuery_a09f35077e2adc871dcdd75efedbeabe0}{expression} (\$field, \$expression, array \$arguments=NULL)
+\item 
+\hyperlink{classMergeQuery_a1c1fef20258dad469a0853fdaddaae4e}{insertFields} (array \$fields, array \$values=array())
+\item 
+\hyperlink{classMergeQuery_a630cdd152352b1229cc712ec261139cf}{useDefaults} (array \$fields)
+\item 
+\hyperlink{classMergeQuery_ae58f2865c72dfc4c310ec4c17fd4e72d}{fields} (array \$fields, array \$values=array())
+\item 
+\hyperlink{classMergeQuery_aa34f8ac97b0571d49fbc20557dfce97b}{key} (array \$fields, array \$values=array())
+\item 
+\hyperlink{classMergeQuery_a40d55b36952248da6d8eabb0eb1a8430}{condition} (\$field, \$value=NULL, \$operator=NULL)
+\item 
+\hyperlink{classMergeQuery_a010c4f710e0e242d9d89383a49573376}{isNull} (\$field)
+\item 
+\hyperlink{classMergeQuery_a6eda0759442dcb9cfa940e5ced5cc7ba}{isNotNull} (\$field)
+\item 
+\hyperlink{classMergeQuery_a0a92a08ad6933ecc4a796e9d50ea85f5}{exists} (\hyperlink{interfaceSelectQueryInterface}{SelectQueryInterface} \$select)
+\item 
+\hyperlink{classMergeQuery_a3749f7ccb2e71b8ff1570161418cbf2b}{notExists} (\hyperlink{interfaceSelectQueryInterface}{SelectQueryInterface} \$select)
+\item 
+\& \hyperlink{classMergeQuery_a759f840d106e79a119d9130d09123b8d}{conditions} ()
+\item 
+\hyperlink{classMergeQuery_aa059b4fd2916e10075582091bfa03975}{arguments} ()
+\item 
+\hyperlink{classMergeQuery_a1d46b2fc285ec9f402ac53800e3cd58f}{where} (\$snippet, \$args=array())
+\item 
+\hyperlink{classMergeQuery_a33436167b6e2ddc710b2a51db146ea67}{compile} (\hyperlink{classDatabaseConnection}{DatabaseConnection} \$connection, \hyperlink{interfaceQueryPlaceholderInterface}{QueryPlaceholderInterface} \$queryPlaceholder)
+\item 
+\hyperlink{classMergeQuery_ab6c0c905db976734e61d6ef997bd3a6a}{compiled} ()
+\item 
+\hyperlink{classMergeQuery_a66c98a8761c91bb633c4ea09ce0c467c}{\_\-\_\-toString} ()
+\item 
+\hyperlink{classMergeQuery_aeea46fdb119752efd2048d66b9fe8de8}{execute} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classMergeQuery_a42f1aad21544decc65082fc10fd2d68a}{STATUS\_\-INSERT} = 1
+\item 
+const \hyperlink{classMergeQuery_ad79d3ece9a03a3a63bef6560e90fc776}{STATUS\_\-UPDATE} = 2
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMergeQuery_a0dbb5c2ac711fede2344a02cc49b0efb}{conditionTable} (\$table)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMergeQuery_ae375df4f0a8f48bf72fe6ab37260fd80}{
+{\bfseries \$table}}
+\label{classMergeQuery_ae375df4f0a8f48bf72fe6ab37260fd80}
+
+\item 
+\hyperlink{classMergeQuery_a8f593caec31bdbc33f24bd741a58a6e5}{\$conditionTable}
+\item 
+\hypertarget{classMergeQuery_a9e1b39641ffd4d38d1a2841093e9e7a2}{
+{\bfseries \$insertFields} = array()}
+\label{classMergeQuery_a9e1b39641ffd4d38d1a2841093e9e7a2}
+
+\item 
+\hypertarget{classMergeQuery_aeb3068d044d43b3e42e79a669fa12d2b}{
+{\bfseries \$defaultFields} = array()}
+\label{classMergeQuery_aeb3068d044d43b3e42e79a669fa12d2b}
+
+\item 
+\hypertarget{classMergeQuery_aac37e8468f4dcc9c32d4f9cc35500a63}{
+{\bfseries \$insertValues} = array()}
+\label{classMergeQuery_aac37e8468f4dcc9c32d4f9cc35500a63}
+
+\item 
+\hypertarget{classMergeQuery_af645d2050434800e71ad0752f2bd7733}{
+{\bfseries \$updateFields} = array()}
+\label{classMergeQuery_af645d2050434800e71ad0752f2bd7733}
+
+\item 
+\hypertarget{classMergeQuery_a6f164b0b45b4b6b87b3cdee3e33d6a1d}{
+{\bfseries \$expressionFields} = array()}
+\label{classMergeQuery_a6f164b0b45b4b6b87b3cdee3e33d6a1d}
+
+\item 
+\hypertarget{classMergeQuery_a2aa680e4b114585b291446f9f0d887e4}{
+{\bfseries \$needsUpdate} = FALSE}
+\label{classMergeQuery_a2aa680e4b114585b291446f9f0d887e4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+General class for an abstracted MERGE query operation.
+
+An ANSI SQL:2003 compatible database would run the following query:
+
+
+\begin{DoxyCode}
+ MERGE INTO table_name_1 USING table_name_2 ON (condition)
+   WHEN MATCHED THEN
+   UPDATE SET column1 = value1 [, column2 = value2 ...]
+   WHEN NOT MATCHED THEN
+   INSERT (column1 [, column2 ...]) VALUES (value1 [, value2 ...
+\end{DoxyCode}
+
+
+Other databases (most notably MySQL, PostgreSQL and SQLite) will emulate this statement by running a SELECT and then INSERT or UPDATE.
+
+By default, the two table names are identical and they are passed into the the constructor. table\_\-name\_\-2 can be specified by the \hyperlink{classMergeQuery_a0dbb5c2ac711fede2344a02cc49b0efb}{MergeQuery::conditionTable()} method. It can be either a string or a subquery.
+
+The condition is built exactly like \hyperlink{classSelectQuery}{SelectQuery} or \hyperlink{classUpdateQuery}{UpdateQuery} conditions, the UPDATE query part is built similarly like an \hyperlink{classUpdateQuery}{UpdateQuery} and finally the INSERT query part is built similarly like an \hyperlink{classInsertQuery}{InsertQuery}. However, both \hyperlink{classUpdateQuery}{UpdateQuery} and \hyperlink{classInsertQuery}{InsertQuery} has a fields method so \hyperlink{classMergeQuery_ad5b51b48eaec3821181cf8e6c09bf29e}{MergeQuery::updateFields()} and \hyperlink{classMergeQuery_a1c1fef20258dad469a0853fdaddaae4e}{MergeQuery::insertFields()} needs to be called instead. \hyperlink{classMergeQuery_ae58f2865c72dfc4c310ec4c17fd4e72d}{MergeQuery::fields()} can also be called which calls both of these methods as the common case is to use the same column-\/value pairs for both INSERT and UPDATE. However, this is not mandatory. Another convinient wrapper is \hyperlink{classMergeQuery_aa34f8ac97b0571d49fbc20557dfce97b}{MergeQuery::key()} which adds the same column-\/value pairs to the condition and the INSERT query part.
+
+Several methods (\hyperlink{classMergeQuery_aa34f8ac97b0571d49fbc20557dfce97b}{key()}, \hyperlink{classMergeQuery_ae58f2865c72dfc4c310ec4c17fd4e72d}{fields()}, \hyperlink{classMergeQuery_a1c1fef20258dad469a0853fdaddaae4e}{insertFields()}) can be called to set a key-\/value pair for the INSERT query part. Subsequent calls for the same fields override the earlier ones. The same is true for UPDATE and \hyperlink{classMergeQuery_aa34f8ac97b0571d49fbc20557dfce97b}{key()}, \hyperlink{classMergeQuery_ae58f2865c72dfc4c310ec4c17fd4e72d}{fields()} and \hyperlink{classMergeQuery_ad5b51b48eaec3821181cf8e6c09bf29e}{updateFields()}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMergeQuery_a05ba5cf13796317567a0344cf58a028c}{
+\index{MergeQuery@{MergeQuery}!\_\-\_\-construct@{\_\-\_\-construct}}
+\index{\_\-\_\-construct@{\_\-\_\-construct}!MergeQuery@{MergeQuery}}
+\subsubsection[{\_\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::\_\-\_\-construct ({\bf DatabaseConnection} \$ {\em connection}, \/  \$ {\em table}, \/  array \$ {\em options} = {\ttfamily array()})}}
+\label{classMergeQuery_a05ba5cf13796317567a0344cf58a028c}
+Constructs a \hyperlink{classMergeQuery}{MergeQuery} object.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{classDatabaseConnection}{DatabaseConnection}}]\$connection A \hyperlink{classDatabaseConnection}{DatabaseConnection} object. \item[{\em string}]\$table Name of the table to associate with this query. \item[{\em array}]\$options Array of database options. \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMergeQuery_a66c98a8761c91bb633c4ea09ce0c467c}{
+\index{MergeQuery@{MergeQuery}!\_\-\_\-toString@{\_\-\_\-toString}}
+\index{\_\-\_\-toString@{\_\-\_\-toString}!MergeQuery@{MergeQuery}}
+\subsubsection[{\_\-\_\-toString}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::\_\-\_\-toString ()}}
+\label{classMergeQuery_a66c98a8761c91bb633c4ea09ce0c467c}
+Implements PHP magic \_\-\_\-toString method to convert the query to a string.
+
+In the degenerate case, there is no string-\/able query as this operation is potentially two queries.
+
+\begin{DoxyReturn}{Returns}
+string The prepared query statement. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classQuery_a16c3a3265666b784d49ce18a6fda9a8a}{Query}.\hypertarget{classMergeQuery_aa059b4fd2916e10075582091bfa03975}{
+\index{MergeQuery@{MergeQuery}!arguments@{arguments}}
+\index{arguments@{arguments}!MergeQuery@{MergeQuery}}
+\subsubsection[{arguments}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::arguments ()}}
+\label{classMergeQuery_aa059b4fd2916e10075582091bfa03975}
+Implements \hyperlink{interfaceQueryConditionInterface_ac2349e02d5332412182cf472ba1a1b1e}{QueryConditionInterface::arguments()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_ac2349e02d5332412182cf472ba1a1b1e}{QueryConditionInterface}.\hypertarget{classMergeQuery_a33436167b6e2ddc710b2a51db146ea67}{
+\index{MergeQuery@{MergeQuery}!compile@{compile}}
+\index{compile@{compile}!MergeQuery@{MergeQuery}}
+\subsubsection[{compile}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::compile ({\bf DatabaseConnection} \$ {\em connection}, \/  {\bf QueryPlaceholderInterface} \$ {\em queryPlaceholder})}}
+\label{classMergeQuery_a33436167b6e2ddc710b2a51db146ea67}
+Implements \hyperlink{interfaceQueryConditionInterface_ad409672ac9ac50787eec52ecdf5a60b1}{QueryConditionInterface::compile()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_ad409672ac9ac50787eec52ecdf5a60b1}{QueryConditionInterface}.\hypertarget{classMergeQuery_ab6c0c905db976734e61d6ef997bd3a6a}{
+\index{MergeQuery@{MergeQuery}!compiled@{compiled}}
+\index{compiled@{compiled}!MergeQuery@{MergeQuery}}
+\subsubsection[{compiled}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::compiled ()}}
+\label{classMergeQuery_ab6c0c905db976734e61d6ef997bd3a6a}
+Implements \hyperlink{interfaceQueryConditionInterface_a4aac3f4505275edecad9c22351e591cb}{QueryConditionInterface::compiled()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_a4aac3f4505275edecad9c22351e591cb}{QueryConditionInterface}.\hypertarget{classMergeQuery_a40d55b36952248da6d8eabb0eb1a8430}{
+\index{MergeQuery@{MergeQuery}!condition@{condition}}
+\index{condition@{condition}!MergeQuery@{MergeQuery}}
+\subsubsection[{condition}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::condition (\$ {\em field}, \/  \$ {\em value} = {\ttfamily NULL}, \/  \$ {\em operator} = {\ttfamily NULL})}}
+\label{classMergeQuery_a40d55b36952248da6d8eabb0eb1a8430}
+Implements \hyperlink{interfaceQueryConditionInterface_aa6d9d96fa17441b5222d1ffddd4c1799}{QueryConditionInterface::condition()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_aa6d9d96fa17441b5222d1ffddd4c1799}{QueryConditionInterface}.\hypertarget{classMergeQuery_a759f840d106e79a119d9130d09123b8d}{
+\index{MergeQuery@{MergeQuery}!conditions@{conditions}}
+\index{conditions@{conditions}!MergeQuery@{MergeQuery}}
+\subsubsection[{conditions}]{\setlength{\rightskip}{0pt plus 5cm}\& MergeQuery::conditions ()}}
+\label{classMergeQuery_a759f840d106e79a119d9130d09123b8d}
+Implements \hyperlink{interfaceQueryConditionInterface_a894cc290ed61feb3693b1d459ae86888}{QueryConditionInterface::conditions()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_a894cc290ed61feb3693b1d459ae86888}{QueryConditionInterface}.\hypertarget{classMergeQuery_a0dbb5c2ac711fede2344a02cc49b0efb}{
+\index{MergeQuery@{MergeQuery}!conditionTable@{conditionTable}}
+\index{conditionTable@{conditionTable}!MergeQuery@{MergeQuery}}
+\subsubsection[{conditionTable}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::conditionTable (\$ {\em table})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classMergeQuery_a0dbb5c2ac711fede2344a02cc49b0efb}
+Sets the table or subquery to be used for the condition.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$table}]The table name or the subquery to be used. Use a \hyperlink{classSelectQuery}{SelectQuery} object to pass in a subquery.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classMergeQuery}{MergeQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classMergeQuery_aeea46fdb119752efd2048d66b9fe8de8}{
+\index{MergeQuery@{MergeQuery}!execute@{execute}}
+\index{execute@{execute}!MergeQuery@{MergeQuery}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::execute ()}}
+\label{classMergeQuery_aeea46fdb119752efd2048d66b9fe8de8}
+Runs the query against the database. 
+
+Reimplemented from \hyperlink{classQuery_a9f2326187a94f3337a7838687b1e6929}{Query}.\hypertarget{classMergeQuery_a0a92a08ad6933ecc4a796e9d50ea85f5}{
+\index{MergeQuery@{MergeQuery}!exists@{exists}}
+\index{exists@{exists}!MergeQuery@{MergeQuery}}
+\subsubsection[{exists}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::exists ({\bf SelectQueryInterface} \$ {\em select})}}
+\label{classMergeQuery_a0a92a08ad6933ecc4a796e9d50ea85f5}
+Implements \hyperlink{interfaceQueryConditionInterface_a27a52b6e84393275ad2c54eaf1bd764a}{QueryConditionInterface::exists()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_a27a52b6e84393275ad2c54eaf1bd764a}{QueryConditionInterface}.\hypertarget{classMergeQuery_a09f35077e2adc871dcdd75efedbeabe0}{
+\index{MergeQuery@{MergeQuery}!expression@{expression}}
+\index{expression@{expression}!MergeQuery@{MergeQuery}}
+\subsubsection[{expression}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::expression (\$ {\em field}, \/  \$ {\em expression}, \/  array \$ {\em arguments} = {\ttfamily NULL})}}
+\label{classMergeQuery_a09f35077e2adc871dcdd75efedbeabe0}
+Specifies fields to be updated as an expression.
+
+Expression fields are cases such as counter = counter + 1. This method takes precedence over \hyperlink{classMergeQuery_ad5b51b48eaec3821181cf8e6c09bf29e}{MergeQuery::updateFields()} and it's wrappers, \hyperlink{classMergeQuery_aa34f8ac97b0571d49fbc20557dfce97b}{MergeQuery::key()} and \hyperlink{classMergeQuery_ae58f2865c72dfc4c310ec4c17fd4e72d}{MergeQuery::fields()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field}]The field to set. \item[{\em \$expression}]The field will be set to the value of this expression. This parameter may include named placeholders. \item[{\em \$arguments}]If specified, this is an array of key/value pairs for named placeholders corresponding to the expression.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classMergeQuery}{MergeQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classMergeQuery_ae58f2865c72dfc4c310ec4c17fd4e72d}{
+\index{MergeQuery@{MergeQuery}!fields@{fields}}
+\index{fields@{fields}!MergeQuery@{MergeQuery}}
+\subsubsection[{fields}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::fields (array \$ {\em fields}, \/  array \$ {\em values} = {\ttfamily array()})}}
+\label{classMergeQuery_ae58f2865c72dfc4c310ec4c17fd4e72d}
+Sets common field-\/value pairs in the INSERT and UPDATE query parts.
+
+This method should only be called once. It may be called either with a single associative array or two indexed arrays. If called with an associative array, the keys are taken to be the fields and the values are taken to be the corresponding values to set. If called with two arrays, the first array is taken as the fields and the second array is taken as the corresponding values.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$fields}]An array of fields to insert, or an associative array of fields and values. The keys of the array are taken to be the fields and the values are taken to be corresponding values to insert. \item[{\em \$values}]An array of values to set into the database. The values must be specified in the same order as the \$fields array.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classMergeQuery}{MergeQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classMergeQuery_a1c1fef20258dad469a0853fdaddaae4e}{
+\index{MergeQuery@{MergeQuery}!insertFields@{insertFields}}
+\index{insertFields@{insertFields}!MergeQuery@{MergeQuery}}
+\subsubsection[{insertFields}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::insertFields (array \$ {\em fields}, \/  array \$ {\em values} = {\ttfamily array()})}}
+\label{classMergeQuery_a1c1fef20258dad469a0853fdaddaae4e}
+Adds a set of field-\/$>$value pairs to be inserted.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$fields}]An array of fields on which to insert. This array may be indexed or associative. If indexed, the array is taken to be the list of fields. If associative, the keys of the array are taken to be the fields and the values are taken to be corresponding values to insert. If a \$values argument is provided, \$fields must be indexed. \item[{\em \$values}]An array of fields to insert into the database. The values must be specified in the same order as the \$fields array.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classMergeQuery}{MergeQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classMergeQuery_a6eda0759442dcb9cfa940e5ced5cc7ba}{
+\index{MergeQuery@{MergeQuery}!isNotNull@{isNotNull}}
+\index{isNotNull@{isNotNull}!MergeQuery@{MergeQuery}}
+\subsubsection[{isNotNull}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::isNotNull (\$ {\em field})}}
+\label{classMergeQuery_a6eda0759442dcb9cfa940e5ced5cc7ba}
+Implements \hyperlink{interfaceQueryConditionInterface_a8bbb6acc9c72911b165cf6eb1dc31453}{QueryConditionInterface::isNotNull()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_a8bbb6acc9c72911b165cf6eb1dc31453}{QueryConditionInterface}.\hypertarget{classMergeQuery_a010c4f710e0e242d9d89383a49573376}{
+\index{MergeQuery@{MergeQuery}!isNull@{isNull}}
+\index{isNull@{isNull}!MergeQuery@{MergeQuery}}
+\subsubsection[{isNull}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::isNull (\$ {\em field})}}
+\label{classMergeQuery_a010c4f710e0e242d9d89383a49573376}
+Implements \hyperlink{interfaceQueryConditionInterface_a2978b536a3fe62b21e940366c9cb5923}{QueryConditionInterface::isNull()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_a2978b536a3fe62b21e940366c9cb5923}{QueryConditionInterface}.\hypertarget{classMergeQuery_aa34f8ac97b0571d49fbc20557dfce97b}{
+\index{MergeQuery@{MergeQuery}!key@{key}}
+\index{key@{key}!MergeQuery@{MergeQuery}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::key (array \$ {\em fields}, \/  array \$ {\em values} = {\ttfamily array()})}}
+\label{classMergeQuery_aa34f8ac97b0571d49fbc20557dfce97b}
+Sets the key field(s) to be used as conditions for this query.
+
+This method should only be called once. It may be called either with a single associative array or two indexed arrays. If called with an associative array, the keys are taken to be the fields and the values are taken to be the corresponding values to set. If called with two arrays, the first array is taken as the fields and the second array is taken as the corresponding values.
+
+The fields are copied to the condition of the query and the INSERT part. If no other method is called, the UPDATE will become a no-\/op.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$fields}]An array of fields to set, or an associative array of fields and values. \item[{\em \$values}]An array of values to set into the database. The values must be specified in the same order as the \$fields array.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classMergeQuery}{MergeQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classMergeQuery_a3749f7ccb2e71b8ff1570161418cbf2b}{
+\index{MergeQuery@{MergeQuery}!notExists@{notExists}}
+\index{notExists@{notExists}!MergeQuery@{MergeQuery}}
+\subsubsection[{notExists}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::notExists ({\bf SelectQueryInterface} \$ {\em select})}}
+\label{classMergeQuery_a3749f7ccb2e71b8ff1570161418cbf2b}
+Implements \hyperlink{interfaceQueryConditionInterface_a8aae11796846850edbf8caa3a9d4afcd}{QueryConditionInterface::notExists()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_a8aae11796846850edbf8caa3a9d4afcd}{QueryConditionInterface}.\hypertarget{classMergeQuery_ad5b51b48eaec3821181cf8e6c09bf29e}{
+\index{MergeQuery@{MergeQuery}!updateFields@{updateFields}}
+\index{updateFields@{updateFields}!MergeQuery@{MergeQuery}}
+\subsubsection[{updateFields}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::updateFields (array \$ {\em fields})}}
+\label{classMergeQuery_ad5b51b48eaec3821181cf8e6c09bf29e}
+Adds a set of field-\/$>$value pairs to be updated.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$fields}]An associative array of fields to write into the database. The array keys are the field names and the values are the values to which to set them.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classMergeQuery}{MergeQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classMergeQuery_a630cdd152352b1229cc712ec261139cf}{
+\index{MergeQuery@{MergeQuery}!useDefaults@{useDefaults}}
+\index{useDefaults@{useDefaults}!MergeQuery@{MergeQuery}}
+\subsubsection[{useDefaults}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::useDefaults (array \$ {\em fields})}}
+\label{classMergeQuery_a630cdd152352b1229cc712ec261139cf}
+Specifies fields for which the database-\/defaults should be used.
+
+If you want to force a given field to use the database-\/defined default, not NULL or undefined, use this method to instruct the database to use default values explicitly. In most cases this will not be necessary unless you are inserting a row that is all default values, as you cannot specify no values in an INSERT query.
+
+Specifying a field both in \hyperlink{classMergeQuery_ae58f2865c72dfc4c310ec4c17fd4e72d}{fields()} and in \hyperlink{classMergeQuery_a630cdd152352b1229cc712ec261139cf}{useDefaults()} is an error and will not execute.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$fields}]An array of values for which to use the default values specified in the table definition.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classMergeQuery}{MergeQuery} The called object. 
+\end{DoxyReturn}
+\hypertarget{classMergeQuery_a1d46b2fc285ec9f402ac53800e3cd58f}{
+\index{MergeQuery@{MergeQuery}!where@{where}}
+\index{where@{where}!MergeQuery@{MergeQuery}}
+\subsubsection[{where}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::where (\$ {\em snippet}, \/  \$ {\em args} = {\ttfamily array()})}}
+\label{classMergeQuery_a1d46b2fc285ec9f402ac53800e3cd58f}
+Implements \hyperlink{interfaceQueryConditionInterface_a42c03c74dd81ef6d77041e67ec12e735}{QueryConditionInterface::where()}. 
+
+Implements \hyperlink{interfaceQueryConditionInterface_a42c03c74dd81ef6d77041e67ec12e735}{QueryConditionInterface}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classMergeQuery_a8f593caec31bdbc33f24bd741a58a6e5}{
+\index{MergeQuery@{MergeQuery}!\$conditionTable@{\$conditionTable}}
+\index{\$conditionTable@{\$conditionTable}!MergeQuery@{MergeQuery}}
+\subsubsection[{\$conditionTable}]{\setlength{\rightskip}{0pt plus 5cm}MergeQuery::\$conditionTable\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classMergeQuery_a8f593caec31bdbc33f24bd741a58a6e5}
+The table or subquery to be used for the condition. \hypertarget{classMergeQuery_a42f1aad21544decc65082fc10fd2d68a}{
+\index{MergeQuery@{MergeQuery}!STATUS\_\-INSERT@{STATUS\_\-INSERT}}
+\index{STATUS\_\-INSERT@{STATUS\_\-INSERT}!MergeQuery@{MergeQuery}}
+\subsubsection[{STATUS\_\-INSERT}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MergeQuery::STATUS\_\-INSERT} = 1}}
+\label{classMergeQuery_a42f1aad21544decc65082fc10fd2d68a}
+Returned by \hyperlink{classMergeQuery_aeea46fdb119752efd2048d66b9fe8de8}{execute()} if an INSERT query has been executed. \hypertarget{classMergeQuery_ad79d3ece9a03a3a63bef6560e90fc776}{
+\index{MergeQuery@{MergeQuery}!STATUS\_\-UPDATE@{STATUS\_\-UPDATE}}
+\index{STATUS\_\-UPDATE@{STATUS\_\-UPDATE}!MergeQuery@{MergeQuery}}
+\subsubsection[{STATUS\_\-UPDATE}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MergeQuery::STATUS\_\-UPDATE} = 2}}
+\label{classMergeQuery_ad79d3ece9a03a3a63bef6560e90fc776}
+Returned by \hyperlink{classMergeQuery_aeea46fdb119752efd2048d66b9fe8de8}{execute()} if an UPDATE query has been executed. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/database/\hyperlink{query_8inc}{query.inc}\end{DoxyCompactItemize}

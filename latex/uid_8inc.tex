@@ -1,0 +1,52 @@
+\hypertarget{uid_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/uid.inc File Reference}
+\label{uid_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/uid.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/uid.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{uid_8inc_a34b197765508df033c3e5cc5a0699b92}{ctools\_\-argument\_\-uid\_\-context} (\$arg=NULL, \$conf=NULL, \$empty=FALSE)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{uid_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide an argument handler for a user id 
+
+\subsection{Function Documentation}
+\hypertarget{uid_8inc_a34b197765508df033c3e5cc5a0699b92}{
+\index{uid.inc@{uid.inc}!ctools\_\-argument\_\-uid\_\-context@{ctools\_\-argument\_\-uid\_\-context}}
+\index{ctools\_\-argument\_\-uid\_\-context@{ctools\_\-argument\_\-uid\_\-context}!uid.inc@{uid.inc}}
+\subsubsection[{ctools\_\-argument\_\-uid\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-argument\_\-uid\_\-context (\$ {\em arg} = {\ttfamily NULL}, \/  \$ {\em conf} = {\ttfamily NULL}, \/  \$ {\em empty} = {\ttfamily FALSE})}}
+\label{uid_8inc_a34b197765508df033c3e5cc5a0699b92}
+Discover if this argument gives us the user we crave. 
+
+\subsection{Variable Documentation}
+\hypertarget{uid_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{uid.inc@{uid.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!uid.inc@{uid.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{uid_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t("User: ID"),
+  
+  'keyword' => 'user',
+  'description' => t('Creates a user context from a user ID argument.'),
+  'context' => 'ctools_argument_uid_context',
+  'placeholder form' => array(
+    '#type' => 'textfield',
+    '#description' => t('Enter the user ID of a user for this argument'),
+  ),
+  'default' => array('to_arg' => TRUE),
+  'path placeholder' => '%pm_uid_arg', 
+  'path placeholder to_arg' => TRUE,
+  'no ui' => TRUE,
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

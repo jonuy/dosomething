@@ -1,0 +1,77 @@
+\hypertarget{page__manager_2plugins_2tasks_2user__edit_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/page\_\-manager/plugins/tasks/user\_\-edit.inc File Reference}
+\label{page__manager_2plugins_2tasks_2user__edit_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/page\_\-manager/plugins/tasks/user\_\-edit.inc@{html/profiles/dosomething/modules/contrib/ctools/page\_\-manager/plugins/tasks/user\_\-edit.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{page__manager_2plugins_2tasks_2user__edit_8inc_a8797d6dc72d52669429c95da19e760a6}{
+{\bfseries page\_\-manager\_\-user\_\-edit\_\-page\_\-manager\_\-tasks} ()}
+\label{page__manager_2plugins_2tasks_2user__edit_8inc_a8797d6dc72d52669429c95da19e760a6}
+
+\item 
+\hyperlink{page__manager_2plugins_2tasks_2user__edit_8inc_a46396f0acbd06ad364b85eeb374fbf84}{page\_\-manager\_\-user\_\-edit\_\-menu\_\-alter} (\&\$items, \$task)
+\item 
+\hyperlink{page__manager_2plugins_2tasks_2user__edit_8inc_abbda6f20e41f20d21543a539cbdb907f}{page\_\-manager\_\-user\_\-edit\_\-page} (\$account, \$category= 'account')
+\item 
+\hyperlink{page__manager_2plugins_2tasks_2user__edit_8inc_a3df388f9ce4f5d83b302a54261a83e8f}{page\_\-manager\_\-user\_\-edit\_\-get\_\-arguments} (\$task, \$subtask\_\-id)
+\item 
+\hyperlink{page__manager_2plugins_2tasks_2user__edit_8inc_a3c42b9d145a377d9575194d0bfb10851}{page\_\-manager\_\-user\_\-edit\_\-get\_\-contexts} (\$task, \$subtask\_\-id)
+\item 
+\hyperlink{page__manager_2plugins_2tasks_2user__edit_8inc_ac1cbd172da63121ed916e9923d27882a}{page\_\-manager\_\-user\_\-edit\_\-enable} (\$cache, \$status)
+\item 
+\hyperlink{page__manager_2plugins_2tasks_2user__edit_8inc_ab50a9d4e709806fca20037b4ef199fa3}{page\_\-manager\_\-user\_\-edit\_\-access\_\-check} (\$task, \$subtask\_\-id, \$contexts)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Overrides the user profile display at user/user.
+
+Specialized implementation of hook\_\-page\_\-manager\_\-task\_\-tasks(). See api-\/task.html for more information. 
+
+\subsection{Function Documentation}
+\hypertarget{page__manager_2plugins_2tasks_2user__edit_8inc_ab50a9d4e709806fca20037b4ef199fa3}{
+\index{page\_\-manager/plugins/tasks/user\_\-edit.inc@{page\_\-manager/plugins/tasks/user\_\-edit.inc}!page\_\-manager\_\-user\_\-edit\_\-access\_\-check@{page\_\-manager\_\-user\_\-edit\_\-access\_\-check}}
+\index{page\_\-manager\_\-user\_\-edit\_\-access\_\-check@{page\_\-manager\_\-user\_\-edit\_\-access\_\-check}!page_manager/plugins/tasks/user_edit.inc@{page\_\-manager/plugins/tasks/user\_\-edit.inc}}
+\subsubsection[{page\_\-manager\_\-user\_\-edit\_\-access\_\-check}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-user\_\-edit\_\-access\_\-check (\$ {\em task}, \/  \$ {\em subtask\_\-id}, \/  \$ {\em contexts})}}
+\label{page__manager_2plugins_2tasks_2user__edit_8inc_ab50a9d4e709806fca20037b4ef199fa3}
+Callback to determine if a page is accessible.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$task}]The task plugin. \item[{\em \$subtask\_\-id}]The subtask id \item[{\em \$contexts}]The contexts loaded for the task. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the current user can access the page. 
+\end{DoxyReturn}
+\hypertarget{page__manager_2plugins_2tasks_2user__edit_8inc_ac1cbd172da63121ed916e9923d27882a}{
+\index{page\_\-manager/plugins/tasks/user\_\-edit.inc@{page\_\-manager/plugins/tasks/user\_\-edit.inc}!page\_\-manager\_\-user\_\-edit\_\-enable@{page\_\-manager\_\-user\_\-edit\_\-enable}}
+\index{page\_\-manager\_\-user\_\-edit\_\-enable@{page\_\-manager\_\-user\_\-edit\_\-enable}!page_manager/plugins/tasks/user_edit.inc@{page\_\-manager/plugins/tasks/user\_\-edit.inc}}
+\subsubsection[{page\_\-manager\_\-user\_\-edit\_\-enable}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-user\_\-edit\_\-enable (\$ {\em cache}, \/  \$ {\em status})}}
+\label{page__manager_2plugins_2tasks_2user__edit_8inc_ac1cbd172da63121ed916e9923d27882a}
+Callback to enable/disable the page from the UI. \hypertarget{page__manager_2plugins_2tasks_2user__edit_8inc_a3df388f9ce4f5d83b302a54261a83e8f}{
+\index{page\_\-manager/plugins/tasks/user\_\-edit.inc@{page\_\-manager/plugins/tasks/user\_\-edit.inc}!page\_\-manager\_\-user\_\-edit\_\-get\_\-arguments@{page\_\-manager\_\-user\_\-edit\_\-get\_\-arguments}}
+\index{page\_\-manager\_\-user\_\-edit\_\-get\_\-arguments@{page\_\-manager\_\-user\_\-edit\_\-get\_\-arguments}!page_manager/plugins/tasks/user_edit.inc@{page\_\-manager/plugins/tasks/user\_\-edit.inc}}
+\subsubsection[{page\_\-manager\_\-user\_\-edit\_\-get\_\-arguments}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-user\_\-edit\_\-get\_\-arguments (\$ {\em task}, \/  \$ {\em subtask\_\-id})}}
+\label{page__manager_2plugins_2tasks_2user__edit_8inc_a3df388f9ce4f5d83b302a54261a83e8f}
+Callback to get arguments provided by this task handler.
+
+Since this is the node \hyperlink{classview}{view} and there is no UI on the arguments, we create dummy arguments that contain the needed data. \hypertarget{page__manager_2plugins_2tasks_2user__edit_8inc_a3c42b9d145a377d9575194d0bfb10851}{
+\index{page\_\-manager/plugins/tasks/user\_\-edit.inc@{page\_\-manager/plugins/tasks/user\_\-edit.inc}!page\_\-manager\_\-user\_\-edit\_\-get\_\-contexts@{page\_\-manager\_\-user\_\-edit\_\-get\_\-contexts}}
+\index{page\_\-manager\_\-user\_\-edit\_\-get\_\-contexts@{page\_\-manager\_\-user\_\-edit\_\-get\_\-contexts}!page_manager/plugins/tasks/user_edit.inc@{page\_\-manager/plugins/tasks/user\_\-edit.inc}}
+\subsubsection[{page\_\-manager\_\-user\_\-edit\_\-get\_\-contexts}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-user\_\-edit\_\-get\_\-contexts (\$ {\em task}, \/  \$ {\em subtask\_\-id})}}
+\label{page__manager_2plugins_2tasks_2user__edit_8inc_a3c42b9d145a377d9575194d0bfb10851}
+Callback to get context placeholders provided by this handler. \hypertarget{page__manager_2plugins_2tasks_2user__edit_8inc_a46396f0acbd06ad364b85eeb374fbf84}{
+\index{page\_\-manager/plugins/tasks/user\_\-edit.inc@{page\_\-manager/plugins/tasks/user\_\-edit.inc}!page\_\-manager\_\-user\_\-edit\_\-menu\_\-alter@{page\_\-manager\_\-user\_\-edit\_\-menu\_\-alter}}
+\index{page\_\-manager\_\-user\_\-edit\_\-menu\_\-alter@{page\_\-manager\_\-user\_\-edit\_\-menu\_\-alter}!page_manager/plugins/tasks/user_edit.inc@{page\_\-manager/plugins/tasks/user\_\-edit.inc}}
+\subsubsection[{page\_\-manager\_\-user\_\-edit\_\-menu\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-user\_\-edit\_\-menu\_\-alter (\&\$ {\em items}, \/  \$ {\em task})}}
+\label{page__manager_2plugins_2tasks_2user__edit_8inc_a46396f0acbd06ad364b85eeb374fbf84}
+Callback defined by page\_\-manager\_\-user\_\-view\_\-page\_\-manager\_\-tasks().
+
+Alter the user \hyperlink{classview}{view} input so that user \hyperlink{classview}{view} comes to us rather than the normal user \hyperlink{classview}{view} process. \hypertarget{page__manager_2plugins_2tasks_2user__edit_8inc_abbda6f20e41f20d21543a539cbdb907f}{
+\index{page\_\-manager/plugins/tasks/user\_\-edit.inc@{page\_\-manager/plugins/tasks/user\_\-edit.inc}!page\_\-manager\_\-user\_\-edit\_\-page@{page\_\-manager\_\-user\_\-edit\_\-page}}
+\index{page\_\-manager\_\-user\_\-edit\_\-page@{page\_\-manager\_\-user\_\-edit\_\-page}!page_manager/plugins/tasks/user_edit.inc@{page\_\-manager/plugins/tasks/user\_\-edit.inc}}
+\subsubsection[{page\_\-manager\_\-user\_\-edit\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-user\_\-edit\_\-page (\$ {\em account}, \/  \$ {\em category} = {\ttfamily 'account'})}}
+\label{page__manager_2plugins_2tasks_2user__edit_8inc_abbda6f20e41f20d21543a539cbdb907f}
+Entry point for our overridden user \hyperlink{classview}{view}.
+
+This function asks its assigned handlers who, if anyone, would like to run with it. If no one does, it passes through to Drupal core's user edit, which is drupal\_\-get\_\-form('user\_\-profile\_\-form',\$account). 

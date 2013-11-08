@@ -1,0 +1,73 @@
+\hypertarget{group__update__manager__update}{
+\section{Update Manager module: update}
+\label{group__update__manager__update}\index{Update Manager module: update@{Update Manager module: update}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__update__manager__update_ga578871dbee92e6bcb2f48ba232554c27}{update\_\-manager\_\-update\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__update__manager__update_gaec3a60b324711da2e658cf10d9b85447}{update\_\-manager\_\-update\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__update__manager__update_ga50343ba82d02305076486ec30c543f1f}{update\_\-manager\_\-download\_\-batch\_\-finished} (\$success, \$results)
+\item 
+\hyperlink{group__update__manager__update_gaeab4690bf95cb0d0b517a0b9161e5045}{update\_\-manager\_\-update\_\-ready\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Update Manager module functionality for updating existing code.
+
+Provides a user interface to update existing code. 
+
+\subsection{Function Documentation}
+\hypertarget{group__update__manager__update_ga50343ba82d02305076486ec30c543f1f}{
+\index{update\_\-manager\_\-update@{update\_\-manager\_\-update}!update\_\-manager\_\-download\_\-batch\_\-finished@{update\_\-manager\_\-download\_\-batch\_\-finished}}
+\index{update\_\-manager\_\-download\_\-batch\_\-finished@{update\_\-manager\_\-download\_\-batch\_\-finished}!update_manager_update@{update\_\-manager\_\-update}}
+\subsubsection[{update\_\-manager\_\-download\_\-batch\_\-finished}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-manager\_\-download\_\-batch\_\-finished (\$ {\em success}, \/  \$ {\em results})}}
+\label{group__update__manager__update_ga50343ba82d02305076486ec30c543f1f}
+Batch callback: Performs actions when the download batch is completed.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$success}]TRUE if the batch operation was successful, FALSE if there were errors. \item[{\em \$results}]An associative array of results from the batch operation. \end{DoxyParams}
+\hypertarget{group__update__manager__update_gaec3a60b324711da2e658cf10d9b85447}{
+\index{update\_\-manager\_\-update@{update\_\-manager\_\-update}!update\_\-manager\_\-update\_\-form\_\-submit@{update\_\-manager\_\-update\_\-form\_\-submit}}
+\index{update\_\-manager\_\-update\_\-form\_\-submit@{update\_\-manager\_\-update\_\-form\_\-submit}!update_manager_update@{update\_\-manager\_\-update}}
+\subsubsection[{update\_\-manager\_\-update\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-manager\_\-update\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__update__manager__update_gaec3a60b324711da2e658cf10d9b85447}
+Form submission handler for \hyperlink{group__forms_ga0fa2e185b0bcbac10f995d964a199c65}{update\_\-manager\_\-update\_\-form()}.
+
+Sets up a batch that downloads, extracts, and verifies the selected releases.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__update__manager__update_ga578871dbee92e6bcb2f48ba232554c27}{update\_\-manager\_\-update\_\-form\_\-validate()} 
+\end{DoxySeeAlso}
+\hypertarget{group__update__manager__update_ga578871dbee92e6bcb2f48ba232554c27}{
+\index{update\_\-manager\_\-update@{update\_\-manager\_\-update}!update\_\-manager\_\-update\_\-form\_\-validate@{update\_\-manager\_\-update\_\-form\_\-validate}}
+\index{update\_\-manager\_\-update\_\-form\_\-validate@{update\_\-manager\_\-update\_\-form\_\-validate}!update_manager_update@{update\_\-manager\_\-update}}
+\subsubsection[{update\_\-manager\_\-update\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-manager\_\-update\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__update__manager__update_ga578871dbee92e6bcb2f48ba232554c27}
+Form validation handler for \hyperlink{group__forms_ga0fa2e185b0bcbac10f995d964a199c65}{update\_\-manager\_\-update\_\-form()}.
+
+Ensures that at least one project is selected.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__update__manager__update_gaec3a60b324711da2e658cf10d9b85447}{update\_\-manager\_\-update\_\-form\_\-submit()} 
+\end{DoxySeeAlso}
+\hypertarget{group__update__manager__update_gaeab4690bf95cb0d0b517a0b9161e5045}{
+\index{update\_\-manager\_\-update@{update\_\-manager\_\-update}!update\_\-manager\_\-update\_\-ready\_\-form\_\-submit@{update\_\-manager\_\-update\_\-ready\_\-form\_\-submit}}
+\index{update\_\-manager\_\-update\_\-ready\_\-form\_\-submit@{update\_\-manager\_\-update\_\-ready\_\-form\_\-submit}!update_manager_update@{update\_\-manager\_\-update}}
+\subsubsection[{update\_\-manager\_\-update\_\-ready\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-manager\_\-update\_\-ready\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__update__manager__update_gaeab4690bf95cb0d0b517a0b9161e5045}
+Form submission handler for \hyperlink{group__forms_gab1105c1314e1bd8822eef3cb16f78b26}{update\_\-manager\_\-update\_\-ready\_\-form()}.
+
+If the site administrator requested that the site is put offline during the update, do so now. Otherwise, pull information about all the required updates out of the SESSION, figure out what Drupal class is needed for each one, generate an array of update operations to perform, and hand it all off to \hyperlink{group__authorize_ga17756b29805705dbea25798d6004d5dd}{system\_\-authorized\_\-init()}, then redirect to \hyperlink{authorize_8php}{authorize.php}.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{update_8authorize_8inc_a640c629480dadbca39814ac8be63e21b}{update\_\-authorize\_\-run\_\-update()} 
+
+\hyperlink{group__authorize_ga17756b29805705dbea25798d6004d5dd}{system\_\-authorized\_\-init()} 
+
+\hyperlink{group__authorize_gab59393fbd369097724650dec4be9c1dd}{system\_\-authorized\_\-get\_\-url()} 
+\end{DoxySeeAlso}

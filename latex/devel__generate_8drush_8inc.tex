@@ -1,0 +1,66 @@
+\hypertarget{devel__generate_8drush_8inc}{
+\section{html/profiles/dosomething/modules/contrib/devel/devel\_\-generate/devel\_\-generate.drush.inc File Reference}
+\label{devel__generate_8drush_8inc}\index{html/profiles/dosomething/modules/contrib/devel/devel\_\-generate/devel\_\-generate.drush.inc@{html/profiles/dosomething/modules/contrib/devel/devel\_\-generate/devel\_\-generate.drush.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{devel__generate_8drush_8inc_a48ece25ef0179ad642de2574d97b6f59}{devel\_\-generate\_\-drush\_\-command} ()
+\item 
+\hyperlink{devel__generate_8drush_8inc_aa9e2153179489bacf746e63ce8d95141}{drush\_\-devel\_\-generate\_\-users} (\$num\_\-users=NULL)
+\item 
+\hyperlink{devel__generate_8drush_8inc_ac6e9ac6d26aa0fe2d1ac268e28c6c036}{drush\_\-devel\_\-generate\_\-terms} (\$vname=NULL, \$num\_\-terms=10)
+\item 
+\hyperlink{devel__generate_8drush_8inc_a64dcfae39a21d5c14ad6446bca087778}{drush\_\-devel\_\-generate\_\-vocabs} (\$num\_\-vocab=1)
+\item 
+\hyperlink{devel__generate_8drush_8inc_aa37a3deadce02df0570ef63f711025b6}{drush\_\-devel\_\-generate\_\-content} (\$num\_\-nodes=NULL, \$max\_\-comments=NULL)
+\item 
+\hyperlink{devel__generate_8drush_8inc_a7a543f5e7641e7fa1c6d9dee12d8b93b}{drush\_\-devel\_\-generate\_\-menus} (\$number\_\-menus=2, \$number\_\-links=50, \$max\_\-depth=3, \$max\_\-width=8)
+\item 
+\hypertarget{devel__generate_8drush_8inc_ad7811ffe1b7ff4baa636ef0af2893674}{
+{\bfseries drush\_\-generate\_\-is\_\-number} (\$number)}
+\label{devel__generate_8drush_8inc_ad7811ffe1b7ff4baa636ef0af2893674}
+
+\item 
+\hypertarget{devel__generate_8drush_8inc_a7fcd36436249aa4eda96c1d834ec6e8b}{
+{\bfseries drush\_\-generate\_\-include\_\-devel} ()}
+\label{devel__generate_8drush_8inc_a7fcd36436249aa4eda96c1d834ec6e8b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generate content, taxonomy, menu, and users via drush framework. 
+
+\subsection{Function Documentation}
+\hypertarget{devel__generate_8drush_8inc_a48ece25ef0179ad642de2574d97b6f59}{
+\index{devel\_\-generate.drush.inc@{devel\_\-generate.drush.inc}!devel\_\-generate\_\-drush\_\-command@{devel\_\-generate\_\-drush\_\-command}}
+\index{devel\_\-generate\_\-drush\_\-command@{devel\_\-generate\_\-drush\_\-command}!devel_generate.drush.inc@{devel\_\-generate.drush.inc}}
+\subsubsection[{devel\_\-generate\_\-drush\_\-command}]{\setlength{\rightskip}{0pt plus 5cm}devel\_\-generate\_\-drush\_\-command ()}}
+\label{devel__generate_8drush_8inc_a48ece25ef0179ad642de2574d97b6f59}
+Implementation of hook\_\-drush\_\-command(). \hypertarget{devel__generate_8drush_8inc_aa37a3deadce02df0570ef63f711025b6}{
+\index{devel\_\-generate.drush.inc@{devel\_\-generate.drush.inc}!drush\_\-devel\_\-generate\_\-content@{drush\_\-devel\_\-generate\_\-content}}
+\index{drush\_\-devel\_\-generate\_\-content@{drush\_\-devel\_\-generate\_\-content}!devel_generate.drush.inc@{devel\_\-generate.drush.inc}}
+\subsubsection[{drush\_\-devel\_\-generate\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}drush\_\-devel\_\-generate\_\-content (\$ {\em num\_\-nodes} = {\ttfamily NULL}, \/  \$ {\em max\_\-comments} = {\ttfamily NULL})}}
+\label{devel__generate_8drush_8inc_aa37a3deadce02df0570ef63f711025b6}
+Command callback. Generate a number of nodes and comments. \hypertarget{devel__generate_8drush_8inc_a7a543f5e7641e7fa1c6d9dee12d8b93b}{
+\index{devel\_\-generate.drush.inc@{devel\_\-generate.drush.inc}!drush\_\-devel\_\-generate\_\-menus@{drush\_\-devel\_\-generate\_\-menus}}
+\index{drush\_\-devel\_\-generate\_\-menus@{drush\_\-devel\_\-generate\_\-menus}!devel_generate.drush.inc@{devel\_\-generate.drush.inc}}
+\subsubsection[{drush\_\-devel\_\-generate\_\-menus}]{\setlength{\rightskip}{0pt plus 5cm}drush\_\-devel\_\-generate\_\-menus (\$ {\em number\_\-menus} = {\ttfamily 2}, \/  \$ {\em number\_\-links} = {\ttfamily 50}, \/  \$ {\em max\_\-depth} = {\ttfamily 3}, \/  \$ {\em max\_\-width} = {\ttfamily 8})}}
+\label{devel__generate_8drush_8inc_a7a543f5e7641e7fa1c6d9dee12d8b93b}
+Command callback. Generate a number of menus and menu links. \hypertarget{devel__generate_8drush_8inc_ac6e9ac6d26aa0fe2d1ac268e28c6c036}{
+\index{devel\_\-generate.drush.inc@{devel\_\-generate.drush.inc}!drush\_\-devel\_\-generate\_\-terms@{drush\_\-devel\_\-generate\_\-terms}}
+\index{drush\_\-devel\_\-generate\_\-terms@{drush\_\-devel\_\-generate\_\-terms}!devel_generate.drush.inc@{devel\_\-generate.drush.inc}}
+\subsubsection[{drush\_\-devel\_\-generate\_\-terms}]{\setlength{\rightskip}{0pt plus 5cm}drush\_\-devel\_\-generate\_\-terms (\$ {\em vname} = {\ttfamily NULL}, \/  \$ {\em num\_\-terms} = {\ttfamily 10})}}
+\label{devel__generate_8drush_8inc_ac6e9ac6d26aa0fe2d1ac268e28c6c036}
+Command callback. Generate a number of terms in given vocabs. \hypertarget{devel__generate_8drush_8inc_aa9e2153179489bacf746e63ce8d95141}{
+\index{devel\_\-generate.drush.inc@{devel\_\-generate.drush.inc}!drush\_\-devel\_\-generate\_\-users@{drush\_\-devel\_\-generate\_\-users}}
+\index{drush\_\-devel\_\-generate\_\-users@{drush\_\-devel\_\-generate\_\-users}!devel_generate.drush.inc@{devel\_\-generate.drush.inc}}
+\subsubsection[{drush\_\-devel\_\-generate\_\-users}]{\setlength{\rightskip}{0pt plus 5cm}drush\_\-devel\_\-generate\_\-users (\$ {\em num\_\-users} = {\ttfamily NULL})}}
+\label{devel__generate_8drush_8inc_aa9e2153179489bacf746e63ce8d95141}
+Command callback. Generate a number of users. \hypertarget{devel__generate_8drush_8inc_a64dcfae39a21d5c14ad6446bca087778}{
+\index{devel\_\-generate.drush.inc@{devel\_\-generate.drush.inc}!drush\_\-devel\_\-generate\_\-vocabs@{drush\_\-devel\_\-generate\_\-vocabs}}
+\index{drush\_\-devel\_\-generate\_\-vocabs@{drush\_\-devel\_\-generate\_\-vocabs}!devel_generate.drush.inc@{devel\_\-generate.drush.inc}}
+\subsubsection[{drush\_\-devel\_\-generate\_\-vocabs}]{\setlength{\rightskip}{0pt plus 5cm}drush\_\-devel\_\-generate\_\-vocabs (\$ {\em num\_\-vocab} = {\ttfamily 1})}}
+\label{devel__generate_8drush_8inc_a64dcfae39a21d5c14ad6446bca087778}
+Command callback. Generate a number of vocabularies. 

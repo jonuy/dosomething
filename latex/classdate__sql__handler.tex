@@ -1,0 +1,330 @@
+\hypertarget{classdate__sql__handler}{
+\section{date\_\-sql\_\-handler Class Reference}
+\label{classdate__sql__handler}\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdate__sql__handler_adcee5f97d8e796260dc0048e9ed2d24e}{\_\-\_\-construct} (\$date\_\-type=DATE\_\-DATETIME, \$local\_\-timezone=NULL, \$offset= '+00:00')
+\item 
+\hyperlink{classdate__sql__handler_a6ccfadfd3fdc10a73515a572a881874c}{db\_\-tz\_\-support} (\$reset=FALSE)
+\item 
+\hyperlink{classdate__sql__handler_a3b90dc8718e14ec4ae3b2ee7f2d81cfd}{set\_\-db\_\-timezone} (\$offset= '+00:00')
+\item 
+\hyperlink{classdate__sql__handler_a4c0829b7a4ab472cb070c19e1608dc7a}{get\_\-offset} (\$comp\_\-date=NULL)
+\item 
+\hyperlink{classdate__sql__handler_aab48696c365846196f8ff2ecb105d010}{sql\_\-field} (\$field, \$offset=NULL, \$comp\_\-date=NULL)
+\item 
+\hyperlink{classdate__sql__handler_a86e10af9491fe99da8c8c6239620f3de}{sql\_\-offset} (\$field, \$offset=NULL)
+\item 
+\hyperlink{classdate__sql__handler_acacf47cb3362f3455a7e872b51ccf660}{sql\_\-date\_\-math} (\$field, \$direction, \$count, \$granularity)
+\item 
+\hyperlink{classdate__sql__handler_a6e3a20d322159d5c704b5c06bbf2501b}{sql\_\-tz} (\$field, \$offset=NULL, \$comp\_\-date=NULL)
+\item 
+\hyperlink{classdate__sql__handler_ab64ba4906fa0a61312a2bc3072275243}{sql\_\-format} (\$format, \$field)
+\item 
+\hyperlink{classdate__sql__handler_a1a4028680e7d617328581eb7b5b779a9}{sql\_\-extract} (\$extract\_\-type, \$field)
+\item 
+\hyperlink{classdate__sql__handler_ac3532976b8e7c016775e71cf873dfffe}{sql\_\-where\_\-date} (\$type, \$field, \$operator, \$value, \$adjustment=NULL)
+\item 
+\hyperlink{classdate__sql__handler_a2e88fbe05ec50038f3df0d63a9548623}{sql\_\-where\_\-extract} (\$part, \$field, \$operator, \$value, \$adjustment=NULL)
+\item 
+\hyperlink{classdate__sql__handler_a6eafe804210a031a0057e8ff84eca6a8}{sql\_\-where\_\-format} (\$format, \$field, \$operator, \$value, \$adjustment=NULL)
+\item 
+\hyperlink{classdate__sql__handler_ae27e6fee0bc6f11a741b0501dc2c295f}{date\_\-parts} (\$limit=NULL)
+\item 
+\hyperlink{classdate__sql__handler_a867091165b26b483cbf7301978871d26}{part\_\-info} (\$op=NULL, \$part=NULL)
+\item 
+\hyperlink{classdate__sql__handler_a49b92ba3b97d3f770652c271591e524d}{complete\_\-date} (\$selected, \$type= 'now')
+\item 
+\hyperlink{classdate__sql__handler_ae87411b56e77408c61fbde01edf5b1d1}{format\_\-help} (\$format)
+\item 
+\hyperlink{classdate__sql__handler_af0dc94f9fde296bc8dce819235ba387b}{part\_\-is\_\-valid} (\$value, \$type)
+\item 
+\hyperlink{classdate__sql__handler_a3a8cc9c8c0f40515901e8a7bf6299439}{views\_\-formats} (\$granularity, \$type= 'sql')
+\item 
+\hyperlink{classdate__sql__handler_add4b2f59b4d1da58336ffa0afcd97f03}{granularity\_\-form} (\$granularity)
+\item 
+\hyperlink{classdate__sql__handler_a128dc221ac52eea10f324d94b2b73301}{arg\_\-parts} (\$argument)
+\item 
+\hyperlink{classdate__sql__handler_a13e12c367362a87b97038a3234957305}{arg\_\-replace} (\$arg)
+\item 
+\hyperlink{classdate__sql__handler_a4e05688eeafa5d0c9f2435d13a0bb2c2}{arg\_\-granularity} (\$arg)
+\item 
+\hyperlink{classdate__sql__handler_a3c56ad455684b8f9689980d5c1782a2b}{arg\_\-range} (\$arg)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classdate__sql__handler_aea2e0163af65b516a62b308c1b49f446}{
+{\bfseries \$db\_\-type} = NULL}
+\label{classdate__sql__handler_aea2e0163af65b516a62b308c1b49f446}
+
+\item 
+\hypertarget{classdate__sql__handler_a148a9358a5600912051054452a3cb72a}{
+{\bfseries \$date\_\-type} = DATE\_\-DATETIME}
+\label{classdate__sql__handler_a148a9358a5600912051054452a3cb72a}
+
+\item 
+\hypertarget{classdate__sql__handler_a82a646578b36fa438d8541e6f93a7b51}{
+{\bfseries \$db\_\-timezone} = 'UTC'}
+\label{classdate__sql__handler_a82a646578b36fa438d8541e6f93a7b51}
+
+\item 
+\hypertarget{classdate__sql__handler_a1372c5a1a1897cbfb5d8d67c9bbd2b56}{
+{\bfseries \$local\_\-timezone} = NULL}
+\label{classdate__sql__handler_a1372c5a1a1897cbfb5d8d67c9bbd2b56}
+
+\item 
+\hypertarget{classdate__sql__handler_ae488522b2ee5ab385b3f69d0097d090a}{
+{\bfseries \$db\_\-timezone\_\-field} = NULL}
+\label{classdate__sql__handler_ae488522b2ee5ab385b3f69d0097d090a}
+
+\item 
+\hypertarget{classdate__sql__handler_a1e3daa04dd0d920dc01ff32a64e52d0d}{
+{\bfseries \$local\_\-timezone\_\-field} = NULL}
+\label{classdate__sql__handler_a1e3daa04dd0d920dc01ff32a64e52d0d}
+
+\item 
+\hypertarget{classdate__sql__handler_ad7072bcf1e48084764fadd66cf5d3cc6}{
+{\bfseries \$offset\_\-field} = NULL}
+\label{classdate__sql__handler_ad7072bcf1e48084764fadd66cf5d3cc6}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class to manipulate date SQL. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classdate__sql__handler_adcee5f97d8e796260dc0048e9ed2d24e}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!\_\-\_\-construct@{\_\-\_\-construct}}
+\index{\_\-\_\-construct@{\_\-\_\-construct}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{\_\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::\_\-\_\-construct (\$ {\em date\_\-type} = {\ttfamily DATE\_\-DATETIME}, \/  \$ {\em local\_\-timezone} = {\ttfamily NULL}, \/  \$ {\em offset} = {\ttfamily '+00:00'})}}
+\label{classdate__sql__handler_adcee5f97d8e796260dc0048e9ed2d24e}
+The object constuctor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classdate__sql__handler_a4e05688eeafa5d0c9f2435d13a0bb2c2}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!arg\_\-granularity@{arg\_\-granularity}}
+\index{arg\_\-granularity@{arg\_\-granularity}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{arg\_\-granularity}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::arg\_\-granularity (\$ {\em arg})}}
+\label{classdate__sql__handler_a4e05688eeafa5d0c9f2435d13a0bb2c2}
+Use the parsed values from the ISO argument to determine the granularity of this period. \hypertarget{classdate__sql__handler_a128dc221ac52eea10f324d94b2b73301}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!arg\_\-parts@{arg\_\-parts}}
+\index{arg\_\-parts@{arg\_\-parts}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{arg\_\-parts}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::arg\_\-parts (\$ {\em argument})}}
+\label{classdate__sql__handler_a128dc221ac52eea10f324d94b2b73301}
+Parse date parts from an ISO date argument.
+
+Based on ISO 8601 date duration and time interval standards.
+
+Parses a value like 2006-\/01-\/01-\/-\/2006-\/01-\/15, or 2006-\/W24, or . Separate start and end dates or date and period with a double hyphen (-\/-\/).
+
+The 'end' portion of the argument can be eliminated if it is the same as the 'start' portion. Use @ instead of a date to substitute in the current date and time.
+
+Use periods (P1H, P1D, P1W, P1M, P1Y) to get next hour/day/week/month/year from now. Use date before P sign to get next hour/day/week/month/year from that date. Use period then date to get a period that ends on the date.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://en.wikipedia.org/wiki/ISO_8601#Week_dates}{\tt http://en.wikipedia.org/wiki/ISO\_\-8601\#Week\_\-dates} 
+
+\href{http://en.wikipedia.org/wiki/ISO_8601#Duration}{\tt http://en.wikipedia.org/wiki/ISO\_\-8601\#Duration} 
+\end{DoxySeeAlso}
+\hypertarget{classdate__sql__handler_a3c56ad455684b8f9689980d5c1782a2b}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!arg\_\-range@{arg\_\-range}}
+\index{arg\_\-range@{arg\_\-range}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{arg\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::arg\_\-range (\$ {\em arg})}}
+\label{classdate__sql__handler_a3c56ad455684b8f9689980d5c1782a2b}
+Use the parsed values from the ISO argument to determine the min and max date for this period. \hypertarget{classdate__sql__handler_a13e12c367362a87b97038a3234957305}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!arg\_\-replace@{arg\_\-replace}}
+\index{arg\_\-replace@{arg\_\-replace}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{arg\_\-replace}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::arg\_\-replace (\$ {\em arg})}}
+\label{classdate__sql__handler_a13e12c367362a87b97038a3234957305}
+Convert strings like '+1 day' to the ISO equivalent, like 'P1D' . \hypertarget{classdate__sql__handler_a49b92ba3b97d3f770652c271591e524d}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!complete\_\-date@{complete\_\-date}}
+\index{complete\_\-date@{complete\_\-date}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{complete\_\-date}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::complete\_\-date (\$ {\em selected}, \/  \$ {\em type} = {\ttfamily 'now'})}}
+\label{classdate__sql__handler_a49b92ba3b97d3f770652c271591e524d}
+Create a complete datetime value out of an incomplete array of selected values.
+
+For example, array('year' =$>$ 2008, 'month' =$>$ 05) will fill in the day, hour, minute and second with the earliest possible values if type = 'min', the latest possible values if type = 'max', and the current values if type = 'now' . \hypertarget{classdate__sql__handler_ae27e6fee0bc6f11a741b0501dc2c295f}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!date\_\-parts@{date\_\-parts}}
+\index{date\_\-parts@{date\_\-parts}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{date\_\-parts}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::date\_\-parts (\$ {\em limit} = {\ttfamily NULL})}}
+\label{classdate__sql__handler_ae27e6fee0bc6f11a741b0501dc2c295f}
+An array of all date parts, optionally limited to an array of allowed parts. \hypertarget{classdate__sql__handler_a6ccfadfd3fdc10a73515a572a881874c}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!db\_\-tz\_\-support@{db\_\-tz\_\-support}}
+\index{db\_\-tz\_\-support@{db\_\-tz\_\-support}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{db\_\-tz\_\-support}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::db\_\-tz\_\-support (\$ {\em reset} = {\ttfamily FALSE})}}
+\label{classdate__sql__handler_a6ccfadfd3fdc10a73515a572a881874c}
+See if the db has timezone name support. \hypertarget{classdate__sql__handler_ae87411b56e77408c61fbde01edf5b1d1}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!format\_\-help@{format\_\-help}}
+\index{format\_\-help@{format\_\-help}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{format\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::format\_\-help (\$ {\em format})}}
+\label{classdate__sql__handler_ae87411b56e77408c61fbde01edf5b1d1}
+Converts a format string into help text, i.e. 'Y-\/m-\/d' becomes 'YYYY-\/MM-\/DD'.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$format A date format string.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The conveted help text. 
+\end{DoxyReturn}
+\hypertarget{classdate__sql__handler_a4c0829b7a4ab472cb070c19e1608dc7a}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!get\_\-offset@{get\_\-offset}}
+\index{get\_\-offset@{get\_\-offset}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{get\_\-offset}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::get\_\-offset (\$ {\em comp\_\-date} = {\ttfamily NULL})}}
+\label{classdate__sql__handler_a4c0829b7a4ab472cb070c19e1608dc7a}
+Return timezone offset for the date being processed. \hypertarget{classdate__sql__handler_add4b2f59b4d1da58336ffa0afcd97f03}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!granularity\_\-form@{granularity\_\-form}}
+\index{granularity\_\-form@{granularity\_\-form}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{granularity\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::granularity\_\-form (\$ {\em granularity})}}
+\label{classdate__sql__handler_add4b2f59b4d1da58336ffa0afcd97f03}
+\begin{Desc}
+\item[\hyperlink{todo__todo000052}{Todo}]\end{Desc}
+\hypertarget{classdate__sql__handler_a867091165b26b483cbf7301978871d26}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!part\_\-info@{part\_\-info}}
+\index{part\_\-info@{part\_\-info}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{part\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::part\_\-info (\$ {\em op} = {\ttfamily NULL}, \/  \$ {\em part} = {\ttfamily NULL})}}
+\label{classdate__sql__handler_a867091165b26b483cbf7301978871d26}
+Part information.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$op 'min', 'max', 'format', 'sep', 'empty\_\-now', 'empty\_\-min', 'empty\_\-max' . Returns all info if empty. \item[{\em string}]\$part 'year', 'month', 'day', 'hour', 'minute', or 'second. returns info for all parts if empty. \end{DoxyParams}
+\hypertarget{classdate__sql__handler_af0dc94f9fde296bc8dce819235ba387b}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!part\_\-is\_\-valid@{part\_\-is\_\-valid}}
+\index{part\_\-is\_\-valid@{part\_\-is\_\-valid}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{part\_\-is\_\-valid}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::part\_\-is\_\-valid (\$ {\em value}, \/  \$ {\em type})}}
+\label{classdate__sql__handler_af0dc94f9fde296bc8dce819235ba387b}
+A function to test the validity of various date parts \hypertarget{classdate__sql__handler_a3b90dc8718e14ec4ae3b2ee7f2d81cfd}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!set\_\-db\_\-timezone@{set\_\-db\_\-timezone}}
+\index{set\_\-db\_\-timezone@{set\_\-db\_\-timezone}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{set\_\-db\_\-timezone}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::set\_\-db\_\-timezone (\$ {\em offset} = {\ttfamily '+00:00'})}}
+\label{classdate__sql__handler_a3b90dc8718e14ec4ae3b2ee7f2d81cfd}
+Set the database timzone offset.
+
+Setting the db timezone to UTC is done to ensure consistency in date handling whether or not the database can do proper timezone conversion.
+
+Views filters that not exposed are cached and won't set the timezone so views date filters should add 'cacheable' =$>$ 'no' to their definitions to ensure that the database timezone gets set properly when the query is executed.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$offset An offset value to set the database timezone to. This will only set a fixed offset, not a timezone, so any value other than '+00:00' should be used with caution. \end{DoxyParams}
+\hypertarget{classdate__sql__handler_acacf47cb3362f3455a7e872b51ccf660}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!sql\_\-date\_\-math@{sql\_\-date\_\-math}}
+\index{sql\_\-date\_\-math@{sql\_\-date\_\-math}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{sql\_\-date\_\-math}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::sql\_\-date\_\-math (\$ {\em field}, \/  \$ {\em direction}, \/  \$ {\em count}, \/  \$ {\em granularity})}}
+\label{classdate__sql__handler_acacf47cb3362f3455a7e872b51ccf660}
+Adjusts a field value by time interval.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$field The field to be adjusted. \item[{\em string}]\$direction Either ADD or SUB. \item[{\em int}]\$count The number of values to adjust. \item[{\em string}]\$granularity The granularity of the adjustment, should be singular, like SECOND, MINUTE, DAY, HOUR. \end{DoxyParams}
+\hypertarget{classdate__sql__handler_a1a4028680e7d617328581eb7b5b779a9}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!sql\_\-extract@{sql\_\-extract}}
+\index{sql\_\-extract@{sql\_\-extract}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{sql\_\-extract}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::sql\_\-extract (\$ {\em extract\_\-type}, \/  \$ {\em field})}}
+\label{classdate__sql__handler_a1a4028680e7d617328581eb7b5b779a9}
+Helper function to create cross-\/database SQL date extraction.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$extract\_\-type The type of value to extract from the date, like 'MONTH'. \item[{\em string}]\$field The real table and field name, like 'tablename.fieldname'.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string An appropriate SQL string for the db type and field type. 
+\end{DoxyReturn}
+\hypertarget{classdate__sql__handler_aab48696c365846196f8ff2ecb105d010}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!sql\_\-field@{sql\_\-field}}
+\index{sql\_\-field@{sql\_\-field}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{sql\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::sql\_\-field (\$ {\em field}, \/  \$ {\em offset} = {\ttfamily NULL}, \/  \$ {\em comp\_\-date} = {\ttfamily NULL})}}
+\label{classdate__sql__handler_aab48696c365846196f8ff2ecb105d010}
+Helper function to create cross-\/database SQL dates.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$field The real table and field name, like 'tablename.fieldname' . \item[{\em string}]\$offset The name of a field that holds the timezone offset or an offset value. If NULL, the normal Drupal timezone handling will be used, if \$offset = 0 no adjustment will be made.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string An appropriate SQL string for the db type and field type. 
+\end{DoxyReturn}
+\hypertarget{classdate__sql__handler_ab64ba4906fa0a61312a2bc3072275243}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!sql\_\-format@{sql\_\-format}}
+\index{sql\_\-format@{sql\_\-format}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{sql\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::sql\_\-format (\$ {\em format}, \/  \$ {\em field})}}
+\label{classdate__sql__handler_ab64ba4906fa0a61312a2bc3072275243}
+Helper function to create cross-\/database SQL date formatting.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$format A format string for the result, like 'Y-\/m-\/d H:i:s' . \item[{\em string}]\$field The real table and field name, like 'tablename.fieldname' .\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string An appropriate SQL string for the db type and field type. 
+\end{DoxyReturn}
+\hypertarget{classdate__sql__handler_a86e10af9491fe99da8c8c6239620f3de}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!sql\_\-offset@{sql\_\-offset}}
+\index{sql\_\-offset@{sql\_\-offset}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{sql\_\-offset}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::sql\_\-offset (\$ {\em field}, \/  \$ {\em offset} = {\ttfamily NULL})}}
+\label{classdate__sql__handler_a86e10af9491fe99da8c8c6239620f3de}
+Adjust a field value by an offset in seconds. \hypertarget{classdate__sql__handler_a6e3a20d322159d5c704b5c06bbf2501b}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!sql\_\-tz@{sql\_\-tz}}
+\index{sql\_\-tz@{sql\_\-tz}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{sql\_\-tz}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::sql\_\-tz (\$ {\em field}, \/  \$ {\em offset} = {\ttfamily NULL}, \/  \$ {\em comp\_\-date} = {\ttfamily NULL})}}
+\label{classdate__sql__handler_a6e3a20d322159d5c704b5c06bbf2501b}
+Select a date value from the database, adjusting the value for the timezone.
+
+Check whether database timezone conversion is supported in this system and use it if possible, otherwise use an offset.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$field The field to be adjusted. \item[{\em bool}]\$offset Set a fixed offset or offset field to use for the date. If set, no timezone conversion will be done and the offset will be used. \end{DoxyParams}
+\hypertarget{classdate__sql__handler_ac3532976b8e7c016775e71cf873dfffe}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!sql\_\-where\_\-date@{sql\_\-where\_\-date}}
+\index{sql\_\-where\_\-date@{sql\_\-where\_\-date}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{sql\_\-where\_\-date}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::sql\_\-where\_\-date (\$ {\em type}, \/  \$ {\em field}, \/  \$ {\em operator}, \/  \$ {\em value}, \/  \$ {\em adjustment} = {\ttfamily NULL})}}
+\label{classdate__sql__handler_ac3532976b8e7c016775e71cf873dfffe}
+Creates a where clause to compare a complete date field to a date value.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$type The type of value we're comparing to, could be another field or a date value. \item[{\em string}]\$field The db table and field name, like \char`\"{}\$table.\$field\char`\"{}. \item[{\em string}]\$operator The db comparison operator to use, like '='. \item[{\em int}]\$value The value to compare the extracted date part to, could be a field name or a date string or NOW().\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string SQL for the where clause for this operation. 
+\end{DoxyReturn}
+\hypertarget{classdate__sql__handler_a2e88fbe05ec50038f3df0d63a9548623}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!sql\_\-where\_\-extract@{sql\_\-where\_\-extract}}
+\index{sql\_\-where\_\-extract@{sql\_\-where\_\-extract}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{sql\_\-where\_\-extract}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::sql\_\-where\_\-extract (\$ {\em part}, \/  \$ {\em field}, \/  \$ {\em operator}, \/  \$ {\em value}, \/  \$ {\em adjustment} = {\ttfamily NULL})}}
+\label{classdate__sql__handler_a2e88fbe05ec50038f3df0d63a9548623}
+Creates a where clause comparing an extracted date part to an integer.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$part The part to extract, YEAR, MONTH, DAY, etc. \item[{\em string}]\$field The db table and field name, like \char`\"{}\$table.\$field\char`\"{}. \item[{\em string}]\$operator The db comparison operator to use, like '=' . \item[{\em int}]\$value The integer value to compare the extracted date part to.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string SQL for the where clause for this operation. 
+\end{DoxyReturn}
+\hypertarget{classdate__sql__handler_a6eafe804210a031a0057e8ff84eca6a8}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!sql\_\-where\_\-format@{sql\_\-where\_\-format}}
+\index{sql\_\-where\_\-format@{sql\_\-where\_\-format}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{sql\_\-where\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::sql\_\-where\_\-format (\$ {\em format}, \/  \$ {\em field}, \/  \$ {\em operator}, \/  \$ {\em value}, \/  \$ {\em adjustment} = {\ttfamily NULL})}}
+\label{classdate__sql__handler_a6eafe804210a031a0057e8ff84eca6a8}
+Create a where clause to compare a formated field to a formated value.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$format The format to use on the date and the value when comparing them. \item[{\em string}]\$field The db table and field name, like \char`\"{}\$table.\$field\char`\"{}. \item[{\em string}]\$operator The db comparison operator to use, like '=' . \item[{\em string}]\$value The value to compare the extracted date part to, could be a field name or a date string or NOW().\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string SQL for the where clause for this operation. 
+\end{DoxyReturn}
+\hypertarget{classdate__sql__handler_a3a8cc9c8c0f40515901e8a7bf6299439}{
+\index{date\_\-sql\_\-handler@{date\_\-sql\_\-handler}!views\_\-formats@{views\_\-formats}}
+\index{views\_\-formats@{views\_\-formats}!date_sql_handler@{date\_\-sql\_\-handler}}
+\subsubsection[{views\_\-formats}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-sql\_\-handler::views\_\-formats (\$ {\em granularity}, \/  \$ {\em type} = {\ttfamily 'sql'})}}
+\label{classdate__sql__handler_a3a8cc9c8c0f40515901e8a7bf6299439}
+\begin{Desc}
+\item[\hyperlink{todo__todo000051}{Todo}]\end{Desc}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/date/date\_\-api/\hyperlink{date__api__sql_8inc}{date\_\-api\_\-sql.inc}\end{DoxyCompactItemize}

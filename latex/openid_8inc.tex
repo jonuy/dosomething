@@ -1,0 +1,420 @@
+\hypertarget{openid_8inc}{
+\section{html/modules/openid/openid.inc File Reference}
+\label{openid_8inc}\index{html/modules/openid/openid.inc@{html/modules/openid/openid.inc}}
+}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{openid_8inc_a6959f46b7a0a95194027313b08ff9b8f}{OPENID\_\-DH\_\-DEFAULT\_\-MOD} 
+\item 
+enum \hyperlink{openid_8inc_a37fc6c436be5dbdc8cc896a37bb2ef5b}{OPENID\_\-DH\_\-DEFAULT\_\-GEN} 
+\item 
+enum \hyperlink{openid_8inc_a6cfc7125130551f147ad67a205750b64}{OPENID\_\-SHA1\_\-BLOCKSIZE} 
+\item 
+enum \hyperlink{openid_8inc_a231be0589d1284c2e59651c2265bbdd8}{OPENID\_\-RAND\_\-SOURCE} 
+\item 
+enum \hyperlink{openid_8inc_a397c64482f92c89ab6e7d6e055130403}{OPENID\_\-NS\_\-2\_\-0} 
+\item 
+enum \hyperlink{openid_8inc_a611ef47dbc81955be33a9257739e491e}{OPENID\_\-NS\_\-1\_\-1} 
+\item 
+enum \hyperlink{openid_8inc_af6b34e60d425751680d476ff554909b4}{OPENID\_\-NS\_\-1\_\-0} 
+\item 
+enum \hyperlink{openid_8inc_aea9824c9d4564d018bcf5bf47efd6b15}{OPENID\_\-NS\_\-OPENID} 
+\item 
+enum \hyperlink{openid_8inc_ab4113c07de00e2981c0710eea146fc89}{OPENID\_\-NS\_\-SREG} 
+\item 
+enum \hyperlink{openid_8inc_ad145db85315144baf406667a1e7c5959}{OPENID\_\-NS\_\-AX} 
+\item 
+enum \hyperlink{openid_8inc_a2c33b4d9ba800e52e8b26328fcaea53f}{OPENID\_\-NS\_\-XRD} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{openid_8inc_a3c8b7c23742c62aae323c74c8c0f9915}{openid\_\-redirect\_\-http} (\$url, \$message)
+\item 
+\hyperlink{openid_8inc_a6836e61a578613959fe00ca83209ae2f}{openid\_\-redirect} (\$url, \$message)
+\item 
+\hypertarget{openid_8inc_ad497a31d30bffb6a4bc6cd9914e07f7b}{
+{\bfseries openid\_\-redirect\_\-form} (\$form, \&\$form\_\-state, \$url, \$message)}
+\label{openid_8inc_ad497a31d30bffb6a4bc6cd9914e07f7b}
+
+\item 
+\hyperlink{openid_8inc_a3ef1c9170e34e325cc88371a06928a0f}{\_\-openid\_\-xrds\_\-parse} (\$raw\_\-xml)
+\item 
+\hyperlink{openid_8inc_aa8b2298a6e68ea456e22b33b44aa276b}{\_\-openid\_\-select\_\-service} (array \$services)
+\item 
+\hyperlink{openid_8inc_a867ccbcc067a82d3bc691a6cdc1ad9f4}{\_\-openid\_\-is\_\-xri} (\$identifier)
+\item 
+\hyperlink{openid_8inc_a7ff842426a1f176ec3f247c5fd2ed7b2}{openid\_\-normalize} (\$identifier)
+\item 
+\hyperlink{openid_8inc_adef3bc56b5a4c57ce996187cffb16492}{\_\-openid\_\-xri\_\-normalize} (\$identifier)
+\item 
+\hyperlink{openid_8inc_a19b00511427ad7985408f16c079a2546}{\_\-openid\_\-url\_\-normalize} (\$url)
+\item 
+\hyperlink{openid_8inc_a5d5952e825b3e17cc2765760baf69d4f}{\_\-openid\_\-create\_\-message} (\$data)
+\item 
+\hyperlink{openid_8inc_a367a73e53a7544157b49ffbedcbdb444}{\_\-openid\_\-encode\_\-message} (\$message)
+\item 
+\hyperlink{openid_8inc_ab5f88df8b540f08bd28e8a508bb49175}{\_\-openid\_\-parse\_\-message} (\$message)
+\item 
+\hyperlink{openid_8inc_a7f413b6dbcae0aab572b51b57f08b076}{\_\-openid\_\-nonce} ()
+\item 
+\hyperlink{openid_8inc_a413931ae272accf7e4161d5b032d4631}{\_\-openid\_\-link\_\-href} (\$rel, \$html)
+\item 
+\hyperlink{openid_8inc_acbf79310505895f32ef771f12addd3bc}{\_\-openid\_\-meta\_\-httpequiv} (\$equiv, \$html)
+\item 
+\hyperlink{openid_8inc_a94a239a1dacef65306d0078198035cc7}{\_\-openid\_\-signature} (\$association, \$message\_\-array, \$keys\_\-to\_\-sign)
+\item 
+\hypertarget{openid_8inc_a2294d8c885fe408e7e1981e51e880ebc}{
+{\bfseries \_\-openid\_\-hmac} (\$key, \$text)}
+\label{openid_8inc_a2294d8c885fe408e7e1981e51e880ebc}
+
+\item 
+\hypertarget{openid_8inc_add8eead4c4954c3ad50ff4990f165478}{
+{\bfseries \_\-openid\_\-dh\_\-base64\_\-to\_\-long} (\$str)}
+\label{openid_8inc_add8eead4c4954c3ad50ff4990f165478}
+
+\item 
+\hypertarget{openid_8inc_a796f1e583d3276d8e8032fa5a4c0f616}{
+{\bfseries \_\-openid\_\-dh\_\-long\_\-to\_\-base64} (\$str)}
+\label{openid_8inc_a796f1e583d3276d8e8032fa5a4c0f616}
+
+\item 
+\hypertarget{openid_8inc_a422c58798b7986b43a2b565df1b9f2d7}{
+{\bfseries \_\-openid\_\-dh\_\-binary\_\-to\_\-long} (\$str)}
+\label{openid_8inc_a422c58798b7986b43a2b565df1b9f2d7}
+
+\item 
+\hypertarget{openid_8inc_a9d1a28ec06188bbbc85acf1bfc41ae1d}{
+{\bfseries \_\-openid\_\-dh\_\-long\_\-to\_\-binary} (\$long)}
+\label{openid_8inc_a9d1a28ec06188bbbc85acf1bfc41ae1d}
+
+\item 
+\hypertarget{openid_8inc_af0f8bf2c50cbe825681e7e319a1fd33f}{
+{\bfseries \_\-openid\_\-dh\_\-xorsecret} (\$shared, \$secret)}
+\label{openid_8inc_af0f8bf2c50cbe825681e7e319a1fd33f}
+
+\item 
+\hypertarget{openid_8inc_a58900a927921ff4c61f925b81ceabbc0}{
+{\bfseries \_\-openid\_\-dh\_\-rand} (\$stop)}
+\label{openid_8inc_a58900a927921ff4c61f925b81ceabbc0}
+
+\item 
+\hypertarget{openid_8inc_ad13ffee2af6f25a64082b7e2c3cfe39f}{
+{\bfseries \_\-openid\_\-get\_\-bytes} (\$num\_\-bytes)}
+\label{openid_8inc_ad13ffee2af6f25a64082b7e2c3cfe39f}
+
+\item 
+\hypertarget{openid_8inc_a56f4846ea99195ce405d7b9704b424b0}{
+{\bfseries \_\-openid\_\-response} (\$str=NULL)}
+\label{openid_8inc_a56f4846ea99195ce405d7b9704b424b0}
+
+\item 
+\hypertarget{openid_8inc_ae62ec8d61534cb5aa5a4a8f0d01b5dee}{
+{\bfseries \_\-openid\_\-get\_\-params} (\$str)}
+\label{openid_8inc_ae62ec8d61534cb5aa5a4a8f0d01b5dee}
+
+\item 
+\hyperlink{openid_8inc_ace5c6d4c1e729d620d6a43273fac7fd6}{openid\_\-extract\_\-namespace} (\$response, \$extension\_\-namespace, \$fallback\_\-prefix=NULL, \$only\_\-signed=FALSE)
+\item 
+\hyperlink{openid_8inc_adf7dfa87340980c5bf7e4cd11e717da3}{openid\_\-extract\_\-ax\_\-values} (\$values, \$uris)
+\item 
+\hyperlink{openid_8inc_a00d68cf0fdb81c4031ecf0fa7f0c2845}{\_\-openid\_\-get\_\-math\_\-library} ()
+\item 
+\hyperlink{openid_8inc_aeaea462656fcdd8460240178b6cd76a1}{\_\-openid\_\-math\_\-add} (\$x, \$y)
+\item 
+\hyperlink{openid_8inc_a4081e0bfb8cf14326b426c89e4293952}{\_\-openid\_\-math\_\-mul} (\$x, \$y)
+\item 
+\hyperlink{openid_8inc_a744c3bb5bec3bb9be16c1445b32f9399}{\_\-openid\_\-math\_\-div} (\$x, \$y)
+\item 
+\hyperlink{openid_8inc_ae52dd06bfa5de08a302bad1b9795b3f6}{\_\-openid\_\-math\_\-cmp} (\$x, \$y)
+\item 
+\hyperlink{openid_8inc_ac33215e0ff27a3d2e454891ead7662a9}{\_\-openid\_\-math\_\-mod} (\$x, \$y)
+\item 
+\hyperlink{openid_8inc_ad4c65d1b75dba1aca1ad0ea32bcd4d1c}{\_\-openid\_\-math\_\-pow} (\$x, \$y)
+\item 
+\hyperlink{openid_8inc_a45d8a622c010b733b6e3b5365b02c2f4}{\_\-openid\_\-math\_\-powmod} (\$x, \$y, \$z)
+\item 
+\hyperlink{openid_8inc_a239b587eb43a464005a538f698873a61}{\_\-openid\_\-invalid\_\-openid\_\-transition} (\$identity, \$response)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+OpenID utility functions. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{openid_8inc_a37fc6c436be5dbdc8cc896a37bb2ef5b}{
+\index{openid.inc@{openid.inc}!OPENID\_\-DH\_\-DEFAULT\_\-GEN@{OPENID\_\-DH\_\-DEFAULT\_\-GEN}}
+\index{OPENID\_\-DH\_\-DEFAULT\_\-GEN@{OPENID\_\-DH\_\-DEFAULT\_\-GEN}!openid.inc@{openid.inc}}
+\subsubsection[{OPENID\_\-DH\_\-DEFAULT\_\-GEN}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf OPENID\_\-DH\_\-DEFAULT\_\-GEN}}}
+\label{openid_8inc_a37fc6c436be5dbdc8cc896a37bb2ef5b}
+Diffie-\/Hellman generator; used for Diffie-\/Hellman key exchange computations. \hypertarget{openid_8inc_a6959f46b7a0a95194027313b08ff9b8f}{
+\index{openid.inc@{openid.inc}!OPENID\_\-DH\_\-DEFAULT\_\-MOD@{OPENID\_\-DH\_\-DEFAULT\_\-MOD}}
+\index{OPENID\_\-DH\_\-DEFAULT\_\-MOD@{OPENID\_\-DH\_\-DEFAULT\_\-MOD}!openid.inc@{openid.inc}}
+\subsubsection[{OPENID\_\-DH\_\-DEFAULT\_\-MOD}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf OPENID\_\-DH\_\-DEFAULT\_\-MOD}}}
+\label{openid_8inc_a6959f46b7a0a95194027313b08ff9b8f}
+Diffie-\/Hellman Key Exchange Default Value.
+
+This is used to establish an association between the Relying Party and the OpenID Provider.
+
+See RFC 2631: \href{http://www.ietf.org/rfc/rfc2631.txt}{\tt http://www.ietf.org/rfc/rfc2631.txt} \hypertarget{openid_8inc_af6b34e60d425751680d476ff554909b4}{
+\index{openid.inc@{openid.inc}!OPENID\_\-NS\_\-1\_\-0@{OPENID\_\-NS\_\-1\_\-0}}
+\index{OPENID\_\-NS\_\-1\_\-0@{OPENID\_\-NS\_\-1\_\-0}!openid.inc@{openid.inc}}
+\subsubsection[{OPENID\_\-NS\_\-1\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf OPENID\_\-NS\_\-1\_\-0}}}
+\label{openid_8inc_af6b34e60d425751680d476ff554909b4}
+OpenID Authentication 1.0 namespace URL; used for backwards-\/compatibility. \hypertarget{openid_8inc_a611ef47dbc81955be33a9257739e491e}{
+\index{openid.inc@{openid.inc}!OPENID\_\-NS\_\-1\_\-1@{OPENID\_\-NS\_\-1\_\-1}}
+\index{OPENID\_\-NS\_\-1\_\-1@{OPENID\_\-NS\_\-1\_\-1}!openid.inc@{openid.inc}}
+\subsubsection[{OPENID\_\-NS\_\-1\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf OPENID\_\-NS\_\-1\_\-1}}}
+\label{openid_8inc_a611ef47dbc81955be33a9257739e491e}
+OpenID Authentication 1.1 namespace URL; used for backwards-\/compatibility. \hypertarget{openid_8inc_a397c64482f92c89ab6e7d6e055130403}{
+\index{openid.inc@{openid.inc}!OPENID\_\-NS\_\-2\_\-0@{OPENID\_\-NS\_\-2\_\-0}}
+\index{OPENID\_\-NS\_\-2\_\-0@{OPENID\_\-NS\_\-2\_\-0}!openid.inc@{openid.inc}}
+\subsubsection[{OPENID\_\-NS\_\-2\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf OPENID\_\-NS\_\-2\_\-0}}}
+\label{openid_8inc_a397c64482f92c89ab6e7d6e055130403}
+OpenID Authentication 2.0 namespace URL. \hypertarget{openid_8inc_ad145db85315144baf406667a1e7c5959}{
+\index{openid.inc@{openid.inc}!OPENID\_\-NS\_\-AX@{OPENID\_\-NS\_\-AX}}
+\index{OPENID\_\-NS\_\-AX@{OPENID\_\-NS\_\-AX}!openid.inc@{openid.inc}}
+\subsubsection[{OPENID\_\-NS\_\-AX}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf OPENID\_\-NS\_\-AX}}}
+\label{openid_8inc_ad145db85315144baf406667a1e7c5959}
+OpenID Attribute Exchange extension. \hypertarget{openid_8inc_aea9824c9d4564d018bcf5bf47efd6b15}{
+\index{openid.inc@{openid.inc}!OPENID\_\-NS\_\-OPENID@{OPENID\_\-NS\_\-OPENID}}
+\index{OPENID\_\-NS\_\-OPENID@{OPENID\_\-NS\_\-OPENID}!openid.inc@{openid.inc}}
+\subsubsection[{OPENID\_\-NS\_\-OPENID}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf OPENID\_\-NS\_\-OPENID}}}
+\label{openid_8inc_aea9824c9d4564d018bcf5bf47efd6b15}
+OpenID namespace used in Yadis documents. \hypertarget{openid_8inc_ab4113c07de00e2981c0710eea146fc89}{
+\index{openid.inc@{openid.inc}!OPENID\_\-NS\_\-SREG@{OPENID\_\-NS\_\-SREG}}
+\index{OPENID\_\-NS\_\-SREG@{OPENID\_\-NS\_\-SREG}!openid.inc@{openid.inc}}
+\subsubsection[{OPENID\_\-NS\_\-SREG}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf OPENID\_\-NS\_\-SREG}}}
+\label{openid_8inc_ab4113c07de00e2981c0710eea146fc89}
+OpenID Simple Registration extension. \hypertarget{openid_8inc_a2c33b4d9ba800e52e8b26328fcaea53f}{
+\index{openid.inc@{openid.inc}!OPENID\_\-NS\_\-XRD@{OPENID\_\-NS\_\-XRD}}
+\index{OPENID\_\-NS\_\-XRD@{OPENID\_\-NS\_\-XRD}!openid.inc@{openid.inc}}
+\subsubsection[{OPENID\_\-NS\_\-XRD}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf OPENID\_\-NS\_\-XRD}}}
+\label{openid_8inc_a2c33b4d9ba800e52e8b26328fcaea53f}
+Extensible Resource Descriptor documents. \hypertarget{openid_8inc_a231be0589d1284c2e59651c2265bbdd8}{
+\index{openid.inc@{openid.inc}!OPENID\_\-RAND\_\-SOURCE@{OPENID\_\-RAND\_\-SOURCE}}
+\index{OPENID\_\-RAND\_\-SOURCE@{OPENID\_\-RAND\_\-SOURCE}!openid.inc@{openid.inc}}
+\subsubsection[{OPENID\_\-RAND\_\-SOURCE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf OPENID\_\-RAND\_\-SOURCE}}}
+\label{openid_8inc_a231be0589d1284c2e59651c2265bbdd8}
+Random number generator; used for Diffie-\/Hellman key exchange computations. \hypertarget{openid_8inc_a6cfc7125130551f147ad67a205750b64}{
+\index{openid.inc@{openid.inc}!OPENID\_\-SHA1\_\-BLOCKSIZE@{OPENID\_\-SHA1\_\-BLOCKSIZE}}
+\index{OPENID\_\-SHA1\_\-BLOCKSIZE@{OPENID\_\-SHA1\_\-BLOCKSIZE}!openid.inc@{openid.inc}}
+\subsubsection[{OPENID\_\-SHA1\_\-BLOCKSIZE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf OPENID\_\-SHA1\_\-BLOCKSIZE}}}
+\label{openid_8inc_a6cfc7125130551f147ad67a205750b64}
+SHA-\/1 hash block size; used for Diffie-\/Hellman key exchange computations. 
+
+\subsection{Function Documentation}
+\hypertarget{openid_8inc_a5d5952e825b3e17cc2765760baf69d4f}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-create\_\-message@{\_\-openid\_\-create\_\-message}}
+\index{\_\-openid\_\-create\_\-message@{\_\-openid\_\-create\_\-message}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-create\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-create\_\-message (\$ {\em data})}}
+\label{openid_8inc_a5d5952e825b3e17cc2765760baf69d4f}
+Create a serialized message packet as per spec: \$key:\$value\par
+ . \hypertarget{openid_8inc_a367a73e53a7544157b49ffbedcbdb444}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-encode\_\-message@{\_\-openid\_\-encode\_\-message}}
+\index{\_\-openid\_\-encode\_\-message@{\_\-openid\_\-encode\_\-message}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-encode\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-encode\_\-message (\$ {\em message})}}
+\label{openid_8inc_a367a73e53a7544157b49ffbedcbdb444}
+Encode a message from \_\-openid\_\-create\_\-message for HTTP Post \hypertarget{openid_8inc_a00d68cf0fdb81c4031ecf0fa7f0c2845}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-get\_\-math\_\-library@{\_\-openid\_\-get\_\-math\_\-library}}
+\index{\_\-openid\_\-get\_\-math\_\-library@{\_\-openid\_\-get\_\-math\_\-library}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-get\_\-math\_\-library}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-get\_\-math\_\-library ()}}
+\label{openid_8inc_a00d68cf0fdb81c4031ecf0fa7f0c2845}
+Determine the available math library GMP vs. BCMath, favouring GMP for performance. \hypertarget{openid_8inc_a239b587eb43a464005a538f698873a61}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-invalid\_\-openid\_\-transition@{\_\-openid\_\-invalid\_\-openid\_\-transition}}
+\index{\_\-openid\_\-invalid\_\-openid\_\-transition@{\_\-openid\_\-invalid\_\-openid\_\-transition}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-invalid\_\-openid\_\-transition}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-invalid\_\-openid\_\-transition (\$ {\em identity}, \/  \$ {\em response})}}
+\label{openid_8inc_a239b587eb43a464005a538f698873a61}
+Provides transition for accounts with possibly invalid OpenID identifiers in authmap.
+
+This function provides a less safe but more unobtrusive procedure for users who cannot login with their OpenID identifiers. OpenID identifiers in the authmap could be incomplete due to invalid OpenID implementation in previous versions of Drupal (e.g. fragment part of the identifier could be missing). For more information see \href{http://drupal.org/node/1120290.}{\tt http://drupal.org/node/1120290.}
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$identity The user's claimed OpenID identifier.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A fully-\/loaded user object if the user is found or FALSE if not found. 
+\end{DoxyReturn}
+\hypertarget{openid_8inc_a867ccbcc067a82d3bc691a6cdc1ad9f4}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-is\_\-xri@{\_\-openid\_\-is\_\-xri}}
+\index{\_\-openid\_\-is\_\-xri@{\_\-openid\_\-is\_\-xri}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-is\_\-xri}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-is\_\-xri (\$ {\em identifier})}}
+\label{openid_8inc_a867ccbcc067a82d3bc691a6cdc1ad9f4}
+Determine if the given identifier is an XRI ID. \hypertarget{openid_8inc_a413931ae272accf7e4161d5b032d4631}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-link\_\-href@{\_\-openid\_\-link\_\-href}}
+\index{\_\-openid\_\-link\_\-href@{\_\-openid\_\-link\_\-href}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-link\_\-href}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-link\_\-href (\$ {\em rel}, \/  \$ {\em html})}}
+\label{openid_8inc_a413931ae272accf7e4161d5b032d4631}
+Pull the href attribute out of an html link element. \hypertarget{openid_8inc_aeaea462656fcdd8460240178b6cd76a1}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-math\_\-add@{\_\-openid\_\-math\_\-add}}
+\index{\_\-openid\_\-math\_\-add@{\_\-openid\_\-math\_\-add}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-math\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-math\_\-add (\$ {\em x}, \/  \$ {\em y})}}
+\label{openid_8inc_aeaea462656fcdd8460240178b6cd76a1}
+Calls the add function from the available math library for OpenID. \hypertarget{openid_8inc_ae52dd06bfa5de08a302bad1b9795b3f6}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-math\_\-cmp@{\_\-openid\_\-math\_\-cmp}}
+\index{\_\-openid\_\-math\_\-cmp@{\_\-openid\_\-math\_\-cmp}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-math\_\-cmp}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-math\_\-cmp (\$ {\em x}, \/  \$ {\em y})}}
+\label{openid_8inc_ae52dd06bfa5de08a302bad1b9795b3f6}
+Calls the cmp function from the available math library for OpenID. \hypertarget{openid_8inc_a744c3bb5bec3bb9be16c1445b32f9399}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-math\_\-div@{\_\-openid\_\-math\_\-div}}
+\index{\_\-openid\_\-math\_\-div@{\_\-openid\_\-math\_\-div}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-math\_\-div}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-math\_\-div (\$ {\em x}, \/  \$ {\em y})}}
+\label{openid_8inc_a744c3bb5bec3bb9be16c1445b32f9399}
+Calls the div function from the available math library for OpenID. \hypertarget{openid_8inc_ac33215e0ff27a3d2e454891ead7662a9}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-math\_\-mod@{\_\-openid\_\-math\_\-mod}}
+\index{\_\-openid\_\-math\_\-mod@{\_\-openid\_\-math\_\-mod}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-math\_\-mod}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-math\_\-mod (\$ {\em x}, \/  \$ {\em y})}}
+\label{openid_8inc_ac33215e0ff27a3d2e454891ead7662a9}
+Calls the mod function from the available math library for OpenID. \hypertarget{openid_8inc_a4081e0bfb8cf14326b426c89e4293952}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-math\_\-mul@{\_\-openid\_\-math\_\-mul}}
+\index{\_\-openid\_\-math\_\-mul@{\_\-openid\_\-math\_\-mul}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-math\_\-mul}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-math\_\-mul (\$ {\em x}, \/  \$ {\em y})}}
+\label{openid_8inc_a4081e0bfb8cf14326b426c89e4293952}
+Calls the mul function from the available math library for OpenID. \hypertarget{openid_8inc_ad4c65d1b75dba1aca1ad0ea32bcd4d1c}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-math\_\-pow@{\_\-openid\_\-math\_\-pow}}
+\index{\_\-openid\_\-math\_\-pow@{\_\-openid\_\-math\_\-pow}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-math\_\-pow}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-math\_\-pow (\$ {\em x}, \/  \$ {\em y})}}
+\label{openid_8inc_ad4c65d1b75dba1aca1ad0ea32bcd4d1c}
+Calls the pow function from the available math library for OpenID. \hypertarget{openid_8inc_a45d8a622c010b733b6e3b5365b02c2f4}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-math\_\-powmod@{\_\-openid\_\-math\_\-powmod}}
+\index{\_\-openid\_\-math\_\-powmod@{\_\-openid\_\-math\_\-powmod}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-math\_\-powmod}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-math\_\-powmod (\$ {\em x}, \/  \$ {\em y}, \/  \$ {\em z})}}
+\label{openid_8inc_a45d8a622c010b733b6e3b5365b02c2f4}
+Calls the mul function from the available math library for OpenID. \hypertarget{openid_8inc_acbf79310505895f32ef771f12addd3bc}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-meta\_\-httpequiv@{\_\-openid\_\-meta\_\-httpequiv}}
+\index{\_\-openid\_\-meta\_\-httpequiv@{\_\-openid\_\-meta\_\-httpequiv}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-meta\_\-httpequiv}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-meta\_\-httpequiv (\$ {\em equiv}, \/  \$ {\em html})}}
+\label{openid_8inc_acbf79310505895f32ef771f12addd3bc}
+Pull the http-\/equiv attribute out of an html meta element \hypertarget{openid_8inc_a7f413b6dbcae0aab572b51b57f08b076}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-nonce@{\_\-openid\_\-nonce}}
+\index{\_\-openid\_\-nonce@{\_\-openid\_\-nonce}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-nonce}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-nonce ()}}
+\label{openid_8inc_a7f413b6dbcae0aab572b51b57f08b076}
+Return a nonce value -\/ formatted per OpenID spec. \hypertarget{openid_8inc_ab5f88df8b540f08bd28e8a508bb49175}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-parse\_\-message@{\_\-openid\_\-parse\_\-message}}
+\index{\_\-openid\_\-parse\_\-message@{\_\-openid\_\-parse\_\-message}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-parse\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-parse\_\-message (\$ {\em message})}}
+\label{openid_8inc_ab5f88df8b540f08bd28e8a508bb49175}
+Convert a direct communication message into an associative array. \hypertarget{openid_8inc_aa8b2298a6e68ea456e22b33b44aa276b}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-select\_\-service@{\_\-openid\_\-select\_\-service}}
+\index{\_\-openid\_\-select\_\-service@{\_\-openid\_\-select\_\-service}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-select\_\-service}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-select\_\-service (array \$ {\em services})}}
+\label{openid_8inc_aa8b2298a6e68ea456e22b33b44aa276b}
+Select a service element.
+
+The procedure is described in OpenID Authentication 2.0, section 7.3.2.
+
+A new entry is added to the returned array with the key 'version' and the value 1 or 2 specifying the protocol version used by the service.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$services}]An array of service arrays as returned by \hyperlink{openid_8module_ae52417e5179c251a3256583ea3e67d30}{openid\_\-discovery()}. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The selected service array, or NULL if no valid services were found. 
+\end{DoxyReturn}
+\hypertarget{openid_8inc_a94a239a1dacef65306d0078198035cc7}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-signature@{\_\-openid\_\-signature}}
+\index{\_\-openid\_\-signature@{\_\-openid\_\-signature}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-signature}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-signature (\$ {\em association}, \/  \$ {\em message\_\-array}, \/  \$ {\em keys\_\-to\_\-sign})}}
+\label{openid_8inc_a94a239a1dacef65306d0078198035cc7}
+Sign certain keys in a message 
+\begin{DoxyParams}{Parameters}
+\item[{\em \$association}]-\/ object loaded from openid\_\-association or openid\_\-server\_\-association table
+\begin{DoxyItemize}
+\item important fields are -\/$>$assoc\_\-type and -\/$>$mac\_\-key 
+\end{DoxyItemize}\item[{\em \$message\_\-array}]-\/ array of entire message about to be sent \item[{\em \$keys\_\-to\_\-sign}]-\/ keys in the message to include in signature (without 'openid.' appended) \end{DoxyParams}
+\hypertarget{openid_8inc_a19b00511427ad7985408f16c079a2546}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-url\_\-normalize@{\_\-openid\_\-url\_\-normalize}}
+\index{\_\-openid\_\-url\_\-normalize@{\_\-openid\_\-url\_\-normalize}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-url\_\-normalize}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-url\_\-normalize (\$ {\em url})}}
+\label{openid_8inc_a19b00511427ad7985408f16c079a2546}
+OpenID normalization method: normalize URL identifiers. \hypertarget{openid_8inc_a3ef1c9170e34e325cc88371a06928a0f}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-xrds\_\-parse@{\_\-openid\_\-xrds\_\-parse}}
+\index{\_\-openid\_\-xrds\_\-parse@{\_\-openid\_\-xrds\_\-parse}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-xrds\_\-parse}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-xrds\_\-parse (\$ {\em raw\_\-xml})}}
+\label{openid_8inc_a3ef1c9170e34e325cc88371a06928a0f}
+Parse an XRDS document.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$raw\_\-xml}]A string containing the XRDS document. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of service entries. 
+\end{DoxyReturn}
+\hypertarget{openid_8inc_adef3bc56b5a4c57ce996187cffb16492}{
+\index{openid.inc@{openid.inc}!\_\-openid\_\-xri\_\-normalize@{\_\-openid\_\-xri\_\-normalize}}
+\index{\_\-openid\_\-xri\_\-normalize@{\_\-openid\_\-xri\_\-normalize}!openid.inc@{openid.inc}}
+\subsubsection[{\_\-openid\_\-xri\_\-normalize}]{\setlength{\rightskip}{0pt plus 5cm}\_\-openid\_\-xri\_\-normalize (\$ {\em identifier})}}
+\label{openid_8inc_adef3bc56b5a4c57ce996187cffb16492}
+OpenID normalization method: normalize XRI identifiers. \hypertarget{openid_8inc_adf7dfa87340980c5bf7e4cd11e717da3}{
+\index{openid.inc@{openid.inc}!openid\_\-extract\_\-ax\_\-values@{openid\_\-extract\_\-ax\_\-values}}
+\index{openid\_\-extract\_\-ax\_\-values@{openid\_\-extract\_\-ax\_\-values}!openid.inc@{openid.inc}}
+\subsubsection[{openid\_\-extract\_\-ax\_\-values}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-extract\_\-ax\_\-values (\$ {\em values}, \/  \$ {\em uris})}}
+\label{openid_8inc_adf7dfa87340980c5bf7e4cd11e717da3}
+Extracts values from an OpenID AX Response.
+
+The values can be returned in two forms:
+\begin{DoxyItemize}
+\item only openid.ax.value.$<$alias$>$ (for single-\/valued answers)
+\item both openid.ax.count.$<$alias$>$ and openid.ax.value.$<$alias$>$.$<$count$>$ (for both single and multiple-\/valued answers)
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$values}]An array as returned by openid\_\-extract\_\-namespace(..., OPENID\_\-NS\_\-AX). \item[{\em \$uris}]An array of identifier URIs. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of values. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{http://openid.net/specs/openid-attribute-exchange-1_0.html#fetch_response}{\tt http://openid.net/specs/openid-\/attribute-\/exchange-\/1\_\-0.html\#fetch\_\-response} 
+\end{DoxySeeAlso}
+\hypertarget{openid_8inc_ace5c6d4c1e729d620d6a43273fac7fd6}{
+\index{openid.inc@{openid.inc}!openid\_\-extract\_\-namespace@{openid\_\-extract\_\-namespace}}
+\index{openid\_\-extract\_\-namespace@{openid\_\-extract\_\-namespace}!openid.inc@{openid.inc}}
+\subsubsection[{openid\_\-extract\_\-namespace}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-extract\_\-namespace (\$ {\em response}, \/  \$ {\em extension\_\-namespace}, \/  \$ {\em fallback\_\-prefix} = {\ttfamily NULL}, \/  \$ {\em only\_\-signed} = {\ttfamily FALSE})}}
+\label{openid_8inc_ace5c6d4c1e729d620d6a43273fac7fd6}
+Extract all the parameters belonging to an extension in a response message.
+
+OpenID 2.0 defines a simple extension mechanism, based on a namespace prefix.
+
+Each request or response can define a prefix using: 
+\begin{DoxyCode}
+   openid.ns.[prefix] = [extension_namespace]
+   openid.[prefix].[key1] = [value1]
+   openid.[prefix].[key2] = [value2]
+   ...
+\end{DoxyCode}
+
+
+This function extracts all the keys belonging to an extension namespace in a response, optionally using a fallback prefix if none is provided in the response.
+
+Note that you cannot assume that a given extension namespace will use the same prefix on the response and the request: each party may use a different prefix to refer to the same namespace.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$response}]The response array. \item[{\em \$extension\_\-namespace}]The namespace of the extension. \item[{\em \$fallback\_\-prefix}]An optional prefix that will be used in case no prefix is found for the target extension namespace. \item[{\em \$only\_\-signed}]Return only keys that are included in the message signature in openid.sig. Unsigned fields may have been modified or added by other parties than the OpenID Provider.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An associative array containing all the parameters in the response message that belong to the extension. The keys are stripped from their namespace prefix.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{http://openid.net/specs/openid-authentication-2_0.html#extensions}{\tt http://openid.net/specs/openid-\/authentication-\/2\_\-0.html\#extensions} 
+\end{DoxySeeAlso}
+\hypertarget{openid_8inc_a7ff842426a1f176ec3f247c5fd2ed7b2}{
+\index{openid.inc@{openid.inc}!openid\_\-normalize@{openid\_\-normalize}}
+\index{openid\_\-normalize@{openid\_\-normalize}!openid.inc@{openid.inc}}
+\subsubsection[{openid\_\-normalize}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-normalize (\$ {\em identifier})}}
+\label{openid_8inc_a7ff842426a1f176ec3f247c5fd2ed7b2}
+Normalize the given identifier.
+
+The procedure is described in OpenID Authentication 2.0, section 7.2. \hypertarget{openid_8inc_a6836e61a578613959fe00ca83209ae2f}{
+\index{openid.inc@{openid.inc}!openid\_\-redirect@{openid\_\-redirect}}
+\index{openid\_\-redirect@{openid\_\-redirect}!openid.inc@{openid.inc}}
+\subsubsection[{openid\_\-redirect}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-redirect (\$ {\em url}, \/  \$ {\em message})}}
+\label{openid_8inc_a6836e61a578613959fe00ca83209ae2f}
+Creates a js auto-\/submit redirect for (for the 2.x protocol) \hypertarget{openid_8inc_a3c8b7c23742c62aae323c74c8c0f9915}{
+\index{openid.inc@{openid.inc}!openid\_\-redirect\_\-http@{openid\_\-redirect\_\-http}}
+\index{openid\_\-redirect\_\-http@{openid\_\-redirect\_\-http}!openid.inc@{openid.inc}}
+\subsubsection[{openid\_\-redirect\_\-http}]{\setlength{\rightskip}{0pt plus 5cm}openid\_\-redirect\_\-http (\$ {\em url}, \/  \$ {\em message})}}
+\label{openid_8inc_a3c8b7c23742c62aae323c74c8c0f9915}
+Performs an HTTP 302 redirect (for the 1.x protocol). 

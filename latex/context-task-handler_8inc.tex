@@ -1,0 +1,202 @@
+\hypertarget{context-task-handler_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/includes/context-\/task-\/handler.inc File Reference}
+\label{context-task-handler_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/includes/context-\/task-\/handler.inc@{html/profiles/dosomething/modules/contrib/ctools/includes/context-\/task-\/handler.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{context-task-handler_8inc_ab312cb431a0ff2c79ef6070eb45d339f}{ctools\_\-context\_\-handler\_\-render} (\$task, \$subtask, \$contexts, \$args)
+\item 
+\hyperlink{context-task-handler_8inc_a681a1468d47bbb2b97137fe724006f30}{ctools\_\-context\_\-handler\_\-get\_\-render\_\-handler} (\$task, \$subtask, \$handlers, \$contexts, \$args)
+\item 
+\hyperlink{context-task-handler_8inc_a4cc12d46b27a1b4329443095581da43a}{ctools\_\-context\_\-handler\_\-default\_\-test} (\$handler, \$base\_\-contexts, \$args)
+\item 
+\hyperlink{context-task-handler_8inc_a75643365ecd521559adca3889dd5ce64}{ctools\_\-context\_\-handler\_\-render\_\-handler} (\$task, \$subtask, \$handler, \$contexts, \$args, \$page=TRUE)
+\item 
+\hyperlink{context-task-handler_8inc_a4edcfd0731cd41013df2abcd6c63b0c4}{ctools\_\-task\_\-handler\_\-default\_\-contextual\_\-link} (\$handler, \$plugin, \$contexts, \$args)
+\item 
+\hyperlink{context-task-handler_8inc_ae623bc36eda278a79508f16d2fb4b867}{ctools\_\-context\_\-handler\_\-pre\_\-render} (\$handler, \$contexts, \$args)
+\item 
+\hyperlink{context-task-handler_8inc_a8fe40e14c624ef707817204ece36295d}{ctools\_\-context\_\-handler\_\-select} (\$handler, \$contexts)
+\item 
+\hyperlink{context-task-handler_8inc_a7a818e1d2416fc379abef23b7861541a}{ctools\_\-context\_\-handler\_\-summary} (\$task, \$subtask, \$handler)
+\item 
+\hyperlink{context-task-handler_8inc_a3c1fa47c9e759dccffdb132a41d7f40f}{ctools\_\-context\_\-handler\_\-get\_\-task\_\-contexts} (\$task, \$subtask, \$args)
+\item 
+\hyperlink{context-task-handler_8inc_a7d594479dfb21d64f829015a9a58c5bf}{ctools\_\-context\_\-handler\_\-get\_\-handler\_\-contexts} (\$contexts, \$handler)
+\item 
+\hyperlink{context-task-handler_8inc_af70804eb84ffd6c2b040857ac0afe103}{ctools\_\-context\_\-handler\_\-get\_\-all\_\-contexts} (\$task, \$subtask, \$handler)
+\item 
+\hyperlink{context-task-handler_8inc_ad6d75da1158b69630c10d3045371accb}{ctools\_\-context\_\-handler\_\-get\_\-handler\_\-object} (\$handler)
+\item 
+\hyperlink{context-task-handler_8inc_a79cea3fa99256e4d46406e9e581c19f7}{ctools\_\-context\_\-handler\_\-get\_\-task\_\-object} (\$task, \$subtask, \$handler)
+\item 
+\hyperlink{context-task-handler_8inc_a380211d538fb41398e95489c3cbb71d3}{ctools\_\-context\_\-handler\_\-get\_\-base\_\-contexts} (\$task, \$subtask, \$placeholders=FALSE)
+\item 
+\hyperlink{context-task-handler_8inc_a4179b2d1d2e10e075410d7697605350d}{ctools\_\-context\_\-handler\_\-get\_\-task\_\-arguments} (\$task, \$subtask)
+\item 
+\hyperlink{context-task-handler_8inc_ad2948839af1d627eb4b8eade2cce0cd3}{ctools\_\-context\_\-handler\_\-set\_\-access\_\-restrictions} (\$task, \$subtask, \$handler, \&\$contexts)
+\item 
+\hyperlink{context-task-handler_8inc_a9cad8c277bdc4feec169f3faa96f9a41}{ctools\_\-context\_\-handler\_\-edit\_\-criteria} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{context-task-handler_8inc_ad1a52d2b414d864cf1928eb23e5e9f26}{ctools\_\-context\_\-handler\_\-edit\_\-criteria\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{context-task-handler_8inc_afb5b9d894523e3e5e372405cdb0b4739}{ctools\_\-context\_\-handler\_\-edit\_\-context} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{context-task-handler_8inc_aa62251a1beab5f93c4713a72698ce827}{ctools\_\-context\_\-handler\_\-edit\_\-context\_\-submit} (\&\$form, \&\$form\_\-state)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Support for creating 'context' type task handlers.
+
+Context task handlers expect the task to provide 0 or more contexts. The task handler should use those contexts as selection rules, as well as rendering with them.
+
+The functions and forms in this file should be common to every context type task handler made.
+
+Forms:
+\begin{DoxyItemize}
+\item ... 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\hypertarget{context-task-handler_8inc_a4cc12d46b27a1b4329443095581da43a}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-context\_\-handler\_\-default\_\-test@{ctools\_\-context\_\-handler\_\-default\_\-test}}
+\index{ctools\_\-context\_\-handler\_\-default\_\-test@{ctools\_\-context\_\-handler\_\-default\_\-test}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-context\_\-handler\_\-default\_\-test}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-handler\_\-default\_\-test (\$ {\em handler}, \/  \$ {\em base\_\-contexts}, \/  \$ {\em args})}}
+\label{context-task-handler_8inc_a4cc12d46b27a1b4329443095581da43a}
+Default test function to see if a task handler should be rendered.
+
+This tests against the standard selection criteria that most task handlers should be implementing. \hypertarget{context-task-handler_8inc_afb5b9d894523e3e5e372405cdb0b4739}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-context\_\-handler\_\-edit\_\-context@{ctools\_\-context\_\-handler\_\-edit\_\-context}}
+\index{ctools\_\-context\_\-handler\_\-edit\_\-context@{ctools\_\-context\_\-handler\_\-edit\_\-context}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-context\_\-handler\_\-edit\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-handler\_\-edit\_\-context (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{context-task-handler_8inc_afb5b9d894523e3e5e372405cdb0b4739}
+Edit contexts that go with this panel. \hypertarget{context-task-handler_8inc_aa62251a1beab5f93c4713a72698ce827}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-context\_\-handler\_\-edit\_\-context\_\-submit@{ctools\_\-context\_\-handler\_\-edit\_\-context\_\-submit}}
+\index{ctools\_\-context\_\-handler\_\-edit\_\-context\_\-submit@{ctools\_\-context\_\-handler\_\-edit\_\-context\_\-submit}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-context\_\-handler\_\-edit\_\-context\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-handler\_\-edit\_\-context\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{context-task-handler_8inc_aa62251a1beab5f93c4713a72698ce827}
+Process submission of the context edit form. \hypertarget{context-task-handler_8inc_a9cad8c277bdc4feec169f3faa96f9a41}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-context\_\-handler\_\-edit\_\-criteria@{ctools\_\-context\_\-handler\_\-edit\_\-criteria}}
+\index{ctools\_\-context\_\-handler\_\-edit\_\-criteria@{ctools\_\-context\_\-handler\_\-edit\_\-criteria}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-context\_\-handler\_\-edit\_\-criteria}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-handler\_\-edit\_\-criteria (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{context-task-handler_8inc_a9cad8c277bdc4feec169f3faa96f9a41}
+Form to choose context based selection rules for a task handler.
+
+The configuration will be assumed to go simply in \$handler-\/$>$conf and will be keyed by the argument ID. \hypertarget{context-task-handler_8inc_ad1a52d2b414d864cf1928eb23e5e9f26}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-context\_\-handler\_\-edit\_\-criteria\_\-submit@{ctools\_\-context\_\-handler\_\-edit\_\-criteria\_\-submit}}
+\index{ctools\_\-context\_\-handler\_\-edit\_\-criteria\_\-submit@{ctools\_\-context\_\-handler\_\-edit\_\-criteria\_\-submit}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-context\_\-handler\_\-edit\_\-criteria\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-handler\_\-edit\_\-criteria\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{context-task-handler_8inc_ad1a52d2b414d864cf1928eb23e5e9f26}
+Submit handler for rules selection \hypertarget{context-task-handler_8inc_af70804eb84ffd6c2b040857ac0afe103}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-context\_\-handler\_\-get\_\-all\_\-contexts@{ctools\_\-context\_\-handler\_\-get\_\-all\_\-contexts}}
+\index{ctools\_\-context\_\-handler\_\-get\_\-all\_\-contexts@{ctools\_\-context\_\-handler\_\-get\_\-all\_\-contexts}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-context\_\-handler\_\-get\_\-all\_\-contexts}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-handler\_\-get\_\-all\_\-contexts (\$ {\em task}, \/  \$ {\em subtask}, \/  \$ {\em handler})}}
+\label{context-task-handler_8inc_af70804eb84ffd6c2b040857ac0afe103}
+Load the contexts for a task and task handler together.
+
+This pulls the arguments from a task and everything else from a task handler and loads them as a group. Since there is no data, this loads the contexts as placeholders. \hypertarget{context-task-handler_8inc_a380211d538fb41398e95489c3cbb71d3}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-context\_\-handler\_\-get\_\-base\_\-contexts@{ctools\_\-context\_\-handler\_\-get\_\-base\_\-contexts}}
+\index{ctools\_\-context\_\-handler\_\-get\_\-base\_\-contexts@{ctools\_\-context\_\-handler\_\-get\_\-base\_\-contexts}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-context\_\-handler\_\-get\_\-base\_\-contexts}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-handler\_\-get\_\-base\_\-contexts (\$ {\em task}, \/  \$ {\em subtask}, \/  \$ {\em placeholders} = {\ttfamily FALSE})}}
+\label{context-task-handler_8inc_a380211d538fb41398e95489c3cbb71d3}
+Get base contexts from a task, if it has any.
+
+Tasks can get their contexts either from base contexts or arguments; base contexts extract their information from the environment. \hypertarget{context-task-handler_8inc_a7d594479dfb21d64f829015a9a58c5bf}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-context\_\-handler\_\-get\_\-handler\_\-contexts@{ctools\_\-context\_\-handler\_\-get\_\-handler\_\-contexts}}
+\index{ctools\_\-context\_\-handler\_\-get\_\-handler\_\-contexts@{ctools\_\-context\_\-handler\_\-get\_\-handler\_\-contexts}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-context\_\-handler\_\-get\_\-handler\_\-contexts}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-handler\_\-get\_\-handler\_\-contexts (\$ {\em contexts}, \/  \$ {\em handler})}}
+\label{context-task-handler_8inc_a7d594479dfb21d64f829015a9a58c5bf}
+Load the contexts for a task handler.
+
+This expands a base set of contexts passed in from a task with the contexts defined on the task handler. The contexts from the task must already have been loaded. \hypertarget{context-task-handler_8inc_ad6d75da1158b69630c10d3045371accb}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-context\_\-handler\_\-get\_\-handler\_\-object@{ctools\_\-context\_\-handler\_\-get\_\-handler\_\-object}}
+\index{ctools\_\-context\_\-handler\_\-get\_\-handler\_\-object@{ctools\_\-context\_\-handler\_\-get\_\-handler\_\-object}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-context\_\-handler\_\-get\_\-handler\_\-object}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-handler\_\-get\_\-handler\_\-object (\$ {\em handler})}}
+\label{context-task-handler_8inc_ad6d75da1158b69630c10d3045371accb}
+Create an object suitable for use with the context system that kind of expects things in a certain, kind of clunky format. \hypertarget{context-task-handler_8inc_a681a1468d47bbb2b97137fe724006f30}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-context\_\-handler\_\-get\_\-render\_\-handler@{ctools\_\-context\_\-handler\_\-get\_\-render\_\-handler}}
+\index{ctools\_\-context\_\-handler\_\-get\_\-render\_\-handler@{ctools\_\-context\_\-handler\_\-get\_\-render\_\-handler}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-context\_\-handler\_\-get\_\-render\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-handler\_\-get\_\-render\_\-handler (\$ {\em task}, \/  \$ {\em subtask}, \/  \$ {\em handlers}, \/  \$ {\em contexts}, \/  \$ {\em args})}}
+\label{context-task-handler_8inc_a681a1468d47bbb2b97137fe724006f30}
+Figure out which of the listed handlers should be used to render. \hypertarget{context-task-handler_8inc_a4179b2d1d2e10e075410d7697605350d}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-context\_\-handler\_\-get\_\-task\_\-arguments@{ctools\_\-context\_\-handler\_\-get\_\-task\_\-arguments}}
+\index{ctools\_\-context\_\-handler\_\-get\_\-task\_\-arguments@{ctools\_\-context\_\-handler\_\-get\_\-task\_\-arguments}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-context\_\-handler\_\-get\_\-task\_\-arguments}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-handler\_\-get\_\-task\_\-arguments (\$ {\em task}, \/  \$ {\em subtask})}}
+\label{context-task-handler_8inc_a4179b2d1d2e10e075410d7697605350d}
+Get the arguments from a task that are used to load contexts. \hypertarget{context-task-handler_8inc_a3c1fa47c9e759dccffdb132a41d7f40f}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-context\_\-handler\_\-get\_\-task\_\-contexts@{ctools\_\-context\_\-handler\_\-get\_\-task\_\-contexts}}
+\index{ctools\_\-context\_\-handler\_\-get\_\-task\_\-contexts@{ctools\_\-context\_\-handler\_\-get\_\-task\_\-contexts}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-context\_\-handler\_\-get\_\-task\_\-contexts}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-handler\_\-get\_\-task\_\-contexts (\$ {\em task}, \/  \$ {\em subtask}, \/  \$ {\em args})}}
+\label{context-task-handler_8inc_a3c1fa47c9e759dccffdb132a41d7f40f}
+Load the contexts for a task, using arguments.
+
+This creates the base array of contexts, loaded from arguments, suitable for use in rendering. \hypertarget{context-task-handler_8inc_a79cea3fa99256e4d46406e9e581c19f7}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-context\_\-handler\_\-get\_\-task\_\-object@{ctools\_\-context\_\-handler\_\-get\_\-task\_\-object}}
+\index{ctools\_\-context\_\-handler\_\-get\_\-task\_\-object@{ctools\_\-context\_\-handler\_\-get\_\-task\_\-object}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-context\_\-handler\_\-get\_\-task\_\-object}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-handler\_\-get\_\-task\_\-object (\$ {\em task}, \/  \$ {\em subtask}, \/  \$ {\em handler})}}
+\label{context-task-handler_8inc_a79cea3fa99256e4d46406e9e581c19f7}
+Create an object suitable for use with the context system that kind of expects things in a certain, kind of clunky format. This one adds in arguments from the task. \hypertarget{context-task-handler_8inc_ae623bc36eda278a79508f16d2fb4b867}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-context\_\-handler\_\-pre\_\-render@{ctools\_\-context\_\-handler\_\-pre\_\-render}}
+\index{ctools\_\-context\_\-handler\_\-pre\_\-render@{ctools\_\-context\_\-handler\_\-pre\_\-render}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-context\_\-handler\_\-pre\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-handler\_\-pre\_\-render (\$ {\em handler}, \/  \$ {\em contexts}, \/  \$ {\em args})}}
+\label{context-task-handler_8inc_ae623bc36eda278a79508f16d2fb4b867}
+Called to execute actions that should happen before a handler is rendered. \hypertarget{context-task-handler_8inc_ab312cb431a0ff2c79ef6070eb45d339f}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-context\_\-handler\_\-render@{ctools\_\-context\_\-handler\_\-render}}
+\index{ctools\_\-context\_\-handler\_\-render@{ctools\_\-context\_\-handler\_\-render}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-context\_\-handler\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-handler\_\-render (\$ {\em task}, \/  \$ {\em subtask}, \/  \$ {\em contexts}, \/  \$ {\em args})}}
+\label{context-task-handler_8inc_ab312cb431a0ff2c79ef6070eb45d339f}
+Render a context type task handler given a list of handlers attached to a type.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$task}]The \$task object in use. \item[{\em \$subtask}]The id of the subtask in use. \item[{\em \$contexts}]The context objects in use. \item[{\em \$args}]The raw arguments behind the contexts. \item[{\em \$page}]If TRUE then this renderer owns the page and can use theme('page') for no blocks; if false, output is returned regardless of any no blocks settings. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Either the output or NULL if there was output, FALSE if no handler accepted the task. If \$page is FALSE then the \$info block is returned instead. 
+\end{DoxyReturn}
+\hypertarget{context-task-handler_8inc_a75643365ecd521559adca3889dd5ce64}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-context\_\-handler\_\-render\_\-handler@{ctools\_\-context\_\-handler\_\-render\_\-handler}}
+\index{ctools\_\-context\_\-handler\_\-render\_\-handler@{ctools\_\-context\_\-handler\_\-render\_\-handler}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-context\_\-handler\_\-render\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-handler\_\-render\_\-handler (\$ {\em task}, \/  \$ {\em subtask}, \/  \$ {\em handler}, \/  \$ {\em contexts}, \/  \$ {\em args}, \/  \$ {\em page} = {\ttfamily TRUE})}}
+\label{context-task-handler_8inc_a75643365ecd521559adca3889dd5ce64}
+Render a task handler. \hypertarget{context-task-handler_8inc_a8fe40e14c624ef707817204ece36295d}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-context\_\-handler\_\-select@{ctools\_\-context\_\-handler\_\-select}}
+\index{ctools\_\-context\_\-handler\_\-select@{ctools\_\-context\_\-handler\_\-select}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-context\_\-handler\_\-select}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-handler\_\-select (\$ {\em handler}, \/  \$ {\em contexts})}}
+\label{context-task-handler_8inc_a8fe40e14c624ef707817204ece36295d}
+Compare arguments to contexts for selection purposes.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$handler}]The handler in question. \item[{\em \$contexts}]The context objects provided by the task.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if these contexts match the selection rules. NULL or FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{context-task-handler_8inc_ad2948839af1d627eb4b8eade2cce0cd3}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-context\_\-handler\_\-set\_\-access\_\-restrictions@{ctools\_\-context\_\-handler\_\-set\_\-access\_\-restrictions}}
+\index{ctools\_\-context\_\-handler\_\-set\_\-access\_\-restrictions@{ctools\_\-context\_\-handler\_\-set\_\-access\_\-restrictions}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-context\_\-handler\_\-set\_\-access\_\-restrictions}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-handler\_\-set\_\-access\_\-restrictions (\$ {\em task}, \/  \$ {\em subtask}, \/  \$ {\em handler}, \/  \&\$ {\em contexts})}}
+\label{context-task-handler_8inc_ad2948839af1d627eb4b8eade2cce0cd3}
+Set any access restrictions on the contexts for a handler.
+
+Both the task and the handler could add restrictions to the contexts based upon the access control. These restrictions might be useful to limit what kind of content appears in the add content dialog; for example, if we have an access item that limits a node context to only 'story' and 'page' types, there is no need for content that only applies to the 'poll' type to appear. \hypertarget{context-task-handler_8inc_a7a818e1d2416fc379abef23b7861541a}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-context\_\-handler\_\-summary@{ctools\_\-context\_\-handler\_\-summary}}
+\index{ctools\_\-context\_\-handler\_\-summary@{ctools\_\-context\_\-handler\_\-summary}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-context\_\-handler\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-handler\_\-summary (\$ {\em task}, \/  \$ {\em subtask}, \/  \$ {\em handler})}}
+\label{context-task-handler_8inc_a7a818e1d2416fc379abef23b7861541a}
+Get the array of summary strings for the arguments.
+
+These summary strings are used to communicate to the user what arguments the task handlers are selecting.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$task}]The loaded task plugin. \item[{\em \$subtask}]The subtask id. \item[{\em \$handler}]The handler to be checked. \end{DoxyParams}
+\hypertarget{context-task-handler_8inc_a4edcfd0731cd41013df2abcd6c63b0c4}{
+\index{context-\/task-\/handler.inc@{context-\/task-\/handler.inc}!ctools\_\-task\_\-handler\_\-default\_\-contextual\_\-link@{ctools\_\-task\_\-handler\_\-default\_\-contextual\_\-link}}
+\index{ctools\_\-task\_\-handler\_\-default\_\-contextual\_\-link@{ctools\_\-task\_\-handler\_\-default\_\-contextual\_\-link}!context-task-handler.inc@{context-\/task-\/handler.inc}}
+\subsubsection[{ctools\_\-task\_\-handler\_\-default\_\-contextual\_\-link}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-task\_\-handler\_\-default\_\-contextual\_\-link (\$ {\em handler}, \/  \$ {\em plugin}, \/  \$ {\em contexts}, \/  \$ {\em args})}}
+\label{context-task-handler_8inc_a4edcfd0731cd41013df2abcd6c63b0c4}
+Default function to provide contextual link for a task as defined by the handler.
+
+This provides a simple link to th main content operation and is suitable for most normal handlers. Setting 'contextual link' to a function overrides this and setting it to FALSE will prevent a contextual link from appearing. 

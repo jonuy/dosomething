@@ -1,0 +1,264 @@
+\hypertarget{aggregator_8module}{
+\section{html/modules/aggregator/aggregator.module File Reference}
+\label{aggregator_8module}\index{html/modules/aggregator/aggregator.module@{html/modules/aggregator/aggregator.module}}
+}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{aggregator_8module_a623ff7ad38eb829496a7e02a06fae000}{AGGREGATOR\_\-CLEAR\_\-NEVER} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{aggregator_8module_a1b16201821780d636825810bbab7c8b9}{aggregator\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{aggregator_8module_afc032aa1293caac3cb41980616a65fc5}{aggregator\_\-theme} ()
+\item 
+\hyperlink{aggregator_8module_a18d55253ab5538426a4fc6d20b672dda}{aggregator\_\-menu} ()
+\item 
+\hyperlink{aggregator_8module_aafaeff2e2b30da641b78b2cac450d8b3}{\_\-aggregator\_\-category\_\-title} (\$category)
+\item 
+\hyperlink{aggregator_8module_a85bb1e676454db9d98ad212fe0323bd1}{\_\-aggregator\_\-has\_\-categories} ()
+\item 
+\hyperlink{aggregator_8module_a1cb2d5a4e95cc6f7e9ecba9859b86e71}{aggregator\_\-permission} ()
+\item 
+\hyperlink{aggregator_8module_adbe7d09140773c5485cda52dd03bdab5}{aggregator\_\-cron} ()
+\item 
+\hyperlink{aggregator_8module_a3090186480044070e50c5682806980ad}{aggregator\_\-cron\_\-queue\_\-info} ()
+\item 
+\hyperlink{aggregator_8module_a5655c78445ab9448ec41bce3148a88ec}{aggregator\_\-block\_\-info} ()
+\item 
+\hyperlink{aggregator_8module_a94a7b69367b6844d1e724fdc11b6093a}{aggregator\_\-block\_\-configure} (\$delta= '')
+\item 
+\hyperlink{aggregator_8module_a52bde45afbc3605fa4607d51978ab488}{aggregator\_\-block\_\-save} (\$delta= '', \$edit=array())
+\item 
+\hyperlink{aggregator_8module_aad90d37427f960f03e64ff1ac7baade9}{aggregator\_\-block\_\-view} (\$delta= '')
+\item 
+\hyperlink{aggregator_8module_ade5aa9b8b9e6a6cde175f93092c58d3d}{aggregator\_\-save\_\-category} (\$edit)
+\item 
+\hyperlink{aggregator_8module_a2e3fef9906b9317edfd98019d4190d15}{aggregator\_\-save\_\-feed} (\$edit)
+\item 
+\hyperlink{aggregator_8module_ad71e79c625070f7932dc55ca575cae3c}{aggregator\_\-remove} (\$feed)
+\item 
+\hyperlink{aggregator_8module_af7655d9bd4e74cb36466d65001547a3f}{\_\-aggregator\_\-get\_\-variables} ()
+\item 
+\hyperlink{aggregator_8module_ac33f2d56e676554c7f10a56b05c646f7}{aggregator\_\-refresh} (\$feed)
+\item 
+\hyperlink{aggregator_8module_a75d55b29c2e341452a7f4ff981f58b08}{aggregator\_\-feed\_\-load} (\$fid)
+\item 
+\hyperlink{aggregator_8module_a21068362472c355d68eeeb37de326d91}{aggregator\_\-category\_\-load} (\$cid)
+\item 
+\hyperlink{group__themeable_ga311e62f08cc510fe7e50477485f54943}{theme\_\-aggregator\_\-block\_\-item} (\$variables)
+\item 
+\hyperlink{aggregator_8module_aeae59ae915eb52b6750932dabfbdf236}{aggregator\_\-filter\_\-xss} (\$value)
+\item 
+\hyperlink{aggregator_8module_af954c80a39d72d63c2f87037351f9d8b}{aggregator\_\-sanitize\_\-configuration} ()
+\item 
+\hyperlink{aggregator_8module_a9d50c74bac5811ef2e76face50ea9031}{\_\-aggregator\_\-items} (\$count)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used to aggregate syndicated content (RSS, RDF, and Atom). 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{aggregator_8module_a623ff7ad38eb829496a7e02a06fae000}{
+\index{aggregator.module@{aggregator.module}!AGGREGATOR\_\-CLEAR\_\-NEVER@{AGGREGATOR\_\-CLEAR\_\-NEVER}}
+\index{AGGREGATOR\_\-CLEAR\_\-NEVER@{AGGREGATOR\_\-CLEAR\_\-NEVER}!aggregator.module@{aggregator.module}}
+\subsubsection[{AGGREGATOR\_\-CLEAR\_\-NEVER}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf AGGREGATOR\_\-CLEAR\_\-NEVER}}}
+\label{aggregator_8module_a623ff7ad38eb829496a7e02a06fae000}
+Denotes that a feed's items should never expire. 
+
+\subsection{Function Documentation}
+\hypertarget{aggregator_8module_aafaeff2e2b30da641b78b2cac450d8b3}{
+\index{aggregator.module@{aggregator.module}!\_\-aggregator\_\-category\_\-title@{\_\-aggregator\_\-category\_\-title}}
+\index{\_\-aggregator\_\-category\_\-title@{\_\-aggregator\_\-category\_\-title}!aggregator.module@{aggregator.module}}
+\subsubsection[{\_\-aggregator\_\-category\_\-title}]{\setlength{\rightskip}{0pt plus 5cm}\_\-aggregator\_\-category\_\-title (\$ {\em category})}}
+\label{aggregator_8module_aafaeff2e2b30da641b78b2cac450d8b3}
+Title callback: Returns a title for aggregator category pages.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$category}]An aggregator category.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string with the aggregator category title. 
+\end{DoxyReturn}
+\hypertarget{aggregator_8module_af7655d9bd4e74cb36466d65001547a3f}{
+\index{aggregator.module@{aggregator.module}!\_\-aggregator\_\-get\_\-variables@{\_\-aggregator\_\-get\_\-variables}}
+\index{\_\-aggregator\_\-get\_\-variables@{\_\-aggregator\_\-get\_\-variables}!aggregator.module@{aggregator.module}}
+\subsubsection[{\_\-aggregator\_\-get\_\-variables}]{\setlength{\rightskip}{0pt plus 5cm}\_\-aggregator\_\-get\_\-variables ()}}
+\label{aggregator_8module_af7655d9bd4e74cb36466d65001547a3f}
+Gets the fetcher, parser, and processors.
+
+\begin{DoxyReturn}{Returns}
+An array containing the fetcher, parser, and processors. 
+\end{DoxyReturn}
+\hypertarget{aggregator_8module_a85bb1e676454db9d98ad212fe0323bd1}{
+\index{aggregator.module@{aggregator.module}!\_\-aggregator\_\-has\_\-categories@{\_\-aggregator\_\-has\_\-categories}}
+\index{\_\-aggregator\_\-has\_\-categories@{\_\-aggregator\_\-has\_\-categories}!aggregator.module@{aggregator.module}}
+\subsubsection[{\_\-aggregator\_\-has\_\-categories}]{\setlength{\rightskip}{0pt plus 5cm}\_\-aggregator\_\-has\_\-categories ()}}
+\label{aggregator_8module_a85bb1e676454db9d98ad212fe0323bd1}
+Determines whether there are any aggregator categories.
+
+\begin{DoxyReturn}{Returns}
+TRUE if there is at least one category and the user has access to them; FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{aggregator_8module_a9d50c74bac5811ef2e76face50ea9031}{
+\index{aggregator.module@{aggregator.module}!\_\-aggregator\_\-items@{\_\-aggregator\_\-items}}
+\index{\_\-aggregator\_\-items@{\_\-aggregator\_\-items}!aggregator.module@{aggregator.module}}
+\subsubsection[{\_\-aggregator\_\-items}]{\setlength{\rightskip}{0pt plus 5cm}\_\-aggregator\_\-items (\$ {\em count})}}
+\label{aggregator_8module_a9d50c74bac5811ef2e76face50ea9031}
+Helper function for drupal\_\-map\_\-assoc.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$count}]Items count.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string that is plural-\/formatted as \char`\"{}@count items\char`\"{}. 
+\end{DoxyReturn}
+\hypertarget{aggregator_8module_a94a7b69367b6844d1e724fdc11b6093a}{
+\index{aggregator.module@{aggregator.module}!aggregator\_\-block\_\-configure@{aggregator\_\-block\_\-configure}}
+\index{aggregator\_\-block\_\-configure@{aggregator\_\-block\_\-configure}!aggregator.module@{aggregator.module}}
+\subsubsection[{aggregator\_\-block\_\-configure}]{\setlength{\rightskip}{0pt plus 5cm}aggregator\_\-block\_\-configure (\$ {\em delta} = {\ttfamily ''})}}
+\label{aggregator_8module_a94a7b69367b6844d1e724fdc11b6093a}
+Implements \hyperlink{group__hooks_gacc86fefd1e0299f387f79a37dd1a48b7}{hook\_\-block\_\-configure()}. \hypertarget{aggregator_8module_a5655c78445ab9448ec41bce3148a88ec}{
+\index{aggregator.module@{aggregator.module}!aggregator\_\-block\_\-info@{aggregator\_\-block\_\-info}}
+\index{aggregator\_\-block\_\-info@{aggregator\_\-block\_\-info}!aggregator.module@{aggregator.module}}
+\subsubsection[{aggregator\_\-block\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}aggregator\_\-block\_\-info ()}}
+\label{aggregator_8module_a5655c78445ab9448ec41bce3148a88ec}
+Implements \hyperlink{group__hooks_ga2bd926c3e90deeba0c3ba64fb3c64d73}{hook\_\-block\_\-info()}. \hypertarget{aggregator_8module_a52bde45afbc3605fa4607d51978ab488}{
+\index{aggregator.module@{aggregator.module}!aggregator\_\-block\_\-save@{aggregator\_\-block\_\-save}}
+\index{aggregator\_\-block\_\-save@{aggregator\_\-block\_\-save}!aggregator.module@{aggregator.module}}
+\subsubsection[{aggregator\_\-block\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}aggregator\_\-block\_\-save (\$ {\em delta} = {\ttfamily ''}, \/  \$ {\em edit} = {\ttfamily array()})}}
+\label{aggregator_8module_a52bde45afbc3605fa4607d51978ab488}
+Implements \hyperlink{group__hooks_ga622024ce4f818c241ca7a765e829f928}{hook\_\-block\_\-save()}. \hypertarget{aggregator_8module_aad90d37427f960f03e64ff1ac7baade9}{
+\index{aggregator.module@{aggregator.module}!aggregator\_\-block\_\-view@{aggregator\_\-block\_\-view}}
+\index{aggregator\_\-block\_\-view@{aggregator\_\-block\_\-view}!aggregator.module@{aggregator.module}}
+\subsubsection[{aggregator\_\-block\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}aggregator\_\-block\_\-view (\$ {\em delta} = {\ttfamily ''})}}
+\label{aggregator_8module_aad90d37427f960f03e64ff1ac7baade9}
+Implements \hyperlink{group__hooks_gaa14092a3e74cdc57aa295100cfd6860d}{hook\_\-block\_\-view()}.
+
+Generates blocks for the latest news items in each category and feed. \hypertarget{aggregator_8module_a21068362472c355d68eeeb37de326d91}{
+\index{aggregator.module@{aggregator.module}!aggregator\_\-category\_\-load@{aggregator\_\-category\_\-load}}
+\index{aggregator\_\-category\_\-load@{aggregator\_\-category\_\-load}!aggregator.module@{aggregator.module}}
+\subsubsection[{aggregator\_\-category\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}aggregator\_\-category\_\-load (\$ {\em cid})}}
+\label{aggregator_8module_a21068362472c355d68eeeb37de326d91}
+Loads an aggregator category.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cid}]The category id.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An associative array describing the category. 
+\end{DoxyReturn}
+\hypertarget{aggregator_8module_adbe7d09140773c5485cda52dd03bdab5}{
+\index{aggregator.module@{aggregator.module}!aggregator\_\-cron@{aggregator\_\-cron}}
+\index{aggregator\_\-cron@{aggregator\_\-cron}!aggregator.module@{aggregator.module}}
+\subsubsection[{aggregator\_\-cron}]{\setlength{\rightskip}{0pt plus 5cm}aggregator\_\-cron ()}}
+\label{aggregator_8module_adbe7d09140773c5485cda52dd03bdab5}
+Implements \hyperlink{group__hooks_gaf07f1e3d98112fc2ba6920cf7ee6fb16}{hook\_\-cron()}.
+
+Queues news feeds for updates once their refresh interval has elapsed. \hypertarget{aggregator_8module_a3090186480044070e50c5682806980ad}{
+\index{aggregator.module@{aggregator.module}!aggregator\_\-cron\_\-queue\_\-info@{aggregator\_\-cron\_\-queue\_\-info}}
+\index{aggregator\_\-cron\_\-queue\_\-info@{aggregator\_\-cron\_\-queue\_\-info}!aggregator.module@{aggregator.module}}
+\subsubsection[{aggregator\_\-cron\_\-queue\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}aggregator\_\-cron\_\-queue\_\-info ()}}
+\label{aggregator_8module_a3090186480044070e50c5682806980ad}
+Implements \hyperlink{group__hooks_gae161ed78fd5e8775ffc9264346a64320}{hook\_\-cron\_\-queue\_\-info()}. \hypertarget{aggregator_8module_a75d55b29c2e341452a7f4ff981f58b08}{
+\index{aggregator.module@{aggregator.module}!aggregator\_\-feed\_\-load@{aggregator\_\-feed\_\-load}}
+\index{aggregator\_\-feed\_\-load@{aggregator\_\-feed\_\-load}!aggregator.module@{aggregator.module}}
+\subsubsection[{aggregator\_\-feed\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}aggregator\_\-feed\_\-load (\$ {\em fid})}}
+\label{aggregator_8module_a75d55b29c2e341452a7f4ff981f58b08}
+Loads an aggregator feed.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$fid}]The feed id.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An object describing the feed. 
+\end{DoxyReturn}
+\hypertarget{aggregator_8module_aeae59ae915eb52b6750932dabfbdf236}{
+\index{aggregator.module@{aggregator.module}!aggregator\_\-filter\_\-xss@{aggregator\_\-filter\_\-xss}}
+\index{aggregator\_\-filter\_\-xss@{aggregator\_\-filter\_\-xss}!aggregator.module@{aggregator.module}}
+\subsubsection[{aggregator\_\-filter\_\-xss}]{\setlength{\rightskip}{0pt plus 5cm}aggregator\_\-filter\_\-xss (\$ {\em value})}}
+\label{aggregator_8module_aeae59ae915eb52b6750932dabfbdf236}
+Renders the HTML content safely, as allowed.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$value}]The content to be filtered.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The filtered content. 
+\end{DoxyReturn}
+\hypertarget{aggregator_8module_a1b16201821780d636825810bbab7c8b9}{
+\index{aggregator.module@{aggregator.module}!aggregator\_\-help@{aggregator\_\-help}}
+\index{aggregator\_\-help@{aggregator\_\-help}!aggregator.module@{aggregator.module}}
+\subsubsection[{aggregator\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}aggregator\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{aggregator_8module_a1b16201821780d636825810bbab7c8b9}
+Implements \hyperlink{group__hooks_ga5589c2714a782738e8851c4c90231f0e}{hook\_\-help()}. \hypertarget{aggregator_8module_a18d55253ab5538426a4fc6d20b672dda}{
+\index{aggregator.module@{aggregator.module}!aggregator\_\-menu@{aggregator\_\-menu}}
+\index{aggregator\_\-menu@{aggregator\_\-menu}!aggregator.module@{aggregator.module}}
+\subsubsection[{aggregator\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}aggregator\_\-menu ()}}
+\label{aggregator_8module_a18d55253ab5538426a4fc6d20b672dda}
+Implements \hyperlink{group__hooks_ga5c95244fea59b25666e409759e133ded}{hook\_\-menu()}. \hypertarget{aggregator_8module_a1cb2d5a4e95cc6f7e9ecba9859b86e71}{
+\index{aggregator.module@{aggregator.module}!aggregator\_\-permission@{aggregator\_\-permission}}
+\index{aggregator\_\-permission@{aggregator\_\-permission}!aggregator.module@{aggregator.module}}
+\subsubsection[{aggregator\_\-permission}]{\setlength{\rightskip}{0pt plus 5cm}aggregator\_\-permission ()}}
+\label{aggregator_8module_a1cb2d5a4e95cc6f7e9ecba9859b86e71}
+Implements \hyperlink{group__hooks_ga2b22b45f4925f2478412477bae329713}{hook\_\-permission()}. \hypertarget{aggregator_8module_ac33f2d56e676554c7f10a56b05c646f7}{
+\index{aggregator.module@{aggregator.module}!aggregator\_\-refresh@{aggregator\_\-refresh}}
+\index{aggregator\_\-refresh@{aggregator\_\-refresh}!aggregator.module@{aggregator.module}}
+\subsubsection[{aggregator\_\-refresh}]{\setlength{\rightskip}{0pt plus 5cm}aggregator\_\-refresh (\$ {\em feed})}}
+\label{aggregator_8module_ac33f2d56e676554c7f10a56b05c646f7}
+Checks a news feed for new items.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$feed}]An object describing the feed to be refreshed. \end{DoxyParams}
+\hypertarget{aggregator_8module_ad71e79c625070f7932dc55ca575cae3c}{
+\index{aggregator.module@{aggregator.module}!aggregator\_\-remove@{aggregator\_\-remove}}
+\index{aggregator\_\-remove@{aggregator\_\-remove}!aggregator.module@{aggregator.module}}
+\subsubsection[{aggregator\_\-remove}]{\setlength{\rightskip}{0pt plus 5cm}aggregator\_\-remove (\$ {\em feed})}}
+\label{aggregator_8module_ad71e79c625070f7932dc55ca575cae3c}
+Removes all items from a feed.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$feed}]An object describing the feed to be cleared. \end{DoxyParams}
+\hypertarget{aggregator_8module_af954c80a39d72d63c2f87037351f9d8b}{
+\index{aggregator.module@{aggregator.module}!aggregator\_\-sanitize\_\-configuration@{aggregator\_\-sanitize\_\-configuration}}
+\index{aggregator\_\-sanitize\_\-configuration@{aggregator\_\-sanitize\_\-configuration}!aggregator.module@{aggregator.module}}
+\subsubsection[{aggregator\_\-sanitize\_\-configuration}]{\setlength{\rightskip}{0pt plus 5cm}aggregator\_\-sanitize\_\-configuration ()}}
+\label{aggregator_8module_af954c80a39d72d63c2f87037351f9d8b}
+Checks and sanitizes the aggregator configuration.
+
+Goes through all fetchers, parsers and processors and checks whether they are available. If one is missing, resets to standard configuration.
+
+\begin{DoxyReturn}{Returns}
+TRUE if this function resets the configuration; FALSE if not. 
+\end{DoxyReturn}
+\hypertarget{aggregator_8module_ade5aa9b8b9e6a6cde175f93092c58d3d}{
+\index{aggregator.module@{aggregator.module}!aggregator\_\-save\_\-category@{aggregator\_\-save\_\-category}}
+\index{aggregator\_\-save\_\-category@{aggregator\_\-save\_\-category}!aggregator.module@{aggregator.module}}
+\subsubsection[{aggregator\_\-save\_\-category}]{\setlength{\rightskip}{0pt plus 5cm}aggregator\_\-save\_\-category (\$ {\em edit})}}
+\label{aggregator_8module_ade5aa9b8b9e6a6cde175f93092c58d3d}
+Adds/edits/deletes aggregator categories.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$edit}]An associative array describing the category to be added/edited/deleted. \end{DoxyParams}
+\hypertarget{aggregator_8module_a2e3fef9906b9317edfd98019d4190d15}{
+\index{aggregator.module@{aggregator.module}!aggregator\_\-save\_\-feed@{aggregator\_\-save\_\-feed}}
+\index{aggregator\_\-save\_\-feed@{aggregator\_\-save\_\-feed}!aggregator.module@{aggregator.module}}
+\subsubsection[{aggregator\_\-save\_\-feed}]{\setlength{\rightskip}{0pt plus 5cm}aggregator\_\-save\_\-feed (\$ {\em edit})}}
+\label{aggregator_8module_a2e3fef9906b9317edfd98019d4190d15}
+Add/edit/delete an aggregator feed.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$edit}]An associative array describing the feed to be added/edited/deleted. \end{DoxyParams}
+\hypertarget{aggregator_8module_afc032aa1293caac3cb41980616a65fc5}{
+\index{aggregator.module@{aggregator.module}!aggregator\_\-theme@{aggregator\_\-theme}}
+\index{aggregator\_\-theme@{aggregator\_\-theme}!aggregator.module@{aggregator.module}}
+\subsubsection[{aggregator\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}aggregator\_\-theme ()}}
+\label{aggregator_8module_afc032aa1293caac3cb41980616a65fc5}
+Implements \hyperlink{group__hooks_ga013ccb45c7aaab1c16cf9691428c910d}{hook\_\-theme()}. 

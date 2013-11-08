@@ -1,0 +1,102 @@
+\hypertarget{search_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/page\_\-manager/plugins/tasks/search.inc File Reference}
+\label{search_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/page\_\-manager/plugins/tasks/search.inc@{html/profiles/dosomething/modules/contrib/ctools/page\_\-manager/plugins/tasks/search.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{search_8inc_ab3a19319349c19ffc47a5c86576efeee}{page\_\-manager\_\-search\_\-page\_\-manager\_\-tasks} ()
+\item 
+\hyperlink{search_8inc_a136ff5e3f4fd4aee819affbaf52f0423}{page\_\-manager\_\-search\_\-menu\_\-alter} (\&\$items, \$task)
+\item 
+\hyperlink{search_8inc_a8ca5b1c88c351db56b4b672edf8f6dc3}{page\_\-manager\_\-search\_\-page} (\$type)
+\item 
+\hyperlink{search_8inc_a8cd1ec680eb61e9e60fb3c442d835e73}{page\_\-manager\_\-search\_\-get\_\-arguments} (\$task, \$subtask\_\-id)
+\item 
+\hyperlink{search_8inc_abb94c14f90c4b6e7fe31c190fb101983}{page\_\-manager\_\-search\_\-get\_\-contexts} (\$task, \$subtask\_\-id)
+\item 
+\hyperlink{search_8inc_acbd77cd58f3bb06e7225d54bdd0dd18e}{page\_\-manager\_\-search\_\-enable} (\$cache, \$status)
+\item 
+\hyperlink{search_8inc_ac7befb521ac263f9bc2dbe8b9019d615}{page\_\-manager\_\-search\_\-subtasks} (\$task)
+\item 
+\hyperlink{search_8inc_a38327af8827244b7c5f213421903c51e}{page\_\-manager\_\-search\_\-subtask} (\$task, \$subtask\_\-id)
+\item 
+\hyperlink{search_8inc_a557ba655c3544df1384c33591a5159f8}{page\_\-manager\_\-search\_\-build\_\-subtask} (\$task, \$module)
+\item 
+\hyperlink{search_8inc_adde5dbaa1a682f97863333fe038eed4f}{page\_\-manager\_\-search\_\-access\_\-check} (\$task, \$subtask\_\-id, \$contexts)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handle the 'node view' override task.
+
+This plugin overrides node/node and reroutes it to the page manager, where a list of tasks can be used to service this request based upon criteria supplied by access plugins. 
+
+\subsection{Function Documentation}
+\hypertarget{search_8inc_adde5dbaa1a682f97863333fe038eed4f}{
+\index{search.inc@{search.inc}!page\_\-manager\_\-search\_\-access\_\-check@{page\_\-manager\_\-search\_\-access\_\-check}}
+\index{page\_\-manager\_\-search\_\-access\_\-check@{page\_\-manager\_\-search\_\-access\_\-check}!search.inc@{search.inc}}
+\subsubsection[{page\_\-manager\_\-search\_\-access\_\-check}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-search\_\-access\_\-check (\$ {\em task}, \/  \$ {\em subtask\_\-id}, \/  \$ {\em contexts})}}
+\label{search_8inc_adde5dbaa1a682f97863333fe038eed4f}
+Callback to determine if a page is accessible.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$task}]The task plugin. \item[{\em \$subtask\_\-id}]The subtask id \item[{\em \$contexts}]The contexts loaded for the task. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the current user can access the page. 
+\end{DoxyReturn}
+\hypertarget{search_8inc_a557ba655c3544df1384c33591a5159f8}{
+\index{search.inc@{search.inc}!page\_\-manager\_\-search\_\-build\_\-subtask@{page\_\-manager\_\-search\_\-build\_\-subtask}}
+\index{page\_\-manager\_\-search\_\-build\_\-subtask@{page\_\-manager\_\-search\_\-build\_\-subtask}!search.inc@{search.inc}}
+\subsubsection[{page\_\-manager\_\-search\_\-build\_\-subtask}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-search\_\-build\_\-subtask (\$ {\em task}, \/  \$ {\em module})}}
+\label{search_8inc_a557ba655c3544df1384c33591a5159f8}
+Build a subtask array for a given page. \hypertarget{search_8inc_acbd77cd58f3bb06e7225d54bdd0dd18e}{
+\index{search.inc@{search.inc}!page\_\-manager\_\-search\_\-enable@{page\_\-manager\_\-search\_\-enable}}
+\index{page\_\-manager\_\-search\_\-enable@{page\_\-manager\_\-search\_\-enable}!search.inc@{search.inc}}
+\subsubsection[{page\_\-manager\_\-search\_\-enable}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-search\_\-enable (\$ {\em cache}, \/  \$ {\em status})}}
+\label{search_8inc_acbd77cd58f3bb06e7225d54bdd0dd18e}
+Callback to enable/disable the page from the UI. \hypertarget{search_8inc_a8cd1ec680eb61e9e60fb3c442d835e73}{
+\index{search.inc@{search.inc}!page\_\-manager\_\-search\_\-get\_\-arguments@{page\_\-manager\_\-search\_\-get\_\-arguments}}
+\index{page\_\-manager\_\-search\_\-get\_\-arguments@{page\_\-manager\_\-search\_\-get\_\-arguments}!search.inc@{search.inc}}
+\subsubsection[{page\_\-manager\_\-search\_\-get\_\-arguments}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-search\_\-get\_\-arguments (\$ {\em task}, \/  \$ {\em subtask\_\-id})}}
+\label{search_8inc_a8cd1ec680eb61e9e60fb3c442d835e73}
+Callback to get arguments provided by this task handler.
+
+Since this is the node \hyperlink{classview}{view} and there is no UI on the arguments, we create dummy arguments that contain the needed data. \hypertarget{search_8inc_abb94c14f90c4b6e7fe31c190fb101983}{
+\index{search.inc@{search.inc}!page\_\-manager\_\-search\_\-get\_\-contexts@{page\_\-manager\_\-search\_\-get\_\-contexts}}
+\index{page\_\-manager\_\-search\_\-get\_\-contexts@{page\_\-manager\_\-search\_\-get\_\-contexts}!search.inc@{search.inc}}
+\subsubsection[{page\_\-manager\_\-search\_\-get\_\-contexts}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-search\_\-get\_\-contexts (\$ {\em task}, \/  \$ {\em subtask\_\-id})}}
+\label{search_8inc_abb94c14f90c4b6e7fe31c190fb101983}
+Callback to get context placeholders provided by this handler. \hypertarget{search_8inc_a136ff5e3f4fd4aee819affbaf52f0423}{
+\index{search.inc@{search.inc}!page\_\-manager\_\-search\_\-menu\_\-alter@{page\_\-manager\_\-search\_\-menu\_\-alter}}
+\index{page\_\-manager\_\-search\_\-menu\_\-alter@{page\_\-manager\_\-search\_\-menu\_\-alter}!search.inc@{search.inc}}
+\subsubsection[{page\_\-manager\_\-search\_\-menu\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-search\_\-menu\_\-alter (\&\$ {\em items}, \/  \$ {\em task})}}
+\label{search_8inc_a136ff5e3f4fd4aee819affbaf52f0423}
+Callback defined by \hyperlink{search_8inc_ab3a19319349c19ffc47a5c86576efeee}{page\_\-manager\_\-search\_\-page\_\-manager\_\-tasks()}.
+
+Alter the search tabs to work with page manager. The search flow is quite odd, and tracing through the code takes hours to realize that the tab you click on does not normally actually handle the search. This tries to account for that.
+
+Note to module authors: This tends to work a lot better with modules that override their own search pages if their \_\-alter runs $\ast$before$\ast$ this one. \hypertarget{search_8inc_a8ca5b1c88c351db56b4b672edf8f6dc3}{
+\index{search.inc@{search.inc}!page\_\-manager\_\-search\_\-page@{page\_\-manager\_\-search\_\-page}}
+\index{page\_\-manager\_\-search\_\-page@{page\_\-manager\_\-search\_\-page}!search.inc@{search.inc}}
+\subsubsection[{page\_\-manager\_\-search\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-search\_\-page (\$ {\em type})}}
+\label{search_8inc_a8ca5b1c88c351db56b4b672edf8f6dc3}
+Entry point for our overridden search page. \hypertarget{search_8inc_ab3a19319349c19ffc47a5c86576efeee}{
+\index{search.inc@{search.inc}!page\_\-manager\_\-search\_\-page\_\-manager\_\-tasks@{page\_\-manager\_\-search\_\-page\_\-manager\_\-tasks}}
+\index{page\_\-manager\_\-search\_\-page\_\-manager\_\-tasks@{page\_\-manager\_\-search\_\-page\_\-manager\_\-tasks}!search.inc@{search.inc}}
+\subsubsection[{page\_\-manager\_\-search\_\-page\_\-manager\_\-tasks}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-search\_\-page\_\-manager\_\-tasks ()}}
+\label{search_8inc_ab3a19319349c19ffc47a5c86576efeee}
+Specialized implementation of hook\_\-page\_\-manager\_\-task\_\-tasks(). See api-\/task.html for more information. \hypertarget{search_8inc_a38327af8827244b7c5f213421903c51e}{
+\index{search.inc@{search.inc}!page\_\-manager\_\-search\_\-subtask@{page\_\-manager\_\-search\_\-subtask}}
+\index{page\_\-manager\_\-search\_\-subtask@{page\_\-manager\_\-search\_\-subtask}!search.inc@{search.inc}}
+\subsubsection[{page\_\-manager\_\-search\_\-subtask}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-search\_\-subtask (\$ {\em task}, \/  \$ {\em subtask\_\-id})}}
+\label{search_8inc_a38327af8827244b7c5f213421903c51e}
+Callback to return a single subtask. \hypertarget{search_8inc_ac7befb521ac263f9bc2dbe8b9019d615}{
+\index{search.inc@{search.inc}!page\_\-manager\_\-search\_\-subtasks@{page\_\-manager\_\-search\_\-subtasks}}
+\index{page\_\-manager\_\-search\_\-subtasks@{page\_\-manager\_\-search\_\-subtasks}!search.inc@{search.inc}}
+\subsubsection[{page\_\-manager\_\-search\_\-subtasks}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-search\_\-subtasks (\$ {\em task})}}
+\label{search_8inc_ac7befb521ac263f9bc2dbe8b9019d615}
+Task callback to get all subtasks.
+
+Return a list of all subtasks. 

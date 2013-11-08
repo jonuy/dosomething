@@ -1,0 +1,91 @@
+\hypertarget{classviews__handler__argument__date}{
+\section{views\_\-handler\_\-argument\_\-date Class Reference}
+\label{classviews__handler__argument__date}\index{views\_\-handler\_\-argument\_\-date@{views\_\-handler\_\-argument\_\-date}}
+}
+Inheritance diagram for views\_\-handler\_\-argument\_\-date::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.5047cm]{classviews__handler__argument__date}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classviews__handler__argument__date_a9c6775f6c034bfcec9cd0fe0ab0e96f2}{default\_\-argument\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__handler__argument__date_a1e5320e475b9e86ed9acc59c9a525610}{get\_\-default\_\-argument} (\$raw=FALSE)
+\item 
+\hyperlink{classviews__handler__argument__date_aa4fe15a71439766a9915a47277615873}{export\_\-plugin} (\$indent, \$prefix, \$storage, \$option, \$definition, \$parents)
+\item 
+\hyperlink{classviews__handler__argument__date_ab206fc9897b6b15df9b96ffb95c59cb5}{get\_\-sort\_\-name} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__handler__argument__date_afbc74be2ae0b39442c7b0e90bf444f1d}{
+{\bfseries \$option\_\-name} = 'default\_\-argument\_\-date'}
+\label{classviews__handler__argument__date_afbc74be2ae0b39442c7b0e90bf444f1d}
+
+\item 
+\hypertarget{classviews__handler__argument__date_ab397e111130ca05d397834afede8cb35}{
+{\bfseries \$arg\_\-format} = 'Y-\/m-\/d'}
+\label{classviews__handler__argument__date_ab397e111130ca05d397834afede8cb35}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract argument handler for dates.
+
+Adds an option to set a default argument based on the current date.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$arg\_\-format}]The format string to use on the current time when creating a default date argument.\end{DoxyParams}
+Definitions terms:
+\begin{DoxyItemize}
+\item many to one: If true, the \char`\"{}many to one\char`\"{} helper will be used.
+\item invalid input: A string to give to the user for obviously invalid input. This is deprecated in favor of argument validators.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+views\_\-many\_\-to\_\-one\_\-helper() 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__handler__argument__date_a9c6775f6c034bfcec9cd0fe0ab0e96f2}{
+\index{views\_\-handler\_\-argument\_\-date@{views\_\-handler\_\-argument\_\-date}!default\_\-argument\_\-form@{default\_\-argument\_\-form}}
+\index{default\_\-argument\_\-form@{default\_\-argument\_\-form}!views_handler_argument_date@{views\_\-handler\_\-argument\_\-date}}
+\subsubsection[{default\_\-argument\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-argument\_\-date::default\_\-argument\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__handler__argument__date_a9c6775f6c034bfcec9cd0fe0ab0e96f2}
+Add an option to set the default value to the current date. 
+
+Reimplemented from \hyperlink{classviews__handler__argument_a830cb037bee2daa385618a60d01c0dd1}{views\_\-handler\_\-argument}.\hypertarget{classviews__handler__argument__date_aa4fe15a71439766a9915a47277615873}{
+\index{views\_\-handler\_\-argument\_\-date@{views\_\-handler\_\-argument\_\-date}!export\_\-plugin@{export\_\-plugin}}
+\index{export\_\-plugin@{export\_\-plugin}!views_handler_argument_date@{views\_\-handler\_\-argument\_\-date}}
+\subsubsection[{export\_\-plugin}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-argument\_\-date::export\_\-plugin (\$ {\em indent}, \/  \$ {\em prefix}, \/  \$ {\em storage}, \/  \$ {\em option}, \/  \$ {\em definition}, \/  \$ {\em parents})}}
+\label{classviews__handler__argument__date_aa4fe15a71439766a9915a47277615873}
+The date handler provides some default argument types, which aren't argument default plugins, so addapt the export mechanism. 
+
+Reimplemented from \hyperlink{classviews__handler__argument_abf6991bce1b9311bbfc3d471df49434e}{views\_\-handler\_\-argument}.\hypertarget{classviews__handler__argument__date_a1e5320e475b9e86ed9acc59c9a525610}{
+\index{views\_\-handler\_\-argument\_\-date@{views\_\-handler\_\-argument\_\-date}!get\_\-default\_\-argument@{get\_\-default\_\-argument}}
+\index{get\_\-default\_\-argument@{get\_\-default\_\-argument}!views_handler_argument_date@{views\_\-handler\_\-argument\_\-date}}
+\subsubsection[{get\_\-default\_\-argument}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-argument\_\-date::get\_\-default\_\-argument (\$ {\em raw} = {\ttfamily FALSE})}}
+\label{classviews__handler__argument__date_a1e5320e475b9e86ed9acc59c9a525610}
+Set the empty argument value to the current date, formatted appropriately for this argument. 
+
+Reimplemented in \hyperlink{classdate__views__argument__handler__simple_ad4843a30369e2de82db47c204167cbb0}{date\_\-views\_\-argument\_\-handler\_\-simple}.\hypertarget{classviews__handler__argument__date_ab206fc9897b6b15df9b96ffb95c59cb5}{
+\index{views\_\-handler\_\-argument\_\-date@{views\_\-handler\_\-argument\_\-date}!get\_\-sort\_\-name@{get\_\-sort\_\-name}}
+\index{get\_\-sort\_\-name@{get\_\-sort\_\-name}!views_handler_argument_date@{views\_\-handler\_\-argument\_\-date}}
+\subsubsection[{get\_\-sort\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-argument\_\-date::get\_\-sort\_\-name ()}}
+\label{classviews__handler__argument__date_ab206fc9897b6b15df9b96ffb95c59cb5}
+Return a description of how the argument would normally be sorted.
+
+Subclasses should override this to specify what the default sort order of their argument is (e.g. alphabetical, numeric, date). 
+
+Reimplemented from \hyperlink{classviews__handler__argument_a9fad9ab1a7aaa5915baf13a2872faa70}{views\_\-handler\_\-argument}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/handlers/\hyperlink{views__handler__argument__date_8inc}{views\_\-handler\_\-argument\_\-date.inc}\end{DoxyCompactItemize}

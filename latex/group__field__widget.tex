@@ -1,0 +1,226 @@
+\hypertarget{group__field__widget}{
+\section{Field Widget API}
+\label{group__field__widget}\index{Field Widget API@{Field Widget API}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__field__widget_gac53aa6c2a4ac1215660d25b5d7f20792}{hook\_\-field\_\-widget\_\-info} ()
+\item 
+\hyperlink{group__field__widget_ga2e74ac1b4b45e9f31b58b86d01892e7e}{hook\_\-field\_\-widget\_\-info\_\-alter} (\&\$info)
+\item 
+\hyperlink{group__field__widget_gaa9b0e55fd0eb57ac0f9c7c30d251971b}{hook\_\-field\_\-widget\_\-form} (\&\$form, \&\$form\_\-state, \$field, \$instance, \$langcode, \$items, \$delta, \$element)
+\item 
+\hyperlink{group__field__widget_gaca9d517ab0584fa2428779d8aa24a441}{hook\_\-field\_\-widget\_\-form\_\-alter} (\&\$element, \&\$form\_\-state, \$context)
+\item 
+\hyperlink{group__field__widget_ga6f53f1874a16e18c27dcc0cc4e7c1ec6}{hook\_\-field\_\-widget\_\-WIDGET\_\-TYPE\_\-form\_\-alter} (\&\$element, \&\$form\_\-state, \$context)
+\item 
+\hyperlink{group__field__widget_gaa88988bce1ffbec1f481ec7a3ba87e51}{hook\_\-field\_\-widget\_\-properties\_\-alter} (\&\$widget, \$context)
+\item 
+\hyperlink{group__field__widget_ga9a2031578542fef9e296d79c946431fd}{hook\_\-field\_\-widget\_\-error} (\$element, \$error, \$form, \&\$form\_\-state)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+End of \char`\"{}defgroup field\_\-types\char`\"{}.
+
+Define Field API widget types.
+
+Field API widgets specify how fields are displayed in edit forms. Fields of a given \hyperlink{group__field__types}{field type } may be edited using more than one widget. In this case, the Field UI module allows the site builder to choose which widget to use. Widget types are defined by implementing \hyperlink{group__field__widget_gac53aa6c2a4ac1215660d25b5d7f20792}{hook\_\-field\_\-widget\_\-info()}.
+
+Widgets are \hyperlink{}{Form API } elements with additional processing capabilities. Widget hooks are typically called by the Field Attach API during the creation of the field form structure with \hyperlink{group__field__attach_gac5bd0213dae78f7c1b3235f3acdde2c6}{field\_\-attach\_\-form()}.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__field}{Field API} 
+
+\hyperlink{group__field__types}{Field Types API} 
+
+\hyperlink{group__field__formatter}{Field Formatter API} 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__field__widget_ga9a2031578542fef9e296d79c946431fd}{
+\index{field\_\-widget@{field\_\-widget}!hook\_\-field\_\-widget\_\-error@{hook\_\-field\_\-widget\_\-error}}
+\index{hook\_\-field\_\-widget\_\-error@{hook\_\-field\_\-widget\_\-error}!field_widget@{field\_\-widget}}
+\subsubsection[{hook\_\-field\_\-widget\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-widget\_\-error (\$ {\em element}, \/  \$ {\em error}, \/  \$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{group__field__widget_ga9a2031578542fef9e296d79c946431fd}
+Flag a field-\/level validation error.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$element}]An array containing the form element for the widget. The error needs to be flagged on the right sub-\/element, according to the widget's internal structure. \item[{\em \$error}]An associative array with the following key-\/value pairs, as returned by \hyperlink{group__field__types_gaa7d8846e8fe3766e1b3435cd50b965be}{hook\_\-field\_\-validate()}:
+\begin{DoxyItemize}
+\item error: the error code. Complex widgets might need to report different errors to different form elements inside the widget.
+\item message: the human readable message to be displayed. 
+\end{DoxyItemize}\item[{\em \$form}]The form structure where field elements are attached to. This might be a full form structure, or a sub-\/element of a larger form. \item[{\em \$form\_\-state}]An associative array containing the current state of the form. \end{DoxyParams}
+\hypertarget{group__field__widget_gaa9b0e55fd0eb57ac0f9c7c30d251971b}{
+\index{field\_\-widget@{field\_\-widget}!hook\_\-field\_\-widget\_\-form@{hook\_\-field\_\-widget\_\-form}}
+\index{hook\_\-field\_\-widget\_\-form@{hook\_\-field\_\-widget\_\-form}!field_widget@{field\_\-widget}}
+\subsubsection[{hook\_\-field\_\-widget\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-widget\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em field}, \/  \$ {\em instance}, \/  \$ {\em langcode}, \/  \$ {\em items}, \/  \$ {\em delta}, \/  \$ {\em element})}}
+\label{group__field__widget_gaa9b0e55fd0eb57ac0f9c7c30d251971b}
+Return the form for a single field widget.
+
+Field widget form elements should be based on the passed-\/in \$element, which contains the base form element properties derived from the field configuration.
+
+Field API will set the weight, field name and delta values for each form element. If there are multiple values for this field, the Field API will invoke this hook as many times as needed.
+
+Note that, depending on the context in which the widget is being included (regular entity form, field configuration form, advanced search form...), the values for \$field and \$instance might be different from the \char`\"{}official\char`\"{} definitions returned by \hyperlink{group__field__info_ga74cfc942cd2baa5c49780b08c5d357d4}{field\_\-info\_\-field()} and \hyperlink{group__field__info_ga7d4361ece7a9a8be980e3fd4a6307564}{field\_\-info\_\-instance()}. Examples: mono-\/value widget even if the field is multi-\/valued, non-\/required widget even if the field is 'required'...
+
+Therefore, the FAPI element callbacks (such as process, element\_\-validate, value\_\-callback...) used by the widget cannot use the \hyperlink{group__field__info_ga74cfc942cd2baa5c49780b08c5d357d4}{field\_\-info\_\-field()} or \hyperlink{group__field__info_ga7d4361ece7a9a8be980e3fd4a6307564}{field\_\-info\_\-instance()} functions to retrieve the \$field or \$instance definitions they should operate on. The \hyperlink{field_8form_8inc_a71dcef632fc59641eee5238c7c6b335c}{field\_\-widget\_\-field()} and \hyperlink{field_8form_8inc_ac72e1f5dacbab488a337f79fe485429f}{field\_\-widget\_\-instance()} functions should be used instead to fetch the current working definitions from \$form\_\-state, where Field API stores them.
+
+Alternatively, \hyperlink{group__field__widget_gaa9b0e55fd0eb57ac0f9c7c30d251971b}{hook\_\-field\_\-widget\_\-form()} can extract the needed specific properties from \$field and \$instance and set them as ad-\/hoc \$element\mbox{[}'custom'\mbox{]} properties, for later use by its element callbacks.
+
+Other modules may alter the form element provided by this function using \hyperlink{group__field__widget_gaca9d517ab0584fa2428779d8aa24a441}{hook\_\-field\_\-widget\_\-form\_\-alter()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$form}]The form structure where widgets are being attached to. This might be a full form structure, or a sub-\/element of a larger form. \item[{\em \$form\_\-state}]An associative array containing the current state of the form. \item[{\em \$field}]The field structure. \item[{\em \$instance}]The field instance. \item[{\em \$langcode}]The language associated with \$items. \item[{\em \$items}]Array of default values for this field. \item[{\em \$delta}]The order of this item in the array of subelements (0, 1, 2, etc). \item[{\em \$element}]A form element array containing basic properties for the widget:
+\begin{DoxyItemize}
+\item entity\_\-type: The name of the entity the field is attached to.
+\item bundle: The name of the field bundle the field is contained in.
+\item field\_\-name: The name of the field.
+\item language: The language the field is being edited in.
+\item field\_\-parents: The 'parents' space for the field in the form. Most widgets can simply overlook this property. This identifies the location where the field values are placed within \$form\_\-state\mbox{[}'values'\mbox{]}, and is used to access processing information for the field through the \hyperlink{field_8form_8inc_a84146d3d086bfc6b242f01c23e552435}{field\_\-form\_\-get\_\-state()} and \hyperlink{field_8form_8inc_a8e21a8b058d1a84d91d1a326242e303e}{field\_\-form\_\-set\_\-state()} functions.
+\item columns: A list of field storage columns of the field.
+\item title: The sanitized element label for the field instance, ready for output.
+\item description: The sanitized element description for the field instance, ready for output.
+\item required: A Boolean indicating whether the element value is required; for required multiple value fields, only the first widget's values are required.
+\item delta: The order of this item in the array of subelements; see \$delta above.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The form elements for a single widget for this field.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{field_8form_8inc_a71dcef632fc59641eee5238c7c6b335c}{field\_\-widget\_\-field()} 
+
+\hyperlink{field_8form_8inc_ac72e1f5dacbab488a337f79fe485429f}{field\_\-widget\_\-instance()} 
+
+\hyperlink{group__field__widget_gaca9d517ab0584fa2428779d8aa24a441}{hook\_\-field\_\-widget\_\-form\_\-alter()} 
+
+\hyperlink{group__field__widget_ga6f53f1874a16e18c27dcc0cc4e7c1ec6}{hook\_\-field\_\-widget\_\-WIDGET\_\-TYPE\_\-form\_\-alter()} 
+\end{DoxySeeAlso}
+\hypertarget{group__field__widget_gaca9d517ab0584fa2428779d8aa24a441}{
+\index{field\_\-widget@{field\_\-widget}!hook\_\-field\_\-widget\_\-form\_\-alter@{hook\_\-field\_\-widget\_\-form\_\-alter}}
+\index{hook\_\-field\_\-widget\_\-form\_\-alter@{hook\_\-field\_\-widget\_\-form\_\-alter}!field_widget@{field\_\-widget}}
+\subsubsection[{hook\_\-field\_\-widget\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-widget\_\-form\_\-alter (\&\$ {\em element}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em context})}}
+\label{group__field__widget_gaca9d517ab0584fa2428779d8aa24a441}
+Alter forms for field widgets provided by other modules.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$element}]The field widget form element as constructed by \hyperlink{group__field__widget_gaa9b0e55fd0eb57ac0f9c7c30d251971b}{hook\_\-field\_\-widget\_\-form()}. \item[{\em \$form\_\-state}]An associative array containing the current state of the form. \item[{\em \$context}]An associative array containing the following key-\/value pairs, matching the arguments received by \hyperlink{group__field__widget_gaa9b0e55fd0eb57ac0f9c7c30d251971b}{hook\_\-field\_\-widget\_\-form()}:
+\begin{DoxyItemize}
+\item form: The form structure to which widgets are being attached. This may be a full form structure, or a sub-\/element of a larger form.
+\item field: The field structure.
+\item instance: The field instance structure.
+\item langcode: The language associated with \$items.
+\item items: Array of default values for this field.
+\item delta: The order of this item in the array of subelements (0, 1, 2, etc).
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__field__widget_gaa9b0e55fd0eb57ac0f9c7c30d251971b}{hook\_\-field\_\-widget\_\-form()} 
+
+\hyperlink{group__field__widget_ga6f53f1874a16e18c27dcc0cc4e7c1ec6}{hook\_\-field\_\-widget\_\-WIDGET\_\-TYPE\_\-form\_\-alter()} 
+\end{DoxySeeAlso}
+\hypertarget{group__field__widget_gac53aa6c2a4ac1215660d25b5d7f20792}{
+\index{field\_\-widget@{field\_\-widget}!hook\_\-field\_\-widget\_\-info@{hook\_\-field\_\-widget\_\-info}}
+\index{hook\_\-field\_\-widget\_\-info@{hook\_\-field\_\-widget\_\-info}!field_widget@{field\_\-widget}}
+\subsubsection[{hook\_\-field\_\-widget\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-widget\_\-info ()}}
+\label{group__field__widget_gac53aa6c2a4ac1215660d25b5d7f20792}
+Expose Field API widget types.
+
+\begin{DoxyReturn}{Returns}
+An array describing the widget types implemented by the module. The keys are widget type names. To avoid name clashes, widget type names should be prefixed with the name of the module that exposes them. The values are arrays describing the widget type, with the following key/value pairs:
+\begin{DoxyItemize}
+\item label: The human-\/readable name of the widget type.
+\item description: A short description for the widget type.
+\item field types: An array of field types the widget supports.
+\item settings: An array whose keys are the names of the settings available for the widget type, and whose values are the default values for those settings.
+\item behaviors: (optional) An array describing behaviors of the widget, with the following elements:
+\begin{DoxyItemize}
+\item multiple values: One of the following constants:
+\begin{DoxyItemize}
+\item FIELD\_\-BEHAVIOR\_\-DEFAULT: (default) If the widget allows the input of one single field value (most common case). The widget will be repeated for each value input.
+\item FIELD\_\-BEHAVIOR\_\-CUSTOM: If one single copy of the widget can receive several field values. Examples: checkboxes, multiple select, comma-\/separated textfield.
+\end{DoxyItemize}
+\item default value: One of the following constants:
+\begin{DoxyItemize}
+\item FIELD\_\-BEHAVIOR\_\-DEFAULT: (default) If the widget accepts default values.
+\item FIELD\_\-BEHAVIOR\_\-NONE: if the widget does not support default values.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item weight: (optional) An integer to determine the weight of this widget relative to other widgets in the Field UI when selecting a widget for a given field instance.
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__field__widget_ga2e74ac1b4b45e9f31b58b86d01892e7e}{hook\_\-field\_\-widget\_\-info\_\-alter()} 
+
+\hyperlink{group__field__widget_gaa9b0e55fd0eb57ac0f9c7c30d251971b}{hook\_\-field\_\-widget\_\-form()} 
+
+\hyperlink{group__field__widget_gaca9d517ab0584fa2428779d8aa24a441}{hook\_\-field\_\-widget\_\-form\_\-alter()} 
+
+\hyperlink{group__field__widget_ga6f53f1874a16e18c27dcc0cc4e7c1ec6}{hook\_\-field\_\-widget\_\-WIDGET\_\-TYPE\_\-form\_\-alter()} 
+
+\hyperlink{group__field__widget_ga9a2031578542fef9e296d79c946431fd}{hook\_\-field\_\-widget\_\-error()} 
+
+\hyperlink{group__field__types_gabe5ece2134d0cbdfc3c4793f24c5866c}{hook\_\-field\_\-widget\_\-settings\_\-form()} 
+\end{DoxySeeAlso}
+\hypertarget{group__field__widget_ga2e74ac1b4b45e9f31b58b86d01892e7e}{
+\index{field\_\-widget@{field\_\-widget}!hook\_\-field\_\-widget\_\-info\_\-alter@{hook\_\-field\_\-widget\_\-info\_\-alter}}
+\index{hook\_\-field\_\-widget\_\-info\_\-alter@{hook\_\-field\_\-widget\_\-info\_\-alter}!field_widget@{field\_\-widget}}
+\subsubsection[{hook\_\-field\_\-widget\_\-info\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-widget\_\-info\_\-alter (\&\$ {\em info})}}
+\label{group__field__widget_ga2e74ac1b4b45e9f31b58b86d01892e7e}
+Perform alterations on Field API widget types.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$info}]Array of informations on widget types exposed by \hyperlink{group__field__widget_gac53aa6c2a4ac1215660d25b5d7f20792}{hook\_\-field\_\-widget\_\-info()} implementations. \end{DoxyParams}
+\hypertarget{group__field__widget_gaa88988bce1ffbec1f481ec7a3ba87e51}{
+\index{field\_\-widget@{field\_\-widget}!hook\_\-field\_\-widget\_\-properties\_\-alter@{hook\_\-field\_\-widget\_\-properties\_\-alter}}
+\index{hook\_\-field\_\-widget\_\-properties\_\-alter@{hook\_\-field\_\-widget\_\-properties\_\-alter}!field_widget@{field\_\-widget}}
+\subsubsection[{hook\_\-field\_\-widget\_\-properties\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-widget\_\-properties\_\-alter (\&\$ {\em widget}, \/  \$ {\em context})}}
+\label{group__field__widget_gaa88988bce1ffbec1f481ec7a3ba87e51}
+Alters the widget properties of a field instance before it gets displayed.
+
+Note that instead of \hyperlink{group__field__widget_gaa88988bce1ffbec1f481ec7a3ba87e51}{hook\_\-field\_\-widget\_\-properties\_\-alter()}, which is called for all fields on all entity types, \hyperlink{group__field__storage_gafbf6029d00ade9df41649d247531f3ba}{hook\_\-field\_\-widget\_\-properties\_\-ENTITY\_\-TYPE\_\-alter()} may be used to alter widget properties for fields on a specific entity type only.
+
+This hook is called once per field per added or edit entity. If the result of the hook involves reading from the database, it is highly recommended to statically cache the information.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$widget}]The instance's widget properties. \item[{\em \$context}]An associative array containing:
+\begin{DoxyItemize}
+\item entity\_\-type: The entity type; e.g., 'node' or 'user'.
+\item entity: The entity object.
+\item field: The field that the widget belongs to.
+\item instance: The instance of the field.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__field__storage_gafbf6029d00ade9df41649d247531f3ba}{hook\_\-field\_\-widget\_\-properties\_\-ENTITY\_\-TYPE\_\-alter()} 
+\end{DoxySeeAlso}
+\hypertarget{group__field__widget_ga6f53f1874a16e18c27dcc0cc4e7c1ec6}{
+\index{field\_\-widget@{field\_\-widget}!hook\_\-field\_\-widget\_\-WIDGET\_\-TYPE\_\-form\_\-alter@{hook\_\-field\_\-widget\_\-WIDGET\_\-TYPE\_\-form\_\-alter}}
+\index{hook\_\-field\_\-widget\_\-WIDGET\_\-TYPE\_\-form\_\-alter@{hook\_\-field\_\-widget\_\-WIDGET\_\-TYPE\_\-form\_\-alter}!field_widget@{field\_\-widget}}
+\subsubsection[{hook\_\-field\_\-widget\_\-WIDGET\_\-TYPE\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-widget\_\-WIDGET\_\-TYPE\_\-form\_\-alter (\&\$ {\em element}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em context})}}
+\label{group__field__widget_ga6f53f1874a16e18c27dcc0cc4e7c1ec6}
+Alter widget forms for a specific widget provided by another module.
+
+Modules can implement \hyperlink{group__field__widget_ga6f53f1874a16e18c27dcc0cc4e7c1ec6}{hook\_\-field\_\-widget\_\-WIDGET\_\-TYPE\_\-form\_\-alter()} to modify a specific widget form, rather than using \hyperlink{group__field__widget_gaca9d517ab0584fa2428779d8aa24a441}{hook\_\-field\_\-widget\_\-form\_\-alter()} and checking the widget type.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$element}]The field widget form element as constructed by \hyperlink{group__field__widget_gaa9b0e55fd0eb57ac0f9c7c30d251971b}{hook\_\-field\_\-widget\_\-form()}. \item[{\em \$form\_\-state}]An associative array containing the current state of the form. \item[{\em \$context}]An associative array containing the following key-\/value pairs, matching the arguments received by \hyperlink{group__field__widget_gaa9b0e55fd0eb57ac0f9c7c30d251971b}{hook\_\-field\_\-widget\_\-form()}:
+\begin{DoxyItemize}
+\item \char`\"{}form\char`\"{}: The form structure where widgets are being attached to. This might be a full form structure, or a sub-\/element of a larger form.
+\item \char`\"{}field\char`\"{}: The field structure.
+\item \char`\"{}instance\char`\"{}: The field instance structure.
+\item \char`\"{}langcode\char`\"{}: The language associated with \$items.
+\item \char`\"{}items\char`\"{}: Array of default values for this field.
+\item \char`\"{}delta\char`\"{}: The order of this item in the array of subelements (0, 1, 2, etc).
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__field__widget_gaa9b0e55fd0eb57ac0f9c7c30d251971b}{hook\_\-field\_\-widget\_\-form()} 
+
+\hyperlink{group__field__widget_gaca9d517ab0584fa2428779d8aa24a441}{hook\_\-field\_\-widget\_\-form\_\-alter()} 
+\end{DoxySeeAlso}

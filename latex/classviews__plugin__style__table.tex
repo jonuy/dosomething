@@ -1,0 +1,106 @@
+\hypertarget{classviews__plugin__style__table}{
+\section{views\_\-plugin\_\-style\_\-table Class Reference}
+\label{classviews__plugin__style__table}\index{views\_\-plugin\_\-style\_\-table@{views\_\-plugin\_\-style\_\-table}}
+}
+Inheritance diagram for views\_\-plugin\_\-style\_\-table::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classviews__plugin__style__table}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__plugin__style__table_ae3d77e484f3e8ff4e2df07dfcfc44aab}{
+{\bfseries option\_\-definition} ()}
+\label{classviews__plugin__style__table_ae3d77e484f3e8ff4e2df07dfcfc44aab}
+
+\item 
+\hyperlink{classviews__plugin__style__table_a3bc31ba52d980f899307aee2d74bef58}{build\_\-sort} ()
+\item 
+\hyperlink{classviews__plugin__style__table_a00d9e14ac7f545d47a43af3f9d186382}{build\_\-sort\_\-post} ()
+\item 
+\hyperlink{classviews__plugin__style__table_a1ab90a2782f6061d998a6db033100fdc}{sanitize\_\-columns} (\$columns, \$fields=NULL)
+\item 
+\hyperlink{classviews__plugin__style__table_a732752fb9b74bdb48673cb9ff4150be9}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__style__table_a6c1b6a4ddba95e72a3cc2dee0af9b92c}{even\_\-empty} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__plugin__style__table_a60e09b539fd043999a34c3f798a3a433}{
+{\bfseries \$active}}
+\label{classviews__plugin__style__table_a60e09b539fd043999a34c3f798a3a433}
+
+\item 
+\hypertarget{classviews__plugin__style__table_a768cbd6000591bf86794c1a59a22320b}{
+{\bfseries \$order}}
+\label{classviews__plugin__style__table_a768cbd6000591bf86794c1a59a22320b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Style plugin to render each item as a row in a table. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__plugin__style__table_a3bc31ba52d980f899307aee2d74bef58}{
+\index{views\_\-plugin\_\-style\_\-table@{views\_\-plugin\_\-style\_\-table}!build\_\-sort@{build\_\-sort}}
+\index{build\_\-sort@{build\_\-sort}!views_plugin_style_table@{views\_\-plugin\_\-style\_\-table}}
+\subsubsection[{build\_\-sort}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style\_\-table::build\_\-sort ()}}
+\label{classviews__plugin__style__table_a3bc31ba52d980f899307aee2d74bef58}
+Determine if we should provide sorting based upon \$\_\-GET inputs
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classviews__plugin__style_a13b4b43f813fde038a199d2ec26fc76e}{views\_\-plugin\_\-style}.\hypertarget{classviews__plugin__style__table_a00d9e14ac7f545d47a43af3f9d186382}{
+\index{views\_\-plugin\_\-style\_\-table@{views\_\-plugin\_\-style\_\-table}!build\_\-sort\_\-post@{build\_\-sort\_\-post}}
+\index{build\_\-sort\_\-post@{build\_\-sort\_\-post}!views_plugin_style_table@{views\_\-plugin\_\-style\_\-table}}
+\subsubsection[{build\_\-sort\_\-post}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style\_\-table::build\_\-sort\_\-post ()}}
+\label{classviews__plugin__style__table_a00d9e14ac7f545d47a43af3f9d186382}
+Add our actual sort criteria 
+
+Reimplemented from \hyperlink{classviews__plugin__style_af59de962f895ccd0b3adf960b908e0bd}{views\_\-plugin\_\-style}.\hypertarget{classviews__plugin__style__table_a6c1b6a4ddba95e72a3cc2dee0af9b92c}{
+\index{views\_\-plugin\_\-style\_\-table@{views\_\-plugin\_\-style\_\-table}!even\_\-empty@{even\_\-empty}}
+\index{even\_\-empty@{even\_\-empty}!views_plugin_style_table@{views\_\-plugin\_\-style\_\-table}}
+\subsubsection[{even\_\-empty}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style\_\-table::even\_\-empty ()}}
+\label{classviews__plugin__style__table_a6c1b6a4ddba95e72a3cc2dee0af9b92c}
+Should the output of the style plugin be rendered even if it's a empty \hyperlink{classview}{view}. 
+
+Reimplemented from \hyperlink{classviews__plugin__style_af9009e2a5f50ea90d9f02adeba4b711c}{views\_\-plugin\_\-style}.\hypertarget{classviews__plugin__style__table_a732752fb9b74bdb48673cb9ff4150be9}{
+\index{views\_\-plugin\_\-style\_\-table@{views\_\-plugin\_\-style\_\-table}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_plugin_style_table@{views\_\-plugin\_\-style\_\-table}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style\_\-table::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__style__table_a732752fb9b74bdb48673cb9ff4150be9}
+Render the given style. 
+
+Reimplemented from \hyperlink{classviews__plugin__style_afe3d437ff4398315b15c4e60975dbb1c}{views\_\-plugin\_\-style}.\hypertarget{classviews__plugin__style__table_a1ab90a2782f6061d998a6db033100fdc}{
+\index{views\_\-plugin\_\-style\_\-table@{views\_\-plugin\_\-style\_\-table}!sanitize\_\-columns@{sanitize\_\-columns}}
+\index{sanitize\_\-columns@{sanitize\_\-columns}!views_plugin_style_table@{views\_\-plugin\_\-style\_\-table}}
+\subsubsection[{sanitize\_\-columns}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style\_\-table::sanitize\_\-columns (\$ {\em columns}, \/  \$ {\em fields} = {\ttfamily NULL})}}
+\label{classviews__plugin__style__table_a1ab90a2782f6061d998a6db033100fdc}
+Normalize a list of columns based upon the fields that are available. This compares the fields stored in the style handler to the list of fields actually in the \hyperlink{classview}{view}, removing fields that have been removed and adding new fields in their own column.
+
+
+\begin{DoxyItemize}
+\item Each field must be in a column.
+\item Each column must be based upon a field, and that field is somewhere in the column.
+\item Any fields not currently represented must be added.
+\item Columns must be re-\/ordered to match the fields.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$columns}]An array of all fields; the key is the id of the field and the value is the id of the column the field should be in. \item[{\em \$fields}]The fields to use for the columns. If not provided, they will be requested from the current display. The running render should send the fields through, as they may be different than what the display has listed due to access control or other changes.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of all the sanitized columns. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/plugins/\hyperlink{views__plugin__style__table_8inc}{views\_\-plugin\_\-style\_\-table.inc}\end{DoxyCompactItemize}

@@ -1,0 +1,143 @@
+\hypertarget{interfaceDrupalCacheInterface}{
+\section{DrupalCacheInterface Interface Reference}
+\label{interfaceDrupalCacheInterface}\index{DrupalCacheInterface@{DrupalCacheInterface}}
+}
+Inheritance diagram for DrupalCacheInterface::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{interfaceDrupalCacheInterface}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfaceDrupalCacheInterface_ad5e2988b3cb4633f473ebf0f889d088f}{get} (\$cid)
+\item 
+\hyperlink{interfaceDrupalCacheInterface_aee8c869921fff61654d12099237763dc}{getMultiple} (\&\$cids)
+\item 
+\hyperlink{interfaceDrupalCacheInterface_ab9bbd1913d6747a74585f36b9282594c}{set} (\$cid, \$data, \$expire=\hyperlink{bootstrap_8inc_ad987330fff5fa7c75800762ddedf300c}{CACHE\_\-PERMANENT})
+\item 
+\hyperlink{interfaceDrupalCacheInterface_a5c8e341f653337185feff4ddc30c1b48}{clear} (\$cid=NULL, \$wildcard=FALSE)
+\item 
+\hyperlink{interfaceDrupalCacheInterface_a54fa3e2f8e11cbb551d5168c9f22c720}{isEmpty} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines an interface for cache implementations.
+
+All cache implementations have to implement this interface. \hyperlink{classDrupalDatabaseCache}{DrupalDatabaseCache} provides the default implementation, which can be consulted as an example.
+
+To make Drupal use your implementation for a certain cache bin, you have to set a variable with the name of the cache bin as its key and the name of your class as its value. For example, if your implementation of \hyperlink{interfaceDrupalCacheInterface}{DrupalCacheInterface} was called MyCustomCache, the following line would make Drupal use it for the 'cache\_\-page' bin: 
+\begin{DoxyCode}
+  variable_set('cache_class_cache_page', 'MyCustomCache');
+\end{DoxyCode}
+
+
+Additionally, you can register your cache implementation to be used by default for all cache bins by setting the variable 'cache\_\-default\_\-class' to the name of your implementation of the \hyperlink{interfaceDrupalCacheInterface}{DrupalCacheInterface}, e.g. 
+\begin{DoxyCode}
+  variable_set('cache_default_class', 'MyCustomCache');
+\end{DoxyCode}
+
+
+To implement a completely custom cache bin, use the same variable format: 
+\begin{DoxyCode}
+  variable_set('cache_class_custom_bin', 'MyCustomCache');
+\end{DoxyCode}
+ To access your custom cache bin, specify the name of the bin when storing or retrieving cached data: 
+\begin{DoxyCode}
+  cache_set($cid, $data, 'custom_bin', $expire);
+  cache_get($cid, 'custom_bin');
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{includes_2cache_8inc_aebc44cd35cb38b264cf0b07a164ee1af}{\_\-cache\_\-get\_\-object()} 
+
+\hyperlink{classDrupalDatabaseCache}{DrupalDatabaseCache} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceDrupalCacheInterface_a5c8e341f653337185feff4ddc30c1b48}{
+\index{DrupalCacheInterface@{DrupalCacheInterface}!clear@{clear}}
+\index{clear@{clear}!DrupalCacheInterface@{DrupalCacheInterface}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}DrupalCacheInterface::clear (\$ {\em cid} = {\ttfamily NULL}, \/  \$ {\em wildcard} = {\ttfamily FALSE})}}
+\label{interfaceDrupalCacheInterface_a5c8e341f653337185feff4ddc30c1b48}
+Expires data from the cache.
+
+If called without arguments, expirable entries will be cleared from the cache\_\-page and cache\_\-block bins.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cid}]If set, the cache ID or an array of cache IDs. Otherwise, all cache entries that can expire are deleted. The \$wildcard argument will be ignored if set to NULL. \item[{\em \$wildcard}]If TRUE, the \$cid argument must contain a string value and cache IDs starting with \$cid are deleted in addition to the exact cache ID specified by \$cid. If \$wildcard is TRUE and \$cid is '$\ast$', the entire cache is emptied. \end{DoxyParams}
+
+
+Implemented in \hyperlink{classDrupalFakeCache_a524fb90590bc66f8dd8960e6f93de943}{DrupalFakeCache}, and \hyperlink{classDrupalDatabaseCache_a07b7a236787af4e11615f26dd98f51f7}{DrupalDatabaseCache}.\hypertarget{interfaceDrupalCacheInterface_ad5e2988b3cb4633f473ebf0f889d088f}{
+\index{DrupalCacheInterface@{DrupalCacheInterface}!get@{get}}
+\index{get@{get}!DrupalCacheInterface@{DrupalCacheInterface}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}DrupalCacheInterface::get (\$ {\em cid})}}
+\label{interfaceDrupalCacheInterface_ad5e2988b3cb4633f473ebf0f889d088f}
+Returns data from the persistent cache.
+
+Data may be stored as either plain text or as serialized data. \hyperlink{includes_2cache_8inc_a9d873815c28909b61c3a6188b383f8a3}{cache\_\-get()} will automatically return unserialized objects and arrays.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cid}]The cache ID of the data to retrieve.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The cache or FALSE on failure. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classDrupalFakeCache_aaab8fb6e1a78691e81e0f3d48d4edbad}{DrupalFakeCache}, and \hyperlink{classDrupalDatabaseCache_a66a573f6f3e13198b1e95fdc4bd14f8e}{DrupalDatabaseCache}.\hypertarget{interfaceDrupalCacheInterface_aee8c869921fff61654d12099237763dc}{
+\index{DrupalCacheInterface@{DrupalCacheInterface}!getMultiple@{getMultiple}}
+\index{getMultiple@{getMultiple}!DrupalCacheInterface@{DrupalCacheInterface}}
+\subsubsection[{getMultiple}]{\setlength{\rightskip}{0pt plus 5cm}DrupalCacheInterface::getMultiple (\&\$ {\em cids})}}
+\label{interfaceDrupalCacheInterface_aee8c869921fff61654d12099237763dc}
+Returns data from the persistent cache when given an array of cache IDs.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cids}]An array of cache IDs for the data to retrieve. This is passed by reference, and will have the IDs successfully returned from cache removed.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of the items successfully returned from cache indexed by cid. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classDrupalFakeCache_a9ca8ecb251e83f3d30beb2f6722ef746}{DrupalFakeCache}, and \hyperlink{classDrupalDatabaseCache_ad9f421906b15c039f1842cf8c14e8768}{DrupalDatabaseCache}.\hypertarget{interfaceDrupalCacheInterface_a54fa3e2f8e11cbb551d5168c9f22c720}{
+\index{DrupalCacheInterface@{DrupalCacheInterface}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!DrupalCacheInterface@{DrupalCacheInterface}}
+\subsubsection[{isEmpty}]{\setlength{\rightskip}{0pt plus 5cm}DrupalCacheInterface::isEmpty ()}}
+\label{interfaceDrupalCacheInterface_a54fa3e2f8e11cbb551d5168c9f22c720}
+Checks if a cache bin is empty.
+
+A cache bin is considered empty if it does not contain any valid data for any cache ID.
+
+\begin{DoxyReturn}{Returns}
+TRUE if the cache bin specified is empty. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classDrupalFakeCache_a78bf2c373a0204a24bd809c0f27e7a4e}{DrupalFakeCache}, and \hyperlink{classDrupalDatabaseCache_addc129b38e3ffdda5a55f2f453ea5619}{DrupalDatabaseCache}.\hypertarget{interfaceDrupalCacheInterface_ab9bbd1913d6747a74585f36b9282594c}{
+\index{DrupalCacheInterface@{DrupalCacheInterface}!set@{set}}
+\index{set@{set}!DrupalCacheInterface@{DrupalCacheInterface}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}DrupalCacheInterface::set (\$ {\em cid}, \/  \$ {\em data}, \/  \$ {\em expire} = {\ttfamily {\bf CACHE\_\-PERMANENT}})}}
+\label{interfaceDrupalCacheInterface_ab9bbd1913d6747a74585f36b9282594c}
+Stores data in the persistent cache.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cid}]The cache ID of the data to store. \item[{\em \$data}]The data to store in the cache. Complex data types will be automatically serialized before insertion. Strings will be stored as plain text and not serialized. \item[{\em \$expire}]One of the following values:
+\begin{DoxyItemize}
+\item CACHE\_\-PERMANENT: Indicates that the item should never be removed unless explicitly told to using \hyperlink{includes_2cache_8inc_a409b34dd629640d791a11736a9de8125}{cache\_\-clear\_\-all()} with a cache ID.
+\item CACHE\_\-TEMPORARY: Indicates that the item should be removed at the next general cache wipe.
+\item A Unix timestamp: Indicates that the item should be kept at least until the given time, after which it behaves like CACHE\_\-TEMPORARY. 
+\end{DoxyItemize}\end{DoxyParams}
+
+
+Implemented in \hyperlink{classDrupalFakeCache_a54b3264101045168404dc3cedcfce970}{DrupalFakeCache}, and \hyperlink{classDrupalDatabaseCache_a8262bd7a36ca026f6b8c31c30c0f722d}{DrupalDatabaseCache}.
+
+The documentation for this interface was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/\hyperlink{includes_2cache_8inc}{cache.inc}\end{DoxyCompactItemize}

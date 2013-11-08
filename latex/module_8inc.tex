@@ -1,0 +1,272 @@
+\hypertarget{module_8inc}{
+\section{html/includes/module.inc File Reference}
+\label{module_8inc}\index{html/includes/module.inc@{html/includes/module.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{module_8inc_a76db4bd7c4962f254d6cc9bed5f0e1f6}{module\_\-load\_\-all} (\$bootstrap=FALSE)
+\item 
+\hyperlink{module_8inc_ad4ef444bbb8e56724e12908cf9b6e1aa}{module\_\-list} (\$refresh=FALSE, \$bootstrap\_\-refresh=FALSE, \$sort=FALSE, \$fixed\_\-list=NULL)
+\item 
+\hyperlink{module_8inc_a807821e98f8d626a7043923080ba6438}{system\_\-list} (\$type)
+\item 
+\hyperlink{module_8inc_ac141d5e0a5817eda15b376a5737dec3d}{system\_\-list\_\-reset} ()
+\item 
+\hyperlink{module_8inc_a4a43fd8278bb4e660eff9a74aaba3dd4}{\_\-module\_\-build\_\-dependencies} (\$files)
+\item 
+\hyperlink{module_8inc_a83bfe4eac372da50ff3eaf949b1b6ff8}{module\_\-exists} (\$module)
+\item 
+\hyperlink{module_8inc_a77a6101f363c066eafbe29b26af5bfd3}{module\_\-load\_\-install} (\$module)
+\item 
+\hyperlink{module_8inc_a49098ed4d33650ee5ab52aab40982423}{module\_\-load\_\-include} (\$type, \$module, \$name=NULL)
+\item 
+\hyperlink{module_8inc_a4e2123e44529b4d307fc1ac78519e966}{module\_\-load\_\-all\_\-includes} (\$type, \$name=NULL)
+\item 
+\hyperlink{module_8inc_a4b2c9ea60d7c88595eaebfc4abd5f1bf}{module\_\-enable} (\$module\_\-list, \$enable\_\-dependencies=TRUE)
+\item 
+\hyperlink{module_8inc_a0378d5f56db255c18ca59fc54cd52a94}{module\_\-disable} (\$module\_\-list, \$disable\_\-dependents=TRUE)
+\item 
+\hyperlink{group__hooks_ga0d7a0b03039c561b63424b2a6cf6103f}{module\_\-hook} (\$module, \$hook)
+\item 
+\hyperlink{group__hooks_ga9191200072f2a641829e9d3c2759561f}{module\_\-implements} (\$hook, \$sort=FALSE, \$reset=FALSE)
+\item 
+\hyperlink{group__hooks_ga30e72b1391cfa4c282fe98e0dabe02f9}{module\_\-hook\_\-info} ()
+\item 
+\hyperlink{group__hooks_ga993e46e78bf9dfb0e940c0dcccf5e33d}{module\_\-implements\_\-write\_\-cache} ()
+\item 
+\hyperlink{group__hooks_ga7547905cff161d057f9e71088ec67f05}{module\_\-invoke} (\$module, \$hook)
+\item 
+\hyperlink{group__hooks_gabedb5f566ef5faaa5768dd15125b111c}{module\_\-invoke\_\-all} (\$hook)
+\item 
+\hyperlink{module_8inc_a029be29693701bd21b6810e8d047c5a8}{drupal\_\-required\_\-modules} ()
+\item 
+\hyperlink{module_8inc_a0a8742a524bbb674b6c6a26755765007}{drupal\_\-alter} (\$type, \&\$data, \&\$context1=NULL, \&\$context2=NULL, \&\$context3=NULL)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+API for loading and interacting with Drupal modules. 
+
+\subsection{Function Documentation}
+\hypertarget{module_8inc_a4a43fd8278bb4e660eff9a74aaba3dd4}{
+\index{module.inc@{module.inc}!\_\-module\_\-build\_\-dependencies@{\_\-module\_\-build\_\-dependencies}}
+\index{\_\-module\_\-build\_\-dependencies@{\_\-module\_\-build\_\-dependencies}!module.inc@{module.inc}}
+\subsubsection[{\_\-module\_\-build\_\-dependencies}]{\setlength{\rightskip}{0pt plus 5cm}\_\-module\_\-build\_\-dependencies (\$ {\em files})}}
+\label{module_8inc_a4a43fd8278bb4e660eff9a74aaba3dd4}
+Determines which modules require and are required by each module.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$files}]The array of filesystem objects used to rebuild the cache.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same array with the new keys for each module:
+\begin{DoxyItemize}
+\item requires: An array with the keys being the modules that this module requires.
+\item required\_\-by: An array with the keys being the modules that will not work without this module. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{module_8inc_a0a8742a524bbb674b6c6a26755765007}{
+\index{module.inc@{module.inc}!drupal\_\-alter@{drupal\_\-alter}}
+\index{drupal\_\-alter@{drupal\_\-alter}!module.inc@{module.inc}}
+\subsubsection[{drupal\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-alter (\$ {\em type}, \/  \&\$ {\em data}, \/  \&\$ {\em context1} = {\ttfamily NULL}, \/  \&\$ {\em context2} = {\ttfamily NULL}, \/  \&\$ {\em context3} = {\ttfamily NULL})}}
+\label{module_8inc_a0a8742a524bbb674b6c6a26755765007}
+Passes alterable variables to specific hook\_\-TYPE\_\-alter() implementations.
+
+This dispatch function hands off the passed-\/in variables to type-\/specific hook\_\-TYPE\_\-alter() implementations in modules. It ensures a consistent interface for all altering operations.
+
+A maximum of 2 alterable arguments is supported (a third is supported for legacy reasons, but should not be used in new code). In case more arguments need to be passed and alterable, modules provide additional variables assigned by reference in the last \$context argument: 
+\begin{DoxyCode}
+   $context = array(
+     'alterable' => &$alterable,
+     'unalterable' => $unalterable,
+     'foo' => 'bar',
+   );
+   drupal_alter('mymodule_data', $alterable1, $alterable2, $context);
+\end{DoxyCode}
+
+
+Note that objects are always passed by reference in PHP5. If it is absolutely required that no implementation alters a passed object in \$context, then an object needs to be cloned: 
+\begin{DoxyCode}
+   $context = array(
+     'unalterable_object' => clone $object,
+   );
+   drupal_alter('mymodule_data', $data, $context);
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]A string describing the type of the alterable \$data. 'form', 'links', 'node\_\-content', and so on are several examples. Alternatively can be an array, in which case hook\_\-TYPE\_\-alter() is invoked for each value in the array, ordered first by module, and then for each module, in the order of values in \$type. For example, when Form API is using \hyperlink{module_8inc_a0a8742a524bbb674b6c6a26755765007}{drupal\_\-alter()} to execute both \hyperlink{group__hooks_ga6df3cea27ae1407aeef4eae5444cb213}{hook\_\-form\_\-alter()} and \hyperlink{group__hooks_ga8d4a4089551493d55911bd5c4f218264}{hook\_\-form\_\-FORM\_\-ID\_\-alter()} implementations, it passes array('form', 'form\_\-' . \$form\_\-id) for \$type. \item[{\em \$data}]The variable that will be passed to hook\_\-TYPE\_\-alter() implementations to be altered. The type of this variable depends on the value of the \$type argument. For example, when altering a 'form', \$data will be a structured array. When altering a 'profile', \$data will be an object. \item[{\em \$context1}](optional) An additional variable that is passed by reference. \item[{\em \$context2}](optional) An additional variable that is passed by reference. If more context needs to be provided to implementations, then this should be an associative array as described above. \item[{\em \$context3}](optional) An additional variable that is passed by reference. This parameter is deprecated and will not exist in Drupal 8; consequently, it should not be used for new Drupal 7 code either. It is here only for backwards compatibility with older code that passed additional arguments to \hyperlink{module_8inc_a0a8742a524bbb674b6c6a26755765007}{drupal\_\-alter()}. \end{DoxyParams}
+\hypertarget{module_8inc_a029be29693701bd21b6810e8d047c5a8}{
+\index{module.inc@{module.inc}!drupal\_\-required\_\-modules@{drupal\_\-required\_\-modules}}
+\index{drupal\_\-required\_\-modules@{drupal\_\-required\_\-modules}!module.inc@{module.inc}}
+\subsubsection[{drupal\_\-required\_\-modules}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-required\_\-modules ()}}
+\label{module_8inc_a029be29693701bd21b6810e8d047c5a8}
+End of \char`\"{}defgroup hooks\char`\"{}. Returns an array of modules required by core. \hypertarget{module_8inc_a0378d5f56db255c18ca59fc54cd52a94}{
+\index{module.inc@{module.inc}!module\_\-disable@{module\_\-disable}}
+\index{module\_\-disable@{module\_\-disable}!module.inc@{module.inc}}
+\subsubsection[{module\_\-disable}]{\setlength{\rightskip}{0pt plus 5cm}module\_\-disable (\$ {\em module\_\-list}, \/  \$ {\em disable\_\-dependents} = {\ttfamily TRUE})}}
+\label{module_8inc_a0378d5f56db255c18ca59fc54cd52a94}
+Disables a given set of modules.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$module\_\-list}]An array of module names. \item[{\em \$disable\_\-dependents}]If TRUE, dependent modules will automatically be added and disabled in the correct order. This incurs a significant performance cost, so use FALSE if you know \$module\_\-list is already complete and in the correct order. \end{DoxyParams}
+\hypertarget{module_8inc_a4b2c9ea60d7c88595eaebfc4abd5f1bf}{
+\index{module.inc@{module.inc}!module\_\-enable@{module\_\-enable}}
+\index{module\_\-enable@{module\_\-enable}!module.inc@{module.inc}}
+\subsubsection[{module\_\-enable}]{\setlength{\rightskip}{0pt plus 5cm}module\_\-enable (\$ {\em module\_\-list}, \/  \$ {\em enable\_\-dependencies} = {\ttfamily TRUE})}}
+\label{module_8inc_a4b2c9ea60d7c88595eaebfc4abd5f1bf}
+Enables or installs a given list of modules.
+
+Definitions:
+\begin{DoxyItemize}
+\item \char`\"{}Enabling\char`\"{} is the process of activating a module for use by Drupal.
+\item \char`\"{}Disabling\char`\"{} is the process of deactivating a module.
+\item \char`\"{}Installing\char`\"{} is the process of enabling it for the first time or after it has been uninstalled.
+\item \char`\"{}Uninstalling\char`\"{} is the process of removing all traces of a module.
+\end{DoxyItemize}
+
+Order of events:
+\begin{DoxyItemize}
+\item Gather and add module dependencies to \$module\_\-list (if applicable).
+\item For each module that is being enabled:
+\begin{DoxyItemize}
+\item Install module schema and update system registries and caches.
+\item If the module is being enabled for the first time or had been uninstalled, invoke \hyperlink{group__hooks_ga1ecdb5a2a046ea63dc790c3ed90338e5}{hook\_\-install()} and add it to the list of installed modules.
+\item Invoke \hyperlink{group__hooks_gaedcfb58c08d5c5f8ffcd1059ceeb39e4}{hook\_\-enable()}.
+\end{DoxyItemize}
+\item Invoke \hyperlink{group__hooks_ga71b7268520567cac1a2f296c205e5227}{hook\_\-modules\_\-installed()}.
+\item Invoke \hyperlink{group__hooks_ga0eb7c67333e0f40b4a46c0dc4c4a92f3}{hook\_\-modules\_\-enabled()}.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$module\_\-list}]An array of module names. \item[{\em \$enable\_\-dependencies}]If TRUE, dependencies will automatically be added and enabled in the correct order. This incurs a significant performance cost, so use FALSE if you know \$module\_\-list is already complete and in the correct order.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+FALSE if one or more dependencies are missing, TRUE otherwise.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__hooks_ga1ecdb5a2a046ea63dc790c3ed90338e5}{hook\_\-install()} 
+
+\hyperlink{group__hooks_gaedcfb58c08d5c5f8ffcd1059ceeb39e4}{hook\_\-enable()} 
+
+\hyperlink{group__hooks_ga71b7268520567cac1a2f296c205e5227}{hook\_\-modules\_\-installed()} 
+
+\hyperlink{group__hooks_ga0eb7c67333e0f40b4a46c0dc4c4a92f3}{hook\_\-modules\_\-enabled()} 
+\end{DoxySeeAlso}
+\hypertarget{module_8inc_a83bfe4eac372da50ff3eaf949b1b6ff8}{
+\index{module.inc@{module.inc}!module\_\-exists@{module\_\-exists}}
+\index{module\_\-exists@{module\_\-exists}!module.inc@{module.inc}}
+\subsubsection[{module\_\-exists}]{\setlength{\rightskip}{0pt plus 5cm}module\_\-exists (\$ {\em module})}}
+\label{module_8inc_a83bfe4eac372da50ff3eaf949b1b6ff8}
+Determines whether a given module exists.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$module}]The name of the module (without the .module extension).\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the module is both installed and enabled. 
+\end{DoxyReturn}
+\hypertarget{module_8inc_ad4ef444bbb8e56724e12908cf9b6e1aa}{
+\index{module.inc@{module.inc}!module\_\-list@{module\_\-list}}
+\index{module\_\-list@{module\_\-list}!module.inc@{module.inc}}
+\subsubsection[{module\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}module\_\-list (\$ {\em refresh} = {\ttfamily FALSE}, \/  \$ {\em bootstrap\_\-refresh} = {\ttfamily FALSE}, \/  \$ {\em sort} = {\ttfamily FALSE}, \/  \$ {\em fixed\_\-list} = {\ttfamily NULL})}}
+\label{module_8inc_ad4ef444bbb8e56724e12908cf9b6e1aa}
+Returns a list of currently active modules.
+
+Usually, this returns a list of all enabled modules. When called early on in the bootstrap, it will return a list of vital modules only (those needed to generate cached pages).
+
+All parameters to this function are optional and should generally not be changed from their defaults.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$refresh}](optional) Whether to force the module list to be regenerated (such as after the administrator has changed the system settings). Defaults to FALSE. \item[{\em \$bootstrap\_\-refresh}](optional) When \$refresh is TRUE, setting \$bootstrap\_\-refresh to TRUE forces the module list to be regenerated using the reduced set of modules loaded in \char`\"{}bootstrap mode\char`\"{} for cached pages. Otherwise, setting \$refresh to TRUE generates the complete list of enabled modules. \item[{\em \$sort}](optional) By default, modules are ordered by weight and module name. Set this option to TRUE to return a module list ordered only by module name. \item[{\em \$fixed\_\-list}](optional) If an array of module names is provided, this will override the module list with the given set of modules. This will persist until the next call with \$refresh set to TRUE or with a new \$fixed\_\-list passed in. This parameter is primarily intended for internal use (e.g., in \hyperlink{install_8php}{install.php} and \hyperlink{update_8php}{update.php}).\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An associative array whose keys and values are the names of the modules in the list. 
+\end{DoxyReturn}
+\hypertarget{module_8inc_a76db4bd7c4962f254d6cc9bed5f0e1f6}{
+\index{module.inc@{module.inc}!module\_\-load\_\-all@{module\_\-load\_\-all}}
+\index{module\_\-load\_\-all@{module\_\-load\_\-all}!module.inc@{module.inc}}
+\subsubsection[{module\_\-load\_\-all}]{\setlength{\rightskip}{0pt plus 5cm}module\_\-load\_\-all (\$ {\em bootstrap} = {\ttfamily FALSE})}}
+\label{module_8inc_a76db4bd7c4962f254d6cc9bed5f0e1f6}
+Loads all the modules that have been enabled in the system table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$bootstrap}]Whether to load only the reduced set of modules loaded in \char`\"{}bootstrap mode\char`\"{} for cached pages. See \hyperlink{bootstrap_8inc}{bootstrap.inc}.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If \$bootstrap is NULL, return a boolean indicating whether all modules have been loaded. 
+\end{DoxyReturn}
+\hypertarget{module_8inc_a4e2123e44529b4d307fc1ac78519e966}{
+\index{module.inc@{module.inc}!module\_\-load\_\-all\_\-includes@{module\_\-load\_\-all\_\-includes}}
+\index{module\_\-load\_\-all\_\-includes@{module\_\-load\_\-all\_\-includes}!module.inc@{module.inc}}
+\subsubsection[{module\_\-load\_\-all\_\-includes}]{\setlength{\rightskip}{0pt plus 5cm}module\_\-load\_\-all\_\-includes (\$ {\em type}, \/  \$ {\em name} = {\ttfamily NULL})}}
+\label{module_8inc_a4e2123e44529b4d307fc1ac78519e966}
+Loads an include file for each module enabled in the \{system\} table. \hypertarget{module_8inc_a49098ed4d33650ee5ab52aab40982423}{
+\index{module.inc@{module.inc}!module\_\-load\_\-include@{module\_\-load\_\-include}}
+\index{module\_\-load\_\-include@{module\_\-load\_\-include}!module.inc@{module.inc}}
+\subsubsection[{module\_\-load\_\-include}]{\setlength{\rightskip}{0pt plus 5cm}module\_\-load\_\-include (\$ {\em type}, \/  \$ {\em module}, \/  \$ {\em name} = {\ttfamily NULL})}}
+\label{module_8inc_a49098ed4d33650ee5ab52aab40982423}
+Loads a module include file.
+
+Examples: 
+\begin{DoxyCode}
+   // Load node.admin.inc from the node module.
+   module_load_include('inc', 'node', 'node.admin');
+   // Load content_types.inc from the node module.
+   module_load_include('inc', 'node', 'content_types');
+\end{DoxyCode}
+
+
+Do not use this function to load an install file, use \hyperlink{module_8inc_a77a6101f363c066eafbe29b26af5bfd3}{module\_\-load\_\-install()} instead. Do not use this function in a global context since it requires Drupal to be fully bootstrapped, use require\_\-once DRUPAL\_\-ROOT . '/path/file' instead.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]The include file's type (file extension). \item[{\em \$module}]The module to which the include file belongs. \item[{\em \$name}](optional) The base file name (without the \$type extension). If omitted, \$module is used; i.e., resulting in \char`\"{}\$module.\$type\char`\"{} by default.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name of the included file, if successful; FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{module_8inc_a77a6101f363c066eafbe29b26af5bfd3}{
+\index{module.inc@{module.inc}!module\_\-load\_\-install@{module\_\-load\_\-install}}
+\index{module\_\-load\_\-install@{module\_\-load\_\-install}!module.inc@{module.inc}}
+\subsubsection[{module\_\-load\_\-install}]{\setlength{\rightskip}{0pt plus 5cm}module\_\-load\_\-install (\$ {\em module})}}
+\label{module_8inc_a77a6101f363c066eafbe29b26af5bfd3}
+Loads a module's installation hooks.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$module}]The name of the module (without the .module extension).\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name of the module's install file, if successful; FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{module_8inc_a807821e98f8d626a7043923080ba6438}{
+\index{module.inc@{module.inc}!system\_\-list@{system\_\-list}}
+\index{system\_\-list@{system\_\-list}!module.inc@{module.inc}}
+\subsubsection[{system\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-list (\$ {\em type})}}
+\label{module_8inc_a807821e98f8d626a7043923080ba6438}
+Builds a list of bootstrap modules and enabled modules and themes.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]The type of list to return:
+\begin{DoxyItemize}
+\item module\_\-enabled: All enabled modules.
+\item bootstrap: All enabled modules required for bootstrap.
+\item theme: All themes.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An associative array of modules or themes, keyed by name. For \$type 'bootstrap', the array values equal the keys. For \$type 'module\_\-enabled' or 'theme', the array values are objects representing the respective database row, with the 'info' property already unserialized.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{module_8inc_ad4ef444bbb8e56724e12908cf9b6e1aa}{module\_\-list()} 
+
+\hyperlink{includes_2theme_8inc_a48d5521b10139d745626435d804353a4}{list\_\-themes()} 
+\end{DoxySeeAlso}
+\hypertarget{module_8inc_ac141d5e0a5817eda15b376a5737dec3d}{
+\index{module.inc@{module.inc}!system\_\-list\_\-reset@{system\_\-list\_\-reset}}
+\index{system\_\-list\_\-reset@{system\_\-list\_\-reset}!module.inc@{module.inc}}
+\subsubsection[{system\_\-list\_\-reset}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-list\_\-reset ()}}
+\label{module_8inc_ac141d5e0a5817eda15b376a5737dec3d}
+Resets all \hyperlink{module_8inc_a807821e98f8d626a7043923080ba6438}{system\_\-list()} caches. 

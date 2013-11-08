@@ -1,0 +1,127 @@
+\hypertarget{group__update__manager__file}{
+\section{Update Manager module: file management}
+\label{group__update__manager__file}\index{Update Manager module: file management@{Update Manager module: file management}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__update__manager__file_ga68a5dd6bec824909f46d9458991eaf42}{hook\_\-verify\_\-update\_\-archive} (\$project, \$archive\_\-file, \$directory)
+\item 
+\hyperlink{group__update__manager__file_gaacbdc92035b1bb68dbb741a4917b8185}{update\_\-manager\_\-archive\_\-extract} (\$file, \$directory)
+\item 
+\hyperlink{group__update__manager__file_ga8c352241e56ce6de6b1064725d84801b}{update\_\-manager\_\-archive\_\-verify} (\$project, \$archive\_\-file, \$directory)
+\item 
+\hyperlink{group__update__manager__file_gaef701662a2b3a2bfff2c0b819860a547}{update\_\-manager\_\-file\_\-get} (\$url)
+\item 
+\hyperlink{group__update__manager__file_gad7fdbc7766b87956b181eb5fbec9a609}{update\_\-manager\_\-batch\_\-project\_\-get} (\$project, \$url, \&\$context)
+\item 
+\hyperlink{group__update__manager__file_ga88ed61885931bd3df617ca78b4fadb6c}{update\_\-manager\_\-local\_\-transfers\_\-allowed} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+End of \char`\"{}defgroup update\_\-manager\_\-install\char`\"{}.
+
+Update Manager module file management functions.
+
+These functions are used by the update manager to copy, extract, and verify archive files. 
+
+\subsection{Function Documentation}
+\hypertarget{group__update__manager__file_ga68a5dd6bec824909f46d9458991eaf42}{
+\index{update\_\-manager\_\-file@{update\_\-manager\_\-file}!hook\_\-verify\_\-update\_\-archive@{hook\_\-verify\_\-update\_\-archive}}
+\index{hook\_\-verify\_\-update\_\-archive@{hook\_\-verify\_\-update\_\-archive}!update_manager_file@{update\_\-manager\_\-file}}
+\subsubsection[{hook\_\-verify\_\-update\_\-archive}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-verify\_\-update\_\-archive (\$ {\em project}, \/  \$ {\em archive\_\-file}, \/  \$ {\em directory})}}
+\label{group__update__manager__file_ga68a5dd6bec824909f46d9458991eaf42}
+Verify an archive after it has been downloaded and extracted.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$project The short name of the project that has been downloaded. \item[{\em string}]\$archive\_\-file The filename of the unextracted archive. \item[{\em string}]\$directory The directory that the archive was extracted into.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If there are any problems, return an array of error messages. If there are no problems, return an empty array.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__update__manager__file_ga8c352241e56ce6de6b1064725d84801b}{update\_\-manager\_\-archive\_\-verify()} 
+\end{DoxySeeAlso}
+\hypertarget{group__update__manager__file_gaacbdc92035b1bb68dbb741a4917b8185}{
+\index{update\_\-manager\_\-file@{update\_\-manager\_\-file}!update\_\-manager\_\-archive\_\-extract@{update\_\-manager\_\-archive\_\-extract}}
+\index{update\_\-manager\_\-archive\_\-extract@{update\_\-manager\_\-archive\_\-extract}!update_manager_file@{update\_\-manager\_\-file}}
+\subsubsection[{update\_\-manager\_\-archive\_\-extract}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-manager\_\-archive\_\-extract (\$ {\em file}, \/  \$ {\em directory})}}
+\label{group__update__manager__file_gaacbdc92035b1bb68dbb741a4917b8185}
+Unpacks a downloaded archive file.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$file The filename of the archive you wish to extract. \item[{\em string}]\$directory The directory you wish to extract the archive into.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Archiver The Archiver object used to extract the archive.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classException}{Exception}}]\end{DoxyExceptions}
+\hypertarget{group__update__manager__file_ga8c352241e56ce6de6b1064725d84801b}{
+\index{update\_\-manager\_\-file@{update\_\-manager\_\-file}!update\_\-manager\_\-archive\_\-verify@{update\_\-manager\_\-archive\_\-verify}}
+\index{update\_\-manager\_\-archive\_\-verify@{update\_\-manager\_\-archive\_\-verify}!update_manager_file@{update\_\-manager\_\-file}}
+\subsubsection[{update\_\-manager\_\-archive\_\-verify}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-manager\_\-archive\_\-verify (\$ {\em project}, \/  \$ {\em archive\_\-file}, \/  \$ {\em directory})}}
+\label{group__update__manager__file_ga8c352241e56ce6de6b1064725d84801b}
+Verifies an archive after it has been downloaded and extracted.
+
+This function is responsible for invoking \hyperlink{group__update__manager__file_ga68a5dd6bec824909f46d9458991eaf42}{hook\_\-verify\_\-update\_\-archive()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$project The short name of the project to download. \item[{\em string}]\$archive\_\-file The filename of the unextracted archive. \item[{\em string}]\$directory The directory that the archive was extracted into.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of error messages to display if the archive was invalid. If there are no errors, it will be an empty array. 
+\end{DoxyReturn}
+\hypertarget{group__update__manager__file_gad7fdbc7766b87956b181eb5fbec9a609}{
+\index{update\_\-manager\_\-file@{update\_\-manager\_\-file}!update\_\-manager\_\-batch\_\-project\_\-get@{update\_\-manager\_\-batch\_\-project\_\-get}}
+\index{update\_\-manager\_\-batch\_\-project\_\-get@{update\_\-manager\_\-batch\_\-project\_\-get}!update_manager_file@{update\_\-manager\_\-file}}
+\subsubsection[{update\_\-manager\_\-batch\_\-project\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-manager\_\-batch\_\-project\_\-get (\$ {\em project}, \/  \$ {\em url}, \/  \&\$ {\em context})}}
+\label{group__update__manager__file_gad7fdbc7766b87956b181eb5fbec9a609}
+Batch callback: Downloads, unpacks, and verifies a project.
+
+This function assumes that the provided URL points to a file archive of some sort. The URL can have any scheme that we have a file stream wrapper to support. The file is downloaded to a local cache.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$project The short name of the project to download. \item[{\em string}]\$url The URL to download a specific project release archive file. \item[{\em array}]\$context Reference to an array used for Batch API storage.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+update\_\-manager\_\-download\_\-page() 
+\end{DoxySeeAlso}
+\hypertarget{group__update__manager__file_gaef701662a2b3a2bfff2c0b819860a547}{
+\index{update\_\-manager\_\-file@{update\_\-manager\_\-file}!update\_\-manager\_\-file\_\-get@{update\_\-manager\_\-file\_\-get}}
+\index{update\_\-manager\_\-file\_\-get@{update\_\-manager\_\-file\_\-get}!update_manager_file@{update\_\-manager\_\-file}}
+\subsubsection[{update\_\-manager\_\-file\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-manager\_\-file\_\-get (\$ {\em url})}}
+\label{group__update__manager__file_gaef701662a2b3a2bfff2c0b819860a547}
+Copies a file from the specified URL to the temporary directory for updates.
+
+Returns the local path if the file has already been downloaded.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$url}]The URL of the file on the server.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Path to local file. 
+\end{DoxyReturn}
+\hypertarget{group__update__manager__file_ga88ed61885931bd3df617ca78b4fadb6c}{
+\index{update\_\-manager\_\-file@{update\_\-manager\_\-file}!update\_\-manager\_\-local\_\-transfers\_\-allowed@{update\_\-manager\_\-local\_\-transfers\_\-allowed}}
+\index{update\_\-manager\_\-local\_\-transfers\_\-allowed@{update\_\-manager\_\-local\_\-transfers\_\-allowed}!update_manager_file@{update\_\-manager\_\-file}}
+\subsubsection[{update\_\-manager\_\-local\_\-transfers\_\-allowed}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-manager\_\-local\_\-transfers\_\-allowed ()}}
+\label{group__update__manager__file_ga88ed61885931bd3df617ca78b4fadb6c}
+Determines if file transfers will be performed locally.
+
+If the server is configured such that webserver-\/created files have the same owner as the configuration directory (e.g., sites/default) where new code will eventually be installed, the update manager can transfer files entirely locally, without changing their ownership (in other words, without prompting the user for FTP, SSH or other credentials).
+
+This server configuration is an inherent security weakness because it allows a malicious webserver process to append arbitrary PHP code and then execute it. However, it is supported here because it is a common configuration on shared hosting, and there is nothing Drupal can do to prevent it.
+
+\begin{DoxyReturn}{Returns}
+TRUE if local file transfers are allowed on this server, or FALSE if not.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__update__manager__update_gaeab4690bf95cb0d0b517a0b9161e5045}{update\_\-manager\_\-update\_\-ready\_\-form\_\-submit()} 
+
+\hyperlink{group__update__manager__install_ga52e9f2cddddddccf921284b01f9505b0}{update\_\-manager\_\-install\_\-form\_\-submit()} 
+
+\hyperlink{install_8core_8inc_ae9175b59627ec291ef76fd241f74f33e}{install\_\-check\_\-requirements()} 
+\end{DoxySeeAlso}

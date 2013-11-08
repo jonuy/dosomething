@@ -1,0 +1,20 @@
+\hypertarget{classUpdaterFileTransferException}{
+\section{UpdaterFileTransferException Class Reference}
+\label{classUpdaterFileTransferException}\index{UpdaterFileTransferException@{UpdaterFileTransferException}}
+}
+Inheritance diagram for UpdaterFileTransferException::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classUpdaterFileTransferException}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+Child class of \hyperlink{classUpdaterException}{UpdaterException} that indicates a \hyperlink{classFileTransfer}{FileTransfer} exception.
+
+We have to catch \hyperlink{classFileTransfer}{FileTransfer} exceptions and wrap those in t(), since \hyperlink{classFileTransfer}{FileTransfer} is so low-\/level that it doesn't use any Drupal APIs and none of the strings are translated. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/\hyperlink{updater_8inc}{updater.inc}\end{DoxyCompactItemize}

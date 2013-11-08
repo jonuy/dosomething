@@ -1,0 +1,310 @@
+\hypertarget{classDatabaseConnection__sqlite}{
+\section{DatabaseConnection\_\-sqlite Class Reference}
+\label{classDatabaseConnection__sqlite}\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}}
+}
+Inheritance diagram for DatabaseConnection\_\-sqlite::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classDatabaseConnection__sqlite}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDatabaseConnection__sqlite_a81fadd0dc03035209962e51af85d33c4}{
+{\bfseries \_\-\_\-construct} (array \$connection\_\-options=array())}
+\label{classDatabaseConnection__sqlite_a81fadd0dc03035209962e51af85d33c4}
+
+\item 
+\hyperlink{classDatabaseConnection__sqlite_ad22467bf631a3f808f8cd90372e8514e}{\_\-\_\-destruct} ()
+\item 
+\hyperlink{classDatabaseConnection__sqlite_af784370971ff72b29f853466c42d1561}{sqlFunctionIf} (\$condition, \$expr1, \$expr2=NULL)
+\item 
+\hyperlink{classDatabaseConnection__sqlite_aed7d02bd21b71e91aae093937fbac0d1}{sqlFunctionGreatest} ()
+\item 
+\hyperlink{classDatabaseConnection__sqlite_a2010b85b6de63730c73214f75f6e5662}{sqlFunctionConcat} ()
+\item 
+\hyperlink{classDatabaseConnection__sqlite_a0523c014ec7d46a8a41ce949ba7f4434}{sqlFunctionSubstring} (\$string, \$from, \$length)
+\item 
+\hyperlink{classDatabaseConnection__sqlite_a11492dbbf74afed041b8dd14ec1d70f8}{sqlFunctionSubstringIndex} (\$string, \$delimiter, \$count)
+\item 
+\hyperlink{classDatabaseConnection__sqlite_aae54e984c066601c97c47328743cda1d}{sqlFunctionRand} (\$seed=NULL)
+\item 
+\hyperlink{classDatabaseConnection__sqlite_ab5d9ea6a6930649133f401149b18fa65}{prepare} (\$query, \$options=array())
+\item 
+\hyperlink{classDatabaseConnection__sqlite_a8e377488ebb6c76e61590ca3f5d7245c}{PDOPrepare} (\$query, array \$options=array())
+\item 
+\hyperlink{classDatabaseConnection__sqlite_a5c7aa6402ebb35a61c7753fa66ee6bd3}{queryRange} (\$query, \$from, \$count, array \$args=array(), array \$options=array())
+\item 
+\hyperlink{classDatabaseConnection__sqlite_a547c5fcee9fa8ef98e15f61ab83be6be}{queryTemporary} (\$query, array \$args=array(), array \$options=array())
+\item 
+\hyperlink{classDatabaseConnection__sqlite_aa941f2ff6edc55833dfa21b282c8c0dc}{driver} ()
+\item 
+\hyperlink{classDatabaseConnection__sqlite_acafbe944024f6bbdf26c11dab3c6b534}{databaseType} ()
+\item 
+\hyperlink{classDatabaseConnection__sqlite_aed69efc240fdb031430c8afbdb6c3ba9}{mapConditionOperator} (\$operator)
+\item 
+\hyperlink{classDatabaseConnection__sqlite_aac5845cb92d937ec15f435043d014a8e}{prepareQuery} (\$query)
+\item 
+\hyperlink{classDatabaseConnection__sqlite_ada0053b7801625663994ae1e0ddaabdf}{nextId} (\$existing\_\-id=0)
+\item 
+\hyperlink{classDatabaseConnection__sqlite_aa0c95a9076d4aa2d08569d344eeb81de}{rollback} (\$savepoint\_\-name= 'drupal\_\-transaction')
+\item 
+\hyperlink{classDatabaseConnection__sqlite_a00c6285d1c008b5aa496b046700f15a3}{pushTransaction} (\$name)
+\item 
+\hyperlink{classDatabaseConnection__sqlite_a92aff36a5e22c5f21258a6a2333121b4}{popTransaction} (\$name)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDatabaseConnection__sqlite_a2078af3a05e3020af797bf60b1d57921}{
+{\bfseries \$tableDropped} = FALSE}
+\label{classDatabaseConnection__sqlite_a2078af3a05e3020af797bf60b1d57921}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDatabaseConnection__sqlite_a6f1a51ee1f6a359288b1514ecd5c49d5}{
+{\bfseries \$savepointSupport} = FALSE}
+\label{classDatabaseConnection__sqlite_a6f1a51ee1f6a359288b1514ecd5c49d5}
+
+\item 
+\hypertarget{classDatabaseConnection__sqlite_a878ff1a095bc5eb184e31552098ae8b4}{
+{\bfseries \$willRollback}}
+\label{classDatabaseConnection__sqlite_a878ff1a095bc5eb184e31552098ae8b4}
+
+\item 
+\hypertarget{classDatabaseConnection__sqlite_a48aa109566dc6a97c2794a86f2736329}{
+{\bfseries \$attachedDatabases} = array()}
+\label{classDatabaseConnection__sqlite_a48aa109566dc6a97c2794a86f2736329}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Specific SQLite implementation of \hyperlink{classDatabaseConnection}{DatabaseConnection}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDatabaseConnection__sqlite_ad22467bf631a3f808f8cd90372e8514e}{
+\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}!\_\-\_\-destruct@{\_\-\_\-destruct}}
+\index{\_\-\_\-destruct@{\_\-\_\-destruct}!DatabaseConnection_sqlite@{DatabaseConnection\_\-sqlite}}
+\subsubsection[{\_\-\_\-destruct}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-sqlite::\_\-\_\-destruct ()}}
+\label{classDatabaseConnection__sqlite_ad22467bf631a3f808f8cd90372e8514e}
+Destructor for the SQLite connection.
+
+We prune empty databases on destruct, but only if tables have been dropped. This is especially needed when running the test suite, which creates and destroy databases several times in a row. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classDatabaseConnection__sqlite_acafbe944024f6bbdf26c11dab3c6b534}{
+\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}!databaseType@{databaseType}}
+\index{databaseType@{databaseType}!DatabaseConnection_sqlite@{DatabaseConnection\_\-sqlite}}
+\subsubsection[{databaseType}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-sqlite::databaseType ()}}
+\label{classDatabaseConnection__sqlite_acafbe944024f6bbdf26c11dab3c6b534}
+Returns the name of the PDO driver for this connection. 
+
+Reimplemented from \hyperlink{classDatabaseConnection_a7dd7e76bc813c6a90a6d26a5529d67b0}{DatabaseConnection}.\hypertarget{classDatabaseConnection__sqlite_aa941f2ff6edc55833dfa21b282c8c0dc}{
+\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}!driver@{driver}}
+\index{driver@{driver}!DatabaseConnection_sqlite@{DatabaseConnection\_\-sqlite}}
+\subsubsection[{driver}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-sqlite::driver ()}}
+\label{classDatabaseConnection__sqlite_aa941f2ff6edc55833dfa21b282c8c0dc}
+Returns the type of database driver.
+
+This is not necessarily the same as the type of the database itself. For instance, there could be two MySQL drivers, mysql and mysql\_\-mock. This function would return different values for each, but both would return \char`\"{}mysql\char`\"{} for \hyperlink{classDatabaseConnection__sqlite_acafbe944024f6bbdf26c11dab3c6b534}{databaseType()}. 
+
+Reimplemented from \hyperlink{classDatabaseConnection_a4a36a8d7352108c837c51a7172f966c3}{DatabaseConnection}.\hypertarget{classDatabaseConnection__sqlite_aed69efc240fdb031430c8afbdb6c3ba9}{
+\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}!mapConditionOperator@{mapConditionOperator}}
+\index{mapConditionOperator@{mapConditionOperator}!DatabaseConnection_sqlite@{DatabaseConnection\_\-sqlite}}
+\subsubsection[{mapConditionOperator}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-sqlite::mapConditionOperator (\$ {\em operator})}}
+\label{classDatabaseConnection__sqlite_aed69efc240fdb031430c8afbdb6c3ba9}
+Gets any special processing requirements for the condition operator.
+
+Some condition types require special processing, such as IN, because the value data they pass in is not a simple value. This is a simple overridable lookup function. \hyperlink{classDatabase}{Database} connections should define only those operators they wish to be handled differently than the default.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$operator}]The condition operator, such as \char`\"{}IN\char`\"{}, \char`\"{}BETWEEN\char`\"{}, etc. Case-\/sensitive.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The extra handling directives for the specified operator, or NULL.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classDatabaseCondition_a286df1af0dfaa7ab6b8b30ed4e96a830}{DatabaseCondition::compile()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{classDatabaseConnection_aef82436b30fa08a6c81c34e11f3b1717}{DatabaseConnection}.\hypertarget{classDatabaseConnection__sqlite_ada0053b7801625663994ae1e0ddaabdf}{
+\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}!nextId@{nextId}}
+\index{nextId@{nextId}!DatabaseConnection_sqlite@{DatabaseConnection\_\-sqlite}}
+\subsubsection[{nextId}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-sqlite::nextId (\$ {\em existing\_\-id} = {\ttfamily 0})}}
+\label{classDatabaseConnection__sqlite_ada0053b7801625663994ae1e0ddaabdf}
+Retrieves an unique id from a given sequence.
+
+Use this function if for some reason you can't use a serial field. For example, MySQL has no ways of reading of the current value of a sequence and PostgreSQL can not advance the sequence to be larger than a given value. Or sometimes you just need a unique integer.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$existing\_\-id}]After a database import, it might be that the sequences table is behind, so by passing in the maximum existing id, it can be assured that we never issue the same id.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer number larger than any number returned by earlier calls and also larger than the \$existing\_\-id if one was passed in. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseConnection_a173e333ef1b61541cf37125468a37231}{DatabaseConnection}.\hypertarget{classDatabaseConnection__sqlite_a8e377488ebb6c76e61590ca3f5d7245c}{
+\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}!PDOPrepare@{PDOPrepare}}
+\index{PDOPrepare@{PDOPrepare}!DatabaseConnection_sqlite@{DatabaseConnection\_\-sqlite}}
+\subsubsection[{PDOPrepare}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-sqlite::PDOPrepare (\$ {\em query}, \/  array \$ {\em options} = {\ttfamily array()})}}
+\label{classDatabaseConnection__sqlite_a8e377488ebb6c76e61590ca3f5d7245c}
+NEVER CALL THIS FUNCTION: YOU MIGHT DEADLOCK YOUR PHP PROCESS.
+
+This is a wrapper around the parent PDO::prepare method. However, as the PDO SQLite driver only closes SELECT statements when the PDOStatement destructor is called and SQLite does not allow data change (INSERT, UPDATE etc) on a table which has open SELECT statements, you should never call this function and keep a PDOStatement object alive as that can lead to a deadlock. This really, really should be private, but as \hyperlink{classDatabaseStatement__sqlite}{DatabaseStatement\_\-sqlite} needs to call it, we have no other choice but to expose this function to the world. \hypertarget{classDatabaseConnection__sqlite_a92aff36a5e22c5f21258a6a2333121b4}{
+\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}!popTransaction@{popTransaction}}
+\index{popTransaction@{popTransaction}!DatabaseConnection_sqlite@{DatabaseConnection\_\-sqlite}}
+\subsubsection[{popTransaction}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-sqlite::popTransaction (\$ {\em name})}}
+\label{classDatabaseConnection__sqlite_a92aff36a5e22c5f21258a6a2333121b4}
+Decreases the depth of transaction nesting.
+
+If we pop off the last transaction layer, then we either commit or roll back the transaction as necessary. If no transaction is active, we return because the transaction may have manually been rolled back.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]The name of the savepoint\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseTransactionNoActiveException}{DatabaseTransactionNoActiveException}}]\item[{\em \hyperlink{classDatabaseTransactionCommitFailedException}{DatabaseTransactionCommitFailedException}}]\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classDatabaseTransaction}{DatabaseTransaction} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{classDatabaseConnection_a0bca5087efb85e6480b953cc76ccfcb1}{DatabaseConnection}.\hypertarget{classDatabaseConnection__sqlite_ab5d9ea6a6930649133f401149b18fa65}{
+\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}!prepare@{prepare}}
+\index{prepare@{prepare}!DatabaseConnection_sqlite@{DatabaseConnection\_\-sqlite}}
+\subsubsection[{prepare}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-sqlite::prepare (\$ {\em query}, \/  \$ {\em options} = {\ttfamily array()})}}
+\label{classDatabaseConnection__sqlite_ab5d9ea6a6930649133f401149b18fa65}
+SQLite-\/specific implementation of DatabaseConnection::prepare().
+
+We don't use prepared statements at all at this stage. We just create a \hyperlink{classDatabaseStatement__sqlite}{DatabaseStatement\_\-sqlite} object, that will create a PDOStatement using the semi-\/private \hyperlink{classDatabaseConnection__sqlite_a8e377488ebb6c76e61590ca3f5d7245c}{PDOPrepare()} method below. \hypertarget{classDatabaseConnection__sqlite_aac5845cb92d937ec15f435043d014a8e}{
+\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}!prepareQuery@{prepareQuery}}
+\index{prepareQuery@{prepareQuery}!DatabaseConnection_sqlite@{DatabaseConnection\_\-sqlite}}
+\subsubsection[{prepareQuery}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-sqlite::prepareQuery (\$ {\em query})}}
+\label{classDatabaseConnection__sqlite_aac5845cb92d937ec15f435043d014a8e}
+Prepares a query string and returns the prepared statement.
+
+This method caches prepared statements, reusing them when possible. It also prefixes tables names enclosed in curly-\/braces.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$query}]The query string as SQL, with curly-\/braces surrounding the table names.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{interfaceDatabaseStatementInterface}{DatabaseStatementInterface} A PDO prepared statement ready for its execute() method. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseConnection_a3eb8c20adaffdd0f567bbe16d5226554}{DatabaseConnection}.\hypertarget{classDatabaseConnection__sqlite_a00c6285d1c008b5aa496b046700f15a3}{
+\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}!pushTransaction@{pushTransaction}}
+\index{pushTransaction@{pushTransaction}!DatabaseConnection_sqlite@{DatabaseConnection\_\-sqlite}}
+\subsubsection[{pushTransaction}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-sqlite::pushTransaction (\$ {\em name})}}
+\label{classDatabaseConnection__sqlite_a00c6285d1c008b5aa496b046700f15a3}
+Increases the depth of transaction nesting.
+
+If no transaction is already active, we begin a new transaction.
+
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseTransactionNameNonUniqueException}{DatabaseTransactionNameNonUniqueException}}]\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classDatabaseTransaction}{DatabaseTransaction} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{classDatabaseConnection_a3aa9a595dd90a2b64d6b6c187f25828a}{DatabaseConnection}.\hypertarget{classDatabaseConnection__sqlite_a5c7aa6402ebb35a61c7753fa66ee6bd3}{
+\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}!queryRange@{queryRange}}
+\index{queryRange@{queryRange}!DatabaseConnection_sqlite@{DatabaseConnection\_\-sqlite}}
+\subsubsection[{queryRange}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-sqlite::queryRange (\$ {\em query}, \/  \$ {\em from}, \/  \$ {\em count}, \/  array \$ {\em args} = {\ttfamily array()}, \/  array \$ {\em options} = {\ttfamily array()})}}
+\label{classDatabaseConnection__sqlite_a5c7aa6402ebb35a61c7753fa66ee6bd3}
+Runs a limited-\/range query on this database object.
+
+Use this as a substitute for -\/$>$\hyperlink{classDatabaseConnection_aff564097281c4496e9d10cb1bccbe98d}{query()} when a subset of the query is to be returned. User-\/supplied arguments to the query should be passed in as separate parameters so that they can be properly escaped to avoid SQL injection attacks.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$query}]A string containing an SQL query. \item[{\em \$args}]An array of values to substitute into the query at placeholder markers. \item[{\em \$from}]The first result row to return. \item[{\em \$count}]The maximum number of result rows to return. \item[{\em \$options}]An array of options on the query.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{interfaceDatabaseStatementInterface}{DatabaseStatementInterface} A database query result resource, or NULL if the query was not executed correctly. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseConnection_a1c97c77517b969270bb92c5c7e022a5d}{DatabaseConnection}.\hypertarget{classDatabaseConnection__sqlite_a547c5fcee9fa8ef98e15f61ab83be6be}{
+\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}!queryTemporary@{queryTemporary}}
+\index{queryTemporary@{queryTemporary}!DatabaseConnection_sqlite@{DatabaseConnection\_\-sqlite}}
+\subsubsection[{queryTemporary}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-sqlite::queryTemporary (\$ {\em query}, \/  array \$ {\em args} = {\ttfamily array()}, \/  array \$ {\em options} = {\ttfamily array()})}}
+\label{classDatabaseConnection__sqlite_a547c5fcee9fa8ef98e15f61ab83be6be}
+Runs a SELECT query and stores its results in a temporary table.
+
+Use this as a substitute for -\/$>$\hyperlink{classDatabaseConnection_aff564097281c4496e9d10cb1bccbe98d}{query()} when the results need to stored in a temporary table. Temporary tables exist for the duration of the page request. User-\/supplied arguments to the query should be passed in as separate parameters so that they can be properly escaped to avoid SQL injection attacks.
+
+Note that if you need to know how many results were returned, you should do a SELECT COUNT($\ast$) on the temporary table afterwards.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$query}]A string containing a normal SELECT SQL query. \item[{\em \$args}]An array of values to substitute into the query at placeholder markers. \item[{\em \$options}]An associative array of options to control how the query is run. See the documentation for \hyperlink{classDatabaseConnection_a190539d6c494ef2d7ac90d21226de5a5}{DatabaseConnection::defaultOptions()} for details.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name of the temporary table. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDatabaseConnection_ae4d9ad286187f493172da04fca77ca8f}{DatabaseConnection}.\hypertarget{classDatabaseConnection__sqlite_aa0c95a9076d4aa2d08569d344eeb81de}{
+\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}!rollback@{rollback}}
+\index{rollback@{rollback}!DatabaseConnection_sqlite@{DatabaseConnection\_\-sqlite}}
+\subsubsection[{rollback}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-sqlite::rollback (\$ {\em savepoint\_\-name} = {\ttfamily 'drupal\_\-transaction'})}}
+\label{classDatabaseConnection__sqlite_aa0c95a9076d4aa2d08569d344eeb81de}
+Rolls back the transaction entirely or to a named savepoint.
+
+This method throws an exception if no transaction is active.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$savepoint\_\-name}]The name of the savepoint. The default, 'drupal\_\-transaction', will roll the entire transaction back.\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseTransactionNoActiveException}{DatabaseTransactionNoActiveException}}]\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classDatabaseTransaction_a51bdf8ca9423cc331e877dbf43cd6981}{DatabaseTransaction::rollback()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{classDatabaseConnection_aef0f8cd6cbfbc304e721baaa14be14cf}{DatabaseConnection}.\hypertarget{classDatabaseConnection__sqlite_a2010b85b6de63730c73214f75f6e5662}{
+\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}!sqlFunctionConcat@{sqlFunctionConcat}}
+\index{sqlFunctionConcat@{sqlFunctionConcat}!DatabaseConnection_sqlite@{DatabaseConnection\_\-sqlite}}
+\subsubsection[{sqlFunctionConcat}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-sqlite::sqlFunctionConcat ()}}
+\label{classDatabaseConnection__sqlite_a2010b85b6de63730c73214f75f6e5662}
+SQLite compatibility implementation for the CONCAT() SQL function. \hypertarget{classDatabaseConnection__sqlite_aed7d02bd21b71e91aae093937fbac0d1}{
+\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}!sqlFunctionGreatest@{sqlFunctionGreatest}}
+\index{sqlFunctionGreatest@{sqlFunctionGreatest}!DatabaseConnection_sqlite@{DatabaseConnection\_\-sqlite}}
+\subsubsection[{sqlFunctionGreatest}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-sqlite::sqlFunctionGreatest ()}}
+\label{classDatabaseConnection__sqlite_aed7d02bd21b71e91aae093937fbac0d1}
+SQLite compatibility implementation for the GREATEST() SQL function. \hypertarget{classDatabaseConnection__sqlite_af784370971ff72b29f853466c42d1561}{
+\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}!sqlFunctionIf@{sqlFunctionIf}}
+\index{sqlFunctionIf@{sqlFunctionIf}!DatabaseConnection_sqlite@{DatabaseConnection\_\-sqlite}}
+\subsubsection[{sqlFunctionIf}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-sqlite::sqlFunctionIf (\$ {\em condition}, \/  \$ {\em expr1}, \/  \$ {\em expr2} = {\ttfamily NULL})}}
+\label{classDatabaseConnection__sqlite_af784370971ff72b29f853466c42d1561}
+SQLite compatibility implementation for the IF() SQL function. \hypertarget{classDatabaseConnection__sqlite_aae54e984c066601c97c47328743cda1d}{
+\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}!sqlFunctionRand@{sqlFunctionRand}}
+\index{sqlFunctionRand@{sqlFunctionRand}!DatabaseConnection_sqlite@{DatabaseConnection\_\-sqlite}}
+\subsubsection[{sqlFunctionRand}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-sqlite::sqlFunctionRand (\$ {\em seed} = {\ttfamily NULL})}}
+\label{classDatabaseConnection__sqlite_aae54e984c066601c97c47328743cda1d}
+SQLite compatibility implementation for the RAND() SQL function. \hypertarget{classDatabaseConnection__sqlite_a0523c014ec7d46a8a41ce949ba7f4434}{
+\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}!sqlFunctionSubstring@{sqlFunctionSubstring}}
+\index{sqlFunctionSubstring@{sqlFunctionSubstring}!DatabaseConnection_sqlite@{DatabaseConnection\_\-sqlite}}
+\subsubsection[{sqlFunctionSubstring}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-sqlite::sqlFunctionSubstring (\$ {\em string}, \/  \$ {\em from}, \/  \$ {\em length})}}
+\label{classDatabaseConnection__sqlite_a0523c014ec7d46a8a41ce949ba7f4434}
+SQLite compatibility implementation for the SUBSTRING() SQL function. \hypertarget{classDatabaseConnection__sqlite_a11492dbbf74afed041b8dd14ec1d70f8}{
+\index{DatabaseConnection\_\-sqlite@{DatabaseConnection\_\-sqlite}!sqlFunctionSubstringIndex@{sqlFunctionSubstringIndex}}
+\index{sqlFunctionSubstringIndex@{sqlFunctionSubstringIndex}!DatabaseConnection_sqlite@{DatabaseConnection\_\-sqlite}}
+\subsubsection[{sqlFunctionSubstringIndex}]{\setlength{\rightskip}{0pt plus 5cm}DatabaseConnection\_\-sqlite::sqlFunctionSubstringIndex (\$ {\em string}, \/  \$ {\em delimiter}, \/  \$ {\em count})}}
+\label{classDatabaseConnection__sqlite_a11492dbbf74afed041b8dd14ec1d70f8}
+SQLite compatibility implementation for the SUBSTRING\_\-INDEX() SQL function. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/database/sqlite/\hyperlink{sqlite_2database_8inc}{database.inc}\end{DoxyCompactItemize}

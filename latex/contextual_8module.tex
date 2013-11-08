@@ -1,0 +1,81 @@
+\hypertarget{contextual_8module}{
+\section{html/modules/contextual/contextual.module File Reference}
+\label{contextual_8module}\index{html/modules/contextual/contextual.module@{html/modules/contextual/contextual.module}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{contextual_8module_a96cade96d323d453c0dc975738d805c2}{contextual\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{contextual_8module_a5a266483e5b6edffd2fe826a7f1a43bd}{contextual\_\-permission} ()
+\item 
+\hyperlink{contextual_8module_a2484e12bee0a02cf70f1f21544b49fac}{contextual\_\-library} ()
+\item 
+\hyperlink{contextual_8module_a2a9686f026c3602b46ba08f4b651edd6}{contextual\_\-element\_\-info} ()
+\item 
+\hyperlink{contextual_8module_a2c7f7612d49ab547e1b47afed806a21e}{contextual\_\-preprocess} (\&\$variables, \$hook)
+\item 
+\hyperlink{contextual_8module_a8092553aa170452c7082015e1b930d6b}{contextual\_\-pre\_\-render\_\-links} (\$element)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Adds contextual links to perform actions related to elements on a page. 
+
+\subsection{Function Documentation}
+\hypertarget{contextual_8module_a2a9686f026c3602b46ba08f4b651edd6}{
+\index{contextual.module@{contextual.module}!contextual\_\-element\_\-info@{contextual\_\-element\_\-info}}
+\index{contextual\_\-element\_\-info@{contextual\_\-element\_\-info}!contextual.module@{contextual.module}}
+\subsubsection[{contextual\_\-element\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}contextual\_\-element\_\-info ()}}
+\label{contextual_8module_a2a9686f026c3602b46ba08f4b651edd6}
+Implements \hyperlink{group__hooks_ga3c5182432eddc82f8b7845e66a365d51}{hook\_\-element\_\-info()}. \hypertarget{contextual_8module_a96cade96d323d453c0dc975738d805c2}{
+\index{contextual.module@{contextual.module}!contextual\_\-help@{contextual\_\-help}}
+\index{contextual\_\-help@{contextual\_\-help}!contextual.module@{contextual.module}}
+\subsubsection[{contextual\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}contextual\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{contextual_8module_a96cade96d323d453c0dc975738d805c2}
+Implements \hyperlink{group__hooks_ga5589c2714a782738e8851c4c90231f0e}{hook\_\-help()}. \hypertarget{contextual_8module_a2484e12bee0a02cf70f1f21544b49fac}{
+\index{contextual.module@{contextual.module}!contextual\_\-library@{contextual\_\-library}}
+\index{contextual\_\-library@{contextual\_\-library}!contextual.module@{contextual.module}}
+\subsubsection[{contextual\_\-library}]{\setlength{\rightskip}{0pt plus 5cm}contextual\_\-library ()}}
+\label{contextual_8module_a2484e12bee0a02cf70f1f21544b49fac}
+Implements \hyperlink{group__hooks_ga6bf3f83fa2e373836f5aa78fd143d1cd}{hook\_\-library()}. \hypertarget{contextual_8module_a5a266483e5b6edffd2fe826a7f1a43bd}{
+\index{contextual.module@{contextual.module}!contextual\_\-permission@{contextual\_\-permission}}
+\index{contextual\_\-permission@{contextual\_\-permission}!contextual.module@{contextual.module}}
+\subsubsection[{contextual\_\-permission}]{\setlength{\rightskip}{0pt plus 5cm}contextual\_\-permission ()}}
+\label{contextual_8module_a5a266483e5b6edffd2fe826a7f1a43bd}
+Implements \hyperlink{group__hooks_ga2b22b45f4925f2478412477bae329713}{hook\_\-permission()}. \hypertarget{contextual_8module_a8092553aa170452c7082015e1b930d6b}{
+\index{contextual.module@{contextual.module}!contextual\_\-pre\_\-render\_\-links@{contextual\_\-pre\_\-render\_\-links}}
+\index{contextual\_\-pre\_\-render\_\-links@{contextual\_\-pre\_\-render\_\-links}!contextual.module@{contextual.module}}
+\subsubsection[{contextual\_\-pre\_\-render\_\-links}]{\setlength{\rightskip}{0pt plus 5cm}contextual\_\-pre\_\-render\_\-links (\$ {\em element})}}
+\label{contextual_8module_a8092553aa170452c7082015e1b930d6b}
+Build a renderable array for contextual links.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$element}]A renderable array containing a contextual\_\-links property, which is a keyed array. Each key is the name of the implementing module, and each value is an array that forms the function arguments for \hyperlink{group__menu_gad524d9a3415e24d27c7dbcb333d96cf8}{menu\_\-contextual\_\-links()}. For example: 
+\begin{DoxyCode}
+     array('#contextual_links' => array(
+       'block' => array('admin/structure/block/manage', array('system', 'navigati
+      on')),
+       'menu' => array('admin/structure/menu/manage', array('navigation')),
+     ))
+\end{DoxyCode}
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A renderable array representing contextual links.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__menu_gad524d9a3415e24d27c7dbcb333d96cf8}{menu\_\-contextual\_\-links()} 
+
+\hyperlink{contextual_8module_a2a9686f026c3602b46ba08f4b651edd6}{contextual\_\-element\_\-info()} 
+\end{DoxySeeAlso}
+\hypertarget{contextual_8module_a2c7f7612d49ab547e1b47afed806a21e}{
+\index{contextual.module@{contextual.module}!contextual\_\-preprocess@{contextual\_\-preprocess}}
+\index{contextual\_\-preprocess@{contextual\_\-preprocess}!contextual.module@{contextual.module}}
+\subsubsection[{contextual\_\-preprocess}]{\setlength{\rightskip}{0pt plus 5cm}contextual\_\-preprocess (\&\$ {\em variables}, \/  \$ {\em hook})}}
+\label{contextual_8module_a2c7f7612d49ab547e1b47afed806a21e}
+Implements hook\_\-preprocess().
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{contextual_8module_a8092553aa170452c7082015e1b930d6b}{contextual\_\-pre\_\-render\_\-links()} 
+\end{DoxySeeAlso}

@@ -1,0 +1,125 @@
+\hypertarget{wysiwyg_8api_8php}{
+\section{html/profiles/dosomething/modules/contrib/wysiwyg/wysiwyg.api.php File Reference}
+\label{wysiwyg_8api_8php}\index{html/profiles/dosomething/modules/contrib/wysiwyg/wysiwyg.api.php@{html/profiles/dosomething/modules/contrib/wysiwyg/wysiwyg.api.php}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{wysiwyg_8api_8php_abad2b35b32be0b20d73006b73205045c}{hook\_\-wysiwyg\_\-plugin} (\$editor, \$version)
+\item 
+\hyperlink{wysiwyg_8api_8php_a6cfdf97fd9de777197d9bae384755aac}{hook\_\-wysiwyg\_\-include\_\-directory} (\$type)
+\item 
+\hyperlink{wysiwyg_8api_8php_a20be879b59430637a6832dbbc221eb7c}{hook\_\-INCLUDE\_\-plugin} ()
+\item 
+\hyperlink{wysiwyg_8api_8php_ad3605f8cb948779e59e72c711a7ff843}{hook\_\-INCLUDE\_\-editor} ()
+\item 
+\hyperlink{wysiwyg_8api_8php_a5a5a169876eb8a8f2d19c214408d1072}{hook\_\-wysiwyg\_\-editor\_\-settings\_\-alter} (\&\$settings, \$context)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+API documentation for Wysiwyg module.
+
+To implement a \char`\"{}Drupal plugin\char`\"{} button, you need to write a Wysiwyg plugin:
+\begin{DoxyItemize}
+\item Implement \hyperlink{wysiwyg_8api_8php_a6cfdf97fd9de777197d9bae384755aac}{hook\_\-wysiwyg\_\-include\_\-directory()} to register the directory containing plugin definitions.
+\item In each plugin definition file, implement \hyperlink{wysiwyg_8api_8php_a20be879b59430637a6832dbbc221eb7c}{hook\_\-INCLUDE\_\-plugin()}.
+\item For each plugin button, implement a JavaScript integration and an icon for the button.
+\end{DoxyItemize}
+
+\begin{Desc}
+\item[\hyperlink{todo__todo000091}{Todo}]Icon: Recommended size and type of image.\end{Desc}
+For example implementations you may want to look at
+\begin{DoxyItemize}
+\item Image Assist (img\_\-assist)
+\item Teaser break plugin (plugins/break; part of WYSIWYG)
+\item IMCE (imce\_\-wysiwyg) 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\hypertarget{wysiwyg_8api_8php_ad3605f8cb948779e59e72c711a7ff843}{
+\index{wysiwyg.api.php@{wysiwyg.api.php}!hook\_\-INCLUDE\_\-editor@{hook\_\-INCLUDE\_\-editor}}
+\index{hook\_\-INCLUDE\_\-editor@{hook\_\-INCLUDE\_\-editor}!wysiwyg.api.php@{wysiwyg.api.php}}
+\subsubsection[{hook\_\-INCLUDE\_\-editor}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-INCLUDE\_\-editor ()}}
+\label{wysiwyg_8api_8php_ad3605f8cb948779e59e72c711a7ff843}
+Define a Wysiwyg editor library.
+
+\begin{Desc}
+\item[\hyperlink{todo__todo000092}{Todo}]Complete this documentation. \end{Desc}
+\hypertarget{wysiwyg_8api_8php_a20be879b59430637a6832dbbc221eb7c}{
+\index{wysiwyg.api.php@{wysiwyg.api.php}!hook\_\-INCLUDE\_\-plugin@{hook\_\-INCLUDE\_\-plugin}}
+\index{hook\_\-INCLUDE\_\-plugin@{hook\_\-INCLUDE\_\-plugin}!wysiwyg.api.php@{wysiwyg.api.php}}
+\subsubsection[{hook\_\-INCLUDE\_\-plugin}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-INCLUDE\_\-plugin ()}}
+\label{wysiwyg_8api_8php_a20be879b59430637a6832dbbc221eb7c}
+Define a Wysiwyg plugin.
+
+Supposed to be used for \char`\"{}Drupal plugins\char`\"{} (cross-\/editor plugins) only.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{wysiwyg_8api_8php_abad2b35b32be0b20d73006b73205045c}{hook\_\-wysiwyg\_\-plugin()}
+\end{DoxySeeAlso}
+Each plugin file in the specified plugin directory of a module needs to define meta information about the particular plugin provided. The plugin's hook implementation function name is built out of the following:
+\begin{DoxyItemize}
+\item 'hook': The name of the module providing the plugin.
+\item 'INCLUDE': The basename of the file containing the plugin definition.
+\item 'plugin': Static.
+\end{DoxyItemize}
+
+For example, if your module's name is 'mymodule' and mymodule\_\-wysiwyg\_\-include\_\-directory() returned 'plugins' as plugin directory, and this directory contains an \char`\"{}awesome\char`\"{} plugin file named 'awesome.inc', i.e. sites/all/modules/mymodule/plugins/awesome.inc then the corresponding plugin hook function name is: mymodule\_\-awesome\_\-plugin()
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{wysiwyg_8api_8php_a6cfdf97fd9de777197d9bae384755aac}{hook\_\-wysiwyg\_\-include\_\-directory()}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+Meta information about the buttons provided by this plugin. 
+\end{DoxyReturn}
+\hypertarget{wysiwyg_8api_8php_a5a5a169876eb8a8f2d19c214408d1072}{
+\index{wysiwyg.api.php@{wysiwyg.api.php}!hook\_\-wysiwyg\_\-editor\_\-settings\_\-alter@{hook\_\-wysiwyg\_\-editor\_\-settings\_\-alter}}
+\index{hook\_\-wysiwyg\_\-editor\_\-settings\_\-alter@{hook\_\-wysiwyg\_\-editor\_\-settings\_\-alter}!wysiwyg.api.php@{wysiwyg.api.php}}
+\subsubsection[{hook\_\-wysiwyg\_\-editor\_\-settings\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-wysiwyg\_\-editor\_\-settings\_\-alter (\&\$ {\em settings}, \/  \$ {\em context})}}
+\label{wysiwyg_8api_8php_a5a5a169876eb8a8f2d19c214408d1072}
+Act on editor profile settings.
+
+This hook is invoked from \hyperlink{wysiwyg_8module_ab78fc846dcedb3edb5adb2b45484b035}{wysiwyg\_\-get\_\-editor\_\-config()} after the JavaScript settings have been generated for an editor profile and before the settings are added to the page. The settings may be customized or enhanced; typically with options that cannot be controlled through Wysiwyg module's administrative UI currently.
+
+Modules implementing this hook to enforce settings that can also be controlled through the UI should also implement hook\_\-form\_\-wysiwyg\_\-profile\_\-form\_\-alter() to adjust or at least indicate on the editor profile configuration form that certain/affected settings cannot be changed.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$settings}]An associative array of JavaScript settings to pass to the editor. \item[{\em \$context}]An associative array containing additional context information:
+\begin{DoxyItemize}
+\item editor: The plugin definition array of the editor.
+\item profile: The editor profile object, as loaded from the database.
+\item theme: The name of the editor theme/skin. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{wysiwyg_8api_8php_a6cfdf97fd9de777197d9bae384755aac}{
+\index{wysiwyg.api.php@{wysiwyg.api.php}!hook\_\-wysiwyg\_\-include\_\-directory@{hook\_\-wysiwyg\_\-include\_\-directory}}
+\index{hook\_\-wysiwyg\_\-include\_\-directory@{hook\_\-wysiwyg\_\-include\_\-directory}!wysiwyg.api.php@{wysiwyg.api.php}}
+\subsubsection[{hook\_\-wysiwyg\_\-include\_\-directory}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-wysiwyg\_\-include\_\-directory (\$ {\em type})}}
+\label{wysiwyg_8api_8php_a6cfdf97fd9de777197d9bae384755aac}
+Register a directory containing Wysiwyg plugins.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]The type of objects being collected: either 'plugins' or 'editors'. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A sub-\/directory of the implementing module that contains the corresponding plugin files. This directory must only contain integration files for Wysiwyg module. 
+\end{DoxyReturn}
+\hypertarget{wysiwyg_8api_8php_abad2b35b32be0b20d73006b73205045c}{
+\index{wysiwyg.api.php@{wysiwyg.api.php}!hook\_\-wysiwyg\_\-plugin@{hook\_\-wysiwyg\_\-plugin}}
+\index{hook\_\-wysiwyg\_\-plugin@{hook\_\-wysiwyg\_\-plugin}!wysiwyg.api.php@{wysiwyg.api.php}}
+\subsubsection[{hook\_\-wysiwyg\_\-plugin}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-wysiwyg\_\-plugin (\$ {\em editor}, \/  \$ {\em version})}}
+\label{wysiwyg_8api_8php_abad2b35b32be0b20d73006b73205045c}
+Return an array of native editor plugins.
+
+Only to be used for native (internal) editor plugins.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{wysiwyg_8api_8php_a6cfdf97fd9de777197d9bae384755aac}{hook\_\-wysiwyg\_\-include\_\-directory()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$editor}]The internal name of the currently processed editor. \item[{\em \$version}]The version of the currently processed editor.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An associative array having internal plugin names as keys and an array of plugin meta-\/information as values. 
+\end{DoxyReturn}

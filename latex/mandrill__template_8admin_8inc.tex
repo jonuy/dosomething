@@ -1,0 +1,80 @@
+\hypertarget{mandrill__template_8admin_8inc}{
+\section{html/profiles/dosomething/modules/contrib/mandrill/modules/mandrill\_\-template/mandrill\_\-template.admin.inc File Reference}
+\label{mandrill__template_8admin_8inc}\index{html/profiles/dosomething/modules/contrib/mandrill/modules/mandrill\_\-template/mandrill\_\-template.admin.inc@{html/profiles/dosomething/modules/contrib/mandrill/modules/mandrill\_\-template/mandrill\_\-template.admin.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mandrill__template_8admin_8inc_ac57659a507efa477f482968d94e19cef}{mandrill\_\-template\_\-map\_\-form} (\$form, \&\$form\_\-state, \hyperlink{classMandrillTemplateMap}{MandrillTemplateMap} \$map=NULL, \$op= 'edit')
+\item 
+\hyperlink{mandrill__template_8admin_8inc_a028364729670c5c1b004ee7008cde808}{mandrill\_\-template\_\-map\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{mandrill__template_8admin_8inc_aae04ec915ad905ac6c39679e543eff56}{mandrill\_\-template\_\-map\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{mandrill__template_8admin_8inc_a81e130e132ad33ff656653ae6b93fe0f}{mandrill\_\-template\_\-map\_\-form\_\-callback} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{mandrill__template_8admin_8inc_a81a803bf15fe218cc61b3706a9334848}{\_\-mandrill\_\-parse\_\-regions} (\$html, \$tag= 'mc:edit')
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Administrative forms for \hyperlink{classMandrill}{Mandrill} Template module. 
+
+\subsection{Function Documentation}
+\hypertarget{mandrill__template_8admin_8inc_a81a803bf15fe218cc61b3706a9334848}{
+\index{mandrill\_\-template.admin.inc@{mandrill\_\-template.admin.inc}!\_\-mandrill\_\-parse\_\-regions@{\_\-mandrill\_\-parse\_\-regions}}
+\index{\_\-mandrill\_\-parse\_\-regions@{\_\-mandrill\_\-parse\_\-regions}!mandrill_template.admin.inc@{mandrill\_\-template.admin.inc}}
+\subsubsection[{\_\-mandrill\_\-parse\_\-regions}]{\setlength{\rightskip}{0pt plus 5cm}\_\-mandrill\_\-parse\_\-regions (\$ {\em html}, \/  \$ {\em tag} = {\ttfamily 'mc:edit'})}}
+\label{mandrill__template_8admin_8inc_a81a803bf15fe218cc61b3706a9334848}
+Parse a \hyperlink{classMandrill}{Mandrill} template to extract its regions.
+
+The \hyperlink{classMandrill}{Mandrill} API does not provide an elegant data structure containing the mc:edit tags for a given template, but rather a big pile of ugly HTML containing the tags. We need to parse through it.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$html}]\item[{\em \$tag}]\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\hypertarget{mandrill__template_8admin_8inc_ac57659a507efa477f482968d94e19cef}{
+\index{mandrill\_\-template.admin.inc@{mandrill\_\-template.admin.inc}!mandrill\_\-template\_\-map\_\-form@{mandrill\_\-template\_\-map\_\-form}}
+\index{mandrill\_\-template\_\-map\_\-form@{mandrill\_\-template\_\-map\_\-form}!mandrill_template.admin.inc@{mandrill\_\-template.admin.inc}}
+\subsubsection[{mandrill\_\-template\_\-map\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}mandrill\_\-template\_\-map\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  {\bf MandrillTemplateMap} \$ {\em map} = {\ttfamily NULL}, \/  \$ {\em op} = {\ttfamily 'edit'})}}
+\label{mandrill__template_8admin_8inc_ac57659a507efa477f482968d94e19cef}
+Return a form for adding/editing a \hyperlink{classMandrill}{Mandrill} template map.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$form \item[{\em array}]\$form\_\-state \item[{\em object}]\$map \end{DoxyParams}
+\hypertarget{mandrill__template_8admin_8inc_a81e130e132ad33ff656653ae6b93fe0f}{
+\index{mandrill\_\-template.admin.inc@{mandrill\_\-template.admin.inc}!mandrill\_\-template\_\-map\_\-form\_\-callback@{mandrill\_\-template\_\-map\_\-form\_\-callback}}
+\index{mandrill\_\-template\_\-map\_\-form\_\-callback@{mandrill\_\-template\_\-map\_\-form\_\-callback}!mandrill_template.admin.inc@{mandrill\_\-template.admin.inc}}
+\subsubsection[{mandrill\_\-template\_\-map\_\-form\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}mandrill\_\-template\_\-map\_\-form\_\-callback (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{mandrill__template_8admin_8inc_a81e130e132ad33ff656653ae6b93fe0f}
+Javascript callback for the mandrill\_\-template\_\-map\_\-form.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$form}]\item[{\em \$form\_\-state}]\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\hypertarget{mandrill__template_8admin_8inc_aae04ec915ad905ac6c39679e543eff56}{
+\index{mandrill\_\-template.admin.inc@{mandrill\_\-template.admin.inc}!mandrill\_\-template\_\-map\_\-form\_\-submit@{mandrill\_\-template\_\-map\_\-form\_\-submit}}
+\index{mandrill\_\-template\_\-map\_\-form\_\-submit@{mandrill\_\-template\_\-map\_\-form\_\-submit}!mandrill_template.admin.inc@{mandrill\_\-template.admin.inc}}
+\subsubsection[{mandrill\_\-template\_\-map\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}mandrill\_\-template\_\-map\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{mandrill__template_8admin_8inc_aae04ec915ad905ac6c39679e543eff56}
+Submit handler for mandrill\_\-template\_\-map(), creates the entity.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$form \item[{\em string}]\$form\_\-state\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{mandrill__template_8admin_8inc_a028364729670c5c1b004ee7008cde808}{
+\index{mandrill\_\-template.admin.inc@{mandrill\_\-template.admin.inc}!mandrill\_\-template\_\-map\_\-form\_\-validate@{mandrill\_\-template\_\-map\_\-form\_\-validate}}
+\index{mandrill\_\-template\_\-map\_\-form\_\-validate@{mandrill\_\-template\_\-map\_\-form\_\-validate}!mandrill_template.admin.inc@{mandrill\_\-template.admin.inc}}
+\subsubsection[{mandrill\_\-template\_\-map\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}mandrill\_\-template\_\-map\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{mandrill__template_8admin_8inc_a028364729670c5c1b004ee7008cde808}
+Validate handler for mandrill\_\-template\_\-map(). 

@@ -1,0 +1,66 @@
+\hypertarget{taxonomy-term_8tpl_8php}{
+\section{html/modules/taxonomy/taxonomy-\/term.tpl.php File Reference}
+\label{taxonomy-term_8tpl_8php}\index{html/modules/taxonomy/taxonomy-\/term.tpl.php@{html/modules/taxonomy/taxonomy-\/term.tpl.php}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{taxonomy-term_8tpl_8php_aae745342f7451b070ccf6db8f6e7c08f}{
+print \$term {\bfseries tid}}
+\label{taxonomy-term_8tpl_8php_aae745342f7451b070ccf6db8f6e7c08f}
+
+\item 
+\hypertarget{taxonomy-term_8tpl_8php_a6d48ecbdbc70ca1812e665169b5fa1e2}{
+print {\bfseries \$classes}}
+\label{taxonomy-term_8tpl_8php_a6d48ecbdbc70ca1812e665169b5fa1e2}
+
+\item 
+\hypertarget{taxonomy-term_8tpl_8php_ad960fd839235e91c82392f2d78b9ef37}{
+if(!\$page) print {\bfseries \$term\_\-name}}
+\label{taxonomy-term_8tpl_8php_ad960fd839235e91c82392f2d78b9ef37}
+
+\item 
+\hypertarget{taxonomy-term_8tpl_8php_a82cd33ca97ff99f2fcc5e9c81d65251b}{
+{\bfseries endif}}
+\label{taxonomy-term_8tpl_8php_a82cd33ca97ff99f2fcc5e9c81d65251b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Default theme implementation to display a term.
+
+Available variables:
+\begin{DoxyItemize}
+\item name}
+(deprecated) The unsanitized name of the term. Use term\_\-name instead.
+\item \$content: An array of items for the content of the term (fields and description). Use render(\$content) to print them all, or print a subset such as render(\$content\mbox{[}'field\_\-example'\mbox{]}). Use hide(\$content\mbox{[}'field\_\-example'\mbox{]}) to temporarily suppress the printing of a given element.
+\item \$term\_\-url: Direct URL of the current term.
+\item \$term\_\-name: Name of the current term.
+\item \$classes: String of classes that can be used to style contextually through CSS. It can be manipulated through the variable \$classes\_\-array from preprocess functions. The default values can be one or more of the following:
+\begin{DoxyItemize}
+\item taxonomy-\/term: The current template type, i.e., \char`\"{}theming hook\char`\"{}.
+\item vocabulary-\/\mbox{[}vocabulary-\/name\mbox{]}: The vocabulary to which the term belongs to. For example, if the term is a \char`\"{}Tag\char`\"{} it would result in \char`\"{}vocabulary-\/tag\char`\"{}.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Other variables:
+\begin{DoxyItemize}
+\item \$term: Full term object. Contains data that may not be safe.
+\item \$view\_\-mode: View mode, e.g. 'full', 'teaser'...
+\item \$page: Flag for the full page state.
+\item \$classes\_\-array: Array of html class attribute values. It is flattened into a string within the variable \$classes.
+\item \$zebra: Outputs either \char`\"{}even\char`\"{} or \char`\"{}odd\char`\"{}. Useful for zebra striping in teaser listings.
+\item \$id: Position of the term. Increments each time it's output.
+\item \$is\_\-front: Flags true when presented in the front page.
+\item \$logged\_\-in: Flags true when the current user is a logged-\/in member.
+\item \$is\_\-admin: Flags true when the current user is an administrator.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{includes_2theme_8inc_a3eeb7bcdba7ef4859f99586da264d347}{template\_\-preprocess()} 
+
+\hyperlink{taxonomy_8module_a7f112adf0c1b601f5a7e95fc58d583c8}{template\_\-preprocess\_\-taxonomy\_\-term()} 
+
+\hyperlink{includes_2theme_8inc_a9b4d56c55dab2c59b7af6f71d6b1a940}{template\_\-process()} 
+\end{DoxySeeAlso}

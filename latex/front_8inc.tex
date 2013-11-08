@@ -1,0 +1,59 @@
+\hypertarget{front_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/access/front.inc File Reference}
+\label{front_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/access/front.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/access/front.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{front_8inc_a19eabac2ae4f01d216eb0a2e44885e0f}{ctools\_\-front\_\-ctools\_\-access\_\-settings} (\$form, \&\$form\_\-state, \$conf)
+\item 
+\hyperlink{front_8inc_ab2a1e57e6f2d8bf27845aeea6428af76}{ctools\_\-front\_\-ctools\_\-access\_\-check} (\$conf, \$context)
+\item 
+\hyperlink{front_8inc_aaafad56207919a3c1e59bf615ab7540c}{ctools\_\-front\_\-ctools\_\-access\_\-summary} (\$conf, \$context)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{front_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide access control based on drupal\_\-is\_\-front\_\-page. 
+
+\subsection{Function Documentation}
+\hypertarget{front_8inc_ab2a1e57e6f2d8bf27845aeea6428af76}{
+\index{front.inc@{front.inc}!ctools\_\-front\_\-ctools\_\-access\_\-check@{ctools\_\-front\_\-ctools\_\-access\_\-check}}
+\index{ctools\_\-front\_\-ctools\_\-access\_\-check@{ctools\_\-front\_\-ctools\_\-access\_\-check}!front.inc@{front.inc}}
+\subsubsection[{ctools\_\-front\_\-ctools\_\-access\_\-check}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-front\_\-ctools\_\-access\_\-check (\$ {\em conf}, \/  \$ {\em context})}}
+\label{front_8inc_ab2a1e57e6f2d8bf27845aeea6428af76}
+Check for access. \hypertarget{front_8inc_a19eabac2ae4f01d216eb0a2e44885e0f}{
+\index{front.inc@{front.inc}!ctools\_\-front\_\-ctools\_\-access\_\-settings@{ctools\_\-front\_\-ctools\_\-access\_\-settings}}
+\index{ctools\_\-front\_\-ctools\_\-access\_\-settings@{ctools\_\-front\_\-ctools\_\-access\_\-settings}!front.inc@{front.inc}}
+\subsubsection[{ctools\_\-front\_\-ctools\_\-access\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-front\_\-ctools\_\-access\_\-settings (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em conf})}}
+\label{front_8inc_a19eabac2ae4f01d216eb0a2e44885e0f}
+Settings form for the 'by parent term' access plugin \hypertarget{front_8inc_aaafad56207919a3c1e59bf615ab7540c}{
+\index{front.inc@{front.inc}!ctools\_\-front\_\-ctools\_\-access\_\-summary@{ctools\_\-front\_\-ctools\_\-access\_\-summary}}
+\index{ctools\_\-front\_\-ctools\_\-access\_\-summary@{ctools\_\-front\_\-ctools\_\-access\_\-summary}!front.inc@{front.inc}}
+\subsubsection[{ctools\_\-front\_\-ctools\_\-access\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-front\_\-ctools\_\-access\_\-summary (\$ {\em conf}, \/  \$ {\em context})}}
+\label{front_8inc_aaafad56207919a3c1e59bf615ab7540c}
+Provide a summary description based upon the checked terms. 
+
+\subsection{Variable Documentation}
+\hypertarget{front_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{front.inc@{front.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!front.inc@{front.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{front_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('Front page'),
+  'description' => t('Is this the front page.'),
+  'callback' => 'ctools_front_ctools_access_check',
+  'default' => array('negate' => 0),
+  'settings form' => 'ctools_front_ctools_access_settings',
+  'summary' => 'ctools_front_ctools_access_summary',
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

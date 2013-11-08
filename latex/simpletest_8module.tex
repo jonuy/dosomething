@@ -1,0 +1,219 @@
+\hypertarget{simpletest_8module}{
+\section{html/modules/simpletest/simpletest.module File Reference}
+\label{simpletest_8module}\index{html/modules/simpletest/simpletest.module@{html/modules/simpletest/simpletest.module}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{simpletest_8module_ad5b505f2b0b217de9322d5dd81f6ea95}{simpletest\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{simpletest_8module_a4b53dcaeb636c73dbbc1fc974daf311a}{simpletest\_\-menu} ()
+\item 
+\hyperlink{simpletest_8module_a48c805a2603f0f4ec321d406df350e33}{simpletest\_\-permission} ()
+\item 
+\hyperlink{simpletest_8module_aec0b80be4d54147c75de4ff179ce435f}{simpletest\_\-theme} ()
+\item 
+\hyperlink{simpletest_8module_aaa4dfc94748777a27c27d02366a7cab7}{simpletest\_\-js\_\-alter} (\&\$javascript)
+\item 
+\hypertarget{simpletest_8module_a0f07dd7bac7688e5b4600fd03de53e89}{
+{\bfseries \_\-simpletest\_\-format\_\-summary\_\-line} (\$summary)}
+\label{simpletest_8module_a0f07dd7bac7688e5b4600fd03de53e89}
+
+\item 
+\hyperlink{simpletest_8module_aa4d080c3cdac1041179452cffdaa9c39}{simpletest\_\-run\_\-tests} (\$test\_\-list, \$reporter= 'drupal')
+\item 
+\hyperlink{simpletest_8module_ac38fd305311e5682fd0cc00fe1111557}{\_\-simpletest\_\-batch\_\-operation} (\$test\_\-list\_\-init, \$test\_\-id, \&\$context)
+\item 
+\hypertarget{simpletest_8module_a51e9da23e0682fb62d73570b67c89b73}{
+{\bfseries \_\-simpletest\_\-batch\_\-finished} (\$success, \$results, \$operations, \$elapsed)}
+\label{simpletest_8module_a51e9da23e0682fb62d73570b67c89b73}
+
+\item 
+\hyperlink{simpletest_8module_a8b9a598940ae51908fa3a91407ce8425}{simpletest\_\-last\_\-test\_\-get} (\$test\_\-id)
+\item 
+\hyperlink{simpletest_8module_a5e7d71f99a71ace10b051dd720bd42d3}{simpletest\_\-log\_\-read} (\$test\_\-id, \$prefix, \$test\_\-class, \$during\_\-test=FALSE)
+\item 
+\hyperlink{simpletest_8module_a2d7610898fc04f0e9fa9a750d98f1513}{simpletest\_\-test\_\-get\_\-all} ()
+\item 
+\hypertarget{simpletest_8module_a8c8f8465512f8986c0d0bb8bf35fbd38}{
+{\bfseries simpletest\_\-classloader\_\-register} ()}
+\label{simpletest_8module_a8c8f8465512f8986c0d0bb8bf35fbd38}
+
+\item 
+\hyperlink{simpletest_8module_ac05fbf90b82a1bd04de56ebff9efff77}{\_\-simpletest\_\-autoload\_\-psr0} (\$class)
+\item 
+\hyperlink{simpletest_8module_a00dcdad5c7cce6aba550dfd1e24f6eec}{simpletest\_\-registry\_\-files\_\-alter} (\&\$files, \$modules)
+\item 
+\hyperlink{simpletest_8module_aebcb4a918f91dad598f8267982ef4756}{simpletest\_\-generate\_\-file} (\$filename, \$width, \$lines, \$type= 'binary-\/text')
+\item 
+\hyperlink{simpletest_8module_a73ef6e1e0bfea1443491cbbaa7037f8a}{simpletest\_\-clean\_\-environment} ()
+\item 
+\hyperlink{simpletest_8module_af60eb47f9c6c89840089128ae0eb8673}{simpletest\_\-clean\_\-database} ()
+\item 
+\hyperlink{simpletest_8module_a4be9d49870bfc35792cd9dc4dd1b389b}{simpletest\_\-clean\_\-temporary\_\-directories} ()
+\item 
+\hyperlink{simpletest_8module_a5219f838d43b69d755cd10e9b53011b9}{simpletest\_\-clean\_\-results\_\-table} (\$test\_\-id=NULL)
+\item 
+\hyperlink{simpletest_8module_a390f5b49a961ac363a4f469c50cae7c4}{simpletest\_\-mail\_\-alter} (\&\$message)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides testing functionality. 
+
+\subsection{Function Documentation}
+\hypertarget{simpletest_8module_ac05fbf90b82a1bd04de56ebff9efff77}{
+\index{simpletest.module@{simpletest.module}!\_\-simpletest\_\-autoload\_\-psr0@{\_\-simpletest\_\-autoload\_\-psr0}}
+\index{\_\-simpletest\_\-autoload\_\-psr0@{\_\-simpletest\_\-autoload\_\-psr0}!simpletest.module@{simpletest.module}}
+\subsubsection[{\_\-simpletest\_\-autoload\_\-psr0}]{\setlength{\rightskip}{0pt plus 5cm}\_\-simpletest\_\-autoload\_\-psr0 (\$ {\em class})}}
+\label{simpletest_8module_ac05fbf90b82a1bd04de56ebff9efff77}
+Autoload callback to find PSR-\/0 test classes.
+
+This will only work on classes where the namespace is of the pattern \char`\"{}Drupal$\backslash$\$extension$\backslash$Tests$\backslash$..\char`\"{} \hypertarget{simpletest_8module_ac38fd305311e5682fd0cc00fe1111557}{
+\index{simpletest.module@{simpletest.module}!\_\-simpletest\_\-batch\_\-operation@{\_\-simpletest\_\-batch\_\-operation}}
+\index{\_\-simpletest\_\-batch\_\-operation@{\_\-simpletest\_\-batch\_\-operation}!simpletest.module@{simpletest.module}}
+\subsubsection[{\_\-simpletest\_\-batch\_\-operation}]{\setlength{\rightskip}{0pt plus 5cm}\_\-simpletest\_\-batch\_\-operation (\$ {\em test\_\-list\_\-init}, \/  \$ {\em test\_\-id}, \/  \&\$ {\em context})}}
+\label{simpletest_8module_ac38fd305311e5682fd0cc00fe1111557}
+Batch operation callback. \hypertarget{simpletest_8module_af60eb47f9c6c89840089128ae0eb8673}{
+\index{simpletest.module@{simpletest.module}!simpletest\_\-clean\_\-database@{simpletest\_\-clean\_\-database}}
+\index{simpletest\_\-clean\_\-database@{simpletest\_\-clean\_\-database}!simpletest.module@{simpletest.module}}
+\subsubsection[{simpletest\_\-clean\_\-database}]{\setlength{\rightskip}{0pt plus 5cm}simpletest\_\-clean\_\-database ()}}
+\label{simpletest_8module_af60eb47f9c6c89840089128ae0eb8673}
+Removed prefixed tables from the database that are left over from crashed tests. \hypertarget{simpletest_8module_a73ef6e1e0bfea1443491cbbaa7037f8a}{
+\index{simpletest.module@{simpletest.module}!simpletest\_\-clean\_\-environment@{simpletest\_\-clean\_\-environment}}
+\index{simpletest\_\-clean\_\-environment@{simpletest\_\-clean\_\-environment}!simpletest.module@{simpletest.module}}
+\subsubsection[{simpletest\_\-clean\_\-environment}]{\setlength{\rightskip}{0pt plus 5cm}simpletest\_\-clean\_\-environment ()}}
+\label{simpletest_8module_a73ef6e1e0bfea1443491cbbaa7037f8a}
+Remove all temporary database tables and directories. \hypertarget{simpletest_8module_a5219f838d43b69d755cd10e9b53011b9}{
+\index{simpletest.module@{simpletest.module}!simpletest\_\-clean\_\-results\_\-table@{simpletest\_\-clean\_\-results\_\-table}}
+\index{simpletest\_\-clean\_\-results\_\-table@{simpletest\_\-clean\_\-results\_\-table}!simpletest.module@{simpletest.module}}
+\subsubsection[{simpletest\_\-clean\_\-results\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}simpletest\_\-clean\_\-results\_\-table (\$ {\em test\_\-id} = {\ttfamily NULL})}}
+\label{simpletest_8module_a5219f838d43b69d755cd10e9b53011b9}
+Clear the test result tables.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$test\_\-id}]Test ID to remove results for, or NULL to remove all results. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of results removed. 
+\end{DoxyReturn}
+\hypertarget{simpletest_8module_a4be9d49870bfc35792cd9dc4dd1b389b}{
+\index{simpletest.module@{simpletest.module}!simpletest\_\-clean\_\-temporary\_\-directories@{simpletest\_\-clean\_\-temporary\_\-directories}}
+\index{simpletest\_\-clean\_\-temporary\_\-directories@{simpletest\_\-clean\_\-temporary\_\-directories}!simpletest.module@{simpletest.module}}
+\subsubsection[{simpletest\_\-clean\_\-temporary\_\-directories}]{\setlength{\rightskip}{0pt plus 5cm}simpletest\_\-clean\_\-temporary\_\-directories ()}}
+\label{simpletest_8module_a4be9d49870bfc35792cd9dc4dd1b389b}
+Find all leftover temporary directories and remove them. \hypertarget{simpletest_8module_aebcb4a918f91dad598f8267982ef4756}{
+\index{simpletest.module@{simpletest.module}!simpletest\_\-generate\_\-file@{simpletest\_\-generate\_\-file}}
+\index{simpletest\_\-generate\_\-file@{simpletest\_\-generate\_\-file}!simpletest.module@{simpletest.module}}
+\subsubsection[{simpletest\_\-generate\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}simpletest\_\-generate\_\-file (\$ {\em filename}, \/  \$ {\em width}, \/  \$ {\em lines}, \/  \$ {\em type} = {\ttfamily 'binary-\/text'})}}
+\label{simpletest_8module_aebcb4a918f91dad598f8267982ef4756}
+Generate test file. \hypertarget{simpletest_8module_ad5b505f2b0b217de9322d5dd81f6ea95}{
+\index{simpletest.module@{simpletest.module}!simpletest\_\-help@{simpletest\_\-help}}
+\index{simpletest\_\-help@{simpletest\_\-help}!simpletest.module@{simpletest.module}}
+\subsubsection[{simpletest\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}simpletest\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{simpletest_8module_ad5b505f2b0b217de9322d5dd81f6ea95}
+Implements \hyperlink{group__hooks_ga5589c2714a782738e8851c4c90231f0e}{hook\_\-help()}. \hypertarget{simpletest_8module_aaa4dfc94748777a27c27d02366a7cab7}{
+\index{simpletest.module@{simpletest.module}!simpletest\_\-js\_\-alter@{simpletest\_\-js\_\-alter}}
+\index{simpletest\_\-js\_\-alter@{simpletest\_\-js\_\-alter}!simpletest.module@{simpletest.module}}
+\subsubsection[{simpletest\_\-js\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}simpletest\_\-js\_\-alter (\&\$ {\em javascript})}}
+\label{simpletest_8module_aaa4dfc94748777a27c27d02366a7cab7}
+Implements \hyperlink{group__hooks_ga4e6dc7148292e5d6ce1754927a5ff06d}{hook\_\-js\_\-alter()}. \hypertarget{simpletest_8module_a8b9a598940ae51908fa3a91407ce8425}{
+\index{simpletest.module@{simpletest.module}!simpletest\_\-last\_\-test\_\-get@{simpletest\_\-last\_\-test\_\-get}}
+\index{simpletest\_\-last\_\-test\_\-get@{simpletest\_\-last\_\-test\_\-get}!simpletest.module@{simpletest.module}}
+\subsubsection[{simpletest\_\-last\_\-test\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}simpletest\_\-last\_\-test\_\-get (\$ {\em test\_\-id})}}
+\label{simpletest_8module_a8b9a598940ae51908fa3a91407ce8425}
+Get information about the last test that ran given a test ID.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$test\_\-id}]The test ID to get the last test from. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array containing the last database prefix used and the last test class that ran. 
+\end{DoxyReturn}
+\hypertarget{simpletest_8module_a5e7d71f99a71ace10b051dd720bd42d3}{
+\index{simpletest.module@{simpletest.module}!simpletest\_\-log\_\-read@{simpletest\_\-log\_\-read}}
+\index{simpletest\_\-log\_\-read@{simpletest\_\-log\_\-read}!simpletest.module@{simpletest.module}}
+\subsubsection[{simpletest\_\-log\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}simpletest\_\-log\_\-read (\$ {\em test\_\-id}, \/  \$ {\em prefix}, \/  \$ {\em test\_\-class}, \/  \$ {\em during\_\-test} = {\ttfamily FALSE})}}
+\label{simpletest_8module_a5e7d71f99a71ace10b051dd720bd42d3}
+Read the error log and report any errors as assertion failures.
+
+The errors in the log should only be fatal errors since any other errors will have been recorded by the error handler.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$test\_\-id}]The test ID to which the log relates. \item[{\em \$prefix}]The database prefix to which the log relates. \item[{\em \$test\_\-class}]The test class to which the log relates. \item[{\em \$during\_\-test}]Indicates that the current file directory path is a temporary file file directory used during testing. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Found any entries in log. 
+\end{DoxyReturn}
+\hypertarget{simpletest_8module_a390f5b49a961ac363a4f469c50cae7c4}{
+\index{simpletest.module@{simpletest.module}!simpletest\_\-mail\_\-alter@{simpletest\_\-mail\_\-alter}}
+\index{simpletest\_\-mail\_\-alter@{simpletest\_\-mail\_\-alter}!simpletest.module@{simpletest.module}}
+\subsubsection[{simpletest\_\-mail\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}simpletest\_\-mail\_\-alter (\&\$ {\em message})}}
+\label{simpletest_8module_a390f5b49a961ac363a4f469c50cae7c4}
+Implements \hyperlink{group__hooks_gaad1d55a8e7b359933f462a9ca5b2ede0}{hook\_\-mail\_\-alter()}.
+
+Aborts sending of messages with ID 'simpletest\_\-cancel\_\-test'.
+
+\begin{DoxySeeAlso}{See also}
+MailTestCase::testCancelMessage() 
+\end{DoxySeeAlso}
+\hypertarget{simpletest_8module_a4b53dcaeb636c73dbbc1fc974daf311a}{
+\index{simpletest.module@{simpletest.module}!simpletest\_\-menu@{simpletest\_\-menu}}
+\index{simpletest\_\-menu@{simpletest\_\-menu}!simpletest.module@{simpletest.module}}
+\subsubsection[{simpletest\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}simpletest\_\-menu ()}}
+\label{simpletest_8module_a4b53dcaeb636c73dbbc1fc974daf311a}
+Implements \hyperlink{group__hooks_ga5c95244fea59b25666e409759e133ded}{hook\_\-menu()}. \hypertarget{simpletest_8module_a48c805a2603f0f4ec321d406df350e33}{
+\index{simpletest.module@{simpletest.module}!simpletest\_\-permission@{simpletest\_\-permission}}
+\index{simpletest\_\-permission@{simpletest\_\-permission}!simpletest.module@{simpletest.module}}
+\subsubsection[{simpletest\_\-permission}]{\setlength{\rightskip}{0pt plus 5cm}simpletest\_\-permission ()}}
+\label{simpletest_8module_a48c805a2603f0f4ec321d406df350e33}
+Implements \hyperlink{group__hooks_ga2b22b45f4925f2478412477bae329713}{hook\_\-permission()}. \hypertarget{simpletest_8module_a00dcdad5c7cce6aba550dfd1e24f6eec}{
+\index{simpletest.module@{simpletest.module}!simpletest\_\-registry\_\-files\_\-alter@{simpletest\_\-registry\_\-files\_\-alter}}
+\index{simpletest\_\-registry\_\-files\_\-alter@{simpletest\_\-registry\_\-files\_\-alter}!simpletest.module@{simpletest.module}}
+\subsubsection[{simpletest\_\-registry\_\-files\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}simpletest\_\-registry\_\-files\_\-alter (\&\$ {\em files}, \/  \$ {\em modules})}}
+\label{simpletest_8module_a00dcdad5c7cce6aba550dfd1e24f6eec}
+Implements \hyperlink{group__hooks_ga5b1201bb1afca26333900cd9aca6a2de}{hook\_\-registry\_\-files\_\-alter()}.
+
+Add the test files for disabled modules so that we get a list containing all the avialable tests. \hypertarget{simpletest_8module_aa4d080c3cdac1041179452cffdaa9c39}{
+\index{simpletest.module@{simpletest.module}!simpletest\_\-run\_\-tests@{simpletest\_\-run\_\-tests}}
+\index{simpletest\_\-run\_\-tests@{simpletest\_\-run\_\-tests}!simpletest.module@{simpletest.module}}
+\subsubsection[{simpletest\_\-run\_\-tests}]{\setlength{\rightskip}{0pt plus 5cm}simpletest\_\-run\_\-tests (\$ {\em test\_\-list}, \/  \$ {\em reporter} = {\ttfamily 'drupal'})}}
+\label{simpletest_8module_aa4d080c3cdac1041179452cffdaa9c39}
+Actually runs tests.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$test\_\-list}]List of tests to run. \item[{\em \$reporter}]Which reporter to use. Allowed values are: text, xml, html and drupal, drupal being the default. \end{DoxyParams}
+\hypertarget{simpletest_8module_a2d7610898fc04f0e9fa9a750d98f1513}{
+\index{simpletest.module@{simpletest.module}!simpletest\_\-test\_\-get\_\-all@{simpletest\_\-test\_\-get\_\-all}}
+\index{simpletest\_\-test\_\-get\_\-all@{simpletest\_\-test\_\-get\_\-all}!simpletest.module@{simpletest.module}}
+\subsubsection[{simpletest\_\-test\_\-get\_\-all}]{\setlength{\rightskip}{0pt plus 5cm}simpletest\_\-test\_\-get\_\-all ()}}
+\label{simpletest_8module_a2d7610898fc04f0e9fa9a750d98f1513}
+Get a list of all of the tests provided by the system.
+
+The list of test classes is loaded from the registry where it looks for files ending in \char`\"{}.test\char`\"{}. Once loaded the test list is cached and stored in a static variable. In order to list tests provided by disabled modules \hyperlink{group__hooks_ga5b1201bb1afca26333900cd9aca6a2de}{hook\_\-registry\_\-files\_\-alter()} is used to forcefully add them to the registry.
+
+PSR-\/0 classes are found by searching the designated directory for each module for files matching the PSR-\/0 standard.
+
+\begin{DoxyReturn}{Returns}
+An array of tests keyed with the groups specified in each of the tests getInfo() method and then keyed by the test class. An example of the array structure is provided below.
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+     $groups['Blog'] => array(
+       'BlogTestCase' => array(
+         'name' => 'Blog functionality',
+         'description' => 'Create, view, edit, delete, ...',
+         'group' => 'Blog',
+       ),
+     );
+\end{DoxyCode}
+ \begin{DoxySeeAlso}{See also}
+\hyperlink{simpletest_8module_a00dcdad5c7cce6aba550dfd1e24f6eec}{simpletest\_\-registry\_\-files\_\-alter()} 
+\end{DoxySeeAlso}
+\hypertarget{simpletest_8module_aec0b80be4d54147c75de4ff179ce435f}{
+\index{simpletest.module@{simpletest.module}!simpletest\_\-theme@{simpletest\_\-theme}}
+\index{simpletest\_\-theme@{simpletest\_\-theme}!simpletest.module@{simpletest.module}}
+\subsubsection[{simpletest\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}simpletest\_\-theme ()}}
+\label{simpletest_8module_aec0b80be4d54147c75de4ff179ce435f}
+Implements \hyperlink{group__hooks_ga013ccb45c7aaab1c16cf9691428c910d}{hook\_\-theme()}. 

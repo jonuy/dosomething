@@ -1,0 +1,44 @@
+\hypertarget{user__category__edit__form__from__user_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/relationships/user\_\-category\_\-edit\_\-form\_\-from\_\-user.inc File Reference}
+\label{user__category__edit__form__from__user_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/relationships/user\_\-category\_\-edit\_\-form\_\-from\_\-user.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/relationships/user\_\-category\_\-edit\_\-form\_\-from\_\-user.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{user__category__edit__form__from__user_8inc_a76ef5e5573ed450b0c2303925be71cc9}{ctools\_\-user\_\-category\_\-edit\_\-form\_\-from\_\-user\_\-context} (\$context, \$conf)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{user__category__edit__form__from__user_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide an relationship handler for term from node. 
+
+\subsection{Function Documentation}
+\hypertarget{user__category__edit__form__from__user_8inc_a76ef5e5573ed450b0c2303925be71cc9}{
+\index{user\_\-category\_\-edit\_\-form\_\-from\_\-user.inc@{user\_\-category\_\-edit\_\-form\_\-from\_\-user.inc}!ctools\_\-user\_\-category\_\-edit\_\-form\_\-from\_\-user\_\-context@{ctools\_\-user\_\-category\_\-edit\_\-form\_\-from\_\-user\_\-context}}
+\index{ctools\_\-user\_\-category\_\-edit\_\-form\_\-from\_\-user\_\-context@{ctools\_\-user\_\-category\_\-edit\_\-form\_\-from\_\-user\_\-context}!user_category_edit_form_from_user.inc@{user\_\-category\_\-edit\_\-form\_\-from\_\-user.inc}}
+\subsubsection[{ctools\_\-user\_\-category\_\-edit\_\-form\_\-from\_\-user\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-user\_\-category\_\-edit\_\-form\_\-from\_\-user\_\-context (\$ {\em context}, \/  \$ {\em conf})}}
+\label{user__category__edit__form__from__user_8inc_a76ef5e5573ed450b0c2303925be71cc9}
+Return a new context based on an existing context. 
+
+\subsection{Variable Documentation}
+\hypertarget{user__category__edit__form__from__user_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{user\_\-category\_\-edit\_\-form\_\-from\_\-user.inc@{user\_\-category\_\-edit\_\-form\_\-from\_\-user.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!user_category_edit_form_from_user.inc@{user\_\-category\_\-edit\_\-form\_\-from\_\-user.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{user__category__edit__form__from__user_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('User category edit form from user'),
+  'keyword' => 'user_category_form',
+  'description' => t('Adds user category edit form from a user context.'),
+  'required context' => new ctools_context_required(t('User'), 'user'),
+  'context' => 'ctools_user_category_edit_form_from_user_context',
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

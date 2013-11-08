@@ -1,0 +1,130 @@
+\hypertarget{group__registry}{
+\section{Code registry}
+\label{group__registry}\index{Code registry@{Code registry}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__registry_gaf7822bbec92566b95a44dc1c224389e8}{drupal\_\-autoload\_\-interface} (\$interface)
+\item 
+\hyperlink{group__registry_ga0fee2e4ebba5986067aa486c3436f51e}{drupal\_\-autoload\_\-class} (\$class)
+\item 
+\hyperlink{group__registry_gac399c501a8a90c383ea9a901a3a45ed6}{\_\-registry\_\-check\_\-code} (\$type, \$name=NULL)
+\item 
+\hyperlink{group__registry_ga63939dbdcf7950c97292f7d341f6d339}{registry\_\-rebuild} ()
+\item 
+\hyperlink{group__registry_gaab1bcea9fb061684c700676aa5ebe608}{registry\_\-update} ()
+\item 
+\hyperlink{group__registry_ga5008c77b133d55af7f1f4442d9e51167}{\_\-registry\_\-update} ()
+\item 
+\hyperlink{group__registry_ga072b32f340e117845791d7c6770da0f1}{registry\_\-get\_\-parsed\_\-files} ()
+\item 
+\hyperlink{group__registry_ga3b95761af0c42b685a2f1c4bc39b12d4}{\_\-registry\_\-parse\_\-files} (\$files)
+\item 
+\hyperlink{group__registry_ga9836752d4694599ffe4c393ff037fd44}{\_\-registry\_\-parse\_\-file} (\$filename, \$contents, \$module= '', \$weight=0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The code registry engine.
+
+Drupal maintains an internal registry of all functions or classes in the system, allowing it to lazy-\/load code files as needed (reducing the amount of code that must be parsed on each request).
+
+End of \char`\"{}addtogroup schemaapi\char`\"{}. 
+
+\subsection{Function Documentation}
+\hypertarget{group__registry_gac399c501a8a90c383ea9a901a3a45ed6}{
+\index{registry@{registry}!\_\-registry\_\-check\_\-code@{\_\-registry\_\-check\_\-code}}
+\index{\_\-registry\_\-check\_\-code@{\_\-registry\_\-check\_\-code}!registry@{registry}}
+\subsubsection[{\_\-registry\_\-check\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}\_\-registry\_\-check\_\-code (\$ {\em type}, \/  \$ {\em name} = {\ttfamily NULL})}}
+\label{group__registry_gac399c501a8a90c383ea9a901a3a45ed6}
+Checks for a resource in the registry.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]The type of resource we are looking up, or one of the constants REGISTRY\_\-RESET\_\-LOOKUP\_\-CACHE or REGISTRY\_\-WRITE\_\-LOOKUP\_\-CACHE, which signal that we should reset or write the cache, respectively. \item[{\em \$name}]The name of the resource, or NULL if either of the REGISTRY\_\-$\ast$ constants is passed in.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the resource was found, FALSE if not. NULL if either of the REGISTRY\_\-$\ast$ constants is passed in as \$type. 
+\end{DoxyReturn}
+\hypertarget{group__registry_ga9836752d4694599ffe4c393ff037fd44}{
+\index{registry@{registry}!\_\-registry\_\-parse\_\-file@{\_\-registry\_\-parse\_\-file}}
+\index{\_\-registry\_\-parse\_\-file@{\_\-registry\_\-parse\_\-file}!registry@{registry}}
+\subsubsection[{\_\-registry\_\-parse\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}\_\-registry\_\-parse\_\-file (\$ {\em filename}, \/  \$ {\em contents}, \/  \$ {\em module} = {\ttfamily ''}, \/  \$ {\em weight} = {\ttfamily 0})}}
+\label{group__registry_ga9836752d4694599ffe4c393ff037fd44}
+Parse a file and save its function and class listings.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$filename}]Name of the file we are going to parse. \item[{\em \$contents}]Contents of the file we are going to parse as a string. \item[{\em \$module}](optional) Name of the module this file belongs to. \item[{\em \$weight}](optional) Weight of the module. \end{DoxyParams}
+\hypertarget{group__registry_ga3b95761af0c42b685a2f1c4bc39b12d4}{
+\index{registry@{registry}!\_\-registry\_\-parse\_\-files@{\_\-registry\_\-parse\_\-files}}
+\index{\_\-registry\_\-parse\_\-files@{\_\-registry\_\-parse\_\-files}!registry@{registry}}
+\subsubsection[{\_\-registry\_\-parse\_\-files}]{\setlength{\rightskip}{0pt plus 5cm}\_\-registry\_\-parse\_\-files (\$ {\em files})}}
+\label{group__registry_ga3b95761af0c42b685a2f1c4bc39b12d4}
+Parse all files that have changed since the registry was last built, and save their function and class listings.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$files}]The list of files to check and parse. \end{DoxyParams}
+\hypertarget{group__registry_ga5008c77b133d55af7f1f4442d9e51167}{
+\index{registry@{registry}!\_\-registry\_\-update@{\_\-registry\_\-update}}
+\index{\_\-registry\_\-update@{\_\-registry\_\-update}!registry@{registry}}
+\subsubsection[{\_\-registry\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}\_\-registry\_\-update ()}}
+\label{group__registry_ga5008c77b133d55af7f1f4442d9e51167}
+Does the work for \hyperlink{group__registry_gaab1bcea9fb061684c700676aa5ebe608}{registry\_\-update()}. \hypertarget{group__registry_ga0fee2e4ebba5986067aa486c3436f51e}{
+\index{registry@{registry}!drupal\_\-autoload\_\-class@{drupal\_\-autoload\_\-class}}
+\index{drupal\_\-autoload\_\-class@{drupal\_\-autoload\_\-class}!registry@{registry}}
+\subsubsection[{drupal\_\-autoload\_\-class}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-autoload\_\-class (\$ {\em class})}}
+\label{group__registry_ga0fee2e4ebba5986067aa486c3436f51e}
+Confirms that a class is available.
+
+This function is rarely called directly. Instead, it is registered as an spl\_\-autoload() handler, and PHP calls it for us when necessary.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$class}]The name of the class to check or load.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the class is currently available, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{group__registry_gaf7822bbec92566b95a44dc1c224389e8}{
+\index{registry@{registry}!drupal\_\-autoload\_\-interface@{drupal\_\-autoload\_\-interface}}
+\index{drupal\_\-autoload\_\-interface@{drupal\_\-autoload\_\-interface}!registry@{registry}}
+\subsubsection[{drupal\_\-autoload\_\-interface}]{\setlength{\rightskip}{0pt plus 5cm}drupal\_\-autoload\_\-interface (\$ {\em interface})}}
+\label{group__registry_gaf7822bbec92566b95a44dc1c224389e8}
+Confirms that an interface is available.
+
+This function is rarely called directly. Instead, it is registered as an spl\_\-autoload() handler, and PHP calls it for us when necessary.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$interface}]The name of the interface to check or load.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the interface is currently available, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{group__registry_ga072b32f340e117845791d7c6770da0f1}{
+\index{registry@{registry}!registry\_\-get\_\-parsed\_\-files@{registry\_\-get\_\-parsed\_\-files}}
+\index{registry\_\-get\_\-parsed\_\-files@{registry\_\-get\_\-parsed\_\-files}!registry@{registry}}
+\subsubsection[{registry\_\-get\_\-parsed\_\-files}]{\setlength{\rightskip}{0pt plus 5cm}registry\_\-get\_\-parsed\_\-files ()}}
+\label{group__registry_ga072b32f340e117845791d7c6770da0f1}
+Return the list of files in registry\_\-file \hypertarget{group__registry_ga63939dbdcf7950c97292f7d341f6d339}{
+\index{registry@{registry}!registry\_\-rebuild@{registry\_\-rebuild}}
+\index{registry\_\-rebuild@{registry\_\-rebuild}!registry@{registry}}
+\subsubsection[{registry\_\-rebuild}]{\setlength{\rightskip}{0pt plus 5cm}registry\_\-rebuild ()}}
+\label{group__registry_ga63939dbdcf7950c97292f7d341f6d339}
+Rescans all enabled modules and rebuilds the registry.
+
+Rescans all code in modules or includes directories, storing the location of each interface or class in the database. \hypertarget{group__registry_gaab1bcea9fb061684c700676aa5ebe608}{
+\index{registry@{registry}!registry\_\-update@{registry\_\-update}}
+\index{registry\_\-update@{registry\_\-update}!registry@{registry}}
+\subsubsection[{registry\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}registry\_\-update ()}}
+\label{group__registry_gaab1bcea9fb061684c700676aa5ebe608}
+Updates the registry based on the latest files listed in the database.
+
+This function should be used when \hyperlink{system_8module_a2c3c848bc7c14d6f770a2f8df8f35332}{system\_\-rebuild\_\-module\_\-data()} does not need to be called, because it is already known that the list of files in the \{system\} table matches those in the file system.
+
+\begin{DoxyReturn}{Returns}
+TRUE if the registry was rebuilt, FALSE if another thread was rebuilding in parallel and the current thread just waited for completion.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__registry_ga63939dbdcf7950c97292f7d341f6d339}{registry\_\-rebuild()} 
+\end{DoxySeeAlso}

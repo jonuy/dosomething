@@ -1,0 +1,123 @@
+\hypertarget{book_8pages_8inc}{
+\section{html/modules/book/book.pages.inc File Reference}
+\label{book_8pages_8inc}\index{html/modules/book/book.pages.inc@{html/modules/book/book.pages.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{book_8pages_8inc_ab9a467483a4cc1909dc16838d6760eea}{book\_\-render} ()
+\item 
+\hyperlink{book_8pages_8inc_adcfa1ae54cd2673dfedbae459ea573de}{book\_\-export} (\$type, \$nid)
+\item 
+\hyperlink{book_8pages_8inc_a9916aa7ebfa4de8b221ba9e33592bb69}{book\_\-export\_\-html} (\$nid)
+\item 
+\hyperlink{book_8pages_8inc_a13983b7dd1920acb58635a7784c719b1}{book\_\-outline} (\$node)
+\item 
+\hyperlink{group__forms_ga4903d29a89909f072c1aab2f8d718bdb}{book\_\-outline\_\-form} (\$form, \&\$form\_\-state, \$node)
+\item 
+\hyperlink{book_8pages_8inc_abcf4790efab7bbb44fda88de9ed0847e}{book\_\-remove\_\-button\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{book_8pages_8inc_ad5f27af5889dbe2ad72df81fd4cd2665}{book\_\-outline\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{group__forms_gab7e8aa290196982f23b50a984e215805}{book\_\-remove\_\-form} (\$form, \&\$form\_\-state, \$node)
+\item 
+\hyperlink{book_8pages_8inc_aca2b07a50dae6ef3a271b984dae19c7e}{book\_\-remove\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+User page callbacks for the book module. 
+
+\subsection{Function Documentation}
+\hypertarget{book_8pages_8inc_adcfa1ae54cd2673dfedbae459ea573de}{
+\index{book.pages.inc@{book.pages.inc}!book\_\-export@{book\_\-export}}
+\index{book\_\-export@{book\_\-export}!book.pages.inc@{book.pages.inc}}
+\subsubsection[{book\_\-export}]{\setlength{\rightskip}{0pt plus 5cm}book\_\-export (\$ {\em type}, \/  \$ {\em nid})}}
+\label{book_8pages_8inc_adcfa1ae54cd2673dfedbae459ea573de}
+Menu callback; Generates representations of a book page and its children.
+
+The function delegates the generation of output to helper functions. The function name is derived by prepending 'book\_\-export\_\-' to the given output type. So, e.g., a type of 'html' results in a call to the function \hyperlink{book_8pages_8inc_a9916aa7ebfa4de8b221ba9e33592bb69}{book\_\-export\_\-html()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]A string encoding the type of output requested. The following types are currently supported in book module:
+\begin{DoxyItemize}
+\item html: Printer-\/friendly HTML. Other types may be supported in contributed modules. 
+\end{DoxyItemize}\item[{\em \$nid}]An integer representing the node id (nid) of the node to export\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string representing the node and its children in the book hierarchy in a format determined by the \$type parameter.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{book_8module_adc2bbd5235a769fa1ae9b02e8effc15e}{book\_\-menu()} 
+\end{DoxySeeAlso}
+\hypertarget{book_8pages_8inc_a9916aa7ebfa4de8b221ba9e33592bb69}{
+\index{book.pages.inc@{book.pages.inc}!book\_\-export\_\-html@{book\_\-export\_\-html}}
+\index{book\_\-export\_\-html@{book\_\-export\_\-html}!book.pages.inc@{book.pages.inc}}
+\subsubsection[{book\_\-export\_\-html}]{\setlength{\rightskip}{0pt plus 5cm}book\_\-export\_\-html (\$ {\em nid})}}
+\label{book_8pages_8inc_a9916aa7ebfa4de8b221ba9e33592bb69}
+Generates HTML for export when invoked by \hyperlink{book_8pages_8inc_adcfa1ae54cd2673dfedbae459ea573de}{book\_\-export()}.
+
+The given node is embedded to its absolute depth in a top level section. For example, a child node with depth 2 in the hierarchy is contained in (otherwise empty)  elements corresponding to depth 0 and depth 1. This is intended to support WYSIWYG output -\/ e.g., level 3 sections always look like level 3 sections, no matter their depth relative to the node selected to be exported as printer-\/friendly HTML.
+
+ 
+\begin{DoxyParams}{Parameters}
+\item[{\em \$nid}]An integer representing the node id (nid) of the node to export.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string containing HTML representing the node and its children in the book hierarchy. 
+\end{DoxyReturn}
+\hypertarget{book_8pages_8inc_a13983b7dd1920acb58635a7784c719b1}{
+\index{book.pages.inc@{book.pages.inc}!book\_\-outline@{book\_\-outline}}
+\index{book\_\-outline@{book\_\-outline}!book.pages.inc@{book.pages.inc}}
+\subsubsection[{book\_\-outline}]{\setlength{\rightskip}{0pt plus 5cm}book\_\-outline (\$ {\em node})}}
+\label{book_8pages_8inc_a13983b7dd1920acb58635a7784c719b1}
+Menu callback: Shows the outline form for a single node.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$node}]The book node for which to show the outline.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string A HTML-\/formatted string with the outline form for a single node.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{book_8module_adc2bbd5235a769fa1ae9b02e8effc15e}{book\_\-menu()} 
+\end{DoxySeeAlso}
+\hypertarget{book_8pages_8inc_ad5f27af5889dbe2ad72df81fd4cd2665}{
+\index{book.pages.inc@{book.pages.inc}!book\_\-outline\_\-form\_\-submit@{book\_\-outline\_\-form\_\-submit}}
+\index{book\_\-outline\_\-form\_\-submit@{book\_\-outline\_\-form\_\-submit}!book.pages.inc@{book.pages.inc}}
+\subsubsection[{book\_\-outline\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}book\_\-outline\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{book_8pages_8inc_ad5f27af5889dbe2ad72df81fd4cd2665}
+Form submission handler for \hyperlink{group__forms_ga4903d29a89909f072c1aab2f8d718bdb}{book\_\-outline\_\-form()}.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{book_8pages_8inc_abcf4790efab7bbb44fda88de9ed0847e}{book\_\-remove\_\-button\_\-submit()} 
+\end{DoxySeeAlso}
+\hypertarget{book_8pages_8inc_abcf4790efab7bbb44fda88de9ed0847e}{
+\index{book.pages.inc@{book.pages.inc}!book\_\-remove\_\-button\_\-submit@{book\_\-remove\_\-button\_\-submit}}
+\index{book\_\-remove\_\-button\_\-submit@{book\_\-remove\_\-button\_\-submit}!book.pages.inc@{book.pages.inc}}
+\subsubsection[{book\_\-remove\_\-button\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}book\_\-remove\_\-button\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{book_8pages_8inc_abcf4790efab7bbb44fda88de9ed0847e}
+Form submission handler for \hyperlink{group__forms_ga4903d29a89909f072c1aab2f8d718bdb}{book\_\-outline\_\-form()}.
+
+Redirects to removal confirmation form.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{book_8pages_8inc_ad5f27af5889dbe2ad72df81fd4cd2665}{book\_\-outline\_\-form\_\-submit()} 
+\end{DoxySeeAlso}
+\hypertarget{book_8pages_8inc_aca2b07a50dae6ef3a271b984dae19c7e}{
+\index{book.pages.inc@{book.pages.inc}!book\_\-remove\_\-form\_\-submit@{book\_\-remove\_\-form\_\-submit}}
+\index{book\_\-remove\_\-form\_\-submit@{book\_\-remove\_\-form\_\-submit}!book.pages.inc@{book.pages.inc}}
+\subsubsection[{book\_\-remove\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}book\_\-remove\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{book_8pages_8inc_aca2b07a50dae6ef3a271b984dae19c7e}
+Form submission handler for \hyperlink{group__forms_gab7e8aa290196982f23b50a984e215805}{book\_\-remove\_\-form()}. \hypertarget{book_8pages_8inc_ab9a467483a4cc1909dc16838d6760eea}{
+\index{book.pages.inc@{book.pages.inc}!book\_\-render@{book\_\-render}}
+\index{book\_\-render@{book\_\-render}!book.pages.inc@{book.pages.inc}}
+\subsubsection[{book\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}book\_\-render ()}}
+\label{book_8pages_8inc_ab9a467483a4cc1909dc16838d6760eea}
+Menu callback: Prints a listing of all books.
+
+\begin{DoxyReturn}{Returns}
+string A HTML-\/formatted string with the listing of all books content.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{book_8module_adc2bbd5235a769fa1ae9b02e8effc15e}{book\_\-menu()} 
+\end{DoxySeeAlso}

@@ -1,0 +1,284 @@
+\hypertarget{classDatabase}{
+\section{Database Class Reference}
+\label{classDatabase}\index{Database@{Database}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classDatabase_a4785b9bc2918dacdcc861b261513715d}{startLog} (\$logging\_\-key, \$key= 'default')
+\item 
+static \hyperlink{classDatabase_a0a11c88ba9539bff6131c8fae25e504d}{getLog} (\$logging\_\-key, \$key= 'default')
+\item 
+static \hyperlink{classDatabase_aa8e4f73dfd6ad94a166a6fa3e44351cf}{getConnection} (\$target= 'default', \$key=NULL)
+\item 
+static \hyperlink{classDatabase_ac67e96fee55a1ec6820a6678428d7b91}{isActiveConnection} ()
+\item 
+static \hyperlink{classDatabase_afee50f4c59d97ccdcc6c4088adf7bc4e}{setActiveConnection} (\$key= 'default')
+\item 
+static \hyperlink{classDatabase_a65d7ffd8cc0b81ead0e2a6ca0836343c}{parseConnectionInfo} ()
+\item 
+static \hyperlink{classDatabase_a8b2462c18a8a4fea7c350e1123d3c6e7}{addConnectionInfo} (\$key, \$target, \$info)
+\item 
+static \hyperlink{classDatabase_a4ddbb695ae89b6180e0390c231b70ea5}{getConnectionInfo} (\$key= 'default')
+\item 
+static \hyperlink{classDatabase_aa0401fcf5edecc7f81cf32251aeee593}{renameConnection} (\$old\_\-key, \$new\_\-key)
+\item 
+static \hyperlink{classDatabase_a5c2f9463e38304080a2d555a588010ef}{removeConnection} (\$key)
+\item 
+static \hyperlink{classDatabase_a1e6a2484bc6ea4ac8ce820dd12baaa5b}{closeConnection} (\$target=NULL, \$key=NULL)
+\item 
+static \hyperlink{classDatabase_a574ba08b096e4051b221166fc0bc4d21}{ignoreTarget} (\$key, \$target)
+\item 
+static \hyperlink{classDatabase_a25fe33ffa87aaf80ff680e356230d9e2}{loadDriverFile} (\$driver, array \$files=array())
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classDatabase_ae00484bf91c4447fc1b391408f7cfbd3}{RETURN\_\-NULL} = 0
+\item 
+const \hyperlink{classDatabase_a7b7c6f8f81159b97752412e439d957dc}{RETURN\_\-STATEMENT} = 1
+\item 
+const \hyperlink{classDatabase_a557879c7732a573ed395f9196afeb898}{RETURN\_\-AFFECTED} = 2
+\item 
+const \hyperlink{classDatabase_a56dab08fbf70f81aaf6f55a71922f4ef}{RETURN\_\-INSERT\_\-ID} = 3
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classDatabase_a40724407e492d149e9b45e7d5e90ec37}{openConnection} (\$key, \$target)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDatabase_a5b3475f4078edb1c0629ddcc00901ec7}{
+static {\bfseries \$connections} = array()}
+\label{classDatabase_a5b3475f4078edb1c0629ddcc00901ec7}
+
+\item 
+\hypertarget{classDatabase_a0c015937446b53480050a687608fc09b}{
+static {\bfseries \$databaseInfo} = NULL}
+\label{classDatabase_a0c015937446b53480050a687608fc09b}
+
+\item 
+\hypertarget{classDatabase_a835e96936183cb872b1dce649e11ba41}{
+static {\bfseries \$ignoreTargets} = array()}
+\label{classDatabase_a835e96936183cb872b1dce649e11ba41}
+
+\item 
+\hypertarget{classDatabase_a96a67e90069e624c96c59e6c7f7a95d7}{
+static {\bfseries \$activeKey} = 'default'}
+\label{classDatabase_a96a67e90069e624c96c59e6c7f7a95d7}
+
+\item 
+\hypertarget{classDatabase_aad829292749f9df6fa49b9dbe38882e3}{
+static {\bfseries \$logs} = array()}
+\label{classDatabase_aad829292749f9df6fa49b9dbe38882e3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Primary front-\/controller for the database system.
+
+This class is uninstantiatable and un-\/extendable. It acts to encapsulate all control and shepherding of database connections into a single location without the use of globals. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classDatabase_a8b2462c18a8a4fea7c350e1123d3c6e7}{
+\index{Database@{Database}!addConnectionInfo@{addConnectionInfo}}
+\index{addConnectionInfo@{addConnectionInfo}!Database@{Database}}
+\subsubsection[{addConnectionInfo}]{\setlength{\rightskip}{0pt plus 5cm}static Database::addConnectionInfo (\$ {\em key}, \/  \$ {\em target}, \/  \$ {\em info})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classDatabase_a8b2462c18a8a4fea7c350e1123d3c6e7}
+Adds database connection information for a given key/target.
+
+This method allows the addition of new connection credentials at runtime. Under normal circumstances the preferred way to specify database credentials is via \hyperlink{settings_8php}{settings.php}. However, this method allows them to be added at arbitrary times, such as during unit tests, when connecting to admin-\/defined third party databases, etc.
+
+If the given key/target pair already exists, this method will be ignored.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$key}]The database key. \item[{\em \$target}]The database target name. \item[{\em \$info}]The database connection information, as it would be defined in \hyperlink{settings_8php}{settings.php}. Note that the structure of this array will depend on the database driver it is connecting to. \end{DoxyParams}
+\hypertarget{classDatabase_a1e6a2484bc6ea4ac8ce820dd12baaa5b}{
+\index{Database@{Database}!closeConnection@{closeConnection}}
+\index{closeConnection@{closeConnection}!Database@{Database}}
+\subsubsection[{closeConnection}]{\setlength{\rightskip}{0pt plus 5cm}static Database::closeConnection (\$ {\em target} = {\ttfamily NULL}, \/  \$ {\em key} = {\ttfamily NULL})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classDatabase_a1e6a2484bc6ea4ac8ce820dd12baaa5b}
+Closes a connection to the server specified by the given key and target.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$target}]The database target name. Defaults to NULL meaning that all target connections will be closed. \item[{\em \$key}]The database connection key. Defaults to NULL which means the active key. \end{DoxyParams}
+\hypertarget{classDatabase_aa8e4f73dfd6ad94a166a6fa3e44351cf}{
+\index{Database@{Database}!getConnection@{getConnection}}
+\index{getConnection@{getConnection}!Database@{Database}}
+\subsubsection[{getConnection}]{\setlength{\rightskip}{0pt plus 5cm}static Database::getConnection (\$ {\em target} = {\ttfamily 'default'}, \/  \$ {\em key} = {\ttfamily NULL})\hspace{0.3cm}{\ttfamily  \mbox{[}static, final\mbox{]}}}}
+\label{classDatabase_aa8e4f73dfd6ad94a166a6fa3e44351cf}
+Gets the connection object for the specified database key and target.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$target}]The database target name. \item[{\em \$key}]The database connection key. Defaults to NULL which means the active key.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classDatabaseConnection}{DatabaseConnection} The corresponding connection object. 
+\end{DoxyReturn}
+\hypertarget{classDatabase_a4ddbb695ae89b6180e0390c231b70ea5}{
+\index{Database@{Database}!getConnectionInfo@{getConnectionInfo}}
+\index{getConnectionInfo@{getConnectionInfo}!Database@{Database}}
+\subsubsection[{getConnectionInfo}]{\setlength{\rightskip}{0pt plus 5cm}static Database::getConnectionInfo (\$ {\em key} = {\ttfamily 'default'})\hspace{0.3cm}{\ttfamily  \mbox{[}static, final\mbox{]}}}}
+\label{classDatabase_a4ddbb695ae89b6180e0390c231b70ea5}
+Gets information on the specified database connection.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$connection}]The connection key for which we want information. \end{DoxyParams}
+\hypertarget{classDatabase_a0a11c88ba9539bff6131c8fae25e504d}{
+\index{Database@{Database}!getLog@{getLog}}
+\index{getLog@{getLog}!Database@{Database}}
+\subsubsection[{getLog}]{\setlength{\rightskip}{0pt plus 5cm}static Database::getLog (\$ {\em logging\_\-key}, \/  \$ {\em key} = {\ttfamily 'default'})\hspace{0.3cm}{\ttfamily  \mbox{[}static, final\mbox{]}}}}
+\label{classDatabase_a0a11c88ba9539bff6131c8fae25e504d}
+Retrieves the queries logged on for given logging key.
+
+This method also ends logging for the specified key. To get the query log to date without ending the logger request the logging object by starting it again (which does nothing to an open log key) and call methods on it as desired.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$logging\_\-key}]The logging key to log. \item[{\em \$key}]The database connection key for which we want to log.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array The query log for the specified logging key and connection.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classDatabaseLog}{DatabaseLog} 
+\end{DoxySeeAlso}
+\hypertarget{classDatabase_a574ba08b096e4051b221166fc0bc4d21}{
+\index{Database@{Database}!ignoreTarget@{ignoreTarget}}
+\index{ignoreTarget@{ignoreTarget}!Database@{Database}}
+\subsubsection[{ignoreTarget}]{\setlength{\rightskip}{0pt plus 5cm}static Database::ignoreTarget (\$ {\em key}, \/  \$ {\em target})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classDatabase_a574ba08b096e4051b221166fc0bc4d21}
+Instructs the system to temporarily ignore a given key/target.
+
+At times we need to temporarily disable slave queries. To do so, call this method with the database key and the target to disable. That database key will then always fall back to 'default' for that key, even if it's defined.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$key}]The database connection key. \item[{\em \$target}]The target of the specified key to ignore. \end{DoxyParams}
+\hypertarget{classDatabase_ac67e96fee55a1ec6820a6678428d7b91}{
+\index{Database@{Database}!isActiveConnection@{isActiveConnection}}
+\index{isActiveConnection@{isActiveConnection}!Database@{Database}}
+\subsubsection[{isActiveConnection}]{\setlength{\rightskip}{0pt plus 5cm}static Database::isActiveConnection ()\hspace{0.3cm}{\ttfamily  \mbox{[}static, final\mbox{]}}}}
+\label{classDatabase_ac67e96fee55a1ec6820a6678428d7b91}
+Determines if there is an active connection.
+
+Note that this method will return FALSE if no connection has been established yet, even if one could be.
+
+\begin{DoxyReturn}{Returns}
+TRUE if there is at least one database connection established, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{classDatabase_a25fe33ffa87aaf80ff680e356230d9e2}{
+\index{Database@{Database}!loadDriverFile@{loadDriverFile}}
+\index{loadDriverFile@{loadDriverFile}!Database@{Database}}
+\subsubsection[{loadDriverFile}]{\setlength{\rightskip}{0pt plus 5cm}static Database::loadDriverFile (\$ {\em driver}, \/  array \$ {\em files} = {\ttfamily array()})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classDatabase_a25fe33ffa87aaf80ff680e356230d9e2}
+Load a file for the database that might hold a class.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$driver}]The name of the driver. \item[{\em array}]\$files The name of the files the driver specific class can be. \end{DoxyParams}
+\hypertarget{classDatabase_a40724407e492d149e9b45e7d5e90ec37}{
+\index{Database@{Database}!openConnection@{openConnection}}
+\index{openConnection@{openConnection}!Database@{Database}}
+\subsubsection[{openConnection}]{\setlength{\rightskip}{0pt plus 5cm}static Database::openConnection (\$ {\em key}, \/  \$ {\em target})\hspace{0.3cm}{\ttfamily  \mbox{[}static, final, protected\mbox{]}}}}
+\label{classDatabase_a40724407e492d149e9b45e7d5e90ec37}
+Opens a connection to the server specified by the given key and target.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$key}]The database connection key, as specified in \hyperlink{settings_8php}{settings.php}. The default is \char`\"{}default\char`\"{}. \item[{\em \$target}]The database target to open.\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classDatabaseConnectionNotDefinedException}{DatabaseConnectionNotDefinedException}}]\item[{\em \hyperlink{classDatabaseDriverNotSpecifiedException}{DatabaseDriverNotSpecifiedException}}]\end{DoxyExceptions}
+\hypertarget{classDatabase_a65d7ffd8cc0b81ead0e2a6ca0836343c}{
+\index{Database@{Database}!parseConnectionInfo@{parseConnectionInfo}}
+\index{parseConnectionInfo@{parseConnectionInfo}!Database@{Database}}
+\subsubsection[{parseConnectionInfo}]{\setlength{\rightskip}{0pt plus 5cm}static Database::parseConnectionInfo ()\hspace{0.3cm}{\ttfamily  \mbox{[}static, final\mbox{]}}}}
+\label{classDatabase_a65d7ffd8cc0b81ead0e2a6ca0836343c}
+Process the configuration file for database information. \hypertarget{classDatabase_a5c2f9463e38304080a2d555a588010ef}{
+\index{Database@{Database}!removeConnection@{removeConnection}}
+\index{removeConnection@{removeConnection}!Database@{Database}}
+\subsubsection[{removeConnection}]{\setlength{\rightskip}{0pt plus 5cm}static Database::removeConnection (\$ {\em key})\hspace{0.3cm}{\ttfamily  \mbox{[}static, final\mbox{]}}}}
+\label{classDatabase_a5c2f9463e38304080a2d555a588010ef}
+Remove a connection and its corresponding connection information.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$key}]The connection key. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE in case of success, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{classDatabase_aa0401fcf5edecc7f81cf32251aeee593}{
+\index{Database@{Database}!renameConnection@{renameConnection}}
+\index{renameConnection@{renameConnection}!Database@{Database}}
+\subsubsection[{renameConnection}]{\setlength{\rightskip}{0pt plus 5cm}static Database::renameConnection (\$ {\em old\_\-key}, \/  \$ {\em new\_\-key})\hspace{0.3cm}{\ttfamily  \mbox{[}static, final\mbox{]}}}}
+\label{classDatabase_aa0401fcf5edecc7f81cf32251aeee593}
+Rename a connection and its corresponding connection information.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$old\_\-key}]The old connection key. \item[{\em \$new\_\-key}]The new connection key. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE in case of success, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{classDatabase_afee50f4c59d97ccdcc6c4088adf7bc4e}{
+\index{Database@{Database}!setActiveConnection@{setActiveConnection}}
+\index{setActiveConnection@{setActiveConnection}!Database@{Database}}
+\subsubsection[{setActiveConnection}]{\setlength{\rightskip}{0pt plus 5cm}static Database::setActiveConnection (\$ {\em key} = {\ttfamily 'default'})\hspace{0.3cm}{\ttfamily  \mbox{[}static, final\mbox{]}}}}
+\label{classDatabase_afee50f4c59d97ccdcc6c4088adf7bc4e}
+Sets the active connection to the specified key.
+
+\begin{DoxyReturn}{Returns}
+The previous database connection key. 
+\end{DoxyReturn}
+\hypertarget{classDatabase_a4785b9bc2918dacdcc861b261513715d}{
+\index{Database@{Database}!startLog@{startLog}}
+\index{startLog@{startLog}!Database@{Database}}
+\subsubsection[{startLog}]{\setlength{\rightskip}{0pt plus 5cm}static Database::startLog (\$ {\em logging\_\-key}, \/  \$ {\em key} = {\ttfamily 'default'})\hspace{0.3cm}{\ttfamily  \mbox{[}static, final\mbox{]}}}}
+\label{classDatabase_a4785b9bc2918dacdcc861b261513715d}
+Starts logging a given logging key on the specified connection.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$logging\_\-key}]The logging key to log. \item[{\em \$key}]The database connection key for which we want to log.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classDatabaseLog}{DatabaseLog} The query log object. Note that the log object does support richer methods than the few exposed through the \hyperlink{classDatabase}{Database} class, so in some cases it may be desirable to access it directly.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classDatabaseLog}{DatabaseLog} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classDatabase_a557879c7732a573ed395f9196afeb898}{
+\index{Database@{Database}!RETURN\_\-AFFECTED@{RETURN\_\-AFFECTED}}
+\index{RETURN\_\-AFFECTED@{RETURN\_\-AFFECTED}!Database@{Database}}
+\subsubsection[{RETURN\_\-AFFECTED}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Database::RETURN\_\-AFFECTED} = 2}}
+\label{classDatabase_a557879c7732a573ed395f9196afeb898}
+Flag to indicate a query call should return the number of affected rows. \hypertarget{classDatabase_a56dab08fbf70f81aaf6f55a71922f4ef}{
+\index{Database@{Database}!RETURN\_\-INSERT\_\-ID@{RETURN\_\-INSERT\_\-ID}}
+\index{RETURN\_\-INSERT\_\-ID@{RETURN\_\-INSERT\_\-ID}!Database@{Database}}
+\subsubsection[{RETURN\_\-INSERT\_\-ID}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Database::RETURN\_\-INSERT\_\-ID} = 3}}
+\label{classDatabase_a56dab08fbf70f81aaf6f55a71922f4ef}
+Flag to indicate a query call should return the \char`\"{}last insert id\char`\"{}. \hypertarget{classDatabase_ae00484bf91c4447fc1b391408f7cfbd3}{
+\index{Database@{Database}!RETURN\_\-NULL@{RETURN\_\-NULL}}
+\index{RETURN\_\-NULL@{RETURN\_\-NULL}!Database@{Database}}
+\subsubsection[{RETURN\_\-NULL}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Database::RETURN\_\-NULL} = 0}}
+\label{classDatabase_ae00484bf91c4447fc1b391408f7cfbd3}
+Flag to indicate a query call should simply return NULL.
+
+This is used for queries that have no reasonable return value anyway, such as INSERT statements to a table without a serial primary key. \hypertarget{classDatabase_a7b7c6f8f81159b97752412e439d957dc}{
+\index{Database@{Database}!RETURN\_\-STATEMENT@{RETURN\_\-STATEMENT}}
+\index{RETURN\_\-STATEMENT@{RETURN\_\-STATEMENT}!Database@{Database}}
+\subsubsection[{RETURN\_\-STATEMENT}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Database::RETURN\_\-STATEMENT} = 1}}
+\label{classDatabase_a7b7c6f8f81159b97752412e439d957dc}
+Flag to indicate a query call should return the prepared statement. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/includes/database/\hyperlink{database_8inc}{database.inc}\end{DoxyCompactItemize}

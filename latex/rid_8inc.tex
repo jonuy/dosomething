@@ -1,0 +1,47 @@
+\hypertarget{rid_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/rid.inc File Reference}
+\label{rid_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/rid.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/rid.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{rid_8inc_a6d6d87b8d7fd2ef4240904fb796906dd}{ctools\_\-argument\_\-rid\_\-context} (\$arg=NULL, \$conf=NULL, \$empty=FALSE)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{rid_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide an argument handler for a node revision id 
+
+\subsection{Function Documentation}
+\hypertarget{rid_8inc_a6d6d87b8d7fd2ef4240904fb796906dd}{
+\index{rid.inc@{rid.inc}!ctools\_\-argument\_\-rid\_\-context@{ctools\_\-argument\_\-rid\_\-context}}
+\index{ctools\_\-argument\_\-rid\_\-context@{ctools\_\-argument\_\-rid\_\-context}!rid.inc@{rid.inc}}
+\subsubsection[{ctools\_\-argument\_\-rid\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-argument\_\-rid\_\-context (\$ {\em arg} = {\ttfamily NULL}, \/  \$ {\em conf} = {\ttfamily NULL}, \/  \$ {\em empty} = {\ttfamily FALSE})}}
+\label{rid_8inc_a6d6d87b8d7fd2ef4240904fb796906dd}
+Discover if this argument gives us the node we crave. 
+
+\subsection{Variable Documentation}
+\hypertarget{rid_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{rid.inc@{rid.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!rid.inc@{rid.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{rid_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t("Revision: ID"),
+  'keyword' => 'revision',
+  'description' => t('Creates a node context from a revision ID argument.'),
+  'context' => 'ctools_argument_rid_context',
+  'placeholder form' => array(
+    '#type' => 'textfield',
+    '#description' => t('Enter the revision ID of a node for this argument'),
+  ),
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

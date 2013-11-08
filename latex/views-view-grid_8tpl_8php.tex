@@ -1,0 +1,41 @@
+\hypertarget{views-view-grid_8tpl_8php}{
+\section{html/profiles/dosomething/modules/contrib/views/theme/views-\/view-\/grid.tpl.php File Reference}
+\label{views-view-grid_8tpl_8php}\index{html/profiles/dosomething/modules/contrib/views/theme/views-\/view-\/grid.tpl.php@{html/profiles/dosomething/modules/contrib/views/theme/views-\/view-\/grid.tpl.php}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{views-view-grid_8tpl_8php_ac0f38e734923b1204c3bc3a9c2d0bd43}{
+if(!empty(\$title)) {\bfseries endif}}
+\label{views-view-grid_8tpl_8php_ac0f38e734923b1204c3bc3a9c2d0bd43}
+
+\item 
+\hypertarget{views-view-grid_8tpl_8php_a37ff9172f25a6ba53d6e3509c4934849}{
+print {\bfseries \$class}}
+\label{views-view-grid_8tpl_8php_a37ff9172f25a6ba53d6e3509c4934849}
+
+\item 
+\hypertarget{views-view-grid_8tpl_8php_a9c88c4272fa40546577b45392a0b3cd3}{
+print {\bfseries \$attributes}}
+\label{views-view-grid_8tpl_8php_a9c88c4272fa40546577b45392a0b3cd3}
+
+\item 
+\hypertarget{views-view-grid_8tpl_8php_a68f49efac465fdf98cf0db09727ba513}{
+foreach(\$rows as \$row\_\-number=$>$ \$columns)(\$row\_\-classes\mbox{[}\$row\_\-number\mbox{]}) foreach(\$columns as \$column\_\-number=$>$ \$item)(\$column\_\-classes\mbox{[}\$row\_\-number\mbox{]}\mbox{[}\$column\_\-number\mbox{]}) print {\bfseries \$item}}
+\label{views-view-grid_8tpl_8php_a68f49efac465fdf98cf0db09727ba513}
+
+\item 
+\hypertarget{views-view-grid_8tpl_8php_a672d9707ef91db026c210f98cc601123}{
+{\bfseries endforeach}}
+\label{views-view-grid_8tpl_8php_a672d9707ef91db026c210f98cc601123}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Default simple \hyperlink{classview}{view} template to display a rows in a grid.
+
+
+\begin{DoxyItemize}
+\item \$rows contains a nested array of rows. Each row contains an array of columns. 
+\end{DoxyItemize}

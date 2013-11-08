@@ -1,0 +1,989 @@
+\hypertarget{system_8module}{
+\section{html/modules/system/system.module File Reference}
+\label{system_8module}\index{html/modules/system/system.module@{html/modules/system/system.module}}
+}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{system_8module_a48adbc5ce9391dacebddd91907dbbaaf}{DRUPAL\_\-MAXIMUM\_\-TEMP\_\-FILE\_\-AGE} 
+\item 
+enum \hyperlink{system_8module_a47326c184056858c75265eb78fea8eef}{DRUPAL\_\-CRON\_\-DEFAULT\_\-THRESHOLD} 
+\item 
+enum \hyperlink{system_8module_aabf97d0cd9173075e9d66e1acb2a6b7f}{DRUPAL\_\-USER\_\-TIMEZONE\_\-DEFAULT} 
+\item 
+enum \hyperlink{system_8module_a36f2231e8e443e860d5c67782a472542}{DRUPAL\_\-USER\_\-TIMEZONE\_\-EMPTY} 
+\item 
+enum \hyperlink{system_8module_a7df7638d437b7a705dfdb48f46b083e2}{DRUPAL\_\-USER\_\-TIMEZONE\_\-SELECT} 
+\item 
+enum \hyperlink{system_8module_a84956e394d850e59a82fbc78703795f1}{DRUPAL\_\-DISABLED} 
+\item 
+enum \hyperlink{system_8module_a1a7cc24228e990770cd55d79ba00e95e}{DRUPAL\_\-OPTIONAL} 
+\item 
+enum \hyperlink{system_8module_a0803ed1ab561db08e075e74427ecedd5}{DRUPAL\_\-REQUIRED} 
+\item 
+enum \hyperlink{system_8module_af60176176a88aa633d9c3240a8fcbc62}{DRUPAL\_\-WEIGHT\_\-SELECT\_\-MAX} 
+\item 
+enum \hyperlink{system_8module_a270017c2fcde2d42ea4e74defd32e195}{REGIONS\_\-VISIBLE} 
+\item 
+enum \hyperlink{system_8module_a39507d6bcc536ccdb523d962a7b8a5db}{REGIONS\_\-ALL} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{system_8module_af0ca5e04a8b6cc3bba72b778f2e8c81d}{system\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{system_8module_a44b4dbe61c9f2fb668b8b2003dd00090}{system\_\-theme} ()
+\item 
+\hyperlink{system_8module_a21ecb659e6aa944c6c85ad0b50dcbb0e}{system\_\-permission} ()
+\item 
+\hyperlink{system_8module_a9df96726c754189e19b7f065bcb5c833}{system\_\-hook\_\-info} ()
+\item 
+\hyperlink{system_8module_ad12d07929306617e476e0ddc18d1129f}{system\_\-entity\_\-info} ()
+\item 
+\hyperlink{system_8module_a39faa9a5430a70bb37a3c8af72460a14}{system\_\-element\_\-info} ()
+\item 
+\hyperlink{system_8module_ae25cda0ea4fd63936e8f955dd9cfc269}{system\_\-menu} ()
+\item 
+\hyperlink{system_8module_a2d3a1205255a83b5f5c3c720a758f837}{\_\-system\_\-batch\_\-theme} ()
+\item 
+\hyperlink{system_8module_a7f680fce0aaf48a96f122edf5345097f}{system\_\-library} ()
+\item 
+\hyperlink{system_8module_a67821dedc3699910bb2168a40c5d7278}{system\_\-stream\_\-wrappers} ()
+\item 
+\hyperlink{system_8module_a8cd6bf9052269e332d0a8863ad6f1608}{blocked\_\-ip\_\-load} (\$iid)
+\item 
+\hyperlink{system_8module_a0428d3295fa8b31adf63c3d25c70d349}{\_\-system\_\-themes\_\-access} (\$theme)
+\item 
+\hyperlink{group__authorize_ga17756b29805705dbea25798d6004d5dd}{system\_\-authorized\_\-init} (\$callback, \$file, \$arguments=array(), \$page\_\-title=NULL)
+\item 
+\hyperlink{group__authorize_gab59393fbd369097724650dec4be9c1dd}{system\_\-authorized\_\-get\_\-url} (array \$options=array())
+\item 
+\hyperlink{group__authorize_gae4eeb93b25a44e4280535f21ed0a0c78}{system\_\-authorized\_\-batch\_\-processing\_\-url} ()
+\item 
+\hyperlink{group__authorize_gae12fb581acdf9ef042c9137fc6de4d4c}{system\_\-authorized\_\-run} (\$callback, \$file, \$arguments=array(), \$page\_\-title=NULL)
+\item 
+\hyperlink{group__authorize_ga049418587e2e337a471f3b707d501196}{system\_\-authorized\_\-batch\_\-process} ()
+\item 
+\hyperlink{system_8module_a10c5077ea405b6e4e312291299687e75}{system\_\-updater\_\-info} ()
+\item 
+\hyperlink{system_8module_a56c90d331efe545cec21cc4cc9cede5f}{system\_\-filetransfer\_\-info} ()
+\item 
+\hyperlink{system_8module_ac6847a570b3e5f0fbda1802e90d066aa}{system\_\-init} ()
+\item 
+\hyperlink{system_8module_a18ac9a2acd0bfebb08156b711c8451a3}{system\_\-add\_\-module\_\-assets} ()
+\item 
+\hyperlink{system_8module_aa646e2eedcee8087ba2cd91914e7fbdc}{system\_\-custom\_\-theme} ()
+\item 
+\hyperlink{system_8module_ae5d1fb61b3099b07f38b7a328eea59a9}{system\_\-form\_\-user\_\-profile\_\-form\_\-alter} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{system_8module_ad535a7c29e92dc0394103a6ea1de3886}{system\_\-form\_\-user\_\-register\_\-form\_\-alter} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{system_8module_a4b41b351fd76cd41fe10c3ffe1e62504}{system\_\-user\_\-login} (\&\$edit, \$account)
+\item 
+\hyperlink{system_8module_a087533e7ffcffe8c417f2e2ef12c6f62}{system\_\-user\_\-timezone} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{system_8module_a28046ddc2ca1921e14019e2f3cc9175c}{system\_\-block\_\-info} ()
+\item 
+\hyperlink{system_8module_a6afe2fa1e31a2aef9594ff49018634d8}{system\_\-block\_\-view} (\$delta= '')
+\item 
+\hyperlink{system_8module_a32befafe4460ad324666b282350deb02}{system\_\-preprocess\_\-block} (\&\$variables)
+\item 
+\hyperlink{system_8module_aefe1548b98360e16fcdf579045d5c303}{system\_\-admin\_\-menu\_\-block} (\$item)
+\item 
+\hyperlink{system_8module_ab2199f53b5eed000b9722bb6de83f57f}{system\_\-check\_\-directory} (\$form\_\-element)
+\item 
+\hyperlink{system_8module_a0851ffa40e4bc737b29677e9b397caac}{system\_\-get\_\-files\_\-database} (\&\$files, \$type)
+\item 
+\hyperlink{system_8module_aceaee6704abc9e249d9ef79918884b7a}{system\_\-update\_\-files\_\-database} (\&\$files, \$type)
+\item 
+\hyperlink{system_8module_af54208dab08c482b465a7f10225ebbb7}{system\_\-get\_\-info} (\$type, \$name=NULL)
+\item 
+\hyperlink{system_8module_aec98f44cde3933b35e0cb066d387c54c}{\_\-system\_\-rebuild\_\-module\_\-data} ()
+\item 
+\hyperlink{system_8module_a2c3c848bc7c14d6f770a2f8df8f35332}{system\_\-rebuild\_\-module\_\-data} ()
+\item 
+\hyperlink{system_8module_aef42ac3dd9a7dc00aa996206423a1837}{\_\-system\_\-update\_\-bootstrap\_\-status} ()
+\item 
+\hyperlink{system_8module_ac3eaa9c509c1446605136070ddbf5016}{\_\-system\_\-rebuild\_\-theme\_\-data} ()
+\item 
+\hyperlink{system_8module_a702e05f2ab6d4ac7e8be5b0e07afa701}{system\_\-rebuild\_\-theme\_\-data} ()
+\item 
+\hyperlink{system_8module_af55f5f5ba28e42c6fb21471e13f68017}{\_\-system\_\-info\_\-add\_\-path} (\$info, \$path)
+\item 
+\hyperlink{system_8module_a60145d0b4f9bc1069e6349aae007a1b6}{\_\-system\_\-default\_\-theme\_\-features} ()
+\item 
+\hyperlink{system_8module_a0cd2b51f55ab9299f139f9916bf7a7c0}{system\_\-find\_\-base\_\-themes} (\$themes, \$key, \$used\_\-keys=array())
+\item 
+\hyperlink{system_8module_a83141ec3e67f121c72317be0c674dfe6}{system\_\-region\_\-list} (\$theme\_\-key, \$show=\hyperlink{system_8module_a39507d6bcc536ccdb523d962a7b8a5db}{REGIONS\_\-ALL})
+\item 
+\hyperlink{system_8module_afbaff10d8aad0b8916039e458292218c}{system\_\-system\_\-info\_\-alter} (\&\$info, \$file, \$type)
+\item 
+\hyperlink{system_8module_a8d1d2449c553874ab0ba1d2a4b132fd3}{system\_\-default\_\-region} (\$theme)
+\item 
+\hyperlink{group__forms_ga6fb270d34465d846cd4659a85d3e40c8}{system\_\-settings\_\-form} (\$form)
+\item 
+\hyperlink{system_8module_a1ac9556d37dcf1ec5836b0171757c610}{system\_\-settings\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{system_8module_a7f01a6fc963253dd29b712a0b94d298c}{\_\-system\_\-sort\_\-requirements} (\$a, \$b)
+\item 
+\hyperlink{system_8module_a5457fea1ad5cf2e3767f3fc6e36b768b}{confirm\_\-form} (\$form, \$question, \$path, \$description=NULL, \$yes=NULL, \$no=NULL, \$name= 'confirm')
+\item 
+\hyperlink{system_8module_a5c5f93aebe3f12a47ceab948b0a92237}{system\_\-admin\_\-compact\_\-mode} ()
+\item 
+\hyperlink{system_8module_ab1957cfd893fb50794286ea7c84589e6}{system\_\-admin\_\-compact\_\-page} (\$mode= 'off')
+\item 
+\hyperlink{system_8module_a121a9c5ed0a44d3c0adc1c60368972ab}{system\_\-get\_\-module\_\-admin\_\-tasks} (\$module, \$info)
+\item 
+\hyperlink{system_8module_aaf72e35b8cb67cfe762abe4132f84c3f}{system\_\-cron} ()
+\item 
+\hyperlink{system_8module_ae38c371e6c9eba87278d135ad16c9d33}{system\_\-flush\_\-caches} ()
+\item 
+\hyperlink{system_8module_aeea00f3322d9a388335950f421935835}{system\_\-action\_\-info} ()
+\item 
+\hyperlink{system_8module_acdc88b46eee866f535e90f0cb9a6114a}{system\_\-send\_\-email\_\-action\_\-form} (\$context)
+\item 
+\hyperlink{system_8module_a667002aa61b3826726f5a2274d8f3f27}{system\_\-send\_\-email\_\-action\_\-validate} (\$form, \$form\_\-state)
+\item 
+\hyperlink{system_8module_aa51bb7d880590588296057b0f0b7c1ff}{system\_\-send\_\-email\_\-action\_\-submit} (\$form, \$form\_\-state)
+\item 
+\hyperlink{group__actions_gae09a4cd8054571b9ac3659adccfac574}{system\_\-send\_\-email\_\-action} (\$entity, \$context)
+\item 
+\hyperlink{system_8module_a33bdb754ad2acfe55063e5114d05a68b}{system\_\-mail} (\$key, \&\$message, \$params)
+\item 
+\hypertarget{system_8module_a60e4c89cccf66cebe08f5379458bae82}{
+{\bfseries system\_\-message\_\-action\_\-form} (\$context)}
+\label{system_8module_a60e4c89cccf66cebe08f5379458bae82}
+
+\item 
+\hypertarget{system_8module_a59a3178db4ff0a80381534081fc732b7}{
+{\bfseries system\_\-message\_\-action\_\-submit} (\$form, \$form\_\-state)}
+\label{system_8module_a59a3178db4ff0a80381534081fc732b7}
+
+\item 
+\hyperlink{group__actions_ga5dd09e03b155bd9ad1ef0dad464661e3}{system\_\-message\_\-action} (\&\$entity, \$context=array())
+\item 
+\hyperlink{system_8module_a9e66ce1cf0a4a3529a1a3140fdbe4660}{system\_\-goto\_\-action\_\-form} (\$context)
+\item 
+\hypertarget{system_8module_afdacb2efc1f7256ab44cdf1e4869bf8e}{
+{\bfseries system\_\-goto\_\-action\_\-submit} (\$form, \$form\_\-state)}
+\label{system_8module_afdacb2efc1f7256ab44cdf1e4869bf8e}
+
+\item 
+\hyperlink{group__actions_gae5230dbace638d69f196392fbc77e1af}{system\_\-goto\_\-action} (\$entity, \$context)
+\item 
+\hyperlink{group__actions_ga02b4d9ad9eadcc1b795e2f145cc06db9}{system\_\-block\_\-ip\_\-action} ()
+\item 
+\hyperlink{system_8module_af21d6c134a3a6c6114def38efc153201}{system\_\-time\_\-zones} (\$blank=NULL)
+\item 
+\hyperlink{system_8module_ac762dd5b169e5f48a3cb96f08be8c067}{system\_\-check\_\-http\_\-request} ()
+\item 
+\hyperlink{system_8module_a65d003b673cc2c7fbe24dd0cad2ee15d}{system\_\-timezone} (\$abbreviation= '', \$offset=-\/1, \$is\_\-daylight\_\-saving\_\-time=NULL)
+\item 
+\hyperlink{group__themeable_ga706047c3b15fd20658af56eb234573e4}{theme\_\-system\_\-powered\_\-by} ()
+\item 
+\hyperlink{group__themeable_gab5d8809d11a9e2ee4b06c8f14f8258f3}{theme\_\-system\_\-compact\_\-link} ()
+\item 
+\hyperlink{system_8module_ac5de4c1bb1b8395a6a074df170cbe335}{system\_\-image\_\-toolkits} ()
+\item 
+\hyperlink{system_8module_a74479d43f0e63d771db29609879844b7}{system\_\-retrieve\_\-file} (\$url, \$destination=NULL, \$managed=FALSE, \$replace=\hyperlink{group__file_ga5d6636d4ccd022885823b91f17a0f464}{FILE\_\-EXISTS\_\-RENAME})
+\item 
+\hyperlink{system_8module_accbb83043437c6d64b3c11d32104459e}{system\_\-page\_\-alter} (\&\$page)
+\item 
+\hyperlink{system_8module_a1fa48b8c19dfe32cfd122c0dd5661a88}{system\_\-run\_\-automated\_\-cron} ()
+\item 
+\hyperlink{system_8module_a591ee79a1b5ebbcbc8b2162a74e965b2}{system\_\-get\_\-date\_\-types} (\$type=NULL)
+\item 
+\hyperlink{system_8module_a40f95fb822909e33c9dc245f25b7cea7}{system\_\-date\_\-format\_\-types} ()
+\item 
+\hyperlink{system_8module_a07720daca9cb101f5fd80ef97a3a2d85}{system\_\-date\_\-formats} ()
+\item 
+\hyperlink{system_8module_a5505120b882739e9648d8665e6dfd030}{system\_\-get\_\-date\_\-formats} (\$type=NULL)
+\item 
+\hyperlink{system_8module_ad950accb99d110fbe6bfc92b967440aa}{system\_\-get\_\-date\_\-format} (\$dfid)
+\item 
+\hyperlink{system_8module_a963e54c5eae58e038d83b387bda7a9b8}{system\_\-date\_\-formats\_\-rebuild} ()
+\item 
+\hyperlink{system_8module_a27ec4ab4ca19ea7d22db475691d1eea5}{system\_\-date\_\-format\_\-locale} (\$langcode=NULL, \$type=NULL)
+\item 
+\hyperlink{system_8module_aed8872b51fe912cbf8d4e966af237b66}{\_\-system\_\-date\_\-format\_\-types\_\-build} ()
+\item 
+\hyperlink{system_8module_a029d9166154fd78b3618b2e357ea3710}{\_\-system\_\-date\_\-formats\_\-build} ()
+\item 
+\hyperlink{system_8module_a88de386e3357b4531e37f56c26c20a9c}{system\_\-date\_\-format\_\-type\_\-save} (\$type)
+\item 
+\hyperlink{system_8module_ac495d113f7fcd34fe1cee36c6a2d51b9}{system\_\-date\_\-format\_\-type\_\-delete} (\$type)
+\item 
+\hyperlink{system_8module_a08b578d5998a5c83ece092e2fcbeb22f}{system\_\-date\_\-format\_\-save} (\$date\_\-format, \$dfid=0)
+\item 
+\hyperlink{system_8module_ad5772362b4f49cec71d9572c6f02ebfd}{system\_\-date\_\-format\_\-delete} (\$dfid)
+\item 
+\hyperlink{system_8module_a39d36c996e2c4ce278f4adaee74ea96c}{system\_\-archiver\_\-info} ()
+\item 
+\hyperlink{group__themeable_ga21630d5749786400d03449b295f9a31d}{theme\_\-confirm\_\-form} (\$variables)
+\item 
+\hyperlink{group__themeable_ga61657b80e20cf36542ce65894984df79}{theme\_\-system\_\-settings\_\-form} (\$variables)
+\item 
+\hyperlink{group__themeable_ga8750c0043fa9aecbe88594d8b018fa3c}{theme\_\-exposed\_\-filters} (\$variables)
+\item 
+\hyperlink{system_8module_a541e64401df167df2dc2b0964f90d9ce}{system\_\-admin\_\-paths} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Configuration system that lets administrators modify the workings of the site. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{system_8module_a47326c184056858c75265eb78fea8eef}{
+\index{system.module@{system.module}!DRUPAL\_\-CRON\_\-DEFAULT\_\-THRESHOLD@{DRUPAL\_\-CRON\_\-DEFAULT\_\-THRESHOLD}}
+\index{DRUPAL\_\-CRON\_\-DEFAULT\_\-THRESHOLD@{DRUPAL\_\-CRON\_\-DEFAULT\_\-THRESHOLD}!system.module@{system.module}}
+\subsubsection[{DRUPAL\_\-CRON\_\-DEFAULT\_\-THRESHOLD}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DRUPAL\_\-CRON\_\-DEFAULT\_\-THRESHOLD}}}
+\label{system_8module_a47326c184056858c75265eb78fea8eef}
+Default interval for automatic cron executions in seconds. \hypertarget{system_8module_a84956e394d850e59a82fbc78703795f1}{
+\index{system.module@{system.module}!DRUPAL\_\-DISABLED@{DRUPAL\_\-DISABLED}}
+\index{DRUPAL\_\-DISABLED@{DRUPAL\_\-DISABLED}!system.module@{system.module}}
+\subsubsection[{DRUPAL\_\-DISABLED}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DRUPAL\_\-DISABLED}}}
+\label{system_8module_a84956e394d850e59a82fbc78703795f1}
+Disabled option on forms and settings \hypertarget{system_8module_a48adbc5ce9391dacebddd91907dbbaaf}{
+\index{system.module@{system.module}!DRUPAL\_\-MAXIMUM\_\-TEMP\_\-FILE\_\-AGE@{DRUPAL\_\-MAXIMUM\_\-TEMP\_\-FILE\_\-AGE}}
+\index{DRUPAL\_\-MAXIMUM\_\-TEMP\_\-FILE\_\-AGE@{DRUPAL\_\-MAXIMUM\_\-TEMP\_\-FILE\_\-AGE}!system.module@{system.module}}
+\subsubsection[{DRUPAL\_\-MAXIMUM\_\-TEMP\_\-FILE\_\-AGE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DRUPAL\_\-MAXIMUM\_\-TEMP\_\-FILE\_\-AGE}}}
+\label{system_8module_a48adbc5ce9391dacebddd91907dbbaaf}
+Maximum age of temporary files in seconds. \hypertarget{system_8module_a1a7cc24228e990770cd55d79ba00e95e}{
+\index{system.module@{system.module}!DRUPAL\_\-OPTIONAL@{DRUPAL\_\-OPTIONAL}}
+\index{DRUPAL\_\-OPTIONAL@{DRUPAL\_\-OPTIONAL}!system.module@{system.module}}
+\subsubsection[{DRUPAL\_\-OPTIONAL}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DRUPAL\_\-OPTIONAL}}}
+\label{system_8module_a1a7cc24228e990770cd55d79ba00e95e}
+Optional option on forms and settings \hypertarget{system_8module_a0803ed1ab561db08e075e74427ecedd5}{
+\index{system.module@{system.module}!DRUPAL\_\-REQUIRED@{DRUPAL\_\-REQUIRED}}
+\index{DRUPAL\_\-REQUIRED@{DRUPAL\_\-REQUIRED}!system.module@{system.module}}
+\subsubsection[{DRUPAL\_\-REQUIRED}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DRUPAL\_\-REQUIRED}}}
+\label{system_8module_a0803ed1ab561db08e075e74427ecedd5}
+Required option on forms and settings \hypertarget{system_8module_aabf97d0cd9173075e9d66e1acb2a6b7f}{
+\index{system.module@{system.module}!DRUPAL\_\-USER\_\-TIMEZONE\_\-DEFAULT@{DRUPAL\_\-USER\_\-TIMEZONE\_\-DEFAULT}}
+\index{DRUPAL\_\-USER\_\-TIMEZONE\_\-DEFAULT@{DRUPAL\_\-USER\_\-TIMEZONE\_\-DEFAULT}!system.module@{system.module}}
+\subsubsection[{DRUPAL\_\-USER\_\-TIMEZONE\_\-DEFAULT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DRUPAL\_\-USER\_\-TIMEZONE\_\-DEFAULT}}}
+\label{system_8module_aabf97d0cd9173075e9d66e1acb2a6b7f}
+New users will be set to the default time zone at registration. \hypertarget{system_8module_a36f2231e8e443e860d5c67782a472542}{
+\index{system.module@{system.module}!DRUPAL\_\-USER\_\-TIMEZONE\_\-EMPTY@{DRUPAL\_\-USER\_\-TIMEZONE\_\-EMPTY}}
+\index{DRUPAL\_\-USER\_\-TIMEZONE\_\-EMPTY@{DRUPAL\_\-USER\_\-TIMEZONE\_\-EMPTY}!system.module@{system.module}}
+\subsubsection[{DRUPAL\_\-USER\_\-TIMEZONE\_\-EMPTY}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DRUPAL\_\-USER\_\-TIMEZONE\_\-EMPTY}}}
+\label{system_8module_a36f2231e8e443e860d5c67782a472542}
+New users will get an empty time zone at registration. \hypertarget{system_8module_a7df7638d437b7a705dfdb48f46b083e2}{
+\index{system.module@{system.module}!DRUPAL\_\-USER\_\-TIMEZONE\_\-SELECT@{DRUPAL\_\-USER\_\-TIMEZONE\_\-SELECT}}
+\index{DRUPAL\_\-USER\_\-TIMEZONE\_\-SELECT@{DRUPAL\_\-USER\_\-TIMEZONE\_\-SELECT}!system.module@{system.module}}
+\subsubsection[{DRUPAL\_\-USER\_\-TIMEZONE\_\-SELECT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DRUPAL\_\-USER\_\-TIMEZONE\_\-SELECT}}}
+\label{system_8module_a7df7638d437b7a705dfdb48f46b083e2}
+New users will select their own timezone at registration. \hypertarget{system_8module_af60176176a88aa633d9c3240a8fcbc62}{
+\index{system.module@{system.module}!DRUPAL\_\-WEIGHT\_\-SELECT\_\-MAX@{DRUPAL\_\-WEIGHT\_\-SELECT\_\-MAX}}
+\index{DRUPAL\_\-WEIGHT\_\-SELECT\_\-MAX@{DRUPAL\_\-WEIGHT\_\-SELECT\_\-MAX}!system.module@{system.module}}
+\subsubsection[{DRUPAL\_\-WEIGHT\_\-SELECT\_\-MAX}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DRUPAL\_\-WEIGHT\_\-SELECT\_\-MAX}}}
+\label{system_8module_af60176176a88aa633d9c3240a8fcbc62}
+Maximum number of values in a weight select element.
+
+If the number of values is over the maximum, a text field is used instead. \hypertarget{system_8module_a39507d6bcc536ccdb523d962a7b8a5db}{
+\index{system.module@{system.module}!REGIONS\_\-ALL@{REGIONS\_\-ALL}}
+\index{REGIONS\_\-ALL@{REGIONS\_\-ALL}!system.module@{system.module}}
+\subsubsection[{REGIONS\_\-ALL}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf REGIONS\_\-ALL}}}
+\label{system_8module_a39507d6bcc536ccdb523d962a7b8a5db}
+Return all regions.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{system_8module_a83141ec3e67f121c72317be0c674dfe6}{system\_\-region\_\-list()} 
+\end{DoxySeeAlso}
+\hypertarget{system_8module_a270017c2fcde2d42ea4e74defd32e195}{
+\index{system.module@{system.module}!REGIONS\_\-VISIBLE@{REGIONS\_\-VISIBLE}}
+\index{REGIONS\_\-VISIBLE@{REGIONS\_\-VISIBLE}!system.module@{system.module}}
+\subsubsection[{REGIONS\_\-VISIBLE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf REGIONS\_\-VISIBLE}}}
+\label{system_8module_a270017c2fcde2d42ea4e74defd32e195}
+Return only visible regions.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{system_8module_a83141ec3e67f121c72317be0c674dfe6}{system\_\-region\_\-list()} 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\hypertarget{system_8module_a2d3a1205255a83b5f5c3c720a758f837}{
+\index{system.module@{system.module}!\_\-system\_\-batch\_\-theme@{\_\-system\_\-batch\_\-theme}}
+\index{\_\-system\_\-batch\_\-theme@{\_\-system\_\-batch\_\-theme}!system.module@{system.module}}
+\subsubsection[{\_\-system\_\-batch\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}\_\-system\_\-batch\_\-theme ()}}
+\label{system_8module_a2d3a1205255a83b5f5c3c720a758f837}
+Theme callback for the default batch page. \hypertarget{system_8module_aed8872b51fe912cbf8d4e966af237b66}{
+\index{system.module@{system.module}!\_\-system\_\-date\_\-format\_\-types\_\-build@{\_\-system\_\-date\_\-format\_\-types\_\-build}}
+\index{\_\-system\_\-date\_\-format\_\-types\_\-build@{\_\-system\_\-date\_\-format\_\-types\_\-build}!system.module@{system.module}}
+\subsubsection[{\_\-system\_\-date\_\-format\_\-types\_\-build}]{\setlength{\rightskip}{0pt plus 5cm}\_\-system\_\-date\_\-format\_\-types\_\-build ()}}
+\label{system_8module_aed8872b51fe912cbf8d4e966af237b66}
+Builds and returns information about available date types.
+
+\begin{DoxyReturn}{Returns}
+An associative array of date type information keyed by name. Each date type information array has the following elements:
+\begin{DoxyItemize}
+\item type: The machine-\/readable name of the date type.
+\item title: The human-\/readable name of the date type.
+\item locked: A boolean indicating whether or not this date type should be configurable from the user interface.
+\item module: The name of the module that defined this format in its \hyperlink{group__hooks_gaadde7af71d0b4f827cf7aac1c88c4d23}{hook\_\-date\_\-format\_\-types()}. An empty string if the format was user-\/defined.
+\item is\_\-new: A boolean indicating whether or not this date type is as of yet unsaved in the database. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{system_8module_a029d9166154fd78b3618b2e357ea3710}{
+\index{system.module@{system.module}!\_\-system\_\-date\_\-formats\_\-build@{\_\-system\_\-date\_\-formats\_\-build}}
+\index{\_\-system\_\-date\_\-formats\_\-build@{\_\-system\_\-date\_\-formats\_\-build}!system.module@{system.module}}
+\subsubsection[{\_\-system\_\-date\_\-formats\_\-build}]{\setlength{\rightskip}{0pt plus 5cm}\_\-system\_\-date\_\-formats\_\-build ()}}
+\label{system_8module_a029d9166154fd78b3618b2e357ea3710}
+Builds and returns information about available date formats.
+
+\begin{DoxyReturn}{Returns}
+An associative array of date formats. The top-\/level keys are the names of the date types that the date formats belong to. The values are in turn associative arrays keyed by format with the following keys:
+\begin{DoxyItemize}
+\item dfid: The date format ID.
+\item format: The PHP date format string.
+\item type: The machine-\/readable name of the date type the format belongs to.
+\item locales: An array of language codes. This can include both 2 character language codes like 'en and 'fr' and 5 character language codes like 'en-\/gb' and 'en-\/us'.
+\item locked: A boolean indicating whether or not this date type should be configurable from the user interface.
+\item module: The name of the module that defined this format in its \hyperlink{group__hooks_ga2a190ba304193ab7752bfc489463a0d7}{hook\_\-date\_\-formats()}. An empty string if the format was user-\/defined.
+\item is\_\-new: A boolean indicating whether or not this date type is as of yet unsaved in the database. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{system_8module_a60145d0b4f9bc1069e6349aae007a1b6}{
+\index{system.module@{system.module}!\_\-system\_\-default\_\-theme\_\-features@{\_\-system\_\-default\_\-theme\_\-features}}
+\index{\_\-system\_\-default\_\-theme\_\-features@{\_\-system\_\-default\_\-theme\_\-features}!system.module@{system.module}}
+\subsubsection[{\_\-system\_\-default\_\-theme\_\-features}]{\setlength{\rightskip}{0pt plus 5cm}\_\-system\_\-default\_\-theme\_\-features ()}}
+\label{system_8module_a60145d0b4f9bc1069e6349aae007a1b6}
+Returns an array of default theme features. \hypertarget{system_8module_af55f5f5ba28e42c6fb21471e13f68017}{
+\index{system.module@{system.module}!\_\-system\_\-info\_\-add\_\-path@{\_\-system\_\-info\_\-add\_\-path}}
+\index{\_\-system\_\-info\_\-add\_\-path@{\_\-system\_\-info\_\-add\_\-path}!system.module@{system.module}}
+\subsubsection[{\_\-system\_\-info\_\-add\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}\_\-system\_\-info\_\-add\_\-path (\$ {\em info}, \/  \$ {\em path})}}
+\label{system_8module_af55f5f5ba28e42c6fb21471e13f68017}
+Prefixes all values in an .info file array with a given path.
+
+This helper function is mainly used to prefix all array values of an .info file property with a single given path (to the module or theme); e.g., to prefix all values of the 'stylesheets' or 'scripts' properties with the file path to the defining module/theme.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$info}]A nested array of data of an .info file to be processed. \item[{\em \$path}]A file path to prepend to each value in \$info.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \$info array with prefixed values.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{system_8module_aec98f44cde3933b35e0cb066d387c54c}{\_\-system\_\-rebuild\_\-module\_\-data()} 
+
+\hyperlink{system_8module_ac3eaa9c509c1446605136070ddbf5016}{\_\-system\_\-rebuild\_\-theme\_\-data()} 
+\end{DoxySeeAlso}
+\hypertarget{system_8module_aec98f44cde3933b35e0cb066d387c54c}{
+\index{system.module@{system.module}!\_\-system\_\-rebuild\_\-module\_\-data@{\_\-system\_\-rebuild\_\-module\_\-data}}
+\index{\_\-system\_\-rebuild\_\-module\_\-data@{\_\-system\_\-rebuild\_\-module\_\-data}!system.module@{system.module}}
+\subsubsection[{\_\-system\_\-rebuild\_\-module\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}\_\-system\_\-rebuild\_\-module\_\-data ()}}
+\label{system_8module_aec98f44cde3933b35e0cb066d387c54c}
+Helper function to scan and collect module .info data.
+
+\begin{DoxyReturn}{Returns}
+An associative array of module information. 
+\end{DoxyReturn}
+\hypertarget{system_8module_ac3eaa9c509c1446605136070ddbf5016}{
+\index{system.module@{system.module}!\_\-system\_\-rebuild\_\-theme\_\-data@{\_\-system\_\-rebuild\_\-theme\_\-data}}
+\index{\_\-system\_\-rebuild\_\-theme\_\-data@{\_\-system\_\-rebuild\_\-theme\_\-data}!system.module@{system.module}}
+\subsubsection[{\_\-system\_\-rebuild\_\-theme\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}\_\-system\_\-rebuild\_\-theme\_\-data ()}}
+\label{system_8module_ac3eaa9c509c1446605136070ddbf5016}
+Helper function to scan and collect theme .info data and their engines.
+
+\begin{DoxyReturn}{Returns}
+An associative array of themes information. 
+\end{DoxyReturn}
+\hypertarget{system_8module_a7f01a6fc963253dd29b712a0b94d298c}{
+\index{system.module@{system.module}!\_\-system\_\-sort\_\-requirements@{\_\-system\_\-sort\_\-requirements}}
+\index{\_\-system\_\-sort\_\-requirements@{\_\-system\_\-sort\_\-requirements}!system.module@{system.module}}
+\subsubsection[{\_\-system\_\-sort\_\-requirements}]{\setlength{\rightskip}{0pt plus 5cm}\_\-system\_\-sort\_\-requirements (\$ {\em a}, \/  \$ {\em b})}}
+\label{system_8module_a7f01a6fc963253dd29b712a0b94d298c}
+Helper function to sort requirements. \hypertarget{system_8module_a0428d3295fa8b31adf63c3d25c70d349}{
+\index{system.module@{system.module}!\_\-system\_\-themes\_\-access@{\_\-system\_\-themes\_\-access}}
+\index{\_\-system\_\-themes\_\-access@{\_\-system\_\-themes\_\-access}!system.module@{system.module}}
+\subsubsection[{\_\-system\_\-themes\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}\_\-system\_\-themes\_\-access (\$ {\em theme})}}
+\label{system_8module_a0428d3295fa8b31adf63c3d25c70d349}
+Menu item access callback -\/ only admin or enabled themes can be accessed. \hypertarget{system_8module_aef42ac3dd9a7dc00aa996206423a1837}{
+\index{system.module@{system.module}!\_\-system\_\-update\_\-bootstrap\_\-status@{\_\-system\_\-update\_\-bootstrap\_\-status}}
+\index{\_\-system\_\-update\_\-bootstrap\_\-status@{\_\-system\_\-update\_\-bootstrap\_\-status}!system.module@{system.module}}
+\subsubsection[{\_\-system\_\-update\_\-bootstrap\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}\_\-system\_\-update\_\-bootstrap\_\-status ()}}
+\label{system_8module_aef42ac3dd9a7dc00aa996206423a1837}
+Refresh bootstrap column in the system table.
+
+This is called internally by module\_\-enable/disable() to flag modules that implement hooks used during bootstrap, such as \hyperlink{group__hooks_ga9ac1dfffdc69471a3d00d67503c71577}{hook\_\-boot()}. These modules are loaded earlier to invoke the hooks. \hypertarget{system_8module_a8cd6bf9052269e332d0a8863ad6f1608}{
+\index{system.module@{system.module}!blocked\_\-ip\_\-load@{blocked\_\-ip\_\-load}}
+\index{blocked\_\-ip\_\-load@{blocked\_\-ip\_\-load}!system.module@{system.module}}
+\subsubsection[{blocked\_\-ip\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}blocked\_\-ip\_\-load (\$ {\em iid})}}
+\label{system_8module_a8cd6bf9052269e332d0a8863ad6f1608}
+Retrieve a blocked IP address from the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$iid}]integer The ID of the blocked IP address to retrieve.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The blocked IP address from the database as an array. 
+\end{DoxyReturn}
+\hypertarget{system_8module_a5457fea1ad5cf2e3767f3fc6e36b768b}{
+\index{system.module@{system.module}!confirm\_\-form@{confirm\_\-form}}
+\index{confirm\_\-form@{confirm\_\-form}!system.module@{system.module}}
+\subsubsection[{confirm\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}confirm\_\-form (\$ {\em form}, \/  \$ {\em question}, \/  \$ {\em path}, \/  \$ {\em description} = {\ttfamily NULL}, \/  \$ {\em yes} = {\ttfamily NULL}, \/  \$ {\em no} = {\ttfamily NULL}, \/  \$ {\em name} = {\ttfamily 'confirm'})}}
+\label{system_8module_a5457fea1ad5cf2e3767f3fc6e36b768b}
+Generates a form array for a confirmation form.
+
+This function returns a complete form array for confirming an action. The form contains a confirm button as well as a cancellation link that allows a user to abort the action.
+
+If the submit handler for a form that implements \hyperlink{system_8module_a5457fea1ad5cf2e3767f3fc6e36b768b}{confirm\_\-form()} is invoked, the user successfully confirmed the action. You should never directly inspect \$\_\-POST to see if an action was confirmed.
+
+Note -\/ if the parameters \$question, \$description, \$yes, or \$no could contain any user input (such as node titles or taxonomy terms), it is the responsibility of the code calling \hyperlink{system_8module_a5457fea1ad5cf2e3767f3fc6e36b768b}{confirm\_\-form()} to sanitize them first with a function like \hyperlink{group__sanitization_ga76fc67a30fd8d75ddd80565e6e65a13d}{check\_\-plain()} or \hyperlink{group__sanitization_ga8864a29ffa8de5c9f8dc9e417060660d}{filter\_\-xss()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$form}]Additional elements to add to the form. These can be regular form elements, value elements, etc., and their values will be available to the submit handler. \item[{\em \$question}]The question to ask the user (e.g. \char`\"{}Are you sure you want to delete the
+   block $<$em$>$foo$<$/em$>$?\char`\"{}). The page title will be set to this value. \item[{\em \$path}]The page to go to if the user cancels the action. This can be either:
+\begin{DoxyItemize}
+\item A string containing a Drupal path.
+\item An associative array with a 'path' key. Additional array values are passed as the \$options parameter to \hyperlink{common_8inc_ad3b36c06dc46250b8d22b8d0d2e7bd97}{l()}. If the 'destination' query parameter is set in the URL when viewing a confirmation form, that value will be used instead of \$path. 
+\end{DoxyItemize}\item[{\em \$description}]Additional text to display. Defaults to t('This action cannot be undone.'). \item[{\em \$yes}]A caption for the button that confirms the action (e.g. \char`\"{}Delete\char`\"{}, \char`\"{}Replace\char`\"{}, ...). Defaults to t('Confirm'). \item[{\em \$no}]A caption for the link which cancels the action (e.g. \char`\"{}Cancel\char`\"{}). Defaults to t('Cancel'). \item[{\em \$name}]The internal name used to refer to the confirmation item.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The form array. 
+\end{DoxyReturn}
+\hypertarget{system_8module_aeea00f3322d9a388335950f421935835}{
+\index{system.module@{system.module}!system\_\-action\_\-info@{system\_\-action\_\-info}}
+\index{system\_\-action\_\-info@{system\_\-action\_\-info}!system.module@{system.module}}
+\subsubsection[{system\_\-action\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-action\_\-info ()}}
+\label{system_8module_aeea00f3322d9a388335950f421935835}
+Implements \hyperlink{group__actions_ga3df26c5d6496c91fcd0edd8648023fb4}{hook\_\-action\_\-info()}. \hypertarget{system_8module_a18ac9a2acd0bfebb08156b711c8451a3}{
+\index{system.module@{system.module}!system\_\-add\_\-module\_\-assets@{system\_\-add\_\-module\_\-assets}}
+\index{system\_\-add\_\-module\_\-assets@{system\_\-add\_\-module\_\-assets}!system.module@{system.module}}
+\subsubsection[{system\_\-add\_\-module\_\-assets}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-add\_\-module\_\-assets ()}}
+\label{system_8module_a18ac9a2acd0bfebb08156b711c8451a3}
+Adds CSS and JavaScript files declared in module .info files. \hypertarget{system_8module_a5c5f93aebe3f12a47ceab948b0a92237}{
+\index{system.module@{system.module}!system\_\-admin\_\-compact\_\-mode@{system\_\-admin\_\-compact\_\-mode}}
+\index{system\_\-admin\_\-compact\_\-mode@{system\_\-admin\_\-compact\_\-mode}!system.module@{system.module}}
+\subsubsection[{system\_\-admin\_\-compact\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-admin\_\-compact\_\-mode ()}}
+\label{system_8module_a5c5f93aebe3f12a47ceab948b0a92237}
+Determines whether the current user is in compact mode.
+
+Compact mode shows certain administration pages with less description text, such as the configuration page and the permissions page.
+
+Whether the user is in compact mode is determined by a cookie, which is set for the user by \hyperlink{system_8module_ab1957cfd893fb50794286ea7c84589e6}{system\_\-admin\_\-compact\_\-page()}.
+
+If the user does not have the cookie, the default value is given by the system variable 'admin\_\-compact\_\-mode', which itself defaults to FALSE. This does not have a user interface to set it: it is a hidden variable which can be set in the \hyperlink{settings_8php}{settings.php} file.
+
+\begin{DoxyReturn}{Returns}
+TRUE when in compact mode, FALSE when in expanded mode. 
+\end{DoxyReturn}
+\hypertarget{system_8module_ab1957cfd893fb50794286ea7c84589e6}{
+\index{system.module@{system.module}!system\_\-admin\_\-compact\_\-page@{system\_\-admin\_\-compact\_\-page}}
+\index{system\_\-admin\_\-compact\_\-page@{system\_\-admin\_\-compact\_\-page}!system.module@{system.module}}
+\subsubsection[{system\_\-admin\_\-compact\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-admin\_\-compact\_\-page (\$ {\em mode} = {\ttfamily 'off'})}}
+\label{system_8module_ab1957cfd893fb50794286ea7c84589e6}
+Menu callback; Sets whether the admin menu is in compact mode or not.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$mode}]Valid values are 'on' and 'off'. \end{DoxyParams}
+\hypertarget{system_8module_aefe1548b98360e16fcdf579045d5c303}{
+\index{system.module@{system.module}!system\_\-admin\_\-menu\_\-block@{system\_\-admin\_\-menu\_\-block}}
+\index{system\_\-admin\_\-menu\_\-block@{system\_\-admin\_\-menu\_\-block}!system.module@{system.module}}
+\subsubsection[{system\_\-admin\_\-menu\_\-block}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-admin\_\-menu\_\-block (\$ {\em item})}}
+\label{system_8module_aefe1548b98360e16fcdf579045d5c303}
+Provide a single block on the administration overview page.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$item}]The menu item to be displayed. \end{DoxyParams}
+\hypertarget{system_8module_a541e64401df167df2dc2b0964f90d9ce}{
+\index{system.module@{system.module}!system\_\-admin\_\-paths@{system\_\-admin\_\-paths}}
+\index{system\_\-admin\_\-paths@{system\_\-admin\_\-paths}!system.module@{system.module}}
+\subsubsection[{system\_\-admin\_\-paths}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-admin\_\-paths ()}}
+\label{system_8module_a541e64401df167df2dc2b0964f90d9ce}
+Implements \hyperlink{group__hooks_ga3fe6d93afc8bb04afbd9e3c326d1bdc1}{hook\_\-admin\_\-paths()}. \hypertarget{system_8module_a39d36c996e2c4ce278f4adaee74ea96c}{
+\index{system.module@{system.module}!system\_\-archiver\_\-info@{system\_\-archiver\_\-info}}
+\index{system\_\-archiver\_\-info@{system\_\-archiver\_\-info}!system.module@{system.module}}
+\subsubsection[{system\_\-archiver\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-archiver\_\-info ()}}
+\label{system_8module_a39d36c996e2c4ce278f4adaee74ea96c}
+Implements \hyperlink{group__hooks_ga1c5bd8d11e7d54242528f85434e5b260}{hook\_\-archiver\_\-info()}. \hypertarget{system_8module_a28046ddc2ca1921e14019e2f3cc9175c}{
+\index{system.module@{system.module}!system\_\-block\_\-info@{system\_\-block\_\-info}}
+\index{system\_\-block\_\-info@{system\_\-block\_\-info}!system.module@{system.module}}
+\subsubsection[{system\_\-block\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-block\_\-info ()}}
+\label{system_8module_a28046ddc2ca1921e14019e2f3cc9175c}
+Implements \hyperlink{group__hooks_ga2bd926c3e90deeba0c3ba64fb3c64d73}{hook\_\-block\_\-info()}. \hypertarget{system_8module_a6afe2fa1e31a2aef9594ff49018634d8}{
+\index{system.module@{system.module}!system\_\-block\_\-view@{system\_\-block\_\-view}}
+\index{system\_\-block\_\-view@{system\_\-block\_\-view}!system.module@{system.module}}
+\subsubsection[{system\_\-block\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-block\_\-view (\$ {\em delta} = {\ttfamily ''})}}
+\label{system_8module_a6afe2fa1e31a2aef9594ff49018634d8}
+Implements \hyperlink{group__hooks_gaa14092a3e74cdc57aa295100cfd6860d}{hook\_\-block\_\-view()}.
+
+Generate a block with a promotional link to Drupal.org and all system menu blocks. \hypertarget{system_8module_ab2199f53b5eed000b9722bb6de83f57f}{
+\index{system.module@{system.module}!system\_\-check\_\-directory@{system\_\-check\_\-directory}}
+\index{system\_\-check\_\-directory@{system\_\-check\_\-directory}!system.module@{system.module}}
+\subsubsection[{system\_\-check\_\-directory}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-check\_\-directory (\$ {\em form\_\-element})}}
+\label{system_8module_ab2199f53b5eed000b9722bb6de83f57f}
+Checks the existence of the directory specified in \$form\_\-element.
+
+This function is called from the system\_\-settings form to check all core file directories (file\_\-public\_\-path, file\_\-private\_\-path, file\_\-temporary\_\-path).
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$form\_\-element}]The form element containing the name of the directory to check. \end{DoxyParams}
+\hypertarget{system_8module_ac762dd5b169e5f48a3cb96f08be8c067}{
+\index{system.module@{system.module}!system\_\-check\_\-http\_\-request@{system\_\-check\_\-http\_\-request}}
+\index{system\_\-check\_\-http\_\-request@{system\_\-check\_\-http\_\-request}!system.module@{system.module}}
+\subsubsection[{system\_\-check\_\-http\_\-request}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-check\_\-http\_\-request ()}}
+\label{system_8module_ac762dd5b169e5f48a3cb96f08be8c067}
+Checks whether the server is capable of issuing HTTP requests.
+
+The function sets the drupal\_\-http\_\-request\_\-fail system variable to TRUE if \hyperlink{group__http__handling_gaad3affacd718b960300dcdddefa518aa}{drupal\_\-http\_\-request()} does not work and then the system status report page will contain an error.
+
+\begin{DoxyReturn}{Returns}
+TRUE if this installation can issue HTTP requests. 
+\end{DoxyReturn}
+\hypertarget{system_8module_aaf72e35b8cb67cfe762abe4132f84c3f}{
+\index{system.module@{system.module}!system\_\-cron@{system\_\-cron}}
+\index{system\_\-cron@{system\_\-cron}!system.module@{system.module}}
+\subsubsection[{system\_\-cron}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-cron ()}}
+\label{system_8module_aaf72e35b8cb67cfe762abe4132f84c3f}
+Implements \hyperlink{group__hooks_gaf07f1e3d98112fc2ba6920cf7ee6fb16}{hook\_\-cron()}.
+
+Remove older rows from flood and batch table. Remove old temporary files. \hypertarget{system_8module_aa646e2eedcee8087ba2cd91914e7fbdc}{
+\index{system.module@{system.module}!system\_\-custom\_\-theme@{system\_\-custom\_\-theme}}
+\index{system\_\-custom\_\-theme@{system\_\-custom\_\-theme}!system.module@{system.module}}
+\subsubsection[{system\_\-custom\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-custom\_\-theme ()}}
+\label{system_8module_aa646e2eedcee8087ba2cd91914e7fbdc}
+Implements \hyperlink{group__hooks_gab83dce4ef80bc5005ee0de98fc005b1f}{hook\_\-custom\_\-theme()}. \hypertarget{system_8module_ad5772362b4f49cec71d9572c6f02ebfd}{
+\index{system.module@{system.module}!system\_\-date\_\-format\_\-delete@{system\_\-date\_\-format\_\-delete}}
+\index{system\_\-date\_\-format\_\-delete@{system\_\-date\_\-format\_\-delete}!system.module@{system.module}}
+\subsubsection[{system\_\-date\_\-format\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-date\_\-format\_\-delete (\$ {\em dfid})}}
+\label{system_8module_ad5772362b4f49cec71d9572c6f02ebfd}
+Deletes a date format from the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$dfid}]The date format ID. \end{DoxyParams}
+\hypertarget{system_8module_a27ec4ab4ca19ea7d22db475691d1eea5}{
+\index{system.module@{system.module}!system\_\-date\_\-format\_\-locale@{system\_\-date\_\-format\_\-locale}}
+\index{system\_\-date\_\-format\_\-locale@{system\_\-date\_\-format\_\-locale}!system.module@{system.module}}
+\subsubsection[{system\_\-date\_\-format\_\-locale}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-date\_\-format\_\-locale (\$ {\em langcode} = {\ttfamily NULL}, \/  \$ {\em type} = {\ttfamily NULL})}}
+\label{system_8module_a27ec4ab4ca19ea7d22db475691d1eea5}
+Gets the appropriate date format string for a date type and locale.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$langcode}](optional) Language code for the current locale. This can be a 2 character language code like 'en' and 'fr' or a 5 character language code like 'en-\/gb' and 'en-\/us'. \item[{\em \$type}](optional) The date type name.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If \$type and \$langcode are specified, returns the corresponding date format string. If only \$langcode is specified, returns an array of all date format strings for that locale, keyed by the date type. If neither is specified, or if no matching formats are found, returns FALSE. 
+\end{DoxyReturn}
+\hypertarget{system_8module_a08b578d5998a5c83ece092e2fcbeb22f}{
+\index{system.module@{system.module}!system\_\-date\_\-format\_\-save@{system\_\-date\_\-format\_\-save}}
+\index{system\_\-date\_\-format\_\-save@{system\_\-date\_\-format\_\-save}!system.module@{system.module}}
+\subsubsection[{system\_\-date\_\-format\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-date\_\-format\_\-save (\$ {\em date\_\-format}, \/  \$ {\em dfid} = {\ttfamily 0})}}
+\label{system_8module_a08b578d5998a5c83ece092e2fcbeb22f}
+Saves a date format to the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$date\_\-format}]A date format array containing the following keys:
+\begin{DoxyItemize}
+\item type: The name of the date type this format is associated with.
+\item format: The PHP date format string.
+\item locked: A boolean indicating whether or not this format should be configurable from the user interface. 
+\end{DoxyItemize}\item[{\em \$dfid}]If set, replace the existing date format having this ID with the information specified in \$date\_\-format.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{system_8module_a591ee79a1b5ebbcbc8b2162a74e965b2}{system\_\-get\_\-date\_\-types()} 
+
+\href{http://php.net/date}{\tt http://php.net/date} 
+\end{DoxySeeAlso}
+\hypertarget{system_8module_ac495d113f7fcd34fe1cee36c6a2d51b9}{
+\index{system.module@{system.module}!system\_\-date\_\-format\_\-type\_\-delete@{system\_\-date\_\-format\_\-type\_\-delete}}
+\index{system\_\-date\_\-format\_\-type\_\-delete@{system\_\-date\_\-format\_\-type\_\-delete}!system.module@{system.module}}
+\subsubsection[{system\_\-date\_\-format\_\-type\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-date\_\-format\_\-type\_\-delete (\$ {\em type})}}
+\label{system_8module_ac495d113f7fcd34fe1cee36c6a2d51b9}
+Deletes a date type from the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]The machine-\/readable name of the date type. \end{DoxyParams}
+\hypertarget{system_8module_a88de386e3357b4531e37f56c26c20a9c}{
+\index{system.module@{system.module}!system\_\-date\_\-format\_\-type\_\-save@{system\_\-date\_\-format\_\-type\_\-save}}
+\index{system\_\-date\_\-format\_\-type\_\-save@{system\_\-date\_\-format\_\-type\_\-save}!system.module@{system.module}}
+\subsubsection[{system\_\-date\_\-format\_\-type\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-date\_\-format\_\-type\_\-save (\$ {\em type})}}
+\label{system_8module_a88de386e3357b4531e37f56c26c20a9c}
+Saves a date type to the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]A date type array containing the following keys:
+\begin{DoxyItemize}
+\item type: The machine-\/readable name of the date type.
+\item title: The human-\/readable name of the date type.
+\item locked: A boolean indicating whether or not this date type should be configurable from the user interface.
+\item is\_\-new: A boolean indicating whether or not this date type is as of yet unsaved in the database. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{system_8module_a40f95fb822909e33c9dc245f25b7cea7}{
+\index{system.module@{system.module}!system\_\-date\_\-format\_\-types@{system\_\-date\_\-format\_\-types}}
+\index{system\_\-date\_\-format\_\-types@{system\_\-date\_\-format\_\-types}!system.module@{system.module}}
+\subsubsection[{system\_\-date\_\-format\_\-types}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-date\_\-format\_\-types ()}}
+\label{system_8module_a40f95fb822909e33c9dc245f25b7cea7}
+Implements \hyperlink{group__hooks_gaadde7af71d0b4f827cf7aac1c88c4d23}{hook\_\-date\_\-format\_\-types()}. \hypertarget{system_8module_a07720daca9cb101f5fd80ef97a3a2d85}{
+\index{system.module@{system.module}!system\_\-date\_\-formats@{system\_\-date\_\-formats}}
+\index{system\_\-date\_\-formats@{system\_\-date\_\-formats}!system.module@{system.module}}
+\subsubsection[{system\_\-date\_\-formats}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-date\_\-formats ()}}
+\label{system_8module_a07720daca9cb101f5fd80ef97a3a2d85}
+Implements \hyperlink{group__hooks_ga2a190ba304193ab7752bfc489463a0d7}{hook\_\-date\_\-formats()}. \hypertarget{system_8module_a963e54c5eae58e038d83b387bda7a9b8}{
+\index{system.module@{system.module}!system\_\-date\_\-formats\_\-rebuild@{system\_\-date\_\-formats\_\-rebuild}}
+\index{system\_\-date\_\-formats\_\-rebuild@{system\_\-date\_\-formats\_\-rebuild}!system.module@{system.module}}
+\subsubsection[{system\_\-date\_\-formats\_\-rebuild}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-date\_\-formats\_\-rebuild ()}}
+\label{system_8module_a963e54c5eae58e038d83b387bda7a9b8}
+Resets the database cache of date formats and saves all new date formats. \hypertarget{system_8module_a8d1d2449c553874ab0ba1d2a4b132fd3}{
+\index{system.module@{system.module}!system\_\-default\_\-region@{system\_\-default\_\-region}}
+\index{system\_\-default\_\-region@{system\_\-default\_\-region}!system.module@{system.module}}
+\subsubsection[{system\_\-default\_\-region}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-default\_\-region (\$ {\em theme})}}
+\label{system_8module_a8d1d2449c553874ab0ba1d2a4b132fd3}
+Get the name of the default region for a given theme.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$theme}]The name of a theme. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string that is the region name. 
+\end{DoxyReturn}
+\hypertarget{system_8module_a39faa9a5430a70bb37a3c8af72460a14}{
+\index{system.module@{system.module}!system\_\-element\_\-info@{system\_\-element\_\-info}}
+\index{system\_\-element\_\-info@{system\_\-element\_\-info}!system.module@{system.module}}
+\subsubsection[{system\_\-element\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-element\_\-info ()}}
+\label{system_8module_a39faa9a5430a70bb37a3c8af72460a14}
+Implements \hyperlink{group__hooks_ga3c5182432eddc82f8b7845e66a365d51}{hook\_\-element\_\-info()}. \hypertarget{system_8module_ad12d07929306617e476e0ddc18d1129f}{
+\index{system.module@{system.module}!system\_\-entity\_\-info@{system\_\-entity\_\-info}}
+\index{system\_\-entity\_\-info@{system\_\-entity\_\-info}!system.module@{system.module}}
+\subsubsection[{system\_\-entity\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-entity\_\-info ()}}
+\label{system_8module_ad12d07929306617e476e0ddc18d1129f}
+Implements \hyperlink{group__hooks_gaf02318e9d0e8cdbf6d187b271b9969a8}{hook\_\-entity\_\-info()}. \hypertarget{system_8module_a56c90d331efe545cec21cc4cc9cede5f}{
+\index{system.module@{system.module}!system\_\-filetransfer\_\-info@{system\_\-filetransfer\_\-info}}
+\index{system\_\-filetransfer\_\-info@{system\_\-filetransfer\_\-info}!system.module@{system.module}}
+\subsubsection[{system\_\-filetransfer\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-filetransfer\_\-info ()}}
+\label{system_8module_a56c90d331efe545cec21cc4cc9cede5f}
+Implements \hyperlink{group__hooks_gacecdedb61704444382417e6ec8da240d}{hook\_\-filetransfer\_\-info()}. \hypertarget{system_8module_a0cd2b51f55ab9299f139f9916bf7a7c0}{
+\index{system.module@{system.module}!system\_\-find\_\-base\_\-themes@{system\_\-find\_\-base\_\-themes}}
+\index{system\_\-find\_\-base\_\-themes@{system\_\-find\_\-base\_\-themes}!system.module@{system.module}}
+\subsubsection[{system\_\-find\_\-base\_\-themes}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-find\_\-base\_\-themes (\$ {\em themes}, \/  \$ {\em key}, \/  \$ {\em used\_\-keys} = {\ttfamily array()})}}
+\label{system_8module_a0cd2b51f55ab9299f139f9916bf7a7c0}
+Find all the base themes for the specified theme.
+
+This function has been deprecated in favor of \hyperlink{includes_2theme_8inc_ab9b1b3016f42a43d21096d650ffe7ec1}{drupal\_\-find\_\-base\_\-themes()}. \hypertarget{system_8module_ae38c371e6c9eba87278d135ad16c9d33}{
+\index{system.module@{system.module}!system\_\-flush\_\-caches@{system\_\-flush\_\-caches}}
+\index{system\_\-flush\_\-caches@{system\_\-flush\_\-caches}!system.module@{system.module}}
+\subsubsection[{system\_\-flush\_\-caches}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-flush\_\-caches ()}}
+\label{system_8module_ae38c371e6c9eba87278d135ad16c9d33}
+Implements \hyperlink{group__hooks_ga66531e6e564157b7ca45ed07549c9b97}{hook\_\-flush\_\-caches()}. \hypertarget{system_8module_ae5d1fb61b3099b07f38b7a328eea59a9}{
+\index{system.module@{system.module}!system\_\-form\_\-user\_\-profile\_\-form\_\-alter@{system\_\-form\_\-user\_\-profile\_\-form\_\-alter}}
+\index{system\_\-form\_\-user\_\-profile\_\-form\_\-alter@{system\_\-form\_\-user\_\-profile\_\-form\_\-alter}!system.module@{system.module}}
+\subsubsection[{system\_\-form\_\-user\_\-profile\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-form\_\-user\_\-profile\_\-form\_\-alter (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{system_8module_ae5d1fb61b3099b07f38b7a328eea59a9}
+Implements \hyperlink{group__hooks_ga8d4a4089551493d55911bd5c4f218264}{hook\_\-form\_\-FORM\_\-ID\_\-alter()}. \hypertarget{system_8module_ad535a7c29e92dc0394103a6ea1de3886}{
+\index{system.module@{system.module}!system\_\-form\_\-user\_\-register\_\-form\_\-alter@{system\_\-form\_\-user\_\-register\_\-form\_\-alter}}
+\index{system\_\-form\_\-user\_\-register\_\-form\_\-alter@{system\_\-form\_\-user\_\-register\_\-form\_\-alter}!system.module@{system.module}}
+\subsubsection[{system\_\-form\_\-user\_\-register\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-form\_\-user\_\-register\_\-form\_\-alter (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{system_8module_ad535a7c29e92dc0394103a6ea1de3886}
+Implements \hyperlink{group__hooks_ga8d4a4089551493d55911bd5c4f218264}{hook\_\-form\_\-FORM\_\-ID\_\-alter()}. \hypertarget{system_8module_ad950accb99d110fbe6bfc92b967440aa}{
+\index{system.module@{system.module}!system\_\-get\_\-date\_\-format@{system\_\-get\_\-date\_\-format}}
+\index{system\_\-get\_\-date\_\-format@{system\_\-get\_\-date\_\-format}!system.module@{system.module}}
+\subsubsection[{system\_\-get\_\-date\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-get\_\-date\_\-format (\$ {\em dfid})}}
+\label{system_8module_ad950accb99d110fbe6bfc92b967440aa}
+Gets the format details for a particular format ID.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$dfid}]A date format ID.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A date format object with the following properties:
+\begin{DoxyItemize}
+\item dfid: The date format ID.
+\item format: The date format string.
+\item type: The name of the date type.
+\item locked: Whether the date format can be changed or not. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{system_8module_a5505120b882739e9648d8665e6dfd030}{
+\index{system.module@{system.module}!system\_\-get\_\-date\_\-formats@{system\_\-get\_\-date\_\-formats}}
+\index{system\_\-get\_\-date\_\-formats@{system\_\-get\_\-date\_\-formats}!system.module@{system.module}}
+\subsubsection[{system\_\-get\_\-date\_\-formats}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-get\_\-date\_\-formats (\$ {\em type} = {\ttfamily NULL})}}
+\label{system_8module_a5505120b882739e9648d8665e6dfd030}
+Gets the list of defined date formats and attributes.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}](optional) The date type name.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An associative array of date formats. The top-\/level keys are the names of the date types that the date formats belong to. The values are in turn associative arrays keyed by the format string, with the following keys:
+\begin{DoxyItemize}
+\item dfid: The date format ID.
+\item format: The format string.
+\item type: The machine-\/readable name of the date type.
+\item locales: An array of language codes. This can include both 2 character language codes like 'en and 'fr' and 5 character language codes like 'en-\/gb' and 'en-\/us'.
+\item locked: A boolean indicating whether or not this date type should be configurable from the user interface.
+\item module: The name of the module that defined this date format in its \hyperlink{group__hooks_ga2a190ba304193ab7752bfc489463a0d7}{hook\_\-date\_\-formats()}. An empty string if the format was user-\/defined.
+\item is\_\-new: A boolean indicating whether or not this date type is as of yet unsaved in the database. If \$type was defined, only the date formats associated with the given date type are returned, in a single associative array keyed by format string. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{system_8module_a591ee79a1b5ebbcbc8b2162a74e965b2}{
+\index{system.module@{system.module}!system\_\-get\_\-date\_\-types@{system\_\-get\_\-date\_\-types}}
+\index{system\_\-get\_\-date\_\-types@{system\_\-get\_\-date\_\-types}!system.module@{system.module}}
+\subsubsection[{system\_\-get\_\-date\_\-types}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-get\_\-date\_\-types (\$ {\em type} = {\ttfamily NULL})}}
+\label{system_8module_a591ee79a1b5ebbcbc8b2162a74e965b2}
+Gets the list of available date types and attributes.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}](optional) The date type name.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An associative array of date type information keyed by the date type name. Each date type information array has the following elements:
+\begin{DoxyItemize}
+\item type: The machine-\/readable name of the date type.
+\item title: The human-\/readable name of the date type.
+\item locked: A boolean indicating whether or not this date type should be configurable from the user interface.
+\item module: The name of the module that defined this date type in its \hyperlink{group__hooks_gaadde7af71d0b4f827cf7aac1c88c4d23}{hook\_\-date\_\-format\_\-types()}. An empty string if the date type was user-\/defined.
+\item is\_\-new: A boolean indicating whether or not this date type is as of yet unsaved in the database. If \$type was defined, only a single associative array with the above elements is returned. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{system_8module_a0851ffa40e4bc737b29677e9b397caac}{
+\index{system.module@{system.module}!system\_\-get\_\-files\_\-database@{system\_\-get\_\-files\_\-database}}
+\index{system\_\-get\_\-files\_\-database@{system\_\-get\_\-files\_\-database}!system.module@{system.module}}
+\subsubsection[{system\_\-get\_\-files\_\-database}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-get\_\-files\_\-database (\&\$ {\em files}, \/  \$ {\em type})}}
+\label{system_8module_a0851ffa40e4bc737b29677e9b397caac}
+Retrieves the current status of an array of files in the system table.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$files}]An array of files to check. \item[{\em \$type}]The type of the files. \end{DoxyParams}
+\hypertarget{system_8module_af54208dab08c482b465a7f10225ebbb7}{
+\index{system.module@{system.module}!system\_\-get\_\-info@{system\_\-get\_\-info}}
+\index{system\_\-get\_\-info@{system\_\-get\_\-info}!system.module@{system.module}}
+\subsubsection[{system\_\-get\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-get\_\-info (\$ {\em type}, \/  \$ {\em name} = {\ttfamily NULL})}}
+\label{system_8module_af54208dab08c482b465a7f10225ebbb7}
+Returns an array of information about enabled modules or themes.
+
+This function returns the information from the \{system\} table corresponding to the cached contents of the .info file for each active module or theme.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$type}]Either 'module' or 'theme'. \item[{\em \$name}](optional) The name of a module or theme whose information shall be returned. If omitted, all records for the provided \$type will be returned. If \$name does not exist in the provided \$type or is not enabled, an empty array will be returned.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An associative array of module or theme information keyed by name, or only information for \$name, if given. If no records are available, an empty array is returned.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{system_8module_a2c3c848bc7c14d6f770a2f8df8f35332}{system\_\-rebuild\_\-module\_\-data()} 
+
+\hyperlink{system_8module_a702e05f2ab6d4ac7e8be5b0e07afa701}{system\_\-rebuild\_\-theme\_\-data()} 
+\end{DoxySeeAlso}
+\hypertarget{system_8module_a121a9c5ed0a44d3c0adc1c60368972ab}{
+\index{system.module@{system.module}!system\_\-get\_\-module\_\-admin\_\-tasks@{system\_\-get\_\-module\_\-admin\_\-tasks}}
+\index{system\_\-get\_\-module\_\-admin\_\-tasks@{system\_\-get\_\-module\_\-admin\_\-tasks}!system.module@{system.module}}
+\subsubsection[{system\_\-get\_\-module\_\-admin\_\-tasks}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-get\_\-module\_\-admin\_\-tasks (\$ {\em module}, \/  \$ {\em info})}}
+\label{system_8module_a121a9c5ed0a44d3c0adc1c60368972ab}
+Generate a list of tasks offered by a specified module.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$module}]Module name. \item[{\em \$info}]The module's information, as provided by \hyperlink{system_8module_af54208dab08c482b465a7f10225ebbb7}{system\_\-get\_\-info()}.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of task links. 
+\end{DoxyReturn}
+\hypertarget{system_8module_a9e66ce1cf0a4a3529a1a3140fdbe4660}{
+\index{system.module@{system.module}!system\_\-goto\_\-action\_\-form@{system\_\-goto\_\-action\_\-form}}
+\index{system\_\-goto\_\-action\_\-form@{system\_\-goto\_\-action\_\-form}!system.module@{system.module}}
+\subsubsection[{system\_\-goto\_\-action\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-goto\_\-action\_\-form (\$ {\em context})}}
+\label{system_8module_a9e66ce1cf0a4a3529a1a3140fdbe4660}
+Settings form for \hyperlink{group__actions_gae5230dbace638d69f196392fbc77e1af}{system\_\-goto\_\-action()}. \hypertarget{system_8module_af0ca5e04a8b6cc3bba72b778f2e8c81d}{
+\index{system.module@{system.module}!system\_\-help@{system\_\-help}}
+\index{system\_\-help@{system\_\-help}!system.module@{system.module}}
+\subsubsection[{system\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{system_8module_af0ca5e04a8b6cc3bba72b778f2e8c81d}
+Implements \hyperlink{group__hooks_ga5589c2714a782738e8851c4c90231f0e}{hook\_\-help()}. \hypertarget{system_8module_a9df96726c754189e19b7f065bcb5c833}{
+\index{system.module@{system.module}!system\_\-hook\_\-info@{system\_\-hook\_\-info}}
+\index{system\_\-hook\_\-info@{system\_\-hook\_\-info}!system.module@{system.module}}
+\subsubsection[{system\_\-hook\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-hook\_\-info ()}}
+\label{system_8module_a9df96726c754189e19b7f065bcb5c833}
+Implements \hyperlink{group__hooks_ga65142e7864f445483786087d180a2010}{hook\_\-hook\_\-info()}. \hypertarget{system_8module_ac5de4c1bb1b8395a6a074df170cbe335}{
+\index{system.module@{system.module}!system\_\-image\_\-toolkits@{system\_\-image\_\-toolkits}}
+\index{system\_\-image\_\-toolkits@{system\_\-image\_\-toolkits}!system.module@{system.module}}
+\subsubsection[{system\_\-image\_\-toolkits}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-image\_\-toolkits ()}}
+\label{system_8module_ac5de4c1bb1b8395a6a074df170cbe335}
+Implements \hyperlink{group__hooks_ga9abe202036afcc6a3cc97ccc2c13ab29}{hook\_\-image\_\-toolkits()}. \hypertarget{system_8module_ac6847a570b3e5f0fbda1802e90d066aa}{
+\index{system.module@{system.module}!system\_\-init@{system\_\-init}}
+\index{system\_\-init@{system\_\-init}!system.module@{system.module}}
+\subsubsection[{system\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-init ()}}
+\label{system_8module_ac6847a570b3e5f0fbda1802e90d066aa}
+Implements \hyperlink{group__hooks_ga74edef0c463436fdbb1f92ef367db051}{hook\_\-init()}. \hypertarget{system_8module_a7f680fce0aaf48a96f122edf5345097f}{
+\index{system.module@{system.module}!system\_\-library@{system\_\-library}}
+\index{system\_\-library@{system\_\-library}!system.module@{system.module}}
+\subsubsection[{system\_\-library}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-library ()}}
+\label{system_8module_a7f680fce0aaf48a96f122edf5345097f}
+Implements \hyperlink{group__hooks_ga6bf3f83fa2e373836f5aa78fd143d1cd}{hook\_\-library()}. \hypertarget{system_8module_a33bdb754ad2acfe55063e5114d05a68b}{
+\index{system.module@{system.module}!system\_\-mail@{system\_\-mail}}
+\index{system\_\-mail@{system\_\-mail}!system.module@{system.module}}
+\subsubsection[{system\_\-mail}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-mail (\$ {\em key}, \/  \&\$ {\em message}, \/  \$ {\em params})}}
+\label{system_8module_a33bdb754ad2acfe55063e5114d05a68b}
+Implements \hyperlink{group__hooks_gacdeb1cba0d0a86ac4de3fff7d4765777}{hook\_\-mail()}. \hypertarget{system_8module_ae25cda0ea4fd63936e8f955dd9cfc269}{
+\index{system.module@{system.module}!system\_\-menu@{system\_\-menu}}
+\index{system\_\-menu@{system\_\-menu}!system.module@{system.module}}
+\subsubsection[{system\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-menu ()}}
+\label{system_8module_ae25cda0ea4fd63936e8f955dd9cfc269}
+Implements \hyperlink{group__hooks_ga5c95244fea59b25666e409759e133ded}{hook\_\-menu()}. \hypertarget{system_8module_accbb83043437c6d64b3c11d32104459e}{
+\index{system.module@{system.module}!system\_\-page\_\-alter@{system\_\-page\_\-alter}}
+\index{system\_\-page\_\-alter@{system\_\-page\_\-alter}!system.module@{system.module}}
+\subsubsection[{system\_\-page\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-page\_\-alter (\&\$ {\em page})}}
+\label{system_8module_accbb83043437c6d64b3c11d32104459e}
+Implements \hyperlink{group__hooks_gaa965aa8f38b48aed1a19c556c199145f}{hook\_\-page\_\-alter()}. \hypertarget{system_8module_a21ecb659e6aa944c6c85ad0b50dcbb0e}{
+\index{system.module@{system.module}!system\_\-permission@{system\_\-permission}}
+\index{system\_\-permission@{system\_\-permission}!system.module@{system.module}}
+\subsubsection[{system\_\-permission}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-permission ()}}
+\label{system_8module_a21ecb659e6aa944c6c85ad0b50dcbb0e}
+Implements \hyperlink{group__hooks_ga2b22b45f4925f2478412477bae329713}{hook\_\-permission()}. \hypertarget{system_8module_a32befafe4460ad324666b282350deb02}{
+\index{system.module@{system.module}!system\_\-preprocess\_\-block@{system\_\-preprocess\_\-block}}
+\index{system\_\-preprocess\_\-block@{system\_\-preprocess\_\-block}!system.module@{system.module}}
+\subsubsection[{system\_\-preprocess\_\-block}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-preprocess\_\-block (\&\$ {\em variables})}}
+\label{system_8module_a32befafe4460ad324666b282350deb02}
+Implements hook\_\-preprocess\_\-block(). \hypertarget{system_8module_a2c3c848bc7c14d6f770a2f8df8f35332}{
+\index{system.module@{system.module}!system\_\-rebuild\_\-module\_\-data@{system\_\-rebuild\_\-module\_\-data}}
+\index{system\_\-rebuild\_\-module\_\-data@{system\_\-rebuild\_\-module\_\-data}!system.module@{system.module}}
+\subsubsection[{system\_\-rebuild\_\-module\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-rebuild\_\-module\_\-data ()}}
+\label{system_8module_a2c3c848bc7c14d6f770a2f8df8f35332}
+Rebuild, save, and return data about all currently available modules.
+
+\begin{DoxyReturn}{Returns}
+Array of all available modules and their data. 
+\end{DoxyReturn}
+\hypertarget{system_8module_a702e05f2ab6d4ac7e8be5b0e07afa701}{
+\index{system.module@{system.module}!system\_\-rebuild\_\-theme\_\-data@{system\_\-rebuild\_\-theme\_\-data}}
+\index{system\_\-rebuild\_\-theme\_\-data@{system\_\-rebuild\_\-theme\_\-data}!system.module@{system.module}}
+\subsubsection[{system\_\-rebuild\_\-theme\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-rebuild\_\-theme\_\-data ()}}
+\label{system_8module_a702e05f2ab6d4ac7e8be5b0e07afa701}
+Rebuild, save, and return data about all currently available themes.
+
+\begin{DoxyReturn}{Returns}
+Array of all available themes and their data. 
+\end{DoxyReturn}
+\hypertarget{system_8module_a83141ec3e67f121c72317be0c674dfe6}{
+\index{system.module@{system.module}!system\_\-region\_\-list@{system\_\-region\_\-list}}
+\index{system\_\-region\_\-list@{system\_\-region\_\-list}!system.module@{system.module}}
+\subsubsection[{system\_\-region\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-region\_\-list (\$ {\em theme\_\-key}, \/  \$ {\em show} = {\ttfamily {\bf REGIONS\_\-ALL}})}}
+\label{system_8module_a83141ec3e67f121c72317be0c674dfe6}
+Get a list of available regions from a specified theme.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$theme\_\-key}]The name of a theme. \item[{\em \$show}]Possible values: REGIONS\_\-ALL or REGIONS\_\-VISIBLE. Visible excludes hidden regions. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of regions in the form \$region\mbox{[}'name'\mbox{]} = 'description'. 
+\end{DoxyReturn}
+\hypertarget{system_8module_a74479d43f0e63d771db29609879844b7}{
+\index{system.module@{system.module}!system\_\-retrieve\_\-file@{system\_\-retrieve\_\-file}}
+\index{system\_\-retrieve\_\-file@{system\_\-retrieve\_\-file}!system.module@{system.module}}
+\subsubsection[{system\_\-retrieve\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-retrieve\_\-file (\$ {\em url}, \/  \$ {\em destination} = {\ttfamily NULL}, \/  \$ {\em managed} = {\ttfamily FALSE}, \/  \$ {\em replace} = {\ttfamily {\bf FILE\_\-EXISTS\_\-RENAME}})}}
+\label{system_8module_a74479d43f0e63d771db29609879844b7}
+Attempts to get a file using drupal\_\-http\_\-request and to store it locally.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$url}]The URL of the file to grab.\item[{\em \$destination}]Stream wrapper URI specifying where the file should be placed. If a directory path is provided, the file is saved into that directory under its original name. If the path contains a filename as well, that one will be used instead. If this value is omitted, the site's default files scheme will be used, usually \char`\"{}public://\char`\"{}.\item[{\em \$managed}]boolean If this is set to TRUE, the file API hooks will be invoked and the file is registered in the database.\item[{\em \$replace}]boolean Replace behavior when the destination file already exists:
+\begin{DoxyItemize}
+\item FILE\_\-EXISTS\_\-REPLACE: Replace the existing file.
+\item FILE\_\-EXISTS\_\-RENAME: Append \_\-\{incrementing number\} until the filename is unique.
+\item FILE\_\-EXISTS\_\-ERROR: Do nothing and return FALSE.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+On success the location the file was saved to, FALSE on failure. 
+\end{DoxyReturn}
+\hypertarget{system_8module_a1fa48b8c19dfe32cfd122c0dd5661a88}{
+\index{system.module@{system.module}!system\_\-run\_\-automated\_\-cron@{system\_\-run\_\-automated\_\-cron}}
+\index{system\_\-run\_\-automated\_\-cron@{system\_\-run\_\-automated\_\-cron}!system.module@{system.module}}
+\subsubsection[{system\_\-run\_\-automated\_\-cron}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-run\_\-automated\_\-cron ()}}
+\label{system_8module_a1fa48b8c19dfe32cfd122c0dd5661a88}
+Run the automated cron if enabled. \hypertarget{system_8module_acdc88b46eee866f535e90f0cb9a6114a}{
+\index{system.module@{system.module}!system\_\-send\_\-email\_\-action\_\-form@{system\_\-send\_\-email\_\-action\_\-form}}
+\index{system\_\-send\_\-email\_\-action\_\-form@{system\_\-send\_\-email\_\-action\_\-form}!system.module@{system.module}}
+\subsubsection[{system\_\-send\_\-email\_\-action\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-send\_\-email\_\-action\_\-form (\$ {\em context})}}
+\label{system_8module_acdc88b46eee866f535e90f0cb9a6114a}
+Return a form definition so the Send email action can be configured.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$context}]Default values (if we are editing an existing action instance).\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Form definition.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{system_8module_a667002aa61b3826726f5a2274d8f3f27}{system\_\-send\_\-email\_\-action\_\-validate()} 
+
+\hyperlink{system_8module_aa51bb7d880590588296057b0f0b7c1ff}{system\_\-send\_\-email\_\-action\_\-submit()} 
+\end{DoxySeeAlso}
+\hypertarget{system_8module_aa51bb7d880590588296057b0f0b7c1ff}{
+\index{system.module@{system.module}!system\_\-send\_\-email\_\-action\_\-submit@{system\_\-send\_\-email\_\-action\_\-submit}}
+\index{system\_\-send\_\-email\_\-action\_\-submit@{system\_\-send\_\-email\_\-action\_\-submit}!system.module@{system.module}}
+\subsubsection[{system\_\-send\_\-email\_\-action\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-send\_\-email\_\-action\_\-submit (\$ {\em form}, \/  \$ {\em form\_\-state})}}
+\label{system_8module_aa51bb7d880590588296057b0f0b7c1ff}
+Process system\_\-send\_\-email\_\-action form submissions. \hypertarget{system_8module_a667002aa61b3826726f5a2274d8f3f27}{
+\index{system.module@{system.module}!system\_\-send\_\-email\_\-action\_\-validate@{system\_\-send\_\-email\_\-action\_\-validate}}
+\index{system\_\-send\_\-email\_\-action\_\-validate@{system\_\-send\_\-email\_\-action\_\-validate}!system.module@{system.module}}
+\subsubsection[{system\_\-send\_\-email\_\-action\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-send\_\-email\_\-action\_\-validate (\$ {\em form}, \/  \$ {\em form\_\-state})}}
+\label{system_8module_a667002aa61b3826726f5a2274d8f3f27}
+Validate system\_\-send\_\-email\_\-action form submissions. \hypertarget{system_8module_a1ac9556d37dcf1ec5836b0171757c610}{
+\index{system.module@{system.module}!system\_\-settings\_\-form\_\-submit@{system\_\-settings\_\-form\_\-submit}}
+\index{system\_\-settings\_\-form\_\-submit@{system\_\-settings\_\-form\_\-submit}!system.module@{system.module}}
+\subsubsection[{system\_\-settings\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-settings\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{system_8module_a1ac9556d37dcf1ec5836b0171757c610}
+Execute the system\_\-settings\_\-form.
+
+If you want node type configure style handling of your checkboxes, add an array\_\-filter value to your form. \hypertarget{system_8module_a67821dedc3699910bb2168a40c5d7278}{
+\index{system.module@{system.module}!system\_\-stream\_\-wrappers@{system\_\-stream\_\-wrappers}}
+\index{system\_\-stream\_\-wrappers@{system\_\-stream\_\-wrappers}!system.module@{system.module}}
+\subsubsection[{system\_\-stream\_\-wrappers}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-stream\_\-wrappers ()}}
+\label{system_8module_a67821dedc3699910bb2168a40c5d7278}
+Implements \hyperlink{group__hooks_ga6fadcf625a4766e7f0d97b1628b294dc}{hook\_\-stream\_\-wrappers()}. \hypertarget{system_8module_afbaff10d8aad0b8916039e458292218c}{
+\index{system.module@{system.module}!system\_\-system\_\-info\_\-alter@{system\_\-system\_\-info\_\-alter}}
+\index{system\_\-system\_\-info\_\-alter@{system\_\-system\_\-info\_\-alter}!system.module@{system.module}}
+\subsubsection[{system\_\-system\_\-info\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-system\_\-info\_\-alter (\&\$ {\em info}, \/  \$ {\em file}, \/  \$ {\em type})}}
+\label{system_8module_afbaff10d8aad0b8916039e458292218c}
+Implements \hyperlink{group__hooks_ga7dd7f887131916d5bbbb02ae87a9113e}{hook\_\-system\_\-info\_\-alter()}. \hypertarget{system_8module_a44b4dbe61c9f2fb668b8b2003dd00090}{
+\index{system.module@{system.module}!system\_\-theme@{system\_\-theme}}
+\index{system\_\-theme@{system\_\-theme}!system.module@{system.module}}
+\subsubsection[{system\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-theme ()}}
+\label{system_8module_a44b4dbe61c9f2fb668b8b2003dd00090}
+Implements \hyperlink{group__hooks_ga013ccb45c7aaab1c16cf9691428c910d}{hook\_\-theme()}. \hypertarget{system_8module_af21d6c134a3a6c6114def38efc153201}{
+\index{system.module@{system.module}!system\_\-time\_\-zones@{system\_\-time\_\-zones}}
+\index{system\_\-time\_\-zones@{system\_\-time\_\-zones}!system.module@{system.module}}
+\subsubsection[{system\_\-time\_\-zones}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-time\_\-zones (\$ {\em blank} = {\ttfamily NULL})}}
+\label{system_8module_af21d6c134a3a6c6114def38efc153201}
+Generate an array of time zones and their local time\&date.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$blank}]If evaluates true, prepend an empty time zone option to the array. \end{DoxyParams}
+\hypertarget{system_8module_a65d003b673cc2c7fbe24dd0cad2ee15d}{
+\index{system.module@{system.module}!system\_\-timezone@{system\_\-timezone}}
+\index{system\_\-timezone@{system\_\-timezone}!system.module@{system.module}}
+\subsubsection[{system\_\-timezone}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-timezone (\$ {\em abbreviation} = {\ttfamily ''}, \/  \$ {\em offset} = {\ttfamily -\/1}, \/  \$ {\em is\_\-daylight\_\-saving\_\-time} = {\ttfamily NULL})}}
+\label{system_8module_a65d003b673cc2c7fbe24dd0cad2ee15d}
+Menu callback; Retrieve a JSON object containing a suggested time zone name. \hypertarget{system_8module_aceaee6704abc9e249d9ef79918884b7a}{
+\index{system.module@{system.module}!system\_\-update\_\-files\_\-database@{system\_\-update\_\-files\_\-database}}
+\index{system\_\-update\_\-files\_\-database@{system\_\-update\_\-files\_\-database}!system.module@{system.module}}
+\subsubsection[{system\_\-update\_\-files\_\-database}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-update\_\-files\_\-database (\&\$ {\em files}, \/  \$ {\em type})}}
+\label{system_8module_aceaee6704abc9e249d9ef79918884b7a}
+Updates the records in the system table based on the files array.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$files}]An array of files. \item[{\em \$type}]The type of the files. \end{DoxyParams}
+\hypertarget{system_8module_a10c5077ea405b6e4e312291299687e75}{
+\index{system.module@{system.module}!system\_\-updater\_\-info@{system\_\-updater\_\-info}}
+\index{system\_\-updater\_\-info@{system\_\-updater\_\-info}!system.module@{system.module}}
+\subsubsection[{system\_\-updater\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-updater\_\-info ()}}
+\label{system_8module_a10c5077ea405b6e4e312291299687e75}
+End of \char`\"{}defgroup authorize\char`\"{}. Implements \hyperlink{group__hooks_gafb9b375716a0ad02d35250dc252b3c99}{hook\_\-updater\_\-info()}. \hypertarget{system_8module_a4b41b351fd76cd41fe10c3ffe1e62504}{
+\index{system.module@{system.module}!system\_\-user\_\-login@{system\_\-user\_\-login}}
+\index{system\_\-user\_\-login@{system\_\-user\_\-login}!system.module@{system.module}}
+\subsubsection[{system\_\-user\_\-login}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-user\_\-login (\&\$ {\em edit}, \/  \$ {\em account})}}
+\label{system_8module_a4b41b351fd76cd41fe10c3ffe1e62504}
+Implements \hyperlink{group__hooks_ga8cce712a39ee6e57bd506b5a0c457d09}{hook\_\-user\_\-login()}. \hypertarget{system_8module_a087533e7ffcffe8c417f2e2ef12c6f62}{
+\index{system.module@{system.module}!system\_\-user\_\-timezone@{system\_\-user\_\-timezone}}
+\index{system\_\-user\_\-timezone@{system\_\-user\_\-timezone}!system.module@{system.module}}
+\subsubsection[{system\_\-user\_\-timezone}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-user\_\-timezone (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{system_8module_a087533e7ffcffe8c417f2e2ef12c6f62}
+Add the time zone field to the user edit and register forms. 
