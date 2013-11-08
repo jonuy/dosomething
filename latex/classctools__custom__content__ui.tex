@@ -1,0 +1,103 @@
+\hypertarget{classctools__custom__content__ui}{
+\section{ctools\_\-custom\_\-content\_\-ui Class Reference}
+\label{classctools__custom__content__ui}\index{ctools\_\-custom\_\-content\_\-ui@{ctools\_\-custom\_\-content\_\-ui}}
+}
+Inheritance diagram for ctools\_\-custom\_\-content\_\-ui::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classctools__custom__content__ui}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classctools__custom__content__ui_ab0aa3104e4e701edbf82939f4d07b866}{edit\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classctools__custom__content__ui_a77ac2a98884dcc134470d1e28e01246e}{edit\_\-form\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classctools__custom__content__ui_a530636bea39fd3a90e7ffca2760643ec}{list\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classctools__custom__content__ui_a3b389db39e1d13eb7beca1c35e8edf16}{list\_\-filter} (\$form\_\-state, \$item)
+\item 
+\hyperlink{classctools__custom__content__ui_acc4d7c6bc7a3f3f744882157ca6512c4}{list\_\-sort\_\-options} ()
+\item 
+\hyperlink{classctools__custom__content__ui_a56ee3ac6704a7d3736da6d9cc6b229d4}{list\_\-build\_\-row} (\$item, \&\$form\_\-state, \$operations)
+\item 
+\hyperlink{classctools__custom__content__ui_a26ea6386756947b59995763ff673e1aa}{list\_\-table\_\-header} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classctools__custom__content__ui_ab0aa3104e4e701edbf82939f4d07b866}{
+\index{ctools\_\-custom\_\-content\_\-ui@{ctools\_\-custom\_\-content\_\-ui}!edit\_\-form@{edit\_\-form}}
+\index{edit\_\-form@{edit\_\-form}!ctools_custom_content_ui@{ctools\_\-custom\_\-content\_\-ui}}
+\subsubsection[{edit\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-custom\_\-content\_\-ui::edit\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classctools__custom__content__ui_ab0aa3104e4e701edbf82939f4d07b866}
+Provide the actual editing form. 
+
+Reimplemented from \hyperlink{classctools__export__ui_a183bc5e2bb1c4c48aedbd1754c5a0058}{ctools\_\-export\_\-ui}.\hypertarget{classctools__custom__content__ui_a77ac2a98884dcc134470d1e28e01246e}{
+\index{ctools\_\-custom\_\-content\_\-ui@{ctools\_\-custom\_\-content\_\-ui}!edit\_\-form\_\-submit@{edit\_\-form\_\-submit}}
+\index{edit\_\-form\_\-submit@{edit\_\-form\_\-submit}!ctools_custom_content_ui@{ctools\_\-custom\_\-content\_\-ui}}
+\subsubsection[{edit\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-custom\_\-content\_\-ui::edit\_\-form\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classctools__custom__content__ui_a77ac2a98884dcc134470d1e28e01246e}
+Handle the submission of the edit form.
+
+At this point, submission is successful. Our only responsibility is to copy anything out of values onto the item that we are able to edit.
+
+If the keys all match up to the schema, this method will not need to be overridden. 
+
+Reimplemented from \hyperlink{classctools__export__ui_ad63b402977462073eade789265987139}{ctools\_\-export\_\-ui}.\hypertarget{classctools__custom__content__ui_a56ee3ac6704a7d3736da6d9cc6b229d4}{
+\index{ctools\_\-custom\_\-content\_\-ui@{ctools\_\-custom\_\-content\_\-ui}!list\_\-build\_\-row@{list\_\-build\_\-row}}
+\index{list\_\-build\_\-row@{list\_\-build\_\-row}!ctools_custom_content_ui@{ctools\_\-custom\_\-content\_\-ui}}
+\subsubsection[{list\_\-build\_\-row}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-custom\_\-content\_\-ui::list\_\-build\_\-row (\$ {\em item}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em operations})}}
+\label{classctools__custom__content__ui_a56ee3ac6704a7d3736da6d9cc6b229d4}
+Build a row based on the item.
+
+By default all of the rows are placed into a table by the render method, so this is building up a row suitable for theme('table'). This doesn't have to be true if you override both. 
+
+Reimplemented from \hyperlink{classctools__export__ui_ad72f3d7170f48e0d0cb1dacb2926bb78}{ctools\_\-export\_\-ui}.\hypertarget{classctools__custom__content__ui_a3b389db39e1d13eb7beca1c35e8edf16}{
+\index{ctools\_\-custom\_\-content\_\-ui@{ctools\_\-custom\_\-content\_\-ui}!list\_\-filter@{list\_\-filter}}
+\index{list\_\-filter@{list\_\-filter}!ctools_custom_content_ui@{ctools\_\-custom\_\-content\_\-ui}}
+\subsubsection[{list\_\-filter}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-custom\_\-content\_\-ui::list\_\-filter (\$ {\em form\_\-state}, \/  \$ {\em item})}}
+\label{classctools__custom__content__ui_a3b389db39e1d13eb7beca1c35e8edf16}
+Determine if a row should be filtered out.
+
+This handles the default filters for the export UI list form. If you added additional filters in \hyperlink{classctools__custom__content__ui_a530636bea39fd3a90e7ffca2760643ec}{list\_\-form()} then this is where you should handle them.
+
+\begin{DoxyReturn}{Returns}
+TRUE if the item should be excluded. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classctools__export__ui_aed7f3b1a8d7564168f89e2b450c6aa4a}{ctools\_\-export\_\-ui}.\hypertarget{classctools__custom__content__ui_a530636bea39fd3a90e7ffca2760643ec}{
+\index{ctools\_\-custom\_\-content\_\-ui@{ctools\_\-custom\_\-content\_\-ui}!list\_\-form@{list\_\-form}}
+\index{list\_\-form@{list\_\-form}!ctools_custom_content_ui@{ctools\_\-custom\_\-content\_\-ui}}
+\subsubsection[{list\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-custom\_\-content\_\-ui::list\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classctools__custom__content__ui_a530636bea39fd3a90e7ffca2760643ec}
+Create the filter/sort form at the top of a list of exports.
+
+This handles the very default conditions, and most lists are expected to override this and call through to parent::list\_\-form() in order to get the base form and then modify it as necessary to add search gadgets for custom fields. 
+
+Reimplemented from \hyperlink{classctools__export__ui_a238e12ec5bfd7325bebad4f6261b6fa5}{ctools\_\-export\_\-ui}.\hypertarget{classctools__custom__content__ui_acc4d7c6bc7a3f3f744882157ca6512c4}{
+\index{ctools\_\-custom\_\-content\_\-ui@{ctools\_\-custom\_\-content\_\-ui}!list\_\-sort\_\-options@{list\_\-sort\_\-options}}
+\index{list\_\-sort\_\-options@{list\_\-sort\_\-options}!ctools_custom_content_ui@{ctools\_\-custom\_\-content\_\-ui}}
+\subsubsection[{list\_\-sort\_\-options}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-custom\_\-content\_\-ui::list\_\-sort\_\-options ()}}
+\label{classctools__custom__content__ui_acc4d7c6bc7a3f3f744882157ca6512c4}
+Provide a list of sort options.
+
+Override this if you wish to provide more or change how these work. The actual handling of the sorting will happen in build\_\-row(). 
+
+Reimplemented from \hyperlink{classctools__export__ui_ad9839b337e16e3c782eab7967550d3a1}{ctools\_\-export\_\-ui}.\hypertarget{classctools__custom__content__ui_a26ea6386756947b59995763ff673e1aa}{
+\index{ctools\_\-custom\_\-content\_\-ui@{ctools\_\-custom\_\-content\_\-ui}!list\_\-table\_\-header@{list\_\-table\_\-header}}
+\index{list\_\-table\_\-header@{list\_\-table\_\-header}!ctools_custom_content_ui@{ctools\_\-custom\_\-content\_\-ui}}
+\subsubsection[{list\_\-table\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-custom\_\-content\_\-ui::list\_\-table\_\-header ()}}
+\label{classctools__custom__content__ui_a26ea6386756947b59995763ff673e1aa}
+Provide the table header.
+
+If you've added columns via \hyperlink{classctools__custom__content__ui_a56ee3ac6704a7d3736da6d9cc6b229d4}{list\_\-build\_\-row()} but are still using a table, override this method to set up the table header. 
+
+Reimplemented from \hyperlink{classctools__export__ui_a01b1219535377db871132934f806b8a0}{ctools\_\-export\_\-ui}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/ctools/ctools\_\-custom\_\-content/plugins/export\_\-ui/ctools\_\-custom\_\-content\_\-ui.class.php\end{DoxyCompactItemize}

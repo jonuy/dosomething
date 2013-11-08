@@ -1,0 +1,70 @@
+\hypertarget{page__title_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/content\_\-types/page/page\_\-title.inc File Reference}
+\label{page__title_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/content\_\-types/page/page\_\-title.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/content\_\-types/page/page\_\-title.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{page__title_8inc_acaa253005e6582abb1efa33d16d459c7}{ctools\_\-page\_\-title\_\-content\_\-type\_\-render} (\$subtype, \$conf, \$panel\_\-args)
+\item 
+\hypertarget{page__title_8inc_a5a877e64e80d1f3d92e63f35e99adae4}{
+{\bfseries ctools\_\-page\_\-title\_\-content\_\-type\_\-edit\_\-form} (\$form, \&\$form\_\-state)}
+\label{page__title_8inc_a5a877e64e80d1f3d92e63f35e99adae4}
+
+\item 
+\hyperlink{page__title_8inc_a85666e0116e4aef569a498dd6c3fafad}{ctools\_\-page\_\-title\_\-content\_\-type\_\-edit\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__title_8inc_a277e72debf66e71329b1f9960854822a}{ctools\_\-page\_\-title\_\-content\_\-type\_\-token} (\&\$variables, \$tag, \$id, \$class)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{page__title_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to handle the 'page' content type which allows the standard page template variables to be embedded into a panel. 
+
+\subsection{Function Documentation}
+\hypertarget{page__title_8inc_a85666e0116e4aef569a498dd6c3fafad}{
+\index{page\_\-title.inc@{page\_\-title.inc}!ctools\_\-page\_\-title\_\-content\_\-type\_\-edit\_\-form\_\-submit@{ctools\_\-page\_\-title\_\-content\_\-type\_\-edit\_\-form\_\-submit}}
+\index{ctools\_\-page\_\-title\_\-content\_\-type\_\-edit\_\-form\_\-submit@{ctools\_\-page\_\-title\_\-content\_\-type\_\-edit\_\-form\_\-submit}!page_title.inc@{page\_\-title.inc}}
+\subsubsection[{ctools\_\-page\_\-title\_\-content\_\-type\_\-edit\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-page\_\-title\_\-content\_\-type\_\-edit\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__title_8inc_a85666e0116e4aef569a498dd6c3fafad}
+The submit form stores the data in \$conf. \hypertarget{page__title_8inc_acaa253005e6582abb1efa33d16d459c7}{
+\index{page\_\-title.inc@{page\_\-title.inc}!ctools\_\-page\_\-title\_\-content\_\-type\_\-render@{ctools\_\-page\_\-title\_\-content\_\-type\_\-render}}
+\index{ctools\_\-page\_\-title\_\-content\_\-type\_\-render@{ctools\_\-page\_\-title\_\-content\_\-type\_\-render}!page_title.inc@{page\_\-title.inc}}
+\subsubsection[{ctools\_\-page\_\-title\_\-content\_\-type\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-page\_\-title\_\-content\_\-type\_\-render (\$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em panel\_\-args})}}
+\label{page__title_8inc_acaa253005e6582abb1efa33d16d459c7}
+Output function for the 'page\_\-title' content type.
+
+Outputs the page title of the current page. \hypertarget{page__title_8inc_a277e72debf66e71329b1f9960854822a}{
+\index{page\_\-title.inc@{page\_\-title.inc}!ctools\_\-page\_\-title\_\-content\_\-type\_\-token@{ctools\_\-page\_\-title\_\-content\_\-type\_\-token}}
+\index{ctools\_\-page\_\-title\_\-content\_\-type\_\-token@{ctools\_\-page\_\-title\_\-content\_\-type\_\-token}!page_title.inc@{page\_\-title.inc}}
+\subsubsection[{ctools\_\-page\_\-title\_\-content\_\-type\_\-token}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-page\_\-title\_\-content\_\-type\_\-token (\&\$ {\em variables}, \/  \$ {\em tag}, \/  \$ {\em id}, \/  \$ {\em class})}}
+\label{page__title_8inc_a277e72debf66e71329b1f9960854822a}
+Variable token callback to properly render the page title, with markup. 
+
+\subsection{Variable Documentation}
+\hypertarget{page__title_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{page\_\-title.inc@{page\_\-title.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!page_title.inc@{page\_\-title.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{page__title_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'single' => TRUE,
+  'title' => t('Page title'),
+  'icon' => 'icon_page.png',
+  'description' => t('Add the page title as content.'),
+  'category' => t('Page elements'),
+  'defaults' => array(
+    'markup' => 'h1',
+    'class' => '',
+    'id' => '',
+  ),
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

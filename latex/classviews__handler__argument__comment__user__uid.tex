@@ -1,0 +1,70 @@
+\hypertarget{classviews__handler__argument__comment__user__uid}{
+\section{views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid Class Reference}
+\label{classviews__handler__argument__comment__user__uid}\index{views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid@{views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid}}
+}
+Inheritance diagram for views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.5cm]{classviews__handler__argument__comment__user__uid}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classviews__handler__argument__comment__user__uid_a4e106a92bbbdb88e1207fe525480c18b}{title} ()
+\item 
+\hyperlink{classviews__handler__argument__comment__user__uid_a492e0d7daafffc95f6ac936111556559}{default\_\-actions} (\$which=NULL)
+\item 
+\hyperlink{classviews__handler__argument__comment__user__uid_a6c3118256c6d2c60167d289c947d31c6}{query} (\$group\_\-by=FALSE)
+\item 
+\hyperlink{classviews__handler__argument__comment__user__uid_a8f744e47fec12bc54c231f8a41a3447d}{get\_\-sort\_\-name} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Argument handler to accept a user id to check for nodes that user posted or commented on. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__handler__argument__comment__user__uid_a492e0d7daafffc95f6ac936111556559}{
+\index{views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid@{views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid}!default\_\-actions@{default\_\-actions}}
+\index{default\_\-actions@{default\_\-actions}!views_handler_argument_comment_user_uid@{views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid}}
+\subsubsection[{default\_\-actions}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid::default\_\-actions (\$ {\em which} = {\ttfamily NULL})}}
+\label{classviews__handler__argument__comment__user__uid_a492e0d7daafffc95f6ac936111556559}
+Provide a list of default behaviors for this argument if the argument is not present.
+
+Override this method to provide additional (or fewer) default behaviors. 
+
+Reimplemented from \hyperlink{classviews__handler__argument_abf38ef334b6e18e0aa43e5a829e3ce33}{views\_\-handler\_\-argument}.\hypertarget{classviews__handler__argument__comment__user__uid_a8f744e47fec12bc54c231f8a41a3447d}{
+\index{views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid@{views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid}!get\_\-sort\_\-name@{get\_\-sort\_\-name}}
+\index{get\_\-sort\_\-name@{get\_\-sort\_\-name}!views_handler_argument_comment_user_uid@{views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid}}
+\subsubsection[{get\_\-sort\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid::get\_\-sort\_\-name ()}}
+\label{classviews__handler__argument__comment__user__uid_a8f744e47fec12bc54c231f8a41a3447d}
+Return a description of how the argument would normally be sorted.
+
+Subclasses should override this to specify what the default sort order of their argument is (e.g. alphabetical, numeric, date). 
+
+Reimplemented from \hyperlink{classviews__handler__argument_a9fad9ab1a7aaa5915baf13a2872faa70}{views\_\-handler\_\-argument}.\hypertarget{classviews__handler__argument__comment__user__uid_a6c3118256c6d2c60167d289c947d31c6}{
+\index{views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid@{views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid}!query@{query}}
+\index{query@{query}!views_handler_argument_comment_user_uid@{views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid}}
+\subsubsection[{query}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid::query (\$ {\em group\_\-by} = {\ttfamily FALSE})}}
+\label{classviews__handler__argument__comment__user__uid_a6c3118256c6d2c60167d289c947d31c6}
+Set up the query for this argument.
+
+The argument sent may be found at \$this-\/$>$argument. 
+
+Reimplemented from \hyperlink{classviews__handler__argument_af9ddabf5d386782c8ffc5785b7ae4263}{views\_\-handler\_\-argument}.
+
+Reimplemented in \hyperlink{classviews__handler__argument__node__uid__revision_a25585cd59a236e99a364fe0a1d6f9b90}{views\_\-handler\_\-argument\_\-node\_\-uid\_\-revision}, and \hyperlink{classviews__handler__argument__tracker__comment__user__uid_aa47cdf41b905e786067d25527bca1f1f}{views\_\-handler\_\-argument\_\-tracker\_\-comment\_\-user\_\-uid}.\hypertarget{classviews__handler__argument__comment__user__uid_a4e106a92bbbdb88e1207fe525480c18b}{
+\index{views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid@{views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid}!title@{title}}
+\index{title@{title}!views_handler_argument_comment_user_uid@{views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid}}
+\subsubsection[{title}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid::title ()}}
+\label{classviews__handler__argument__comment__user__uid_a4e106a92bbbdb88e1207fe525480c18b}
+Get the title this argument will assign the \hyperlink{classview}{view}, given the argument.
+
+This usually needs to be overridden to provide a proper title. 
+
+Reimplemented from \hyperlink{classviews__handler__argument_a76181ac24e7be4a09aaafc1fa5f15ea1}{views\_\-handler\_\-argument}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/modules/comment/\hyperlink{views__handler__argument__comment__user__uid_8inc}{views\_\-handler\_\-argument\_\-comment\_\-user\_\-uid.inc}\end{DoxyCompactItemize}

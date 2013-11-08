@@ -1,0 +1,132 @@
+\hypertarget{mandrill__template_8module}{
+\section{html/profiles/dosomething/modules/contrib/mandrill/modules/mandrill\_\-template/mandrill\_\-template.module File Reference}
+\label{mandrill__template_8module}\index{html/profiles/dosomething/modules/contrib/mandrill/modules/mandrill\_\-template/mandrill\_\-template.module@{html/profiles/dosomething/modules/contrib/mandrill/modules/mandrill\_\-template/mandrill\_\-template.module}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mandrill__template_8module_a388c001a4f19bb5e890e5962d9a9481a}{mandrill\_\-template\_\-entity\_\-info} ()
+\item 
+\hyperlink{mandrill__template_8module_a6a451669be92b42b30f8ef8ffa9cb315}{mandrill\_\-template\_\-map\_\-access} ()
+\item 
+\hyperlink{mandrill__template_8module_ae1d3285f08ccd1416a34b0f0c5276c64}{mandrill\_\-template\_\-permission} ()
+\item 
+\hyperlink{mandrill__template_8module_aa010cdfe57b90112df7d15324437e978}{mandrill\_\-template\_\-map\_\-load\_\-entities} (\$name=NULL)
+\item 
+\hyperlink{mandrill__template_8module_a7f2ce537053644baac78cca50aff8c8f}{mandrill\_\-template\_\-map\_\-load\_\-by\_\-mailsystem} (\$mailsystem)
+\item 
+\hyperlink{mandrill__template_8module_abcdfe09006615253c14cfaf0fe035ade}{mandrill\_\-template\_\-map\_\-usage} ()
+\item 
+\hyperlink{mandrill__template_8module_ab93754dd057f76eac9f42382cd35815e}{mandrill\_\-template\_\-mandrill\_\-mail\_\-alter} (\&\$mandrill\_\-params, \$message)
+\item 
+\hyperlink{mandrill__template_8module_aa9e98789848a212268bd3978937a7c54}{mandrill\_\-template\_\-sender} (\$message, \$template\_\-id, \$template\_\-content)
+\item 
+\hyperlink{mandrill__template_8module_a51089c73974e16c1b7c794f21f849534}{\_\-mandrill\_\-template\_\-map\_\-mailsystem\_\-sort} (\$a, \$b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Enables Drupal to send email using Mandrill's template system. 
+
+\subsection{Function Documentation}
+\hypertarget{mandrill__template_8module_a51089c73974e16c1b7c794f21f849534}{
+\index{mandrill\_\-template.module@{mandrill\_\-template.module}!\_\-mandrill\_\-template\_\-map\_\-mailsystem\_\-sort@{\_\-mandrill\_\-template\_\-map\_\-mailsystem\_\-sort}}
+\index{\_\-mandrill\_\-template\_\-map\_\-mailsystem\_\-sort@{\_\-mandrill\_\-template\_\-map\_\-mailsystem\_\-sort}!mandrill_template.module@{mandrill\_\-template.module}}
+\subsubsection[{\_\-mandrill\_\-template\_\-map\_\-mailsystem\_\-sort}]{\setlength{\rightskip}{0pt plus 5cm}\_\-mandrill\_\-template\_\-map\_\-mailsystem\_\-sort (\$ {\em a}, \/  \$ {\em b})}}
+\label{mandrill__template_8module_a51089c73974e16c1b7c794f21f849534}
+Simple sorting algorithm to organize mailsystems arrays in a logical way.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$a a mailsystem key name \item[{\em string}]\$b a mailsystem key name\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Negative if \$a should come before \$b, else positive. 
+\end{DoxyReturn}
+\hypertarget{mandrill__template_8module_a388c001a4f19bb5e890e5962d9a9481a}{
+\index{mandrill\_\-template.module@{mandrill\_\-template.module}!mandrill\_\-template\_\-entity\_\-info@{mandrill\_\-template\_\-entity\_\-info}}
+\index{mandrill\_\-template\_\-entity\_\-info@{mandrill\_\-template\_\-entity\_\-info}!mandrill_template.module@{mandrill\_\-template.module}}
+\subsubsection[{mandrill\_\-template\_\-entity\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}mandrill\_\-template\_\-entity\_\-info ()}}
+\label{mandrill__template_8module_a388c001a4f19bb5e890e5962d9a9481a}
+Implements hook\_\-entity\_\-info(). \hypertarget{mandrill__template_8module_ab93754dd057f76eac9f42382cd35815e}{
+\index{mandrill\_\-template.module@{mandrill\_\-template.module}!mandrill\_\-template\_\-mandrill\_\-mail\_\-alter@{mandrill\_\-template\_\-mandrill\_\-mail\_\-alter}}
+\index{mandrill\_\-template\_\-mandrill\_\-mail\_\-alter@{mandrill\_\-template\_\-mandrill\_\-mail\_\-alter}!mandrill_template.module@{mandrill\_\-template.module}}
+\subsubsection[{mandrill\_\-template\_\-mandrill\_\-mail\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}mandrill\_\-template\_\-mandrill\_\-mail\_\-alter (\&\$ {\em mandrill\_\-params}, \/  \$ {\em message})}}
+\label{mandrill__template_8module_ab93754dd057f76eac9f42382cd35815e}
+Implements hook\_\-mandrill\_\-mail\_\-alter().
+
+Determine if an email is configured to use a \hyperlink{classMandrill}{Mandrill} template and change the mandrill\_\-send\_\-function parameter as needed.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$mandrill\_\-params Associative array of mandrill parameters including the mandrill message.\item[{\em array}]\$message The original Drupal message. \end{DoxyParams}
+\hypertarget{mandrill__template_8module_a6a451669be92b42b30f8ef8ffa9cb315}{
+\index{mandrill\_\-template.module@{mandrill\_\-template.module}!mandrill\_\-template\_\-map\_\-access@{mandrill\_\-template\_\-map\_\-access}}
+\index{mandrill\_\-template\_\-map\_\-access@{mandrill\_\-template\_\-map\_\-access}!mandrill_template.module@{mandrill\_\-template.module}}
+\subsubsection[{mandrill\_\-template\_\-map\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}mandrill\_\-template\_\-map\_\-access ()}}
+\label{mandrill__template_8module_a6a451669be92b42b30f8ef8ffa9cb315}
+Access callback for mandrill\_\-template\_\-map.
+
+\begin{DoxyReturn}{Returns}
+bool True if current user has acces to template maps, else false 
+\end{DoxyReturn}
+\hypertarget{mandrill__template_8module_a7f2ce537053644baac78cca50aff8c8f}{
+\index{mandrill\_\-template.module@{mandrill\_\-template.module}!mandrill\_\-template\_\-map\_\-load\_\-by\_\-mailsystem@{mandrill\_\-template\_\-map\_\-load\_\-by\_\-mailsystem}}
+\index{mandrill\_\-template\_\-map\_\-load\_\-by\_\-mailsystem@{mandrill\_\-template\_\-map\_\-load\_\-by\_\-mailsystem}!mandrill_template.module@{mandrill\_\-template.module}}
+\subsubsection[{mandrill\_\-template\_\-map\_\-load\_\-by\_\-mailsystem}]{\setlength{\rightskip}{0pt plus 5cm}mandrill\_\-template\_\-map\_\-load\_\-by\_\-mailsystem (\$ {\em mailsystem})}}
+\label{mandrill__template_8module_a7f2ce537053644baac78cca50aff8c8f}
+Tells you which template\_\-map is configured for a mailsystem key, if any.
+
+Will search for a default-\/system mapping if none is availble for a given key.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$mailsystem Mail key to search for a template mapping.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mandrill\_\-template\_\-map \hyperlink{classMandrill}{Mandrill} template map. 
+\end{DoxyReturn}
+\hypertarget{mandrill__template_8module_aa010cdfe57b90112df7d15324437e978}{
+\index{mandrill\_\-template.module@{mandrill\_\-template.module}!mandrill\_\-template\_\-map\_\-load\_\-entities@{mandrill\_\-template\_\-map\_\-load\_\-entities}}
+\index{mandrill\_\-template\_\-map\_\-load\_\-entities@{mandrill\_\-template\_\-map\_\-load\_\-entities}!mandrill_template.module@{mandrill\_\-template.module}}
+\subsubsection[{mandrill\_\-template\_\-map\_\-load\_\-entities}]{\setlength{\rightskip}{0pt plus 5cm}mandrill\_\-template\_\-map\_\-load\_\-entities (\$ {\em name} = {\ttfamily NULL})}}
+\label{mandrill__template_8module_aa010cdfe57b90112df7d15324437e978}
+Loads a single mandrill\_\-template\_\-map or all of them if no name provided.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em null}]\$name name of the template map entity\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array array of template\_\-map entities 
+\end{DoxyReturn}
+\hypertarget{mandrill__template_8module_abcdfe09006615253c14cfaf0fe035ade}{
+\index{mandrill\_\-template.module@{mandrill\_\-template.module}!mandrill\_\-template\_\-map\_\-usage@{mandrill\_\-template\_\-map\_\-usage}}
+\index{mandrill\_\-template\_\-map\_\-usage@{mandrill\_\-template\_\-map\_\-usage}!mandrill_template.module@{mandrill\_\-template.module}}
+\subsubsection[{mandrill\_\-template\_\-map\_\-usage}]{\setlength{\rightskip}{0pt plus 5cm}mandrill\_\-template\_\-map\_\-usage ()}}
+\label{mandrill__template_8module_abcdfe09006615253c14cfaf0fe035ade}
+Get all mailsystem keys pointed at mandrill and their template mappings.
+
+\begin{DoxyReturn}{Returns}
+array Returns an array with indexes matching each module which is assigned to use \hyperlink{classMandrill}{Mandrill} for email sends, and values equal to the template\_\-map\_\-ids that are assigned to those modules. If no template maps are assigned, the value is set to NULL. 
+\end{DoxyReturn}
+\hypertarget{mandrill__template_8module_ae1d3285f08ccd1416a34b0f0c5276c64}{
+\index{mandrill\_\-template.module@{mandrill\_\-template.module}!mandrill\_\-template\_\-permission@{mandrill\_\-template\_\-permission}}
+\index{mandrill\_\-template\_\-permission@{mandrill\_\-template\_\-permission}!mandrill_template.module@{mandrill\_\-template.module}}
+\subsubsection[{mandrill\_\-template\_\-permission}]{\setlength{\rightskip}{0pt plus 5cm}mandrill\_\-template\_\-permission ()}}
+\label{mandrill__template_8module_ae1d3285f08ccd1416a34b0f0c5276c64}
+Implements hook\_\-permission(). \hypertarget{mandrill__template_8module_aa9e98789848a212268bd3978937a7c54}{
+\index{mandrill\_\-template.module@{mandrill\_\-template.module}!mandrill\_\-template\_\-sender@{mandrill\_\-template\_\-sender}}
+\index{mandrill\_\-template\_\-sender@{mandrill\_\-template\_\-sender}!mandrill_template.module@{mandrill\_\-template.module}}
+\subsubsection[{mandrill\_\-template\_\-sender}]{\setlength{\rightskip}{0pt plus 5cm}mandrill\_\-template\_\-sender (\$ {\em message}, \/  \$ {\em template\_\-id}, \/  \$ {\em template\_\-content})}}
+\label{mandrill__template_8module_aa9e98789848a212268bd3978937a7c54}
+Send a templated \hyperlink{classMandrill}{Mandrill} message.
+
+This function checks for appropriate settings in the message, then uses the template API call to send the message if the settings are valid.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$message \hyperlink{classMandrill}{Mandrill} message to send. \item[{\em string}]\$template\_\-id Name of the template to use. \item[{\em array}]\$template\_\-content Associative array mapping template regions and content.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array Message response.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classMandrillException}{MandrillException}}]\end{DoxyExceptions}

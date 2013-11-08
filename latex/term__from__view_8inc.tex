@@ -1,0 +1,61 @@
+\hypertarget{term__from__view_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/relationships/term\_\-from\_\-view.inc File Reference}
+\label{term__from__view_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/relationships/term\_\-from\_\-view.inc@{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/relationships/term\_\-from\_\-view.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{term__from__view_8inc_ae83e9aaa8c6fe1be354f6ba0ead74c89}{views\_\-content\_\-term\_\-from\_\-view\_\-context} (\$context, \$conf, \$placeholder=FALSE)
+\item 
+\hyperlink{term__from__view_8inc_a87dcdde935c61cb30183a170680e574f}{views\_\-content\_\-term\_\-from\_\-view\_\-settings\_\-form} (\$form, \&\$form\_\-state)
+\item 
+\hypertarget{term__from__view_8inc_a5602d5fd06c60500a77e2789c8aa7caa}{
+{\bfseries views\_\-content\_\-term\_\-from\_\-view\_\-settings\_\-form\_\-validate} (\$form, \&\$form\_\-state)}
+\label{term__from__view_8inc_a5602d5fd06c60500a77e2789c8aa7caa}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{term__from__view_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide an relationship handler for term from \hyperlink{classview}{view}. 
+
+\subsection{Function Documentation}
+\hypertarget{term__from__view_8inc_ae83e9aaa8c6fe1be354f6ba0ead74c89}{
+\index{term\_\-from\_\-view.inc@{term\_\-from\_\-view.inc}!views\_\-content\_\-term\_\-from\_\-view\_\-context@{views\_\-content\_\-term\_\-from\_\-view\_\-context}}
+\index{views\_\-content\_\-term\_\-from\_\-view\_\-context@{views\_\-content\_\-term\_\-from\_\-view\_\-context}!term_from_view.inc@{term\_\-from\_\-view.inc}}
+\subsubsection[{views\_\-content\_\-term\_\-from\_\-view\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-term\_\-from\_\-view\_\-context (\$ {\em context}, \/  \$ {\em conf}, \/  \$ {\em placeholder} = {\ttfamily FALSE})}}
+\label{term__from__view_8inc_ae83e9aaa8c6fe1be354f6ba0ead74c89}
+Return a new context based on an existing context. \hypertarget{term__from__view_8inc_a87dcdde935c61cb30183a170680e574f}{
+\index{term\_\-from\_\-view.inc@{term\_\-from\_\-view.inc}!views\_\-content\_\-term\_\-from\_\-view\_\-settings\_\-form@{views\_\-content\_\-term\_\-from\_\-view\_\-settings\_\-form}}
+\index{views\_\-content\_\-term\_\-from\_\-view\_\-settings\_\-form@{views\_\-content\_\-term\_\-from\_\-view\_\-settings\_\-form}!term_from_view.inc@{term\_\-from\_\-view.inc}}
+\subsubsection[{views\_\-content\_\-term\_\-from\_\-view\_\-settings\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-term\_\-from\_\-view\_\-settings\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{term__from__view_8inc_a87dcdde935c61cb30183a170680e574f}
+Settings form for the relationship. 
+
+\subsection{Variable Documentation}
+\hypertarget{term__from__view_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{term\_\-from\_\-view.inc@{term\_\-from\_\-view.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!term_from_view.inc@{term\_\-from\_\-view.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{term__from__view_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('Term from view'),
+  'keyword' => 'term',
+  'description' => t('Extract a term context from a view context of the base type
+       term.'),
+  'required context' => new ctools_context_required(t('View'), 'view', array('bas
+      e' => 'term_data')),
+  'context' => 'views_content_term_from_view_context',
+  'edit form' => 'views_content_term_from_view_settings_form',
+  'edit form validate' => 'views_content_term_from_view_settings_form_validate',
+  'defaults' => array('row' => 1),
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

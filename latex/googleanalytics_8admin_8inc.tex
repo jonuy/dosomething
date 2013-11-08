@@ -1,0 +1,73 @@
+\hypertarget{googleanalytics_8admin_8inc}{
+\section{html/profiles/dosomething/modules/contrib/google\_\-analytics/googleanalytics.admin.inc File Reference}
+\label{googleanalytics_8admin_8inc}\index{html/profiles/dosomething/modules/contrib/google\_\-analytics/googleanalytics.admin.inc@{html/profiles/dosomething/modules/contrib/google\_\-analytics/googleanalytics.admin.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{googleanalytics_8admin_8inc_abc6ca2b209feb9090c8ab26d6ca059c4}{googleanalytics\_\-admin\_\-settings\_\-form} (\$form\_\-state)
+\item 
+\hyperlink{googleanalytics_8admin_8inc_a41b564fb7aed5ae2811eddf2955eb13e}{googleanalytics\_\-admin\_\-settings\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{googleanalytics_8admin_8inc_a5cfde94d5c2c2f7a6b3cdbce2fa21dd7}{theme\_\-googleanalytics\_\-admin\_\-custom\_\-var\_\-table} (\$variables)
+\item 
+\hyperlink{googleanalytics_8admin_8inc_a54d8df69a1b0518237288949dfbfdb42}{googleanalytics\_\-token\_\-element\_\-validate} (\&\$element, \&\$form\_\-state)
+\item 
+\hypertarget{googleanalytics_8admin_8inc_aa7288a689b8d2c092847409abd23e13d}{
+{\bfseries \_\-googleanalytics\_\-get\_\-forbidden\_\-tokens} (\$value)}
+\label{googleanalytics_8admin_8inc_aa7288a689b8d2c092847409abd23e13d}
+
+\item 
+\hyperlink{googleanalytics_8admin_8inc_a5b9e604bc6be58cb66a3c479aadc1481}{\_\-googleanalytics\_\-contains\_\-forbidden\_\-token} (\$token\_\-string)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Administrative page callbacks for the googleanalytics module. 
+
+\subsection{Function Documentation}
+\hypertarget{googleanalytics_8admin_8inc_a5b9e604bc6be58cb66a3c479aadc1481}{
+\index{googleanalytics.admin.inc@{googleanalytics.admin.inc}!\_\-googleanalytics\_\-contains\_\-forbidden\_\-token@{\_\-googleanalytics\_\-contains\_\-forbidden\_\-token}}
+\index{\_\-googleanalytics\_\-contains\_\-forbidden\_\-token@{\_\-googleanalytics\_\-contains\_\-forbidden\_\-token}!googleanalytics.admin.inc@{googleanalytics.admin.inc}}
+\subsubsection[{\_\-googleanalytics\_\-contains\_\-forbidden\_\-token}]{\setlength{\rightskip}{0pt plus 5cm}\_\-googleanalytics\_\-contains\_\-forbidden\_\-token (\$ {\em token\_\-string})}}
+\label{googleanalytics_8admin_8inc_a5b9e604bc6be58cb66a3c479aadc1481}
+Validate if a string contains forbidden tokens not allowed by privacy rules.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$token\_\-string}]A string with one or more tokens to be validated. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean TRUE if blacklisted token has been found, otherwise FALSE. 
+\end{DoxyReturn}
+\hypertarget{googleanalytics_8admin_8inc_abc6ca2b209feb9090c8ab26d6ca059c4}{
+\index{googleanalytics.admin.inc@{googleanalytics.admin.inc}!googleanalytics\_\-admin\_\-settings\_\-form@{googleanalytics\_\-admin\_\-settings\_\-form}}
+\index{googleanalytics\_\-admin\_\-settings\_\-form@{googleanalytics\_\-admin\_\-settings\_\-form}!googleanalytics.admin.inc@{googleanalytics.admin.inc}}
+\subsubsection[{googleanalytics\_\-admin\_\-settings\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}googleanalytics\_\-admin\_\-settings\_\-form (\$ {\em form\_\-state})}}
+\label{googleanalytics_8admin_8inc_abc6ca2b209feb9090c8ab26d6ca059c4}
+Implements hook\_\-admin\_\-settings() for module settings configuration. \hypertarget{googleanalytics_8admin_8inc_a41b564fb7aed5ae2811eddf2955eb13e}{
+\index{googleanalytics.admin.inc@{googleanalytics.admin.inc}!googleanalytics\_\-admin\_\-settings\_\-form\_\-validate@{googleanalytics\_\-admin\_\-settings\_\-form\_\-validate}}
+\index{googleanalytics\_\-admin\_\-settings\_\-form\_\-validate@{googleanalytics\_\-admin\_\-settings\_\-form\_\-validate}!googleanalytics.admin.inc@{googleanalytics.admin.inc}}
+\subsubsection[{googleanalytics\_\-admin\_\-settings\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}googleanalytics\_\-admin\_\-settings\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{googleanalytics_8admin_8inc_a41b564fb7aed5ae2811eddf2955eb13e}
+Implements \_\-form\_\-validate(). \hypertarget{googleanalytics_8admin_8inc_a54d8df69a1b0518237288949dfbfdb42}{
+\index{googleanalytics.admin.inc@{googleanalytics.admin.inc}!googleanalytics\_\-token\_\-element\_\-validate@{googleanalytics\_\-token\_\-element\_\-validate}}
+\index{googleanalytics\_\-token\_\-element\_\-validate@{googleanalytics\_\-token\_\-element\_\-validate}!googleanalytics.admin.inc@{googleanalytics.admin.inc}}
+\subsubsection[{googleanalytics\_\-token\_\-element\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}googleanalytics\_\-token\_\-element\_\-validate (\&\$ {\em element}, \/  \&\$ {\em form\_\-state})}}
+\label{googleanalytics_8admin_8inc_a54d8df69a1b0518237288949dfbfdb42}
+Validate a form element that should have tokens in it.
+
+For example: 
+\begin{DoxyCode}
+ $form['my_node_text_element'] = array(
+   '#type' => 'textfield',
+   '#title' => t('Some text to token-ize that has a node context.'),
+   '#default_value' => 'The title of this node is [node:title].',
+   '#element_validate' => array('googleanalytics_token_element_validate'),
+ );
+\end{DoxyCode}
+ \hypertarget{googleanalytics_8admin_8inc_a5cfde94d5c2c2f7a6b3cdbce2fa21dd7}{
+\index{googleanalytics.admin.inc@{googleanalytics.admin.inc}!theme\_\-googleanalytics\_\-admin\_\-custom\_\-var\_\-table@{theme\_\-googleanalytics\_\-admin\_\-custom\_\-var\_\-table}}
+\index{theme\_\-googleanalytics\_\-admin\_\-custom\_\-var\_\-table@{theme\_\-googleanalytics\_\-admin\_\-custom\_\-var\_\-table}!googleanalytics.admin.inc@{googleanalytics.admin.inc}}
+\subsubsection[{theme\_\-googleanalytics\_\-admin\_\-custom\_\-var\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}theme\_\-googleanalytics\_\-admin\_\-custom\_\-var\_\-table (\$ {\em variables})}}
+\label{googleanalytics_8admin_8inc_a5cfde94d5c2c2f7a6b3cdbce2fa21dd7}
+Layout for the custom variables table in the admin settings form. 

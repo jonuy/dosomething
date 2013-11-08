@@ -1,0 +1,51 @@
+\hypertarget{classMandrillMailSystem}{
+\section{MandrillMailSystem Class Reference}
+\label{classMandrillMailSystem}\index{MandrillMailSystem@{MandrillMailSystem}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMandrillMailSystem_a4e7e619d5560224017ccc438c31e40d6}{format} (array \$message)
+\item 
+\hyperlink{classMandrillMailSystem_a2d56986dfa5ce08e134344078710cf23}{mail} (array \$message)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Modify the drupal mail system to use \hyperlink{classMandrill}{Mandrill} when sending emails. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classMandrillMailSystem_a4e7e619d5560224017ccc438c31e40d6}{
+\index{MandrillMailSystem@{MandrillMailSystem}!format@{format}}
+\index{format@{format}!MandrillMailSystem@{MandrillMailSystem}}
+\subsubsection[{format}]{\setlength{\rightskip}{0pt plus 5cm}MandrillMailSystem::format (array \$ {\em message})}}
+\label{classMandrillMailSystem_a4e7e619d5560224017ccc438c31e40d6}
+Concatenate and wrap the email body for either plain-\/text or HTML emails.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$message A message array, as described in hook\_\-mail\_\-alter().\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array The formatted \$message. 
+\end{DoxyReturn}
+\hypertarget{classMandrillMailSystem_a2d56986dfa5ce08e134344078710cf23}{
+\index{MandrillMailSystem@{MandrillMailSystem}!mail@{mail}}
+\index{mail@{mail}!MandrillMailSystem@{MandrillMailSystem}}
+\subsubsection[{mail}]{\setlength{\rightskip}{0pt plus 5cm}MandrillMailSystem::mail (array \$ {\em message})}}
+\label{classMandrillMailSystem_a2d56986dfa5ce08e134344078710cf23}
+Send the email message.
+
+\begin{DoxySeeAlso}{See also}
+drupal\_\-mail()
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$message A message array, as described in hook\_\-mail\_\-alter().\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the mail was successfully accepted, otherwise FALSE. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/mandrill/lib/\hyperlink{mandrill_8mail_8inc}{mandrill.mail.inc}\end{DoxyCompactItemize}

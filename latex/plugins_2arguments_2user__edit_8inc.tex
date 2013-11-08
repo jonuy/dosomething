@@ -1,0 +1,49 @@
+\hypertarget{plugins_2arguments_2user__edit_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/user\_\-edit.inc File Reference}
+\label{plugins_2arguments_2user__edit_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/user\_\-edit.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/user\_\-edit.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{plugins_2arguments_2user__edit_8inc_a150115991b4b933d858834ae9c2fc5ec}{ctools\_\-user\_\-edit\_\-context} (\$arg=NULL, \$conf=NULL, \$empty=FALSE)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{plugins_2arguments_2user__edit_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide an argument handler for a Taxonomy term 
+
+\subsection{Function Documentation}
+\hypertarget{plugins_2arguments_2user__edit_8inc_a150115991b4b933d858834ae9c2fc5ec}{
+\index{plugins/arguments/user\_\-edit.inc@{plugins/arguments/user\_\-edit.inc}!ctools\_\-user\_\-edit\_\-context@{ctools\_\-user\_\-edit\_\-context}}
+\index{ctools\_\-user\_\-edit\_\-context@{ctools\_\-user\_\-edit\_\-context}!plugins/arguments/user_edit.inc@{plugins/arguments/user\_\-edit.inc}}
+\subsubsection[{ctools\_\-user\_\-edit\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-user\_\-edit\_\-context (\$ {\em arg} = {\ttfamily NULL}, \/  \$ {\em conf} = {\ttfamily NULL}, \/  \$ {\em empty} = {\ttfamily FALSE})}}
+\label{plugins_2arguments_2user__edit_8inc_a150115991b4b933d858834ae9c2fc5ec}
+Discover if this argument gives us the term we crave. 
+
+\subsection{Variable Documentation}
+\hypertarget{plugins_2arguments_2user__edit_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{plugins/arguments/user\_\-edit.inc@{plugins/arguments/user\_\-edit.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!plugins/arguments/user_edit.inc@{plugins/arguments/user\_\-edit.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{plugins_2arguments_2user__edit_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t("User edit form: User ID"),
+  
+  'keyword' => 'user',
+  'description' => t('Creates a user edit form context from a user ID argument.')
+      ,
+  'context' => 'ctools_user_edit_context',
+  'placeholder form' => array(
+    '#type' => 'textfield',
+    '#description' => t('Enter the user ID for this argument.'),
+  ),
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

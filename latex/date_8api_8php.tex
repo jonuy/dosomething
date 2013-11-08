@@ -1,0 +1,373 @@
+\hypertarget{date_8api_8php}{
+\section{html/profiles/dosomething/modules/contrib/date/date.api.php File Reference}
+\label{date_8api_8php}\index{html/profiles/dosomething/modules/contrib/date/date.api.php@{html/profiles/dosomething/modules/contrib/date/date.api.php}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{date_8api_8php_a78d7487f22190596ae8d3298ae5426c2}{hook\_\-date\_\-default\_\-argument\_\-alter} (\&\$argument, \&\$value)
+\item 
+\hyperlink{date_8api_8php_a224b13fafa75d248a1d2b33d1c1f409e}{hook\_\-date\_\-formatter\_\-pre\_\-view\_\-alter} (\&\$entity, \&\$variables)
+\item 
+\hyperlink{date_8api_8php_aae52e9a3c4d3926f92ace9b0ec0041f4}{hook\_\-date\_\-formatter\_\-dates\_\-alter} (\&\$dates, \$context)
+\item 
+\hyperlink{date_8api_8php_a2fc6fc0b5b0092304084ce3ce29741ae}{hook\_\-date\_\-text\_\-pre\_\-validate\_\-alter} (\&\$element, \&\$form\_\-state, \&\$input)
+\item 
+\hyperlink{date_8api_8php_a8fa3364916ca73163501f3b9fa319dd6}{hook\_\-date\_\-select\_\-pre\_\-validate\_\-alter} (\&\$element, \&\$form\_\-state, \&\$input)
+\item 
+\hyperlink{date_8api_8php_ae85363c63f938c6742a67b315e925730}{hook\_\-date\_\-popup\_\-pre\_\-validate\_\-alter} (\&\$element, \&\$form\_\-state, \&\$input)
+\item 
+\hyperlink{date_8api_8php_acb65970e9f533601f60f43e490e85356}{hook\_\-date\_\-combo\_\-pre\_\-validate\_\-alter} (\&\$element, \&\$form\_\-state, \$context)
+\item 
+\hyperlink{date_8api_8php_a1a8f0f571d13297a9882ec71a9196692}{hook\_\-date\_\-combo\_\-validate\_\-date\_\-start\_\-alter} (\&\$date, \&\$form\_\-state, \$context)
+\item 
+\hyperlink{date_8api_8php_ae400f94244ac446f9682e71a57b14f9b}{hook\_\-date\_\-combo\_\-validate\_\-date\_\-end\_\-alter} (\&\$date, \&\$form\_\-state, \$context)
+\item 
+\hyperlink{date_8api_8php_ac8d820dc0acb6675634de00189114786}{hook\_\-date\_\-text\_\-process\_\-alter} (\&\$element, \&\$form\_\-state, \$context)
+\item 
+\hyperlink{date_8api_8php_a0688e456a52d3e4bdaaa63337d49e74c}{hook\_\-date\_\-select\_\-process\_\-alter} (\&\$element, \&\$form\_\-state, \$context)
+\item 
+\hyperlink{date_8api_8php_a8b0b96439de62930ff766eb159d044cb}{hook\_\-date\_\-popup\_\-process\_\-alter} (\&\$element, \&\$form\_\-state, \$context)
+\item 
+\hyperlink{date_8api_8php_abbae4e6ce7b9d70996e06174fc11497c}{hook\_\-date\_\-combo\_\-process\_\-alter} (\&\$element, \&\$form\_\-state, \$context)
+\item 
+\hyperlink{date_8api_8php_a7072a26bebd7c6cbdc660a77a79ef3e2}{hook\_\-date\_\-timezone\_\-process\_\-alter} (\&\$element, \&\$form\_\-state, \$context)
+\item 
+\hyperlink{date_8api_8php_ad2c977542770de5a0d5e170ecc5a0052}{hook\_\-date\_\-year\_\-range\_\-process\_\-alter} (\&\$element, \&\$form\_\-state, \$context)
+\item 
+\hyperlink{date_8api_8php_a109a61aa1f6183f9431a4b8e1b929e0b}{hook\_\-date\_\-field\_\-settings\_\-form\_\-alter} (\&\$form, \$context)
+\item 
+\hyperlink{date_8api_8php_a4dcd88abb62128ef8e63f5d2163f46b3}{hook\_\-date\_\-field\_\-instance\_\-settings\_\-form\_\-alter} (\&\$form, \$context)
+\item 
+\hyperlink{date_8api_8php_a0c2475c846f8750a83b95ea852bf42cf}{hook\_\-date\_\-field\_\-widget\_\-settings\_\-form\_\-alter} (\&\$form, \$context)
+\item 
+\hyperlink{date_8api_8php_a8100fc54aa7868fa781c96c8b99f2026}{hook\_\-date\_\-field\_\-formatter\_\-settings\_\-form\_\-alter} (\&\$form, \&\$form\_\-state, \$context)
+\item 
+\hyperlink{date_8api_8php_a8448df9f491a337e9da8ec9157934107}{hook\_\-date\_\-field\_\-formatter\_\-settings\_\-summary\_\-alter} (\&\$summary, \$context)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Hooks provided by the Date module. 
+
+\subsection{Function Documentation}
+\hypertarget{date_8api_8php_acb65970e9f533601f60f43e490e85356}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-combo\_\-pre\_\-validate\_\-alter@{hook\_\-date\_\-combo\_\-pre\_\-validate\_\-alter}}
+\index{hook\_\-date\_\-combo\_\-pre\_\-validate\_\-alter@{hook\_\-date\_\-combo\_\-pre\_\-validate\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-combo\_\-pre\_\-validate\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-combo\_\-pre\_\-validate\_\-alter (\&\$ {\em element}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em context})}}
+\label{date_8api_8php_acb65970e9f533601f60f43e490e85356}
+Alter the date\_\-combo element before the rest of the validation is run.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$element The \$element array. \item[{\em array}]\$form\_\-state A keyed array containing the current state of the form. \item[{\em array}]\$context An associative array containing the following keys:
+\begin{DoxyItemize}
+\item field: The \$field array.
+\item instance: The \$instance array.
+\item item: The \$item array.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{date__elements_8inc_a9542273df9fca1ba0a55c26573f3744e}{date\_\-combo\_\-element\_\-process()} 
+\end{DoxySeeAlso}
+\hypertarget{date_8api_8php_abbae4e6ce7b9d70996e06174fc11497c}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-combo\_\-process\_\-alter@{hook\_\-date\_\-combo\_\-process\_\-alter}}
+\index{hook\_\-date\_\-combo\_\-process\_\-alter@{hook\_\-date\_\-combo\_\-process\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-combo\_\-process\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-combo\_\-process\_\-alter (\&\$ {\em element}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em context})}}
+\label{date_8api_8php_abbae4e6ce7b9d70996e06174fc11497c}
+Alter the date\_\-combo element after the Date module is finished with it.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$element The \$element array. \item[{\em array}]\$form\_\-state A keyed array containing the current state of the form. \item[{\em array}]\$context An associative array containing the following keys:
+\begin{DoxyItemize}
+\item field: The \$field array.
+\item instance: The \$instance array.
+\item form: Nested array of form elements that comprise the form. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{date_8api_8php_ae400f94244ac446f9682e71a57b14f9b}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-combo\_\-validate\_\-date\_\-end\_\-alter@{hook\_\-date\_\-combo\_\-validate\_\-date\_\-end\_\-alter}}
+\index{hook\_\-date\_\-combo\_\-validate\_\-date\_\-end\_\-alter@{hook\_\-date\_\-combo\_\-validate\_\-date\_\-end\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-combo\_\-validate\_\-date\_\-end\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-combo\_\-validate\_\-date\_\-end\_\-alter (\&\$ {\em date}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em context})}}
+\label{date_8api_8php_ae400f94244ac446f9682e71a57b14f9b}
+Alter the local end date objects created by the date\_\-combo validation.
+
+This is called before the objects are converted back to the database timezone and stored.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em object}]\$date The \$date object. \item[{\em array}]\$form\_\-state A keyed array containing the current state of the form. \item[{\em array}]\$context An associative array containing the following keys:
+\begin{DoxyItemize}
+\item field: The \$field array.
+\item instance: The \$instance array.
+\item item: The \$item array.
+\item element: The \$element array. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{date_8api_8php_a1a8f0f571d13297a9882ec71a9196692}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-combo\_\-validate\_\-date\_\-start\_\-alter@{hook\_\-date\_\-combo\_\-validate\_\-date\_\-start\_\-alter}}
+\index{hook\_\-date\_\-combo\_\-validate\_\-date\_\-start\_\-alter@{hook\_\-date\_\-combo\_\-validate\_\-date\_\-start\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-combo\_\-validate\_\-date\_\-start\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-combo\_\-validate\_\-date\_\-start\_\-alter (\&\$ {\em date}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em context})}}
+\label{date_8api_8php_a1a8f0f571d13297a9882ec71a9196692}
+Alter the local start date objects created by the date\_\-combo validation.
+
+This is called before the objects are converted back to the database timezone and stored.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em object}]\$date The \$date object. \item[{\em array}]\$form\_\-state A keyed array containing the current state of the form. \item[{\em array}]\$context An associative array containing the following keys:
+\begin{DoxyItemize}
+\item field: The \$field array.
+\item instance: The \$instance array.
+\item item: The \$item array.
+\item element: The \$element array. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{date_8api_8php_a78d7487f22190596ae8d3298ae5426c2}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-default\_\-argument\_\-alter@{hook\_\-date\_\-default\_\-argument\_\-alter}}
+\index{hook\_\-date\_\-default\_\-argument\_\-alter@{hook\_\-date\_\-default\_\-argument\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-default\_\-argument\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-default\_\-argument\_\-alter (\&\$ {\em argument}, \/  \&\$ {\em value})}}
+\label{date_8api_8php_a78d7487f22190596ae8d3298ae5426c2}
+Alter the default value for a date argument.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em object}]\$argument The argument object. \item[{\em string}]\$value The default value created by the argument handler. \end{DoxyParams}
+\hypertarget{date_8api_8php_a8100fc54aa7868fa781c96c8b99f2026}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-field\_\-formatter\_\-settings\_\-form\_\-alter@{hook\_\-date\_\-field\_\-formatter\_\-settings\_\-form\_\-alter}}
+\index{hook\_\-date\_\-field\_\-formatter\_\-settings\_\-form\_\-alter@{hook\_\-date\_\-field\_\-formatter\_\-settings\_\-form\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-field\_\-formatter\_\-settings\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-field\_\-formatter\_\-settings\_\-form\_\-alter (\&\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em context})}}
+\label{date_8api_8php_a8100fc54aa7868fa781c96c8b99f2026}
+Alter a date field formatter settings form.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$form Nested array of form elements that comprise the form. \item[{\em array}]\$form\_\-state A keyed array containing the current state of the form. \item[{\em array}]\$context An associative array containing the following keys:
+\begin{DoxyItemize}
+\item field: The \$field array.
+\item instance: The \$instance array.
+\item view\_\-mode: The formatter \hyperlink{classview}{view} mode.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+hook\_\-field\_\-formatter\_\-settings\_\-form() 
+\end{DoxySeeAlso}
+\hypertarget{date_8api_8php_a8448df9f491a337e9da8ec9157934107}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-field\_\-formatter\_\-settings\_\-summary\_\-alter@{hook\_\-date\_\-field\_\-formatter\_\-settings\_\-summary\_\-alter}}
+\index{hook\_\-date\_\-field\_\-formatter\_\-settings\_\-summary\_\-alter@{hook\_\-date\_\-field\_\-formatter\_\-settings\_\-summary\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-field\_\-formatter\_\-settings\_\-summary\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-field\_\-formatter\_\-settings\_\-summary\_\-alter (\&\$ {\em summary}, \/  \$ {\em context})}}
+\label{date_8api_8php_a8448df9f491a337e9da8ec9157934107}
+Alter a date field formatter settings summary.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$summary An array of strings to be concatenated into a short summary of the formatter settings. \item[{\em array}]\$context An associative array containing the following keys:
+\begin{DoxyItemize}
+\item field: The \$field array.
+\item instance: The \$instance array.
+\item view\_\-mode: The formatter \hyperlink{classview}{view} mode.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+hook\_\-field\_\-formatter\_\-settings\_\-summary() 
+\end{DoxySeeAlso}
+\hypertarget{date_8api_8php_a4dcd88abb62128ef8e63f5d2163f46b3}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-field\_\-instance\_\-settings\_\-form\_\-alter@{hook\_\-date\_\-field\_\-instance\_\-settings\_\-form\_\-alter}}
+\index{hook\_\-date\_\-field\_\-instance\_\-settings\_\-form\_\-alter@{hook\_\-date\_\-field\_\-instance\_\-settings\_\-form\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-field\_\-instance\_\-settings\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-field\_\-instance\_\-settings\_\-form\_\-alter (\&\$ {\em form}, \/  \$ {\em context})}}
+\label{date_8api_8php_a4dcd88abb62128ef8e63f5d2163f46b3}
+Alter a date field instance settings form.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$form Nested array of form elements that comprise the form. \item[{\em array}]\$context An associative array containing the following keys:
+\begin{DoxyItemize}
+\item field: The \$field array.
+\item instance: The \$instance array.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+hook\_\-field\_\-instance\_\-settings\_\-form() 
+\end{DoxySeeAlso}
+\hypertarget{date_8api_8php_a109a61aa1f6183f9431a4b8e1b929e0b}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-field\_\-settings\_\-form\_\-alter@{hook\_\-date\_\-field\_\-settings\_\-form\_\-alter}}
+\index{hook\_\-date\_\-field\_\-settings\_\-form\_\-alter@{hook\_\-date\_\-field\_\-settings\_\-form\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-field\_\-settings\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-field\_\-settings\_\-form\_\-alter (\&\$ {\em form}, \/  \$ {\em context})}}
+\label{date_8api_8php_a109a61aa1f6183f9431a4b8e1b929e0b}
+Alter a date field settings form.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$form Nested array of form elements that comprise the form. \item[{\em array}]\$context An associative array containing the following keys:
+\begin{DoxyItemize}
+\item field: The \$field array.
+\item instance: The \$instance array.
+\item has\_\-data: The value of \$has\_\-data.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+hook\_\-field\_\-settings\_\-form() 
+\end{DoxySeeAlso}
+\hypertarget{date_8api_8php_a0c2475c846f8750a83b95ea852bf42cf}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-field\_\-widget\_\-settings\_\-form\_\-alter@{hook\_\-date\_\-field\_\-widget\_\-settings\_\-form\_\-alter}}
+\index{hook\_\-date\_\-field\_\-widget\_\-settings\_\-form\_\-alter@{hook\_\-date\_\-field\_\-widget\_\-settings\_\-form\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-field\_\-widget\_\-settings\_\-form\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-field\_\-widget\_\-settings\_\-form\_\-alter (\&\$ {\em form}, \/  \$ {\em context})}}
+\label{date_8api_8php_a0c2475c846f8750a83b95ea852bf42cf}
+Alter a date field widget settings form.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$form Nested array of form elements that comprise the form. \item[{\em array}]\$context An associative array containing the following keys:
+\begin{DoxyItemize}
+\item field: The \$field array.
+\item instance: The \$instance array.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+hook\_\-field\_\-widget\_\-settings\_\-form() 
+\end{DoxySeeAlso}
+\hypertarget{date_8api_8php_aae52e9a3c4d3926f92ace9b0ec0041f4}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-formatter\_\-dates\_\-alter@{hook\_\-date\_\-formatter\_\-dates\_\-alter}}
+\index{hook\_\-date\_\-formatter\_\-dates\_\-alter@{hook\_\-date\_\-formatter\_\-dates\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-formatter\_\-dates\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-formatter\_\-dates\_\-alter (\&\$ {\em dates}, \/  \$ {\em context})}}
+\label{date_8api_8php_aae52e9a3c4d3926f92ace9b0ec0041f4}
+Alter the dates array created by \hyperlink{date_8module_a4b019297d5d8f388aa2252ad62b3bfde}{date\_\-formatter\_\-process()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$dates The \$dates array created by the Date module. \item[{\em array}]\$context An associative array containing the following keys:
+\begin{DoxyItemize}
+\item field: The \$field array.
+\item instance: The \$instance array.
+\item format: The string \$format.
+\item entity\_\-type: The \$entity\_\-type.
+\item entity: The \$entity object.
+\item langcode: The string \$langcode.
+\item item: The \$item array.
+\item display: The \$display array. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{date_8api_8php_a224b13fafa75d248a1d2b33d1c1f409e}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-formatter\_\-pre\_\-view\_\-alter@{hook\_\-date\_\-formatter\_\-pre\_\-view\_\-alter}}
+\index{hook\_\-date\_\-formatter\_\-pre\_\-view\_\-alter@{hook\_\-date\_\-formatter\_\-pre\_\-view\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-formatter\_\-pre\_\-view\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-formatter\_\-pre\_\-view\_\-alter (\&\$ {\em entity}, \/  \&\$ {\em variables})}}
+\label{date_8api_8php_a224b13fafa75d248a1d2b33d1c1f409e}
+Alter the entity before formatting it.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em object}]\$entity The entity object being viewed. \item[{\em array}]\$variables The variables passed to the formatter.
+\begin{DoxyItemize}
+\item entity: The \$entity object.
+\item entity\_\-type: The \$entity\_\-type.
+\item field: The \$field array.
+\item instance: The \$instance array.
+\item langcode: The \$langcode.
+\item items: The \$items array.
+\item display: The \$display array.
+\item dates: The processed dates array, empty at this point.
+\item attributes: The attributes array, empty at this point.
+\item rdf\_\-mapping: The RDF mapping array.
+\item add\_\-rdf: If module\_\-exists('rdf'). 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{date_8api_8php_ae85363c63f938c6742a67b315e925730}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-popup\_\-pre\_\-validate\_\-alter@{hook\_\-date\_\-popup\_\-pre\_\-validate\_\-alter}}
+\index{hook\_\-date\_\-popup\_\-pre\_\-validate\_\-alter@{hook\_\-date\_\-popup\_\-pre\_\-validate\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-popup\_\-pre\_\-validate\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-popup\_\-pre\_\-validate\_\-alter (\&\$ {\em element}, \/  \&\$ {\em form\_\-state}, \/  \&\$ {\em input})}}
+\label{date_8api_8php_ae85363c63f938c6742a67b315e925730}
+Alter the date\_\-popup element before the rest of the validation is run.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$element The \$element array. \item[{\em array}]\$form\_\-state A keyed array containing the current state of the form. \item[{\em array}]\$input The array of input values to be validated. \end{DoxyParams}
+\hypertarget{date_8api_8php_a8b0b96439de62930ff766eb159d044cb}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-popup\_\-process\_\-alter@{hook\_\-date\_\-popup\_\-process\_\-alter}}
+\index{hook\_\-date\_\-popup\_\-process\_\-alter@{hook\_\-date\_\-popup\_\-process\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-popup\_\-process\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-popup\_\-process\_\-alter (\&\$ {\em element}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em context})}}
+\label{date_8api_8php_a8b0b96439de62930ff766eb159d044cb}
+Alter the date\_\-popup widget element.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$element An associative array containing the properties of the date\_\-popup element. \item[{\em array}]\$form\_\-state A keyed array containing the current state of the form. \item[{\em array}]\$context An associative array containing the following keys:
+\begin{DoxyItemize}
+\item form: Nested array of form elements that comprise the form.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{date__popup_8module_a1c48e05ba3b84ea7170f70091a3893d2}{date\_\-popup\_\-element\_\-process()} 
+\end{DoxySeeAlso}
+\hypertarget{date_8api_8php_a8fa3364916ca73163501f3b9fa319dd6}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-select\_\-pre\_\-validate\_\-alter@{hook\_\-date\_\-select\_\-pre\_\-validate\_\-alter}}
+\index{hook\_\-date\_\-select\_\-pre\_\-validate\_\-alter@{hook\_\-date\_\-select\_\-pre\_\-validate\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-select\_\-pre\_\-validate\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-select\_\-pre\_\-validate\_\-alter (\&\$ {\em element}, \/  \&\$ {\em form\_\-state}, \/  \&\$ {\em input})}}
+\label{date_8api_8php_a8fa3364916ca73163501f3b9fa319dd6}
+Alter the date\_\-select element before the rest of the validation is run.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$element The \$element array. \item[{\em array}]\$form\_\-state A keyed array containing the current state of the form. \item[{\em array}]\$input The array of input values to be validated. \end{DoxyParams}
+\hypertarget{date_8api_8php_a0688e456a52d3e4bdaaa63337d49e74c}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-select\_\-process\_\-alter@{hook\_\-date\_\-select\_\-process\_\-alter}}
+\index{hook\_\-date\_\-select\_\-process\_\-alter@{hook\_\-date\_\-select\_\-process\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-select\_\-process\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-select\_\-process\_\-alter (\&\$ {\em element}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em context})}}
+\label{date_8api_8php_a0688e456a52d3e4bdaaa63337d49e74c}
+Alter the date\_\-select widget element.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$element An associative array containing the properties of the date\_\-select element. \item[{\em array}]\$form\_\-state A keyed array containing the current state of the form. \item[{\em array}]\$context An associative array containing the following keys:
+\begin{DoxyItemize}
+\item form: Nested array of form elements that comprise the form.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{date__api__elements_8inc_adabdb1eea05a7d11cb2108a18f01aeed}{date\_\-select\_\-element\_\-process()} 
+\end{DoxySeeAlso}
+\hypertarget{date_8api_8php_a2fc6fc0b5b0092304084ce3ce29741ae}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-text\_\-pre\_\-validate\_\-alter@{hook\_\-date\_\-text\_\-pre\_\-validate\_\-alter}}
+\index{hook\_\-date\_\-text\_\-pre\_\-validate\_\-alter@{hook\_\-date\_\-text\_\-pre\_\-validate\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-text\_\-pre\_\-validate\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-text\_\-pre\_\-validate\_\-alter (\&\$ {\em element}, \/  \&\$ {\em form\_\-state}, \/  \&\$ {\em input})}}
+\label{date_8api_8php_a2fc6fc0b5b0092304084ce3ce29741ae}
+Alter the date\_\-text element before the rest of the validation is run.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$element The \$element array. \item[{\em array}]\$form\_\-state A keyed array containing the current state of the form. \item[{\em array}]\$input The array of input values to be validated. \end{DoxyParams}
+\hypertarget{date_8api_8php_ac8d820dc0acb6675634de00189114786}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-text\_\-process\_\-alter@{hook\_\-date\_\-text\_\-process\_\-alter}}
+\index{hook\_\-date\_\-text\_\-process\_\-alter@{hook\_\-date\_\-text\_\-process\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-text\_\-process\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-text\_\-process\_\-alter (\&\$ {\em element}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em context})}}
+\label{date_8api_8php_ac8d820dc0acb6675634de00189114786}
+Alter the date\_\-text widget element.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$element An associative array containing the properties of the date\_\-text element. \item[{\em array}]\$form\_\-state A keyed array containing the current state of the form. \item[{\em array}]\$context An associative array containing the following keys:
+\begin{DoxyItemize}
+\item form: Nested array of form elements that comprise the form.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{date__api__elements_8inc_ac1b734f1dbb476fe75e096be3dac5d6d}{date\_\-text\_\-element\_\-process()} 
+\end{DoxySeeAlso}
+\hypertarget{date_8api_8php_a7072a26bebd7c6cbdc660a77a79ef3e2}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-timezone\_\-process\_\-alter@{hook\_\-date\_\-timezone\_\-process\_\-alter}}
+\index{hook\_\-date\_\-timezone\_\-process\_\-alter@{hook\_\-date\_\-timezone\_\-process\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-timezone\_\-process\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-timezone\_\-process\_\-alter (\&\$ {\em element}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em context})}}
+\label{date_8api_8php_a7072a26bebd7c6cbdc660a77a79ef3e2}
+Alter the date\_\-timezone widget element.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$element An associative array containing the properties of the date\_\-select element. \item[{\em array}]\$form\_\-state A keyed array containing the current state of the form. \item[{\em array}]\$context An associative array containing the following keys:
+\begin{DoxyItemize}
+\item form: Nested array of form elements that comprise the form.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{date__api__elements_8inc_ac45026ff7ec5ee2113dbbeec0a079aa5}{date\_\-timezone\_\-element\_\-process()} 
+\end{DoxySeeAlso}
+\hypertarget{date_8api_8php_ad2c977542770de5a0d5e170ecc5a0052}{
+\index{date.api.php@{date.api.php}!hook\_\-date\_\-year\_\-range\_\-process\_\-alter@{hook\_\-date\_\-year\_\-range\_\-process\_\-alter}}
+\index{hook\_\-date\_\-year\_\-range\_\-process\_\-alter@{hook\_\-date\_\-year\_\-range\_\-process\_\-alter}!date.api.php@{date.api.php}}
+\subsubsection[{hook\_\-date\_\-year\_\-range\_\-process\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-date\_\-year\_\-range\_\-process\_\-alter (\&\$ {\em element}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em context})}}
+\label{date_8api_8php_ad2c977542770de5a0d5e170ecc5a0052}
+Alter the date\_\-year\_\-range widget element.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$element An associative array containing the properties of the date\_\-select element. \item[{\em array}]\$form\_\-state A keyed array containing the current state of the form. \item[{\em array}]\$context An associative array containing the following keys:
+\begin{DoxyItemize}
+\item form: Nested array of form elements that comprise the form.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{date__api__elements_8inc_a543c5f0338ae1931c7a626a896f6f2c0}{date\_\-year\_\-range\_\-element\_\-process()} 
+\end{DoxySeeAlso}

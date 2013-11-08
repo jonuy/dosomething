@@ -1,0 +1,293 @@
+\hypertarget{settings_8php}{
+\section{html/profiles/dosomething/settings.php File Reference}
+\label{settings_8php}\index{html/profiles/dosomething/settings.php@{html/profiles/dosomething/settings.php}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{settings_8php_a97cde67402a68697692531e8b067f86f}{\$databases}
+\item 
+\hyperlink{settings_8php_afa06f20a6b90dec9a2573e779cd10b44}{\$update\_\-free\_\-access} = FALSE
+\item 
+\hyperlink{settings_8php_a75c981b07486dd3b07d5f122702dd87e}{\$drupal\_\-hash\_\-salt} = '3i\_\-SZ1VTl\_\-8FBxXeZhTEvf6LkeVNypM0EV90tNuHs5k'
+\item 
+\hyperlink{settings_8php_ad6ddcdefc93f69592fa04339ffd242c4}{\$conf} \mbox{[}'404\_\-fast\_\-paths\_\-exclude'\mbox{]} = '/$\backslash$/(?:styles)$\backslash$//'
+\item 
+\hypertarget{settings_8php_ab4cc4748965b0b394129e1559d6ce757}{
+{\bfseries \$conf} \mbox{[}'404\_\-fast\_\-paths'\mbox{]} = '/$\backslash$.(?:txt$|$png$|$gif$|$jpe?g$|$css$|$js$|$ico$|$swf$|$flv$|$cgi$|$bat$|$pl$|$dll$|$exe$|$asp)\$/i'}
+\label{settings_8php_ab4cc4748965b0b394129e1559d6ce757}
+
+\item 
+\hypertarget{settings_8php_a0f8ed56a2a313710a50f04d99d595599}{
+{\bfseries \$conf} \mbox{[}'404\_\-fast\_\-html'\mbox{]} = '$<$!DOCTYPE html PUBLIC \char`\"{}-\///W3C//DTD XHTML+RDFa 1.0//EN\char`\"{} \char`\"{}http://www.w3.org/MarkUp/DTD/xhtml-\/rdfa-\/1.dtd\char`\"{}$>$$<$html xmlns=\char`\"{}http://www.w3.org/1999/xhtml\char`\"{}$>$$<$head$>$$<$title$>$404 Not Found$<$/title$>$$<$/head$>$$<$body$>$$<$h1$>$Not Found$<$/h1$>$$<$p$>$The requested URL \char`\"{}@path\char`\"{} was not found on this server.$<$/p$>$$<$/body$>$$<$/html$>$'}
+\label{settings_8php_a0f8ed56a2a313710a50f04d99d595599}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Drupal site-\/specific configuration file.
+
+IMPORTANT NOTE: This file may have been set to read-\/only by the Drupal installation program. If you make changes to this file, be sure to protect it again after making your modifications. Failure to remove write permissions to this file is a security risk.
+
+The configuration file to be loaded is based upon the rules below. However if the multisite aliasing file named sites/sites.php is present, it will be loaded, and the aliases in the array \$sites will override the default directory rules below. See sites/example.sites.php for more information about aliases.
+
+The configuration directory will be discovered by stripping the website's hostname from left to right and pathname from right to left. The first configuration file found will be used and any others will be ignored. If no other configuration file is found then the default configuration file at 'sites/default' will be used.
+
+For example, for a fictitious site installed at \href{http://www.drupal.org:8080/mysite/test/,}{\tt http://www.drupal.org:8080/mysite/test/,} the 'settings.php' file is searched for in the following directories:
+
+
+\begin{DoxyItemize}
+\item sites/8080.www.drupal.org.mysite.test
+\item sites/www.drupal.org.mysite.test
+\item sites/drupal.org.mysite.test
+\item sites/org.mysite.test
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item sites/8080.www.drupal.org.mysite
+\item sites/www.drupal.org.mysite
+\item sites/drupal.org.mysite
+\item sites/org.mysite
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item sites/8080.www.drupal.org
+\item sites/www.drupal.org
+\item sites/drupal.org
+\item sites/org
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item sites/default
+\end{DoxyItemize}
+
+Note that if you are installing on a non-\/standard port number, prefix the hostname with that number. For example, \href{http://www.drupal.org:8080/mysite/test/}{\tt http://www.drupal.org:8080/mysite/test/} could be loaded from sites/8080.www.drupal.org.mysite.test/.
+
+\begin{DoxySeeAlso}{See also}
+example.sites.php 
+
+conf\_\-path() 
+\end{DoxySeeAlso}
+
+
+\subsection{Variable Documentation}
+\hypertarget{settings_8php_ad6ddcdefc93f69592fa04339ffd242c4}{
+\index{settings.php@{settings.php}!\$conf@{\$conf}}
+\index{\$conf@{\$conf}!settings.php@{settings.php}}
+\subsubsection[{\$conf}]{\setlength{\rightskip}{0pt plus 5cm}\$conf\mbox{[}'404\_\-fast\_\-paths\_\-exclude'\mbox{]} = '/$\backslash$/(?:styles)$\backslash$//'}}
+\label{settings_8php_ad6ddcdefc93f69592fa04339ffd242c4}
+If you encounter a situation where users post a large amount of text, and the result is stripped out upon viewing but can still be edited, Drupal's output filter may not have sufficient memory to process it. If you experience this issue, you may wish to uncomment the following two lines and increase the limits of these variables. For more information, see \href{http://php.net/manual/en/pcre.configuration.php.}{\tt http://php.net/manual/en/pcre.configuration.php.} Drupal automatically generates a unique session cookie name for each site based on its full domain name. If you have multiple domains pointing at the same Drupal site, you can either redirect them all to a single domain (see comment in .htaccess), or uncomment the line below and specify their shared base domain. Doing so assures that users remain logged in as they cross between your various domains. Make sure to always start the \$cookie\_\-domain with a leading dot, as per RFC 2109. Variable overrides:
+
+To override specific entries in the 'variable' table for this site, set them here. You usually don't need to use this feature. This is useful in a configuration file for a vhost or directory, rather than the default \hyperlink{settings_8php}{settings.php}. Any configuration setting from the 'variable' table can be given a new value. Note that any values you provide in these variable overrides will not be modifiable from the Drupal administration interface.
+
+The following overrides are examples:
+\begin{DoxyItemize}
+\item site\_\-name: Defines the site's name.
+\item theme\_\-default: Defines the default theme for this site.
+\item anonymous: Defines the human-\/readable name of anonymous users. Remove the leading hash signs to enable. A custom theme can be set for the offline page. This applies when the site is explicitly set to maintenance mode through the administration page or when the database is inactive due to an error. It can be set through the 'maintenance\_\-theme' key. The template file should also be copied into the theme. It is located inside 'modules/system/maintenance-\/page.tpl.php'. Note: This setting does not apply to installation and update pages. Reverse Proxy Configuration:
+\end{DoxyItemize}
+
+Reverse proxy servers are often used to enhance the performance of heavily visited sites and may also provide other site caching, security, or encryption benefits. In an environment where Drupal is behind a reverse proxy, the real IP address of the client should be determined such that the correct client IP address is available to Drupal's logging, statistics, and access management systems. In the most simple scenario, the proxy server will add an X-\/Forwarded-\/For header to the request that contains the client IP address. However, HTTP headers are vulnerable to spoofing, where a malicious client could bypass restrictions by setting the X-\/Forwarded-\/For header directly. Therefore, Drupal's proxy configuration requires the IP addresses of all remote proxies to be specified in \$conf\mbox{[}'reverse\_\-proxy\_\-addresses'\mbox{]} to work correctly.
+
+Enable this setting to get Drupal to determine the client IP from the X-\/Forwarded-\/For header (or \$conf\mbox{[}'reverse\_\-proxy\_\-header'\mbox{]} if set). If you are unsure about this setting, do not have a reverse proxy, or Drupal operates in a shared hosting environment, this setting should remain commented out.
+
+In order for this setting to be used you must specify every possible reverse proxy IP address in \$conf\mbox{[}'reverse\_\-proxy\_\-addresses'\mbox{]}. If a complete list of reverse proxies is not available in your environment (for example, if you use a CDN) you may set the \$\_\-SERVER\mbox{[}'REMOTE\_\-ADDR'\mbox{]} variable directly in \hyperlink{settings_8php}{settings.php}. Be aware, however, that it is likely that this would allow IP address spoofing unless more advanced precautions are taken. Specify every reverse proxy IP address in your environment. This setting is required if \$conf\mbox{[}'reverse\_\-proxy'\mbox{]} is TRUE. Set this value if your proxy server sends the client IP in a header other than X-\/Forwarded-\/For. Page caching:
+
+By default, Drupal sends a \char`\"{}Vary: Cookie\char`\"{} HTTP header for anonymous page views. This tells a HTTP proxy that it may return a page from its local cache without contacting the web server, if the user sends the same Cookie header as the user who originally requested the cached page. Without \char`\"{}Vary:
+ Cookie\char`\"{}, authenticated users would also be served the anonymous page from the cache. If the site has mostly anonymous users except a few known editors/administrators, the Vary header can be omitted. This allows for better caching in HTTP proxies (including reverse proxies), i.e. even if clients send different cookies, they still get content served from the cache. However, authenticated users should access the site directly (i.e. not use an HTTP proxy, and bypass the reverse proxy if one is used) in order to avoid getting cached pages from the proxy. CSS/JS aggregated file gzip compression:
+
+By default, when CSS or JS aggregation and clean URLs are enabled Drupal will store a gzip compressed (.gz) copy of the aggregated files. If this file is available then rewrite rules in the default .htaccess file will serve these files to browsers that accept gzip encoded content. This allows pages to load faster for these users and has minimal impact on server load. If you are using a webserver other than Apache httpd, or a caching reverse proxy that is configured to cache and compress these files itself you may want to uncomment one or both of the below lines, which will prevent gzip files being stored. String overrides:
+
+To override specific strings on your site with or without enabling the Locale module, add an entry to this list. This functionality allows you to change a small number of your site's default English language interface strings.
+
+Remove the leading hash signs to enable.
+
+IP blocking:
+
+To bypass database queries for denied IP addresses, use this setting. Drupal queries the \{blocked\_\-ips\} table by default on every page request for both authenticated and anonymous users. This allows the system to block IP addresses from within the administrative interface and before any modules are loaded. However on high traffic websites you may want to avoid this query, allowing you to bypass database access altogether for anonymous users under certain caching configurations.
+
+If using this setting, you will need to add back any IP addresses which you may have blocked via the administrative interface. Each element of this array represents a blocked IP address. Uncommenting the array and leaving it empty will have the effect of disabling IP blocking on your site.
+
+Remove the leading hash signs to enable. Fast 404 pages:
+
+Drupal can generate fully themed 404 pages. However, some of these responses are for images or other resource files that are not displayed to the user. This can waste bandwidth, and also generate server load.
+
+The options below return a simple, fast 404 page for URLs matching a specific pattern:
+\begin{DoxyItemize}
+\item 404\_\-fast\_\-paths\_\-exclude: A regular expression to match paths to exclude, such as images generated by image styles, or dynamically-\/resized images. If you need to add more paths, you can add '$|$path' to the expression.
+\item 404\_\-fast\_\-paths: A regular expression to match paths that should return a simple 404 page, rather than the fully themed 404 page. If you don't have any aliases ending in htm or html you can add '$|$s?html?' to the expression.
+\item 404\_\-fast\_\-html: The html to return for simple 404 pages.
+\end{DoxyItemize}
+
+Add leading hash signs if you would like to disable this functionality. \hypertarget{settings_8php_a97cde67402a68697692531e8b067f86f}{
+\index{settings.php@{settings.php}!\$databases@{\$databases}}
+\index{\$databases@{\$databases}!settings.php@{settings.php}}
+\subsubsection[{\$databases}]{\setlength{\rightskip}{0pt plus 5cm}\$databases}}
+\label{settings_8php_a97cde67402a68697692531e8b067f86f}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array (
+  'default' => 
+  array (
+    'default' => 
+    array (
+      'database' => 'dosomething',
+      'username' => 'root',
+      'password' => '',
+      'host' => 'localhost',
+      'port' => '',
+      'driver' => 'mysql',
+      'prefix' => '',
+    ),
+  ),
+)
+\end{DoxyCode}
+Database settings:
+
+The \$databases array specifies the database connection or connections that Drupal may use. Drupal is able to connect to multiple databases, including multiple types of databases, during the same request.
+
+Each database connection is specified as an array of settings, similar to the following: 
+\begin{DoxyCode}
+ array(
+   'driver' => 'mysql',
+   'database' => 'databasename',
+   'username' => 'username',
+   'password' => 'password',
+   'host' => 'localhost',
+   'port' => 3306,
+   'prefix' => 'myprefix_',
+   'collation' => 'utf8_general_ci',
+ );
+\end{DoxyCode}
+
+
+The \char`\"{}driver\char`\"{} property indicates what Drupal database driver the connection should use. This is usually the same as the name of the database type, such as mysql or sqlite, but not always. The other properties will vary depending on the driver. For SQLite, you must specify a database file name in a directory that is writable by the webserver. For most other drivers, you must specify a username, password, host, and database name.
+
+Some database engines support transactions. In order to enable transaction support for a given database, set the 'transactions' key to TRUE. To disable it, set it to FALSE. Note that the default value varies by driver. For MySQL, the default is FALSE since MyISAM tables do not support transactions.
+
+For each database, you may optionally specify multiple \char`\"{}target\char`\"{} databases. A target database allows Drupal to try to send certain queries to a different database if it can but fall back to the default connection if not. That is useful for master/slave replication, as Drupal may try to connect to a slave server when appropriate and if one is not available will simply fall back to the single master server.
+
+The general format for the \$databases array is as follows: 
+\begin{DoxyCode}
+ $databases['default']['default'] = $info_array;
+ $databases['default']['slave'][] = $info_array;
+ $databases['default']['slave'][] = $info_array;
+ $databases['extra']['default'] = $info_array;
+\end{DoxyCode}
+
+
+In the above example, \$info\_\-array is an array of settings described above. The first line sets a \char`\"{}default\char`\"{} database that has one master database (the second level default). The second and third lines create an array of potential slave databases. Drupal will select one at random for a given request as needed. The fourth line creates a new database with a name of \char`\"{}extra\char`\"{}.
+
+For a single database configuration, the following is sufficient: 
+\begin{DoxyCode}
+ $databases['default']['default'] = array(
+   'driver' => 'mysql',
+   'database' => 'databasename',
+   'username' => 'username',
+   'password' => 'password',
+   'host' => 'localhost',
+   'prefix' => 'main_',
+   'collation' => 'utf8_general_ci',
+ );
+\end{DoxyCode}
+
+
+You can optionally set prefixes for some or all database table names by using the 'prefix' setting. If a prefix is specified, the table name will be prepended with its value. Be sure to use valid database characters only, usually alphanumeric and underscore. If no prefixes are desired, leave it as an empty string ''.
+
+To have all database names prefixed, set 'prefix' as a string: 
+\begin{DoxyCode}
+   'prefix' => 'main_',
+\end{DoxyCode}
+ To provide prefixes for specific tables, set 'prefix' as an array. The array's keys are the table names and the values are the prefixes. The 'default' element is mandatory and holds the prefix for any tables not specified elsewhere in the array. Example: 
+\begin{DoxyCode}
+   'prefix' => array(
+     'default'   => 'main_',
+     'users'     => 'shared_',
+     'sessions'  => 'shared_',
+     'role'      => 'shared_',
+     'authmap'   => 'shared_',
+   ),
+\end{DoxyCode}
+ You can also use a reference to a schema/database as a prefix. This may be useful if your Drupal installation exists in a schema that is not the default or you want to access several databases from the same code base at the same time. Example: 
+\begin{DoxyCode}
+   'prefix' => array(
+     'default'   => 'main.',
+     'users'     => 'shared.',
+     'sessions'  => 'shared.',
+     'role'      => 'shared.',
+     'authmap'   => 'shared.',
+   );
+\end{DoxyCode}
+ NOTE: MySQL and SQLite's definition of a schema is a database.
+
+Advanced users can add or override initial commands to execute when connecting to the database server, as well as PDO connection settings. For example, to enable MySQL SELECT queries to exceed the max\_\-join\_\-size system variable, and to reduce the database connection timeout to 5 seconds:
+
+
+\begin{DoxyCode}
+ $databases['default']['default'] = array(
+   'init_commands' => array(
+     'big_selects' => 'SET SQL_BIG_SELECTS=1',
+   ),
+   'pdo' => array(
+     PDO::ATTR_TIMEOUT => 5,
+   ),
+ );
+\end{DoxyCode}
+
+
+WARNING: These defaults are designed for database portability. Changing them may cause unexpected behavior, including potential data loss.
+
+\begin{DoxySeeAlso}{See also}
+DatabaseConnection\_\-mysql::\_\-\_\-construct 
+
+DatabaseConnection\_\-pgsql::\_\-\_\-construct 
+
+DatabaseConnection\_\-sqlite::\_\-\_\-construct
+\end{DoxySeeAlso}
+Database configuration format: 
+\begin{DoxyCode}
+   $databases['default']['default'] = array(
+     'driver' => 'mysql',
+     'database' => 'databasename',
+     'username' => 'username',
+     'password' => 'password',
+     'host' => 'localhost',
+     'prefix' => '',
+   );
+   $databases['default']['default'] = array(
+     'driver' => 'pgsql',
+     'database' => 'databasename',
+     'username' => 'username',
+     'password' => 'password',
+     'host' => 'localhost',
+     'prefix' => '',
+   );
+   $databases['default']['default'] = array(
+     'driver' => 'sqlite',
+     'database' => '/path/to/databasefilename',
+   );
+\end{DoxyCode}
+ \hypertarget{settings_8php_a75c981b07486dd3b07d5f122702dd87e}{
+\index{settings.php@{settings.php}!\$drupal\_\-hash\_\-salt@{\$drupal\_\-hash\_\-salt}}
+\index{\$drupal\_\-hash\_\-salt@{\$drupal\_\-hash\_\-salt}!settings.php@{settings.php}}
+\subsubsection[{\$drupal\_\-hash\_\-salt}]{\setlength{\rightskip}{0pt plus 5cm}\$drupal\_\-hash\_\-salt = '3i\_\-SZ1VTl\_\-8FBxXeZhTEvf6LkeVNypM0EV90tNuHs5k'}}
+\label{settings_8php_a75c981b07486dd3b07d5f122702dd87e}
+Salt for one-\/time login links and cancel links, form tokens, etc.
+
+This variable will be set to a random value by the installer. All one-\/time login links will be invalidated if the value is changed. Note that if your site is deployed on a cluster of web servers, you must ensure that this variable has the same value on each server. If this variable is empty, a hash of the serialized database credentials will be used as a fallback salt.
+
+For enhanced security, you may set this variable to a value using the contents of a file outside your docroot that is never saved together with any backups of your Drupal files and database.
+
+Example: \$drupal\_\-hash\_\-salt = file\_\-get\_\-contents('/home/example/salt.txt'); \hypertarget{settings_8php_afa06f20a6b90dec9a2573e779cd10b44}{
+\index{settings.php@{settings.php}!\$update\_\-free\_\-access@{\$update\_\-free\_\-access}}
+\index{\$update\_\-free\_\-access@{\$update\_\-free\_\-access}!settings.php@{settings.php}}
+\subsubsection[{\$update\_\-free\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}\$update\_\-free\_\-access = FALSE}}
+\label{settings_8php_afa06f20a6b90dec9a2573e779cd10b44}
+Access control for update.php script.
+
+If you are updating your Drupal installation using the update.php script but are not logged in using either an account with the \char`\"{}Administer software
+ updates\char`\"{} permission or the site maintenance account (the account that was created during installation), you will need to modify the access check statement below. Change the FALSE to a TRUE to disable the access check. After finishing the upgrade, be sure to open this file again and change the TRUE back to a FALSE! 

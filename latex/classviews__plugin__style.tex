@@ -1,0 +1,295 @@
+\hypertarget{classviews__plugin__style}{
+\section{views\_\-plugin\_\-style Class Reference}
+\label{classviews__plugin__style}\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}}
+}
+Inheritance diagram for views\_\-plugin\_\-style::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12cm]{classviews__plugin__style}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classviews__plugin__style_ab48326b2ea3d9bd9ad5fdf4f544c8eed}{init} (\&\$\hyperlink{classview}{view}, \&\$display, \$options=NULL)
+\item 
+\hypertarget{classviews__plugin__style_a0197e61c10e03cfc78f823db2ce8b620}{
+{\bfseries destroy} ()}
+\label{classviews__plugin__style_a0197e61c10e03cfc78f823db2ce8b620}
+
+\item 
+\hyperlink{classviews__plugin__style_a92ca48fa0359e70572f9a226ac54697f}{uses\_\-row\_\-plugin} ()
+\item 
+\hyperlink{classviews__plugin__style_a2a23b833fd7a5905eba7942c6ccd6d6f}{uses\_\-row\_\-class} ()
+\item 
+\hyperlink{classviews__plugin__style_a04c6419f4049b7e2644904b5089f2e41}{uses\_\-fields} ()
+\item 
+\hyperlink{classviews__plugin__style_a7d790501a0aa53283e61cffbd59afb9e}{uses\_\-tokens} ()
+\item 
+\hyperlink{classviews__plugin__style_aa593397b4581d85a413699d7a084b663}{get\_\-row\_\-class} (\$row\_\-index)
+\item 
+\hyperlink{classviews__plugin__style_a64c88c0e4d26997edce0478df01983c0}{tokenize\_\-value} (\$value, \$row\_\-index)
+\item 
+\hyperlink{classviews__plugin__style_af9009e2a5f50ea90d9f02adeba4b711c}{even\_\-empty} ()
+\item 
+\hypertarget{classviews__plugin__style_a95b6f2eadf403ff36f1ff2860294b3c2}{
+{\bfseries option\_\-definition} ()}
+\label{classviews__plugin__style_a95b6f2eadf403ff36f1ff2860294b3c2}
+
+\item 
+\hyperlink{classviews__plugin__style_afe3d437ff4398315b15c4e60975dbb1c}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__style_acdfd8cc26a594b82aaf56d205ac83b36}{options\_\-validate} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__style_a13b4b43f813fde038a199d2ec26fc76e}{build\_\-sort} ()
+\item 
+\hyperlink{classviews__plugin__style_af59de962f895ccd0b3adf960b908e0bd}{build\_\-sort\_\-post} ()
+\item 
+\hyperlink{classviews__plugin__style_a9d35c181b927a52d8bf34ac629b05d20}{pre\_\-render} (\$result)
+\item 
+\hyperlink{classviews__plugin__style_aa52b618e91b11a7d10ad1feadbc891f1}{render} ()
+\item 
+\hyperlink{classviews__plugin__style_a1bbda7f308843509a043f5a0b10a90a8}{render\_\-grouping\_\-sets} (\$sets, \$level=0)
+\item 
+\hyperlink{classviews__plugin__style_a8406e6f92ae056facd207acab0b34898}{render\_\-grouping} (\$records, \$groupings=array(), \$group\_\-rendered=NULL)
+\item 
+\hyperlink{classviews__plugin__style_a95d504017017c611b482a920119452db}{render\_\-fields} (\$result)
+\item 
+\hyperlink{classviews__plugin__style_add1dccbb850840911c335ae09ff266d7}{get\_\-field} (\$index, \$field)
+\item 
+\hyperlink{classviews__plugin__style_a0af658171c8c1c5692a112f433de16c6}{get\_\-field\_\-value} (\$index, \$field)
+\item 
+\hyperlink{classviews__plugin__style_a41929fec27cb0ae7a801276969a080a1}{validate} ()
+\item 
+\hyperlink{classviews__plugin__style_af6b601d8f42cc3d86721fcad76eaae4b}{query} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classviews__plugin__style_a037a508debefb5ea44fc50d34e863ffc}{\$row\_\-tokens} = array()
+\item 
+\hypertarget{classviews__plugin__style_a1e249929118baf37e757a63f92b84f1f}{
+{\bfseries \$row\_\-plugin}}
+\label{classviews__plugin__style_a1e249929118baf37e757a63f92b84f1f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class to define a style plugin handler. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__plugin__style_a13b4b43f813fde038a199d2ec26fc76e}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!build\_\-sort@{build\_\-sort}}
+\index{build\_\-sort@{build\_\-sort}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{build\_\-sort}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::build\_\-sort ()}}
+\label{classviews__plugin__style_a13b4b43f813fde038a199d2ec26fc76e}
+Called by the \hyperlink{classview}{view} builder to see if this style handler wants to interfere with the sorts. If so it should build; if it returns any non-\/TRUE value, normal sorting will NOT be added to the query. 
+
+Reimplemented in \hyperlink{classviews__plugin__style__table_a3bc31ba52d980f899307aee2d74bef58}{views\_\-plugin\_\-style\_\-table}.\hypertarget{classviews__plugin__style_af59de962f895ccd0b3adf960b908e0bd}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!build\_\-sort\_\-post@{build\_\-sort\_\-post}}
+\index{build\_\-sort\_\-post@{build\_\-sort\_\-post}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{build\_\-sort\_\-post}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::build\_\-sort\_\-post ()}}
+\label{classviews__plugin__style_af59de962f895ccd0b3adf960b908e0bd}
+Called by the \hyperlink{classview}{view} builder to let the style build a second set of sorts that will come after any other sorts in the \hyperlink{classview}{view}. 
+
+Reimplemented in \hyperlink{classviews__plugin__style__table_a00d9e14ac7f545d47a43af3f9d186382}{views\_\-plugin\_\-style\_\-table}.\hypertarget{classviews__plugin__style_af9009e2a5f50ea90d9f02adeba4b711c}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!even\_\-empty@{even\_\-empty}}
+\index{even\_\-empty@{even\_\-empty}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{even\_\-empty}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::even\_\-empty ()}}
+\label{classviews__plugin__style_af9009e2a5f50ea90d9f02adeba4b711c}
+Should the output of the style plugin be rendered even if it's a empty \hyperlink{classview}{view}. 
+
+Reimplemented in \hyperlink{classviews__plugin__style__table_a6c1b6a4ddba95e72a3cc2dee0af9b92c}{views\_\-plugin\_\-style\_\-table}.\hypertarget{classviews__plugin__style_add1dccbb850840911c335ae09ff266d7}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!get\_\-field@{get\_\-field}}
+\index{get\_\-field@{get\_\-field}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{get\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::get\_\-field (\$ {\em index}, \/  \$ {\em field})}}
+\label{classviews__plugin__style_add1dccbb850840911c335ae09ff266d7}
+Get a rendered field.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$index}]The index count of the row. \item[{\em \$field}]The id of the field. \end{DoxyParams}
+\hypertarget{classviews__plugin__style_a0af658171c8c1c5692a112f433de16c6}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!get\_\-field\_\-value@{get\_\-field\_\-value}}
+\index{get\_\-field\_\-value@{get\_\-field\_\-value}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{get\_\-field\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::get\_\-field\_\-value (\$ {\em index}, \/  \$ {\em field})}}
+\label{classviews__plugin__style_a0af658171c8c1c5692a112f433de16c6}
+Get the raw field value.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$index}]The index count of the row. \item[{\em \$field}]The id of the field. \end{DoxyParams}
+\hypertarget{classviews__plugin__style_aa593397b4581d85a413699d7a084b663}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!get\_\-row\_\-class@{get\_\-row\_\-class}}
+\index{get\_\-row\_\-class@{get\_\-row\_\-class}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{get\_\-row\_\-class}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::get\_\-row\_\-class (\$ {\em row\_\-index})}}
+\label{classviews__plugin__style_aa593397b4581d85a413699d7a084b663}
+Return the token replaced row class for the specified row. \hypertarget{classviews__plugin__style_ab48326b2ea3d9bd9ad5fdf4f544c8eed}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!init@{init}}
+\index{init@{init}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::init (\&\$ {\em view}, \/  \&\$ {\em display}, \/  \$ {\em options} = {\ttfamily NULL})}}
+\label{classviews__plugin__style_ab48326b2ea3d9bd9ad5fdf4f544c8eed}
+Initialize a style plugin.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$view}]\item[{\em \$display}]\item[{\em \$options}]The style options might come externally as the style can be sourced from at least two locations. If it's not included, look on the display. \end{DoxyParams}
+\hypertarget{classviews__plugin__style_afe3d437ff4398315b15c4e60975dbb1c}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__style_afe3d437ff4398315b15c4e60975dbb1c}
+Init will be called after construct, when the plugin is attached to a \hyperlink{classview}{view} and a display. Provide a form to edit options for this plugin. 
+
+Reimplemented from \hyperlink{classviews__plugin_a1aaed8da1afd9f45293a37358c159837}{views\_\-plugin}.
+
+Reimplemented in \hyperlink{classviews__plugin__style__default_a6d6eb45c613c5990a44b3071cb82b36d}{views\_\-plugin\_\-style\_\-default}, \hyperlink{classviews__plugin__style__grid_a275eb0e00406028e000268ae389d17a3}{views\_\-plugin\_\-style\_\-grid}, \hyperlink{classviews__plugin__style__jump__menu_ad7158f1d70c97809b44bfa0e10b11709}{views\_\-plugin\_\-style\_\-jump\_\-menu}, \hyperlink{classviews__plugin__style__list_a37ec2449bb2119e4a8c3730cd458ecdb}{views\_\-plugin\_\-style\_\-list}, \hyperlink{classviews__plugin__style__mapping_a3aa280e8dac5c6d0cdc33418bfa1736c}{views\_\-plugin\_\-style\_\-mapping}, \hyperlink{classviews__plugin__style__rss_a317b1867ddd97f969977368031e04fee}{views\_\-plugin\_\-style\_\-rss}, \hyperlink{classviews__plugin__style__summary_a43826183b4d54242ae5276f40f70475f}{views\_\-plugin\_\-style\_\-summary}, \hyperlink{classviews__plugin__style__summary__jump__menu_ab66730cfcd70ef23a0dbc05e80ad3d32}{views\_\-plugin\_\-style\_\-summary\_\-jump\_\-menu}, \hyperlink{classviews__plugin__style__summary__unformatted_a8770285dac047bf88a2c77b2e798826d}{views\_\-plugin\_\-style\_\-summary\_\-unformatted}, and \hyperlink{classviews__plugin__style__table_a732752fb9b74bdb48673cb9ff4150be9}{views\_\-plugin\_\-style\_\-table}.\hypertarget{classviews__plugin__style_acdfd8cc26a594b82aaf56d205ac83b36}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!options\_\-validate@{options\_\-validate}}
+\index{options\_\-validate@{options\_\-validate}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{options\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::options\_\-validate (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__style_acdfd8cc26a594b82aaf56d205ac83b36}
+Validate the options form. 
+
+Reimplemented from \hyperlink{classviews__plugin_a46d72eb35feea36fed83cd1355a47431}{views\_\-plugin}.\hypertarget{classviews__plugin__style_a9d35c181b927a52d8bf34ac629b05d20}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!pre\_\-render@{pre\_\-render}}
+\index{pre\_\-render@{pre\_\-render}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{pre\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::pre\_\-render (\$ {\em result})}}
+\label{classviews__plugin__style_a9d35c181b927a52d8bf34ac629b05d20}
+Allow the style to do stuff before each row is rendered.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$result}]The full array of results from the query. \end{DoxyParams}
+\hypertarget{classviews__plugin__style_af6b601d8f42cc3d86721fcad76eaae4b}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!query@{query}}
+\index{query@{query}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{query}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::query ()}}
+\label{classviews__plugin__style_af6b601d8f42cc3d86721fcad76eaae4b}
+Add anything to the query that we might need to. 
+
+Reimplemented from \hyperlink{classviews__plugin_a10ac07c47c4a8735786f9fcc38548587}{views\_\-plugin}.
+
+Reimplemented in \hyperlink{classviews__plugin__style__summary_afd8f02a61bd0e1887cc7767950e8e0df}{views\_\-plugin\_\-style\_\-summary}, and \hyperlink{classviews__plugin__style__summary__jump__menu_aee2a45ee02a7ce8d041a5b028758cf0b}{views\_\-plugin\_\-style\_\-summary\_\-jump\_\-menu}.\hypertarget{classviews__plugin__style_aa52b618e91b11a7d10ad1feadbc891f1}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!render@{render}}
+\index{render@{render}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::render ()}}
+\label{classviews__plugin__style_aa52b618e91b11a7d10ad1feadbc891f1}
+Render the display in this style. 
+
+Reimplemented in \hyperlink{classviews__content__plugin__style__ctools__context_a7b49db120c1bfa8e951e70bb24da42f1}{views\_\-content\_\-plugin\_\-style\_\-ctools\_\-context}, \hyperlink{classviews__plugin__style__jump__menu_aebc54d57acea582a05435beccaa26fef}{views\_\-plugin\_\-style\_\-jump\_\-menu}, \hyperlink{classviews__plugin__style__mapping_a0abe9d256844104b89045980cf991782}{views\_\-plugin\_\-style\_\-mapping}, \hyperlink{classviews__plugin__style__rss_aa6331538ac5b9cdc80478f98ba5e0de4}{views\_\-plugin\_\-style\_\-rss}, \hyperlink{classviews__plugin__style__summary_a240be31b796b50331a25cf30818e584f}{views\_\-plugin\_\-style\_\-summary}, and \hyperlink{classviews__plugin__style__summary__jump__menu_a7e9b8b44735067dc7ebb838e54a21a38}{views\_\-plugin\_\-style\_\-summary\_\-jump\_\-menu}.\hypertarget{classviews__plugin__style_a95d504017017c611b482a920119452db}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!render\_\-fields@{render\_\-fields}}
+\index{render\_\-fields@{render\_\-fields}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{render\_\-fields}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::render\_\-fields (\$ {\em result})}}
+\label{classviews__plugin__style_a95d504017017c611b482a920119452db}
+Render all of the fields for a given style and store them on the object.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$result}]The result array from \$view-\/$>$result \end{DoxyParams}
+\hypertarget{classviews__plugin__style_a8406e6f92ae056facd207acab0b34898}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!render\_\-grouping@{render\_\-grouping}}
+\index{render\_\-grouping@{render\_\-grouping}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{render\_\-grouping}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::render\_\-grouping (\$ {\em records}, \/  \$ {\em groupings} = {\ttfamily array()}, \/  \$ {\em group\_\-rendered} = {\ttfamily NULL})}}
+\label{classviews__plugin__style_a8406e6f92ae056facd207acab0b34898}
+Group records as needed for rendering.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$records}]An array of records from the \hyperlink{classview}{view} to group. \item[{\em \$groupings}]An array of grouping instructions on which fields to group. If empty, the result set will be given a single group with an empty string as a label. \item[{\em \$group\_\-rendered}]Boolean value whether to use the rendered or the raw field value for grouping. If set to NULL the return is structured as before Views 7.x-\/3.0-\/rc2. After Views 7.x-\/3.0 this boolean is only used if \$groupings is an old-\/style string or if the rendered option is missing for a grouping instruction. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The grouped record set. A nested set structure is generated if multiple grouping fields are used.
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+   array(
+     'grouping_field_1:grouping_1' => array(
+       'group' => 'grouping_field_1:content_1',
+       'rows' => array(
+         'grouping_field_2:grouping_a' => array(
+           'group' => 'grouping_field_2:content_a',
+           'rows' => array(
+             $row_index_1 => $row_1,
+             $row_index_2 => $row_2,
+             // ...
+           )
+         ),
+       ),
+     ),
+     'grouping_field_1:grouping_2' => array(
+       // ...
+     ),
+   )
+\end{DoxyCode}
+ \hypertarget{classviews__plugin__style_a1bbda7f308843509a043f5a0b10a90a8}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!render\_\-grouping\_\-sets@{render\_\-grouping\_\-sets}}
+\index{render\_\-grouping\_\-sets@{render\_\-grouping\_\-sets}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{render\_\-grouping\_\-sets}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::render\_\-grouping\_\-sets (\$ {\em sets}, \/  \$ {\em level} = {\ttfamily 0})}}
+\label{classviews__plugin__style_a1bbda7f308843509a043f5a0b10a90a8}
+Render the grouping sets.
+
+Plugins may override this method if they wish some other way of handling grouping.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$sets}]Array containing the grouping sets to render. \item[{\em \$level}]Integer indicating the hierarchical level of the grouping.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Rendered output of given grouping sets. 
+\end{DoxyReturn}
+\hypertarget{classviews__plugin__style_a64c88c0e4d26997edce0478df01983c0}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!tokenize\_\-value@{tokenize\_\-value}}
+\index{tokenize\_\-value@{tokenize\_\-value}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{tokenize\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::tokenize\_\-value (\$ {\em value}, \/  \$ {\em row\_\-index})}}
+\label{classviews__plugin__style_a64c88c0e4d26997edce0478df01983c0}
+Take a value and apply token replacement logic to it. \hypertarget{classviews__plugin__style_a04c6419f4049b7e2644904b5089f2e41}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!uses\_\-fields@{uses\_\-fields}}
+\index{uses\_\-fields@{uses\_\-fields}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{uses\_\-fields}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::uses\_\-fields ()}}
+\label{classviews__plugin__style_a04c6419f4049b7e2644904b5089f2e41}
+Return TRUE if this style also uses fields.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\hypertarget{classviews__plugin__style_a2a23b833fd7a5905eba7942c6ccd6d6f}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!uses\_\-row\_\-class@{uses\_\-row\_\-class}}
+\index{uses\_\-row\_\-class@{uses\_\-row\_\-class}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{uses\_\-row\_\-class}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::uses\_\-row\_\-class ()}}
+\label{classviews__plugin__style_a2a23b833fd7a5905eba7942c6ccd6d6f}
+Return TRUE if this style also uses a row plugin. \hypertarget{classviews__plugin__style_a92ca48fa0359e70572f9a226ac54697f}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!uses\_\-row\_\-plugin@{uses\_\-row\_\-plugin}}
+\index{uses\_\-row\_\-plugin@{uses\_\-row\_\-plugin}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{uses\_\-row\_\-plugin}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::uses\_\-row\_\-plugin ()}}
+\label{classviews__plugin__style_a92ca48fa0359e70572f9a226ac54697f}
+Return TRUE if this style also uses a row plugin. \hypertarget{classviews__plugin__style_a7d790501a0aa53283e61cffbd59afb9e}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!uses\_\-tokens@{uses\_\-tokens}}
+\index{uses\_\-tokens@{uses\_\-tokens}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{uses\_\-tokens}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::uses\_\-tokens ()}}
+\label{classviews__plugin__style_a7d790501a0aa53283e61cffbd59afb9e}
+Return TRUE if this style uses tokens.
+
+Used to ensure we don't fetch tokens when not needed for performance. \hypertarget{classviews__plugin__style_a41929fec27cb0ae7a801276969a080a1}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!validate@{validate}}
+\index{validate@{validate}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{validate}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::validate ()}}
+\label{classviews__plugin__style_a41929fec27cb0ae7a801276969a080a1}
+Validate that the plugin is correct and can be saved.
+
+\begin{DoxyReturn}{Returns}
+An array of error strings to tell the user what is wrong with this plugin. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classviews__plugin_aaf004b6a719837f08a1ffe4a1cf4d442}{views\_\-plugin}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classviews__plugin__style_a037a508debefb5ea44fc50d34e863ffc}{
+\index{views\_\-plugin\_\-style@{views\_\-plugin\_\-style}!\$row\_\-tokens@{\$row\_\-tokens}}
+\index{\$row\_\-tokens@{\$row\_\-tokens}!views_plugin_style@{views\_\-plugin\_\-style}}
+\subsubsection[{\$row\_\-tokens}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-style::\$row\_\-tokens = array()}}
+\label{classviews__plugin__style_a037a508debefb5ea44fc50d34e863ffc}
+Store all available tokens row rows. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/plugins/\hyperlink{views__plugin__style_8inc}{views\_\-plugin\_\-style.inc}\end{DoxyCompactItemize}

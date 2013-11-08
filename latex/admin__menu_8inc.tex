@@ -1,0 +1,266 @@
+\hypertarget{admin__menu_8inc}{
+\section{html/profiles/dosomething/modules/contrib/admin\_\-menu/admin\_\-menu.inc File Reference}
+\label{admin__menu_8inc}\index{html/profiles/dosomething/modules/contrib/admin\_\-menu/admin\_\-menu.inc@{html/profiles/dosomething/modules/contrib/admin\_\-menu/admin\_\-menu.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{admin__menu_8inc_a7155f3b662374386ddc07f147074fcf1}{admin\_\-menu\_\-tree} (\$menu\_\-name)
+\item 
+\hyperlink{admin__menu_8inc_a84698cac1efd2078ef2763865995e226}{admin\_\-menu\_\-tree\_\-dynamic} (array \$expand\_\-map)
+\item 
+\hyperlink{admin__menu_8inc_a575d57ae5a9c1a4b8729ef022e17e019}{admin\_\-menu\_\-merge\_\-tree} (array \&\$tree, array \$tree\_\-dynamic, array \$expand\_\-map)
+\item 
+\hyperlink{admin__menu_8inc_a6f21769e09533eece734c5f86e777283}{admin\_\-menu\_\-translate} (\$router\_\-item, \$map)
+\item 
+\hyperlink{admin__menu_8inc_ad075bcaf2a762dfd3e24bbe473aea445}{admin\_\-menu\_\-expand\_\-args} (\$arguments)
+\item 
+\hyperlink{admin__menu_8inc_afbb93090bb402d1d524e666d370ffec5}{admin\_\-menu\_\-links\_\-menu} (\$tree)
+\item 
+\hyperlink{admin__menu_8inc_abb0305b57b5e84d5bb49059d16e55aa0}{admin\_\-menu\_\-links\_\-icon} ()
+\item 
+\hyperlink{admin__menu_8inc_a532d8549ee18014ea986a2859b0210dc}{admin\_\-menu\_\-links\_\-account} ()
+\item 
+\hyperlink{admin__menu_8inc_aa054287a0a1394edc680d591f3ee1ae4}{admin\_\-menu\_\-links\_\-users} ()
+\item 
+\hyperlink{admin__menu_8inc_a9c16c388d608eb3e3f7106e61080203d}{admin\_\-menu\_\-links\_\-search} ()
+\item 
+\hyperlink{admin__menu_8inc_a4e3734f65911708ed221edc2a7007a23}{admin\_\-menu\_\-theme\_\-settings} ()
+\item 
+\hyperlink{admin__menu_8inc_ad849bfde07af29eb7536133da2f2b3be}{admin\_\-menu\_\-settings\_\-process\_\-components} (\$element)
+\item 
+\hyperlink{admin__menu_8inc_a773e8076793591c82ba893436f46153c}{admin\_\-menu\_\-theme\_\-settings\_\-validate} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{admin__menu_8inc_aa78509bb044821faf77cf6624bd726f8}{\_\-admin\_\-menu\_\-form\_\-devel\_\-admin\_\-settings\_\-alter} (\&\$form, \$form\_\-state)
+\item 
+\hyperlink{admin__menu_8inc_ab2b3513df09bbd7a3deae15086d4898e}{admin\_\-menu\_\-toggle\_\-modules} ()
+\item 
+\hyperlink{admin__menu_8inc_adc75f56f673a11494a4ed92d15e04cdf}{\_\-admin\_\-menu\_\-developer\_\-modules} ()
+\item 
+\hyperlink{admin__menu_8inc_a954c039363bc1ce4c1fa1260f4f107e2}{admin\_\-menu\_\-flush\_\-cache} (\$name=NULL)
+\item 
+\hyperlink{admin__menu_8inc_a9a83be386880f46f5f31e08be2529b51}{admin\_\-menu\_\-admin\_\-menu\_\-cache\_\-info} ()
+\item 
+\hyperlink{admin__menu_8inc_addfcc1ff94f62409d4ff7fa7f523aa45}{system\_\-admin\_\-menu\_\-cache\_\-info} ()
+\item 
+\hyperlink{admin__menu_8inc_a244f8c73c3414cbf1d9ec52f2fd65fbc}{update\_\-admin\_\-menu\_\-cache\_\-info} ()
+\item 
+\hyperlink{admin__menu_8inc_a34a792a4ac923bf39cf8e8f87fb92124}{\_\-admin\_\-menu\_\-flush\_\-cache} (\$name=NULL)
+\item 
+\hyperlink{admin__menu_8inc_af696ca093076e195d86786d7516ee9df}{template\_\-preprocess\_\-admin\_\-menu\_\-icon} (\&\$variables)
+\item 
+\hyperlink{admin__menu_8inc_ab93751624cbfa203208fba5c90192ee1}{theme\_\-admin\_\-menu\_\-icon} (\$variables)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Menu builder functions for Administration menu. 
+
+\subsection{Function Documentation}
+\hypertarget{admin__menu_8inc_adc75f56f673a11494a4ed92d15e04cdf}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!\_\-admin\_\-menu\_\-developer\_\-modules@{\_\-admin\_\-menu\_\-developer\_\-modules}}
+\index{\_\-admin\_\-menu\_\-developer\_\-modules@{\_\-admin\_\-menu\_\-developer\_\-modules}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{\_\-admin\_\-menu\_\-developer\_\-modules}]{\setlength{\rightskip}{0pt plus 5cm}\_\-admin\_\-menu\_\-developer\_\-modules ()}}
+\label{admin__menu_8inc_adc75f56f673a11494a4ed92d15e04cdf}
+Helper function to return a default list of developer modules. \hypertarget{admin__menu_8inc_a34a792a4ac923bf39cf8e8f87fb92124}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!\_\-admin\_\-menu\_\-flush\_\-cache@{\_\-admin\_\-menu\_\-flush\_\-cache}}
+\index{\_\-admin\_\-menu\_\-flush\_\-cache@{\_\-admin\_\-menu\_\-flush\_\-cache}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{\_\-admin\_\-menu\_\-flush\_\-cache}]{\setlength{\rightskip}{0pt plus 5cm}\_\-admin\_\-menu\_\-flush\_\-cache (\$ {\em name} = {\ttfamily NULL})}}
+\label{admin__menu_8inc_a34a792a4ac923bf39cf8e8f87fb92124}
+Flush all caches or a specific one.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}](optional) Name of cache to flush.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{admin__menu_8inc_addfcc1ff94f62409d4ff7fa7f523aa45}{system\_\-admin\_\-menu\_\-cache\_\-info()} 
+\end{DoxySeeAlso}
+\hypertarget{admin__menu_8inc_aa78509bb044821faf77cf6624bd726f8}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!\_\-admin\_\-menu\_\-form\_\-devel\_\-admin\_\-settings\_\-alter@{\_\-admin\_\-menu\_\-form\_\-devel\_\-admin\_\-settings\_\-alter}}
+\index{\_\-admin\_\-menu\_\-form\_\-devel\_\-admin\_\-settings\_\-alter@{\_\-admin\_\-menu\_\-form\_\-devel\_\-admin\_\-settings\_\-alter}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{\_\-admin\_\-menu\_\-form\_\-devel\_\-admin\_\-settings\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}\_\-admin\_\-menu\_\-form\_\-devel\_\-admin\_\-settings\_\-alter (\&\$ {\em form}, \/  \$ {\em form\_\-state})}}
+\label{admin__menu_8inc_aa78509bb044821faf77cf6624bd726f8}
+Implementation of hook\_\-form\_\-FORM\_\-ID\_\-alter().
+
+Extends Devel module with Administration menu developer settings. \hypertarget{admin__menu_8inc_a9a83be386880f46f5f31e08be2529b51}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!admin\_\-menu\_\-admin\_\-menu\_\-cache\_\-info@{admin\_\-menu\_\-admin\_\-menu\_\-cache\_\-info}}
+\index{admin\_\-menu\_\-admin\_\-menu\_\-cache\_\-info@{admin\_\-menu\_\-admin\_\-menu\_\-cache\_\-info}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{admin\_\-menu\_\-admin\_\-menu\_\-cache\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}admin\_\-menu\_\-admin\_\-menu\_\-cache\_\-info ()}}
+\label{admin__menu_8inc_a9a83be386880f46f5f31e08be2529b51}
+Implements \hyperlink{admin__menu_8api_8php_a4458e9bb8dfc9515707b474b9faceca6}{hook\_\-admin\_\-menu\_\-cache\_\-info()}. \hypertarget{admin__menu_8inc_ad075bcaf2a762dfd3e24bbe473aea445}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!admin\_\-menu\_\-expand\_\-args@{admin\_\-menu\_\-expand\_\-args}}
+\index{admin\_\-menu\_\-expand\_\-args@{admin\_\-menu\_\-expand\_\-args}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{admin\_\-menu\_\-expand\_\-args}]{\setlength{\rightskip}{0pt plus 5cm}admin\_\-menu\_\-expand\_\-args (\$ {\em arguments})}}
+\label{admin__menu_8inc_ad075bcaf2a762dfd3e24bbe473aea445}
+Create the cartesian product of multiple varying sized argument arrays.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$arguments}]A two dimensional array of arguments.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{admin__menu_8api_8php_a4b3f2235db483f670a2e7327633868df}{hook\_\-admin\_\-menu\_\-map()} 
+\end{DoxySeeAlso}
+\hypertarget{admin__menu_8inc_a954c039363bc1ce4c1fa1260f4f107e2}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!admin\_\-menu\_\-flush\_\-cache@{admin\_\-menu\_\-flush\_\-cache}}
+\index{admin\_\-menu\_\-flush\_\-cache@{admin\_\-menu\_\-flush\_\-cache}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{admin\_\-menu\_\-flush\_\-cache}]{\setlength{\rightskip}{0pt plus 5cm}admin\_\-menu\_\-flush\_\-cache (\$ {\em name} = {\ttfamily NULL})}}
+\label{admin__menu_8inc_a954c039363bc1ce4c1fa1260f4f107e2}
+Flush all caches or a specific one.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}](optional) Name of cache to flush. \end{DoxyParams}
+\hypertarget{admin__menu_8inc_a532d8549ee18014ea986a2859b0210dc}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!admin\_\-menu\_\-links\_\-account@{admin\_\-menu\_\-links\_\-account}}
+\index{admin\_\-menu\_\-links\_\-account@{admin\_\-menu\_\-links\_\-account}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{admin\_\-menu\_\-links\_\-account}]{\setlength{\rightskip}{0pt plus 5cm}admin\_\-menu\_\-links\_\-account ()}}
+\label{admin__menu_8inc_a532d8549ee18014ea986a2859b0210dc}
+Builds the account links.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{admin__menu_8module_a33d1120bbd0ebf32f21f44c17b831475}{theme\_\-admin\_\-menu\_\-links()} 
+\end{DoxySeeAlso}
+\hypertarget{admin__menu_8inc_abb0305b57b5e84d5bb49059d16e55aa0}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!admin\_\-menu\_\-links\_\-icon@{admin\_\-menu\_\-links\_\-icon}}
+\index{admin\_\-menu\_\-links\_\-icon@{admin\_\-menu\_\-links\_\-icon}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{admin\_\-menu\_\-links\_\-icon}]{\setlength{\rightskip}{0pt plus 5cm}admin\_\-menu\_\-links\_\-icon ()}}
+\label{admin__menu_8inc_abb0305b57b5e84d5bb49059d16e55aa0}
+Build icon menu links; mostly containing maintenance helpers.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{admin__menu_8module_a33d1120bbd0ebf32f21f44c17b831475}{theme\_\-admin\_\-menu\_\-links()} 
+\end{DoxySeeAlso}
+\hypertarget{admin__menu_8inc_afbb93090bb402d1d524e666d370ffec5}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!admin\_\-menu\_\-links\_\-menu@{admin\_\-menu\_\-links\_\-menu}}
+\index{admin\_\-menu\_\-links\_\-menu@{admin\_\-menu\_\-links\_\-menu}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{admin\_\-menu\_\-links\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}admin\_\-menu\_\-links\_\-menu (\$ {\em tree})}}
+\label{admin__menu_8inc_afbb93090bb402d1d524e666d370ffec5}
+Build the administration menu as renderable menu links.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$tree}]A data structure representing the administration menu tree as returned from menu\_\-tree\_\-all\_\-data().\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The complete administration menu, suitable for \hyperlink{admin__menu_8module_a33d1120bbd0ebf32f21f44c17b831475}{theme\_\-admin\_\-menu\_\-links()}.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{admin__menu_8module_a33d1120bbd0ebf32f21f44c17b831475}{theme\_\-admin\_\-menu\_\-links()} 
+
+\hyperlink{admin__menu_8module_a5215739b9f88a38d14ba99f5413b904e}{admin\_\-menu\_\-menu\_\-alter()} 
+\end{DoxySeeAlso}
+\hypertarget{admin__menu_8inc_a9c16c388d608eb3e3f7106e61080203d}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!admin\_\-menu\_\-links\_\-search@{admin\_\-menu\_\-links\_\-search}}
+\index{admin\_\-menu\_\-links\_\-search@{admin\_\-menu\_\-links\_\-search}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{admin\_\-menu\_\-links\_\-search}]{\setlength{\rightskip}{0pt plus 5cm}admin\_\-menu\_\-links\_\-search ()}}
+\label{admin__menu_8inc_a9c16c388d608eb3e3f7106e61080203d}
+Build search widget.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{admin__menu_8module_a33d1120bbd0ebf32f21f44c17b831475}{theme\_\-admin\_\-menu\_\-links()} 
+\end{DoxySeeAlso}
+\hypertarget{admin__menu_8inc_aa054287a0a1394edc680d591f3ee1ae4}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!admin\_\-menu\_\-links\_\-users@{admin\_\-menu\_\-links\_\-users}}
+\index{admin\_\-menu\_\-links\_\-users@{admin\_\-menu\_\-links\_\-users}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{admin\_\-menu\_\-links\_\-users}]{\setlength{\rightskip}{0pt plus 5cm}admin\_\-menu\_\-links\_\-users ()}}
+\label{admin__menu_8inc_aa054287a0a1394edc680d591f3ee1ae4}
+Builds user counter.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{admin__menu_8module_a33d1120bbd0ebf32f21f44c17b831475}{theme\_\-admin\_\-menu\_\-links()} 
+\end{DoxySeeAlso}
+\hypertarget{admin__menu_8inc_a575d57ae5a9c1a4b8729ef022e17e019}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!admin\_\-menu\_\-merge\_\-tree@{admin\_\-menu\_\-merge\_\-tree}}
+\index{admin\_\-menu\_\-merge\_\-tree@{admin\_\-menu\_\-merge\_\-tree}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{admin\_\-menu\_\-merge\_\-tree}]{\setlength{\rightskip}{0pt plus 5cm}admin\_\-menu\_\-merge\_\-tree (array \&\$ {\em tree}, \/  array \$ {\em tree\_\-dynamic}, \/  array \$ {\em expand\_\-map})}}
+\label{admin__menu_8inc_a575d57ae5a9c1a4b8729ef022e17e019}
+Walk through the entire menu tree and merge in expanded dynamic menu links.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \&\$tree}]A menu tree structure as returned by menu\_\-tree\_\-all\_\-data(). \item[{\em \$tree\_\-dynamic}]A dynamic menu tree structure as returned by \hyperlink{admin__menu_8inc_a84698cac1efd2078ef2763865995e226}{admin\_\-menu\_\-tree\_\-dynamic()}. \item[{\em \$expand\_\-map}]An array containing menu router path placeholder expansion argument mappings.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{admin__menu_8api_8php_a4b3f2235db483f670a2e7327633868df}{hook\_\-admin\_\-menu\_\-map()} 
+
+\hyperlink{admin__menu_8inc_a84698cac1efd2078ef2763865995e226}{admin\_\-menu\_\-tree\_\-dynamic()} 
+
+menu\_\-tree\_\-all\_\-data() 
+\end{DoxySeeAlso}
+\hypertarget{admin__menu_8inc_ad849bfde07af29eb7536133da2f2b3be}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!admin\_\-menu\_\-settings\_\-process\_\-components@{admin\_\-menu\_\-settings\_\-process\_\-components}}
+\index{admin\_\-menu\_\-settings\_\-process\_\-components@{admin\_\-menu\_\-settings\_\-process\_\-components}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{admin\_\-menu\_\-settings\_\-process\_\-components}]{\setlength{\rightskip}{0pt plus 5cm}admin\_\-menu\_\-settings\_\-process\_\-components (\$ {\em element})}}
+\label{admin__menu_8inc_ad849bfde07af29eb7536133da2f2b3be}
+process callback for component plugin form element in \hyperlink{admin__menu_8inc_a4e3734f65911708ed221edc2a7007a23}{admin\_\-menu\_\-theme\_\-settings()}. \hypertarget{admin__menu_8inc_a4e3734f65911708ed221edc2a7007a23}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!admin\_\-menu\_\-theme\_\-settings@{admin\_\-menu\_\-theme\_\-settings}}
+\index{admin\_\-menu\_\-theme\_\-settings@{admin\_\-menu\_\-theme\_\-settings}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{admin\_\-menu\_\-theme\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}admin\_\-menu\_\-theme\_\-settings ()}}
+\label{admin__menu_8inc_a4e3734f65911708ed221edc2a7007a23}
+Form builder function for module settings. \hypertarget{admin__menu_8inc_a773e8076793591c82ba893436f46153c}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!admin\_\-menu\_\-theme\_\-settings\_\-validate@{admin\_\-menu\_\-theme\_\-settings\_\-validate}}
+\index{admin\_\-menu\_\-theme\_\-settings\_\-validate@{admin\_\-menu\_\-theme\_\-settings\_\-validate}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{admin\_\-menu\_\-theme\_\-settings\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}admin\_\-menu\_\-theme\_\-settings\_\-validate (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{admin__menu_8inc_a773e8076793591c82ba893436f46153c}
+Form validation handler for \hyperlink{admin__menu_8inc_a4e3734f65911708ed221edc2a7007a23}{admin\_\-menu\_\-theme\_\-settings()}. \hypertarget{admin__menu_8inc_ab2b3513df09bbd7a3deae15086d4898e}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!admin\_\-menu\_\-toggle\_\-modules@{admin\_\-menu\_\-toggle\_\-modules}}
+\index{admin\_\-menu\_\-toggle\_\-modules@{admin\_\-menu\_\-toggle\_\-modules}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{admin\_\-menu\_\-toggle\_\-modules}]{\setlength{\rightskip}{0pt plus 5cm}admin\_\-menu\_\-toggle\_\-modules ()}}
+\label{admin__menu_8inc_ab2b3513df09bbd7a3deae15086d4898e}
+Menu callback; Enable/disable developer modules.
+
+This can save up to 150ms on each uncached page request. \hypertarget{admin__menu_8inc_a6f21769e09533eece734c5f86e777283}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!admin\_\-menu\_\-translate@{admin\_\-menu\_\-translate}}
+\index{admin\_\-menu\_\-translate@{admin\_\-menu\_\-translate}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{admin\_\-menu\_\-translate}]{\setlength{\rightskip}{0pt plus 5cm}admin\_\-menu\_\-translate (\$ {\em router\_\-item}, \/  \$ {\em map})}}
+\label{admin__menu_8inc_a6f21769e09533eece734c5f86e777283}
+Translate an expanded router item into a menu link suitable for rendering.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$router\_\-item}]A menu router item. \item[{\em \$map}]A path map with placeholders replaced. \end{DoxyParams}
+\hypertarget{admin__menu_8inc_a7155f3b662374386ddc07f147074fcf1}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!admin\_\-menu\_\-tree@{admin\_\-menu\_\-tree}}
+\index{admin\_\-menu\_\-tree@{admin\_\-menu\_\-tree}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{admin\_\-menu\_\-tree}]{\setlength{\rightskip}{0pt plus 5cm}admin\_\-menu\_\-tree (\$ {\em menu\_\-name})}}
+\label{admin__menu_8inc_a7155f3b662374386ddc07f147074fcf1}
+Build the full administration menu tree from static and expanded dynamic items.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$menu\_\-name}]The menu name to use as base for the tree. \end{DoxyParams}
+\hypertarget{admin__menu_8inc_a84698cac1efd2078ef2763865995e226}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!admin\_\-menu\_\-tree\_\-dynamic@{admin\_\-menu\_\-tree\_\-dynamic}}
+\index{admin\_\-menu\_\-tree\_\-dynamic@{admin\_\-menu\_\-tree\_\-dynamic}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{admin\_\-menu\_\-tree\_\-dynamic}]{\setlength{\rightskip}{0pt plus 5cm}admin\_\-menu\_\-tree\_\-dynamic (array \$ {\em expand\_\-map})}}
+\label{admin__menu_8inc_a84698cac1efd2078ef2763865995e226}
+Load menu link trees for router paths containing dynamic arguments.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$expand\_\-map}]An array containing menu router path placeholder expansion argument mappings.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An associative array whose keys are the parent paths of the menu router paths given in \$expand\_\-map as well as the parent paths of any child link deeper down the tree. The parent paths are used in \hyperlink{admin__menu_8inc_a575d57ae5a9c1a4b8729ef022e17e019}{admin\_\-menu\_\-merge\_\-tree()} to check whether anything needs to be merged.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{admin__menu_8api_8php_a4b3f2235db483f670a2e7327633868df}{hook\_\-admin\_\-menu\_\-map()} 
+\end{DoxySeeAlso}
+\hypertarget{admin__menu_8inc_addfcc1ff94f62409d4ff7fa7f523aa45}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!system\_\-admin\_\-menu\_\-cache\_\-info@{system\_\-admin\_\-menu\_\-cache\_\-info}}
+\index{system\_\-admin\_\-menu\_\-cache\_\-info@{system\_\-admin\_\-menu\_\-cache\_\-info}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{system\_\-admin\_\-menu\_\-cache\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}system\_\-admin\_\-menu\_\-cache\_\-info ()}}
+\label{admin__menu_8inc_addfcc1ff94f62409d4ff7fa7f523aa45}
+Implements \hyperlink{admin__menu_8api_8php_a4458e9bb8dfc9515707b474b9faceca6}{hook\_\-admin\_\-menu\_\-cache\_\-info()} on behalf of System module. \hypertarget{admin__menu_8inc_af696ca093076e195d86786d7516ee9df}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!template\_\-preprocess\_\-admin\_\-menu\_\-icon@{template\_\-preprocess\_\-admin\_\-menu\_\-icon}}
+\index{template\_\-preprocess\_\-admin\_\-menu\_\-icon@{template\_\-preprocess\_\-admin\_\-menu\_\-icon}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{template\_\-preprocess\_\-admin\_\-menu\_\-icon}]{\setlength{\rightskip}{0pt plus 5cm}template\_\-preprocess\_\-admin\_\-menu\_\-icon (\&\$ {\em variables})}}
+\label{admin__menu_8inc_af696ca093076e195d86786d7516ee9df}
+Preprocesses variables for \hyperlink{admin__menu_8inc_ab93751624cbfa203208fba5c90192ee1}{theme\_\-admin\_\-menu\_\-icon()}. \hypertarget{admin__menu_8inc_ab93751624cbfa203208fba5c90192ee1}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!theme\_\-admin\_\-menu\_\-icon@{theme\_\-admin\_\-menu\_\-icon}}
+\index{theme\_\-admin\_\-menu\_\-icon@{theme\_\-admin\_\-menu\_\-icon}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{theme\_\-admin\_\-menu\_\-icon}]{\setlength{\rightskip}{0pt plus 5cm}theme\_\-admin\_\-menu\_\-icon (\$ {\em variables})}}
+\label{admin__menu_8inc_ab93751624cbfa203208fba5c90192ee1}
+Renders an icon to display in the administration menu. \hypertarget{admin__menu_8inc_a244f8c73c3414cbf1d9ec52f2fd65fbc}{
+\index{admin\_\-menu.inc@{admin\_\-menu.inc}!update\_\-admin\_\-menu\_\-cache\_\-info@{update\_\-admin\_\-menu\_\-cache\_\-info}}
+\index{update\_\-admin\_\-menu\_\-cache\_\-info@{update\_\-admin\_\-menu\_\-cache\_\-info}!admin_menu.inc@{admin\_\-menu.inc}}
+\subsubsection[{update\_\-admin\_\-menu\_\-cache\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}update\_\-admin\_\-menu\_\-cache\_\-info ()}}
+\label{admin__menu_8inc_a244f8c73c3414cbf1d9ec52f2fd65fbc}
+Implements \hyperlink{admin__menu_8api_8php_a4458e9bb8dfc9515707b474b9faceca6}{hook\_\-admin\_\-menu\_\-cache\_\-info()} on behalf of Update module. 

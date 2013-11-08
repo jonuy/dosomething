@@ -1,0 +1,111 @@
+\hypertarget{classviews__plugin__display__block}{
+\section{views\_\-plugin\_\-display\_\-block Class Reference}
+\label{classviews__plugin__display__block}\index{views\_\-plugin\_\-display\_\-block@{views\_\-plugin\_\-display\_\-block}}
+}
+Inheritance diagram for views\_\-plugin\_\-display\_\-block::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classviews__plugin__display__block}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__plugin__display__block_aaa7cd040bd224b13bb6cada38451b26b}{
+{\bfseries option\_\-definition} ()}
+\label{classviews__plugin__display__block_aaa7cd040bd224b13bb6cada38451b26b}
+
+\item 
+\hyperlink{classviews__plugin__display__block_a9d1df6840d9bda5c36020126332935cf}{execute\_\-hook\_\-block\_\-list} (\$delta=0, \$edit=array())
+\item 
+\hyperlink{classviews__plugin__display__block_ad673f5b3462304a522ead4293a8f7cef}{execute} ()
+\item 
+\hyperlink{classviews__plugin__display__block_a52bb2499272275963128bb2beb5804ce}{options\_\-summary} (\&\$categories, \&\$options)
+\item 
+\hyperlink{classviews__plugin__display__block_ac5a9a1d276df4c6a01a3076be5e4f0aa}{block\_\-caching\_\-modes} ()
+\item 
+\hyperlink{classviews__plugin__display__block_a4be2fbe3e5f223215268bdd13cdd0312}{get\_\-cache\_\-type} ()
+\item 
+\hyperlink{classviews__plugin__display__block_a251f0aa56cead04c51c4b1d633826640}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__display__block_aaac31f678cc192896bcfdeb1a8a5a2c7}{options\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__display__block_ab0995994a4c7436de2790c7ad8d7ea74}{uses\_\-exposed} ()
+\item 
+\hyperlink{classviews__plugin__display__block_a7c66bc2e467112a09d809d9d5d2baa20}{update\_\-block\_\-bid} (\$name, \$old\_\-delta, \$delta)
+\item 
+\hyperlink{classviews__plugin__display__block_a58ba8f810894ad2e7c43c49552005ceb}{save\_\-block\_\-cache} (\$delta, \$cache\_\-setting)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The plugin that handles a block. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__plugin__display__block_ac5a9a1d276df4c6a01a3076be5e4f0aa}{
+\index{views\_\-plugin\_\-display\_\-block@{views\_\-plugin\_\-display\_\-block}!block\_\-caching\_\-modes@{block\_\-caching\_\-modes}}
+\index{block\_\-caching\_\-modes@{block\_\-caching\_\-modes}!views_plugin_display_block@{views\_\-plugin\_\-display\_\-block}}
+\subsubsection[{block\_\-caching\_\-modes}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-block::block\_\-caching\_\-modes ()}}
+\label{classviews__plugin__display__block_ac5a9a1d276df4c6a01a3076be5e4f0aa}
+Provide a list of core's block caching modes. \hypertarget{classviews__plugin__display__block_ad673f5b3462304a522ead4293a8f7cef}{
+\index{views\_\-plugin\_\-display\_\-block@{views\_\-plugin\_\-display\_\-block}!execute@{execute}}
+\index{execute@{execute}!views_plugin_display_block@{views\_\-plugin\_\-display\_\-block}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-block::execute ()}}
+\label{classviews__plugin__display__block_ad673f5b3462304a522ead4293a8f7cef}
+The display block handler returns the structure necessary for a block. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_af99c4a303d3e409ab7b14c6cfcd3a1d8}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__block_a9d1df6840d9bda5c36020126332935cf}{
+\index{views\_\-plugin\_\-display\_\-block@{views\_\-plugin\_\-display\_\-block}!execute\_\-hook\_\-block\_\-list@{execute\_\-hook\_\-block\_\-list}}
+\index{execute\_\-hook\_\-block\_\-list@{execute\_\-hook\_\-block\_\-list}!views_plugin_display_block@{views\_\-plugin\_\-display\_\-block}}
+\subsubsection[{execute\_\-hook\_\-block\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-block::execute\_\-hook\_\-block\_\-list (\$ {\em delta} = {\ttfamily 0}, \/  \$ {\em edit} = {\ttfamily array()})}}
+\label{classviews__plugin__display__block_a9d1df6840d9bda5c36020126332935cf}
+The default block handler doesn't support configurable items, but extended block handlers might be able to do interesting stuff with it. \hypertarget{classviews__plugin__display__block_a4be2fbe3e5f223215268bdd13cdd0312}{
+\index{views\_\-plugin\_\-display\_\-block@{views\_\-plugin\_\-display\_\-block}!get\_\-cache\_\-type@{get\_\-cache\_\-type}}
+\index{get\_\-cache\_\-type@{get\_\-cache\_\-type}!views_plugin_display_block@{views\_\-plugin\_\-display\_\-block}}
+\subsubsection[{get\_\-cache\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-block::get\_\-cache\_\-type ()}}
+\label{classviews__plugin__display__block_a4be2fbe3e5f223215268bdd13cdd0312}
+Provide a single method to figure caching type, keeping a sensible default for when it's unset. \hypertarget{classviews__plugin__display__block_a251f0aa56cead04c51c4b1d633826640}{
+\index{views\_\-plugin\_\-display\_\-block@{views\_\-plugin\_\-display\_\-block}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_plugin_display_block@{views\_\-plugin\_\-display\_\-block}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-block::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__display__block_a251f0aa56cead04c51c4b1d633826640}
+Provide the default form for setting options. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_ad9c69d91ea1165ff51dcd1f1f6d3a154}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__block_aaac31f678cc192896bcfdeb1a8a5a2c7}{
+\index{views\_\-plugin\_\-display\_\-block@{views\_\-plugin\_\-display\_\-block}!options\_\-submit@{options\_\-submit}}
+\index{options\_\-submit@{options\_\-submit}!views_plugin_display_block@{views\_\-plugin\_\-display\_\-block}}
+\subsubsection[{options\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-block::options\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__display__block_aaac31f678cc192896bcfdeb1a8a5a2c7}
+Perform any necessary changes to the form values prior to storage. There is no need for this function to actually store the data. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_a75f0b2d5587b365640fcb4d414daae36}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__block_a52bb2499272275963128bb2beb5804ce}{
+\index{views\_\-plugin\_\-display\_\-block@{views\_\-plugin\_\-display\_\-block}!options\_\-summary@{options\_\-summary}}
+\index{options\_\-summary@{options\_\-summary}!views_plugin_display_block@{views\_\-plugin\_\-display\_\-block}}
+\subsubsection[{options\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-block::options\_\-summary (\&\$ {\em categories}, \/  \&\$ {\em options})}}
+\label{classviews__plugin__display__block_a52bb2499272275963128bb2beb5804ce}
+Provide the summary for page options in the views UI.
+
+This output is returned as an array. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_a7a2f2aeedfc14816815e3ce65a61aedf}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__block_a58ba8f810894ad2e7c43c49552005ceb}{
+\index{views\_\-plugin\_\-display\_\-block@{views\_\-plugin\_\-display\_\-block}!save\_\-block\_\-cache@{save\_\-block\_\-cache}}
+\index{save\_\-block\_\-cache@{save\_\-block\_\-cache}!views_plugin_display_block@{views\_\-plugin\_\-display\_\-block}}
+\subsubsection[{save\_\-block\_\-cache}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-block::save\_\-block\_\-cache (\$ {\em delta}, \/  \$ {\em cache\_\-setting})}}
+\label{classviews__plugin__display__block_a58ba8f810894ad2e7c43c49552005ceb}
+Save the block cache setting in the blocks table if this block allready exists in the blocks table. Dirty fix untill \href{http://drupal.org/node/235673}{\tt http://drupal.org/node/235673} gets in. \hypertarget{classviews__plugin__display__block_a7c66bc2e467112a09d809d9d5d2baa20}{
+\index{views\_\-plugin\_\-display\_\-block@{views\_\-plugin\_\-display\_\-block}!update\_\-block\_\-bid@{update\_\-block\_\-bid}}
+\index{update\_\-block\_\-bid@{update\_\-block\_\-bid}!views_plugin_display_block@{views\_\-plugin\_\-display\_\-block}}
+\subsubsection[{update\_\-block\_\-bid}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-block::update\_\-block\_\-bid (\$ {\em name}, \/  \$ {\em old\_\-delta}, \/  \$ {\em delta})}}
+\label{classviews__plugin__display__block_a7c66bc2e467112a09d809d9d5d2baa20}
+Update the block delta when you change the machine readable name of the display. \hypertarget{classviews__plugin__display__block_ab0995994a4c7436de2790c7ad8d7ea74}{
+\index{views\_\-plugin\_\-display\_\-block@{views\_\-plugin\_\-display\_\-block}!uses\_\-exposed@{uses\_\-exposed}}
+\index{uses\_\-exposed@{uses\_\-exposed}!views_plugin_display_block@{views\_\-plugin\_\-display\_\-block}}
+\subsubsection[{uses\_\-exposed}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-block::uses\_\-exposed ()}}
+\label{classviews__plugin__display__block_ab0995994a4c7436de2790c7ad8d7ea74}
+Block views use exposed widgets only if AJAX is set. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_a5bfcb22187618f52bea9ea626aff18a4}{views\_\-plugin\_\-display}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/plugins/\hyperlink{views__plugin__display__block_8inc}{views\_\-plugin\_\-display\_\-block.inc}\end{DoxyCompactItemize}

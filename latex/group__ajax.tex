@@ -1,0 +1,162 @@
+\hypertarget{group__ajax}{
+\section{Views AJAX library}
+\label{group__ajax}\index{Views AJAX library@{Views AJAX library}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__ajax_ga5f1adff7f07ea45d8ab62b456ffdd6e0}{views\_\-ajax} ()
+\item 
+\hyperlink{group__ajax_gac5062864272f5b8134072eb22a661e6f}{views\_\-ajax\_\-command\_\-set\_\-form} (\$output, \$title, \$url=NULL)
+\item 
+\hyperlink{group__ajax_gac0331ece9a64afe1350f116b9c5a79f1}{views\_\-ajax\_\-command\_\-dismiss\_\-form} ()
+\item 
+\hyperlink{group__ajax_ga22d27c9ab6b8a95f4903463eb6aabf8d}{views\_\-ajax\_\-command\_\-hilite} (\$selector)
+\item 
+\hyperlink{group__ajax_ga9e55776de616656e252b0f9eb8851e82}{views\_\-ajax\_\-command\_\-add\_\-tab} (\$id, \$title, \$body)
+\item 
+\hyperlink{group__ajax_gac7d8055fd4e9c91501496391dbe94b5a}{views\_\-ajax\_\-command\_\-scroll\_\-top} (\$selector)
+\item 
+\hyperlink{group__ajax_ga3ef672bfe39df163a3cf89ed23c8a0c2}{views\_\-ajax\_\-command\_\-show\_\-buttons} ()
+\item 
+\hyperlink{group__ajax_ga698e1518b153b16adbe61e3aeb376eac}{views\_\-ajax\_\-command\_\-trigger\_\-preview} ()
+\item 
+\hyperlink{group__ajax_ga42db219284fd40096900731ee6d13600}{views\_\-ajax\_\-command\_\-replace\_\-title} (\$title)
+\item 
+\hyperlink{group__ajax_ga59f31023b894be21852b7034f639523f}{views\_\-ajax\_\-error} (\$message)
+\item 
+\hyperlink{group__ajax_ga7eed0d665d7b4c8c8134eb060afbb2be}{views\_\-ajax\_\-form\_\-wrapper} (\$form\_\-id, \&\$form\_\-state)
+\item 
+\hyperlink{group__ajax_ga0d9404f1a04f9f5102ffac0bef92d5ab}{views\_\-ajax\_\-autocomplete\_\-user} (\$string= '')
+\item 
+\hyperlink{group__ajax_ga4aed960e2ee6b6e516e609188852c0f6}{views\_\-ajax\_\-autocomplete\_\-taxonomy} (\$vid, \$tags\_\-typed= '')
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles the server side AJAX interactions of Views. 
+
+\subsection{Function Documentation}
+\hypertarget{group__ajax_ga5f1adff7f07ea45d8ab62b456ffdd6e0}{
+\index{ajax@{ajax}!views\_\-ajax@{views\_\-ajax}}
+\index{views\_\-ajax@{views\_\-ajax}!ajax@{ajax}}
+\subsubsection[{views\_\-ajax}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-ajax ()}}
+\label{group__ajax_ga5f1adff7f07ea45d8ab62b456ffdd6e0}
+Menu callback to load a \hyperlink{classview}{view} via AJAX. \hypertarget{group__ajax_ga4aed960e2ee6b6e516e609188852c0f6}{
+\index{ajax@{ajax}!views\_\-ajax\_\-autocomplete\_\-taxonomy@{views\_\-ajax\_\-autocomplete\_\-taxonomy}}
+\index{views\_\-ajax\_\-autocomplete\_\-taxonomy@{views\_\-ajax\_\-autocomplete\_\-taxonomy}!ajax@{ajax}}
+\subsubsection[{views\_\-ajax\_\-autocomplete\_\-taxonomy}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-ajax\_\-autocomplete\_\-taxonomy (\$ {\em vid}, \/  \$ {\em tags\_\-typed} = {\ttfamily ''})}}
+\label{group__ajax_ga4aed960e2ee6b6e516e609188852c0f6}
+Page callback for views taxonomy autocomplete.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$vid}]The vocabulary id of the tags which should be returned.\item[{\em \$tags\_\-typed}]The typed string of the user.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+taxonomy\_\-autocomplete() 
+\end{DoxySeeAlso}
+\hypertarget{group__ajax_ga0d9404f1a04f9f5102ffac0bef92d5ab}{
+\index{ajax@{ajax}!views\_\-ajax\_\-autocomplete\_\-user@{views\_\-ajax\_\-autocomplete\_\-user}}
+\index{views\_\-ajax\_\-autocomplete\_\-user@{views\_\-ajax\_\-autocomplete\_\-user}!ajax@{ajax}}
+\subsubsection[{views\_\-ajax\_\-autocomplete\_\-user}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-ajax\_\-autocomplete\_\-user (\$ {\em string} = {\ttfamily ''})}}
+\label{group__ajax_ga0d9404f1a04f9f5102ffac0bef92d5ab}
+Page callback for views user autocomplete \hypertarget{group__ajax_ga9e55776de616656e252b0f9eb8851e82}{
+\index{ajax@{ajax}!views\_\-ajax\_\-command\_\-add\_\-tab@{views\_\-ajax\_\-command\_\-add\_\-tab}}
+\index{views\_\-ajax\_\-command\_\-add\_\-tab@{views\_\-ajax\_\-command\_\-add\_\-tab}!ajax@{ajax}}
+\subsubsection[{views\_\-ajax\_\-command\_\-add\_\-tab}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-ajax\_\-command\_\-add\_\-tab (\$ {\em id}, \/  \$ {\em title}, \/  \$ {\em body})}}
+\label{group__ajax_ga9e55776de616656e252b0f9eb8851e82}
+Creates a Drupal AJAX 'addTab' command.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$id}]The DOM ID. \item[{\em \$title}]The title. \item[{\em \$body}]The body.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the ajax\_\-render() function. 
+\end{DoxyReturn}
+\hypertarget{group__ajax_gac0331ece9a64afe1350f116b9c5a79f1}{
+\index{ajax@{ajax}!views\_\-ajax\_\-command\_\-dismiss\_\-form@{views\_\-ajax\_\-command\_\-dismiss\_\-form}}
+\index{views\_\-ajax\_\-command\_\-dismiss\_\-form@{views\_\-ajax\_\-command\_\-dismiss\_\-form}!ajax@{ajax}}
+\subsubsection[{views\_\-ajax\_\-command\_\-dismiss\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-ajax\_\-command\_\-dismiss\_\-form ()}}
+\label{group__ajax_gac0331ece9a64afe1350f116b9c5a79f1}
+Creates a Drupal AJAX 'viewsDismissForm' command.
+
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the ajax\_\-render() function. 
+\end{DoxyReturn}
+\hypertarget{group__ajax_ga22d27c9ab6b8a95f4903463eb6aabf8d}{
+\index{ajax@{ajax}!views\_\-ajax\_\-command\_\-hilite@{views\_\-ajax\_\-command\_\-hilite}}
+\index{views\_\-ajax\_\-command\_\-hilite@{views\_\-ajax\_\-command\_\-hilite}!ajax@{ajax}}
+\subsubsection[{views\_\-ajax\_\-command\_\-hilite}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-ajax\_\-command\_\-hilite (\$ {\em selector})}}
+\label{group__ajax_ga22d27c9ab6b8a95f4903463eb6aabf8d}
+Creates a Drupal AJAX 'viewsHilite' command.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$selector}]The selector to highlight\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the ajax\_\-render() function. 
+\end{DoxyReturn}
+\hypertarget{group__ajax_ga42db219284fd40096900731ee6d13600}{
+\index{ajax@{ajax}!views\_\-ajax\_\-command\_\-replace\_\-title@{views\_\-ajax\_\-command\_\-replace\_\-title}}
+\index{views\_\-ajax\_\-command\_\-replace\_\-title@{views\_\-ajax\_\-command\_\-replace\_\-title}!ajax@{ajax}}
+\subsubsection[{views\_\-ajax\_\-command\_\-replace\_\-title}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-ajax\_\-command\_\-replace\_\-title (\$ {\em title})}}
+\label{group__ajax_ga42db219284fd40096900731ee6d13600}
+Replace the page title.
+
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the ajax\_\-render() function. 
+\end{DoxyReturn}
+\hypertarget{group__ajax_gac7d8055fd4e9c91501496391dbe94b5a}{
+\index{ajax@{ajax}!views\_\-ajax\_\-command\_\-scroll\_\-top@{views\_\-ajax\_\-command\_\-scroll\_\-top}}
+\index{views\_\-ajax\_\-command\_\-scroll\_\-top@{views\_\-ajax\_\-command\_\-scroll\_\-top}!ajax@{ajax}}
+\subsubsection[{views\_\-ajax\_\-command\_\-scroll\_\-top}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-ajax\_\-command\_\-scroll\_\-top (\$ {\em selector})}}
+\label{group__ajax_gac7d8055fd4e9c91501496391dbe94b5a}
+Scroll to top of the current \hyperlink{classview}{view}.
+
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the ajax\_\-render() function. 
+\end{DoxyReturn}
+\hypertarget{group__ajax_gac5062864272f5b8134072eb22a661e6f}{
+\index{ajax@{ajax}!views\_\-ajax\_\-command\_\-set\_\-form@{views\_\-ajax\_\-command\_\-set\_\-form}}
+\index{views\_\-ajax\_\-command\_\-set\_\-form@{views\_\-ajax\_\-command\_\-set\_\-form}!ajax@{ajax}}
+\subsubsection[{views\_\-ajax\_\-command\_\-set\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-ajax\_\-command\_\-set\_\-form (\$ {\em output}, \/  \$ {\em title}, \/  \$ {\em url} = {\ttfamily NULL})}}
+\label{group__ajax_gac5062864272f5b8134072eb22a661e6f}
+Creates a Drupal AJAX 'viewsSetForm' command.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$output}]The form to display in the modal. \item[{\em \$title}]The title. \item[{\em \$url}]An optional URL.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the ajax\_\-render() function. 
+\end{DoxyReturn}
+\hypertarget{group__ajax_ga3ef672bfe39df163a3cf89ed23c8a0c2}{
+\index{ajax@{ajax}!views\_\-ajax\_\-command\_\-show\_\-buttons@{views\_\-ajax\_\-command\_\-show\_\-buttons}}
+\index{views\_\-ajax\_\-command\_\-show\_\-buttons@{views\_\-ajax\_\-command\_\-show\_\-buttons}!ajax@{ajax}}
+\subsubsection[{views\_\-ajax\_\-command\_\-show\_\-buttons}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-ajax\_\-command\_\-show\_\-buttons ()}}
+\label{group__ajax_ga3ef672bfe39df163a3cf89ed23c8a0c2}
+Shows Save and Cancel buttons.
+
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the ajax\_\-render() function. 
+\end{DoxyReturn}
+\hypertarget{group__ajax_ga698e1518b153b16adbe61e3aeb376eac}{
+\index{ajax@{ajax}!views\_\-ajax\_\-command\_\-trigger\_\-preview@{views\_\-ajax\_\-command\_\-trigger\_\-preview}}
+\index{views\_\-ajax\_\-command\_\-trigger\_\-preview@{views\_\-ajax\_\-command\_\-trigger\_\-preview}!ajax@{ajax}}
+\subsubsection[{views\_\-ajax\_\-command\_\-trigger\_\-preview}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-ajax\_\-command\_\-trigger\_\-preview ()}}
+\label{group__ajax_ga698e1518b153b16adbe61e3aeb376eac}
+Trigger the Views live preview.
+
+\begin{DoxyReturn}{Returns}
+An array suitable for use with the ajax\_\-render() function. 
+\end{DoxyReturn}
+\hypertarget{group__ajax_ga59f31023b894be21852b7034f639523f}{
+\index{ajax@{ajax}!views\_\-ajax\_\-error@{views\_\-ajax\_\-error}}
+\index{views\_\-ajax\_\-error@{views\_\-ajax\_\-error}!ajax@{ajax}}
+\subsubsection[{views\_\-ajax\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-ajax\_\-error (\$ {\em message})}}
+\label{group__ajax_ga59f31023b894be21852b7034f639523f}
+Return an AJAX error. \hypertarget{group__ajax_ga7eed0d665d7b4c8c8134eb060afbb2be}{
+\index{ajax@{ajax}!views\_\-ajax\_\-form\_\-wrapper@{views\_\-ajax\_\-form\_\-wrapper}}
+\index{views\_\-ajax\_\-form\_\-wrapper@{views\_\-ajax\_\-form\_\-wrapper}!ajax@{ajax}}
+\subsubsection[{views\_\-ajax\_\-form\_\-wrapper}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-ajax\_\-form\_\-wrapper (\$ {\em form\_\-id}, \/  \&\$ {\em form\_\-state})}}
+\label{group__ajax_ga7eed0d665d7b4c8c8134eb060afbb2be}
+Wrapper around drupal\_\-build\_\-form to handle some AJAX stuff automatically. This makes some assumptions about the client. 

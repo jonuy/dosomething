@@ -1,0 +1,60 @@
+\hypertarget{contexts_2token_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/contexts/token.inc File Reference}
+\label{contexts_2token_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/contexts/token.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/contexts/token.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{contexts_2token_8inc_ab8eb1d3d654f1fde3224dc0d963d381c}{ctools\_\-context\_\-create\_\-token} (\$empty, \$data=NULL, \$conf=FALSE)
+\item 
+\hyperlink{contexts_2token_8inc_a7a253406a63a33265393b3468539a6f7}{ctools\_\-context\_\-token\_\-convert\_\-list} ()
+\item 
+\hyperlink{contexts_2token_8inc_ab50aa70da250bffd56e1948218a6b3c8}{ctools\_\-context\_\-token\_\-convert} (\$context, \$token)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provide a global context to allow for token support. 
+
+\subsection{Function Documentation}
+\hypertarget{contexts_2token_8inc_ab8eb1d3d654f1fde3224dc0d963d381c}{
+\index{contexts/token.inc@{contexts/token.inc}!ctools\_\-context\_\-create\_\-token@{ctools\_\-context\_\-create\_\-token}}
+\index{ctools\_\-context\_\-create\_\-token@{ctools\_\-context\_\-create\_\-token}!contexts/token.inc@{contexts/token.inc}}
+\subsubsection[{ctools\_\-context\_\-create\_\-token}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-create\_\-token (\$ {\em empty}, \/  \$ {\em data} = {\ttfamily NULL}, \/  \$ {\em conf} = {\ttfamily FALSE})}}
+\label{contexts_2token_8inc_ab8eb1d3d654f1fde3224dc0d963d381c}
+Create a context from manual configuration. \hypertarget{contexts_2token_8inc_ab50aa70da250bffd56e1948218a6b3c8}{
+\index{contexts/token.inc@{contexts/token.inc}!ctools\_\-context\_\-token\_\-convert@{ctools\_\-context\_\-token\_\-convert}}
+\index{ctools\_\-context\_\-token\_\-convert@{ctools\_\-context\_\-token\_\-convert}!contexts/token.inc@{contexts/token.inc}}
+\subsubsection[{ctools\_\-context\_\-token\_\-convert}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-token\_\-convert (\$ {\em context}, \/  \$ {\em token})}}
+\label{contexts_2token_8inc_ab50aa70da250bffd56e1948218a6b3c8}
+Implementation of hook\_\-ctools\_\-context\_\-converter\_\-alter(). \hypertarget{contexts_2token_8inc_a7a253406a63a33265393b3468539a6f7}{
+\index{contexts/token.inc@{contexts/token.inc}!ctools\_\-context\_\-token\_\-convert\_\-list@{ctools\_\-context\_\-token\_\-convert\_\-list}}
+\index{ctools\_\-context\_\-token\_\-convert\_\-list@{ctools\_\-context\_\-token\_\-convert\_\-list}!contexts/token.inc@{contexts/token.inc}}
+\subsubsection[{ctools\_\-context\_\-token\_\-convert\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-token\_\-convert\_\-list ()}}
+\label{contexts_2token_8inc_a7a253406a63a33265393b3468539a6f7}
+Implementation of hook\_\-ctools\_\-context\_\-convert\_\-list(). 
+
+\subsection{Variable Documentation}
+\hypertarget{contexts_2token_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{contexts/token.inc@{contexts/token.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!contexts/token.inc@{contexts/token.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{contexts_2token_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('Token'),
+  'description' => t('A context that contains token replacements from token.modul
+      e.'),
+  'context' => 'ctools_context_create_token',  
+  'context name' => 'token',
+  'keyword' => 'token',
+  'convert list' => 'ctools_context_token_convert_list',
+  'convert' => 'ctools_context_token_convert',
+)
+\end{DoxyCode}

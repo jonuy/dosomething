@@ -1,0 +1,76 @@
+\hypertarget{classviews__plugin__access__perm}{
+\section{views\_\-plugin\_\-access\_\-perm Class Reference}
+\label{classviews__plugin__access__perm}\index{views\_\-plugin\_\-access\_\-perm@{views\_\-plugin\_\-access\_\-perm}}
+}
+Inheritance diagram for views\_\-plugin\_\-access\_\-perm::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classviews__plugin__access__perm}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classviews__plugin__access__perm_ac5b655153815ade74513b1af48c18cad}{access} (\$account)
+\item 
+\hyperlink{classviews__plugin__access__perm_ac9dce994826265f48711a23cf3f2414f}{get\_\-access\_\-callback} ()
+\item 
+\hyperlink{classviews__plugin__access__perm_a1e0e33b03ffddf2b98c60740222d8ca5}{summary\_\-title} ()
+\item 
+\hyperlink{classviews__plugin__access__perm_a7fb275a2bd4c2858064b8d4120ad8f22}{option\_\-definition} ()
+\item 
+\hyperlink{classviews__plugin__access__perm_af662e29c6b61b1a476b7b9ba368f5650}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Access plugin that provides permission-\/based access control. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__plugin__access__perm_ac5b655153815ade74513b1af48c18cad}{
+\index{views\_\-plugin\_\-access\_\-perm@{views\_\-plugin\_\-access\_\-perm}!access@{access}}
+\index{access@{access}!views_plugin_access_perm@{views\_\-plugin\_\-access\_\-perm}}
+\subsubsection[{access}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access\_\-perm::access (\$ {\em account})}}
+\label{classviews__plugin__access__perm_ac5b655153815ade74513b1af48c18cad}
+Determine if the current user has access or not. 
+
+Reimplemented from \hyperlink{classviews__plugin__access_ad24d38c1b1a1bd7527b2b96a2103cede}{views\_\-plugin\_\-access}.\hypertarget{classviews__plugin__access__perm_ac9dce994826265f48711a23cf3f2414f}{
+\index{views\_\-plugin\_\-access\_\-perm@{views\_\-plugin\_\-access\_\-perm}!get\_\-access\_\-callback@{get\_\-access\_\-callback}}
+\index{get\_\-access\_\-callback@{get\_\-access\_\-callback}!views_plugin_access_perm@{views\_\-plugin\_\-access\_\-perm}}
+\subsubsection[{get\_\-access\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access\_\-perm::get\_\-access\_\-callback ()}}
+\label{classviews__plugin__access__perm_ac9dce994826265f48711a23cf3f2414f}
+Determine the access callback and arguments.
+
+This information will be embedded in the menu in order to reduce performance hits during menu item access testing, which happens a lot.
+
+\begin{DoxyReturn}{Returns}
+an array; the first item should be the function to call, and the second item should be an array of arguments. The first item may also be TRUE (bool only) which will indicate no access control.) 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classviews__plugin__access_ad4038a32fccc6a662a74f437d0bf6a23}{views\_\-plugin\_\-access}.\hypertarget{classviews__plugin__access__perm_a7fb275a2bd4c2858064b8d4120ad8f22}{
+\index{views\_\-plugin\_\-access\_\-perm@{views\_\-plugin\_\-access\_\-perm}!option\_\-definition@{option\_\-definition}}
+\index{option\_\-definition@{option\_\-definition}!views_plugin_access_perm@{views\_\-plugin\_\-access\_\-perm}}
+\subsubsection[{option\_\-definition}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access\_\-perm::option\_\-definition ()}}
+\label{classviews__plugin__access__perm_a7fb275a2bd4c2858064b8d4120ad8f22}
+Retrieve the options when this is a new access control plugin 
+
+Reimplemented from \hyperlink{classviews__plugin__access_a3d52dc2603a2991a46a3c212a04097d2}{views\_\-plugin\_\-access}.\hypertarget{classviews__plugin__access__perm_af662e29c6b61b1a476b7b9ba368f5650}{
+\index{views\_\-plugin\_\-access\_\-perm@{views\_\-plugin\_\-access\_\-perm}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_plugin_access_perm@{views\_\-plugin\_\-access\_\-perm}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access\_\-perm::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__access__perm_af662e29c6b61b1a476b7b9ba368f5650}
+Provide the default form for setting options. 
+
+Reimplemented from \hyperlink{classviews__plugin__access_a530865442ea42db5e720e6c49f3d16f2}{views\_\-plugin\_\-access}.\hypertarget{classviews__plugin__access__perm_a1e0e33b03ffddf2b98c60740222d8ca5}{
+\index{views\_\-plugin\_\-access\_\-perm@{views\_\-plugin\_\-access\_\-perm}!summary\_\-title@{summary\_\-title}}
+\index{summary\_\-title@{summary\_\-title}!views_plugin_access_perm@{views\_\-plugin\_\-access\_\-perm}}
+\subsubsection[{summary\_\-title}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-access\_\-perm::summary\_\-title ()}}
+\label{classviews__plugin__access__perm_a1e0e33b03ffddf2b98c60740222d8ca5}
+Return a string to display as the clickable title for the access control. 
+
+Reimplemented from \hyperlink{classviews__plugin__access_ade500a95e599deffa417f8cbdd67bbf4}{views\_\-plugin\_\-access}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/plugins/\hyperlink{views__plugin__access__perm_8inc}{views\_\-plugin\_\-access\_\-perm.inc}\end{DoxyCompactItemize}

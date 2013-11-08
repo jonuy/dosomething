@@ -1,0 +1,53 @@
+\hypertarget{book__parent_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/relationships/book\_\-parent.inc File Reference}
+\label{book__parent_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/relationships/book\_\-parent.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/relationships/book\_\-parent.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{book__parent_8inc_aafe432d7265404f9b92bf1d944f89c07}{ctools\_\-book\_\-parent\_\-context} (\$context, \$conf)
+\item 
+\hyperlink{book__parent_8inc_a493e0b362b43e7e8f47809e9c865077d}{ctools\_\-book\_\-parent\_\-settings\_\-form} (\$form, \&\$form\_\-state)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{book__parent_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide an relationship handler for book parent. 
+
+\subsection{Function Documentation}
+\hypertarget{book__parent_8inc_aafe432d7265404f9b92bf1d944f89c07}{
+\index{book\_\-parent.inc@{book\_\-parent.inc}!ctools\_\-book\_\-parent\_\-context@{ctools\_\-book\_\-parent\_\-context}}
+\index{ctools\_\-book\_\-parent\_\-context@{ctools\_\-book\_\-parent\_\-context}!book_parent.inc@{book\_\-parent.inc}}
+\subsubsection[{ctools\_\-book\_\-parent\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-book\_\-parent\_\-context (\$ {\em context}, \/  \$ {\em conf})}}
+\label{book__parent_8inc_aafe432d7265404f9b92bf1d944f89c07}
+Return a new context based on an existing context. \hypertarget{book__parent_8inc_a493e0b362b43e7e8f47809e9c865077d}{
+\index{book\_\-parent.inc@{book\_\-parent.inc}!ctools\_\-book\_\-parent\_\-settings\_\-form@{ctools\_\-book\_\-parent\_\-settings\_\-form}}
+\index{ctools\_\-book\_\-parent\_\-settings\_\-form@{ctools\_\-book\_\-parent\_\-settings\_\-form}!book_parent.inc@{book\_\-parent.inc}}
+\subsubsection[{ctools\_\-book\_\-parent\_\-settings\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-book\_\-parent\_\-settings\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{book__parent_8inc_a493e0b362b43e7e8f47809e9c865077d}
+Settings form for the relationship. 
+
+\subsection{Variable Documentation}
+\hypertarget{book__parent_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{book\_\-parent.inc@{book\_\-parent.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!book_parent.inc@{book\_\-parent.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{book__parent_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('Book parent'),
+  'keyword' => 'book_parent',
+  'description' => t('Adds a book parent from a node context.'),
+  'required context' => new ctools_context_required(t('Node'), 'node'),
+  'context' => 'ctools_book_parent_context',
+  'edit form' => 'ctools_book_parent_settings_form',
+  'defaults' => array('type' => 'top'),
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

@@ -1,0 +1,60 @@
+\hypertarget{entity__from__schema_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/relationships/entity\_\-from\_\-schema.inc File Reference}
+\label{entity__from__schema_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/relationships/entity\_\-from\_\-schema.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/relationships/entity\_\-from\_\-schema.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{entity__from__schema_8inc_ac19d1b35d03bdb7469c775bf7d32271b}{
+{\bfseries ctools\_\-entity\_\-from\_\-schema\_\-get\_\-child} (\$plugin, \$parent, \$child)}
+\label{entity__from__schema_8inc_ac19d1b35d03bdb7469c775bf7d32271b}
+
+\item 
+\hypertarget{entity__from__schema_8inc_a002177eb023c2ab3b998f7cc59daa7a2}{
+{\bfseries ctools\_\-entity\_\-from\_\-schema\_\-get\_\-children} (\$parent\_\-plugin, \$parent)}
+\label{entity__from__schema_8inc_a002177eb023c2ab3b998f7cc59daa7a2}
+
+\item 
+\hypertarget{entity__from__schema_8inc_afdc8c663207a4c4e62cccf9b07f98728}{
+{\bfseries ctools\_\-entity\_\-from\_\-schema\_\-columns\_\-filter} (\$columns, \$value)}
+\label{entity__from__schema_8inc_afdc8c663207a4c4e62cccf9b07f98728}
+
+\item 
+\hyperlink{entity__from__schema_8inc_a04ba5637f53804c2f3441f5728ad5713}{ctools\_\-entity\_\-from\_\-schema\_\-context} (\$context, \$conf)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{entity__from__schema_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide an relationship handler for an entity from a field. 
+
+\subsection{Function Documentation}
+\hypertarget{entity__from__schema_8inc_a04ba5637f53804c2f3441f5728ad5713}{
+\index{entity\_\-from\_\-schema.inc@{entity\_\-from\_\-schema.inc}!ctools\_\-entity\_\-from\_\-schema\_\-context@{ctools\_\-entity\_\-from\_\-schema\_\-context}}
+\index{ctools\_\-entity\_\-from\_\-schema\_\-context@{ctools\_\-entity\_\-from\_\-schema\_\-context}!entity_from_schema.inc@{entity\_\-from\_\-schema.inc}}
+\subsubsection[{ctools\_\-entity\_\-from\_\-schema\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-entity\_\-from\_\-schema\_\-context (\$ {\em context}, \/  \$ {\em conf})}}
+\label{entity__from__schema_8inc_a04ba5637f53804c2f3441f5728ad5713}
+Return a new context based on an existing context. 
+
+\subsection{Variable Documentation}
+\hypertarget{entity__from__schema_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{entity\_\-from\_\-schema.inc@{entity\_\-from\_\-schema.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!entity_from_schema.inc@{entity\_\-from\_\-schema.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{entity__from__schema_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('Entity'),
+  'description' => t('Creates an entity context from a foreign key on a field.'),
+      
+  'context' => 'ctools_entity_from_schema_context',
+  'get child' => 'ctools_entity_from_schema_get_child',
+  'get children' => 'ctools_entity_from_schema_get_children',
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

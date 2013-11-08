@@ -1,0 +1,63 @@
+\hypertarget{access_2term_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/access/term.inc File Reference}
+\label{access_2term_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/access/term.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/access/term.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{access_2term_8inc_a4e7a22eadf67fe18cec6795e81b38028}{ctools\_\-term\_\-ctools\_\-access\_\-settings} (\$form, \&\$form\_\-state, \$conf)
+\item 
+\hyperlink{access_2term_8inc_a62d339b0ab972f44f9b35b30e2bcc8f1}{ctools\_\-term\_\-ctools\_\-access\_\-check} (\$conf, \$context)
+\item 
+\hyperlink{access_2term_8inc_a6be495cdfeabc7ef890ec0e740051735}{ctools\_\-term\_\-ctools\_\-access\_\-summary} (\$conf, \$context)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{access_2term_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide access control based upon specific terms. 
+
+\subsection{Function Documentation}
+\hypertarget{access_2term_8inc_a62d339b0ab972f44f9b35b30e2bcc8f1}{
+\index{access/term.inc@{access/term.inc}!ctools\_\-term\_\-ctools\_\-access\_\-check@{ctools\_\-term\_\-ctools\_\-access\_\-check}}
+\index{ctools\_\-term\_\-ctools\_\-access\_\-check@{ctools\_\-term\_\-ctools\_\-access\_\-check}!access/term.inc@{access/term.inc}}
+\subsubsection[{ctools\_\-term\_\-ctools\_\-access\_\-check}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-term\_\-ctools\_\-access\_\-check (\$ {\em conf}, \/  \$ {\em context})}}
+\label{access_2term_8inc_a62d339b0ab972f44f9b35b30e2bcc8f1}
+Check for access. \hypertarget{access_2term_8inc_a4e7a22eadf67fe18cec6795e81b38028}{
+\index{access/term.inc@{access/term.inc}!ctools\_\-term\_\-ctools\_\-access\_\-settings@{ctools\_\-term\_\-ctools\_\-access\_\-settings}}
+\index{ctools\_\-term\_\-ctools\_\-access\_\-settings@{ctools\_\-term\_\-ctools\_\-access\_\-settings}!access/term.inc@{access/term.inc}}
+\subsubsection[{ctools\_\-term\_\-ctools\_\-access\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-term\_\-ctools\_\-access\_\-settings (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em conf})}}
+\label{access_2term_8inc_a4e7a22eadf67fe18cec6795e81b38028}
+Settings form for the 'by term' access plugin \hypertarget{access_2term_8inc_a6be495cdfeabc7ef890ec0e740051735}{
+\index{access/term.inc@{access/term.inc}!ctools\_\-term\_\-ctools\_\-access\_\-summary@{ctools\_\-term\_\-ctools\_\-access\_\-summary}}
+\index{ctools\_\-term\_\-ctools\_\-access\_\-summary@{ctools\_\-term\_\-ctools\_\-access\_\-summary}!access/term.inc@{access/term.inc}}
+\subsubsection[{ctools\_\-term\_\-ctools\_\-access\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-term\_\-ctools\_\-access\_\-summary (\$ {\em conf}, \/  \$ {\em context})}}
+\label{access_2term_8inc_a6be495cdfeabc7ef890ec0e740051735}
+Provide a summary description based upon the checked terms. 
+
+\subsection{Variable Documentation}
+\hypertarget{access_2term_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{access/term.inc@{access/term.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!access/term.inc@{access/term.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{access_2term_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t("Taxonomy: term"),
+  'description' => t('Control access by a specific term.'),
+  'callback' => 'ctools_term_ctools_access_check',
+  'default' => array('vids' => array()),
+  'settings form' => 'ctools_term_ctools_access_settings',
+  'settings form validation' => 'ctools_term_ctools_access_settings_validate',
+  'settings form submit' => 'ctools_term_ctools_access_settings_submit',
+  'summary' => 'ctools_term_ctools_access_summary',
+  'required context' => new ctools_context_required(t('Term'), array('taxonomy_te
+      rm', 'terms')),
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

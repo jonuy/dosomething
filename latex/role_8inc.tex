@@ -1,0 +1,68 @@
+\hypertarget{role_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/access/role.inc File Reference}
+\label{role_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/access/role.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/access/role.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{role_8inc_af429c6970ffa2b4a73a05034760ff182}{ctools\_\-role\_\-ctools\_\-access\_\-settings} (\$form, \&\$form\_\-state, \$conf)
+\item 
+\hyperlink{role_8inc_a22b73bb5fff413945fcb78003c83f166}{ctools\_\-role\_\-ctools\_\-access\_\-settings\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{role_8inc_a59fc5cbf5bab8ab64e7a14d0eb969e71}{ctools\_\-role\_\-ctools\_\-access\_\-check} (\$conf, \$context)
+\item 
+\hyperlink{role_8inc_ac61e26b3347f14f8791b5c1e12793a99}{ctools\_\-role\_\-ctools\_\-access\_\-summary} (\$conf, \$context)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{role_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide access control based upon role membership. 
+
+\subsection{Function Documentation}
+\hypertarget{role_8inc_a59fc5cbf5bab8ab64e7a14d0eb969e71}{
+\index{role.inc@{role.inc}!ctools\_\-role\_\-ctools\_\-access\_\-check@{ctools\_\-role\_\-ctools\_\-access\_\-check}}
+\index{ctools\_\-role\_\-ctools\_\-access\_\-check@{ctools\_\-role\_\-ctools\_\-access\_\-check}!role.inc@{role.inc}}
+\subsubsection[{ctools\_\-role\_\-ctools\_\-access\_\-check}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-role\_\-ctools\_\-access\_\-check (\$ {\em conf}, \/  \$ {\em context})}}
+\label{role_8inc_a59fc5cbf5bab8ab64e7a14d0eb969e71}
+Check for access. \hypertarget{role_8inc_af429c6970ffa2b4a73a05034760ff182}{
+\index{role.inc@{role.inc}!ctools\_\-role\_\-ctools\_\-access\_\-settings@{ctools\_\-role\_\-ctools\_\-access\_\-settings}}
+\index{ctools\_\-role\_\-ctools\_\-access\_\-settings@{ctools\_\-role\_\-ctools\_\-access\_\-settings}!role.inc@{role.inc}}
+\subsubsection[{ctools\_\-role\_\-ctools\_\-access\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-role\_\-ctools\_\-access\_\-settings (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em conf})}}
+\label{role_8inc_af429c6970ffa2b4a73a05034760ff182}
+Settings form for the 'by role' access plugin \hypertarget{role_8inc_a22b73bb5fff413945fcb78003c83f166}{
+\index{role.inc@{role.inc}!ctools\_\-role\_\-ctools\_\-access\_\-settings\_\-submit@{ctools\_\-role\_\-ctools\_\-access\_\-settings\_\-submit}}
+\index{ctools\_\-role\_\-ctools\_\-access\_\-settings\_\-submit@{ctools\_\-role\_\-ctools\_\-access\_\-settings\_\-submit}!role.inc@{role.inc}}
+\subsubsection[{ctools\_\-role\_\-ctools\_\-access\_\-settings\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-role\_\-ctools\_\-access\_\-settings\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{role_8inc_a22b73bb5fff413945fcb78003c83f166}
+Compress the roles allowed to the minimum. \hypertarget{role_8inc_ac61e26b3347f14f8791b5c1e12793a99}{
+\index{role.inc@{role.inc}!ctools\_\-role\_\-ctools\_\-access\_\-summary@{ctools\_\-role\_\-ctools\_\-access\_\-summary}}
+\index{ctools\_\-role\_\-ctools\_\-access\_\-summary@{ctools\_\-role\_\-ctools\_\-access\_\-summary}!role.inc@{role.inc}}
+\subsubsection[{ctools\_\-role\_\-ctools\_\-access\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-role\_\-ctools\_\-access\_\-summary (\$ {\em conf}, \/  \$ {\em context})}}
+\label{role_8inc_ac61e26b3347f14f8791b5c1e12793a99}
+Provide a summary description based upon the checked roles. 
+
+\subsection{Variable Documentation}
+\hypertarget{role_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{role.inc@{role.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!role.inc@{role.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{role_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t("User: role"),
+  'description' => t('Control access by role.'),
+  'callback' => 'ctools_role_ctools_access_check',
+  'default' => array('rids' => array()),
+  'settings form' => 'ctools_role_ctools_access_settings',
+  'settings form submit' => 'ctools_role_ctools_access_settings_submit',
+  'summary' => 'ctools_role_ctools_access_summary',
+  'required context' => new ctools_context_required(t('User'), 'user'),
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

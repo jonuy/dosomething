@@ -1,0 +1,400 @@
+\hypertarget{features_8module}{
+\section{html/profiles/dosomething/modules/contrib/features/features.module File Reference}
+\label{features_8module}\index{html/profiles/dosomething/modules/contrib/features/features.module@{html/profiles/dosomething/modules/contrib/features/features.module}}
+}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries FEATURES\_\-API} 
+\item 
+enum {\bfseries FEATURES\_\-MODULE\_\-ENABLED} 
+\item 
+enum {\bfseries FEATURES\_\-MODULE\_\-DISABLED} 
+\item 
+enum {\bfseries FEATURES\_\-MODULE\_\-MISSING} 
+\item 
+enum {\bfseries FEATURES\_\-MODULE\_\-CONFLICT} 
+\item 
+enum {\bfseries FEATURES\_\-REBUILDABLE} 
+\item 
+enum {\bfseries FEATURES\_\-DEFAULT} 
+\item 
+enum {\bfseries FEATURES\_\-OVERRIDDEN} 
+\item 
+enum {\bfseries FEATURES\_\-NEEDS\_\-REVIEW} 
+\item 
+enum {\bfseries FEATURES\_\-REBUILDING} 
+\item 
+enum {\bfseries FEATURES\_\-CONFLICT} 
+\item 
+enum {\bfseries FEATURES\_\-DISABLED} 
+\item 
+enum {\bfseries FEATURES\_\-CHECKING} 
+\item 
+enum {\bfseries FEATURES\_\-ALTER\_\-TYPE\_\-NORMAL} 
+\item 
+enum {\bfseries FEATURES\_\-ALTER\_\-TYPE\_\-INLINE} 
+\item 
+enum {\bfseries FEATURES\_\-ALTER\_\-TYPE\_\-NONE} 
+\item 
+enum {\bfseries FEATURES\_\-SEMAPHORE\_\-TIMEOUT} 
+\item 
+enum \hyperlink{features_8module_a7eb1ad8581b51a16f6bf1644f647342e}{FEATURES\_\-DEFAULTS\_\-INCLUDED\_\-COMMON} 
+\item 
+enum \hyperlink{features_8module_a92c2163fbee04cf83502aa6b7f1c259d}{FEATURES\_\-DEFAULTS\_\-INCLUDED} 
+\item 
+enum \hyperlink{features_8module_a1e60ef188014233e6c2f2f47d49b0207}{FEATURES\_\-DEFAULTS\_\-CUSTOM} 
+\item 
+enum \hyperlink{features_8module_a428c0bde0ed719decf70ed07ad640be8}{FEATURES\_\-DUPLICATES\_\-CONFLICT} 
+\item 
+enum \hyperlink{features_8module_a0a5a98e03aae74b4cdd0e28a2577361a}{FEATURES\_\-DUPLICATES\_\-ALLOWED} 
+\item 
+enum \hyperlink{features_8module_a29a3735e1ba70ad921c88f6d03dabe0f}{FEATURES\_\-DEFAULT\_\-EXPORT\_\-PATH} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{features_8module_a2f3b3fc6d67373f91feb6e2e9d45c0f0}{features\_\-menu} ()
+\item 
+\hyperlink{features_8module_aa4bc5c89bc3ae19889dc444bf408608d}{features\_\-theme} ()
+\item 
+\hyperlink{features_8module_a11ac8740ad0c9745b94a37e7da421d2b}{features\_\-flush\_\-caches} ()
+\item 
+\hyperlink{features_8module_a6a4b2e2f866538b3c0c7d950aea3f80f}{features\_\-form} (\$node, \$form\_\-state)
+\item 
+\hyperlink{features_8module_a8798acbb3fe11426ba45f33a83e055b6}{features\_\-permission} ()
+\item 
+\hyperlink{features_8module_abc18f3557bf3118b00e725fe283259ab}{features\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{features_8module_ab4015ad6546e314fe3e6e8ed0d436c05}{features\_\-modules\_\-disabled} (\$modules)
+\item 
+\hyperlink{features_8module_a124f4a6b7d4a6678f703597bad15f6d7}{features\_\-modules\_\-enabled} (\$modules)
+\item 
+\hyperlink{features_8module_aa808105e0eafb3744d0cdcfe50802456}{features\_\-include} (\$reset=FALSE)
+\item 
+\hyperlink{features_8module_a359c52c08e57a3bdd13594abd116543e}{features\_\-include\_\-defaults} (\$components=NULL, \$reset=FALSE)
+\item 
+\hyperlink{features_8module_ac4d9735b1a5fade78f7e1ac2a8115196}{feature\_\-load} (\$name, \$reset=FALSE)
+\item 
+\hyperlink{features_8module_abbc16356d1df3bc150b0bd56d35b00f8}{features\_\-load\_\-feature} (\$name, \$reset=FALSE)
+\item 
+\hyperlink{features_8module_a878b29e09c069a8be511070bbfedfaf9}{features\_\-get\_\-modules} (\$name=NULL, \$reset=FALSE)
+\item 
+\hyperlink{features_8module_a4b2d2e6aaa5c36d781cdda657285ee12}{features\_\-get\_\-components} (\$component=NULL, \$key=NULL, \$reset=FALSE)
+\item 
+\hyperlink{features_8module_a714c640c4e8c11ee30eacc1510415598}{features\_\-get\_\-feature\_\-components} ()
+\item 
+\hyperlink{features_8module_a0bcd406d15618a70e5be91e70d5d9d05}{features\_\-invoke} (\$component, \$callback)
+\item 
+\hyperlink{features_8module_aaa5a723655f52c16385d78d0f5997c23}{features\_\-hook} (\$component, \$hook, \$reset=FALSE)
+\item 
+\hyperlink{features_8module_a379679b547f18695cf0e547fe936b002}{features\_\-install\_\-modules} (\$modules)
+\item 
+\hyperlink{features_8module_a2bb9e3cf366b99818c231091b8fea3cd}{features\_\-get\_\-features} (\$name=NULL, \$reset=FALSE)
+\item 
+\hyperlink{features_8module_a03a83ef1f5d1e8033b71b0388e776536}{features\_\-get\_\-info} (\$type= 'module', \$name=NULL, \$reset=FALSE)
+\item 
+\hyperlink{features_8module_a6aae9f9ebb34fabfe11ae61284dde230}{features\_\-get\_\-orphans} (\$reset=FALSE)
+\item 
+\hyperlink{features_8module_a0e952cf77cb9bbe9a81d5997d8ce5e70}{features\_\-get\_\-conflicts} (\$reset=FALSE)
+\item 
+\hyperlink{features_8module_a0b9ee0b432af2d3709e1f413923c3ae2}{features\_\-get\_\-component\_\-map} (\$key=NULL, \$reset=FALSE)
+\item 
+\hyperlink{features_8module_ac5677f8406f4e9b5b37ae40783742a2e}{features\_\-get\_\-module\_\-status} (\$module)
+\item 
+\hyperlink{features_8module_aa4ba0e8b4f0d7640d95ea12d67928ca3}{features\_\-get\_\-feature\_\-title} (\$feature)
+\item 
+\hyperlink{features_8module_aeb1b6b9ab9beb2e78552c06cc86a241c}{features\_\-access\_\-override\_\-actions} (\$feature)
+\item 
+\hyperlink{features_8module_a8035300a21d0bf61d8cbf8caa4f3c19b}{features\_\-form\_\-system\_\-modules\_\-alter} (\&\$form)
+\item 
+\hyperlink{features_8module_a0298400d481d56cee72177e00c1777cd}{\_\-features\_\-restore} (\$op, \$items=array())
+\item 
+\hyperlink{features_8module_a2387a306760f9e3f11596672883ad181}{features\_\-revert} (\$revert=array())
+\item 
+\hyperlink{features_8module_a059a6b5b807abf2d3004beae665cd41c}{features\_\-rebuild} (\$rebuild=array())
+\item 
+\hyperlink{features_8module_a7d98a16c1662382dae41746df94b8e86}{features\_\-revert\_\-module} (\$module)
+\item 
+\hyperlink{features_8module_ad31fc2380edc2e353c945257ffd6b731}{features\_\-log} (\$message, \$severity= 'status')
+\item 
+\hyperlink{features_8module_a7d3ed140b4b5553cbf7fc46f0bb42af2}{features\_\-hook\_\-info} ()
+\item 
+\hyperlink{features_8module_a2ce08ffe8a095c32656f9f78c2bb9ac5}{\_\-user\_\-features\_\-change\_\-term\_\-permission} (\&\$perm, \$type= 'vid')
+\item 
+\hyperlink{features_8module_a5d81c8de392acdca91b2f1f5101f889a}{features\_\-array\_\-diff\_\-assoc\_\-recursive} (array \$array1, array \$array2)
+\item 
+\hyperlink{features_8module_a354c070d172b313930b395af9b9de90b}{features\_\-get\_\-deprecated} (\$components=array())
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Module file for the features module, which enables the capture and management of features in Drupal. A feature is a collection of Drupal entities which taken together satisfy a certain use-\/case. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{features_8module_a29a3735e1ba70ad921c88f6d03dabe0f}{
+\index{features.module@{features.module}!FEATURES\_\-DEFAULT\_\-EXPORT\_\-PATH@{FEATURES\_\-DEFAULT\_\-EXPORT\_\-PATH}}
+\index{FEATURES\_\-DEFAULT\_\-EXPORT\_\-PATH@{FEATURES\_\-DEFAULT\_\-EXPORT\_\-PATH}!features.module@{features.module}}
+\subsubsection[{FEATURES\_\-DEFAULT\_\-EXPORT\_\-PATH}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf FEATURES\_\-DEFAULT\_\-EXPORT\_\-PATH}}}
+\label{features_8module_a29a3735e1ba70ad921c88f6d03dabe0f}
+The default destination path for features exported via the UI. \hypertarget{features_8module_a1e60ef188014233e6c2f2f47d49b0207}{
+\index{features.module@{features.module}!FEATURES\_\-DEFAULTS\_\-CUSTOM@{FEATURES\_\-DEFAULTS\_\-CUSTOM}}
+\index{FEATURES\_\-DEFAULTS\_\-CUSTOM@{FEATURES\_\-DEFAULTS\_\-CUSTOM}!features.module@{features.module}}
+\subsubsection[{FEATURES\_\-DEFAULTS\_\-CUSTOM}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf FEATURES\_\-DEFAULTS\_\-CUSTOM}}}
+\label{features_8module_a1e60ef188014233e6c2f2f47d49b0207}
+Components with this 'default\_\-file' flag must specify a filename for their exports. Additionally a stub will NOT be written to 'MODULENAME.features.inc' allowing the file to be included directly by the implementing module. \hypertarget{features_8module_a92c2163fbee04cf83502aa6b7f1c259d}{
+\index{features.module@{features.module}!FEATURES\_\-DEFAULTS\_\-INCLUDED@{FEATURES\_\-DEFAULTS\_\-INCLUDED}}
+\index{FEATURES\_\-DEFAULTS\_\-INCLUDED@{FEATURES\_\-DEFAULTS\_\-INCLUDED}!features.module@{features.module}}
+\subsubsection[{FEATURES\_\-DEFAULTS\_\-INCLUDED}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf FEATURES\_\-DEFAULTS\_\-INCLUDED}}}
+\label{features_8module_a92c2163fbee04cf83502aa6b7f1c259d}
+Components with this 'default\_\-file' flag will have exports written to a defaults based on the component name like 'MODULENAME.features.COMPONENT-\/NAME.inc'. Any callers to this component's defaults hook must call features\_\-include\_\-defaults('component') in order to include this file. \hypertarget{features_8module_a7eb1ad8581b51a16f6bf1644f647342e}{
+\index{features.module@{features.module}!FEATURES\_\-DEFAULTS\_\-INCLUDED\_\-COMMON@{FEATURES\_\-DEFAULTS\_\-INCLUDED\_\-COMMON}}
+\index{FEATURES\_\-DEFAULTS\_\-INCLUDED\_\-COMMON@{FEATURES\_\-DEFAULTS\_\-INCLUDED\_\-COMMON}!features.module@{features.module}}
+\subsubsection[{FEATURES\_\-DEFAULTS\_\-INCLUDED\_\-COMMON}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf FEATURES\_\-DEFAULTS\_\-INCLUDED\_\-COMMON}}}
+\label{features_8module_a7eb1ad8581b51a16f6bf1644f647342e}
+Components with this 'default\_\-file' flag will have exports written to the common defaults file 'MODULENAME.features.inc'. This is the default behavior. \hypertarget{features_8module_a0a5a98e03aae74b4cdd0e28a2577361a}{
+\index{features.module@{features.module}!FEATURES\_\-DUPLICATES\_\-ALLOWED@{FEATURES\_\-DUPLICATES\_\-ALLOWED}}
+\index{FEATURES\_\-DUPLICATES\_\-ALLOWED@{FEATURES\_\-DUPLICATES\_\-ALLOWED}!features.module@{features.module}}
+\subsubsection[{FEATURES\_\-DUPLICATES\_\-ALLOWED}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf FEATURES\_\-DUPLICATES\_\-ALLOWED}}}
+\label{features_8module_a0a5a98e03aae74b4cdd0e28a2577361a}
+Components with this 'duplicates' flag are allowed to have multiple features provide the same component key in their info files. \hypertarget{features_8module_a428c0bde0ed719decf70ed07ad640be8}{
+\index{features.module@{features.module}!FEATURES\_\-DUPLICATES\_\-CONFLICT@{FEATURES\_\-DUPLICATES\_\-CONFLICT}}
+\index{FEATURES\_\-DUPLICATES\_\-CONFLICT@{FEATURES\_\-DUPLICATES\_\-CONFLICT}!features.module@{features.module}}
+\subsubsection[{FEATURES\_\-DUPLICATES\_\-CONFLICT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf FEATURES\_\-DUPLICATES\_\-CONFLICT}}}
+\label{features_8module_a428c0bde0ed719decf70ed07ad640be8}
+Components with this 'duplicates' flag may not have multiple features provide the same component key in their info files. This is the default behavior. 
+
+\subsection{Function Documentation}
+\hypertarget{features_8module_a0298400d481d56cee72177e00c1777cd}{
+\index{features.module@{features.module}!\_\-features\_\-restore@{\_\-features\_\-restore}}
+\index{\_\-features\_\-restore@{\_\-features\_\-restore}!features.module@{features.module}}
+\subsubsection[{\_\-features\_\-restore}]{\setlength{\rightskip}{0pt plus 5cm}\_\-features\_\-restore (\$ {\em op}, \/  \$ {\em items} = {\ttfamily array()})}}
+\label{features_8module_a0298400d481d56cee72177e00c1777cd}
+Restore the specified modules to the default state. \hypertarget{features_8module_a2ce08ffe8a095c32656f9f78c2bb9ac5}{
+\index{features.module@{features.module}!\_\-user\_\-features\_\-change\_\-term\_\-permission@{\_\-user\_\-features\_\-change\_\-term\_\-permission}}
+\index{\_\-user\_\-features\_\-change\_\-term\_\-permission@{\_\-user\_\-features\_\-change\_\-term\_\-permission}!features.module@{features.module}}
+\subsubsection[{\_\-user\_\-features\_\-change\_\-term\_\-permission}]{\setlength{\rightskip}{0pt plus 5cm}\_\-user\_\-features\_\-change\_\-term\_\-permission (\&\$ {\em perm}, \/  \$ {\em type} = {\ttfamily 'vid'})}}
+\label{features_8module_a2ce08ffe8a095c32656f9f78c2bb9ac5}
+Change vocabularies permission, from vocab id to machine name and vice versa. \hypertarget{features_8module_ac4d9735b1a5fade78f7e1ac2a8115196}{
+\index{features.module@{features.module}!feature\_\-load@{feature\_\-load}}
+\index{feature\_\-load@{feature\_\-load}!features.module@{features.module}}
+\subsubsection[{feature\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}feature\_\-load (\$ {\em name}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{features_8module_ac4d9735b1a5fade78f7e1ac2a8115196}
+Feature object loader. DEPRECATED but included for backwards compatibility \hypertarget{features_8module_aeb1b6b9ab9beb2e78552c06cc86a241c}{
+\index{features.module@{features.module}!features\_\-access\_\-override\_\-actions@{features\_\-access\_\-override\_\-actions}}
+\index{features\_\-access\_\-override\_\-actions@{features\_\-access\_\-override\_\-actions}!features.module@{features.module}}
+\subsubsection[{features\_\-access\_\-override\_\-actions}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-access\_\-override\_\-actions (\$ {\em feature})}}
+\label{features_8module_aeb1b6b9ab9beb2e78552c06cc86a241c}
+Menu access callback for whether a user should be able to access override actions for a given feature. \hypertarget{features_8module_a5d81c8de392acdca91b2f1f5101f889a}{
+\index{features.module@{features.module}!features\_\-array\_\-diff\_\-assoc\_\-recursive@{features\_\-array\_\-diff\_\-assoc\_\-recursive}}
+\index{features\_\-array\_\-diff\_\-assoc\_\-recursive@{features\_\-array\_\-diff\_\-assoc\_\-recursive}!features.module@{features.module}}
+\subsubsection[{features\_\-array\_\-diff\_\-assoc\_\-recursive}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-array\_\-diff\_\-assoc\_\-recursive (array \$ {\em array1}, \/  array \$ {\em array2})}}
+\label{features_8module_a5d81c8de392acdca91b2f1f5101f889a}
+Recursively computes the difference of arrays with additional index check.
+
+This is a version of array\_\-diff\_\-assoc() that supports multidimensional arrays.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$array1 The array to compare from. \item[{\em array}]\$array2 The array to compare to.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array Returns an array containing all the values from array1 that are not present in array2. 
+\end{DoxyReturn}
+\hypertarget{features_8module_a11ac8740ad0c9745b94a37e7da421d2b}{
+\index{features.module@{features.module}!features\_\-flush\_\-caches@{features\_\-flush\_\-caches}}
+\index{features\_\-flush\_\-caches@{features\_\-flush\_\-caches}!features.module@{features.module}}
+\subsubsection[{features\_\-flush\_\-caches}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-flush\_\-caches ()}}
+\label{features_8module_a11ac8740ad0c9745b94a37e7da421d2b}
+Implements hook\_\-flush\_\-caches(). \hypertarget{features_8module_a6a4b2e2f866538b3c0c7d950aea3f80f}{
+\index{features.module@{features.module}!features\_\-form@{features\_\-form}}
+\index{features\_\-form@{features\_\-form}!features.module@{features.module}}
+\subsubsection[{features\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-form (\$ {\em node}, \/  \$ {\em form\_\-state})}}
+\label{features_8module_a6a4b2e2f866538b3c0c7d950aea3f80f}
+Implements hook\_\-form(). \hypertarget{features_8module_a8035300a21d0bf61d8cbf8caa4f3c19b}{
+\index{features.module@{features.module}!features\_\-form\_\-system\_\-modules\_\-alter@{features\_\-form\_\-system\_\-modules\_\-alter}}
+\index{features\_\-form\_\-system\_\-modules\_\-alter@{features\_\-form\_\-system\_\-modules\_\-alter}!features.module@{features.module}}
+\subsubsection[{features\_\-form\_\-system\_\-modules\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-form\_\-system\_\-modules\_\-alter (\&\$ {\em form})}}
+\label{features_8module_a8035300a21d0bf61d8cbf8caa4f3c19b}
+Implements hook\_\-form\_\-alter() for system\_\-modules form(). \hypertarget{features_8module_a0b9ee0b432af2d3709e1f413923c3ae2}{
+\index{features.module@{features.module}!features\_\-get\_\-component\_\-map@{features\_\-get\_\-component\_\-map}}
+\index{features\_\-get\_\-component\_\-map@{features\_\-get\_\-component\_\-map}!features.module@{features.module}}
+\subsubsection[{features\_\-get\_\-component\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-get\_\-component\_\-map (\$ {\em key} = {\ttfamily NULL}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{features_8module_a0b9ee0b432af2d3709e1f413923c3ae2}
+Provide a component to feature map. \hypertarget{features_8module_a4b2d2e6aaa5c36d781cdda657285ee12}{
+\index{features.module@{features.module}!features\_\-get\_\-components@{features\_\-get\_\-components}}
+\index{features\_\-get\_\-components@{features\_\-get\_\-components}!features.module@{features.module}}
+\subsubsection[{features\_\-get\_\-components}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-get\_\-components (\$ {\em component} = {\ttfamily NULL}, \/  \$ {\em key} = {\ttfamily NULL}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{features_8module_a4b2d2e6aaa5c36d781cdda657285ee12}
+Returns the array of supported components.
+
+\begin{DoxySeeAlso}{See also}
+hook\_\-features\_\-api
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$component}]A specific type of component that supports features. \item[{\em \$key}]A key that hook\_\-features\_\-api supports.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of component labels keyed by the component names. 
+\end{DoxyReturn}
+\hypertarget{features_8module_a0e952cf77cb9bbe9a81d5997d8ce5e70}{
+\index{features.module@{features.module}!features\_\-get\_\-conflicts@{features\_\-get\_\-conflicts}}
+\index{features\_\-get\_\-conflicts@{features\_\-get\_\-conflicts}!features.module@{features.module}}
+\subsubsection[{features\_\-get\_\-conflicts}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-get\_\-conflicts (\$ {\em reset} = {\ttfamily FALSE})}}
+\label{features_8module_a0e952cf77cb9bbe9a81d5997d8ce5e70}
+Detect potential conflicts between any features that provide identical components. \hypertarget{features_8module_a354c070d172b313930b395af9b9de90b}{
+\index{features.module@{features.module}!features\_\-get\_\-deprecated@{features\_\-get\_\-deprecated}}
+\index{features\_\-get\_\-deprecated@{features\_\-get\_\-deprecated}!features.module@{features.module}}
+\subsubsection[{features\_\-get\_\-deprecated}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-get\_\-deprecated (\$ {\em components} = {\ttfamily array()})}}
+\label{features_8module_a354c070d172b313930b395af9b9de90b}
+Returns an array of deprecated components Rather than deprecating the component directly, we look for other components that supersedes the component 
+\begin{DoxyParams}{Parameters}
+\item[{\em \$components}]The array of components (component\_\-info) from features\_\-get\_\-components typically. \end{DoxyParams}
+\hypertarget{features_8module_a714c640c4e8c11ee30eacc1510415598}{
+\index{features.module@{features.module}!features\_\-get\_\-feature\_\-components@{features\_\-get\_\-feature\_\-components}}
+\index{features\_\-get\_\-feature\_\-components@{features\_\-get\_\-feature\_\-components}!features.module@{features.module}}
+\subsubsection[{features\_\-get\_\-feature\_\-components}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-get\_\-feature\_\-components ()}}
+\label{features_8module_a714c640c4e8c11ee30eacc1510415598}
+Returns components that are offered as an option on feature creation. \hypertarget{features_8module_aa4ba0e8b4f0d7640d95ea12d67928ca3}{
+\index{features.module@{features.module}!features\_\-get\_\-feature\_\-title@{features\_\-get\_\-feature\_\-title}}
+\index{features\_\-get\_\-feature\_\-title@{features\_\-get\_\-feature\_\-title}!features.module@{features.module}}
+\subsubsection[{features\_\-get\_\-feature\_\-title}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-get\_\-feature\_\-title (\$ {\em feature})}}
+\label{features_8module_aa4ba0e8b4f0d7640d95ea12d67928ca3}
+Menu title callback. \hypertarget{features_8module_a2bb9e3cf366b99818c231091b8fea3cd}{
+\index{features.module@{features.module}!features\_\-get\_\-features@{features\_\-get\_\-features}}
+\index{features\_\-get\_\-features@{features\_\-get\_\-features}!features.module@{features.module}}
+\subsubsection[{features\_\-get\_\-features}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-get\_\-features (\$ {\em name} = {\ttfamily NULL}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{features_8module_a2bb9e3cf366b99818c231091b8fea3cd}
+Wrapper around \hyperlink{features_8module_a03a83ef1f5d1e8033b71b0388e776536}{features\_\-get\_\-info()} that returns an array of module info objects that are features. \hypertarget{features_8module_a03a83ef1f5d1e8033b71b0388e776536}{
+\index{features.module@{features.module}!features\_\-get\_\-info@{features\_\-get\_\-info}}
+\index{features\_\-get\_\-info@{features\_\-get\_\-info}!features.module@{features.module}}
+\subsubsection[{features\_\-get\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-get\_\-info (\$ {\em type} = {\ttfamily 'module'}, \/  \$ {\em name} = {\ttfamily NULL}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{features_8module_a03a83ef1f5d1e8033b71b0388e776536}
+Helper for retrieving info from system table. \hypertarget{features_8module_ac5677f8406f4e9b5b37ae40783742a2e}{
+\index{features.module@{features.module}!features\_\-get\_\-module\_\-status@{features\_\-get\_\-module\_\-status}}
+\index{features\_\-get\_\-module\_\-status@{features\_\-get\_\-module\_\-status}!features.module@{features.module}}
+\subsubsection[{features\_\-get\_\-module\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-get\_\-module\_\-status (\$ {\em module})}}
+\label{features_8module_ac5677f8406f4e9b5b37ae40783742a2e}
+Simple wrapper returns the status of a module. \hypertarget{features_8module_a878b29e09c069a8be511070bbfedfaf9}{
+\index{features.module@{features.module}!features\_\-get\_\-modules@{features\_\-get\_\-modules}}
+\index{features\_\-get\_\-modules@{features\_\-get\_\-modules}!features.module@{features.module}}
+\subsubsection[{features\_\-get\_\-modules}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-get\_\-modules (\$ {\em name} = {\ttfamily NULL}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{features_8module_a878b29e09c069a8be511070bbfedfaf9}
+Return a module 'object' including .info information.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]The name of the module to retrieve information for. If ommitted, an array of all available modules will be returned. \item[{\em \$reset}]Whether to reset the cache.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If a module is request (and exists) a module object is returned. If no module is requested info for all modules is returned. 
+\end{DoxyReturn}
+\hypertarget{features_8module_a6aae9f9ebb34fabfe11ae61284dde230}{
+\index{features.module@{features.module}!features\_\-get\_\-orphans@{features\_\-get\_\-orphans}}
+\index{features\_\-get\_\-orphans@{features\_\-get\_\-orphans}!features.module@{features.module}}
+\subsubsection[{features\_\-get\_\-orphans}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-get\_\-orphans (\$ {\em reset} = {\ttfamily FALSE})}}
+\label{features_8module_a6aae9f9ebb34fabfe11ae61284dde230}
+Generate an array of feature dependencies that have been orphaned. \hypertarget{features_8module_abc18f3557bf3118b00e725fe283259ab}{
+\index{features.module@{features.module}!features\_\-help@{features\_\-help}}
+\index{features\_\-help@{features\_\-help}!features.module@{features.module}}
+\subsubsection[{features\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{features_8module_abc18f3557bf3118b00e725fe283259ab}
+Implements hook\_\-help(). \hypertarget{features_8module_aaa5a723655f52c16385d78d0f5997c23}{
+\index{features.module@{features.module}!features\_\-hook@{features\_\-hook}}
+\index{features\_\-hook@{features\_\-hook}!features.module@{features.module}}
+\subsubsection[{features\_\-hook}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-hook (\$ {\em component}, \/  \$ {\em hook}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{features_8module_aaa5a723655f52c16385d78d0f5997c23}
+Checks whether a component implements the given hook.
+
+\begin{DoxyReturn}{Returns}
+The function implementing the hook, or FALSE. 
+\end{DoxyReturn}
+\hypertarget{features_8module_a7d3ed140b4b5553cbf7fc46f0bb42af2}{
+\index{features.module@{features.module}!features\_\-hook\_\-info@{features\_\-hook\_\-info}}
+\index{features\_\-hook\_\-info@{features\_\-hook\_\-info}!features.module@{features.module}}
+\subsubsection[{features\_\-hook\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-hook\_\-info ()}}
+\label{features_8module_a7d3ed140b4b5553cbf7fc46f0bb42af2}
+Implements hook\_\-hook\_\-info(). \hypertarget{features_8module_aa808105e0eafb3744d0cdcfe50802456}{
+\index{features.module@{features.module}!features\_\-include@{features\_\-include}}
+\index{features\_\-include@{features\_\-include}!features.module@{features.module}}
+\subsubsection[{features\_\-include}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-include (\$ {\em reset} = {\ttfamily FALSE})}}
+\label{features_8module_aa808105e0eafb3744d0cdcfe50802456}
+Load includes for any modules that implement the features API and load includes for those provided by features. \hypertarget{features_8module_a359c52c08e57a3bdd13594abd116543e}{
+\index{features.module@{features.module}!features\_\-include\_\-defaults@{features\_\-include\_\-defaults}}
+\index{features\_\-include\_\-defaults@{features\_\-include\_\-defaults}!features.module@{features.module}}
+\subsubsection[{features\_\-include\_\-defaults}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-include\_\-defaults (\$ {\em components} = {\ttfamily NULL}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{features_8module_a359c52c08e57a3bdd13594abd116543e}
+Load features includes for all components that require includes before collecting defaults. \hypertarget{features_8module_a379679b547f18695cf0e547fe936b002}{
+\index{features.module@{features.module}!features\_\-install\_\-modules@{features\_\-install\_\-modules}}
+\index{features\_\-install\_\-modules@{features\_\-install\_\-modules}!features.module@{features.module}}
+\subsubsection[{features\_\-install\_\-modules}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-install\_\-modules (\$ {\em modules})}}
+\label{features_8module_a379679b547f18695cf0e547fe936b002}
+Enables and installs an array of modules, ignoring those already enabled \& installed. Consider this a helper or extension to drupal\_\-install\_\-modules().
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$modules}]An array of modules to install. \item[{\em \$reset}]Clear the module info cache. \end{DoxyParams}
+\hypertarget{features_8module_a0bcd406d15618a70e5be91e70d5d9d05}{
+\index{features.module@{features.module}!features\_\-invoke@{features\_\-invoke}}
+\index{features\_\-invoke@{features\_\-invoke}!features.module@{features.module}}
+\subsubsection[{features\_\-invoke}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-invoke (\$ {\em component}, \/  \$ {\em callback})}}
+\label{features_8module_a0bcd406d15618a70e5be91e70d5d9d05}
+Invoke a component callback. \hypertarget{features_8module_abbc16356d1df3bc150b0bd56d35b00f8}{
+\index{features.module@{features.module}!features\_\-load\_\-feature@{features\_\-load\_\-feature}}
+\index{features\_\-load\_\-feature@{features\_\-load\_\-feature}!features.module@{features.module}}
+\subsubsection[{features\_\-load\_\-feature}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-load\_\-feature (\$ {\em name}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{features_8module_abbc16356d1df3bc150b0bd56d35b00f8}
+Feature object loader. \hypertarget{features_8module_ad31fc2380edc2e353c945257ffd6b731}{
+\index{features.module@{features.module}!features\_\-log@{features\_\-log}}
+\index{features\_\-log@{features\_\-log}!features.module@{features.module}}
+\subsubsection[{features\_\-log}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-log (\$ {\em message}, \/  \$ {\em severity} = {\ttfamily 'status'})}}
+\label{features_8module_ad31fc2380edc2e353c945257ffd6b731}
+Utility functions ================================================== Log a message, environment agnostic.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$message}]The message to log. \item[{\em \$severity}]The severity of the message: status, warning or error. \end{DoxyParams}
+\hypertarget{features_8module_a2f3b3fc6d67373f91feb6e2e9d45c0f0}{
+\index{features.module@{features.module}!features\_\-menu@{features\_\-menu}}
+\index{features\_\-menu@{features\_\-menu}!features.module@{features.module}}
+\subsubsection[{features\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-menu ()}}
+\label{features_8module_a2f3b3fc6d67373f91feb6e2e9d45c0f0}
+Implements hook\_\-menu(). \hypertarget{features_8module_ab4015ad6546e314fe3e6e8ed0d436c05}{
+\index{features.module@{features.module}!features\_\-modules\_\-disabled@{features\_\-modules\_\-disabled}}
+\index{features\_\-modules\_\-disabled@{features\_\-modules\_\-disabled}!features.module@{features.module}}
+\subsubsection[{features\_\-modules\_\-disabled}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-modules\_\-disabled (\$ {\em modules})}}
+\label{features_8module_ab4015ad6546e314fe3e6e8ed0d436c05}
+Implements hook\_\-modules\_\-disabled(). \hypertarget{features_8module_a124f4a6b7d4a6678f703597bad15f6d7}{
+\index{features.module@{features.module}!features\_\-modules\_\-enabled@{features\_\-modules\_\-enabled}}
+\index{features\_\-modules\_\-enabled@{features\_\-modules\_\-enabled}!features.module@{features.module}}
+\subsubsection[{features\_\-modules\_\-enabled}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-modules\_\-enabled (\$ {\em modules})}}
+\label{features_8module_a124f4a6b7d4a6678f703597bad15f6d7}
+Implements hook\_\-modules\_\-enabled(). \hypertarget{features_8module_a8798acbb3fe11426ba45f33a83e055b6}{
+\index{features.module@{features.module}!features\_\-permission@{features\_\-permission}}
+\index{features\_\-permission@{features\_\-permission}!features.module@{features.module}}
+\subsubsection[{features\_\-permission}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-permission ()}}
+\label{features_8module_a8798acbb3fe11426ba45f33a83e055b6}
+Implements hook\_\-permission(). \hypertarget{features_8module_a059a6b5b807abf2d3004beae665cd41c}{
+\index{features.module@{features.module}!features\_\-rebuild@{features\_\-rebuild}}
+\index{features\_\-rebuild@{features\_\-rebuild}!features.module@{features.module}}
+\subsubsection[{features\_\-rebuild}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-rebuild (\$ {\em rebuild} = {\ttfamily array()})}}
+\label{features_8module_a059a6b5b807abf2d3004beae665cd41c}
+Wrapper around \hyperlink{features_8module_a0298400d481d56cee72177e00c1777cd}{\_\-features\_\-restore()}. \hypertarget{features_8module_a2387a306760f9e3f11596672883ad181}{
+\index{features.module@{features.module}!features\_\-revert@{features\_\-revert}}
+\index{features\_\-revert@{features\_\-revert}!features.module@{features.module}}
+\subsubsection[{features\_\-revert}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-revert (\$ {\em revert} = {\ttfamily array()})}}
+\label{features_8module_a2387a306760f9e3f11596672883ad181}
+Wrapper around \hyperlink{features_8module_a0298400d481d56cee72177e00c1777cd}{\_\-features\_\-restore()}. \hypertarget{features_8module_a7d98a16c1662382dae41746df94b8e86}{
+\index{features.module@{features.module}!features\_\-revert\_\-module@{features\_\-revert\_\-module}}
+\index{features\_\-revert\_\-module@{features\_\-revert\_\-module}!features.module@{features.module}}
+\subsubsection[{features\_\-revert\_\-module}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-revert\_\-module (\$ {\em module})}}
+\label{features_8module_a7d98a16c1662382dae41746df94b8e86}
+Revert a single features module.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$module A features module machine name. This module must be a features module and enabled. \end{DoxyParams}
+\hypertarget{features_8module_aa4bc5c89bc3ae19889dc444bf408608d}{
+\index{features.module@{features.module}!features\_\-theme@{features\_\-theme}}
+\index{features\_\-theme@{features\_\-theme}!features.module@{features.module}}
+\subsubsection[{features\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}features\_\-theme ()}}
+\label{features_8module_aa4bc5c89bc3ae19889dc444bf408608d}
+Implements hook\_\-theme(). 

@@ -1,0 +1,61 @@
+\hypertarget{contexts_2string_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/contexts/string.inc File Reference}
+\label{contexts_2string_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/contexts/string.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/contexts/string.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{contexts_2string_8inc_ab651d513ca31a0ca745a12a096fa5db3}{ctools\_\-context\_\-create\_\-string} (\$empty, \$data=NULL, \$conf=FALSE)
+\item 
+\hyperlink{contexts_2string_8inc_a075694e2e95ab80f542b8e119617c8de}{ctools\_\-context\_\-string\_\-convert} (\$context, \$type)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{contexts_2string_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide a string context 
+
+\subsection{Function Documentation}
+\hypertarget{contexts_2string_8inc_ab651d513ca31a0ca745a12a096fa5db3}{
+\index{contexts/string.inc@{contexts/string.inc}!ctools\_\-context\_\-create\_\-string@{ctools\_\-context\_\-create\_\-string}}
+\index{ctools\_\-context\_\-create\_\-string@{ctools\_\-context\_\-create\_\-string}!contexts/string.inc@{contexts/string.inc}}
+\subsubsection[{ctools\_\-context\_\-create\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-create\_\-string (\$ {\em empty}, \/  \$ {\em data} = {\ttfamily NULL}, \/  \$ {\em conf} = {\ttfamily FALSE})}}
+\label{contexts_2string_8inc_ab651d513ca31a0ca745a12a096fa5db3}
+It's important to remember that \$conf is optional here, because contexts are not always created from the UI. \hypertarget{contexts_2string_8inc_a075694e2e95ab80f542b8e119617c8de}{
+\index{contexts/string.inc@{contexts/string.inc}!ctools\_\-context\_\-string\_\-convert@{ctools\_\-context\_\-string\_\-convert}}
+\index{ctools\_\-context\_\-string\_\-convert@{ctools\_\-context\_\-string\_\-convert}!contexts/string.inc@{contexts/string.inc}}
+\subsubsection[{ctools\_\-context\_\-string\_\-convert}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-string\_\-convert (\$ {\em context}, \/  \$ {\em type})}}
+\label{contexts_2string_8inc_a075694e2e95ab80f542b8e119617c8de}
+Convert a context into a string. 
+
+\subsection{Variable Documentation}
+\hypertarget{contexts_2string_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{contexts/string.inc@{contexts/string.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!contexts/string.inc@{contexts/string.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{contexts_2string_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('String'),
+  'description' => t('A context that is just a string.'),
+  'context' => 'ctools_context_create_string',
+  'keyword' => 'string',
+  'no ui' => FALSE,
+  'context name' => 'string',
+  'convert list' => array(
+    'raw' => t('Raw string'),
+    'html_safe' => t('HTML-safe string'),
+  ),
+  'convert' => 'ctools_context_string_convert',
+  'placeholder form' => array(
+    '#type' => 'textfield',
+    '#description' => t('Enter the string for this context.'),
+  ),
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

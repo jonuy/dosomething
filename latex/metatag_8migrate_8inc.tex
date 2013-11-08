@@ -1,0 +1,50 @@
+\hypertarget{metatag_8migrate_8inc}{
+\section{html/profiles/dosomething/modules/contrib/metatag/metatag.migrate.inc File Reference}
+\label{metatag_8migrate_8inc}\index{html/profiles/dosomething/modules/contrib/metatag/metatag.migrate.inc@{html/profiles/dosomething/modules/contrib/metatag/metatag.migrate.inc}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classMigrateMetatagHandler}{MigrateMetatagHandler}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{metatag_8migrate_8inc_aabdbb91f28353ae79e78fb1058288ef6}{metatag\_\-migrate\_\-api} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Metatag support for Migrate. 
+
+\subsection{Function Documentation}
+\hypertarget{metatag_8migrate_8inc_aabdbb91f28353ae79e78fb1058288ef6}{
+\index{metatag.migrate.inc@{metatag.migrate.inc}!metatag\_\-migrate\_\-api@{metatag\_\-migrate\_\-api}}
+\index{metatag\_\-migrate\_\-api@{metatag\_\-migrate\_\-api}!metatag.migrate.inc@{metatag.migrate.inc}}
+\subsubsection[{metatag\_\-migrate\_\-api}]{\setlength{\rightskip}{0pt plus 5cm}metatag\_\-migrate\_\-api ()}}
+\label{metatag_8migrate_8inc_aabdbb91f28353ae79e78fb1058288ef6}
+Basic usage of the Migrate integration.
+
+This example assumes the custom module's name is \char`\"{}example\_\-migrate\char`\"{}.
+
+example\_\-migrate.inc:
+
+class MetatagTestMigration extends DynamicMigration \{
+
+public function \_\-\_\-construct() \{ parent::\_\-\_\-construct();
+
+\$this-\/$>$description = t('Migrate test.');
+
+\$this-\/$>$map = new MigrateSQLMap( \$this-\/$>$machineName, array( 'id' =$>$ array( 'type' =$>$ 'varchar', 'not null' =$>$ TRUE, 'length' =$>$ 254, 'description' =$>$ 'ID of record.', ), ), MigrateDestinationNode::getKeySchema() );
+
+\$this-\/$>$source = new MigrateSourceCSV( drupal\_\-get\_\-path('module', 'example\_\-migrate') . '/sample.csv', array(), array('header\_\-rows' =$>$ TRUE) );
+
+\$this-\/$>$destination = new MigrateDestinationNode('article');
+
+\$this-\/$>$addFieldMapping('metatag\_\-description', 'description'); \$this-\/$>$addFieldMapping('metatag\_\-keywords', 'keywords'); \} \}
+
+example\_\-migrate.migrate.inc:
+
+/$\ast$$\ast$ $\ast$ Implements hook\_\-migrate\_\-api(). $\ast$ / function example\_\-migrate\_\-migrate\_\-api() \{ \$api = array( 'api' =$>$ 2, 'migrations' =$>$ array( 'MetatagTest' =$>$ array('class\_\-name' =$>$ 'MetatagTestMigration'), ), );
+
+return \$api; \} Implements hook\_\-migrate\_\-api(). 

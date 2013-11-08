@@ -1,0 +1,120 @@
+\hypertarget{classviews__handler__relationship__groupwise__max}{
+\section{views\_\-handler\_\-relationship\_\-groupwise\_\-max Class Reference}
+\label{classviews__handler__relationship__groupwise__max}\index{views\_\-handler\_\-relationship\_\-groupwise\_\-max@{views\_\-handler\_\-relationship\_\-groupwise\_\-max}}
+}
+Inheritance diagram for views\_\-handler\_\-relationship\_\-groupwise\_\-max::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classviews__handler__relationship__groupwise__max}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classviews__handler__relationship__groupwise__max_a915d653a4dd09cc8968c616427a87f92}{option\_\-definition} ()
+\item 
+\hyperlink{classviews__handler__relationship__groupwise__max_a9cac8b627e41265e500d1a36f4d8f621}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__handler__relationship__groupwise__max_a2af65fae1b0d97331ccf817be451399c}{get\_\-temporary\_\-view} ()
+\item 
+\hyperlink{classviews__handler__relationship__groupwise__max_a33dd614a3c4506afe9a3746712713724}{options\_\-form\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__handler__relationship__groupwise__max_af16a972d2e2cccfc5d56495c9e15f42f}{left\_\-query} (\$options)
+\item 
+\hyperlink{classviews__handler__relationship__groupwise__max_a70411d08b3516619b376be6b3411d70c}{alter\_\-subquery\_\-condition} (QueryAlterableInterface \$query, \&\$conditions)
+\item 
+\hyperlink{classviews__handler__relationship__groupwise__max_af6f3f64602d39ea3f4620f06534c5779}{condition\_\-namespace} (\$string)
+\item 
+\hyperlink{classviews__handler__relationship__groupwise__max_a26fd71d0c45deea3dcd04e40fe58df7c}{query} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Relationship handler that allows a groupwise maximum of the linked in table. For a definition, see: \href{http://dev.mysql.com/doc/refman/5.0/en/example-maximum-column-group-row.html}{\tt http://dev.mysql.com/doc/refman/5.0/en/example-\/maximum-\/column-\/group-\/row.html} In lay terms, instead of joining to get all matching records in the linked table, we get only one record, a 'representative record' picked according to a given criteria.
+
+Example: Suppose we have a term \hyperlink{classview}{view} that gives us the terms: Horse, Cat, Aardvark. We wish to show for each term the most recent node of that term. What we want is some kind of relationship from term to node. But a regular relationship will give us all the nodes for each term, giving the \hyperlink{classview}{view} multiple rows per term. What we want is just one representative node per term, the node that is the 'best' in some way: eg, the most recent, the most commented on, the first in alphabetical order.
+
+This handler gives us that kind of relationship from term to node. The method of choosing the 'best' implemented with a sort that the user selects in the relationship settings.
+
+So if we want our term \hyperlink{classview}{view} to show the most commented node for each term, add the relationship and in its options, pick the 'Comment count' sort.
+
+Relationship definition
+\begin{DoxyItemize}
+\item 'outer field': The outer field to substitute into the correlated subquery. This must be the full field name, not the alias. Eg: 'term\_\-data.tid'.
+\item 'argument table', 'argument field': These options define a views argument that the subquery must add to itself to filter by the main \hyperlink{classview}{view}. Example: the main \hyperlink{classview}{view} shows terms, this handler is being used to get to the nodes base table. Your argument must be 'term\_\-node', 'tid', as this is the argument that should be added to a node \hyperlink{classview}{view} to filter on terms.
+\end{DoxyItemize}
+
+A note on performance: This relationship uses a correlated subquery, which is expensive. Subsequent versions of this handler could also implement the alternative way of doing this, with a join -\/-\/ though this looks like it could be pretty messy to implement. This is also an expensive method, so providing both methods and allowing the user to choose which one works fastest for their data might be the best way. If your use of this relationship handler is likely to result in large data sets, you might want to consider storing statistics in a separate table, in the same way as node\_\-comment\_\-statistics. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__handler__relationship__groupwise__max_a70411d08b3516619b376be6b3411d70c}{
+\index{views\_\-handler\_\-relationship\_\-groupwise\_\-max@{views\_\-handler\_\-relationship\_\-groupwise\_\-max}!alter\_\-subquery\_\-condition@{alter\_\-subquery\_\-condition}}
+\index{alter\_\-subquery\_\-condition@{alter\_\-subquery\_\-condition}!views_handler_relationship_groupwise_max@{views\_\-handler\_\-relationship\_\-groupwise\_\-max}}
+\subsubsection[{alter\_\-subquery\_\-condition}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-relationship\_\-groupwise\_\-max::alter\_\-subquery\_\-condition (QueryAlterableInterface \$ {\em query}, \/  \&\$ {\em conditions})}}
+\label{classviews__handler__relationship__groupwise__max_a70411d08b3516619b376be6b3411d70c}
+Recursive helper to add a namespace to conditions.
+
+Similar to \hyperlink{views_8module_a51cb108c148c7478b50e6262e216a17d}{\_\-views\_\-query\_\-tag\_\-alter\_\-condition()}.
+
+(Though why is the condition we get in a simple query 3 levels deep???) \hypertarget{classviews__handler__relationship__groupwise__max_af6f3f64602d39ea3f4620f06534c5779}{
+\index{views\_\-handler\_\-relationship\_\-groupwise\_\-max@{views\_\-handler\_\-relationship\_\-groupwise\_\-max}!condition\_\-namespace@{condition\_\-namespace}}
+\index{condition\_\-namespace@{condition\_\-namespace}!views_handler_relationship_groupwise_max@{views\_\-handler\_\-relationship\_\-groupwise\_\-max}}
+\subsubsection[{condition\_\-namespace}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-relationship\_\-groupwise\_\-max::condition\_\-namespace (\$ {\em string})}}
+\label{classviews__handler__relationship__groupwise__max_af6f3f64602d39ea3f4620f06534c5779}
+Helper function to namespace query pieces.
+
+Turns 'foo.bar' into 'foo\_\-NAMESPACE.bar'. \hypertarget{classviews__handler__relationship__groupwise__max_a2af65fae1b0d97331ccf817be451399c}{
+\index{views\_\-handler\_\-relationship\_\-groupwise\_\-max@{views\_\-handler\_\-relationship\_\-groupwise\_\-max}!get\_\-temporary\_\-view@{get\_\-temporary\_\-view}}
+\index{get\_\-temporary\_\-view@{get\_\-temporary\_\-view}!views_handler_relationship_groupwise_max@{views\_\-handler\_\-relationship\_\-groupwise\_\-max}}
+\subsubsection[{get\_\-temporary\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-relationship\_\-groupwise\_\-max::get\_\-temporary\_\-view ()}}
+\label{classviews__handler__relationship__groupwise__max_a2af65fae1b0d97331ccf817be451399c}
+Helper function to create a pseudo \hyperlink{classview}{view}.
+
+We use this to obtain our subquery SQL. \hypertarget{classviews__handler__relationship__groupwise__max_af16a972d2e2cccfc5d56495c9e15f42f}{
+\index{views\_\-handler\_\-relationship\_\-groupwise\_\-max@{views\_\-handler\_\-relationship\_\-groupwise\_\-max}!left\_\-query@{left\_\-query}}
+\index{left\_\-query@{left\_\-query}!views_handler_relationship_groupwise_max@{views\_\-handler\_\-relationship\_\-groupwise\_\-max}}
+\subsubsection[{left\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-relationship\_\-groupwise\_\-max::left\_\-query (\$ {\em options})}}
+\label{classviews__handler__relationship__groupwise__max_af16a972d2e2cccfc5d56495c9e15f42f}
+Generate a subquery given the user options, as set in the options. These are passed in rather than picked up from the object because we generate the subquery when the options are saved, rather than when the \hyperlink{classview}{view} is run. This saves considerable time.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$options}]An array of options:
+\begin{DoxyItemize}
+\item subquery\_\-sort: the id of a views sort.
+\item subquery\_\-order: either ASC or DESC. 
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The subquery SQL string, ready for use in the main query. 
+\end{DoxyReturn}
+\hypertarget{classviews__handler__relationship__groupwise__max_a915d653a4dd09cc8968c616427a87f92}{
+\index{views\_\-handler\_\-relationship\_\-groupwise\_\-max@{views\_\-handler\_\-relationship\_\-groupwise\_\-max}!option\_\-definition@{option\_\-definition}}
+\index{option\_\-definition@{option\_\-definition}!views_handler_relationship_groupwise_max@{views\_\-handler\_\-relationship\_\-groupwise\_\-max}}
+\subsubsection[{option\_\-definition}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-relationship\_\-groupwise\_\-max::option\_\-definition ()}}
+\label{classviews__handler__relationship__groupwise__max_a915d653a4dd09cc8968c616427a87f92}
+Defines default values for options. 
+
+Reimplemented from \hyperlink{classviews__handler__relationship}{views\_\-handler\_\-relationship}.\hypertarget{classviews__handler__relationship__groupwise__max_a9cac8b627e41265e500d1a36f4d8f621}{
+\index{views\_\-handler\_\-relationship\_\-groupwise\_\-max@{views\_\-handler\_\-relationship\_\-groupwise\_\-max}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_handler_relationship_groupwise_max@{views\_\-handler\_\-relationship\_\-groupwise\_\-max}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-relationship\_\-groupwise\_\-max::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__handler__relationship__groupwise__max_a9cac8b627e41265e500d1a36f4d8f621}
+Extends the relationship's basic options, allowing the user to pick a sort and an order for it. 
+
+Reimplemented from \hyperlink{classviews__handler__relationship_a08cc3f5947964d936b5e88d198f82c30}{views\_\-handler\_\-relationship}.\hypertarget{classviews__handler__relationship__groupwise__max_a33dd614a3c4506afe9a3746712713724}{
+\index{views\_\-handler\_\-relationship\_\-groupwise\_\-max@{views\_\-handler\_\-relationship\_\-groupwise\_\-max}!options\_\-form\_\-submit@{options\_\-form\_\-submit}}
+\index{options\_\-form\_\-submit@{options\_\-form\_\-submit}!views_handler_relationship_groupwise_max@{views\_\-handler\_\-relationship\_\-groupwise\_\-max}}
+\subsubsection[{options\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-relationship\_\-groupwise\_\-max::options\_\-form\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__handler__relationship__groupwise__max_a33dd614a3c4506afe9a3746712713724}
+When the form is submitted, take sure to clear the subquery string cache. \hypertarget{classviews__handler__relationship__groupwise__max_a26fd71d0c45deea3dcd04e40fe58df7c}{
+\index{views\_\-handler\_\-relationship\_\-groupwise\_\-max@{views\_\-handler\_\-relationship\_\-groupwise\_\-max}!query@{query}}
+\index{query@{query}!views_handler_relationship_groupwise_max@{views\_\-handler\_\-relationship\_\-groupwise\_\-max}}
+\subsubsection[{query}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-relationship\_\-groupwise\_\-max::query ()}}
+\label{classviews__handler__relationship__groupwise__max_a26fd71d0c45deea3dcd04e40fe58df7c}
+Called to implement a relationship in a query. This is mostly a copy of our parent's \hyperlink{classviews__handler__relationship__groupwise__max_a26fd71d0c45deea3dcd04e40fe58df7c}{query()} except for this bit with the join class. 
+
+Reimplemented from \hyperlink{classviews__handler__relationship_a7dc0b6371807dbf06efa594cb52b3348}{views\_\-handler\_\-relationship}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/handlers/\hyperlink{views__handler__relationship__groupwise__max_8inc}{views\_\-handler\_\-relationship\_\-groupwise\_\-max.inc}\end{DoxyCompactItemize}

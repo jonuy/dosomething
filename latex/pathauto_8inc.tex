@@ -1,0 +1,319 @@
+\hypertarget{pathauto_8inc}{
+\section{html/profiles/dosomething/modules/contrib/pathauto/pathauto.inc File Reference}
+\label{pathauto_8inc}\index{html/profiles/dosomething/modules/contrib/pathauto/pathauto.inc@{html/profiles/dosomething/modules/contrib/pathauto/pathauto.inc}}
+}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{pathauto_8inc_a70a76b2fb16c0b865f671bda8b720edb}{PATHAUTO\_\-CASE\_\-LEAVE\_\-ASIS} 
+\item 
+enum \hyperlink{pathauto_8inc_a35b6bbe534b05c42eeb8945b6ffe2a50}{PATHAUTO\_\-CASE\_\-LOWER} 
+\item 
+enum \hyperlink{pathauto_8inc_a70d61a7cceaca1c59abf30153aa8156c}{PATHAUTO\_\-UPDATE\_\-ACTION\_\-NO\_\-NEW} 
+\item 
+enum \hyperlink{pathauto_8inc_ad0bb9837044c24b6f3c0f4b2cd66c94b}{PATHAUTO\_\-UPDATE\_\-ACTION\_\-LEAVE} 
+\item 
+enum \hyperlink{pathauto_8inc_a54c9ce36014ab76dfc253cc8a4b0846b}{PATHAUTO\_\-UPDATE\_\-ACTION\_\-DELETE} 
+\item 
+enum \hyperlink{pathauto_8inc_af1defa37ae4d736ee2fd0701548faa6a}{PATHAUTO\_\-PUNCTUATION\_\-REMOVE} 
+\item 
+enum \hyperlink{pathauto_8inc_adad4cad26590ba34578f8f5e8e77e2de}{PATHAUTO\_\-PUNCTUATION\_\-REPLACE} 
+\item 
+enum \hyperlink{pathauto_8inc_a2b584fde6bb4b7c7fb17c3e2f9ca3b65}{PATHAUTO\_\-PUNCTUATION\_\-DO\_\-NOTHING} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{pathauto_8inc_add7c5186fb921739f6cccd5cf2a2c82a}{\_\-pathauto\_\-alias\_\-exists} (\$alias, \$source, \$language=LANGUAGE\_\-NONE)
+\item 
+\hyperlink{pathauto_8inc_a4b36d2f45da703ece553f0d39f26d2b8}{\_\-pathauto\_\-existing\_\-alias\_\-data} (\$source, \$language=LANGUAGE\_\-NONE)
+\item 
+\hyperlink{pathauto_8inc_a0087774598dbc1a71658867d2275a3d1}{pathauto\_\-cleanstring} (\$string)
+\item 
+\hyperlink{pathauto_8inc_a84df3a794eb1448559c84aae690b4eb3}{\_\-pathauto\_\-clean\_\-separators} (\$string, \$separator=NULL)
+\item 
+\hyperlink{pathauto_8inc_a4a29b9c383bf47bb94f57e1602f847d9}{pathauto\_\-clean\_\-alias} (\$alias)
+\item 
+\hyperlink{pathauto_8inc_a7b68bec532634de11616779796a1fb7f}{pathauto\_\-create\_\-alias} (\$module, \$op, \$source, \$data, \$type=NULL, \$language=LANGUAGE\_\-NONE)
+\item 
+\hyperlink{pathauto_8inc_a997f76101702f48dd85c852ca2e91c3b}{pathauto\_\-alias\_\-uniquify} (\&\$alias, \$source, \$langcode)
+\item 
+\hyperlink{pathauto_8inc_a37f91c1fb2698d7280300505d2dcd55e}{\_\-pathauto\_\-path\_\-is\_\-callback} (\$path)
+\item 
+\hyperlink{pathauto_8inc_a954e5a5c442176c91e5a8fead004f9f1}{\_\-pathauto\_\-set\_\-alias} (array \$path, \$existing\_\-alias=NULL, \$op=NULL)
+\item 
+\hyperlink{pathauto_8inc_af1d110e621b254e3b2c925c824dd890a}{\_\-pathauto\_\-verbose} (\$message=NULL, \$op=NULL)
+\item 
+\hyperlink{pathauto_8inc_ab835bd3414c289c7a0a2fcbf38d6f13d}{pathauto\_\-clean\_\-token\_\-values} (\&\$replacements, \$data=array(), \$options=array())
+\item 
+\hyperlink{pathauto_8inc_a939a77c5a4177051307d62aad585b74e}{pathauto\_\-punctuation\_\-chars} ()
+\item 
+\hyperlink{pathauto_8inc_a9f709612633603049fcbd0c2f9b1ef09}{\_\-pathauto\_\-get\_\-schema\_\-alias\_\-maxlength} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Miscellaneous functions for Pathauto.
+
+This also contains some constants giving human readable names to some numeric settings; they're included here as they're only rarely used outside this file anyway. Use module\_\-load\_\-include('inc', 'pathauto') if the constants need to be available. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{pathauto_8inc_a70a76b2fb16c0b865f671bda8b720edb}{
+\index{pathauto.inc@{pathauto.inc}!PATHAUTO\_\-CASE\_\-LEAVE\_\-ASIS@{PATHAUTO\_\-CASE\_\-LEAVE\_\-ASIS}}
+\index{PATHAUTO\_\-CASE\_\-LEAVE\_\-ASIS@{PATHAUTO\_\-CASE\_\-LEAVE\_\-ASIS}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{PATHAUTO\_\-CASE\_\-LEAVE\_\-ASIS}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PATHAUTO\_\-CASE\_\-LEAVE\_\-ASIS}}}
+\label{pathauto_8inc_a70a76b2fb16c0b865f671bda8b720edb}
+Case should be left as is in the generated path. \hypertarget{pathauto_8inc_a35b6bbe534b05c42eeb8945b6ffe2a50}{
+\index{pathauto.inc@{pathauto.inc}!PATHAUTO\_\-CASE\_\-LOWER@{PATHAUTO\_\-CASE\_\-LOWER}}
+\index{PATHAUTO\_\-CASE\_\-LOWER@{PATHAUTO\_\-CASE\_\-LOWER}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{PATHAUTO\_\-CASE\_\-LOWER}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PATHAUTO\_\-CASE\_\-LOWER}}}
+\label{pathauto_8inc_a35b6bbe534b05c42eeb8945b6ffe2a50}
+Case should be lowercased in the generated path. \hypertarget{pathauto_8inc_a2b584fde6bb4b7c7fb17c3e2f9ca3b65}{
+\index{pathauto.inc@{pathauto.inc}!PATHAUTO\_\-PUNCTUATION\_\-DO\_\-NOTHING@{PATHAUTO\_\-PUNCTUATION\_\-DO\_\-NOTHING}}
+\index{PATHAUTO\_\-PUNCTUATION\_\-DO\_\-NOTHING@{PATHAUTO\_\-PUNCTUATION\_\-DO\_\-NOTHING}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{PATHAUTO\_\-PUNCTUATION\_\-DO\_\-NOTHING}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PATHAUTO\_\-PUNCTUATION\_\-DO\_\-NOTHING}}}
+\label{pathauto_8inc_a2b584fde6bb4b7c7fb17c3e2f9ca3b65}
+Leave the punctuation as it is in the alias. \hypertarget{pathauto_8inc_af1defa37ae4d736ee2fd0701548faa6a}{
+\index{pathauto.inc@{pathauto.inc}!PATHAUTO\_\-PUNCTUATION\_\-REMOVE@{PATHAUTO\_\-PUNCTUATION\_\-REMOVE}}
+\index{PATHAUTO\_\-PUNCTUATION\_\-REMOVE@{PATHAUTO\_\-PUNCTUATION\_\-REMOVE}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{PATHAUTO\_\-PUNCTUATION\_\-REMOVE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PATHAUTO\_\-PUNCTUATION\_\-REMOVE}}}
+\label{pathauto_8inc_af1defa37ae4d736ee2fd0701548faa6a}
+Remove the punctuation from the alias. \hypertarget{pathauto_8inc_adad4cad26590ba34578f8f5e8e77e2de}{
+\index{pathauto.inc@{pathauto.inc}!PATHAUTO\_\-PUNCTUATION\_\-REPLACE@{PATHAUTO\_\-PUNCTUATION\_\-REPLACE}}
+\index{PATHAUTO\_\-PUNCTUATION\_\-REPLACE@{PATHAUTO\_\-PUNCTUATION\_\-REPLACE}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{PATHAUTO\_\-PUNCTUATION\_\-REPLACE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PATHAUTO\_\-PUNCTUATION\_\-REPLACE}}}
+\label{pathauto_8inc_adad4cad26590ba34578f8f5e8e77e2de}
+Replace the punctuation with the separator in the alias. \hypertarget{pathauto_8inc_a54c9ce36014ab76dfc253cc8a4b0846b}{
+\index{pathauto.inc@{pathauto.inc}!PATHAUTO\_\-UPDATE\_\-ACTION\_\-DELETE@{PATHAUTO\_\-UPDATE\_\-ACTION\_\-DELETE}}
+\index{PATHAUTO\_\-UPDATE\_\-ACTION\_\-DELETE@{PATHAUTO\_\-UPDATE\_\-ACTION\_\-DELETE}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{PATHAUTO\_\-UPDATE\_\-ACTION\_\-DELETE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PATHAUTO\_\-UPDATE\_\-ACTION\_\-DELETE}}}
+\label{pathauto_8inc_a54c9ce36014ab76dfc253cc8a4b0846b}
+\char`\"{}Create a new alias. Delete the old alias.\char`\"{} \hypertarget{pathauto_8inc_ad0bb9837044c24b6f3c0f4b2cd66c94b}{
+\index{pathauto.inc@{pathauto.inc}!PATHAUTO\_\-UPDATE\_\-ACTION\_\-LEAVE@{PATHAUTO\_\-UPDATE\_\-ACTION\_\-LEAVE}}
+\index{PATHAUTO\_\-UPDATE\_\-ACTION\_\-LEAVE@{PATHAUTO\_\-UPDATE\_\-ACTION\_\-LEAVE}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{PATHAUTO\_\-UPDATE\_\-ACTION\_\-LEAVE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PATHAUTO\_\-UPDATE\_\-ACTION\_\-LEAVE}}}
+\label{pathauto_8inc_ad0bb9837044c24b6f3c0f4b2cd66c94b}
+\char`\"{}Create a new alias. Leave the existing alias functioning.\char`\"{} \hypertarget{pathauto_8inc_a70d61a7cceaca1c59abf30153aa8156c}{
+\index{pathauto.inc@{pathauto.inc}!PATHAUTO\_\-UPDATE\_\-ACTION\_\-NO\_\-NEW@{PATHAUTO\_\-UPDATE\_\-ACTION\_\-NO\_\-NEW}}
+\index{PATHAUTO\_\-UPDATE\_\-ACTION\_\-NO\_\-NEW@{PATHAUTO\_\-UPDATE\_\-ACTION\_\-NO\_\-NEW}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{PATHAUTO\_\-UPDATE\_\-ACTION\_\-NO\_\-NEW}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PATHAUTO\_\-UPDATE\_\-ACTION\_\-NO\_\-NEW}}}
+\label{pathauto_8inc_a70d61a7cceaca1c59abf30153aa8156c}
+\char`\"{}Do nothing. Leave the old alias intact.\char`\"{} 
+
+\subsection{Function Documentation}
+\hypertarget{pathauto_8inc_add7c5186fb921739f6cccd5cf2a2c82a}{
+\index{pathauto.inc@{pathauto.inc}!\_\-pathauto\_\-alias\_\-exists@{\_\-pathauto\_\-alias\_\-exists}}
+\index{\_\-pathauto\_\-alias\_\-exists@{\_\-pathauto\_\-alias\_\-exists}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{\_\-pathauto\_\-alias\_\-exists}]{\setlength{\rightskip}{0pt plus 5cm}\_\-pathauto\_\-alias\_\-exists (\$ {\em alias}, \/  \$ {\em source}, \/  \$ {\em language} = {\ttfamily LANGUAGE\_\-NONE})}}
+\label{pathauto_8inc_add7c5186fb921739f6cccd5cf2a2c82a}
+Check to see if there is already an alias pointing to a different item.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$alias}]A string alias. \item[{\em \$source}]A string that is the internal path. \item[{\em \$language}]A string indicating the path's language. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if an alias exists, FALSE if not. 
+\end{DoxyReturn}
+\hypertarget{pathauto_8inc_a84df3a794eb1448559c84aae690b4eb3}{
+\index{pathauto.inc@{pathauto.inc}!\_\-pathauto\_\-clean\_\-separators@{\_\-pathauto\_\-clean\_\-separators}}
+\index{\_\-pathauto\_\-clean\_\-separators@{\_\-pathauto\_\-clean\_\-separators}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{\_\-pathauto\_\-clean\_\-separators}]{\setlength{\rightskip}{0pt plus 5cm}\_\-pathauto\_\-clean\_\-separators (\$ {\em string}, \/  \$ {\em separator} = {\ttfamily NULL})}}
+\label{pathauto_8inc_a84df3a794eb1448559c84aae690b4eb3}
+Trims duplicate, leading, and trailing separators from a string.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$string}]The string to clean path separators from. \item[{\em \$separator}]The path separator to use when cleaning. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The cleaned version of the string.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{pathauto_8inc_a0087774598dbc1a71658867d2275a3d1}{pathauto\_\-cleanstring()} 
+
+\hyperlink{pathauto_8inc_a4a29b9c383bf47bb94f57e1602f847d9}{pathauto\_\-clean\_\-alias()} 
+\end{DoxySeeAlso}
+\hypertarget{pathauto_8inc_a4b36d2f45da703ece553f0d39f26d2b8}{
+\index{pathauto.inc@{pathauto.inc}!\_\-pathauto\_\-existing\_\-alias\_\-data@{\_\-pathauto\_\-existing\_\-alias\_\-data}}
+\index{\_\-pathauto\_\-existing\_\-alias\_\-data@{\_\-pathauto\_\-existing\_\-alias\_\-data}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{\_\-pathauto\_\-existing\_\-alias\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}\_\-pathauto\_\-existing\_\-alias\_\-data (\$ {\em source}, \/  \$ {\em language} = {\ttfamily LANGUAGE\_\-NONE})}}
+\label{pathauto_8inc_a4b36d2f45da703ece553f0d39f26d2b8}
+Fetches an existing URL alias given a path and optional language.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$source}]An internal Drupal path. \item[{\em \$language}]An optional language code to look up the path in. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+FALSE if no alias was found or an associative array containing the following keys:
+\begin{DoxyItemize}
+\item pid: Unique path alias identifier.
+\item alias: The URL alias. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{pathauto_8inc_a9f709612633603049fcbd0c2f9b1ef09}{
+\index{pathauto.inc@{pathauto.inc}!\_\-pathauto\_\-get\_\-schema\_\-alias\_\-maxlength@{\_\-pathauto\_\-get\_\-schema\_\-alias\_\-maxlength}}
+\index{\_\-pathauto\_\-get\_\-schema\_\-alias\_\-maxlength@{\_\-pathauto\_\-get\_\-schema\_\-alias\_\-maxlength}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{\_\-pathauto\_\-get\_\-schema\_\-alias\_\-maxlength}]{\setlength{\rightskip}{0pt plus 5cm}\_\-pathauto\_\-get\_\-schema\_\-alias\_\-maxlength ()}}
+\label{pathauto_8inc_a9f709612633603049fcbd0c2f9b1ef09}
+Fetch the maximum length of the \{url\_\-alias\}.alias field from the schema.
+
+\begin{DoxyReturn}{Returns}
+An integer of the maximum URL alias length allowed by the database. 
+\end{DoxyReturn}
+\hypertarget{pathauto_8inc_a37f91c1fb2698d7280300505d2dcd55e}{
+\index{pathauto.inc@{pathauto.inc}!\_\-pathauto\_\-path\_\-is\_\-callback@{\_\-pathauto\_\-path\_\-is\_\-callback}}
+\index{\_\-pathauto\_\-path\_\-is\_\-callback@{\_\-pathauto\_\-path\_\-is\_\-callback}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{\_\-pathauto\_\-path\_\-is\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}\_\-pathauto\_\-path\_\-is\_\-callback (\$ {\em path})}}
+\label{pathauto_8inc_a37f91c1fb2698d7280300505d2dcd55e}
+Verify if the given path is a valid menu callback.
+
+Taken from menu\_\-execute\_\-active\_\-handler().
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$path}]A string containing a relative path. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the path already exists. 
+\end{DoxyReturn}
+\hypertarget{pathauto_8inc_a954e5a5c442176c91e5a8fead004f9f1}{
+\index{pathauto.inc@{pathauto.inc}!\_\-pathauto\_\-set\_\-alias@{\_\-pathauto\_\-set\_\-alias}}
+\index{\_\-pathauto\_\-set\_\-alias@{\_\-pathauto\_\-set\_\-alias}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{\_\-pathauto\_\-set\_\-alias}]{\setlength{\rightskip}{0pt plus 5cm}\_\-pathauto\_\-set\_\-alias (array \$ {\em path}, \/  \$ {\em existing\_\-alias} = {\ttfamily NULL}, \/  \$ {\em op} = {\ttfamily NULL})}}
+\label{pathauto_8inc_a954e5a5c442176c91e5a8fead004f9f1}
+Private function for Pathauto to create an alias.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$path}]An associative array containing the following keys:
+\begin{DoxyItemize}
+\item source: The internal system path.
+\item alias: The URL alias.
+\item pid: (optional) Unique path alias identifier.
+\item language: (optional) The language of the alias. 
+\end{DoxyItemize}\item[{\em \$existing\_\-alias}](optional) An associative array of the existing path alias. \item[{\em \$op}]An optional string with the operation being performed.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The saved path from path\_\-save() or NULL if the path was not saved.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+path\_\-save() 
+\end{DoxySeeAlso}
+\hypertarget{pathauto_8inc_af1d110e621b254e3b2c925c824dd890a}{
+\index{pathauto.inc@{pathauto.inc}!\_\-pathauto\_\-verbose@{\_\-pathauto\_\-verbose}}
+\index{\_\-pathauto\_\-verbose@{\_\-pathauto\_\-verbose}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{\_\-pathauto\_\-verbose}]{\setlength{\rightskip}{0pt plus 5cm}\_\-pathauto\_\-verbose (\$ {\em message} = {\ttfamily NULL}, \/  \$ {\em op} = {\ttfamily NULL})}}
+\label{pathauto_8inc_af1d110e621b254e3b2c925c824dd890a}
+Output a helpful message if verbose output is enabled.
+
+Verbose output is only enabled when:
+\begin{DoxyItemize}
+\item The 'pathauto\_\-verbose' setting is enabled.
+\item The current user has the 'notify of path changes' permission.
+\item The \$op parameter is anything but 'bulkupdate' or 'return'.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$message}]An optional string of the verbose message to display. This string should already be run through t(). \item[{\em \$op}]An optional string with the operation being performed. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if verbose output is enabled, or FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{pathauto_8inc_a997f76101702f48dd85c852ca2e91c3b}{
+\index{pathauto.inc@{pathauto.inc}!pathauto\_\-alias\_\-uniquify@{pathauto\_\-alias\_\-uniquify}}
+\index{pathauto\_\-alias\_\-uniquify@{pathauto\_\-alias\_\-uniquify}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{pathauto\_\-alias\_\-uniquify}]{\setlength{\rightskip}{0pt plus 5cm}pathauto\_\-alias\_\-uniquify (\&\$ {\em alias}, \/  \$ {\em source}, \/  \$ {\em langcode})}}
+\label{pathauto_8inc_a997f76101702f48dd85c852ca2e91c3b}
+Check to ensure a path alias is unique and add suffix variants if necessary.
+
+Given an alias 'content/test' if a path alias with the exact alias already exists, the function will change the alias to 'content/test-\/0' and will increase the number suffix until it finds a unique alias.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$alias}]A string with the alias. Can be altered by reference. \item[{\em \$source}]A string with the path source. \item[{\em \$langcode}]A string with a language code. \end{DoxyParams}
+\hypertarget{pathauto_8inc_a4a29b9c383bf47bb94f57e1602f847d9}{
+\index{pathauto.inc@{pathauto.inc}!pathauto\_\-clean\_\-alias@{pathauto\_\-clean\_\-alias}}
+\index{pathauto\_\-clean\_\-alias@{pathauto\_\-clean\_\-alias}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{pathauto\_\-clean\_\-alias}]{\setlength{\rightskip}{0pt plus 5cm}pathauto\_\-clean\_\-alias (\$ {\em alias})}}
+\label{pathauto_8inc_a4a29b9c383bf47bb94f57e1602f847d9}
+Clean up an URL alias.
+
+Performs the following alterations:
+\begin{DoxyItemize}
+\item Trim duplicate, leading, and trailing back-\/slashes.
+\item Trim duplicate, leading, and trailing separators.
+\item Shorten to a desired length and logical position based on word boundaries.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$alias}]A string with the URL alias to clean up. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The cleaned URL alias. 
+\end{DoxyReturn}
+\hypertarget{pathauto_8inc_ab835bd3414c289c7a0a2fcbf38d6f13d}{
+\index{pathauto.inc@{pathauto.inc}!pathauto\_\-clean\_\-token\_\-values@{pathauto\_\-clean\_\-token\_\-values}}
+\index{pathauto\_\-clean\_\-token\_\-values@{pathauto\_\-clean\_\-token\_\-values}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{pathauto\_\-clean\_\-token\_\-values}]{\setlength{\rightskip}{0pt plus 5cm}pathauto\_\-clean\_\-token\_\-values (\&\$ {\em replacements}, \/  \$ {\em data} = {\ttfamily array()}, \/  \$ {\em options} = {\ttfamily array()})}}
+\label{pathauto_8inc_ab835bd3414c289c7a0a2fcbf38d6f13d}
+Clean tokens so they are URL friendly.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$replacements}]An array of token replacements that need to be \char`\"{}cleaned\char`\"{} for use in the URL. \item[{\em \$data}]An array of objects used to generate the replacements. \item[{\em \$options}]An array of options used to generate the replacements. \end{DoxyParams}
+\hypertarget{pathauto_8inc_a0087774598dbc1a71658867d2275a3d1}{
+\index{pathauto.inc@{pathauto.inc}!pathauto\_\-cleanstring@{pathauto\_\-cleanstring}}
+\index{pathauto\_\-cleanstring@{pathauto\_\-cleanstring}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{pathauto\_\-cleanstring}]{\setlength{\rightskip}{0pt plus 5cm}pathauto\_\-cleanstring (\$ {\em string})}}
+\label{pathauto_8inc_a0087774598dbc1a71658867d2275a3d1}
+Clean up a string segment to be used in an URL alias.
+
+Performs the following possible alterations:
+\begin{DoxyItemize}
+\item Remove all HTML tags.
+\item Process the string through the transliteration module.
+\item Replace or remove punctuation with the separator character.
+\item Remove back-\/slashes.
+\item Replace non-\/ascii and non-\/numeric characters with the separator.
+\item Remove common words.
+\item Replace whitespace with the separator character.
+\item Trim duplicate, leading, and trailing separators.
+\item Convert to lower-\/case.
+\item Shorten to a desired length and logical position based on word boundaries.
+\end{DoxyItemize}
+
+This function should $\ast$not$\ast$ be called on URL alias or path strings because it is assumed that they are already clean.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$string}]A string to clean. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The cleaned string. 
+\end{DoxyReturn}
+\hypertarget{pathauto_8inc_a7b68bec532634de11616779796a1fb7f}{
+\index{pathauto.inc@{pathauto.inc}!pathauto\_\-create\_\-alias@{pathauto\_\-create\_\-alias}}
+\index{pathauto\_\-create\_\-alias@{pathauto\_\-create\_\-alias}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{pathauto\_\-create\_\-alias}]{\setlength{\rightskip}{0pt plus 5cm}pathauto\_\-create\_\-alias (\$ {\em module}, \/  \$ {\em op}, \/  \$ {\em source}, \/  \$ {\em data}, \/  \$ {\em type} = {\ttfamily NULL}, \/  \$ {\em language} = {\ttfamily LANGUAGE\_\-NONE})}}
+\label{pathauto_8inc_a7b68bec532634de11616779796a1fb7f}
+Apply patterns to create an alias.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$module}]The name of your module (e.g., 'node'). \item[{\em \$op}]Operation being performed on the content being aliased ('insert', 'update', 'return', or 'bulkupdate'). \item[{\em \$source}]An internal Drupal path to be aliased. \item[{\em \$data}]An array of keyed objects to pass to token\_\-replace(). For simple replacement scenarios 'node', 'user', and others are common keys, with an accompanying node or user object being the value. Some token types, like 'site', do not require any explicit information from \$data and can be replaced even if it is empty. \item[{\em \$type}]For modules which provided pattern items in hook\_\-pathauto(), the relevant identifier for the specific item to be aliased (e.g., \$node-\/$>$type). \item[{\em \$language}]A string specify the path's language. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The alias that was created.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{pathauto_8inc_a954e5a5c442176c91e5a8fead004f9f1}{\_\-pathauto\_\-set\_\-alias()} 
+
+token\_\-replace() 
+\end{DoxySeeAlso}
+\hypertarget{pathauto_8inc_a939a77c5a4177051307d62aad585b74e}{
+\index{pathauto.inc@{pathauto.inc}!pathauto\_\-punctuation\_\-chars@{pathauto\_\-punctuation\_\-chars}}
+\index{pathauto\_\-punctuation\_\-chars@{pathauto\_\-punctuation\_\-chars}!pathauto.inc@{pathauto.inc}}
+\subsubsection[{pathauto\_\-punctuation\_\-chars}]{\setlength{\rightskip}{0pt plus 5cm}pathauto\_\-punctuation\_\-chars ()}}
+\label{pathauto_8inc_a939a77c5a4177051307d62aad585b74e}
+Return an array of arrays for punctuation values.
+
+Returns an array of arrays for punctuation values keyed by a name, including the value and a textual description. Can and should be expanded to include \char`\"{}all\char`\"{} non text punctuation values.
+
+\begin{DoxyReturn}{Returns}
+An array of arrays for punctuation values keyed by a name, including the value and a textual description. 
+\end{DoxyReturn}

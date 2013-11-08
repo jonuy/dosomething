@@ -1,0 +1,110 @@
+\hypertarget{classviews__join}{
+\section{views\_\-join Class Reference}
+\label{classviews__join}\index{views\_\-join@{views\_\-join}}
+}
+Inheritance diagram for views\_\-join::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classviews__join}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classviews__join_ac6c6e70389e0c59e4b068903ef4950b9}{construct} (\$table=NULL, \$left\_\-table=NULL, \$left\_\-field=NULL, \$field=NULL, \$extra=array(), \$type= 'LEFT')
+\item 
+\hyperlink{classviews__join_a1e7fae5813fcec89a848bc6326f152c5}{build\_\-join} (\$select\_\-query, \$table, \$view\_\-query)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__join_a3742509dacc4845782941a98e8d61081}{
+{\bfseries \$table} = NULL}
+\label{classviews__join_a3742509dacc4845782941a98e8d61081}
+
+\item 
+\hypertarget{classviews__join_aa7e157f76dd5fb2dd4978da176e73590}{
+{\bfseries \$left\_\-table} = NULL}
+\label{classviews__join_aa7e157f76dd5fb2dd4978da176e73590}
+
+\item 
+\hypertarget{classviews__join_a2f3845bc17cf97ea44c231c1a09e4eed}{
+{\bfseries \$left\_\-field} = NULL}
+\label{classviews__join_a2f3845bc17cf97ea44c231c1a09e4eed}
+
+\item 
+\hypertarget{classviews__join_ac81c9ca972a9ef48c510cea68740c31c}{
+{\bfseries \$field} = NULL}
+\label{classviews__join_ac81c9ca972a9ef48c510cea68740c31c}
+
+\item 
+\hypertarget{classviews__join_ad758194037de42d15da5bee5327d5487}{
+{\bfseries \$extra} = NULL}
+\label{classviews__join_ad758194037de42d15da5bee5327d5487}
+
+\item 
+\hypertarget{classviews__join_a30121a6713f1a5bee6bf978032a4afcc}{
+{\bfseries \$type} = NULL}
+\label{classviews__join_a30121a6713f1a5bee6bf978032a4afcc}
+
+\item 
+\hypertarget{classviews__join_a0a3762d125ca651d92ea488f878af30b}{
+{\bfseries \$definition} = array()}
+\label{classviews__join_a0a3762d125ca651d92ea488f878af30b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A function class to represent a join and create the SQL necessary to implement the join.
+
+This is the Delegation pattern. If we had PHP5 exclusively, we would declare this an interface.
+
+Extensions of this class can be used to create more interesting joins.
+
+join definition
+\begin{DoxyItemize}
+\item table: table to join (right table)
+\item field: field to join on (right field)
+\item left\_\-table: The table we join to
+\item left\_\-field: The field we join to
+\item type: either LEFT (default) or INNER
+\item extra: An array of extra conditions on the join. Each condition is either a string that's directly added, or an array of items:
+\item -\/ table: If not set, current table; if NULL, no table. If you specify a table in cached definition, Views will try to load from an existing alias. If you use realtime joins, it works better.
+\item -\/ field: Field or formula in formulas we can reference the right table by using alias \begin{DoxySeeAlso}{See also}
+SelectQueryInterface::addJoin()
+\end{DoxySeeAlso}
+
+\item -\/ operator: defaults to =
+\item -\/ value: Must be set. If an array, operator will be defaulted to IN.
+\item -\/ numeric: If true, the value will not be surrounded in quotes.
+\item -\/ extra type: How all the extras will be combined. Either AND or OR. Defaults to AND. 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__join_a1e7fae5813fcec89a848bc6326f152c5}{
+\index{views\_\-join@{views\_\-join}!build\_\-join@{build\_\-join}}
+\index{build\_\-join@{build\_\-join}!views_join@{views\_\-join}}
+\subsubsection[{build\_\-join}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-join::build\_\-join (\$ {\em select\_\-query}, \/  \$ {\em table}, \/  \$ {\em view\_\-query})}}
+\label{classviews__join_a1e7fae5813fcec89a848bc6326f152c5}
+Build the SQL for the join this object represents.
+
+When possible, try to use table alias instead of table names.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$select\_\-query}]An implementation of SelectQueryInterface. \item[{\em \$table}]The base table to join. \item[{\em \$view\_\-query}]The source query, implementation of \hyperlink{classviews__plugin__query}{views\_\-plugin\_\-query}. \end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classviews__join__subquery_aced6dd7573a138cd4f527b340fee501e}{views\_\-join\_\-subquery}.\hypertarget{classviews__join_ac6c6e70389e0c59e4b068903ef4950b9}{
+\index{views\_\-join@{views\_\-join}!construct@{construct}}
+\index{construct@{construct}!views_join@{views\_\-join}}
+\subsubsection[{construct}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-join::construct (\$ {\em table} = {\ttfamily NULL}, \/  \$ {\em left\_\-table} = {\ttfamily NULL}, \/  \$ {\em left\_\-field} = {\ttfamily NULL}, \/  \$ {\em field} = {\ttfamily NULL}, \/  \$ {\em extra} = {\ttfamily array()}, \/  \$ {\em type} = {\ttfamily 'LEFT'})}}
+\label{classviews__join_ac6c6e70389e0c59e4b068903ef4950b9}
+Construct the \hyperlink{classviews__join}{views\_\-join} object. 
+
+Reimplemented in \hyperlink{classviews__join__subquery_a27a49742ee109b1329adcb86512837ab}{views\_\-join\_\-subquery}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/includes/\hyperlink{handlers_8inc}{handlers.inc}\end{DoxyCompactItemize}

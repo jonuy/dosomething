@@ -1,0 +1,77 @@
+\hypertarget{views_2includes_2cache_8inc}{
+\section{html/profiles/dosomething/modules/contrib/views/includes/cache.inc File Reference}
+\label{views_2includes_2cache_8inc}\index{html/profiles/dosomething/modules/contrib/views/includes/cache.inc@{html/profiles/dosomething/modules/contrib/views/includes/cache.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{views_2includes_2cache_8inc_a367769ad7eed921c7796b27dffb5e60a}{\_\-views\_\-fetch\_\-data} (\$table=NULL, \$move=TRUE, \$reset=FALSE)
+\item 
+\hyperlink{views_2includes_2cache_8inc_ab32ccf6a813b8037d2552ed0d54125f9}{\_\-views\_\-fetch\_\-data\_\-build} ()
+\item 
+\hyperlink{views_2includes_2cache_8inc_ab785ab7dc065d39a7789b7f98a701153}{\_\-views\_\-data\_\-process\_\-entity\_\-types} (\&\$data)
+\item 
+\hyperlink{views_2includes_2cache_8inc_a70217d418b60499c49aaa469712a8501}{\_\-views\_\-fetch\_\-plugin\_\-data} (\$type=NULL, \$plugin=NULL, \$reset=FALSE)
+\item 
+\hyperlink{views_2includes_2cache_8inc_a40508277eb295523eb45a067c8a84324}{views\_\-cache\_\-set} (\$cid, \$data, \$use\_\-language=FALSE)
+\item 
+\hyperlink{views_2includes_2cache_8inc_a3d4e5b21bcf4c7cc327190ece3251555}{views\_\-cache\_\-get} (\$cid, \$use\_\-language=FALSE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Load Views' data so that it knows what is available to build queries from. 
+
+\subsection{Function Documentation}
+\hypertarget{views_2includes_2cache_8inc_ab785ab7dc065d39a7789b7f98a701153}{
+\index{views/includes/cache.inc@{views/includes/cache.inc}!\_\-views\_\-data\_\-process\_\-entity\_\-types@{\_\-views\_\-data\_\-process\_\-entity\_\-types}}
+\index{\_\-views\_\-data\_\-process\_\-entity\_\-types@{\_\-views\_\-data\_\-process\_\-entity\_\-types}!views/includes/cache.inc@{views/includes/cache.inc}}
+\subsubsection[{\_\-views\_\-data\_\-process\_\-entity\_\-types}]{\setlength{\rightskip}{0pt plus 5cm}\_\-views\_\-data\_\-process\_\-entity\_\-types (\&\$ {\em data})}}
+\label{views_2includes_2cache_8inc_ab785ab7dc065d39a7789b7f98a701153}
+Links tables having an 'entity type' specified to the respective generic entity-\/type tables. \hypertarget{views_2includes_2cache_8inc_a367769ad7eed921c7796b27dffb5e60a}{
+\index{views/includes/cache.inc@{views/includes/cache.inc}!\_\-views\_\-fetch\_\-data@{\_\-views\_\-fetch\_\-data}}
+\index{\_\-views\_\-fetch\_\-data@{\_\-views\_\-fetch\_\-data}!views/includes/cache.inc@{views/includes/cache.inc}}
+\subsubsection[{\_\-views\_\-fetch\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}\_\-views\_\-fetch\_\-data (\$ {\em table} = {\ttfamily NULL}, \/  \$ {\em move} = {\ttfamily TRUE}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{views_2includes_2cache_8inc_a367769ad7eed921c7796b27dffb5e60a}
+Fetch Views' data from the cache
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$move}]Under certain circumstances it makes sense to not get the moved table, but the old one. One example is views\_\-get\_\-handler. \end{DoxyParams}
+\hypertarget{views_2includes_2cache_8inc_ab32ccf6a813b8037d2552ed0d54125f9}{
+\index{views/includes/cache.inc@{views/includes/cache.inc}!\_\-views\_\-fetch\_\-data\_\-build@{\_\-views\_\-fetch\_\-data\_\-build}}
+\index{\_\-views\_\-fetch\_\-data\_\-build@{\_\-views\_\-fetch\_\-data\_\-build}!views/includes/cache.inc@{views/includes/cache.inc}}
+\subsubsection[{\_\-views\_\-fetch\_\-data\_\-build}]{\setlength{\rightskip}{0pt plus 5cm}\_\-views\_\-fetch\_\-data\_\-build ()}}
+\label{views_2includes_2cache_8inc_ab32ccf6a813b8037d2552ed0d54125f9}
+Build and set the views data cache if empty. \hypertarget{views_2includes_2cache_8inc_a70217d418b60499c49aaa469712a8501}{
+\index{views/includes/cache.inc@{views/includes/cache.inc}!\_\-views\_\-fetch\_\-plugin\_\-data@{\_\-views\_\-fetch\_\-plugin\_\-data}}
+\index{\_\-views\_\-fetch\_\-plugin\_\-data@{\_\-views\_\-fetch\_\-plugin\_\-data}!views/includes/cache.inc@{views/includes/cache.inc}}
+\subsubsection[{\_\-views\_\-fetch\_\-plugin\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}\_\-views\_\-fetch\_\-plugin\_\-data (\$ {\em type} = {\ttfamily NULL}, \/  \$ {\em plugin} = {\ttfamily NULL}, \/  \$ {\em reset} = {\ttfamily FALSE})}}
+\label{views_2includes_2cache_8inc_a70217d418b60499c49aaa469712a8501}
+Fetch the plugin data from cache. \hypertarget{views_2includes_2cache_8inc_a3d4e5b21bcf4c7cc327190ece3251555}{
+\index{views/includes/cache.inc@{views/includes/cache.inc}!views\_\-cache\_\-get@{views\_\-cache\_\-get}}
+\index{views\_\-cache\_\-get@{views\_\-cache\_\-get}!views/includes/cache.inc@{views/includes/cache.inc}}
+\subsubsection[{views\_\-cache\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-cache\_\-get (\$ {\em cid}, \/  \$ {\em use\_\-language} = {\ttfamily FALSE})}}
+\label{views_2includes_2cache_8inc_a3d4e5b21bcf4c7cc327190ece3251555}
+Return data from the persistent views cache.
+
+This is just a convenience wrapper around cache\_\-get().
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em int}]\$cid The cache ID of the data to retrieve. \item[{\em bool}]\$use\_\-language If TRUE, the data will be requested specific to the currently active language.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+stdClass$|$bool The cache or FALSE on failure. 
+\end{DoxyReturn}
+\hypertarget{views_2includes_2cache_8inc_a40508277eb295523eb45a067c8a84324}{
+\index{views/includes/cache.inc@{views/includes/cache.inc}!views\_\-cache\_\-set@{views\_\-cache\_\-set}}
+\index{views\_\-cache\_\-set@{views\_\-cache\_\-set}!views/includes/cache.inc@{views/includes/cache.inc}}
+\subsubsection[{views\_\-cache\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-cache\_\-set (\$ {\em cid}, \/  \$ {\em data}, \/  \$ {\em use\_\-language} = {\ttfamily FALSE})}}
+\label{views_2includes_2cache_8inc_a40508277eb295523eb45a067c8a84324}
+Set a cached item in the views cache.
+
+This is just a convenience wrapper around cache\_\-set().
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$cid}]The cache ID of the data to store. \item[{\em \$data}]The data to store in the cache. Complex data types will be automatically serialized before insertion. Strings will be stored as plain text and not serialized. \item[{\em \$use\_\-language}]If TRUE, the data will be cached specific to the currently active language. \end{DoxyParams}

@@ -1,0 +1,69 @@
+\hypertarget{entity__form__field_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/content\_\-types/form/entity\_\-form\_\-field.inc File Reference}
+\label{entity__form__field_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/content\_\-types/form/entity\_\-form\_\-field.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/content\_\-types/form/entity\_\-form\_\-field.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{entity__form__field_8inc_a4540ac87ce6d27ada4a5ceca0c714d2e}{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-content\_\-type} (\$subtype)
+\item 
+\hyperlink{entity__form__field_8inc_a866a842a6cc10bf97b1394f9dc4e69fe}{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-content\_\-types} ()
+\item 
+\hyperlink{entity__form__field_8inc_a0e49ac26ff05165b033b71cb46379573}{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-render} (\$subtype, \$conf, \$panel\_\-args, \$context)
+\item 
+\hyperlink{entity__form__field_8inc_a90bcb2feef9424968acf0cc58e6a27fa}{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-admin\_\-title} (\$subtype, \$conf, \$context)
+\item 
+\hypertarget{entity__form__field_8inc_a0a455d3b70b6876e57600c5f7a779ae3}{
+{\bfseries ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-edit\_\-form} (\$form, \&\$form\_\-state)}
+\label{entity__form__field_8inc_a0a455d3b70b6876e57600c5f7a779ae3}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handle rendering entity fields as panes. 
+
+\subsection{Function Documentation}
+\hypertarget{entity__form__field_8inc_a90bcb2feef9424968acf0cc58e6a27fa}{
+\index{entity\_\-form\_\-field.inc@{entity\_\-form\_\-field.inc}!ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-admin\_\-title@{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-admin\_\-title}}
+\index{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-admin\_\-title@{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-admin\_\-title}!entity_form_field.inc@{entity\_\-form\_\-field.inc}}
+\subsubsection[{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-admin\_\-title}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-admin\_\-title (\$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em context})}}
+\label{entity__form__field_8inc_a90bcb2feef9424968acf0cc58e6a27fa}
+Returns the administrative title for a type. \hypertarget{entity__form__field_8inc_a4540ac87ce6d27ada4a5ceca0c714d2e}{
+\index{entity\_\-form\_\-field.inc@{entity\_\-form\_\-field.inc}!ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-content\_\-type@{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-content\_\-type}}
+\index{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-content\_\-type@{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-content\_\-type}!entity_form_field.inc@{entity\_\-form\_\-field.inc}}
+\subsubsection[{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-content\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-content\_\-type (\$ {\em subtype})}}
+\label{entity__form__field_8inc_a4540ac87ce6d27ada4a5ceca0c714d2e}
+Just one subtype.
+
+Ordinarily this function is meant to get just one subtype. However, we are using it to deal with the fact that we have changed the subtype names. This lets us translate the name properly. \hypertarget{entity__form__field_8inc_a866a842a6cc10bf97b1394f9dc4e69fe}{
+\index{entity\_\-form\_\-field.inc@{entity\_\-form\_\-field.inc}!ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-content\_\-types@{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-content\_\-types}}
+\index{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-content\_\-types@{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-content\_\-types}!entity_form_field.inc@{entity\_\-form\_\-field.inc}}
+\subsubsection[{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-content\_\-types}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-content\_\-types ()}}
+\label{entity__form__field_8inc_a866a842a6cc10bf97b1394f9dc4e69fe}
+Return all field content types available. \hypertarget{entity__form__field_8inc_a0e49ac26ff05165b033b71cb46379573}{
+\index{entity\_\-form\_\-field.inc@{entity\_\-form\_\-field.inc}!ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-render@{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-render}}
+\index{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-render@{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-render}!entity_form_field.inc@{entity\_\-form\_\-field.inc}}
+\subsubsection[{ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-entity\_\-form\_\-field\_\-content\_\-type\_\-render (\$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em panel\_\-args}, \/  \$ {\em context})}}
+\label{entity__form__field_8inc_a0e49ac26ff05165b033b71cb46379573}
+Render the custom content type. 
+
+\subsection{Variable Documentation}
+\hypertarget{entity__form__field_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{entity\_\-form\_\-field.inc@{entity\_\-form\_\-field.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!entity_form_field.inc@{entity\_\-form\_\-field.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{entity__form__field_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('Entity field'),
+  'defaults' => array('label' => '', 'formatter' => ''),
+  'content type' => 'ctools_entity_form_field_content_type_content_type',
+)
+\end{DoxyCode}

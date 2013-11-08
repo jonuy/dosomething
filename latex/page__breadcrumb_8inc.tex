@@ -1,0 +1,47 @@
+\hypertarget{page__breadcrumb_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/content\_\-types/page/page\_\-breadcrumb.inc File Reference}
+\label{page__breadcrumb_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/content\_\-types/page/page\_\-breadcrumb.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/content\_\-types/page/page\_\-breadcrumb.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{page__breadcrumb_8inc_a6da7e31a7abc02c03e31cb312b67821d}{ctools\_\-page\_\-breadcrumb\_\-content\_\-type\_\-render} (\$subtype, \$conf, \$panel\_\-args)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{page__breadcrumb_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to handle the 'page\_\-breadcrumb' content type which allows the breadcrumb trail of the current page to be embedded into a panel. 
+
+\subsection{Function Documentation}
+\hypertarget{page__breadcrumb_8inc_a6da7e31a7abc02c03e31cb312b67821d}{
+\index{page\_\-breadcrumb.inc@{page\_\-breadcrumb.inc}!ctools\_\-page\_\-breadcrumb\_\-content\_\-type\_\-render@{ctools\_\-page\_\-breadcrumb\_\-content\_\-type\_\-render}}
+\index{ctools\_\-page\_\-breadcrumb\_\-content\_\-type\_\-render@{ctools\_\-page\_\-breadcrumb\_\-content\_\-type\_\-render}!page_breadcrumb.inc@{page\_\-breadcrumb.inc}}
+\subsubsection[{ctools\_\-page\_\-breadcrumb\_\-content\_\-type\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-page\_\-breadcrumb\_\-content\_\-type\_\-render (\$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em panel\_\-args})}}
+\label{page__breadcrumb_8inc_a6da7e31a7abc02c03e31cb312b67821d}
+Output function for the 'page\_\-breadcrumb' content type.
+
+Outputs the breadcrumb for the current page. 
+
+\subsection{Variable Documentation}
+\hypertarget{page__breadcrumb_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{page\_\-breadcrumb.inc@{page\_\-breadcrumb.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!page_breadcrumb.inc@{page\_\-breadcrumb.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{page__breadcrumb_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('Breadcrumb'),
+  'single' => TRUE,
+  'icon' => 'icon_page.png',
+  'description' => t('Add the breadcrumb trail as content.'),
+  'category' => t('Page elements'),
+  'render last' => TRUE,
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

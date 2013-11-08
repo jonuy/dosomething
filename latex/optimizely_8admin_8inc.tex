@@ -1,0 +1,164 @@
+\hypertarget{optimizely_8admin_8inc}{
+\section{html/profiles/dosomething/modules/contrib/optimizely/optimizely.admin.inc File Reference}
+\label{optimizely_8admin_8inc}\index{html/profiles/dosomething/modules/contrib/optimizely/optimizely.admin.inc@{html/profiles/dosomething/modules/contrib/optimizely/optimizely.admin.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{optimizely_8admin_8inc_a0fc8c1fbac099f105600ffd2865754fb}{optimizely\_\-add\_\-update\_\-form} (\$form, \&\$form\_\-submit, \$target\_\-oid=NULL)
+\item 
+\hypertarget{optimizely_8admin_8inc_a99ba5b7223a8944cfa087b2291789d75}{
+{\bfseries optimizely\_\-add\_\-update\_\-update} (\$target\_\-project)}
+\label{optimizely_8admin_8inc_a99ba5b7223a8944cfa087b2291789d75}
+
+\item 
+\hyperlink{optimizely_8admin_8inc_a0c8b48847f329db64088c055f76fd454}{optimizely\_\-add\_\-update\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{optimizely_8admin_8inc_a7f0e4b00345ac2158e53abc90d337245}{optimizely\_\-add\_\-update\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{optimizely_8admin_8inc_ae966f802e083e18ee8da09dac92afab3}{optimizely\_\-account\_\-settings\_\-form} (\$form\_\-state)
+\item 
+\hyperlink{optimizely_8admin_8inc_ab80ac0f449517fefe2a1672bfdc6e711}{optimizely\_\-account\_\-settings\_\-form\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{optimizely_8admin_8inc_ae02dda6fe86e05f5b06a202a2d099b88}{optimizely\_\-account\_\-settings\_\-form\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{optimizely_8admin_8inc_aa9928175901069d6541dfaea2b907aec}{optimizely\_\-project\_\-list\_\-form} ()
+\item 
+\hypertarget{optimizely_8admin_8inc_af2ef0565e64f6b8549b1829c429808da}{
+{\bfseries theme\_\-optimizely\_\-projects\_\-table} (\$vars)}
+\label{optimizely_8admin_8inc_af2ef0565e64f6b8549b1829c429808da}
+
+\item 
+\hyperlink{optimizely_8admin_8inc_add00991770834a3d58f001f83dfdd28c}{optimizely\_\-delete\_\-page} (\$form, \&\$form\_\-state, \$vars=NULL)
+\item 
+\hyperlink{optimizely_8admin_8inc_add000bbe43a0d21f9521fe292cd81d65}{optimizely\_\-delete\_\-page\_\-confirm} (\$form, \&\$form\_\-state, \$vars=NULL)
+\item 
+\hyperlink{optimizely_8admin_8inc_aa159c6fba81a52d6b39438ea4739ead4}{optimizely\_\-delete\_\-page\_\-confirm\_\-submit} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{optimizely_8admin_8inc_ab7a52ffd4af3ee7365abfbd565aded63}{optimizely\_\-ajax\_\-enable} ()
+\item 
+\hyperlink{optimizely_8admin_8inc_a7b0f4a56fbd620d68ed8e62661ad47d2}{optimizely\_\-refresh\_\-cache} (\$path\_\-array, \$original\_\-path\_\-array=NULL)
+\item 
+\hypertarget{optimizely_8admin_8inc_a7f6fbfeac6d5ac7edaa4c1608032a21f}{
+{\bfseries \_\-optimizely\_\-unique\_\-paths} (\$target\_\-paths, \$target\_\-oid=NULL)}
+\label{optimizely_8admin_8inc_a7f6fbfeac6d5ac7edaa4c1608032a21f}
+
+\item 
+\hypertarget{optimizely_8admin_8inc_ae1cad642b2c03200e785dd90fce113b0}{
+{\bfseries \_\-optimizely\_\-duplicate\_\-check} (\$paths)}
+\label{optimizely_8admin_8inc_ae1cad642b2c03200e785dd90fce113b0}
+
+\item 
+\hypertarget{optimizely_8admin_8inc_a39e91a3cf55c338503c9eea80fe414b4}{
+{\bfseries \_\-optimizely\_\-collect\_\-alias} (\$paths)}
+\label{optimizely_8admin_8inc_a39e91a3cf55c338503c9eea80fe414b4}
+
+\item 
+\hyperlink{optimizely_8admin_8inc_a78118fa72426111d4861e98386e3192d}{\_\-optimizely\_\-valid\_\-paths} (\$project\_\-paths)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Admin page callback for the Optimizely module. 
+
+\subsection{Function Documentation}
+\hypertarget{optimizely_8admin_8inc_a78118fa72426111d4861e98386e3192d}{
+\index{optimizely.admin.inc@{optimizely.admin.inc}!\_\-optimizely\_\-valid\_\-paths@{\_\-optimizely\_\-valid\_\-paths}}
+\index{\_\-optimizely\_\-valid\_\-paths@{\_\-optimizely\_\-valid\_\-paths}!optimizely.admin.inc@{optimizely.admin.inc}}
+\subsubsection[{\_\-optimizely\_\-valid\_\-paths}]{\setlength{\rightskip}{0pt plus 5cm}\_\-optimizely\_\-valid\_\-paths (\$ {\em project\_\-paths})}}
+\label{optimizely_8admin_8inc_a78118fa72426111d4861e98386e3192d}
+\hyperlink{optimizely_8admin_8inc_a78118fa72426111d4861e98386e3192d}{\_\-optimizely\_\-valid\_\-paths()}
+
+Validate the target paths with drupal\_\-lookup\_\-path.
+
+\$target\_\-paths An array of the paths to validate.  \$include Boolean, TRUE if the paths are included or FALSE for exclude paths
+
+\begin{DoxyReturn}{Returns}
+Boolean of TRUE if the paths are valid or a string of the path that failed. 
+\end{DoxyReturn}
+\hypertarget{optimizely_8admin_8inc_ae966f802e083e18ee8da09dac92afab3}{
+\index{optimizely.admin.inc@{optimizely.admin.inc}!optimizely\_\-account\_\-settings\_\-form@{optimizely\_\-account\_\-settings\_\-form}}
+\index{optimizely\_\-account\_\-settings\_\-form@{optimizely\_\-account\_\-settings\_\-form}!optimizely.admin.inc@{optimizely.admin.inc}}
+\subsubsection[{optimizely\_\-account\_\-settings\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}optimizely\_\-account\_\-settings\_\-form (\$ {\em form\_\-state})}}
+\label{optimizely_8admin_8inc_ae966f802e083e18ee8da09dac92afab3}
+Menu callback. Enter the Optimizely account details. \hypertarget{optimizely_8admin_8inc_ae02dda6fe86e05f5b06a202a2d099b88}{
+\index{optimizely.admin.inc@{optimizely.admin.inc}!optimizely\_\-account\_\-settings\_\-form\_\-submit@{optimizely\_\-account\_\-settings\_\-form\_\-submit}}
+\index{optimizely\_\-account\_\-settings\_\-form\_\-submit@{optimizely\_\-account\_\-settings\_\-form\_\-submit}!optimizely.admin.inc@{optimizely.admin.inc}}
+\subsubsection[{optimizely\_\-account\_\-settings\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}optimizely\_\-account\_\-settings\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{optimizely_8admin_8inc_ae02dda6fe86e05f5b06a202a2d099b88}
+Process submisison from optimizely\_\-setup\_\-account\_\-settings\_\-form form. This includes saving the entered Optimizely account ID to the varable database table, updating the default optimizely (oid) record with the project ID which is also the account ID. \hypertarget{optimizely_8admin_8inc_ab80ac0f449517fefe2a1672bfdc6e711}{
+\index{optimizely.admin.inc@{optimizely.admin.inc}!optimizely\_\-account\_\-settings\_\-form\_\-validate@{optimizely\_\-account\_\-settings\_\-form\_\-validate}}
+\index{optimizely\_\-account\_\-settings\_\-form\_\-validate@{optimizely\_\-account\_\-settings\_\-form\_\-validate}!optimizely.admin.inc@{optimizely.admin.inc}}
+\subsubsection[{optimizely\_\-account\_\-settings\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}optimizely\_\-account\_\-settings\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{optimizely_8admin_8inc_ab80ac0f449517fefe2a1672bfdc6e711}
+Validation for optimizely\_\-account\_\-settings\_\-form form \hypertarget{optimizely_8admin_8inc_a0fc8c1fbac099f105600ffd2865754fb}{
+\index{optimizely.admin.inc@{optimizely.admin.inc}!optimizely\_\-add\_\-update\_\-form@{optimizely\_\-add\_\-update\_\-form}}
+\index{optimizely\_\-add\_\-update\_\-form@{optimizely\_\-add\_\-update\_\-form}!optimizely.admin.inc@{optimizely.admin.inc}}
+\subsubsection[{optimizely\_\-add\_\-update\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}optimizely\_\-add\_\-update\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-submit}, \/  \$ {\em target\_\-oid} = {\ttfamily NULL})}}
+\label{optimizely_8admin_8inc_a0fc8c1fbac099f105600ffd2865754fb}
+Builds and returns the Optimizely Add/Update form.
+
+If there are only three arguments in the path it builds the add form and adds a record. Otherwise it builds the update form where the fourth argument is the record ID (oid) in the optimizely table.
+
+\$form: Array of form elements
+
+\&\$form\_\-submit: Array of the stae of the form elements
+
+target\_\-oid}
+When an update of a record, target\_\-oid will have a value
+
+\begin{DoxyReturn}{Returns}
+\$form: An array of the form elements 
+\end{DoxyReturn}
+\hypertarget{optimizely_8admin_8inc_a7f0e4b00345ac2158e53abc90d337245}{
+\index{optimizely.admin.inc@{optimizely.admin.inc}!optimizely\_\-add\_\-update\_\-form\_\-submit@{optimizely\_\-add\_\-update\_\-form\_\-submit}}
+\index{optimizely\_\-add\_\-update\_\-form\_\-submit@{optimizely\_\-add\_\-update\_\-form\_\-submit}!optimizely.admin.inc@{optimizely.admin.inc}}
+\subsubsection[{optimizely\_\-add\_\-update\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}optimizely\_\-add\_\-update\_\-form\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{optimizely_8admin_8inc_a7f0e4b00345ac2158e53abc90d337245}
+Process form submissions from \hyperlink{optimizely_8admin_8inc_a0fc8c1fbac099f105600ffd2865754fb}{optimizely\_\-add\_\-update\_\-form()}.
+
+Either \char`\"{}Add\char`\"{}s or \char`\"{}Update\char`\"{}s a record from the \hyperlink{optimizely_8admin_8inc_a0fc8c1fbac099f105600ffd2865754fb}{optimizely\_\-add\_\-update\_\-form()} form. \hypertarget{optimizely_8admin_8inc_a0c8b48847f329db64088c055f76fd454}{
+\index{optimizely.admin.inc@{optimizely.admin.inc}!optimizely\_\-add\_\-update\_\-form\_\-validate@{optimizely\_\-add\_\-update\_\-form\_\-validate}}
+\index{optimizely\_\-add\_\-update\_\-form\_\-validate@{optimizely\_\-add\_\-update\_\-form\_\-validate}!optimizely.admin.inc@{optimizely.admin.inc}}
+\subsubsection[{optimizely\_\-add\_\-update\_\-form\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}optimizely\_\-add\_\-update\_\-form\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{optimizely_8admin_8inc_a0c8b48847f329db64088c055f76fd454}
+Validate form submissions from \hyperlink{optimizely_8admin_8inc_a0fc8c1fbac099f105600ffd2865754fb}{optimizely\_\-add\_\-update\_\-form()}.
+
+Check to make sute the project code is unique except for the default entry which uses the account ID but should support an additional entry to allow for custom settings. \hypertarget{optimizely_8admin_8inc_ab7a52ffd4af3ee7365abfbd565aded63}{
+\index{optimizely.admin.inc@{optimizely.admin.inc}!optimizely\_\-ajax\_\-enable@{optimizely\_\-ajax\_\-enable}}
+\index{optimizely\_\-ajax\_\-enable@{optimizely\_\-ajax\_\-enable}!optimizely.admin.inc@{optimizely.admin.inc}}
+\subsubsection[{optimizely\_\-ajax\_\-enable}]{\setlength{\rightskip}{0pt plus 5cm}optimizely\_\-ajax\_\-enable ()}}
+\label{optimizely_8admin_8inc_ab7a52ffd4af3ee7365abfbd565aded63}
+AJAX callback for click event on project enable checkbox.
+
+\begin{DoxyReturn}{Returns}
+json response details for AJAX call. 
+\end{DoxyReturn}
+\hypertarget{optimizely_8admin_8inc_add00991770834a3d58f001f83dfdd28c}{
+\index{optimizely.admin.inc@{optimizely.admin.inc}!optimizely\_\-delete\_\-page@{optimizely\_\-delete\_\-page}}
+\index{optimizely\_\-delete\_\-page@{optimizely\_\-delete\_\-page}!optimizely.admin.inc@{optimizely.admin.inc}}
+\subsubsection[{optimizely\_\-delete\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}optimizely\_\-delete\_\-page (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em vars} = {\ttfamily NULL})}}
+\label{optimizely_8admin_8inc_add00991770834a3d58f001f83dfdd28c}
+Menu callback. Get confirmation to delete a record from the Optimizely table. \hypertarget{optimizely_8admin_8inc_add000bbe43a0d21f9521fe292cd81d65}{
+\index{optimizely.admin.inc@{optimizely.admin.inc}!optimizely\_\-delete\_\-page\_\-confirm@{optimizely\_\-delete\_\-page\_\-confirm}}
+\index{optimizely\_\-delete\_\-page\_\-confirm@{optimizely\_\-delete\_\-page\_\-confirm}!optimizely.admin.inc@{optimizely.admin.inc}}
+\subsubsection[{optimizely\_\-delete\_\-page\_\-confirm}]{\setlength{\rightskip}{0pt plus 5cm}optimizely\_\-delete\_\-page\_\-confirm (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em vars} = {\ttfamily NULL})}}
+\label{optimizely_8admin_8inc_add000bbe43a0d21f9521fe292cd81d65}
+Build a confirm form for deletion of record in Optimizely table. \hypertarget{optimizely_8admin_8inc_aa159c6fba81a52d6b39438ea4739ead4}{
+\index{optimizely.admin.inc@{optimizely.admin.inc}!optimizely\_\-delete\_\-page\_\-confirm\_\-submit@{optimizely\_\-delete\_\-page\_\-confirm\_\-submit}}
+\index{optimizely\_\-delete\_\-page\_\-confirm\_\-submit@{optimizely\_\-delete\_\-page\_\-confirm\_\-submit}!optimizely.admin.inc@{optimizely.admin.inc}}
+\subsubsection[{optimizely\_\-delete\_\-page\_\-confirm\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}optimizely\_\-delete\_\-page\_\-confirm\_\-submit (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{optimizely_8admin_8inc_aa159c6fba81a52d6b39438ea4739ead4}
+Submit function for the confirm deletion form. Delete the entry in the database and return the user to the Project listing page. \hypertarget{optimizely_8admin_8inc_aa9928175901069d6541dfaea2b907aec}{
+\index{optimizely.admin.inc@{optimizely.admin.inc}!optimizely\_\-project\_\-list\_\-form@{optimizely\_\-project\_\-list\_\-form}}
+\index{optimizely\_\-project\_\-list\_\-form@{optimizely\_\-project\_\-list\_\-form}!optimizely.admin.inc@{optimizely.admin.inc}}
+\subsubsection[{optimizely\_\-project\_\-list\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}optimizely\_\-project\_\-list\_\-form ()}}
+\label{optimizely_8admin_8inc_aa9928175901069d6541dfaea2b907aec}
+Menu callback. Displays a list of Optimizely projects as records in the Optimizely database table. \hypertarget{optimizely_8admin_8inc_a7b0f4a56fbd620d68ed8e62661ad47d2}{
+\index{optimizely.admin.inc@{optimizely.admin.inc}!optimizely\_\-refresh\_\-cache@{optimizely\_\-refresh\_\-cache}}
+\index{optimizely\_\-refresh\_\-cache@{optimizely\_\-refresh\_\-cache}!optimizely.admin.inc@{optimizely.admin.inc}}
+\subsubsection[{optimizely\_\-refresh\_\-cache}]{\setlength{\rightskip}{0pt plus 5cm}optimizely\_\-refresh\_\-cache (\$ {\em path\_\-array}, \/  \$ {\em original\_\-path\_\-array} = {\ttfamily NULL})}}
+\label{optimizely_8admin_8inc_a7b0f4a56fbd620d68ed8e62661ad47d2}
+\hyperlink{optimizely_8admin_8inc_a7b0f4a56fbd620d68ed8e62661ad47d2}{optimizely\_\-refresh\_\-cache()}
+
+\$path\_\-array -\/ An array of the target paths entries that the cache needs to be cleared. Each entry can also contain wildcards /$\ast$ or variables \char`\"{}$<$front$>$\char`\"{}. 

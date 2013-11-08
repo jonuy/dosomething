@@ -1,0 +1,270 @@
+\hypertarget{libraries_8module}{
+\section{html/profiles/dosomething/modules/contrib/libraries/libraries.module File Reference}
+\label{libraries_8module}\index{html/profiles/dosomething/modules/contrib/libraries/libraries.module@{html/profiles/dosomething/modules/contrib/libraries/libraries.module}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{libraries_8module_a1e8b67a9bc65c658aca7094765a1e1aa}{libraries\_\-flush\_\-caches} ()
+\item 
+\hyperlink{libraries_8module_af6582ffdd6b230b9532c8fd007448b2e}{libraries\_\-get\_\-path} (\$name, \$base\_\-path=FALSE)
+\item 
+\hyperlink{libraries_8module_a7bb2b09cadaa8bb75d9d7ae892269cd0}{libraries\_\-get\_\-libraries} ()
+\item 
+\hyperlink{libraries_8module_a86cb3d1204efd916b9bd09c472457f47}{libraries\_\-scan\_\-info\_\-files} ()
+\item 
+\hyperlink{libraries_8module_a3ac265c084e45903a8b9c4677d534f5b}{libraries\_\-invoke} (\$group, \&\$library)
+\item 
+\hyperlink{libraries_8module_a2a884881a93bb93aaf11e3b42d38026a}{libraries\_\-traverse\_\-library} (\&\$library, \$callback)
+\item 
+\hyperlink{libraries_8module_a763111ce509ad1ae37c607fc367da122}{libraries\_\-prepare\_\-files} (\&\$library, \$version=NULL, \$variant=NULL)
+\item 
+\hyperlink{libraries_8module_af3d912272d3f4267e03767202fe0f4e7}{libraries\_\-detect\_\-dependencies} (\&\$library, \$version=NULL, \$variant=NULL)
+\item 
+\& \hyperlink{libraries_8module_ae592b03bbea251cc7c008cd5ed10c861}{libraries\_\-info} (\$name=NULL)
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf }\par
+{\em \label{_amgrpd41d8cd98f00b204e9800998ecf8427e}
+ Applies default properties to a library definition.
+
+An array of library information, passed by reference.
+
+The machine name of the passed-\/in library. }\begin{DoxyCompactItemize}
+\item 
+\hypertarget{libraries_8module_ade9f53d8a3f6722c779f7c9626149bd2}{
+{\bfseries libraries\_\-info\_\-defaults} (\&\$library, \$name)}
+\label{libraries_8module_ade9f53d8a3f6722c779f7c9626149bd2}
+
+\item 
+\hyperlink{libraries_8module_a6d07b527dfd01c1b2e599a6e07234cec}{libraries\_\-detect} (\$name)
+\item 
+\hyperlink{libraries_8module_a015c6cdcfc3a14262a48dcfe344a70de}{libraries\_\-load} (\$name, \$variant=NULL)
+\item 
+\hyperlink{libraries_8module_a3e44d0658472eaa5363ecbee0dc61433}{libraries\_\-load\_\-files} (\$library)
+\item 
+\hyperlink{libraries_8module_a75db4e86addc3ceb4df8d0e1f5a54f99}{libraries\_\-get\_\-version} (\$library, \$options)
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+External library handling for Drupal modules. 
+
+\subsection{Function Documentation}
+\hypertarget{libraries_8module_a6d07b527dfd01c1b2e599a6e07234cec}{
+\index{libraries.module@{libraries.module}!libraries\_\-detect@{libraries\_\-detect}}
+\index{libraries\_\-detect@{libraries\_\-detect}!libraries.module@{libraries.module}}
+\subsubsection[{libraries\_\-detect}]{\setlength{\rightskip}{0pt plus 5cm}libraries\_\-detect (\$ {\em name})}}
+\label{libraries_8module_a6d07b527dfd01c1b2e599a6e07234cec}
+Tries to detect a library and its installed version.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]The machine name of a library to return registered information for.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$|$false An associative array containing registered information for the library specified by \$name, or FALSE if the library \$name is not registered. In addition to the keys returned by \hyperlink{libraries_8module_ae592b03bbea251cc7c008cd5ed10c861}{libraries\_\-info()}, the following keys are contained:
+\begin{DoxyItemize}
+\item installed: A boolean indicating whether the library is installed. Note that not only the top-\/level library, but also each variant contains this key.
+\item version: If the version could be detected, the full version string.
+\item error: If an error occurred during library detection, one of the following error statuses: \char`\"{}not found\char`\"{}, \char`\"{}not detected\char`\"{}, \char`\"{}not supported\char`\"{}.
+\item error message: If an error occurred during library detection, a detailed error message.
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{libraries_8module_ae592b03bbea251cc7c008cd5ed10c861}{libraries\_\-info()} 
+\end{DoxySeeAlso}
+\hypertarget{libraries_8module_af3d912272d3f4267e03767202fe0f4e7}{
+\index{libraries.module@{libraries.module}!libraries\_\-detect\_\-dependencies@{libraries\_\-detect\_\-dependencies}}
+\index{libraries\_\-detect\_\-dependencies@{libraries\_\-detect\_\-dependencies}!libraries.module@{libraries.module}}
+\subsubsection[{libraries\_\-detect\_\-dependencies}]{\setlength{\rightskip}{0pt plus 5cm}libraries\_\-detect\_\-dependencies (\&\$ {\em library}, \/  \$ {\em version} = {\ttfamily NULL}, \/  \$ {\em variant} = {\ttfamily NULL})}}
+\label{libraries_8module_af3d912272d3f4267e03767202fe0f4e7}
+Library post-\/detect callback to process and detect dependencies.
+
+It checks whether each of the dependencies of a library are installed and available in a compatible version.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$library}]An associative array of library information or a part of it, passed by reference. \item[{\em \$version}]If the library information belongs to a specific version, the version string. NULL otherwise. \item[{\em \$variant}]If the library information belongs to a specific variant, the variant name. NULL otherwise.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{libraries_8module_ae592b03bbea251cc7c008cd5ed10c861}{libraries\_\-info()} 
+
+\hyperlink{libraries_8module_a3ac265c084e45903a8b9c4677d534f5b}{libraries\_\-invoke()} 
+\end{DoxySeeAlso}
+\hypertarget{libraries_8module_a1e8b67a9bc65c658aca7094765a1e1aa}{
+\index{libraries.module@{libraries.module}!libraries\_\-flush\_\-caches@{libraries\_\-flush\_\-caches}}
+\index{libraries\_\-flush\_\-caches@{libraries\_\-flush\_\-caches}!libraries.module@{libraries.module}}
+\subsubsection[{libraries\_\-flush\_\-caches}]{\setlength{\rightskip}{0pt plus 5cm}libraries\_\-flush\_\-caches ()}}
+\label{libraries_8module_a1e8b67a9bc65c658aca7094765a1e1aa}
+Implements hook\_\-flush\_\-caches(). \hypertarget{libraries_8module_a7bb2b09cadaa8bb75d9d7ae892269cd0}{
+\index{libraries.module@{libraries.module}!libraries\_\-get\_\-libraries@{libraries\_\-get\_\-libraries}}
+\index{libraries\_\-get\_\-libraries@{libraries\_\-get\_\-libraries}!libraries.module@{libraries.module}}
+\subsubsection[{libraries\_\-get\_\-libraries}]{\setlength{\rightskip}{0pt plus 5cm}libraries\_\-get\_\-libraries ()}}
+\label{libraries_8module_a7bb2b09cadaa8bb75d9d7ae892269cd0}
+Returns an array of library directories.
+
+Returns an array of library directories from the all-\/sites directory (i.e. sites/all/libraries/), the profiles directory, and site-\/specific directory (i.e. sites/somesite/libraries/). The returned array will be keyed by the library name. Site-\/specific libraries are prioritized over libraries in the default directories. That is, if a library with the same name appears in both the site-\/wide directory and site-\/specific directory, only the site-\/specific version will be listed.
+
+\begin{DoxyReturn}{Returns}
+A list of library directories. 
+\end{DoxyReturn}
+\hypertarget{libraries_8module_af6582ffdd6b230b9532c8fd007448b2e}{
+\index{libraries.module@{libraries.module}!libraries\_\-get\_\-path@{libraries\_\-get\_\-path}}
+\index{libraries\_\-get\_\-path@{libraries\_\-get\_\-path}!libraries.module@{libraries.module}}
+\subsubsection[{libraries\_\-get\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}libraries\_\-get\_\-path (\$ {\em name}, \/  \$ {\em base\_\-path} = {\ttfamily FALSE})}}
+\label{libraries_8module_af6582ffdd6b230b9532c8fd007448b2e}
+Gets the path of a library.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]The machine name of a library to return the path for. \item[{\em \$base\_\-path}]Whether to prefix the resulting path with base\_\-path().\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The path to the specified library or FALSE if the library wasn't found. 
+\end{DoxyReturn}
+\hypertarget{libraries_8module_a75db4e86addc3ceb4df8d0e1f5a54f99}{
+\index{libraries.module@{libraries.module}!libraries\_\-get\_\-version@{libraries\_\-get\_\-version}}
+\index{libraries\_\-get\_\-version@{libraries\_\-get\_\-version}!libraries.module@{libraries.module}}
+\subsubsection[{libraries\_\-get\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}libraries\_\-get\_\-version (\$ {\em library}, \/  \$ {\em options})}}
+\label{libraries_8module_a75db4e86addc3ceb4df8d0e1f5a54f99}
+Gets the version information from an arbitrary library.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$library}]An associative array containing all information about the library. \item[{\em \$options}]An associative array containing with the following keys:
+\begin{DoxyItemize}
+\item file: The filename to parse for the version, relative to the library path. For example: 'docs/changelog.txt'.
+\item pattern: A string containing a regular expression (PCRE) to match the library version. For example: '
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxyVersion}{Version}
++(\mbox{[}0-\/9a-\/zA-\/Z$\backslash$.-\/\mbox{]}+)@'. Note that the returned version is not the match of the entire pattern (i.e. '
+
+1.2.3' in the above example) but the match of the first sub-\/pattern (i.e. '1.2.3' in the above example).
+\begin{DoxyItemize}
+\item lines: (optional) The maximum number of lines to search the pattern in. Defaults to 20.
+\item cols: (optional) The maximum number of characters per line to take into account. Defaults to 200. In case of minified or compressed files, this prevents reading the entire file into memory.
+\end{DoxyItemize}
+\end{DoxyVersion}
+\begin{DoxyReturn}{Returns}
+A string containing the version of the library.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{libraries_8module_af6582ffdd6b230b9532c8fd007448b2e}{libraries\_\-get\_\-path()} 
+\end{DoxySeeAlso}
+\hypertarget{libraries_8module_ae592b03bbea251cc7c008cd5ed10c861}{
+\index{libraries.module@{libraries.module}!libraries\_\-info@{libraries\_\-info}}
+\index{libraries\_\-info@{libraries\_\-info}!libraries.module@{libraries.module}}
+\subsubsection[{libraries\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}\& libraries\_\-info (\$ {\em name} = {\ttfamily NULL})}}
+\label{libraries_8module_ae592b03bbea251cc7c008cd5ed10c861}
+Returns information about registered libraries.
+
+The returned information is unprocessed; i.e., as registered by modules.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}](optional) The machine name of a library to return registered information for. If omitted, information about all registered libraries is returned.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$|$false An associative array containing registered information for all libraries, the registered information for the library specified by \$name, or FALSE if the library \$name is not registered.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{libraries_8api_8php_abe57a1a01f1d2d134a9014258fe9e016}{hook\_\-libraries\_\-info()}
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[\hyperlink{todo__todo000038}{Todo}]Re-\/introduce support for include file plugin system -\/ either by copying Wysiwyg's code, or directly switching to CTools. \end{Desc}
+\hypertarget{libraries_8module_a3ac265c084e45903a8b9c4677d534f5b}{
+\index{libraries.module@{libraries.module}!libraries\_\-invoke@{libraries\_\-invoke}}
+\index{libraries\_\-invoke@{libraries\_\-invoke}!libraries.module@{libraries.module}}
+\subsubsection[{libraries\_\-invoke}]{\setlength{\rightskip}{0pt plus 5cm}libraries\_\-invoke (\$ {\em group}, \/  \&\$ {\em library})}}
+\label{libraries_8module_a3ac265c084e45903a8b9c4677d534f5b}
+Invokes library callbacks.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$group}]A string containing the group of callbacks that is to be applied. Should be either 'info', 'pre-\/detect', 'post-\/detect', or 'load'. \item[{\em \$library}]An array of library information, passed by reference. \end{DoxyParams}
+\hypertarget{libraries_8module_a015c6cdcfc3a14262a48dcfe344a70de}{
+\index{libraries.module@{libraries.module}!libraries\_\-load@{libraries\_\-load}}
+\index{libraries\_\-load@{libraries\_\-load}!libraries.module@{libraries.module}}
+\subsubsection[{libraries\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}libraries\_\-load (\$ {\em name}, \/  \$ {\em variant} = {\ttfamily NULL})}}
+\label{libraries_8module_a015c6cdcfc3a14262a48dcfe344a70de}
+Loads a library.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$name}]The name of the library to load. \item[{\em \$variant}]The name of the variant to load. Note that only one variant of a library can be loaded within a single request. The variant that has been passed first is used; different variant names in subsequent calls are ignored.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An associative array of the library information as returned from \hyperlink{libraries_8module_ae592b03bbea251cc7c008cd5ed10c861}{libraries\_\-info()}. The top-\/level properties contain the effective definition of the library (variant) that has been loaded. Additionally:
+\begin{DoxyItemize}
+\item installed: Whether the library is installed, as determined by libraries\_\-detect\_\-library().
+\item loaded: Either the amount of library files that have been loaded, or FALSE if the library could not be loaded. See \hyperlink{libraries_8api_8php_abe57a1a01f1d2d134a9014258fe9e016}{hook\_\-libraries\_\-info()} for more information. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{libraries_8module_a3e44d0658472eaa5363ecbee0dc61433}{
+\index{libraries.module@{libraries.module}!libraries\_\-load\_\-files@{libraries\_\-load\_\-files}}
+\index{libraries\_\-load\_\-files@{libraries\_\-load\_\-files}!libraries.module@{libraries.module}}
+\subsubsection[{libraries\_\-load\_\-files}]{\setlength{\rightskip}{0pt plus 5cm}libraries\_\-load\_\-files (\$ {\em library})}}
+\label{libraries_8module_a3e44d0658472eaa5363ecbee0dc61433}
+Loads a library's files.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$library}]An array of library information as returned by \hyperlink{libraries_8module_ae592b03bbea251cc7c008cd5ed10c861}{libraries\_\-info()}.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of loaded files. 
+\end{DoxyReturn}
+\hypertarget{libraries_8module_a763111ce509ad1ae37c607fc367da122}{
+\index{libraries.module@{libraries.module}!libraries\_\-prepare\_\-files@{libraries\_\-prepare\_\-files}}
+\index{libraries\_\-prepare\_\-files@{libraries\_\-prepare\_\-files}!libraries.module@{libraries.module}}
+\subsubsection[{libraries\_\-prepare\_\-files}]{\setlength{\rightskip}{0pt plus 5cm}libraries\_\-prepare\_\-files (\&\$ {\em library}, \/  \$ {\em version} = {\ttfamily NULL}, \/  \$ {\em variant} = {\ttfamily NULL})}}
+\label{libraries_8module_a763111ce509ad1ae37c607fc367da122}
+Library info callback to make all 'files' properties consistent.
+
+This turns libraries' file information declared as e.g. 
+\begin{DoxyCode}
+ $library['files']['js'] = array('example_1.js', 'example_2.js');
+\end{DoxyCode}
+ into 
+\begin{DoxyCode}
+ $library['files']['js'] = array(
+   'example_1.js' => array(),
+   'example_2.js' => array(),
+ );
+\end{DoxyCode}
+ It does the same for the 'integration files' property.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$library}]An associative array of library information or a part of it, passed by reference. \item[{\em \$version}]If the library information belongs to a specific version, the version string. NULL otherwise. \item[{\em \$variant}]If the library information belongs to a specific variant, the variant name. NULL otherwise.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{libraries_8module_ae592b03bbea251cc7c008cd5ed10c861}{libraries\_\-info()} 
+
+\hyperlink{libraries_8module_a3ac265c084e45903a8b9c4677d534f5b}{libraries\_\-invoke()} 
+\end{DoxySeeAlso}
+\hypertarget{libraries_8module_a86cb3d1204efd916b9bd09c472457f47}{
+\index{libraries.module@{libraries.module}!libraries\_\-scan\_\-info\_\-files@{libraries\_\-scan\_\-info\_\-files}}
+\index{libraries\_\-scan\_\-info\_\-files@{libraries\_\-scan\_\-info\_\-files}!libraries.module@{libraries.module}}
+\subsubsection[{libraries\_\-scan\_\-info\_\-files}]{\setlength{\rightskip}{0pt plus 5cm}libraries\_\-scan\_\-info\_\-files ()}}
+\label{libraries_8module_a86cb3d1204efd916b9bd09c472457f47}
+Looks for library info files.
+
+This function scans the following directories for info files:
+\begin{DoxyItemize}
+\item libraries
+\item profiles/\$profilename/libraries
+\item sites/all/libraries
+\item sites/\$sitename/libraries
+\item any directories specified via hook\_\-libraries\_\-info\_\-file\_\-paths()
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+An array of info files, keyed by library name. The values are the paths of the files. 
+\end{DoxyReturn}
+\hypertarget{libraries_8module_a2a884881a93bb93aaf11e3b42d38026a}{
+\index{libraries.module@{libraries.module}!libraries\_\-traverse\_\-library@{libraries\_\-traverse\_\-library}}
+\index{libraries\_\-traverse\_\-library@{libraries\_\-traverse\_\-library}!libraries.module@{libraries.module}}
+\subsubsection[{libraries\_\-traverse\_\-library}]{\setlength{\rightskip}{0pt plus 5cm}libraries\_\-traverse\_\-library (\&\$ {\em library}, \/  \$ {\em callback})}}
+\label{libraries_8module_a2a884881a93bb93aaf11e3b42d38026a}
+Helper function to apply a callback to all parts of a library.
+
+Because library declarations can include variants and versions, and those version declarations can in turn include variants, modifying e.g. the 'files' property everywhere it is declared can be quite cumbersome, in which case this helper function is useful.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$library}]An array of library information, passed by reference. \item[{\em \$callback}]A string containing the callback to apply to all parts of a library. \end{DoxyParams}

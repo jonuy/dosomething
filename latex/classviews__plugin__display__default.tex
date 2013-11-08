@@ -1,0 +1,71 @@
+\hypertarget{classviews__plugin__display__default}{
+\section{views\_\-plugin\_\-display\_\-default Class Reference}
+\label{classviews__plugin__display__default}\index{views\_\-plugin\_\-display\_\-default@{views\_\-plugin\_\-display\_\-default}}
+}
+Inheritance diagram for views\_\-plugin\_\-display\_\-default::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classviews__plugin__display__default}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classviews__plugin__display__default_a721b29f71ff0536dfcf28831e4b96e72}{is\_\-default\_\-display} ()
+\item 
+\hyperlink{classviews__plugin__display__default_acceee9203c7f628f686147944442fecd}{execute} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A plugin to handle defaults on a \hyperlink{classview}{view}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__plugin__display__default_acceee9203c7f628f686147944442fecd}{
+\index{views\_\-plugin\_\-display\_\-default@{views\_\-plugin\_\-display\_\-default}!execute@{execute}}
+\index{execute@{execute}!views_plugin_display_default@{views\_\-plugin\_\-display\_\-default}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-default::execute ()}}
+\label{classviews__plugin__display__default_acceee9203c7f628f686147944442fecd}
+The default execute handler fully renders the \hyperlink{classview}{view}.
+
+For the simplest use: 
+\begin{DoxyCode}
+   $output = $view->execute_display('default', $args);
+\end{DoxyCode}
+
+
+For more complex usages, a \hyperlink{classview}{view} can be partially built: 
+\begin{DoxyCode}
+   $view->set_arguments($args);
+   $view->build('default'); // Build the query
+   $view->pre_execute(); // Pre-execute the query.
+   $view->execute(); // Run the query
+   $output = $view->render(); // Render the view
+\end{DoxyCode}
+
+
+If short circuited at any point, look in \$view-\/$>$build\_\-info for information about the query. After execute, look in \$view-\/$>$result for the array of objects returned from db\_\-query.
+
+You can also do: 
+\begin{DoxyCode}
+   $view->set_arguments($args);
+   $output = $view->render('default'); // Render the view
+\end{DoxyCode}
+
+
+This illustrates that render is smart enough to call build and execute if these items have not already been accomplished.
+
+Note that execute also must accomplish other tasks, such as setting page titles, breadcrumbs, and generating exposed filter data if necessary. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_af99c4a303d3e409ab7b14c6cfcd3a1d8}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__default_a721b29f71ff0536dfcf28831e4b96e72}{
+\index{views\_\-plugin\_\-display\_\-default@{views\_\-plugin\_\-display\_\-default}!is\_\-default\_\-display@{is\_\-default\_\-display}}
+\index{is\_\-default\_\-display@{is\_\-default\_\-display}!views_plugin_display_default@{views\_\-plugin\_\-display\_\-default}}
+\subsubsection[{is\_\-default\_\-display}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-default::is\_\-default\_\-display ()}}
+\label{classviews__plugin__display__default_a721b29f71ff0536dfcf28831e4b96e72}
+Determine if this display is the 'default' display which contains fallback settings 
+
+Reimplemented from \hyperlink{classviews__plugin__display_a4f4562c1d689d8d3494b78d676249732}{views\_\-plugin\_\-display}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/plugins/\hyperlink{views__plugin__display__default_8inc}{views\_\-plugin\_\-display\_\-default.inc}\end{DoxyCompactItemize}

@@ -1,0 +1,81 @@
+\hypertarget{classviews__plugin__row__rss__fields}{
+\section{views\_\-plugin\_\-row\_\-rss\_\-fields Class Reference}
+\label{classviews__plugin__row__rss__fields}\index{views\_\-plugin\_\-row\_\-rss\_\-fields@{views\_\-plugin\_\-row\_\-rss\_\-fields}}
+}
+Inheritance diagram for views\_\-plugin\_\-row\_\-rss\_\-fields::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classviews__plugin__row__rss__fields}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__plugin__row__rss__fields_aa8714310cab3c0fdbbcedc7590ed697f}{
+{\bfseries option\_\-definition} ()}
+\label{classviews__plugin__row__rss__fields_aa8714310cab3c0fdbbcedc7590ed697f}
+
+\item 
+\hyperlink{classviews__plugin__row__rss__fields_ab1747e15303777895d87d7cc8f37a788}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__row__rss__fields_ac4f5e75bc5a2277ed9041c18a3f2926d}{validate} ()
+\item 
+\hyperlink{classviews__plugin__row__rss__fields_a5ee883780c5e3aa5469969022fdd9186}{render} (\$row)
+\item 
+\hyperlink{classviews__plugin__row__rss__fields_a5ff87a83e78198b5efc6f13766750595}{get\_\-field} (\$index, \$field\_\-id)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Renders an RSS item based on fields. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__plugin__row__rss__fields_a5ff87a83e78198b5efc6f13766750595}{
+\index{views\_\-plugin\_\-row\_\-rss\_\-fields@{views\_\-plugin\_\-row\_\-rss\_\-fields}!get\_\-field@{get\_\-field}}
+\index{get\_\-field@{get\_\-field}!views_plugin_row_rss_fields@{views\_\-plugin\_\-row\_\-rss\_\-fields}}
+\subsubsection[{get\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row\_\-rss\_\-fields::get\_\-field (\$ {\em index}, \/  \$ {\em field\_\-id})}}
+\label{classviews__plugin__row__rss__fields_a5ff87a83e78198b5efc6f13766750595}
+Retrieves a views field value from the style plugin.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$index}]The index count of the row as expected by \hyperlink{classviews__plugin__style_add1dccbb850840911c335ae09ff266d7}{views\_\-plugin\_\-style::get\_\-field()}. \item[{\em \$field\_\-id}]The ID assigned to the required field in the display. \end{DoxyParams}
+\hypertarget{classviews__plugin__row__rss__fields_ab1747e15303777895d87d7cc8f37a788}{
+\index{views\_\-plugin\_\-row\_\-rss\_\-fields@{views\_\-plugin\_\-row\_\-rss\_\-fields}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_plugin_row_rss_fields@{views\_\-plugin\_\-row\_\-rss\_\-fields}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row\_\-rss\_\-fields::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__row__rss__fields_ab1747e15303777895d87d7cc8f37a788}
+Provide a form for setting options. 
+
+Reimplemented from \hyperlink{classviews__plugin__row_a6914c39d64977a0aa71da39cc1af004e}{views\_\-plugin\_\-row}.\hypertarget{classviews__plugin__row__rss__fields_a5ee883780c5e3aa5469969022fdd9186}{
+\index{views\_\-plugin\_\-row\_\-rss\_\-fields@{views\_\-plugin\_\-row\_\-rss\_\-fields}!render@{render}}
+\index{render@{render}!views_plugin_row_rss_fields@{views\_\-plugin\_\-row\_\-rss\_\-fields}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row\_\-rss\_\-fields::render (\$ {\em row})}}
+\label{classviews__plugin__row__rss__fields_a5ee883780c5e3aa5469969022fdd9186}
+Render a row object. This usually passes through to a theme template of some form, but not always.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em stdClass}]\$row A single row of the query result, so an element of \$view-\/$>$result.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The rendered output of a single row, used by the style plugin. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classviews__plugin__row_a8243842e087dd28664b32cef0309f2a6}{views\_\-plugin\_\-row}.\hypertarget{classviews__plugin__row__rss__fields_ac4f5e75bc5a2277ed9041c18a3f2926d}{
+\index{views\_\-plugin\_\-row\_\-rss\_\-fields@{views\_\-plugin\_\-row\_\-rss\_\-fields}!validate@{validate}}
+\index{validate@{validate}!views_plugin_row_rss_fields@{views\_\-plugin\_\-row\_\-rss\_\-fields}}
+\subsubsection[{validate}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row\_\-rss\_\-fields::validate ()}}
+\label{classviews__plugin__row__rss__fields_ac4f5e75bc5a2277ed9041c18a3f2926d}
+Validate that the plugin is correct and can be saved.
+
+\begin{DoxyReturn}{Returns}
+An array of error strings to tell the user what is wrong with this plugin. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classviews__plugin_aaf004b6a719837f08a1ffe4a1cf4d442}{views\_\-plugin}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/plugins/\hyperlink{views__plugin__row__rss__fields_8inc}{views\_\-plugin\_\-row\_\-rss\_\-fields.inc}\end{DoxyCompactItemize}

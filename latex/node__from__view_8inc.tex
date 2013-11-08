@@ -1,0 +1,61 @@
+\hypertarget{node__from__view_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/relationships/node\_\-from\_\-view.inc File Reference}
+\label{node__from__view_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/relationships/node\_\-from\_\-view.inc@{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/relationships/node\_\-from\_\-view.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{node__from__view_8inc_aec0e25eb34d28184ac8028e9132e882c}{views\_\-content\_\-node\_\-from\_\-view\_\-context} (\$context, \$conf, \$placeholder=FALSE)
+\item 
+\hyperlink{node__from__view_8inc_a6223e4e367fd97ccd351ea1811aa9649}{views\_\-content\_\-node\_\-from\_\-view\_\-settings\_\-form} (\$form, \&\$form\_\-state)
+\item 
+\hypertarget{node__from__view_8inc_ade3875c32421715a2e794a2605238175}{
+{\bfseries views\_\-content\_\-node\_\-from\_\-view\_\-settings\_\-form\_\-validate} (\$form, \&\$form\_\-state)}
+\label{node__from__view_8inc_ade3875c32421715a2e794a2605238175}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{node__from__view_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide an relationship handler for node from \hyperlink{classview}{view}. 
+
+\subsection{Function Documentation}
+\hypertarget{node__from__view_8inc_aec0e25eb34d28184ac8028e9132e882c}{
+\index{node\_\-from\_\-view.inc@{node\_\-from\_\-view.inc}!views\_\-content\_\-node\_\-from\_\-view\_\-context@{views\_\-content\_\-node\_\-from\_\-view\_\-context}}
+\index{views\_\-content\_\-node\_\-from\_\-view\_\-context@{views\_\-content\_\-node\_\-from\_\-view\_\-context}!node_from_view.inc@{node\_\-from\_\-view.inc}}
+\subsubsection[{views\_\-content\_\-node\_\-from\_\-view\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-node\_\-from\_\-view\_\-context (\$ {\em context}, \/  \$ {\em conf}, \/  \$ {\em placeholder} = {\ttfamily FALSE})}}
+\label{node__from__view_8inc_aec0e25eb34d28184ac8028e9132e882c}
+Return a new context based on an existing context. \hypertarget{node__from__view_8inc_a6223e4e367fd97ccd351ea1811aa9649}{
+\index{node\_\-from\_\-view.inc@{node\_\-from\_\-view.inc}!views\_\-content\_\-node\_\-from\_\-view\_\-settings\_\-form@{views\_\-content\_\-node\_\-from\_\-view\_\-settings\_\-form}}
+\index{views\_\-content\_\-node\_\-from\_\-view\_\-settings\_\-form@{views\_\-content\_\-node\_\-from\_\-view\_\-settings\_\-form}!node_from_view.inc@{node\_\-from\_\-view.inc}}
+\subsubsection[{views\_\-content\_\-node\_\-from\_\-view\_\-settings\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-node\_\-from\_\-view\_\-settings\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{node__from__view_8inc_a6223e4e367fd97ccd351ea1811aa9649}
+Settings form for the relationship. 
+
+\subsection{Variable Documentation}
+\hypertarget{node__from__view_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{node\_\-from\_\-view.inc@{node\_\-from\_\-view.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!node_from_view.inc@{node\_\-from\_\-view.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{node__from__view_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('Node from view'),
+  'keyword' => 'node',
+  'description' => t('Extract a node context from a view context of the base type
+       node.'),
+  'required context' => new ctools_context_required(t('View'), 'view', array('bas
+      e' => 'node')),
+  'context' => 'views_content_node_from_view_context',
+  'edit form' => 'views_content_node_from_view_settings_form',
+  'edit form validate' => 'views_content_node_from_view_settings_form_validate',
+  'defaults' => array('row' => 1),
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

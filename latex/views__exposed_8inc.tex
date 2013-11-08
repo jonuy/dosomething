@@ -1,0 +1,61 @@
+\hypertarget{views__exposed_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/content\_\-types/views\_\-exposed.inc File Reference}
+\label{views__exposed_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/content\_\-types/views\_\-exposed.inc@{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/content\_\-types/views\_\-exposed.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{views__exposed_8inc_a21bf54aed443831f96497c0808a74aeb}{views\_\-content\_\-views\_\-exposed\_\-content\_\-type\_\-render} (\$subtype, \$conf, \$panel\_\-args, \$context)
+\item 
+\hypertarget{views__exposed_8inc_ac1a0be2a10f95fbd540788b245871f17}{
+{\bfseries views\_\-content\_\-views\_\-exposed\_\-content\_\-type\_\-edit\_\-form} (\$form, \&\$form\_\-state)}
+\label{views__exposed_8inc_ac1a0be2a10f95fbd540788b245871f17}
+
+\item 
+\hypertarget{views__exposed_8inc_acb50b2d103f55fe5f45a57cec1af36f9}{
+{\bfseries views\_\-content\_\-views\_\-exposed\_\-content\_\-type\_\-edit\_\-form\_\-submit} (\&\$form, \&\$form\_\-state)}
+\label{views__exposed_8inc_acb50b2d103f55fe5f45a57cec1af36f9}
+
+\item 
+\hyperlink{views__exposed_8inc_a90e7230184d5e1f5e99dba0dedd4d139}{views\_\-content\_\-views\_\-exposed\_\-content\_\-type\_\-admin\_\-title} (\$subtype, \$conf, \$context)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Allow a \hyperlink{classview}{view} context to display its attachment(s). 
+
+\subsection{Function Documentation}
+\hypertarget{views__exposed_8inc_a90e7230184d5e1f5e99dba0dedd4d139}{
+\index{views\_\-exposed.inc@{views\_\-exposed.inc}!views\_\-content\_\-views\_\-exposed\_\-content\_\-type\_\-admin\_\-title@{views\_\-content\_\-views\_\-exposed\_\-content\_\-type\_\-admin\_\-title}}
+\index{views\_\-content\_\-views\_\-exposed\_\-content\_\-type\_\-admin\_\-title@{views\_\-content\_\-views\_\-exposed\_\-content\_\-type\_\-admin\_\-title}!views_exposed.inc@{views\_\-exposed.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-exposed\_\-content\_\-type\_\-admin\_\-title}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-exposed\_\-content\_\-type\_\-admin\_\-title (\$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em context})}}
+\label{views__exposed_8inc_a90e7230184d5e1f5e99dba0dedd4d139}
+Returns the administrative title for a type. \hypertarget{views__exposed_8inc_a21bf54aed443831f96497c0808a74aeb}{
+\index{views\_\-exposed.inc@{views\_\-exposed.inc}!views\_\-content\_\-views\_\-exposed\_\-content\_\-type\_\-render@{views\_\-content\_\-views\_\-exposed\_\-content\_\-type\_\-render}}
+\index{views\_\-content\_\-views\_\-exposed\_\-content\_\-type\_\-render@{views\_\-content\_\-views\_\-exposed\_\-content\_\-type\_\-render}!views_exposed.inc@{views\_\-exposed.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-exposed\_\-content\_\-type\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-exposed\_\-content\_\-type\_\-render (\$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em panel\_\-args}, \/  \$ {\em context})}}
+\label{views__exposed_8inc_a21bf54aed443831f96497c0808a74aeb}
+Render the node\_\-terms content type. 
+
+\subsection{Variable Documentation}
+\hypertarget{views__exposed_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{views\_\-exposed.inc@{views\_\-exposed.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!views_exposed.inc@{views\_\-exposed.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{views__exposed_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('View exposed widgets'),
+  'category' => t('View context'),
+  'icon' => 'icon_views_page.png',
+  'description' => t('Display the view exposed widgets if there are no results.')
+      ,
+  'required context' => new ctools_context_required(t('View'), 'view'),
+)
+\end{DoxyCode}

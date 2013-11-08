@@ -1,0 +1,114 @@
+\hypertarget{classviews__plugin__row}{
+\section{views\_\-plugin\_\-row Class Reference}
+\label{classviews__plugin__row}\index{views\_\-plugin\_\-row@{views\_\-plugin\_\-row}}
+}
+Inheritance diagram for views\_\-plugin\_\-row::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11cm]{classviews__plugin__row}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classviews__plugin__row_abf02e5f51e907c5009edda15d997c161}{init} (\&\$\hyperlink{classview}{view}, \&\$display, \$options=NULL)
+\item 
+\hypertarget{classviews__plugin__row_a0f855a903177b1cbc5e84c1d5c3cce9a}{
+{\bfseries uses\_\-fields} ()}
+\label{classviews__plugin__row_a0f855a903177b1cbc5e84c1d5c3cce9a}
+
+\item 
+\hypertarget{classviews__plugin__row_aad6be1492eae8605e9aff37da9f19337}{
+{\bfseries option\_\-definition} ()}
+\label{classviews__plugin__row_aad6be1492eae8605e9aff37da9f19337}
+
+\item 
+\hyperlink{classviews__plugin__row_a6914c39d64977a0aa71da39cc1af004e}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__row_a32906ab357ff63a5e6ea22d53c3a5e6a}{options\_\-validate} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__row_adce2d15d7f422a48477c6fdf43de80ee}{options\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__row_abfc5a6936d485f19d49cfd9eae094f8f}{query} ()
+\item 
+\hyperlink{classviews__plugin__row_ae49a23f750874e4b3d294aa3a20ecd64}{pre\_\-render} (\$result)
+\item 
+\hyperlink{classviews__plugin__row_a8243842e087dd28664b32cef0309f2a6}{render} (\$row)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Default plugin to \hyperlink{classview}{view} a single row of a table. This is really just a wrapper around a theme function. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__plugin__row_abf02e5f51e907c5009edda15d997c161}{
+\index{views\_\-plugin\_\-row@{views\_\-plugin\_\-row}!init@{init}}
+\index{init@{init}!views_plugin_row@{views\_\-plugin\_\-row}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row::init (\&\$ {\em view}, \/  \&\$ {\em display}, \/  \$ {\em options} = {\ttfamily NULL})}}
+\label{classviews__plugin__row_abf02e5f51e907c5009edda15d997c161}
+Initialize the row plugin. 
+
+Reimplemented in \hyperlink{classviews__plugin__row__node__rss_a6abed6bfad84d5caca74f5dba8911437}{views\_\-plugin\_\-row\_\-node\_\-rss}, and \hyperlink{classviews__plugin__row__node__view_a3bb6fb204cefdab520d24765a8f916ba}{views\_\-plugin\_\-row\_\-node\_\-view}.\hypertarget{classviews__plugin__row_a6914c39d64977a0aa71da39cc1af004e}{
+\index{views\_\-plugin\_\-row@{views\_\-plugin\_\-row}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_plugin_row@{views\_\-plugin\_\-row}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__row_a6914c39d64977a0aa71da39cc1af004e}
+Provide a form for setting options. 
+
+Reimplemented from \hyperlink{classviews__plugin_a1aaed8da1afd9f45293a37358c159837}{views\_\-plugin}.
+
+Reimplemented in \hyperlink{classviews__plugin__row__aggregator__rss_aa5c9bce3143901863f1a446b622fda9c}{views\_\-plugin\_\-row\_\-aggregator\_\-rss}, \hyperlink{classviews__plugin__row__comment__rss_a6901603f7a3b8765dff9ac0b5d8208e4}{views\_\-plugin\_\-row\_\-comment\_\-rss}, \hyperlink{classviews__plugin__row__comment__view_a7dd276ec1a14a2d34f80a8020557608a}{views\_\-plugin\_\-row\_\-comment\_\-view}, \hyperlink{classviews__plugin__row__node__rss_a074125b7562bb918124c2dae6322f58e}{views\_\-plugin\_\-row\_\-node\_\-rss}, \hyperlink{classviews__plugin__row__node__view_a7bc31b38a1cc4474695af3a564fde775}{views\_\-plugin\_\-row\_\-node\_\-view}, \hyperlink{classviews__plugin__row__search__view_a2d2e479f414c487aff3d88343274b49b}{views\_\-plugin\_\-row\_\-search\_\-view}, \hyperlink{classviews__plugin__row__user__view_a3e0109e3008d06d56386d8aba10147c3}{views\_\-plugin\_\-row\_\-user\_\-view}, \hyperlink{classviews__plugin__row__fields_abb87b6c98697fb676638759cb95072e3}{views\_\-plugin\_\-row\_\-fields}, and \hyperlink{classviews__plugin__row__rss__fields_ab1747e15303777895d87d7cc8f37a788}{views\_\-plugin\_\-row\_\-rss\_\-fields}.\hypertarget{classviews__plugin__row_adce2d15d7f422a48477c6fdf43de80ee}{
+\index{views\_\-plugin\_\-row@{views\_\-plugin\_\-row}!options\_\-submit@{options\_\-submit}}
+\index{options\_\-submit@{options\_\-submit}!views_plugin_row@{views\_\-plugin\_\-row}}
+\subsubsection[{options\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row::options\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__row_adce2d15d7f422a48477c6fdf43de80ee}
+Perform any necessary changes to the form values prior to storage. There is no need for this function to actually store the data. 
+
+Reimplemented from \hyperlink{classviews__plugin_a442b0f392deb52725ec8159e05654e06}{views\_\-plugin}.
+
+Reimplemented in \hyperlink{classviews__plugin__row__fields_ab9bddfa302a7098aad70693840bbbb6e}{views\_\-plugin\_\-row\_\-fields}.\hypertarget{classviews__plugin__row_a32906ab357ff63a5e6ea22d53c3a5e6a}{
+\index{views\_\-plugin\_\-row@{views\_\-plugin\_\-row}!options\_\-validate@{options\_\-validate}}
+\index{options\_\-validate@{options\_\-validate}!views_plugin_row@{views\_\-plugin\_\-row}}
+\subsubsection[{options\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row::options\_\-validate (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__row_a32906ab357ff63a5e6ea22d53c3a5e6a}
+Validate the options form. 
+
+Reimplemented from \hyperlink{classviews__plugin_a46d72eb35feea36fed83cd1355a47431}{views\_\-plugin}.\hypertarget{classviews__plugin__row_ae49a23f750874e4b3d294aa3a20ecd64}{
+\index{views\_\-plugin\_\-row@{views\_\-plugin\_\-row}!pre\_\-render@{pre\_\-render}}
+\index{pre\_\-render@{pre\_\-render}!views_plugin_row@{views\_\-plugin\_\-row}}
+\subsubsection[{pre\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row::pre\_\-render (\$ {\em result})}}
+\label{classviews__plugin__row_ae49a23f750874e4b3d294aa3a20ecd64}
+Allow the style to do stuff before each row is rendered.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$result}]The full array of results from the query. \end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classviews__plugin__row__comment__rss_a1c64dc0cd4f677ddb85a0dbedfae291e}{views\_\-plugin\_\-row\_\-comment\_\-rss}, \hyperlink{classviews__plugin__row__comment__view_a0cb891a0afff2975d9a04c9d879ee5a5}{views\_\-plugin\_\-row\_\-comment\_\-view}, \hyperlink{classviews__plugin__row__node__rss_a1306492166ea78aa60c5e199e5299260}{views\_\-plugin\_\-row\_\-node\_\-rss}, \hyperlink{classviews__plugin__row__node__view_a5a6428b6994ff8c0ff52e1e9022fc8eb}{views\_\-plugin\_\-row\_\-node\_\-view}, and \hyperlink{classviews__plugin__row__user__view_a42d62630e62ef31aef94a88fccf173cb}{views\_\-plugin\_\-row\_\-user\_\-view}.\hypertarget{classviews__plugin__row_abfc5a6936d485f19d49cfd9eae094f8f}{
+\index{views\_\-plugin\_\-row@{views\_\-plugin\_\-row}!query@{query}}
+\index{query@{query}!views_plugin_row@{views\_\-plugin\_\-row}}
+\subsubsection[{query}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row::query ()}}
+\label{classviews__plugin__row_abfc5a6936d485f19d49cfd9eae094f8f}
+Add anything to the query that we might need to. 
+
+Reimplemented from \hyperlink{classviews__plugin_a10ac07c47c4a8735786f9fcc38548587}{views\_\-plugin}.\hypertarget{classviews__plugin__row_a8243842e087dd28664b32cef0309f2a6}{
+\index{views\_\-plugin\_\-row@{views\_\-plugin\_\-row}!render@{render}}
+\index{render@{render}!views_plugin_row@{views\_\-plugin\_\-row}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row::render (\$ {\em row})}}
+\label{classviews__plugin__row_a8243842e087dd28664b32cef0309f2a6}
+Render a row object. This usually passes through to a theme template of some form, but not always.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em stdClass}]\$row A single row of the query result, so an element of \$view-\/$>$result.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The rendered output of a single row, used by the style plugin. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classviews__plugin__row__aggregator__rss_add4aa0892bf305556bb9a04c62da6027}{views\_\-plugin\_\-row\_\-aggregator\_\-rss}, \hyperlink{classviews__plugin__row__comment__rss_a89b115cbc1807d3b9659627f351b97e7}{views\_\-plugin\_\-row\_\-comment\_\-rss}, \hyperlink{classviews__plugin__row__node__rss_a94b9baa2d0a6e196f3da863cf1784343}{views\_\-plugin\_\-row\_\-node\_\-rss}, \hyperlink{classviews__plugin__row__node__view_a54c188103326e10c26a466d896e6d74b}{views\_\-plugin\_\-row\_\-node\_\-view}, \hyperlink{classviews__plugin__row__search__view_aec0c01f2e90075589b38f73381aa4ce7}{views\_\-plugin\_\-row\_\-search\_\-view}, \hyperlink{classviews__plugin__row__user__view_a7d3b462a1d5f7cac2630fb42c8185407}{views\_\-plugin\_\-row\_\-user\_\-view}, and \hyperlink{classviews__plugin__row__rss__fields_a5ee883780c5e3aa5469969022fdd9186}{views\_\-plugin\_\-row\_\-rss\_\-fields}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/plugins/\hyperlink{views__plugin__row_8inc}{views\_\-plugin\_\-row.inc}\end{DoxyCompactItemize}

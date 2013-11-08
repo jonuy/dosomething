@@ -1,0 +1,55 @@
+\hypertarget{field_8views_8inc}{
+\section{html/profiles/dosomething/modules/contrib/views/modules/field.views.inc File Reference}
+\label{field_8views_8inc}\index{html/profiles/dosomething/modules/contrib/views/modules/field.views.inc@{html/profiles/dosomething/modules/contrib/views/modules/field.views.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{field_8views_8inc_ad5dcedc92c92554f7a7fa83805b58026}{field\_\-views\_\-data} ()
+\item 
+\hyperlink{field_8views_8inc_a08484225a12bde8e9e4a23c519ff4fd8}{field\_\-views\_\-data\_\-alter} (\&\$data)
+\item 
+\hyperlink{field_8views_8inc_a37ebb9b2c6dcf5c93062f4f96c6c1f0f}{field\_\-views\_\-field\_\-label} (\$field\_\-name)
+\item 
+\hyperlink{field_8views_8inc_adbb71dc4cb1642151e243f305ba34223}{field\_\-views\_\-field\_\-default\_\-views\_\-data} (\$field)
+\item 
+\hyperlink{field_8views_8inc_afb67c64115540e28d7e1b8ddaa3a5569}{list\_\-field\_\-views\_\-data} (\$field)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provide Views data and handlers for field.module. 
+
+\subsection{Function Documentation}
+\hypertarget{field_8views_8inc_ad5dcedc92c92554f7a7fa83805b58026}{
+\index{field.views.inc@{field.views.inc}!field\_\-views\_\-data@{field\_\-views\_\-data}}
+\index{field\_\-views\_\-data@{field\_\-views\_\-data}!field.views.inc@{field.views.inc}}
+\subsubsection[{field\_\-views\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-views\_\-data ()}}
+\label{field_8views_8inc_ad5dcedc92c92554f7a7fa83805b58026}
+Implements \hyperlink{group__views__hooks_ga227057901681e4a33e33c199c7a8c989}{hook\_\-views\_\-data()}.
+
+Field modules can implement hook\_\-field\_\-views\_\-data() to override the default behavior for adding fields. \hypertarget{field_8views_8inc_a08484225a12bde8e9e4a23c519ff4fd8}{
+\index{field.views.inc@{field.views.inc}!field\_\-views\_\-data\_\-alter@{field\_\-views\_\-data\_\-alter}}
+\index{field\_\-views\_\-data\_\-alter@{field\_\-views\_\-data\_\-alter}!field.views.inc@{field.views.inc}}
+\subsubsection[{field\_\-views\_\-data\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-views\_\-data\_\-alter (\&\$ {\em data})}}
+\label{field_8views_8inc_a08484225a12bde8e9e4a23c519ff4fd8}
+Implements \hyperlink{group__views__hooks_ga6ae0bb0d2385e03c32b57625b6d35826}{hook\_\-views\_\-data\_\-alter()}.
+
+Field modules can implement hook\_\-field\_\-views\_\-data\_\-views\_\-data\_\-alter() to alter the views data on a per field basis. This is weirdly named so as not to conflict with the drupal\_\-alter('field\_\-views\_\-data') in field\_\-views\_\-data. \hypertarget{field_8views_8inc_adbb71dc4cb1642151e243f305ba34223}{
+\index{field.views.inc@{field.views.inc}!field\_\-views\_\-field\_\-default\_\-views\_\-data@{field\_\-views\_\-field\_\-default\_\-views\_\-data}}
+\index{field\_\-views\_\-field\_\-default\_\-views\_\-data@{field\_\-views\_\-field\_\-default\_\-views\_\-data}!field.views.inc@{field.views.inc}}
+\subsubsection[{field\_\-views\_\-field\_\-default\_\-views\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-views\_\-field\_\-default\_\-views\_\-data (\$ {\em field})}}
+\label{field_8views_8inc_adbb71dc4cb1642151e243f305ba34223}
+Default views data implementation for a field. \hypertarget{field_8views_8inc_a37ebb9b2c6dcf5c93062f4f96c6c1f0f}{
+\index{field.views.inc@{field.views.inc}!field\_\-views\_\-field\_\-label@{field\_\-views\_\-field\_\-label}}
+\index{field\_\-views\_\-field\_\-label@{field\_\-views\_\-field\_\-label}!field.views.inc@{field.views.inc}}
+\subsubsection[{field\_\-views\_\-field\_\-label}]{\setlength{\rightskip}{0pt plus 5cm}field\_\-views\_\-field\_\-label (\$ {\em field\_\-name})}}
+\label{field_8views_8inc_a37ebb9b2c6dcf5c93062f4f96c6c1f0f}
+Returns the label of a certain field.
+
+Therefore it looks up in all bundles to find the most used instance. \hypertarget{field_8views_8inc_afb67c64115540e28d7e1b8ddaa3a5569}{
+\index{field.views.inc@{field.views.inc}!list\_\-field\_\-views\_\-data@{list\_\-field\_\-views\_\-data}}
+\index{list\_\-field\_\-views\_\-data@{list\_\-field\_\-views\_\-data}!field.views.inc@{field.views.inc}}
+\subsubsection[{list\_\-field\_\-views\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}list\_\-field\_\-views\_\-data (\$ {\em field})}}
+\label{field_8views_8inc_afb67c64115540e28d7e1b8ddaa3a5569}
+Have a different filter handler for lists. This should allow to select values of the list. 

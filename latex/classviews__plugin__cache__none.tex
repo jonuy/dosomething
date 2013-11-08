@@ -1,0 +1,66 @@
+\hypertarget{classviews__plugin__cache__none}{
+\section{views\_\-plugin\_\-cache\_\-none Class Reference}
+\label{classviews__plugin__cache__none}\index{views\_\-plugin\_\-cache\_\-none@{views\_\-plugin\_\-cache\_\-none}}
+}
+Inheritance diagram for views\_\-plugin\_\-cache\_\-none::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classviews__plugin__cache__none}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classviews__plugin__cache__none_a17f65a53d00a8c51865027c3bce8172a}{cache\_\-start} ()
+\item 
+\hyperlink{classviews__plugin__cache__none_a52838d0e7db62b5e92f837df6a4931b9}{summary\_\-title} ()
+\item 
+\hyperlink{classviews__plugin__cache__none_a8c0a82cd971ea8abc1045107726a3f1d}{cache\_\-get} (\$type)
+\item 
+\hyperlink{classviews__plugin__cache__none_a0c66f7c812356a9327ec968c7de6dc47}{cache\_\-set} (\$type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Caching plugin that provides no caching at all. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__plugin__cache__none_a8c0a82cd971ea8abc1045107726a3f1d}{
+\index{views\_\-plugin\_\-cache\_\-none@{views\_\-plugin\_\-cache\_\-none}!cache\_\-get@{cache\_\-get}}
+\index{cache\_\-get@{cache\_\-get}!views_plugin_cache_none@{views\_\-plugin\_\-cache\_\-none}}
+\subsubsection[{cache\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-cache\_\-none::cache\_\-get (\$ {\em type})}}
+\label{classviews__plugin__cache__none_a8c0a82cd971ea8abc1045107726a3f1d}
+Retrieve data from the cache.
+
+A plugin should override this to provide specialized caching behavior. 
+
+Reimplemented from \hyperlink{classviews__plugin__cache_a77d1ef6d62d4eb84209cf310194b173b}{views\_\-plugin\_\-cache}.\hypertarget{classviews__plugin__cache__none_a0c66f7c812356a9327ec968c7de6dc47}{
+\index{views\_\-plugin\_\-cache\_\-none@{views\_\-plugin\_\-cache\_\-none}!cache\_\-set@{cache\_\-set}}
+\index{cache\_\-set@{cache\_\-set}!views_plugin_cache_none@{views\_\-plugin\_\-cache\_\-none}}
+\subsubsection[{cache\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-cache\_\-none::cache\_\-set (\$ {\em type})}}
+\label{classviews__plugin__cache__none_a0c66f7c812356a9327ec968c7de6dc47}
+Save data to the cache.
+
+A plugin should override this to provide specialized caching behavior. 
+
+Reimplemented from \hyperlink{classviews__plugin__cache_a4089f1652603b3e1012a8b0f00407c05}{views\_\-plugin\_\-cache}.\hypertarget{classviews__plugin__cache__none_a17f65a53d00a8c51865027c3bce8172a}{
+\index{views\_\-plugin\_\-cache\_\-none@{views\_\-plugin\_\-cache\_\-none}!cache\_\-start@{cache\_\-start}}
+\index{cache\_\-start@{cache\_\-start}!views_plugin_cache_none@{views\_\-plugin\_\-cache\_\-none}}
+\subsubsection[{cache\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-cache\_\-none::cache\_\-start ()}}
+\label{classviews__plugin__cache__none_a17f65a53d00a8c51865027c3bce8172a}
+Start caching javascript, css and other out of band info.
+
+This takes a snapshot of the current system state so that we don't duplicate it. Later on, when \hyperlink{classviews__plugin__cache_a557cef7540eec7d0a6ad9cd030724ef7}{gather\_\-headers()} is run, this information will be removed so that we don't hold onto it. 
+
+Reimplemented from \hyperlink{classviews__plugin__cache_aa59c91a728401e1a49857346ae665ce7}{views\_\-plugin\_\-cache}.\hypertarget{classviews__plugin__cache__none_a52838d0e7db62b5e92f837df6a4931b9}{
+\index{views\_\-plugin\_\-cache\_\-none@{views\_\-plugin\_\-cache\_\-none}!summary\_\-title@{summary\_\-title}}
+\index{summary\_\-title@{summary\_\-title}!views_plugin_cache_none@{views\_\-plugin\_\-cache\_\-none}}
+\subsubsection[{summary\_\-title}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-cache\_\-none::summary\_\-title ()}}
+\label{classviews__plugin__cache__none_a52838d0e7db62b5e92f837df6a4931b9}
+Return a string to display as the clickable title for the access control. 
+
+Reimplemented from \hyperlink{classviews__plugin__cache_a35e5232e39c8148476328e302787d16b}{views\_\-plugin\_\-cache}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/plugins/\hyperlink{views__plugin__cache__none_8inc}{views\_\-plugin\_\-cache\_\-none.inc}\end{DoxyCompactItemize}

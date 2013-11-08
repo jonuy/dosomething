@@ -1,0 +1,92 @@
+\hypertarget{classviews__handler__area}{
+\section{views\_\-handler\_\-area Class Reference}
+\label{classviews__handler__area}\index{views\_\-handler\_\-area@{views\_\-handler\_\-area}}
+}
+Inheritance diagram for views\_\-handler\_\-area::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.70531cm]{classviews__handler__area}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classviews__handler__area_ad3af1ecd94f27a685d79125bd1bae4cb}{init} (\&\$\hyperlink{classview}{view}, \&\$options)
+\item 
+\hyperlink{classviews__handler__area_ab6ca1a4a9766341b6159e8cad9945564}{label} ()
+\item 
+\hypertarget{classviews__handler__area_a938939577c4589dcb57aa6974c0ae088}{
+{\bfseries option\_\-definition} ()}
+\label{classviews__handler__area_a938939577c4589dcb57aa6974c0ae088}
+
+\item 
+\hyperlink{classviews__handler__area_a859db27dfc7636cba49b95c2c8920e19}{admin\_\-summary} ()
+\item 
+\hyperlink{classviews__handler__area_af3615e22fccc744485ddb7978ce812ff}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__handler__area_a477f0103ba709a41a30d6e1765675b68}{query} ()
+\item 
+\hyperlink{classviews__handler__area_a9f3eb4b8ee98a0929946e8de7253d302}{render} (\$empty=FALSE)
+\item 
+\hyperlink{classviews__handler__area_afd0f5987bb450217d97f6fb5607e5f70}{use\_\-group\_\-by} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for area handlers. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__handler__area_a859db27dfc7636cba49b95c2c8920e19}{
+\index{views\_\-handler\_\-area@{views\_\-handler\_\-area}!admin\_\-summary@{admin\_\-summary}}
+\index{admin\_\-summary@{admin\_\-summary}!views_handler_area@{views\_\-handler\_\-area}}
+\subsubsection[{admin\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-area::admin\_\-summary ()}}
+\label{classviews__handler__area_a859db27dfc7636cba49b95c2c8920e19}
+Provide extra data to the administration form 
+
+Reimplemented from \hyperlink{classviews__handler_a27a5cb35f3f17322957730a95b6be11e}{views\_\-handler}.\hypertarget{classviews__handler__area_ad3af1ecd94f27a685d79125bd1bae4cb}{
+\index{views\_\-handler\_\-area@{views\_\-handler\_\-area}!init@{init}}
+\index{init@{init}!views_handler_area@{views\_\-handler\_\-area}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-area::init (\&\$ {\em view}, \/  \&\$ {\em options})}}
+\label{classviews__handler__area_ad3af1ecd94f27a685d79125bd1bae4cb}
+Overrides \hyperlink{classviews__handler_aa7df174ffa94ab095f7b9fdf154bcc30}{views\_\-handler::init()}.
+
+Make sure that no result area handlers are set to be shown when the result is empty. 
+
+Reimplemented from \hyperlink{classviews__handler_aa7df174ffa94ab095f7b9fdf154bcc30}{views\_\-handler}.\hypertarget{classviews__handler__area_ab6ca1a4a9766341b6159e8cad9945564}{
+\index{views\_\-handler\_\-area@{views\_\-handler\_\-area}!label@{label}}
+\index{label@{label}!views_handler_area@{views\_\-handler\_\-area}}
+\subsubsection[{label}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-area::label ()}}
+\label{classviews__handler__area_ab6ca1a4a9766341b6159e8cad9945564}
+Get this field's label. \hypertarget{classviews__handler__area_af3615e22fccc744485ddb7978ce812ff}{
+\index{views\_\-handler\_\-area@{views\_\-handler\_\-area}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_handler_area@{views\_\-handler\_\-area}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-area::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__handler__area_af3615e22fccc744485ddb7978ce812ff}
+Default options form that provides the label widget that all fields should have. 
+
+Reimplemented from \hyperlink{classviews__handler_aa41fcf16b177eb03e35facbae6320f74}{views\_\-handler}.
+
+Reimplemented in \hyperlink{classviews__handler__area__broken_ac5f35dab0c0f8a2486e570fa8ec4e85a}{views\_\-handler\_\-area\_\-broken}, \hyperlink{classviews__handler__area__result_a8b6ec38182e50197cf1289acfac7b26e}{views\_\-handler\_\-area\_\-result}, \hyperlink{classviews__handler__area__text_a2781ce4797304f2ce2a026820e0006fb}{views\_\-handler\_\-area\_\-text}, \hyperlink{classviews__handler__area__text__custom_a93eb91b0ea21ca78b68b5a4832cc9035}{views\_\-handler\_\-area\_\-text\_\-custom}, and \hyperlink{classviews__handler__area__view_a6fd3e047a259d06d4fec77b0c286e9ed}{views\_\-handler\_\-area\_\-view}.\hypertarget{classviews__handler__area_a477f0103ba709a41a30d6e1765675b68}{
+\index{views\_\-handler\_\-area@{views\_\-handler\_\-area}!query@{query}}
+\index{query@{query}!views_handler_area@{views\_\-handler\_\-area}}
+\subsubsection[{query}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-area::query ()}}
+\label{classviews__handler__area_a477f0103ba709a41a30d6e1765675b68}
+Don't run a query \hypertarget{classviews__handler__area_a9f3eb4b8ee98a0929946e8de7253d302}{
+\index{views\_\-handler\_\-area@{views\_\-handler\_\-area}!render@{render}}
+\index{render@{render}!views_handler_area@{views\_\-handler\_\-area}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-area::render (\$ {\em empty} = {\ttfamily FALSE})}}
+\label{classviews__handler__area_a9f3eb4b8ee98a0929946e8de7253d302}
+Render the area 
+
+Reimplemented in \hyperlink{classviews__handler__area__broken_aa56616948891521539f0f4b59e20307f}{views\_\-handler\_\-area\_\-broken}, \hyperlink{classviews__handler__area__result_acd805154305ee5849da8251a4335c933}{views\_\-handler\_\-area\_\-result}, \hyperlink{classviews__handler__area__text_a61ad1d6b876311e1d09576230654a794}{views\_\-handler\_\-area\_\-text}, \hyperlink{classviews__handler__area__text__custom_a04acaaef479eb115b7912b963967387c}{views\_\-handler\_\-area\_\-text\_\-custom}, and \hyperlink{classviews__handler__area__view_a475224309a7f09c2101477edf73541e5}{views\_\-handler\_\-area\_\-view}.\hypertarget{classviews__handler__area_afd0f5987bb450217d97f6fb5607e5f70}{
+\index{views\_\-handler\_\-area@{views\_\-handler\_\-area}!use\_\-group\_\-by@{use\_\-group\_\-by}}
+\index{use\_\-group\_\-by@{use\_\-group\_\-by}!views_handler_area@{views\_\-handler\_\-area}}
+\subsubsection[{use\_\-group\_\-by}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-area::use\_\-group\_\-by ()}}
+\label{classviews__handler__area_afd0f5987bb450217d97f6fb5607e5f70}
+Area handlers shouldn't have groupby. 
+
+Reimplemented from \hyperlink{classviews__handler_a929fa734f0c231cb81f52889652e6aef}{views\_\-handler}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/handlers/\hyperlink{views__handler__area_8inc}{views\_\-handler\_\-area.inc}\end{DoxyCompactItemize}

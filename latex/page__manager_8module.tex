@@ -1,0 +1,519 @@
+\hypertarget{page__manager_8module}{
+\section{html/profiles/dosomething/modules/contrib/ctools/page\_\-manager/page\_\-manager.module File Reference}
+\label{page__manager_8module}\index{html/profiles/dosomething/modules/contrib/ctools/page\_\-manager/page\_\-manager.module@{html/profiles/dosomething/modules/contrib/ctools/page\_\-manager/page\_\-manager.module}}
+}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{page__manager_8module_a67a367c02b464d01501dd7977ff98d57}{PAGE\_\-MANAGER\_\-CHANGED\_\-MOVED} 
+\item 
+enum \hyperlink{page__manager_8module_a1725bd9d5ce31fc2c3c71b9374cee612}{PAGE\_\-MANAGER\_\-CHANGED\_\-CACHED} 
+\item 
+enum \hyperlink{page__manager_8module_a8b50720174159dd5fe0027078dc67c1b}{PAGE\_\-MANAGER\_\-CHANGED\_\-DELETED} 
+\item 
+enum \hyperlink{page__manager_8module_a37b3f0cf36e7fd00e7868c8eb5bf449d}{PAGE\_\-MANAGER\_\-CHANGED\_\-STATUS} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{page__manager_8module_a520d2afb3f70e8335e226e9e9c202493}{page\_\-manager\_\-permission} ()
+\item 
+\hyperlink{page__manager_8module_a5e41f5889b975464f474f3af5039dd4c}{page\_\-manager\_\-ctools\_\-plugin\_\-directory} (\$owner, \$plugin\_\-type)
+\item 
+\hyperlink{page__manager_8module_a470533a07989fa3abd6ea7eb6a18c065}{page\_\-manager\_\-ctools\_\-plugin\_\-type} ()
+\item 
+\hyperlink{page__manager_8module_a64d2119bb7c032cf8d11b0431a7b4bc0}{page\_\-manager\_\-menu} ()
+\item 
+\hypertarget{page__manager_8module_a2bb725d16d5e80ea417b2f528304ace6}{
+{\bfseries page\_\-manager\_\-admin\_\-paths} ()}
+\label{page__manager_8module_a2bb725d16d5e80ea417b2f528304ace6}
+
+\item 
+\hyperlink{page__manager_8module_a16da3e1f83cf82d7d13d81847206f135}{page\_\-manager\_\-menu\_\-alter} (\&\$items)
+\item 
+\hypertarget{page__manager_8module_ac601455bf712b4d4d38fa6b7ca033db3}{
+{\bfseries page\_\-manager\_\-theme} ()}
+\label{page__manager_8module_ac601455bf712b4d4d38fa6b7ca033db3}
+
+\item 
+\hyperlink{page__manager_8module_a37bf1f336f11680f111b980f1f06f7bb}{page\_\-manager\_\-get\_\-page\_\-cache} (\$task\_\-name)
+\item 
+\hyperlink{page__manager_8module_a87718088cd075fb9c3c6884df0e33212}{page\_\-manager\_\-set\_\-page\_\-cache} (\$page)
+\item 
+\hyperlink{page__manager_8module_ae48efa1de270237e9dcb4d117cb063a9}{page\_\-manager\_\-clear\_\-page\_\-cache} (\$name)
+\item 
+\hyperlink{page__manager_8module_a5e03ee6eaeb49ed077fac91648d381b4}{page\_\-manager\_\-save\_\-page\_\-cache} (\$cache)
+\item 
+\hyperlink{page__manager_8module_a39f5ee30c6173dd1332d1b60cbdb33fd}{page\_\-manager\_\-cache\_\-load} (\$task\_\-name)
+\item 
+\hyperlink{page__manager_8module_abc975a3dfef28560a3db49a0399a930d}{page\_\-manager\_\-handler\_\-get\_\-name} (\$task\_\-name, \$handlers, \$handler)
+\item 
+\hyperlink{page__manager_8module_abcdccf5848b9ac0922724ad19a56c8ae}{page\_\-manager\_\-handler\_\-add\_\-to\_\-page} (\&\$page, \&\$handler, \$title=NULL)
+\item 
+\hyperlink{page__manager_8module_a512d52ff2d441ac923a6dd5ffbff2aa5}{page\_\-manager\_\-load\_\-task\_\-handler} (\$task, \$subtask\_\-id, \$name)
+\item 
+\hyperlink{page__manager_8module_a3752551ca408f4c39310c0c1bf7ea787}{page\_\-manager\_\-load\_\-task\_\-handlers} (\$task, \$subtask\_\-id=NULL, \$default\_\-handlers=NULL)
+\item 
+\hyperlink{page__manager_8module_a1c50184f40b1e3f5af6da2ffca019d62}{page\_\-manager\_\-get\_\-default\_\-task\_\-handlers} (\$task, \$subtask\_\-id)
+\item 
+\hyperlink{page__manager_8module_aa02498e4dadcc2146ba01fbc0a2e6492}{page\_\-manager\_\-compare\_\-task\_\-handlers} (\$result, \$handlers, \$name)
+\item 
+\hyperlink{page__manager_8module_aefe7c3f4d0d7b54cdaea1dea28d6171e}{page\_\-manager\_\-load\_\-sorted\_\-handlers} (\$task, \$subtask\_\-id=NULL, \$enabled=FALSE)
+\item 
+\hyperlink{page__manager_8module_a40e9b153aba4e968d1053f0eeb321d9c}{page\_\-manager\_\-sort\_\-task\_\-handlers} (\$a, \$b)
+\item 
+\hyperlink{page__manager_8module_ab349a10c030f96d61677ded4865a8988}{page\_\-manager\_\-save\_\-task\_\-handler} (\&\$handler)
+\item 
+\hyperlink{page__manager_8module_a5c48ed8479bdab84952c4ef5d98cf414}{page\_\-manager\_\-delete\_\-task\_\-handler} (\$handler)
+\item 
+\hyperlink{page__manager_8module_af83383316a7ee971b7d06aedaa2dcff8}{page\_\-manager\_\-export\_\-task\_\-handler} (\$handler, \$indent= '')
+\item 
+\hyperlink{page__manager_8module_aa3fa7f3e10ba755a9845afab27d4da04}{page\_\-manager\_\-export\_\-task\_\-handler\_\-load} (\$name)
+\item 
+\hyperlink{page__manager_8module_a021f275296e873aa39120d2615292172}{page\_\-manager\_\-new\_\-task\_\-handler} (\$plugin)
+\item 
+\hyperlink{page__manager_8module_a95fb7f141656e679dc592eed96c71d6c}{page\_\-manager\_\-update\_\-task\_\-handler\_\-weight} (\$handler, \$weight)
+\item 
+\hyperlink{page__manager_8module_a11bb15144d50a80ca103073b361c2ec4}{page\_\-manager\_\-get\_\-tasks} ()
+\item 
+\hyperlink{page__manager_8module_a402f17e89478e21a1d0f4b128996e764}{page\_\-manager\_\-get\_\-task} (\$id)
+\item 
+\hyperlink{page__manager_8module_a6246786e5a4176c40200decc53458a77}{page\_\-manager\_\-get\_\-tasks\_\-by\_\-type} (\$type)
+\item 
+\hyperlink{page__manager_8module_aaf5c93fb26ab4eb49813ac07f4a49a01}{page\_\-manager\_\-get\_\-task\_\-subtasks} (\$task)
+\item 
+\hyperlink{page__manager_8module_a4134a18da6e1f9b2d6d3ddca2d77e23d}{page\_\-manager\_\-get\_\-task\_\-subtask} (\$task, \$subtask\_\-id)
+\item 
+\hyperlink{page__manager_8module_a6c34e1fe242a3d9c0b652a159ab5e065}{page\_\-manager\_\-get\_\-task\_\-handlers} ()
+\item 
+\hyperlink{page__manager_8module_a96c2796ab331b1eb6e052f468b4e7e11}{page\_\-manager\_\-get\_\-task\_\-handler} (\$id)
+\item 
+\hyperlink{page__manager_8module_a42b594f0f28dce3778bec96316a58678}{page\_\-manager\_\-get\_\-task\_\-handler\_\-plugins} (\$task, \$all=FALSE)
+\item 
+\hyperlink{page__manager_8module_a9b8d0b4e30a8e5e7111bf5a1784c629a}{page\_\-manager\_\-get\_\-handler\_\-title} (\$plugin, \$handler, \$task, \$subtask\_\-id)
+\item 
+\hyperlink{page__manager_8module_ae7a8599be04f7e436e1e1ab1cad2b67b}{page\_\-manager\_\-get\_\-handler\_\-summary} (\$plugin, \$handler, \$page, \$title=TRUE)
+\item 
+\hyperlink{page__manager_8module_ab0eca887f694137c6e9091bd0fbbf6cb}{page\_\-manager\_\-get\_\-page\_\-summary} (\$task, \$subtask)
+\item 
+\hyperlink{page__manager_8module_a8c0daf8839fb3d464ee6a8303a5b27d5}{page\_\-manager\_\-get\_\-task\_\-id} (\$task\_\-name)
+\item 
+\hyperlink{page__manager_8module_a77ee71b3f2d0a5c4228910dc8553efd1}{page\_\-manager\_\-make\_\-task\_\-name} (\$task\_\-id, \$subtask\_\-id)
+\item 
+\hyperlink{page__manager_8module_a48c0f73f866b9c31d400c04b23b8445e}{page\_\-manager\_\-get\_\-renderer} (\$handler)
+\item 
+\hyperlink{page__manager_8module_afb6c50228189e10200373039a7a703ee}{pm\_\-arg\_\-load} (\$value, \$subtask, \$argument)
+\item 
+\hyperlink{page__manager_8module_a247a1c4742c19716ce79077b7c526b00}{pm\_\-arg\_\-tail\_\-load} (\$value, \$subtask, \$argument, \$map)
+\item 
+\hyperlink{page__manager_8module_a4a9755f49b3bbb286b8643a352eada60}{pm\_\-uid\_\-arg\_\-load} (\$value, \$subtask, \$argument)
+\item 
+\hyperlink{page__manager_8module_a3f58e1c475005eec131f1648a4bf245e}{pm\_\-uid\_\-arg\_\-to\_\-arg} (\$arg)
+\item 
+\hyperlink{page__manager_8module_a7485da6795decccb834c9457e7050917}{page\_\-manager\_\-page\_\-ctools\_\-access\_\-get} (\$argument)
+\item 
+\hyperlink{page__manager_8module_a7e332273ec4049ef62b8f95924f43b47}{page\_\-manager\_\-page\_\-ctools\_\-access\_\-set} (\$argument, \$access)
+\item 
+\hyperlink{page__manager_8module_ad3ef49901d1e2061c124c1580a70cebf}{page\_\-manager\_\-task\_\-handler\_\-ctools\_\-access\_\-get} (\$argument)
+\item 
+\hyperlink{page__manager_8module_a53ad57d493d2eaa1358620d1b50d060c}{page\_\-manager\_\-task\_\-handler\_\-ctools\_\-access\_\-set} (\$argument, \$access)
+\item 
+\hyperlink{page__manager_8module_ab783a148be1cb9606056ed0ccfa24d3a}{page\_\-manager\_\-edit\_\-url} (\$task\_\-name, \$trail=array())
+\item 
+\hyperlink{page__manager_8module_a75d9dfb39efb8b79e8c5771cb288fb2c}{page\_\-manager\_\-menu\_\-link\_\-alter} (\&\$item)
+\item 
+\hyperlink{page__manager_8module_a4236c3858e29d7be98ac206003c5b49b}{page\_\-manager\_\-page\_\-manager\_\-handlers\_\-list} ()
+\item 
+\hyperlink{page__manager_8module_ace4a8a2f8c7273573e7329b844fdc58c}{page\_\-manager\_\-page\_\-manager\_\-pages\_\-to\_\-hook\_\-code} (\$names=array(), \$name= 'foo')
+\item 
+\hyperlink{page__manager_8module_a2f7eaa17ced7d0447b77cf272e7f42a3}{page\_\-manager\_\-get\_\-current\_\-page} (\$page=NULL)
+\item 
+\hyperlink{page__manager_8module_a736c333fee060edd8676d879c15d22a9}{page\_\-manager\_\-panels\_\-dashboard\_\-blocks} (\&\$vars)
+\item 
+\hyperlink{page__manager_8module_a0ca842046b6ffb242872041ef3db981b}{page\_\-manager\_\-addressable\_\-content} (\$address, \$type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The page manager module provides a UI and API to manage pages.
+
+It defines pages, both for system pages, overrides of system pages, and custom pages using Drupal's normal menu system. It allows complex manipulations of these pages, their content, and their hierarchy within the site. These pages can be exported to code for superior revision control. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{page__manager_8module_a1725bd9d5ce31fc2c3c71b9374cee612}{
+\index{page\_\-manager.module@{page\_\-manager.module}!PAGE\_\-MANAGER\_\-CHANGED\_\-CACHED@{PAGE\_\-MANAGER\_\-CHANGED\_\-CACHED}}
+\index{PAGE\_\-MANAGER\_\-CHANGED\_\-CACHED@{PAGE\_\-MANAGER\_\-CHANGED\_\-CACHED}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{PAGE\_\-MANAGER\_\-CHANGED\_\-CACHED}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PAGE\_\-MANAGER\_\-CHANGED\_\-CACHED}}}
+\label{page__manager_8module_a1725bd9d5ce31fc2c3c71b9374cee612}
+Bit flag on the 'changed' value to tell us if an item edited or added. \hypertarget{page__manager_8module_a8b50720174159dd5fe0027078dc67c1b}{
+\index{page\_\-manager.module@{page\_\-manager.module}!PAGE\_\-MANAGER\_\-CHANGED\_\-DELETED@{PAGE\_\-MANAGER\_\-CHANGED\_\-DELETED}}
+\index{PAGE\_\-MANAGER\_\-CHANGED\_\-DELETED@{PAGE\_\-MANAGER\_\-CHANGED\_\-DELETED}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{PAGE\_\-MANAGER\_\-CHANGED\_\-DELETED}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PAGE\_\-MANAGER\_\-CHANGED\_\-DELETED}}}
+\label{page__manager_8module_a8b50720174159dd5fe0027078dc67c1b}
+Bit flag on the 'changed' value to tell us if an item deleted. \hypertarget{page__manager_8module_a67a367c02b464d01501dd7977ff98d57}{
+\index{page\_\-manager.module@{page\_\-manager.module}!PAGE\_\-MANAGER\_\-CHANGED\_\-MOVED@{PAGE\_\-MANAGER\_\-CHANGED\_\-MOVED}}
+\index{PAGE\_\-MANAGER\_\-CHANGED\_\-MOVED@{PAGE\_\-MANAGER\_\-CHANGED\_\-MOVED}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{PAGE\_\-MANAGER\_\-CHANGED\_\-MOVED}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PAGE\_\-MANAGER\_\-CHANGED\_\-MOVED}}}
+\label{page__manager_8module_a67a367c02b464d01501dd7977ff98d57}
+Bit flag on the 'changed' value to tell us if an item was moved. \hypertarget{page__manager_8module_a37b3f0cf36e7fd00e7868c8eb5bf449d}{
+\index{page\_\-manager.module@{page\_\-manager.module}!PAGE\_\-MANAGER\_\-CHANGED\_\-STATUS@{PAGE\_\-MANAGER\_\-CHANGED\_\-STATUS}}
+\index{PAGE\_\-MANAGER\_\-CHANGED\_\-STATUS@{PAGE\_\-MANAGER\_\-CHANGED\_\-STATUS}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{PAGE\_\-MANAGER\_\-CHANGED\_\-STATUS}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PAGE\_\-MANAGER\_\-CHANGED\_\-STATUS}}}
+\label{page__manager_8module_a37b3f0cf36e7fd00e7868c8eb5bf449d}
+Bit flag on the 'changed' value to tell us if an item has had its disabled status changed. 
+
+\subsection{Function Documentation}
+\hypertarget{page__manager_8module_a0ca842046b6ffb242872041ef3db981b}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-addressable\_\-content@{page\_\-manager\_\-addressable\_\-content}}
+\index{page\_\-manager\_\-addressable\_\-content@{page\_\-manager\_\-addressable\_\-content}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-addressable\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-addressable\_\-content (\$ {\em address}, \/  \$ {\em type})}}
+\label{page__manager_8module_a0ca842046b6ffb242872041ef3db981b}
+Implement pseudo-\/hook to fetch addressable content.
+
+For Page Manager, the address will be an array. The first element will be the \$task and the second element will be the \$task\_\-handler. The third elements will be the arguments provided. \hypertarget{page__manager_8module_a39f5ee30c6173dd1332d1b60cbdb33fd}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-cache\_\-load@{page\_\-manager\_\-cache\_\-load}}
+\index{page\_\-manager\_\-cache\_\-load@{page\_\-manager\_\-cache\_\-load}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-cache\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-cache\_\-load (\$ {\em task\_\-name})}}
+\label{page__manager_8module_a39f5ee30c6173dd1332d1b60cbdb33fd}
+Menu callback to load a page manager cache object for menu callbacks. \hypertarget{page__manager_8module_ae48efa1de270237e9dcb4d117cb063a9}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-clear\_\-page\_\-cache@{page\_\-manager\_\-clear\_\-page\_\-cache}}
+\index{page\_\-manager\_\-clear\_\-page\_\-cache@{page\_\-manager\_\-clear\_\-page\_\-cache}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-clear\_\-page\_\-cache}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-clear\_\-page\_\-cache (\$ {\em name})}}
+\label{page__manager_8module_ae48efa1de270237e9dcb4d117cb063a9}
+Remove an item from the object cache. \hypertarget{page__manager_8module_aa02498e4dadcc2146ba01fbc0a2e6492}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-compare\_\-task\_\-handlers@{page\_\-manager\_\-compare\_\-task\_\-handlers}}
+\index{page\_\-manager\_\-compare\_\-task\_\-handlers@{page\_\-manager\_\-compare\_\-task\_\-handlers}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-compare\_\-task\_\-handlers}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-compare\_\-task\_\-handlers (\$ {\em result}, \/  \$ {\em handlers}, \/  \$ {\em name})}}
+\label{page__manager_8module_aa02498e4dadcc2146ba01fbc0a2e6492}
+Compare a single task handler from two lists and provide the correct one.
+
+Task handlers can be gotten from multiple sources. As exportable objects, they can be provided by default hooks and the database. But also, because they are tightly bound to tasks, they can also be provided by default tasks. This function reconciles where to pick up a task handler between the exportables list and the defaults provided by the task itself.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$result}]A list of handlers provided by \hyperlink{export_8inc}{export.inc} \item[{\em \$handlers}]A list of handlers provided by the default task. \item[{\em \$name}]Which handler to compare. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Which handler to use, if any. May be NULL. 
+\end{DoxyReturn}
+\hypertarget{page__manager_8module_a5e41f5889b975464f474f3af5039dd4c}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-ctools\_\-plugin\_\-directory@{page\_\-manager\_\-ctools\_\-plugin\_\-directory}}
+\index{page\_\-manager\_\-ctools\_\-plugin\_\-directory@{page\_\-manager\_\-ctools\_\-plugin\_\-directory}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-ctools\_\-plugin\_\-directory}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-ctools\_\-plugin\_\-directory (\$ {\em owner}, \/  \$ {\em plugin\_\-type})}}
+\label{page__manager_8module_a5e41f5889b975464f474f3af5039dd4c}
+Implements \hyperlink{group__hooks_gaf17a0de7a7ca6e6c30c766ea1e44715e}{hook\_\-ctools\_\-plugin\_\-directory()} to let the system know where our task and task\_\-handler plugins are. \hypertarget{page__manager_8module_a470533a07989fa3abd6ea7eb6a18c065}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-ctools\_\-plugin\_\-type@{page\_\-manager\_\-ctools\_\-plugin\_\-type}}
+\index{page\_\-manager\_\-ctools\_\-plugin\_\-type@{page\_\-manager\_\-ctools\_\-plugin\_\-type}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-ctools\_\-plugin\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-ctools\_\-plugin\_\-type ()}}
+\label{page__manager_8module_a470533a07989fa3abd6ea7eb6a18c065}
+Implements \hyperlink{group__hooks_gacb27d27849a3374ddda0120603d549ac}{hook\_\-ctools\_\-plugin\_\-type()} to inform the plugin system that Page Manager owns task, task\_\-handler, and page\_\-wizard plugin types.
+
+All of these are empty because the defaults all work. \hypertarget{page__manager_8module_a5c48ed8479bdab84952c4ef5d98cf414}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-delete\_\-task\_\-handler@{page\_\-manager\_\-delete\_\-task\_\-handler}}
+\index{page\_\-manager\_\-delete\_\-task\_\-handler@{page\_\-manager\_\-delete\_\-task\_\-handler}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-delete\_\-task\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-delete\_\-task\_\-handler (\$ {\em handler})}}
+\label{page__manager_8module_a5c48ed8479bdab84952c4ef5d98cf414}
+Remove a task handler. \hypertarget{page__manager_8module_ab783a148be1cb9606056ed0ccfa24d3a}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-edit\_\-url@{page\_\-manager\_\-edit\_\-url}}
+\index{page\_\-manager\_\-edit\_\-url@{page\_\-manager\_\-edit\_\-url}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-edit\_\-url}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-edit\_\-url (\$ {\em task\_\-name}, \/  \$ {\em trail} = {\ttfamily array()})}}
+\label{page__manager_8module_ab783a148be1cb9606056ed0ccfa24d3a}
+Form a URL to edit a given page given the trail. \hypertarget{page__manager_8module_af83383316a7ee971b7d06aedaa2dcff8}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-export\_\-task\_\-handler@{page\_\-manager\_\-export\_\-task\_\-handler}}
+\index{page\_\-manager\_\-export\_\-task\_\-handler@{page\_\-manager\_\-export\_\-task\_\-handler}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-export\_\-task\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-export\_\-task\_\-handler (\$ {\em handler}, \/  \$ {\em indent} = {\ttfamily ''})}}
+\label{page__manager_8module_af83383316a7ee971b7d06aedaa2dcff8}
+Export a task handler into code suitable for import or use as a default task handler. \hypertarget{page__manager_8module_aa3fa7f3e10ba755a9845afab27d4da04}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-export\_\-task\_\-handler\_\-load@{page\_\-manager\_\-export\_\-task\_\-handler\_\-load}}
+\index{page\_\-manager\_\-export\_\-task\_\-handler\_\-load@{page\_\-manager\_\-export\_\-task\_\-handler\_\-load}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-export\_\-task\_\-handler\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-export\_\-task\_\-handler\_\-load (\$ {\em name})}}
+\label{page__manager_8module_aa3fa7f3e10ba755a9845afab27d4da04}
+Loads page manager handler for export.
+
+Callback to load page manager handler within \hyperlink{group__export__crud_gafdb2a891145f268c573653fe61c79fa3}{ctools\_\-export\_\-crud\_\-load()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$name The name of the handler to load.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Loaded page manager handler object, extended with external properties. 
+\end{DoxyReturn}
+\hypertarget{page__manager_8module_a2f7eaa17ced7d0447b77cf272e7f42a3}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-get\_\-current\_\-page@{page\_\-manager\_\-get\_\-current\_\-page}}
+\index{page\_\-manager\_\-get\_\-current\_\-page@{page\_\-manager\_\-get\_\-current\_\-page}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-get\_\-current\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-current\_\-page (\$ {\em page} = {\ttfamily NULL})}}
+\label{page__manager_8module_a2f7eaa17ced7d0447b77cf272e7f42a3}
+Get the current page information.
+
+\begin{DoxyReturn}{Returns}
+\$page An array containing the following information.
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item 'name': The name of the page as used in the page manager admin UI.
+\item 'task': The plugin for the task in use. If this is a system page it will contain information about that page, such as what functions it uses.
+\item 'subtask': The plugin for the subtask. If this is a custom page, this will contain information about that custom page. See 'subtask' in this array to get the actual page object.
+\item 'handler': The actual handler object used. If using panels, see \$page\mbox{[}'handler'\mbox{]}-\/$>$conf\mbox{[}'display'\mbox{]} for the actual panels display used to render.
+\item 'contexts': The context objects used to render this page.
+\item 'arguments': The raw arguments from the URL used on this page. 
+\end{DoxyItemize}\hypertarget{page__manager_8module_a1c50184f40b1e3f5af6da2ffca019d62}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-get\_\-default\_\-task\_\-handlers@{page\_\-manager\_\-get\_\-default\_\-task\_\-handlers}}
+\index{page\_\-manager\_\-get\_\-default\_\-task\_\-handlers@{page\_\-manager\_\-get\_\-default\_\-task\_\-handlers}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-get\_\-default\_\-task\_\-handlers}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-default\_\-task\_\-handlers (\$ {\em task}, \/  \$ {\em subtask\_\-id})}}
+\label{page__manager_8module_a1c50184f40b1e3f5af6da2ffca019d62}
+Get the default task handlers from a task, if they exist.
+
+Tasks can contain 'default' task handlers which are provided by the default task. Because these can come from either the task or the subtask, the logic is abstracted to reduce code duplication. \hypertarget{page__manager_8module_ae7a8599be04f7e436e1e1ab1cad2b67b}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-get\_\-handler\_\-summary@{page\_\-manager\_\-get\_\-handler\_\-summary}}
+\index{page\_\-manager\_\-get\_\-handler\_\-summary@{page\_\-manager\_\-get\_\-handler\_\-summary}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-get\_\-handler\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-handler\_\-summary (\$ {\em plugin}, \/  \$ {\em handler}, \/  \$ {\em page}, \/  \$ {\em title} = {\ttfamily TRUE})}}
+\label{page__manager_8module_ae7a8599be04f7e436e1e1ab1cad2b67b}
+Get the admin summary (additional info) for a given handler. \hypertarget{page__manager_8module_a9b8d0b4e30a8e5e7111bf5a1784c629a}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-get\_\-handler\_\-title@{page\_\-manager\_\-get\_\-handler\_\-title}}
+\index{page\_\-manager\_\-get\_\-handler\_\-title@{page\_\-manager\_\-get\_\-handler\_\-title}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-get\_\-handler\_\-title}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-handler\_\-title (\$ {\em plugin}, \/  \$ {\em handler}, \/  \$ {\em task}, \/  \$ {\em subtask\_\-id})}}
+\label{page__manager_8module_a9b8d0b4e30a8e5e7111bf5a1784c629a}
+Get the title for a given handler.
+
+If the plugin has no 'admin title' function, the generic title of the plugin is used instead. \hypertarget{page__manager_8module_a37bf1f336f11680f111b980f1f06f7bb}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-get\_\-page\_\-cache@{page\_\-manager\_\-get\_\-page\_\-cache}}
+\index{page\_\-manager\_\-get\_\-page\_\-cache@{page\_\-manager\_\-get\_\-page\_\-cache}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-get\_\-page\_\-cache}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-page\_\-cache (\$ {\em task\_\-name})}}
+\label{page__manager_8module_a37bf1f336f11680f111b980f1f06f7bb}
+Get the cached changes to a given task handler. \hypertarget{page__manager_8module_ab0eca887f694137c6e9091bd0fbbf6cb}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-get\_\-page\_\-summary@{page\_\-manager\_\-get\_\-page\_\-summary}}
+\index{page\_\-manager\_\-get\_\-page\_\-summary@{page\_\-manager\_\-get\_\-page\_\-summary}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-get\_\-page\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-page\_\-summary (\$ {\em task}, \/  \$ {\em subtask})}}
+\label{page__manager_8module_ab0eca887f694137c6e9091bd0fbbf6cb}
+Get the admin summary (additional info) for a given page. \hypertarget{page__manager_8module_a48c0f73f866b9c31d400c04b23b8445e}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-get\_\-renderer@{page\_\-manager\_\-get\_\-renderer}}
+\index{page\_\-manager\_\-get\_\-renderer@{page\_\-manager\_\-get\_\-renderer}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-get\_\-renderer}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-renderer (\$ {\em handler})}}
+\label{page__manager_8module_a48c0f73f866b9c31d400c04b23b8445e}
+Get the render function for a handler. \hypertarget{page__manager_8module_a402f17e89478e21a1d0f4b128996e764}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-get\_\-task@{page\_\-manager\_\-get\_\-task}}
+\index{page\_\-manager\_\-get\_\-task@{page\_\-manager\_\-get\_\-task}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-get\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-task (\$ {\em id})}}
+\label{page__manager_8module_a402f17e89478e21a1d0f4b128996e764}
+Shortcut function to get a task plugin. \hypertarget{page__manager_8module_a96c2796ab331b1eb6e052f468b4e7e11}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-get\_\-task\_\-handler@{page\_\-manager\_\-get\_\-task\_\-handler}}
+\index{page\_\-manager\_\-get\_\-task\_\-handler@{page\_\-manager\_\-get\_\-task\_\-handler}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-get\_\-task\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-task\_\-handler (\$ {\em id})}}
+\label{page__manager_8module_a96c2796ab331b1eb6e052f468b4e7e11}
+Shortcut function to get a task handler plugin. \hypertarget{page__manager_8module_a42b594f0f28dce3778bec96316a58678}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-get\_\-task\_\-handler\_\-plugins@{page\_\-manager\_\-get\_\-task\_\-handler\_\-plugins}}
+\index{page\_\-manager\_\-get\_\-task\_\-handler\_\-plugins@{page\_\-manager\_\-get\_\-task\_\-handler\_\-plugins}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-get\_\-task\_\-handler\_\-plugins}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-task\_\-handler\_\-plugins (\$ {\em task}, \/  \$ {\em all} = {\ttfamily FALSE})}}
+\label{page__manager_8module_a42b594f0f28dce3778bec96316a58678}
+Retrieve a list of all applicable task handlers for a given task.
+
+This looks at the \$task\mbox{[}'handler type'\mbox{]} and compares that to \$task\_\-handler\mbox{[}'handler type'\mbox{]}. If the task has no type, the id of the task is used instead. \hypertarget{page__manager_8module_a6c34e1fe242a3d9c0b652a159ab5e065}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-get\_\-task\_\-handlers@{page\_\-manager\_\-get\_\-task\_\-handlers}}
+\index{page\_\-manager\_\-get\_\-task\_\-handlers@{page\_\-manager\_\-get\_\-task\_\-handlers}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-get\_\-task\_\-handlers}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-task\_\-handlers ()}}
+\label{page__manager_8module_a6c34e1fe242a3d9c0b652a159ab5e065}
+Shortcut function to get task handler plugins. \hypertarget{page__manager_8module_a8c0daf8839fb3d464ee6a8303a5b27d5}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-get\_\-task\_\-id@{page\_\-manager\_\-get\_\-task\_\-id}}
+\index{page\_\-manager\_\-get\_\-task\_\-id@{page\_\-manager\_\-get\_\-task\_\-id}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-get\_\-task\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-task\_\-id (\$ {\em task\_\-name})}}
+\label{page__manager_8module_a8c0daf8839fb3d464ee6a8303a5b27d5}
+Split a task name into a task id and subtask id, if applicable. \hypertarget{page__manager_8module_a4134a18da6e1f9b2d6d3ddca2d77e23d}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-get\_\-task\_\-subtask@{page\_\-manager\_\-get\_\-task\_\-subtask}}
+\index{page\_\-manager\_\-get\_\-task\_\-subtask@{page\_\-manager\_\-get\_\-task\_\-subtask}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-get\_\-task\_\-subtask}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-task\_\-subtask (\$ {\em task}, \/  \$ {\em subtask\_\-id})}}
+\label{page__manager_8module_a4134a18da6e1f9b2d6d3ddca2d77e23d}
+Fetch all subtasks for a page managertask.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$task}]A loaded \$task plugin object. \item[{\em \$subtask\_\-id}]The subtask ID to load. \end{DoxyParams}
+\hypertarget{page__manager_8module_aaf5c93fb26ab4eb49813ac07f4a49a01}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-get\_\-task\_\-subtasks@{page\_\-manager\_\-get\_\-task\_\-subtasks}}
+\index{page\_\-manager\_\-get\_\-task\_\-subtasks@{page\_\-manager\_\-get\_\-task\_\-subtasks}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-get\_\-task\_\-subtasks}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-task\_\-subtasks (\$ {\em task})}}
+\label{page__manager_8module_aaf5c93fb26ab4eb49813ac07f4a49a01}
+Fetch all subtasks for a page managertask.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$task}]A loaded \$task plugin object. \end{DoxyParams}
+\hypertarget{page__manager_8module_a11bb15144d50a80ca103073b361c2ec4}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-get\_\-tasks@{page\_\-manager\_\-get\_\-tasks}}
+\index{page\_\-manager\_\-get\_\-tasks@{page\_\-manager\_\-get\_\-tasks}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-get\_\-tasks}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-tasks ()}}
+\label{page__manager_8module_a11bb15144d50a80ca103073b361c2ec4}
+Shortcut function to get task plugins. \hypertarget{page__manager_8module_a6246786e5a4176c40200decc53458a77}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-get\_\-tasks\_\-by\_\-type@{page\_\-manager\_\-get\_\-tasks\_\-by\_\-type}}
+\index{page\_\-manager\_\-get\_\-tasks\_\-by\_\-type@{page\_\-manager\_\-get\_\-tasks\_\-by\_\-type}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-get\_\-tasks\_\-by\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-tasks\_\-by\_\-type (\$ {\em type})}}
+\label{page__manager_8module_a6246786e5a4176c40200decc53458a77}
+Get all tasks for a given type. \hypertarget{page__manager_8module_abcdccf5848b9ac0922724ad19a56c8ae}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-handler\_\-add\_\-to\_\-page@{page\_\-manager\_\-handler\_\-add\_\-to\_\-page}}
+\index{page\_\-manager\_\-handler\_\-add\_\-to\_\-page@{page\_\-manager\_\-handler\_\-add\_\-to\_\-page}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-handler\_\-add\_\-to\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-add\_\-to\_\-page (\&\$ {\em page}, \/  \&\$ {\em handler}, \/  \$ {\em title} = {\ttfamily NULL})}}
+\label{page__manager_8module_abcdccf5848b9ac0922724ad19a56c8ae}
+Import a handler into a page.
+
+This is used by both import and clone, since clone just exports the handler and immediately imports it. \hypertarget{page__manager_8module_abc975a3dfef28560a3db49a0399a930d}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-handler\_\-get\_\-name@{page\_\-manager\_\-handler\_\-get\_\-name}}
+\index{page\_\-manager\_\-handler\_\-get\_\-name@{page\_\-manager\_\-handler\_\-get\_\-name}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-handler\_\-get\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-get\_\-name (\$ {\em task\_\-name}, \/  \$ {\em handlers}, \/  \$ {\em handler})}}
+\label{page__manager_8module_abc975a3dfef28560a3db49a0399a930d}
+Generate a unique name for a task handler.
+
+Task handlers need to be named but they aren't allowed to set their own names. Instead, they are named based upon their parent task and type. \hypertarget{page__manager_8module_aefe7c3f4d0d7b54cdaea1dea28d6171e}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-load\_\-sorted\_\-handlers@{page\_\-manager\_\-load\_\-sorted\_\-handlers}}
+\index{page\_\-manager\_\-load\_\-sorted\_\-handlers@{page\_\-manager\_\-load\_\-sorted\_\-handlers}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-load\_\-sorted\_\-handlers}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-load\_\-sorted\_\-handlers (\$ {\em task}, \/  \$ {\em subtask\_\-id} = {\ttfamily NULL}, \/  \$ {\em enabled} = {\ttfamily FALSE})}}
+\label{page__manager_8module_aefe7c3f4d0d7b54cdaea1dea28d6171e}
+Load all task handlers for a given task and subtask and sort them. \hypertarget{page__manager_8module_a512d52ff2d441ac923a6dd5ffbff2aa5}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-load\_\-task\_\-handler@{page\_\-manager\_\-load\_\-task\_\-handler}}
+\index{page\_\-manager\_\-load\_\-task\_\-handler@{page\_\-manager\_\-load\_\-task\_\-handler}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-load\_\-task\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-load\_\-task\_\-handler (\$ {\em task}, \/  \$ {\em subtask\_\-id}, \/  \$ {\em name})}}
+\label{page__manager_8module_a512d52ff2d441ac923a6dd5ffbff2aa5}
+Load a single task handler by name.
+
+Handlers can come from multiple sources; either the database or by normal export method, which is handled by the ctools library, but handlers can also be bundled with task/subtask. We have to check there and perform overrides as appropriate.
+
+Handlers bundled with the task are of a higher priority than default handlers provided by normal code, and are of a lower priority than the database, so we have to check the source of handlers when we have multiple to choose from. \hypertarget{page__manager_8module_a3752551ca408f4c39310c0c1bf7ea787}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-load\_\-task\_\-handlers@{page\_\-manager\_\-load\_\-task\_\-handlers}}
+\index{page\_\-manager\_\-load\_\-task\_\-handlers@{page\_\-manager\_\-load\_\-task\_\-handlers}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-load\_\-task\_\-handlers}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-load\_\-task\_\-handlers (\$ {\em task}, \/  \$ {\em subtask\_\-id} = {\ttfamily NULL}, \/  \$ {\em default\_\-handlers} = {\ttfamily NULL})}}
+\label{page__manager_8module_a3752551ca408f4c39310c0c1bf7ea787}
+Load all task handlers for a given task/subtask. \hypertarget{page__manager_8module_a77ee71b3f2d0a5c4228910dc8553efd1}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-make\_\-task\_\-name@{page\_\-manager\_\-make\_\-task\_\-name}}
+\index{page\_\-manager\_\-make\_\-task\_\-name@{page\_\-manager\_\-make\_\-task\_\-name}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-make\_\-task\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-make\_\-task\_\-name (\$ {\em task\_\-id}, \/  \$ {\em subtask\_\-id})}}
+\label{page__manager_8module_a77ee71b3f2d0a5c4228910dc8553efd1}
+Turn a task id + subtask\_\-id into a task name. \hypertarget{page__manager_8module_a64d2119bb7c032cf8d11b0431a7b4bc0}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-menu@{page\_\-manager\_\-menu}}
+\index{page\_\-manager\_\-menu@{page\_\-manager\_\-menu}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-menu ()}}
+\label{page__manager_8module_a64d2119bb7c032cf8d11b0431a7b4bc0}
+Delegated implementation of hook\_\-menu(). \hypertarget{page__manager_8module_a16da3e1f83cf82d7d13d81847206f135}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-menu\_\-alter@{page\_\-manager\_\-menu\_\-alter}}
+\index{page\_\-manager\_\-menu\_\-alter@{page\_\-manager\_\-menu\_\-alter}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-menu\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-menu\_\-alter (\&\$ {\em items})}}
+\label{page__manager_8module_a16da3e1f83cf82d7d13d81847206f135}
+Implements hook\_\-menu\_\-alter.
+
+Get a list of all tasks and delegate to them. \hypertarget{page__manager_8module_a75d9dfb39efb8b79e8c5771cb288fb2c}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-menu\_\-link\_\-alter@{page\_\-manager\_\-menu\_\-link\_\-alter}}
+\index{page\_\-manager\_\-menu\_\-link\_\-alter@{page\_\-manager\_\-menu\_\-link\_\-alter}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-menu\_\-link\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-menu\_\-link\_\-alter (\&\$ {\em item})}}
+\label{page__manager_8module_a75d9dfb39efb8b79e8c5771cb288fb2c}
+Watch menu links during the menu rebuild, and re-\/parent things if we need to. 
+
+-\/-\/ disabled, concept code -\/-\/ static \$mlids = array(); Keep an array of mlids as links are saved that we can use later. if (isset(\$item\mbox{[}'mlid'\mbox{]})) \{ \$mlids\mbox{[}\$item\mbox{[}'path'\mbox{]}\mbox{]} = \$item\mbox{[}'mlid'\mbox{]}; \}
+
+if (isset(\$item\mbox{[}'parent\_\-path'\mbox{]})) \{ if (isset(\$mlids\mbox{[}\$item\mbox{[}'parent\_\-path'\mbox{]}\mbox{]})) \{ \$item\mbox{[}'plid'\mbox{]} = \$mlids\mbox{[}\$item\mbox{[}'parent\_\-path'\mbox{]}\mbox{]}; \} else \{ Since we didn't already see an mlid, let's check the database for one. \$mlid = db\_\-query('SELECT mlid FROM \{menu\_\-links\} WHERE router\_\-path = :path', array('path' =$>$ \$item\mbox{[}'parent\_\-path'\mbox{]}))-\/$>$fetchField(); if (\$mlid) \{ \$item\mbox{[}'plid'\mbox{]} = \$mlid; \} \} \}\hypertarget{page__manager_8module_a021f275296e873aa39120d2615292172}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-new\_\-task\_\-handler@{page\_\-manager\_\-new\_\-task\_\-handler}}
+\index{page\_\-manager\_\-new\_\-task\_\-handler@{page\_\-manager\_\-new\_\-task\_\-handler}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-new\_\-task\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-new\_\-task\_\-handler (\$ {\em plugin})}}
+\label{page__manager_8module_a021f275296e873aa39120d2615292172}
+Create a new task handler object.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$plugin}]The plugin this task handler is created from. \end{DoxyParams}
+\hypertarget{page__manager_8module_a7485da6795decccb834c9457e7050917}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-page\_\-ctools\_\-access\_\-get@{page\_\-manager\_\-page\_\-ctools\_\-access\_\-get}}
+\index{page\_\-manager\_\-page\_\-ctools\_\-access\_\-get@{page\_\-manager\_\-page\_\-ctools\_\-access\_\-get}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-page\_\-ctools\_\-access\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-page\_\-ctools\_\-access\_\-get (\$ {\em argument})}}
+\label{page__manager_8module_a7485da6795decccb834c9457e7050917}
+Callback for access control ajax form on behalf of \hyperlink{page_8inc}{page.inc} task.
+
+Returns the cached access config and contexts used. \hypertarget{page__manager_8module_a7e332273ec4049ef62b8f95924f43b47}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-page\_\-ctools\_\-access\_\-set@{page\_\-manager\_\-page\_\-ctools\_\-access\_\-set}}
+\index{page\_\-manager\_\-page\_\-ctools\_\-access\_\-set@{page\_\-manager\_\-page\_\-ctools\_\-access\_\-set}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-page\_\-ctools\_\-access\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-page\_\-ctools\_\-access\_\-set (\$ {\em argument}, \/  \$ {\em access})}}
+\label{page__manager_8module_a7e332273ec4049ef62b8f95924f43b47}
+Callback for access control ajax form on behalf of \hyperlink{page_8inc}{page.inc} task.
+
+Writes the changed access to the cache. \hypertarget{page__manager_8module_a4236c3858e29d7be98ac206003c5b49b}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-page\_\-manager\_\-handlers\_\-list@{page\_\-manager\_\-page\_\-manager\_\-handlers\_\-list}}
+\index{page\_\-manager\_\-page\_\-manager\_\-handlers\_\-list@{page\_\-manager\_\-page\_\-manager\_\-handlers\_\-list}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-page\_\-manager\_\-handlers\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-page\_\-manager\_\-handlers\_\-list ()}}
+\label{page__manager_8module_a4236c3858e29d7be98ac206003c5b49b}
+Callback to list handlers available for export. \hypertarget{page__manager_8module_ace4a8a2f8c7273573e7329b844fdc58c}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-page\_\-manager\_\-pages\_\-to\_\-hook\_\-code@{page\_\-manager\_\-page\_\-manager\_\-pages\_\-to\_\-hook\_\-code}}
+\index{page\_\-manager\_\-page\_\-manager\_\-pages\_\-to\_\-hook\_\-code@{page\_\-manager\_\-page\_\-manager\_\-pages\_\-to\_\-hook\_\-code}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-page\_\-manager\_\-pages\_\-to\_\-hook\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-page\_\-manager\_\-pages\_\-to\_\-hook\_\-code (\$ {\em names} = {\ttfamily array()}, \/  \$ {\em name} = {\ttfamily 'foo'})}}
+\label{page__manager_8module_ace4a8a2f8c7273573e7329b844fdc58c}
+Callback to bulk export page manager pages. \hypertarget{page__manager_8module_a736c333fee060edd8676d879c15d22a9}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-panels\_\-dashboard\_\-blocks@{page\_\-manager\_\-panels\_\-dashboard\_\-blocks}}
+\index{page\_\-manager\_\-panels\_\-dashboard\_\-blocks@{page\_\-manager\_\-panels\_\-dashboard\_\-blocks}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-panels\_\-dashboard\_\-blocks}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-panels\_\-dashboard\_\-blocks (\&\$ {\em vars})}}
+\label{page__manager_8module_a736c333fee060edd8676d879c15d22a9}
+Implementation of hook\_\-panels\_\-dashboard\_\-blocks().
+
+Adds page information to the Panels dashboard. \hypertarget{page__manager_8module_a520d2afb3f70e8335e226e9e9c202493}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-permission@{page\_\-manager\_\-permission}}
+\index{page\_\-manager\_\-permission@{page\_\-manager\_\-permission}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-permission}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-permission ()}}
+\label{page__manager_8module_a520d2afb3f70e8335e226e9e9c202493}
+Implements hook\_\-permission(). \hypertarget{page__manager_8module_a5e03ee6eaeb49ed077fac91648d381b4}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-save\_\-page\_\-cache@{page\_\-manager\_\-save\_\-page\_\-cache}}
+\index{page\_\-manager\_\-save\_\-page\_\-cache@{page\_\-manager\_\-save\_\-page\_\-cache}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-save\_\-page\_\-cache}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-save\_\-page\_\-cache (\$ {\em cache})}}
+\label{page__manager_8module_a5e03ee6eaeb49ed077fac91648d381b4}
+Write all changes from the page cache and clear it out. \hypertarget{page__manager_8module_ab349a10c030f96d61677ded4865a8988}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-save\_\-task\_\-handler@{page\_\-manager\_\-save\_\-task\_\-handler}}
+\index{page\_\-manager\_\-save\_\-task\_\-handler@{page\_\-manager\_\-save\_\-task\_\-handler}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-save\_\-task\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-save\_\-task\_\-handler (\&\$ {\em handler})}}
+\label{page__manager_8module_ab349a10c030f96d61677ded4865a8988}
+Write a task handler to the database. \hypertarget{page__manager_8module_a87718088cd075fb9c3c6884df0e33212}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-set\_\-page\_\-cache@{page\_\-manager\_\-set\_\-page\_\-cache}}
+\index{page\_\-manager\_\-set\_\-page\_\-cache@{page\_\-manager\_\-set\_\-page\_\-cache}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-set\_\-page\_\-cache}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-set\_\-page\_\-cache (\$ {\em page})}}
+\label{page__manager_8module_a87718088cd075fb9c3c6884df0e33212}
+Store changes to a task handler in the object cache. \hypertarget{page__manager_8module_a40e9b153aba4e968d1053f0eeb321d9c}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-sort\_\-task\_\-handlers@{page\_\-manager\_\-sort\_\-task\_\-handlers}}
+\index{page\_\-manager\_\-sort\_\-task\_\-handlers@{page\_\-manager\_\-sort\_\-task\_\-handlers}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-sort\_\-task\_\-handlers}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-sort\_\-task\_\-handlers (\$ {\em a}, \/  \$ {\em b})}}
+\label{page__manager_8module_a40e9b153aba4e968d1053f0eeb321d9c}
+Callback for uasort to sort task handlers.
+
+Task handlers are sorted by weight then by name. \hypertarget{page__manager_8module_ad3ef49901d1e2061c124c1580a70cebf}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-task\_\-handler\_\-ctools\_\-access\_\-get@{page\_\-manager\_\-task\_\-handler\_\-ctools\_\-access\_\-get}}
+\index{page\_\-manager\_\-task\_\-handler\_\-ctools\_\-access\_\-get@{page\_\-manager\_\-task\_\-handler\_\-ctools\_\-access\_\-get}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-task\_\-handler\_\-ctools\_\-access\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-task\_\-handler\_\-ctools\_\-access\_\-get (\$ {\em argument})}}
+\label{page__manager_8module_ad3ef49901d1e2061c124c1580a70cebf}
+Callback for access control ajax form on behalf of context task handler.
+
+Returns the cached access config and contexts used. \hypertarget{page__manager_8module_a53ad57d493d2eaa1358620d1b50d060c}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-task\_\-handler\_\-ctools\_\-access\_\-set@{page\_\-manager\_\-task\_\-handler\_\-ctools\_\-access\_\-set}}
+\index{page\_\-manager\_\-task\_\-handler\_\-ctools\_\-access\_\-set@{page\_\-manager\_\-task\_\-handler\_\-ctools\_\-access\_\-set}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-task\_\-handler\_\-ctools\_\-access\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-task\_\-handler\_\-ctools\_\-access\_\-set (\$ {\em argument}, \/  \$ {\em access})}}
+\label{page__manager_8module_a53ad57d493d2eaa1358620d1b50d060c}
+Callback for access control ajax form on behalf of context task handler.
+
+Writes the changed access to the cache. \hypertarget{page__manager_8module_a95fb7f141656e679dc592eed96c71d6c}{
+\index{page\_\-manager.module@{page\_\-manager.module}!page\_\-manager\_\-update\_\-task\_\-handler\_\-weight@{page\_\-manager\_\-update\_\-task\_\-handler\_\-weight}}
+\index{page\_\-manager\_\-update\_\-task\_\-handler\_\-weight@{page\_\-manager\_\-update\_\-task\_\-handler\_\-weight}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{page\_\-manager\_\-update\_\-task\_\-handler\_\-weight}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-update\_\-task\_\-handler\_\-weight (\$ {\em handler}, \/  \$ {\em weight})}}
+\label{page__manager_8module_a95fb7f141656e679dc592eed96c71d6c}
+Set an overidden weight for a task handler.
+
+We do this so that in-\/code task handlers don't need to get written to the database just because they have their weight changed. \hypertarget{page__manager_8module_afb6c50228189e10200373039a7a703ee}{
+\index{page\_\-manager.module@{page\_\-manager.module}!pm\_\-arg\_\-load@{pm\_\-arg\_\-load}}
+\index{pm\_\-arg\_\-load@{pm\_\-arg\_\-load}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{pm\_\-arg\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}pm\_\-arg\_\-load (\$ {\em value}, \/  \$ {\em subtask}, \/  \$ {\em argument})}}
+\label{page__manager_8module_afb6c50228189e10200373039a7a703ee}
+Page manager arg load function because menu system will not load extra files for these; they must be in a .module. \hypertarget{page__manager_8module_a247a1c4742c19716ce79077b7c526b00}{
+\index{page\_\-manager.module@{page\_\-manager.module}!pm\_\-arg\_\-tail\_\-load@{pm\_\-arg\_\-tail\_\-load}}
+\index{pm\_\-arg\_\-tail\_\-load@{pm\_\-arg\_\-tail\_\-load}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{pm\_\-arg\_\-tail\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}pm\_\-arg\_\-tail\_\-load (\$ {\em value}, \/  \$ {\em subtask}, \/  \$ {\em argument}, \/  \$ {\em map})}}
+\label{page__manager_8module_a247a1c4742c19716ce79077b7c526b00}
+Special arg\_\-load function to use menu\_\-tail like functionality to get everything after the arg together as a single value. \hypertarget{page__manager_8module_a4a9755f49b3bbb286b8643a352eada60}{
+\index{page\_\-manager.module@{page\_\-manager.module}!pm\_\-uid\_\-arg\_\-load@{pm\_\-uid\_\-arg\_\-load}}
+\index{pm\_\-uid\_\-arg\_\-load@{pm\_\-uid\_\-arg\_\-load}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{pm\_\-uid\_\-arg\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}pm\_\-uid\_\-arg\_\-load (\$ {\em value}, \/  \$ {\em subtask}, \/  \$ {\em argument})}}
+\label{page__manager_8module_a4a9755f49b3bbb286b8643a352eada60}
+Special menu \_\-load() function for the user:uid argument.
+
+This is just the normal page manager argument. It only exists so that the to\_\-arg can exist. \hypertarget{page__manager_8module_a3f58e1c475005eec131f1648a4bf245e}{
+\index{page\_\-manager.module@{page\_\-manager.module}!pm\_\-uid\_\-arg\_\-to\_\-arg@{pm\_\-uid\_\-arg\_\-to\_\-arg}}
+\index{pm\_\-uid\_\-arg\_\-to\_\-arg@{pm\_\-uid\_\-arg\_\-to\_\-arg}!page_manager.module@{page\_\-manager.module}}
+\subsubsection[{pm\_\-uid\_\-arg\_\-to\_\-arg}]{\setlength{\rightskip}{0pt plus 5cm}pm\_\-uid\_\-arg\_\-to\_\-arg (\$ {\em arg})}}
+\label{page__manager_8module_a3f58e1c475005eec131f1648a4bf245e}
+to\_\-arg function for the user:uid argument to provide the arg for the current global user. 

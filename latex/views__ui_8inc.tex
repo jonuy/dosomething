@@ -1,0 +1,55 @@
+\hypertarget{views__ui_8inc}{
+\section{html/profiles/dosomething/modules/contrib/views/plugins/export\_\-ui/views\_\-ui.inc File Reference}
+\label{views__ui_8inc}\index{html/profiles/dosomething/modules/contrib/views/plugins/export\_\-ui/views\_\-ui.inc@{html/profiles/dosomething/modules/contrib/views/plugins/export\_\-ui/views\_\-ui.inc}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin definition for CTools Export UI integration. 
+
+\subsection{Variable Documentation}
+\hypertarget{views__ui_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{views\_\-ui.inc@{views\_\-ui.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!views_ui.inc@{views\_\-ui.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{views__ui_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'schema' => 'views_view',
+  'access' => 'administer views',
+
+  'menu' => array(
+    'menu item' => 'views',
+    'menu title' => 'Views',
+    'menu description' => 'Manage customized lists of content.',
+  ),
+
+  'title singular' => t('view'),
+  'title singular proper' => t('View'),
+  'title plural' => t('views'),
+  'title plural proper' => t('Views'),
+
+  'handler' => 'views_ui',
+
+  'strings' => array(
+    'confirmation' => array(
+      'revert' => array(
+        'information' => t('This action will permanently remove any customization
+      s made to this view.'),
+        'success' => t('The view has been reverted.'),
+      ),
+      'delete' => array(
+        'information' => t('This action will permanently remove the view from you
+      r database.'),
+        'success' => t('The view has been deleted.'),
+      ),
+    ),
+  ),
+)
+\end{DoxyCode}

@@ -1,0 +1,68 @@
+\hypertarget{views__attachments_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/content\_\-types/views\_\-attachments.inc File Reference}
+\label{views__attachments_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/content\_\-types/views\_\-attachments.inc@{html/profiles/dosomething/modules/contrib/ctools/views\_\-content/plugins/content\_\-types/views\_\-attachments.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{views__attachments_8inc_a5016c22df7090cb06e4ae47745479067}{views\_\-content\_\-views\_\-attachments\_\-content\_\-type\_\-render} (\$subtype, \$conf, \$panel\_\-args, \$context)
+\item 
+\hypertarget{views__attachments_8inc_ad84dbd2d7a47efff1eff47085b930fef}{
+{\bfseries views\_\-content\_\-views\_\-attachments\_\-content\_\-type\_\-edit\_\-form} (\$form, \&\$form\_\-state)}
+\label{views__attachments_8inc_ad84dbd2d7a47efff1eff47085b930fef}
+
+\item 
+\hypertarget{views__attachments_8inc_a48687a9b35ae54c3c865dbec2e839c47}{
+{\bfseries views\_\-content\_\-views\_\-attachments\_\-content\_\-type\_\-edit\_\-form\_\-validate} (\&\$form, \&\$form\_\-state)}
+\label{views__attachments_8inc_a48687a9b35ae54c3c865dbec2e839c47}
+
+\item 
+\hypertarget{views__attachments_8inc_a92760f52a689a99f405db2dae4469585}{
+{\bfseries views\_\-content\_\-views\_\-attachments\_\-content\_\-type\_\-edit\_\-form\_\-submit} (\&\$form, \&\$form\_\-state)}
+\label{views__attachments_8inc_a92760f52a689a99f405db2dae4469585}
+
+\item 
+\hyperlink{views__attachments_8inc_a51ae0ef08eb4eb0ab92f2b739baaddde}{views\_\-content\_\-views\_\-attachments\_\-content\_\-type\_\-admin\_\-title} (\$subtype, \$conf, \$context)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Allow a \hyperlink{classview}{view} context to display its attachment(s). 
+
+\subsection{Function Documentation}
+\hypertarget{views__attachments_8inc_a51ae0ef08eb4eb0ab92f2b739baaddde}{
+\index{views\_\-attachments.inc@{views\_\-attachments.inc}!views\_\-content\_\-views\_\-attachments\_\-content\_\-type\_\-admin\_\-title@{views\_\-content\_\-views\_\-attachments\_\-content\_\-type\_\-admin\_\-title}}
+\index{views\_\-content\_\-views\_\-attachments\_\-content\_\-type\_\-admin\_\-title@{views\_\-content\_\-views\_\-attachments\_\-content\_\-type\_\-admin\_\-title}!views_attachments.inc@{views\_\-attachments.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-attachments\_\-content\_\-type\_\-admin\_\-title}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-attachments\_\-content\_\-type\_\-admin\_\-title (\$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em context})}}
+\label{views__attachments_8inc_a51ae0ef08eb4eb0ab92f2b739baaddde}
+Returns the administrative title for a type. \hypertarget{views__attachments_8inc_a5016c22df7090cb06e4ae47745479067}{
+\index{views\_\-attachments.inc@{views\_\-attachments.inc}!views\_\-content\_\-views\_\-attachments\_\-content\_\-type\_\-render@{views\_\-content\_\-views\_\-attachments\_\-content\_\-type\_\-render}}
+\index{views\_\-content\_\-views\_\-attachments\_\-content\_\-type\_\-render@{views\_\-content\_\-views\_\-attachments\_\-content\_\-type\_\-render}!views_attachments.inc@{views\_\-attachments.inc}}
+\subsubsection[{views\_\-content\_\-views\_\-attachments\_\-content\_\-type\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-content\_\-views\_\-attachments\_\-content\_\-type\_\-render (\$ {\em subtype}, \/  \$ {\em conf}, \/  \$ {\em panel\_\-args}, \/  \$ {\em context})}}
+\label{views__attachments_8inc_a5016c22df7090cb06e4ae47745479067}
+Render the node\_\-terms content type. 
+
+\subsection{Variable Documentation}
+\hypertarget{views__attachments_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{views\_\-attachments.inc@{views\_\-attachments.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!views_attachments.inc@{views\_\-attachments.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{views__attachments_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t('View attachment'),
+  'category' => t('View context'),
+  'icon' => 'icon_views_page.png',
+  'description' => t('Display the attachments on a view context.'),
+  'required context' => new ctools_context_required(t('View'), 'view'),
+  'defaults' => array(
+    'which' => array(),
+  ),
+)
+\end{DoxyCode}

@@ -1,0 +1,141 @@
+\hypertarget{classviews__plugin__display__feed}{
+\section{views\_\-plugin\_\-display\_\-feed Class Reference}
+\label{classviews__plugin__display__feed}\index{views\_\-plugin\_\-display\_\-feed@{views\_\-plugin\_\-display\_\-feed}}
+}
+Inheritance diagram for views\_\-plugin\_\-display\_\-feed::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classviews__plugin__display__feed}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__plugin__display__feed_a3bec55bee6054fe0d5aef045840cd61f}{
+{\bfseries init} (\&\$\hyperlink{classview}{view}, \&\$display, \$options=NULL)}
+\label{classviews__plugin__display__feed_a3bec55bee6054fe0d5aef045840cd61f}
+
+\item 
+\hyperlink{classviews__plugin__display__feed_a4bc729e21f5578c13d420bbaf3c388c5}{uses\_\-breadcrumb} ()
+\item 
+\hyperlink{classviews__plugin__display__feed_a9a7886409056fe5906021a70d2f41c14}{get\_\-style\_\-type} ()
+\item 
+\hyperlink{classviews__plugin__display__feed_a6bfa566313f3f8fba85751554567e2dd}{execute} ()
+\item 
+\hyperlink{classviews__plugin__display__feed_ae5e20d2999e052f50486b5d03b4fb105}{preview} ()
+\item 
+\hyperlink{classviews__plugin__display__feed_a661fe08fd1be956d5b5cc40f36daf26b}{render} ()
+\item 
+\hyperlink{classviews__plugin__display__feed_aadbff7e4fb0bc05dfee8bc38ea1349dc}{defaultable\_\-sections} (\$section=NULL)
+\item 
+\hypertarget{classviews__plugin__display__feed_a9f737ab801100dafa8f1020c0737b598}{
+{\bfseries option\_\-definition} ()}
+\label{classviews__plugin__display__feed_a9f737ab801100dafa8f1020c0737b598}
+
+\item 
+\hyperlink{classviews__plugin__display__feed_a5c0b5faad36090985c85b16a454023a6}{options\_\-summary} (\&\$categories, \&\$options)
+\item 
+\hyperlink{classviews__plugin__display__feed_abe0a41d577b52de992279986d6c8c2d9}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__display__feed_ab7cca15934456ddb26045f03483899fb}{options\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__display__feed_aea8b688de38f11854afdb4194e87f59d}{attach\_\-to} (\$display\_\-id)
+\item 
+\hyperlink{classviews__plugin__display__feed_aa61e05dca3b82b696f6ea10356873a8b}{uses\_\-link\_\-display} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The plugin that handles a feed, such as RSS or atom.
+
+For the most part, feeds are page displays but with some subtle differences. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__plugin__display__feed_aea8b688de38f11854afdb4194e87f59d}{
+\index{views\_\-plugin\_\-display\_\-feed@{views\_\-plugin\_\-display\_\-feed}!attach\_\-to@{attach\_\-to}}
+\index{attach\_\-to@{attach\_\-to}!views_plugin_display_feed@{views\_\-plugin\_\-display\_\-feed}}
+\subsubsection[{attach\_\-to}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-feed::attach\_\-to (\$ {\em display\_\-id})}}
+\label{classviews__plugin__display__feed_aea8b688de38f11854afdb4194e87f59d}
+Attach to another \hyperlink{classview}{view}. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_aa74683048bca4e740cb7e25ae4c527d4}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__feed_aadbff7e4fb0bc05dfee8bc38ea1349dc}{
+\index{views\_\-plugin\_\-display\_\-feed@{views\_\-plugin\_\-display\_\-feed}!defaultable\_\-sections@{defaultable\_\-sections}}
+\index{defaultable\_\-sections@{defaultable\_\-sections}!views_plugin_display_feed@{views\_\-plugin\_\-display\_\-feed}}
+\subsubsection[{defaultable\_\-sections}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-feed::defaultable\_\-sections (\$ {\em section} = {\ttfamily NULL})}}
+\label{classviews__plugin__display__feed_aadbff7e4fb0bc05dfee8bc38ea1349dc}
+Static member function to list which sections are defaultable and what items each section contains. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_a1ff9cd1b5762dde8765e608efdec8ec4}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__feed_a6bfa566313f3f8fba85751554567e2dd}{
+\index{views\_\-plugin\_\-display\_\-feed@{views\_\-plugin\_\-display\_\-feed}!execute@{execute}}
+\index{execute@{execute}!views_plugin_display_feed@{views\_\-plugin\_\-display\_\-feed}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-feed::execute ()}}
+\label{classviews__plugin__display__feed_a6bfa566313f3f8fba85751554567e2dd}
+Feeds do not go through the normal page theming mechanism. Instead, they go through their own little theme function and then return NULL so that Drupal believes that the page has already rendered itself...which it has. 
+
+Reimplemented from \hyperlink{classviews__plugin__display__page_a943b71fc873e5d09f548b69ba314b674}{views\_\-plugin\_\-display\_\-page}.\hypertarget{classviews__plugin__display__feed_a9a7886409056fe5906021a70d2f41c14}{
+\index{views\_\-plugin\_\-display\_\-feed@{views\_\-plugin\_\-display\_\-feed}!get\_\-style\_\-type@{get\_\-style\_\-type}}
+\index{get\_\-style\_\-type@{get\_\-style\_\-type}!views_plugin_display_feed@{views\_\-plugin\_\-display\_\-feed}}
+\subsubsection[{get\_\-style\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-feed::get\_\-style\_\-type ()}}
+\label{classviews__plugin__display__feed_a9a7886409056fe5906021a70d2f41c14}
+Displays can require a certain type of style plugin. By default, they will be 'normal'. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_a03f77cb37c3c3219d031c153aa59d20e}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__feed_abe0a41d577b52de992279986d6c8c2d9}{
+\index{views\_\-plugin\_\-display\_\-feed@{views\_\-plugin\_\-display\_\-feed}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_plugin_display_feed@{views\_\-plugin\_\-display\_\-feed}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-feed::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__display__feed_abe0a41d577b52de992279986d6c8c2d9}
+Provide the default form for setting options. 
+
+Reimplemented from \hyperlink{classviews__plugin__display__page_aa8267a4774b92a7b47a3768ac98aac36}{views\_\-plugin\_\-display\_\-page}.\hypertarget{classviews__plugin__display__feed_ab7cca15934456ddb26045f03483899fb}{
+\index{views\_\-plugin\_\-display\_\-feed@{views\_\-plugin\_\-display\_\-feed}!options\_\-submit@{options\_\-submit}}
+\index{options\_\-submit@{options\_\-submit}!views_plugin_display_feed@{views\_\-plugin\_\-display\_\-feed}}
+\subsubsection[{options\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-feed::options\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__display__feed_ab7cca15934456ddb26045f03483899fb}
+Perform any necessary changes to the form values prior to storage. There is no need for this function to actually store the data. 
+
+Reimplemented from \hyperlink{classviews__plugin__display__page_a9b03d35a15fcfcae4a474ea56b6ca5b6}{views\_\-plugin\_\-display\_\-page}.\hypertarget{classviews__plugin__display__feed_a5c0b5faad36090985c85b16a454023a6}{
+\index{views\_\-plugin\_\-display\_\-feed@{views\_\-plugin\_\-display\_\-feed}!options\_\-summary@{options\_\-summary}}
+\index{options\_\-summary@{options\_\-summary}!views_plugin_display_feed@{views\_\-plugin\_\-display\_\-feed}}
+\subsubsection[{options\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-feed::options\_\-summary (\&\$ {\em categories}, \/  \&\$ {\em options})}}
+\label{classviews__plugin__display__feed_a5c0b5faad36090985c85b16a454023a6}
+Provide the summary for page options in the views UI.
+
+This output is returned as an array. 
+
+Reimplemented from \hyperlink{classviews__plugin__display__page_a47de087f3201600b057e0d4a55eef48c}{views\_\-plugin\_\-display\_\-page}.\hypertarget{classviews__plugin__display__feed_ae5e20d2999e052f50486b5d03b4fb105}{
+\index{views\_\-plugin\_\-display\_\-feed@{views\_\-plugin\_\-display\_\-feed}!preview@{preview}}
+\index{preview@{preview}!views_plugin_display_feed@{views\_\-plugin\_\-display\_\-feed}}
+\subsubsection[{preview}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-feed::preview ()}}
+\label{classviews__plugin__display__feed_ae5e20d2999e052f50486b5d03b4fb105}
+Fully render the display for the purposes of a live preview or some other AJAXy reason. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_a39a392ae163b9d5850559e3cf098e64f}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__feed_a661fe08fd1be956d5b5cc40f36daf26b}{
+\index{views\_\-plugin\_\-display\_\-feed@{views\_\-plugin\_\-display\_\-feed}!render@{render}}
+\index{render@{render}!views_plugin_display_feed@{views\_\-plugin\_\-display\_\-feed}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-feed::render ()}}
+\label{classviews__plugin__display__feed_a661fe08fd1be956d5b5cc40f36daf26b}
+Instead of going through the standard views\_\-view.tpl.php, delegate this to the style handler. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_acf230a4b44b452c9469f5df92e58e32e}{views\_\-plugin\_\-display}.\hypertarget{classviews__plugin__display__feed_a4bc729e21f5578c13d420bbaf3c388c5}{
+\index{views\_\-plugin\_\-display\_\-feed@{views\_\-plugin\_\-display\_\-feed}!uses\_\-breadcrumb@{uses\_\-breadcrumb}}
+\index{uses\_\-breadcrumb@{uses\_\-breadcrumb}!views_plugin_display_feed@{views\_\-plugin\_\-display\_\-feed}}
+\subsubsection[{uses\_\-breadcrumb}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-feed::uses\_\-breadcrumb ()}}
+\label{classviews__plugin__display__feed_a4bc729e21f5578c13d420bbaf3c388c5}
+Check to see if the display needs a breadcrumb
+
+By default, displays do not need breadcrumbs 
+
+Reimplemented from \hyperlink{classviews__plugin__display__page_acbdafb32168f809b28e083d654399f3f}{views\_\-plugin\_\-display\_\-page}.\hypertarget{classviews__plugin__display__feed_aa61e05dca3b82b696f6ea10356873a8b}{
+\index{views\_\-plugin\_\-display\_\-feed@{views\_\-plugin\_\-display\_\-feed}!uses\_\-link\_\-display@{uses\_\-link\_\-display}}
+\index{uses\_\-link\_\-display@{uses\_\-link\_\-display}!views_plugin_display_feed@{views\_\-plugin\_\-display\_\-feed}}
+\subsubsection[{uses\_\-link\_\-display}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-display\_\-feed::uses\_\-link\_\-display ()}}
+\label{classviews__plugin__display__feed_aa61e05dca3b82b696f6ea10356873a8b}
+Check to see if the display has some need to link to another display.
+
+For the most part, displays without a path will use a link display. However, sometimes displays that have a path might also need to link to another display. This is true for feeds. 
+
+Reimplemented from \hyperlink{classviews__plugin__display_a64d6d3c0e51efde2e050d36fbd3457dc}{views\_\-plugin\_\-display}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/plugins/\hyperlink{views__plugin__display__feed_8inc}{views\_\-plugin\_\-display\_\-feed.inc}\end{DoxyCompactItemize}

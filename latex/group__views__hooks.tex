@@ -1,0 +1,381 @@
+\hypertarget{group__views__hooks}{
+\section{Views hooks}
+\label{group__views__hooks}\index{Views hooks@{Views hooks}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__views__hooks_ga227057901681e4a33e33c199c7a8c989}{hook\_\-views\_\-data} ()
+\item 
+\hyperlink{group__views__hooks_ga6ae0bb0d2385e03c32b57625b6d35826}{hook\_\-views\_\-data\_\-alter} (\&\$data)
+\item 
+\hyperlink{group__views__hooks_ga23f6e9972b2ed84fc54b7ff63f44477d}{hook\_\-views\_\-plugins} ()
+\item 
+\hyperlink{group__views__hooks_ga6c4e4c2a769b0017bf0edcd0adae57e9}{hook\_\-views\_\-plugins\_\-alter} (\&\$plugins)
+\item 
+\hyperlink{group__views__hooks_gac67ffd4a2f61f9814ee37b541c472c47}{hook\_\-views\_\-api} ()
+\item 
+\hyperlink{group__views__hooks_ga23edb74860682fa88f75cf94b97c2e15}{hook\_\-views\_\-default\_\-views} ()
+\item 
+\hyperlink{group__views__hooks_gacd31035a6ae9c7baf05ad034d6a65768}{hook\_\-views\_\-default\_\-views\_\-alter} (\&\$views)
+\item 
+\hyperlink{group__views__hooks_gac3628ab1f08eee5a2bd9c3c4b5bd4c3b}{hook\_\-views\_\-query\_\-substitutions} (\$\hyperlink{classview}{view})
+\item 
+\hyperlink{group__views__hooks_gaf51ae4253a5a2215dbf8dc56d8be7e60}{hook\_\-views\_\-form\_\-substitutions} ()
+\item 
+\hyperlink{group__views__hooks_ga471b90caa886a4e4239a839d6bf7a963}{hook\_\-views\_\-pre\_\-view} (\&\$\hyperlink{classview}{view}, \&\$display\_\-id, \&\$args)
+\item 
+\hyperlink{group__views__hooks_ga1c3fc52e2854310f84eeb43b98a0ba64}{hook\_\-views\_\-pre\_\-build} (\&\$\hyperlink{classview}{view})
+\item 
+\hyperlink{group__views__hooks_ga1c869865c1fafafcfb8a31a1fbc5c135}{hook\_\-views\_\-post\_\-build} (\&\$\hyperlink{classview}{view})
+\item 
+\hyperlink{group__views__hooks_gaf7582b210bdd367d6006c7dc62304475}{hook\_\-views\_\-pre\_\-execute} (\&\$\hyperlink{classview}{view})
+\item 
+\hyperlink{group__views__hooks_ga52e5f67061bf3a8cb9f8bf208d9a1357}{hook\_\-views\_\-post\_\-execute} (\&\$\hyperlink{classview}{view})
+\item 
+\hyperlink{group__views__hooks_gab88d5c49ec4ad30dba2be34327d5b0cc}{hook\_\-views\_\-pre\_\-render} (\&\$\hyperlink{classview}{view})
+\item 
+\hyperlink{group__views__hooks_ga21cc61642e5cafc23ec621f07dae1f4b}{hook\_\-views\_\-post\_\-render} (\&\$\hyperlink{classview}{view}, \&\$output, \&\$cache)
+\item 
+\hyperlink{group__views__hooks_gaf4d538493930fe0fa0ce6fb3bf42c156}{hook\_\-views\_\-query\_\-alter} (\&\$\hyperlink{classview}{view}, \&\$query)
+\item 
+\hyperlink{group__views__hooks_gafeafa28dd3e140b2d4f8cfdfc7d76922}{hook\_\-views\_\-preview\_\-info\_\-alter} (\&\$rows, \$\hyperlink{classview}{view})
+\item 
+\hyperlink{group__views__hooks_ga376184982a8ac07a1da0708b4975b6be}{hook\_\-views\_\-ui\_\-display\_\-top\_\-links\_\-alter} (\&\$links, \$\hyperlink{classview}{view}, \$display\_\-id)
+\item 
+\hyperlink{group__views__hooks_gac5c4edbedfa01ac99618dfa7bbc4e6a2}{hook\_\-views\_\-ajax\_\-data\_\-alter} (\&\$commands, \$\hyperlink{classview}{view})
+\item 
+\hyperlink{group__views__hooks_ga4d3be7a9646f70c9a5d321931135dd84}{hook\_\-views\_\-invalidate\_\-cache} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Hooks that can be implemented by other modules in order to implement the Views API. 
+
+\subsection{Function Documentation}
+\hypertarget{group__views__hooks_gac5c4edbedfa01ac99618dfa7bbc4e6a2}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-ajax\_\-data\_\-alter@{hook\_\-views\_\-ajax\_\-data\_\-alter}}
+\index{hook\_\-views\_\-ajax\_\-data\_\-alter@{hook\_\-views\_\-ajax\_\-data\_\-alter}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-ajax\_\-data\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-ajax\_\-data\_\-alter (\&\$ {\em commands}, \/  \$ {\em view})}}
+\label{group__views__hooks_gac5c4edbedfa01ac99618dfa7bbc4e6a2}
+This hook allows to alter the commands which are used on a views ajax request.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$commands}]An array of ajax commands \item[{\em \$view}]\hyperlink{classview}{view} The \hyperlink{classview}{view} which is requested. \end{DoxyParams}
+\hypertarget{group__views__hooks_gac67ffd4a2f61f9814ee37b541c472c47}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-api@{hook\_\-views\_\-api}}
+\index{hook\_\-views\_\-api@{hook\_\-views\_\-api}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-api}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-api ()}}
+\label{group__views__hooks_gac67ffd4a2f61f9814ee37b541c472c47}
+Register View API information.
+
+This is required for your module to have its include files loaded; for example, when implementing \hyperlink{group__views__hooks_ga23edb74860682fa88f75cf94b97c2e15}{hook\_\-views\_\-default\_\-views()}.
+
+\begin{DoxyReturn}{Returns}
+An array with the following possible keys:
+\begin{DoxyItemize}
+\item api: (required) The version of the Views API the module implements.
+\item path: (optional) If includes are stored somewhere other than within the root module directory, specify its path here.
+\item template path: (optional) A path where the module has stored it's views template files. When you have specificed this key views automatically uses the template files for the views. You can use the same naming conventions like for normal views template files. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{group__views__hooks_ga227057901681e4a33e33c199c7a8c989}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-data@{hook\_\-views\_\-data}}
+\index{hook\_\-views\_\-data@{hook\_\-views\_\-data}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-data ()}}
+\label{group__views__hooks_ga227057901681e4a33e33c199c7a8c989}
+Describes data tables (or the equivalent) to Views.
+
+This hook should be placed in MODULENAME.views.inc and it will be auto-\/loaded. MODULENAME.views.inc must be in the directory specified by the 'path' key returned by MODULENAME\_\-views\_\-api(), or the same directory as the .module file, if 'path' is unspecified.
+
+\begin{DoxyReturn}{Returns}
+An associative array describing the data structure. Primary key is the name used internally by Views for the table(s) – usually the actual table name. The values for the key entries are described in detail below. 
+\end{DoxyReturn}
+\hypertarget{group__views__hooks_ga6ae0bb0d2385e03c32b57625b6d35826}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-data\_\-alter@{hook\_\-views\_\-data\_\-alter}}
+\index{hook\_\-views\_\-data\_\-alter@{hook\_\-views\_\-data\_\-alter}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-data\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-data\_\-alter (\&\$ {\em data})}}
+\label{group__views__hooks_ga6ae0bb0d2385e03c32b57625b6d35826}
+Alter table structure.
+
+You can add/edit/remove existing tables defined by \hyperlink{group__views__hooks_ga227057901681e4a33e33c199c7a8c989}{hook\_\-views\_\-data()}.
+
+This hook should be placed in MODULENAME.views.inc and it will be auto-\/loaded. MODULENAME.views.inc must be in the directory specified by the 'path' key returned by MODULENAME\_\-views\_\-api(), or the same directory as the .module file, if 'path' is unspecified.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$data}]An array of all Views data, passed by reference. See \hyperlink{group__views__hooks_ga227057901681e4a33e33c199c7a8c989}{hook\_\-views\_\-data()} for structure.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__views__hooks_ga227057901681e4a33e33c199c7a8c989}{hook\_\-views\_\-data()} 
+\end{DoxySeeAlso}
+\hypertarget{group__views__hooks_ga23edb74860682fa88f75cf94b97c2e15}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-default\_\-views@{hook\_\-views\_\-default\_\-views}}
+\index{hook\_\-views\_\-default\_\-views@{hook\_\-views\_\-default\_\-views}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-default\_\-views}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-default\_\-views ()}}
+\label{group__views__hooks_ga23edb74860682fa88f75cf94b97c2e15}
+This hook allows modules to provide their own views which can either be used as-\/is or as a \char`\"{}starter\char`\"{} for users to build from.
+
+This hook should be placed in MODULENAME.views\_\-default.inc and it will be auto-\/loaded. MODULENAME.views\_\-default.inc must be in the directory specified by the 'path' key returned by MODULENAME\_\-views\_\-api(), or the same directory as the .module file, if 'path' is unspecified.
+
+The \$view-\/$>$disabled boolean flag indicates whether the View should be enabled (FALSE) or disabled (TRUE) by default.
+
+\begin{DoxyReturn}{Returns}
+An associative array containing the structures of views, as generated from the Export tab, keyed by the \hyperlink{classview}{view} name. A best practice is to go through and add t() to all title and label strings, with the exception of menu strings. 
+\end{DoxyReturn}
+\hypertarget{group__views__hooks_gacd31035a6ae9c7baf05ad034d6a65768}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-default\_\-views\_\-alter@{hook\_\-views\_\-default\_\-views\_\-alter}}
+\index{hook\_\-views\_\-default\_\-views\_\-alter@{hook\_\-views\_\-default\_\-views\_\-alter}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-default\_\-views\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-default\_\-views\_\-alter (\&\$ {\em views})}}
+\label{group__views__hooks_gacd31035a6ae9c7baf05ad034d6a65768}
+Alter default views defined by other modules.
+
+This hook is called right before all default views are cached to the database. It takes a keyed array of views by reference.
+
+Example usage to add a field to a \hyperlink{classview}{view}: 
+\begin{DoxyCode}
+   $handler =& $view->display['DISPLAY_ID']->handler;
+   // Add the user name field to the view.
+   $handler->display->display_options['fields']['name']['id'] = 'name';
+   $handler->display->display_options['fields']['name']['table'] = 'users';
+   $handler->display->display_options['fields']['name']['field'] = 'name';
+   $handler->display->display_options['fields']['name']['label'] = 'Author';
+   $handler->display->display_options['fields']['name']['link_to_user'] = 1;
+\end{DoxyCode}
+ \hypertarget{group__views__hooks_gaf51ae4253a5a2215dbf8dc56d8be7e60}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-form\_\-substitutions@{hook\_\-views\_\-form\_\-substitutions}}
+\index{hook\_\-views\_\-form\_\-substitutions@{hook\_\-views\_\-form\_\-substitutions}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-form\_\-substitutions}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-form\_\-substitutions ()}}
+\label{group__views__hooks_gaf51ae4253a5a2215dbf8dc56d8be7e60}
+This hook is called to get a list of placeholders and their substitutions, used when preprocessing a View with form elements.
+
+\begin{DoxyReturn}{Returns}
+An array with keys being the strings to replace, and the values the strings to replace them with. 
+\end{DoxyReturn}
+\hypertarget{group__views__hooks_ga4d3be7a9646f70c9a5d321931135dd84}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-invalidate\_\-cache@{hook\_\-views\_\-invalidate\_\-cache}}
+\index{hook\_\-views\_\-invalidate\_\-cache@{hook\_\-views\_\-invalidate\_\-cache}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-invalidate\_\-cache}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-invalidate\_\-cache ()}}
+\label{group__views__hooks_ga4d3be7a9646f70c9a5d321931135dd84}
+Allow modules to respond to the Views cache being invalidated.
+
+This hook should fire whenever a \hyperlink{classview}{view} is enabled, disabled, created, updated, or deleted.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{views_8module_a51e180fd9efb14998bb83aa5c9118867}{views\_\-invalidate\_\-cache()} 
+\end{DoxySeeAlso}
+\hypertarget{group__views__hooks_ga23f6e9972b2ed84fc54b7ff63f44477d}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-plugins@{hook\_\-views\_\-plugins}}
+\index{hook\_\-views\_\-plugins@{hook\_\-views\_\-plugins}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-plugins}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-plugins ()}}
+\label{group__views__hooks_ga23f6e9972b2ed84fc54b7ff63f44477d}
+Describes plugins defined by the module.
+
+This hook should be placed in MODULENAME.views.inc and it will be auto-\/loaded. MODULENAME.views.inc must be in the directory specified by the 'path' key returned by MODULENAME\_\-views\_\-api(), or the same directory as the .module file, if 'path' is unspecified. All plugin files need to be referenced in MODULENAME.info with the files\mbox{[}\mbox{]} directive.
+
+\begin{DoxyReturn}{Returns}
+An array on the form \$plugins\mbox{[}'PLUGIN TYPE'\mbox{]}\mbox{[}'PLUGIN NAME'\mbox{]}. The plugin must be one of row, display, display\_\-extender, style, argument default, argument validator, access, query, cache, pager, exposed\_\-form or localization. The plugin name should be prefixed with your module name. The value for each entry is an associateive array that may contain the following entries:
+\begin{DoxyItemize}
+\item Used by all plugin types:
+\begin{DoxyItemize}
+\item title (required): The name of the plugin, as shown in Views. Wrap in t().
+\item handler (required): The name of the file containing the class describing the handler, which must also be the name of the handler's class.
+\item path: Path to the handler. Only required if the handler is not placed in the same folder as the .module file or in the subfolder 'views'.
+\item parent: The name of the plugin this plugin extends. Since Drupal 7 this is no longer required, but may still be useful from a code readability perspective.
+\item no ui: Set to TRUE to denote that the plugin doesn't appear to be selectable in the ui, though on the api side they still exists.
+\item uses options: Set to TRUE to denote that the plugin has an additional options form.
+\item help: A short help text, wrapped in t() used as description on the plugin settings form.
+\item help topic: The name of an entry by advanced help for the plugin.
+\item theme: The name of a theme suggestion to use for the display.
+\item js: An array with paths to js files that should be included for the display. Note that the path should be relative Drupal root, not module root.
+\item type: Each plugin can specify a type parameter to group certain plugins together. For example all row plugins related to feeds are grouped together, because a rss style plugin only accepts feed row plugins.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item Used by display plugins:
+\begin{DoxyItemize}
+\item admin: The administrative name of the display, as displayed on the Views overview and also used as default name for new displays. Wrap in t().
+\item no remove: Set to TRUE to make the display non-\/removable. (Basically only used for the master/default display.)
+\item use ajax: Set to TRUE to allow AJAX loads in the display. If it's disabled there will be no ajax option in the ui.
+\item use pager: Set to TRUE to allow paging in the display.
+\item use more: Set to TRUE to allow the 'use more' setting in the display.
+\item accept attachments: Set to TRUE to allow attachment displays to be attached to this display type.
+\item contextual links locations: An array with places where contextual links should be added. Can for example be 'page' or 'block'. If you don't specify it there will be contextual links around the rendered \hyperlink{classview}{view}. If this is not set or regions have been specified, views will display an option to 'hide contextual links'. Use an empty array if you do not want this.
+\item uses hook menu: Set to TRUE to have the display included by \hyperlink{views_8module_a927f922bf3e583010e7deb46db1cbb4e}{views\_\-menu\_\-alter()}. views\_\-menu\_\-alter executes then execute\_\-hook\_\-menu on the display object.
+\item uses hook block: Set to TRUE to have the display included by \hyperlink{views_8module_a394aa81d1c40be16ebc29acb2fdae0fc}{views\_\-block\_\-info()}.
+\item theme: The name of a theme suggestion to use for the display.
+\item js: An array with paths to js files that should be included for the display. Note that the path should be relative Drupal root, not module root.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item Used by style plugins:
+\begin{DoxyItemize}
+\item uses row plugin: Set to TRUE to allow row plugins for this style.
+\item uses row class: Set to TRUE to allow the CSS class settings for rows.
+\item uses fields: Set to TRUE to have the style plugin accept field handlers.
+\item uses grouping: Set to TRUE to allow the grouping settings for rows.
+\item even empty: May have the value 'even empty' to tell Views that the style should be rendered even if there are no results.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item Used by row plugins:
+\begin{DoxyItemize}
+\item uses fields: Set to TRUE to have the row plugin accept field handlers. 
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{group__views__hooks_ga6c4e4c2a769b0017bf0edcd0adae57e9}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-plugins\_\-alter@{hook\_\-views\_\-plugins\_\-alter}}
+\index{hook\_\-views\_\-plugins\_\-alter@{hook\_\-views\_\-plugins\_\-alter}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-plugins\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-plugins\_\-alter (\&\$ {\em plugins})}}
+\label{group__views__hooks_ga6c4e4c2a769b0017bf0edcd0adae57e9}
+Alter existing plugins data, defined by modules.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__views__hooks_ga23f6e9972b2ed84fc54b7ff63f44477d}{hook\_\-views\_\-plugins()} 
+\end{DoxySeeAlso}
+\hypertarget{group__views__hooks_ga1c869865c1fafafcfb8a31a1fbc5c135}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-post\_\-build@{hook\_\-views\_\-post\_\-build}}
+\index{hook\_\-views\_\-post\_\-build@{hook\_\-views\_\-post\_\-build}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-post\_\-build}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-post\_\-build (\&\$ {\em view})}}
+\label{group__views__hooks_ga1c869865c1fafafcfb8a31a1fbc5c135}
+This hook is called right after the build process. The query is now fully built, but it has not yet been run through db\_\-rewrite\_\-sql.
+
+Adding output to the \hyperlink{classview}{view} can be accomplished by placing text on \$view-\/$>$attachment\_\-before and \$view-\/$>$attachment\_\-after. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \$view}]The \hyperlink{classview}{view} object about to be processed. \end{DoxyParams}
+\hypertarget{group__views__hooks_ga52e5f67061bf3a8cb9f8bf208d9a1357}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-post\_\-execute@{hook\_\-views\_\-post\_\-execute}}
+\index{hook\_\-views\_\-post\_\-execute@{hook\_\-views\_\-post\_\-execute}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-post\_\-execute}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-post\_\-execute (\&\$ {\em view})}}
+\label{group__views__hooks_ga52e5f67061bf3a8cb9f8bf208d9a1357}
+This hook is called right after the execute process. The query has been executed, but the pre\_\-render() phase has not yet happened for handlers.
+
+Adding output to the \hyperlink{classview}{view} can be accomplished by placing text on \$view-\/$>$attachment\_\-before and \$view-\/$>$attachment\_\-after. Altering the content can be achieved by editing the items of \$view-\/$>$result. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \$view}]The \hyperlink{classview}{view} object about to be processed. \end{DoxyParams}
+\hypertarget{group__views__hooks_ga21cc61642e5cafc23ec621f07dae1f4b}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-post\_\-render@{hook\_\-views\_\-post\_\-render}}
+\index{hook\_\-views\_\-post\_\-render@{hook\_\-views\_\-post\_\-render}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-post\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-post\_\-render (\&\$ {\em view}, \/  \&\$ {\em output}, \/  \&\$ {\em cache})}}
+\label{group__views__hooks_ga21cc61642e5cafc23ec621f07dae1f4b}
+Post process any rendered data.
+
+This can be valuable to be able to cache a \hyperlink{classview}{view} and still have some level of dynamic output. In an ideal world, the actual output will include HTML comment based tokens, and then the post process can replace those tokens.
+
+Example usage. If it is known that the \hyperlink{classview}{view} is a node \hyperlink{classview}{view} and that the primary field will be a nid, you can do something like this:
+
+And then in the post render, create an array with the text that should go there:
+
+strtr(\$output, array('' =$>$ 'output for FIELD of nid 1');
+
+All of the cached result data will be available in \$view-\/$>$result, as well, so all ids used in the query should be discoverable.
+
+This hook can be utilized by themes. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \$view}]The \hyperlink{classview}{view} object about to be processed. \item[{\em \$output}]A flat string with the rendered output of the \hyperlink{classview}{view}. \item[{\em \$cache}]The cache settings. \end{DoxyParams}
+\hypertarget{group__views__hooks_ga1c3fc52e2854310f84eeb43b98a0ba64}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-pre\_\-build@{hook\_\-views\_\-pre\_\-build}}
+\index{hook\_\-views\_\-pre\_\-build@{hook\_\-views\_\-pre\_\-build}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-pre\_\-build}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-pre\_\-build (\&\$ {\em view})}}
+\label{group__views__hooks_ga1c3fc52e2854310f84eeb43b98a0ba64}
+This hook is called right before the build process, but after displays are attached and the display performs its pre\_\-execute phase.
+
+Adding output to the \hyperlink{classview}{view} can be accomplished by placing text on \$view-\/$>$attachment\_\-before and \$view-\/$>$attachment\_\-after. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \$view}]The \hyperlink{classview}{view} object about to be processed. \end{DoxyParams}
+\hypertarget{group__views__hooks_gaf7582b210bdd367d6006c7dc62304475}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-pre\_\-execute@{hook\_\-views\_\-pre\_\-execute}}
+\index{hook\_\-views\_\-pre\_\-execute@{hook\_\-views\_\-pre\_\-execute}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-pre\_\-execute}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-pre\_\-execute (\&\$ {\em view})}}
+\label{group__views__hooks_gaf7582b210bdd367d6006c7dc62304475}
+This hook is called right before the execute process. The query is now fully built, but it has not yet been run through db\_\-rewrite\_\-sql.
+
+Adding output to the \hyperlink{classview}{view} can be accomplished by placing text on \$view-\/$>$attachment\_\-before and \$view-\/$>$attachment\_\-after. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \$view}]The \hyperlink{classview}{view} object about to be processed. \end{DoxyParams}
+\hypertarget{group__views__hooks_gab88d5c49ec4ad30dba2be34327d5b0cc}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-pre\_\-render@{hook\_\-views\_\-pre\_\-render}}
+\index{hook\_\-views\_\-pre\_\-render@{hook\_\-views\_\-pre\_\-render}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-pre\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-pre\_\-render (\&\$ {\em view})}}
+\label{group__views__hooks_gab88d5c49ec4ad30dba2be34327d5b0cc}
+This hook is called right before the render process. The query has been executed, and the pre\_\-render() phase has already happened for handlers, so all data should be available.
+
+Adding output to the \hyperlink{classview}{view} can be accomplished by placing text on \$view-\/$>$attachment\_\-before and \$view-\/$>$attachment\_\-after. Altering the content can be achieved by editing the items of \$view-\/$>$result.
+
+This hook can be utilized by themes. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \$view}]The \hyperlink{classview}{view} object about to be processed. \end{DoxyParams}
+\hypertarget{group__views__hooks_ga471b90caa886a4e4239a839d6bf7a963}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-pre\_\-view@{hook\_\-views\_\-pre\_\-view}}
+\index{hook\_\-views\_\-pre\_\-view@{hook\_\-views\_\-pre\_\-view}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-pre\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-pre\_\-view (\&\$ {\em view}, \/  \&\$ {\em display\_\-id}, \/  \&\$ {\em args})}}
+\label{group__views__hooks_ga471b90caa886a4e4239a839d6bf7a963}
+Allows altering a \hyperlink{classview}{view} at the very beginning of views processing, before anything is done.
+
+Adding output to the \hyperlink{classview}{view} can be accomplished by placing text on \$view-\/$>$attachment\_\-before and \$view-\/$>$attachment\_\-after. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \$view}]The \hyperlink{classview}{view} object about to be processed. \item[{\em \$display\_\-id}]The machine name of the active display. \item[{\em \$args}]An array of arguments passed into the \hyperlink{classview}{view}. \end{DoxyParams}
+\hypertarget{group__views__hooks_gafeafa28dd3e140b2d4f8cfdfc7d76922}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-preview\_\-info\_\-alter@{hook\_\-views\_\-preview\_\-info\_\-alter}}
+\index{hook\_\-views\_\-preview\_\-info\_\-alter@{hook\_\-views\_\-preview\_\-info\_\-alter}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-preview\_\-info\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-preview\_\-info\_\-alter (\&\$ {\em rows}, \/  \$ {\em view})}}
+\label{group__views__hooks_gafeafa28dd3e140b2d4f8cfdfc7d76922}
+Alter the information box that (optionally) appears with a \hyperlink{classview}{view} preview, including query and performance statistics.
+
+This hook should be placed in MODULENAME.views.inc and it will be auto-\/loaded. MODULENAME.views.inc must be in the directory specified by the 'path' key returned by MODULENAME\_\-views\_\-api(), or the same directory as the .module file, if 'path' is unspecified.
+
+Warning: \$view is not a reference in PHP4 and cannot be modified here. But it IS a reference in PHP5, and can be modified. Please be careful with it.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$rows}]An associative array with two keys:
+\begin{DoxyItemize}
+\item query: An array of rows suitable for theme('table'), containing information about the query and the display title and path.
+\item statistics: An array of rows suitable for theme('table'), containing performance statistics. 
+\end{DoxyItemize}\item[{\em \$view}]The \hyperlink{classview}{view} object. \end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+theme\_\-table() 
+\end{DoxySeeAlso}
+\hypertarget{group__views__hooks_gaf4d538493930fe0fa0ce6fb3bf42c156}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-query\_\-alter@{hook\_\-views\_\-query\_\-alter}}
+\index{hook\_\-views\_\-query\_\-alter@{hook\_\-views\_\-query\_\-alter}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-query\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-query\_\-alter (\&\$ {\em view}, \/  \&\$ {\em query})}}
+\label{group__views__hooks_gaf4d538493930fe0fa0ce6fb3bf42c156}
+Alter the query before executing the query.
+
+This hook should be placed in MODULENAME.views.inc and it will be auto-\/loaded. MODULENAME.views.inc must be in the directory specified by the 'path' key returned by MODULENAME\_\-views\_\-api(), or the same directory as the .module file, if 'path' is unspecified.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$view}]The \hyperlink{classview}{view} object about to be processed. \item[{\em \$query}]An object describing the query. \end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__views__hooks_gac3628ab1f08eee5a2bd9c3c4b5bd4c3b}{hook\_\-views\_\-query\_\-substitutions()} 
+\end{DoxySeeAlso}
+\hypertarget{group__views__hooks_gac3628ab1f08eee5a2bd9c3c4b5bd4c3b}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-query\_\-substitutions@{hook\_\-views\_\-query\_\-substitutions}}
+\index{hook\_\-views\_\-query\_\-substitutions@{hook\_\-views\_\-query\_\-substitutions}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-query\_\-substitutions}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-query\_\-substitutions (\$ {\em view})}}
+\label{group__views__hooks_gac3628ab1f08eee5a2bd9c3c4b5bd4c3b}
+Performs replacements in the query before being performed.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$view}]The View being executed. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array with keys being the strings to replace, and the values the strings to replace them with. The strings to replace are ofted surrounded with '$\ast$$\ast$$\ast$', as illustrated in the example implementation. 
+\end{DoxyReturn}
+\hypertarget{group__views__hooks_ga376184982a8ac07a1da0708b4975b6be}{
+\index{views\_\-hooks@{views\_\-hooks}!hook\_\-views\_\-ui\_\-display\_\-top\_\-links\_\-alter@{hook\_\-views\_\-ui\_\-display\_\-top\_\-links\_\-alter}}
+\index{hook\_\-views\_\-ui\_\-display\_\-top\_\-links\_\-alter@{hook\_\-views\_\-ui\_\-display\_\-top\_\-links\_\-alter}!views_hooks@{views\_\-hooks}}
+\subsubsection[{hook\_\-views\_\-ui\_\-display\_\-top\_\-links\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-views\_\-ui\_\-display\_\-top\_\-links\_\-alter (\&\$ {\em links}, \/  \$ {\em view}, \/  \$ {\em display\_\-id})}}
+\label{group__views__hooks_ga376184982a8ac07a1da0708b4975b6be}
+This hooks allows to alter the links at the top of the \hyperlink{classview}{view} edit form. Some modules might want to add links there.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$links}]An array of links which will be displayed at the top of the \hyperlink{classview}{view} edit form. Each entry should be on a form suitable for theme('link'). \item[{\em \hyperlink{classview}{view}}]\$view The full \hyperlink{classview}{view} object which is currently edited. \item[{\em \$display\_\-id}]The current display id which is edited. For example that's 'default' or 'page\_\-1'. \end{DoxyParams}

@@ -1,0 +1,59 @@
+\hypertarget{string__equal_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/access/string\_\-equal.inc File Reference}
+\label{string__equal_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/access/string\_\-equal.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/access/string\_\-equal.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{string__equal_8inc_ad25554695ff67f2e70e5ebdacb697ce1}{ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-settings} (\$form, \&\$form\_\-state, \$conf)
+\item 
+\hyperlink{string__equal_8inc_a15c6eeda44956dc5be2612f88e1ff25d}{ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-check} (\$conf, \$context)
+\item 
+\hyperlink{string__equal_8inc_a374182c2a72d43ea8e975402710b5504}{ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-summary} (\$conf, \$context)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide access control/visibility based on specified context string matching user-\/specified string 
+
+\subsection{Function Documentation}
+\hypertarget{string__equal_8inc_a15c6eeda44956dc5be2612f88e1ff25d}{
+\index{string\_\-equal.inc@{string\_\-equal.inc}!ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-check@{ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-check}}
+\index{ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-check@{ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-check}!string_equal.inc@{string\_\-equal.inc}}
+\subsubsection[{ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-check}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-check (\$ {\em conf}, \/  \$ {\em context})}}
+\label{string__equal_8inc_a15c6eeda44956dc5be2612f88e1ff25d}
+Check for access \hypertarget{string__equal_8inc_ad25554695ff67f2e70e5ebdacb697ce1}{
+\index{string\_\-equal.inc@{string\_\-equal.inc}!ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-settings@{ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-settings}}
+\index{ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-settings@{ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-settings}!string_equal.inc@{string\_\-equal.inc}}
+\subsubsection[{ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-settings (\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em conf})}}
+\label{string__equal_8inc_ad25554695ff67f2e70e5ebdacb697ce1}
+Settings form \hypertarget{string__equal_8inc_a374182c2a72d43ea8e975402710b5504}{
+\index{string\_\-equal.inc@{string\_\-equal.inc}!ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-summary@{ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-summary}}
+\index{ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-summary@{ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-summary}!string_equal.inc@{string\_\-equal.inc}}
+\subsubsection[{ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-string\_\-equal\_\-ctools\_\-access\_\-summary (\$ {\em conf}, \/  \$ {\em context})}}
+\label{string__equal_8inc_a374182c2a72d43ea8e975402710b5504}
+Provide a summary description based upon the specified context 
+
+\subsection{Variable Documentation}
+\hypertarget{string__equal_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{string\_\-equal.inc@{string\_\-equal.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!string_equal.inc@{string\_\-equal.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{string__equal_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t("String: comparison"),
+  'description' => t('Control access by string match.'),
+  'callback' => 'ctools_string_equal_ctools_access_check',
+  'settings form' => 'ctools_string_equal_ctools_access_settings',
+  'summary' => 'ctools_string_equal_ctools_access_summary',
+  'required context' => new ctools_context_required(t('String'), 'string'),
+  'defaults' => array('operator' => '=', 'value' => '', 'case' => FALSE),
+)
+\end{DoxyCode}

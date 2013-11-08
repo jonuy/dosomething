@@ -1,0 +1,150 @@
+\hypertarget{fields_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/includes/fields.inc File Reference}
+\label{fields_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/includes/fields.inc@{html/profiles/dosomething/modules/contrib/ctools/includes/fields.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fields_8inc_ac6854ba7959279ea2513224ed3375628}{ctools\_\-fields\_\-fake\_\-field\_\-instance} (\$field\_\-name, \$view\_\-mode= 'ctools', \$formatter, \$formatter\_\-settings)
+\item 
+\hyperlink{fields_8inc_a73335c2fc8c4ac79f671d1b7a8033a10}{ctools\_\-fields\_\-get\_\-field\_\-formatter\_\-settings\_\-form} (\$field, \$formatter\_\-type, \&\$form, \$form\_\-state, \$view\_\-mode= 'ctools')
+\item 
+\hyperlink{fields_8inc_a178ae8d6cf7ee3d40a388b1c3e09f896}{ctools\_\-fields\_\-get\_\-field\_\-formatter\_\-info} (\$fields)
+\item 
+\hyperlink{fields_8inc_a56fdb1540ed0662e97789fc89cec1365}{ctools\_\-field\_\-label} (\$field\_\-name)
+\item 
+\hyperlink{fields_8inc_a109d8f80825dc8d999859e0d580ca8e5}{ctools\_\-field\_\-invoke\_\-field} (\$field\_\-name, \$op, \$entity\_\-type, \$entity, \&\$a=NULL, \&\$b=NULL, \$options=array())
+\item 
+\hyperlink{fields_8inc_a0c7f122d4f06bf0276adccf59a47d6f4}{ctools\_\-field\_\-invoke\_\-field\_\-default} (\$field\_\-name, \$op, \$entity\_\-type, \$entity, \&\$a=NULL, \&\$b=NULL, \$options=array())
+\item 
+\hyperlink{fields_8inc_a008f62d9ea68df7c92397fee45e5bf50}{ctools\_\-fields\_\-get\_\-fields\_\-by\_\-type} (\$field\_\-type)
+\item 
+\hyperlink{fields_8inc_a714c68e6faaf2f4918d726fb580e920e}{ctools\_\-field\_\-foreign\_\-keys} (\$field\_\-name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Extend core fields with some helper functions to reduce code complexity within views and ctools plugins. 
+
+\subsection{Function Documentation}
+\hypertarget{fields_8inc_a714c68e6faaf2f4918d726fb580e920e}{
+\index{fields.inc@{fields.inc}!ctools\_\-field\_\-foreign\_\-keys@{ctools\_\-field\_\-foreign\_\-keys}}
+\index{ctools\_\-field\_\-foreign\_\-keys@{ctools\_\-field\_\-foreign\_\-keys}!fields.inc@{fields.inc}}
+\subsubsection[{ctools\_\-field\_\-foreign\_\-keys}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-field\_\-foreign\_\-keys (\$ {\em field\_\-name})}}
+\label{fields_8inc_a714c68e6faaf2f4918d726fb580e920e}
+Derive the foreign keys that a field provides.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field\_\-name}]The name of the field.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of foreign keys according to Schema API. 
+\end{DoxyReturn}
+\hypertarget{fields_8inc_a109d8f80825dc8d999859e0d580ca8e5}{
+\index{fields.inc@{fields.inc}!ctools\_\-field\_\-invoke\_\-field@{ctools\_\-field\_\-invoke\_\-field}}
+\index{ctools\_\-field\_\-invoke\_\-field@{ctools\_\-field\_\-invoke\_\-field}!fields.inc@{fields.inc}}
+\subsubsection[{ctools\_\-field\_\-invoke\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-field\_\-invoke\_\-field (\$ {\em field\_\-name}, \/  \$ {\em op}, \/  \$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \&\$ {\em a} = {\ttfamily NULL}, \/  \&\$ {\em b} = {\ttfamily NULL}, \/  \$ {\em options} = {\ttfamily array()})}}
+\label{fields_8inc_a109d8f80825dc8d999859e0d580ca8e5}
+Replacement for core \_\-field\_\-invoke() to invoke on a single field.
+
+Core only allows invoking field hooks via a private function for all fields on an entire entity. However, we very often need to invoke our hooks on a single field as we take things apart and only use little bits.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field\_\-name}]Either a field instance object or the name of the field. If the 'field' key is populated it will be used as the field settings. \item[{\em \$op}]Possible operations include:
+\begin{DoxyItemize}
+\item form
+\item validate
+\item presave
+\item insert
+\item update
+\item delete
+\item delete revision
+\item \hyperlink{classview}{view}
+\item prepare translation 
+\end{DoxyItemize}\item[{\em \$entity\_\-type}]The type of \$entity; e.g. 'node' or 'user'. \item[{\em \$entity}]The fully formed \$entity\_\-type entity. \item[{\em \$a}]
+\begin{DoxyItemize}
+\item The \$form in the 'form' operation.
+\item The value of \$view\_\-mode in the 'view' operation.
+\item Otherwise NULL. 
+\end{DoxyItemize}\item[{\em \$b}]
+\begin{DoxyItemize}
+\item The \$form\_\-state in the 'submit' operation.
+\item Otherwise NULL. 
+\end{DoxyItemize}\item[{\em \$options}]An associative array of additional options, with the following keys:
+\begin{DoxyItemize}
+\item 'field\_\-name': The name of the field whose operation should be invoked. By default, the operation is invoked on all the fields in the entity's bundle. NOTE: This option is not compatible with the 'deleted' option; the 'field\_\-id' option should be used instead.
+\item 'field\_\-id': The id of the field whose operation should be invoked. By default, the operation is invoked on all the fields in the entity's' bundles.
+\item 'default': A boolean value, specifying which implementation of the operation should be invoked.
+\begin{DoxyItemize}
+\item if FALSE (default), the field types implementation of the operation will be invoked (hook\_\-field\_\-\mbox{[}op\mbox{]})
+\item If TRUE, the default field implementation of the field operation will be invoked (field\_\-default\_\-\mbox{[}op\mbox{]}) Internal use only. Do not explicitely set to TRUE, but use \_\-field\_\-invoke\_\-default() instead.
+\end{DoxyItemize}
+\item 'deleted': If TRUE, the function will operate on deleted fields as well as non-\/deleted fields. If unset or FALSE, only non-\/deleted fields are operated on.
+\item 'language': A language code or an array of language codes keyed by field name. It will be used to narrow down to a single value the available languages to act on.
+\end{DoxyItemize}\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\_\-field\_\-invoke() 
+\end{DoxySeeAlso}
+\hypertarget{fields_8inc_a0c7f122d4f06bf0276adccf59a47d6f4}{
+\index{fields.inc@{fields.inc}!ctools\_\-field\_\-invoke\_\-field\_\-default@{ctools\_\-field\_\-invoke\_\-field\_\-default}}
+\index{ctools\_\-field\_\-invoke\_\-field\_\-default@{ctools\_\-field\_\-invoke\_\-field\_\-default}!fields.inc@{fields.inc}}
+\subsubsection[{ctools\_\-field\_\-invoke\_\-field\_\-default}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-field\_\-invoke\_\-field\_\-default (\$ {\em field\_\-name}, \/  \$ {\em op}, \/  \$ {\em entity\_\-type}, \/  \$ {\em entity}, \/  \&\$ {\em a} = {\ttfamily NULL}, \/  \&\$ {\em b} = {\ttfamily NULL}, \/  \$ {\em options} = {\ttfamily array()})}}
+\label{fields_8inc_a0c7f122d4f06bf0276adccf59a47d6f4}
+Replacement for core \_\-field\_\-invoke\_\-default() to invoke on a single field.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{fields_8inc_a109d8f80825dc8d999859e0d580ca8e5}{ctools\_\-field\_\-invoke\_\-field()} 
+
+\_\-field\_\-invoke\_\-default() 
+\end{DoxySeeAlso}
+\hypertarget{fields_8inc_a56fdb1540ed0662e97789fc89cec1365}{
+\index{fields.inc@{fields.inc}!ctools\_\-field\_\-label@{ctools\_\-field\_\-label}}
+\index{ctools\_\-field\_\-label@{ctools\_\-field\_\-label}!fields.inc@{fields.inc}}
+\subsubsection[{ctools\_\-field\_\-label}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-field\_\-label (\$ {\em field\_\-name})}}
+\label{fields_8inc_a56fdb1540ed0662e97789fc89cec1365}
+Returns the label of a certain field.
+
+Cribbed from Views. \hypertarget{fields_8inc_ac6854ba7959279ea2513224ed3375628}{
+\index{fields.inc@{fields.inc}!ctools\_\-fields\_\-fake\_\-field\_\-instance@{ctools\_\-fields\_\-fake\_\-field\_\-instance}}
+\index{ctools\_\-fields\_\-fake\_\-field\_\-instance@{ctools\_\-fields\_\-fake\_\-field\_\-instance}!fields.inc@{fields.inc}}
+\subsubsection[{ctools\_\-fields\_\-fake\_\-field\_\-instance}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-fields\_\-fake\_\-field\_\-instance (\$ {\em field\_\-name}, \/  \$ {\em view\_\-mode} = {\ttfamily 'ctools'}, \/  \$ {\em formatter}, \/  \$ {\em formatter\_\-settings})}}
+\label{fields_8inc_ac6854ba7959279ea2513224ed3375628}
+Fake an instance of a field.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field\_\-name}]The unique name for this field no matter what entity/bundle it may be used on. \item[{\em \$view\_\-mode}]We're building a new \hyperlink{classview}{view} mode for this function. Defaults to ctools, but we expect developers to actually name this something meaningful. \item[{\em \$formatter}]The formatter key selected from the options provided by field\_\-ui\_\-formatter\_\-options(). \item[{\em \$formatter\_\-settings}]An array of key value pairs. These will be used as default\_\-value for the form elements generated by a call to hook\_\-field\_\-formatter\_\-settings\_\-form() for this field type. Typically we'll pass an empty array to begin with and then pass this information back to ourselves on form submit so that we can set the values for later edit sessions. \end{DoxyParams}
+\hypertarget{fields_8inc_a178ae8d6cf7ee3d40a388b1c3e09f896}{
+\index{fields.inc@{fields.inc}!ctools\_\-fields\_\-get\_\-field\_\-formatter\_\-info@{ctools\_\-fields\_\-get\_\-field\_\-formatter\_\-info}}
+\index{ctools\_\-fields\_\-get\_\-field\_\-formatter\_\-info@{ctools\_\-fields\_\-get\_\-field\_\-formatter\_\-info}!fields.inc@{fields.inc}}
+\subsubsection[{ctools\_\-fields\_\-get\_\-field\_\-formatter\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-fields\_\-get\_\-field\_\-formatter\_\-info (\$ {\em fields})}}
+\label{fields_8inc_a178ae8d6cf7ee3d40a388b1c3e09f896}
+Helper function for generating all the formatter information associated with any fields. Especially useful for determining the fields that will be added to form that executes hook\_\-field\_\-formatter\_\-settings\_\-form().
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$fields}]An array of fully loaded fields. \end{DoxyParams}
+\hypertarget{fields_8inc_a73335c2fc8c4ac79f671d1b7a8033a10}{
+\index{fields.inc@{fields.inc}!ctools\_\-fields\_\-get\_\-field\_\-formatter\_\-settings\_\-form@{ctools\_\-fields\_\-get\_\-field\_\-formatter\_\-settings\_\-form}}
+\index{ctools\_\-fields\_\-get\_\-field\_\-formatter\_\-settings\_\-form@{ctools\_\-fields\_\-get\_\-field\_\-formatter\_\-settings\_\-form}!fields.inc@{fields.inc}}
+\subsubsection[{ctools\_\-fields\_\-get\_\-field\_\-formatter\_\-settings\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-fields\_\-get\_\-field\_\-formatter\_\-settings\_\-form (\$ {\em field}, \/  \$ {\em formatter\_\-type}, \/  \&\$ {\em form}, \/  \$ {\em form\_\-state}, \/  \$ {\em view\_\-mode} = {\ttfamily 'ctools'})}}
+\label{fields_8inc_a73335c2fc8c4ac79f671d1b7a8033a10}
+Helper function for calling hook\_\-field\_\-formatter\_\-settings\_\-form() without needing to load an instance of the field.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$field}]A fully loaded field. \item[{\em \$formatter\_\-type}]The formatter key selected from the options provided by field\_\-ui\_\-formatter\_\-options(). \item[{\em \$form}]The full form from the function that's calling this function. \item[{\em \$form\_\-state}]The full form\_\-state from the function that's calling this function. \item[{\em \$view\_\-mode}]We're passing a \hyperlink{classview}{view} mode from this function to the fake instance we're creating. Defaults to ctools, but we expect developers to actually name this something meaningful. \end{DoxyParams}
+\hypertarget{fields_8inc_a008f62d9ea68df7c92397fee45e5bf50}{
+\index{fields.inc@{fields.inc}!ctools\_\-fields\_\-get\_\-fields\_\-by\_\-type@{ctools\_\-fields\_\-get\_\-fields\_\-by\_\-type}}
+\index{ctools\_\-fields\_\-get\_\-fields\_\-by\_\-type@{ctools\_\-fields\_\-get\_\-fields\_\-by\_\-type}!fields.inc@{fields.inc}}
+\subsubsection[{ctools\_\-fields\_\-get\_\-fields\_\-by\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-fields\_\-get\_\-fields\_\-by\_\-type (\$ {\em field\_\-type})}}
+\label{fields_8inc_a008f62d9ea68df7c92397fee45e5bf50}
+Returns a list of field definitions of a specified type.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$field\_\-type A field type name; e.g. 'text' or 'date'.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of field definitions of the specified type, keyed by field name. 
+\end{DoxyReturn}

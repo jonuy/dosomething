@@ -1,0 +1,67 @@
+\hypertarget{pathauto_8api_8php}{
+\section{html/profiles/dosomething/modules/contrib/pathauto/pathauto.api.php File Reference}
+\label{pathauto_8api_8php}\index{html/profiles/dosomething/modules/contrib/pathauto/pathauto.api.php@{html/profiles/dosomething/modules/contrib/pathauto/pathauto.api.php}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{pathauto_8api_8php_a16fbd5227b2937cac2ba8c9f396880c9}{
+{\bfseries hook\_\-path\_\-alias\_\-types} ()}
+\label{pathauto_8api_8php_a16fbd5227b2937cac2ba8c9f396880c9}
+
+\item 
+\hypertarget{pathauto_8api_8php_af37425c61491a1d88d9bc3c9d091e054}{
+{\bfseries hook\_\-pathauto} (\$op)}
+\label{pathauto_8api_8php_af37425c61491a1d88d9bc3c9d091e054}
+
+\item 
+\hyperlink{pathauto_8api_8php_a7600070f06299fd7e1f9f33255d5947e}{hook\_\-pathauto\_\-alias\_\-alter} (\&\$alias, array \&\$context)
+\item 
+\hyperlink{pathauto_8api_8php_a9b3ef2a8def13dc74ca8ecffb2c7193c}{hook\_\-pathauto\_\-punctuation\_\-chars\_\-alter} (array \&\$punctuation)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Documentation for pathauto API.
+
+\begin{DoxySeeAlso}{See also}
+hook\_\-token\_\-info 
+
+hook\_\-tokens 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\hypertarget{pathauto_8api_8php_a7600070f06299fd7e1f9f33255d5947e}{
+\index{pathauto.api.php@{pathauto.api.php}!hook\_\-pathauto\_\-alias\_\-alter@{hook\_\-pathauto\_\-alias\_\-alter}}
+\index{hook\_\-pathauto\_\-alias\_\-alter@{hook\_\-pathauto\_\-alias\_\-alter}!pathauto.api.php@{pathauto.api.php}}
+\subsubsection[{hook\_\-pathauto\_\-alias\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-pathauto\_\-alias\_\-alter (\&\$ {\em alias}, \/  array \&\$ {\em context})}}
+\label{pathauto_8api_8php_a7600070f06299fd7e1f9f33255d5947e}
+Alter Pathauto-\/generated aliases before saving.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$alias The automatic alias after token replacement and strings cleaned. \item[{\em array}]\$context An associative array of additional options, with the following elements:
+\begin{DoxyItemize}
+\item 'module': The module or entity type being aliased.
+\item 'op': A string with the operation being performed on the object being aliased. Can be either 'insert', 'update', 'return', or 'bulkupdate'.
+\item 'source': A string of the source path for the alias (e.g. 'node/1'). This can be altered by reference.
+\item 'data': An array of keyed objects to pass to token\_\-replace().
+\item 'type': The sub-\/type or bundle of the object being aliased.
+\item 'language': A string of the language code for the alias (e.g. 'en'). This can be altered by reference.
+\item 'pattern': A string of the pattern used for aliasing the object. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{pathauto_8api_8php_a9b3ef2a8def13dc74ca8ecffb2c7193c}{
+\index{pathauto.api.php@{pathauto.api.php}!hook\_\-pathauto\_\-punctuation\_\-chars\_\-alter@{hook\_\-pathauto\_\-punctuation\_\-chars\_\-alter}}
+\index{hook\_\-pathauto\_\-punctuation\_\-chars\_\-alter@{hook\_\-pathauto\_\-punctuation\_\-chars\_\-alter}!pathauto.api.php@{pathauto.api.php}}
+\subsubsection[{hook\_\-pathauto\_\-punctuation\_\-chars\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-pathauto\_\-punctuation\_\-chars\_\-alter (array \&\$ {\em punctuation})}}
+\label{pathauto_8api_8php_a9b3ef2a8def13dc74ca8ecffb2c7193c}
+Alter the list of punctuation characters for Pathauto control.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$punctuation}]An array of punctuation to be controlled by Pathauto during replacement keyed by punctuation name. Each punctuation record should be an array with the following key/value pairs:
+\begin{DoxyItemize}
+\item value: The raw value of the punctuation mark.
+\item name: The human-\/readable name of the punctuation mark. This must be translated using t() already. 
+\end{DoxyItemize}\end{DoxyParams}

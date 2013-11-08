@@ -1,0 +1,119 @@
+\hypertarget{term__view_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/page\_\-manager/plugins/tasks/term\_\-view.inc File Reference}
+\label{term__view_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/page\_\-manager/plugins/tasks/term\_\-view.inc@{html/profiles/dosomething/modules/contrib/ctools/page\_\-manager/plugins/tasks/term\_\-view.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{term__view_8inc_a8872873091306758d3592e1c46f8fc1f}{page\_\-manager\_\-term\_\-view\_\-page\_\-manager\_\-tasks} ()
+\item 
+\hyperlink{term__view_8inc_a13ed5623c41202cca6c55b80580bec5c}{page\_\-manager\_\-term\_\-view\_\-menu\_\-alter} (\&\$items, \$task)
+\item 
+\hyperlink{term__view_8inc_a38a32406ae3dbe2490d7176e933714f0}{page\_\-manager\_\-term\_\-view\_\-page} (\$term, \$depth=NULL)
+\item 
+\hyperlink{term__view_8inc_a68cce83de72cfa94323c51670b904855}{page\_\-manager\_\-term\_\-view\_\-get\_\-arguments} (\$task, \$subtask\_\-id)
+\item 
+\hyperlink{term__view_8inc_af4d9ba59aff95f20fa52d4a346bb7cbb}{page\_\-manager\_\-term\_\-view\_\-get\_\-contexts} (\$task, \$subtask\_\-id)
+\item 
+\hyperlink{term__view_8inc_a5b046bdb1844cb072960bdcd4c6e226d}{page\_\-manager\_\-term\_\-view\_\-settings} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{term__view_8inc_ace6e087115b02aacf749bd3871efe692}{page\_\-manager\_\-term\_\-view\_\-settings\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{term__view_8inc_a0577f4363ced2e8fffb582f643769e74}{page\_\-manager\_\-term\_\-view\_\-save} (\$subtask, \$cache)
+\item 
+\hyperlink{term__view_8inc_aea80962afc9da2471d9f4010b30d1929}{page\_\-manager\_\-term\_\-view\_\-admin\_\-settings} (\$form, \$settings=array())
+\item 
+\hyperlink{term__view_8inc_abdfd9eee16a69848fbc2945ef9f503b4}{page\_\-manager\_\-term\_\-view\_\-enable} (\$cache, \$status)
+\item 
+\hypertarget{term__view_8inc_a70594b269d407eb944694f237338bd21}{
+{\bfseries page\_\-manager\_\-term\_\-view\_\-get\_\-type} ()}
+\label{term__view_8inc_a70594b269d407eb944694f237338bd21}
+
+\item 
+\hyperlink{term__view_8inc_acb6720c4d438149b74241ed0be891030}{page\_\-manager\_\-term\_\-view\_\-admin\_\-summary} (\$task, \$subtask)
+\item 
+\hyperlink{term__view_8inc_a9ca0ff60d7d47f4dc9fbfa554948d7b1}{page\_\-manager\_\-term\_\-view\_\-access\_\-check} (\$task, \$subtask\_\-id, \$contexts)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handle the 'term view' override task.
+
+This plugin overrides term/term and reroutes it to the page manager, where a list of tasks can be used to service this request based upon criteria supplied by access plugins. 
+
+\subsection{Function Documentation}
+\hypertarget{term__view_8inc_a9ca0ff60d7d47f4dc9fbfa554948d7b1}{
+\index{term\_\-view.inc@{term\_\-view.inc}!page\_\-manager\_\-term\_\-view\_\-access\_\-check@{page\_\-manager\_\-term\_\-view\_\-access\_\-check}}
+\index{page\_\-manager\_\-term\_\-view\_\-access\_\-check@{page\_\-manager\_\-term\_\-view\_\-access\_\-check}!term_view.inc@{term\_\-view.inc}}
+\subsubsection[{page\_\-manager\_\-term\_\-view\_\-access\_\-check}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-term\_\-view\_\-access\_\-check (\$ {\em task}, \/  \$ {\em subtask\_\-id}, \/  \$ {\em contexts})}}
+\label{term__view_8inc_a9ca0ff60d7d47f4dc9fbfa554948d7b1}
+Callback to determine if a page is accessible.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$task}]The task plugin. \item[{\em \$subtask\_\-id}]The subtask id \item[{\em \$contexts}]The contexts loaded for the task. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the current user can access the page. 
+\end{DoxyReturn}
+\hypertarget{term__view_8inc_aea80962afc9da2471d9f4010b30d1929}{
+\index{term\_\-view.inc@{term\_\-view.inc}!page\_\-manager\_\-term\_\-view\_\-admin\_\-settings@{page\_\-manager\_\-term\_\-view\_\-admin\_\-settings}}
+\index{page\_\-manager\_\-term\_\-view\_\-admin\_\-settings@{page\_\-manager\_\-term\_\-view\_\-admin\_\-settings}!term_view.inc@{term\_\-view.inc}}
+\subsubsection[{page\_\-manager\_\-term\_\-view\_\-admin\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-term\_\-view\_\-admin\_\-settings (\$ {\em form}, \/  \$ {\em settings} = {\ttfamily array()})}}
+\label{term__view_8inc_aea80962afc9da2471d9f4010b30d1929}
+Provide a setting to the Panels administrative form. \hypertarget{term__view_8inc_acb6720c4d438149b74241ed0be891030}{
+\index{term\_\-view.inc@{term\_\-view.inc}!page\_\-manager\_\-term\_\-view\_\-admin\_\-summary@{page\_\-manager\_\-term\_\-view\_\-admin\_\-summary}}
+\index{page\_\-manager\_\-term\_\-view\_\-admin\_\-summary@{page\_\-manager\_\-term\_\-view\_\-admin\_\-summary}!term_view.inc@{term\_\-view.inc}}
+\subsubsection[{page\_\-manager\_\-term\_\-view\_\-admin\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-term\_\-view\_\-admin\_\-summary (\$ {\em task}, \/  \$ {\em subtask})}}
+\label{term__view_8inc_acb6720c4d438149b74241ed0be891030}
+Provide a nice administrative summary of the page so an admin can see at a glance what this page does and how it is configured. \hypertarget{term__view_8inc_abdfd9eee16a69848fbc2945ef9f503b4}{
+\index{term\_\-view.inc@{term\_\-view.inc}!page\_\-manager\_\-term\_\-view\_\-enable@{page\_\-manager\_\-term\_\-view\_\-enable}}
+\index{page\_\-manager\_\-term\_\-view\_\-enable@{page\_\-manager\_\-term\_\-view\_\-enable}!term_view.inc@{term\_\-view.inc}}
+\subsubsection[{page\_\-manager\_\-term\_\-view\_\-enable}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-term\_\-view\_\-enable (\$ {\em cache}, \/  \$ {\em status})}}
+\label{term__view_8inc_abdfd9eee16a69848fbc2945ef9f503b4}
+Callback to enable/disable the page from the UI. \hypertarget{term__view_8inc_a68cce83de72cfa94323c51670b904855}{
+\index{term\_\-view.inc@{term\_\-view.inc}!page\_\-manager\_\-term\_\-view\_\-get\_\-arguments@{page\_\-manager\_\-term\_\-view\_\-get\_\-arguments}}
+\index{page\_\-manager\_\-term\_\-view\_\-get\_\-arguments@{page\_\-manager\_\-term\_\-view\_\-get\_\-arguments}!term_view.inc@{term\_\-view.inc}}
+\subsubsection[{page\_\-manager\_\-term\_\-view\_\-get\_\-arguments}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-term\_\-view\_\-get\_\-arguments (\$ {\em task}, \/  \$ {\em subtask\_\-id})}}
+\label{term__view_8inc_a68cce83de72cfa94323c51670b904855}
+Callback to get arguments provided by this task handler.
+
+Since this is the term \hyperlink{classview}{view} and there is no UI on the arguments, we create dummy arguments that contain the needed data. \hypertarget{term__view_8inc_af4d9ba59aff95f20fa52d4a346bb7cbb}{
+\index{term\_\-view.inc@{term\_\-view.inc}!page\_\-manager\_\-term\_\-view\_\-get\_\-contexts@{page\_\-manager\_\-term\_\-view\_\-get\_\-contexts}}
+\index{page\_\-manager\_\-term\_\-view\_\-get\_\-contexts@{page\_\-manager\_\-term\_\-view\_\-get\_\-contexts}!term_view.inc@{term\_\-view.inc}}
+\subsubsection[{page\_\-manager\_\-term\_\-view\_\-get\_\-contexts}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-term\_\-view\_\-get\_\-contexts (\$ {\em task}, \/  \$ {\em subtask\_\-id})}}
+\label{term__view_8inc_af4d9ba59aff95f20fa52d4a346bb7cbb}
+Callback to get context placeholders provided by this handler. \hypertarget{term__view_8inc_a13ed5623c41202cca6c55b80580bec5c}{
+\index{term\_\-view.inc@{term\_\-view.inc}!page\_\-manager\_\-term\_\-view\_\-menu\_\-alter@{page\_\-manager\_\-term\_\-view\_\-menu\_\-alter}}
+\index{page\_\-manager\_\-term\_\-view\_\-menu\_\-alter@{page\_\-manager\_\-term\_\-view\_\-menu\_\-alter}!term_view.inc@{term\_\-view.inc}}
+\subsubsection[{page\_\-manager\_\-term\_\-view\_\-menu\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-term\_\-view\_\-menu\_\-alter (\&\$ {\em items}, \/  \$ {\em task})}}
+\label{term__view_8inc_a13ed5623c41202cca6c55b80580bec5c}
+Callback defined by \hyperlink{term__view_8inc_a8872873091306758d3592e1c46f8fc1f}{page\_\-manager\_\-term\_\-view\_\-page\_\-manager\_\-tasks()}.
+
+Alter the term \hyperlink{classview}{view} input so that term \hyperlink{classview}{view} comes to us rather than the normal term \hyperlink{classview}{view} process. \hypertarget{term__view_8inc_a38a32406ae3dbe2490d7176e933714f0}{
+\index{term\_\-view.inc@{term\_\-view.inc}!page\_\-manager\_\-term\_\-view\_\-page@{page\_\-manager\_\-term\_\-view\_\-page}}
+\index{page\_\-manager\_\-term\_\-view\_\-page@{page\_\-manager\_\-term\_\-view\_\-page}!term_view.inc@{term\_\-view.inc}}
+\subsubsection[{page\_\-manager\_\-term\_\-view\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-term\_\-view\_\-page (\$ {\em term}, \/  \$ {\em depth} = {\ttfamily NULL})}}
+\label{term__view_8inc_a38a32406ae3dbe2490d7176e933714f0}
+Entry point for our overridden term \hyperlink{classview}{view}.
+
+This function asks its assigned handlers who, if anyone, would like to run with it. If no one does, it passes through to Drupal core's term \hyperlink{classview}{view}, which is term\_\-page\_\-view(). \hypertarget{term__view_8inc_a8872873091306758d3592e1c46f8fc1f}{
+\index{term\_\-view.inc@{term\_\-view.inc}!page\_\-manager\_\-term\_\-view\_\-page\_\-manager\_\-tasks@{page\_\-manager\_\-term\_\-view\_\-page\_\-manager\_\-tasks}}
+\index{page\_\-manager\_\-term\_\-view\_\-page\_\-manager\_\-tasks@{page\_\-manager\_\-term\_\-view\_\-page\_\-manager\_\-tasks}!term_view.inc@{term\_\-view.inc}}
+\subsubsection[{page\_\-manager\_\-term\_\-view\_\-page\_\-manager\_\-tasks}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-term\_\-view\_\-page\_\-manager\_\-tasks ()}}
+\label{term__view_8inc_a8872873091306758d3592e1c46f8fc1f}
+Specialized implementation of hook\_\-page\_\-manager\_\-task\_\-tasks(). See api-\/task.html for more information. \hypertarget{term__view_8inc_a0577f4363ced2e8fffb582f643769e74}{
+\index{term\_\-view.inc@{term\_\-view.inc}!page\_\-manager\_\-term\_\-view\_\-save@{page\_\-manager\_\-term\_\-view\_\-save}}
+\index{page\_\-manager\_\-term\_\-view\_\-save@{page\_\-manager\_\-term\_\-view\_\-save}!term_view.inc@{term\_\-view.inc}}
+\subsubsection[{page\_\-manager\_\-term\_\-view\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-term\_\-view\_\-save (\$ {\em subtask}, \/  \$ {\em cache})}}
+\label{term__view_8inc_a0577f4363ced2e8fffb582f643769e74}
+Save when the page cache is saved. \hypertarget{term__view_8inc_a5b046bdb1844cb072960bdcd4c6e226d}{
+\index{term\_\-view.inc@{term\_\-view.inc}!page\_\-manager\_\-term\_\-view\_\-settings@{page\_\-manager\_\-term\_\-view\_\-settings}}
+\index{page\_\-manager\_\-term\_\-view\_\-settings@{page\_\-manager\_\-term\_\-view\_\-settings}!term_view.inc@{term\_\-view.inc}}
+\subsubsection[{page\_\-manager\_\-term\_\-view\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-term\_\-view\_\-settings (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{term__view_8inc_a5b046bdb1844cb072960bdcd4c6e226d}
+Settings page for this item. \hypertarget{term__view_8inc_ace6e087115b02aacf749bd3871efe692}{
+\index{term\_\-view.inc@{term\_\-view.inc}!page\_\-manager\_\-term\_\-view\_\-settings\_\-submit@{page\_\-manager\_\-term\_\-view\_\-settings\_\-submit}}
+\index{page\_\-manager\_\-term\_\-view\_\-settings\_\-submit@{page\_\-manager\_\-term\_\-view\_\-settings\_\-submit}!term_view.inc@{term\_\-view.inc}}
+\subsubsection[{page\_\-manager\_\-term\_\-view\_\-settings\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-term\_\-view\_\-settings\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{term__view_8inc_ace6e087115b02aacf749bd3871efe692}
+Copy form values into the page cache. 

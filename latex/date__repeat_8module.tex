@@ -1,0 +1,141 @@
+\hypertarget{date__repeat_8module}{
+\section{html/profiles/dosomething/modules/contrib/date/date\_\-repeat/date\_\-repeat.module File Reference}
+\label{date__repeat_8module}\index{html/profiles/dosomething/modules/contrib/date/date\_\-repeat/date\_\-repeat.module@{html/profiles/dosomething/modules/contrib/date/date\_\-repeat/date\_\-repeat.module}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{date__repeat_8module_ac3359bf013cf5935d9e568b487ac998d}{date\_\-repeat\_\-element\_\-info} ()
+\item 
+\hypertarget{date__repeat_8module_a7591faeb7a69bda809ba7f13a80e0d3b}{
+{\bfseries date\_\-repeat\_\-theme} ()}
+\label{date__repeat_8module_a7591faeb7a69bda809ba7f13a80e0d3b}
+
+\item 
+\hyperlink{date__repeat_8module_af608a6efa0eeb6869465857d6d88b2d6}{date\_\-repeat\_\-freq\_\-options} ()
+\item 
+\hypertarget{date__repeat_8module_acacc593ff82cfa047b4acedcbdf31af9}{
+{\bfseries date\_\-repeat\_\-interval\_\-options} ()}
+\label{date__repeat_8module_acacc593ff82cfa047b4acedcbdf31af9}
+
+\item 
+\hyperlink{date__repeat_8module_a938156c8ac8c3b23be30ae1b539bdf65}{date\_\-repeat\_\-dow\_\-day\_\-options} (\$translated=TRUE)
+\item 
+\hyperlink{date__repeat_8module_a400fbbb589ca7ebe680239e5332ab5f1}{date\_\-repeat\_\-dow\_\-day\_\-options\_\-abbr} (\$translated=TRUE, \$length=3)
+\item 
+\hypertarget{date__repeat_8module_a57b91e314d3c9d80c4bf884b916d34b6}{
+{\bfseries date\_\-repeat\_\-dow\_\-day\_\-untranslated} ()}
+\label{date__repeat_8module_a57b91e314d3c9d80c4bf884b916d34b6}
+
+\item 
+\hypertarget{date__repeat_8module_a067a263131e0ae6616a243f0b40a2a2e}{
+{\bfseries date\_\-repeat\_\-dow\_\-day\_\-options\_\-ordered} (\$weekdays)}
+\label{date__repeat_8module_a067a263131e0ae6616a243f0b40a2a2e}
+
+\item 
+\hyperlink{date__repeat_8module_a6477b176fba9dd394ca159f555267cb1}{date\_\-repeat\_\-dow\_\-count\_\-options} ()
+\item 
+\hyperlink{date__repeat_8module_a0db2cd4cff89bce5add79b4e73a10535}{date\_\-repeat\_\-dow\_\-options} ()
+\item 
+\hyperlink{date__repeat_8module_a405d111dc6063ab1a16b0a43e3dbe604}{date\_\-repeat\_\-dow2day} (\$dow)
+\item 
+\hyperlink{date__repeat_8module_af210c31340e410884987c375118cd263}{date\_\-repeat\_\-days\_\-ordered} (\$week\_\-start\_\-day)
+\item 
+\hyperlink{date__repeat_8module_acaa5064a19a194c235a3616198da2071}{date\_\-repeat\_\-rrule\_\-description} (\$rrule, \$format= 'D M d Y')
+\item 
+\hyperlink{date__repeat_8module_a4f7e5ba566b1e66abea72ccce5efcb64}{date\_\-repeat\_\-split\_\-rrule} (\$rrule)
+\item 
+\hyperlink{date__repeat_8module_a3d79ef2b99159e6f7bf47560e0fd40f9}{date\_\-repeat\_\-calc} (\$rrule, \$start, \$end, \$exceptions=array(), \$timezone=NULL, \$additions=array())
+\item 
+\hyperlink{date__repeat_8module_a45198dc27e593ee47661fc205a3e8d31}{date\_\-repeat\_\-rrule\_\-process} (\$element, \&\$form\_\-state, \$form)
+\item 
+\hyperlink{date__repeat_8module_a8cfb8bcf609bee5a14b40fd7b6d918d1}{date\_\-repeat\_\-form\_\-element\_\-radios\_\-process} (\$element)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This module creates a form element that allows users to select repeat rules for a date, and reworks the result into an iCal RRULE string that can be stored in the database.
+
+The module also parses iCal RRULEs to create an array of dates that meet their criteria.
+
+Other modules can use this API to add self-\/validating form elements to their dates, and identify dates that meet the RRULE criteria. 
+
+\subsection{Function Documentation}
+\hypertarget{date__repeat_8module_a3d79ef2b99159e6f7bf47560e0fd40f9}{
+\index{date\_\-repeat.module@{date\_\-repeat.module}!date\_\-repeat\_\-calc@{date\_\-repeat\_\-calc}}
+\index{date\_\-repeat\_\-calc@{date\_\-repeat\_\-calc}!date_repeat.module@{date\_\-repeat.module}}
+\subsubsection[{date\_\-repeat\_\-calc}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-repeat\_\-calc (\$ {\em rrule}, \/  \$ {\em start}, \/  \$ {\em end}, \/  \$ {\em exceptions} = {\ttfamily array()}, \/  \$ {\em timezone} = {\ttfamily NULL}, \/  \$ {\em additions} = {\ttfamily array()})}}
+\label{date__repeat_8module_a3d79ef2b99159e6f7bf47560e0fd40f9}
+Analyze a RRULE and return dates that match it. \hypertarget{date__repeat_8module_af210c31340e410884987c375118cd263}{
+\index{date\_\-repeat.module@{date\_\-repeat.module}!date\_\-repeat\_\-days\_\-ordered@{date\_\-repeat\_\-days\_\-ordered}}
+\index{date\_\-repeat\_\-days\_\-ordered@{date\_\-repeat\_\-days\_\-ordered}!date_repeat.module@{date\_\-repeat.module}}
+\subsubsection[{date\_\-repeat\_\-days\_\-ordered}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-repeat\_\-days\_\-ordered (\$ {\em week\_\-start\_\-day})}}
+\label{date__repeat_8module_af210c31340e410884987c375118cd263}
+Shift the array of iCal day names into the right order for a specific week start day. \hypertarget{date__repeat_8module_a405d111dc6063ab1a16b0a43e3dbe604}{
+\index{date\_\-repeat.module@{date\_\-repeat.module}!date\_\-repeat\_\-dow2day@{date\_\-repeat\_\-dow2day}}
+\index{date\_\-repeat\_\-dow2day@{date\_\-repeat\_\-dow2day}!date_repeat.module@{date\_\-repeat.module}}
+\subsubsection[{date\_\-repeat\_\-dow2day}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-repeat\_\-dow2day (\$ {\em dow})}}
+\label{date__repeat_8module_a405d111dc6063ab1a16b0a43e3dbe604}
+Translate a day of week position to the iCal day name.
+
+Used with date\_\-format(\$date, 'w') or get\_\-variable('date\_\-first\_\-day'), which return 0 for Sunday, 1 for Monday, etc.
+
+dow 2 becomes 'TU', dow 3 becomes 'WE', and so on. \hypertarget{date__repeat_8module_a6477b176fba9dd394ca159f555267cb1}{
+\index{date\_\-repeat.module@{date\_\-repeat.module}!date\_\-repeat\_\-dow\_\-count\_\-options@{date\_\-repeat\_\-dow\_\-count\_\-options}}
+\index{date\_\-repeat\_\-dow\_\-count\_\-options@{date\_\-repeat\_\-dow\_\-count\_\-options}!date_repeat.module@{date\_\-repeat.module}}
+\subsubsection[{date\_\-repeat\_\-dow\_\-count\_\-options}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-repeat\_\-dow\_\-count\_\-options ()}}
+\label{date__repeat_8module_a6477b176fba9dd394ca159f555267cb1}
+Helper function for BYDAY options. \hypertarget{date__repeat_8module_a938156c8ac8c3b23be30ae1b539bdf65}{
+\index{date\_\-repeat.module@{date\_\-repeat.module}!date\_\-repeat\_\-dow\_\-day\_\-options@{date\_\-repeat\_\-dow\_\-day\_\-options}}
+\index{date\_\-repeat\_\-dow\_\-day\_\-options@{date\_\-repeat\_\-dow\_\-day\_\-options}!date_repeat.module@{date\_\-repeat.module}}
+\subsubsection[{date\_\-repeat\_\-dow\_\-day\_\-options}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-repeat\_\-dow\_\-day\_\-options (\$ {\em translated} = {\ttfamily TRUE})}}
+\label{date__repeat_8module_a938156c8ac8c3b23be30ae1b539bdf65}
+Helper function for FREQ options.
+
+Translated and untranslated arrays of the iCal day of week names. We need the untranslated values for date\_\-modify(), translated values when displayed to user. \hypertarget{date__repeat_8module_a400fbbb589ca7ebe680239e5332ab5f1}{
+\index{date\_\-repeat.module@{date\_\-repeat.module}!date\_\-repeat\_\-dow\_\-day\_\-options\_\-abbr@{date\_\-repeat\_\-dow\_\-day\_\-options\_\-abbr}}
+\index{date\_\-repeat\_\-dow\_\-day\_\-options\_\-abbr@{date\_\-repeat\_\-dow\_\-day\_\-options\_\-abbr}!date_repeat.module@{date\_\-repeat.module}}
+\subsubsection[{date\_\-repeat\_\-dow\_\-day\_\-options\_\-abbr}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-repeat\_\-dow\_\-day\_\-options\_\-abbr (\$ {\em translated} = {\ttfamily TRUE}, \/  \$ {\em length} = {\ttfamily 3})}}
+\label{date__repeat_8module_a400fbbb589ca7ebe680239e5332ab5f1}
+Helper function for FREQ options.
+
+Translated and untranslated arrays of the iCal abbreviated day of week names. \hypertarget{date__repeat_8module_a0db2cd4cff89bce5add79b4e73a10535}{
+\index{date\_\-repeat.module@{date\_\-repeat.module}!date\_\-repeat\_\-dow\_\-options@{date\_\-repeat\_\-dow\_\-options}}
+\index{date\_\-repeat\_\-dow\_\-options@{date\_\-repeat\_\-dow\_\-options}!date_repeat.module@{date\_\-repeat.module}}
+\subsubsection[{date\_\-repeat\_\-dow\_\-options}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-repeat\_\-dow\_\-options ()}}
+\label{date__repeat_8module_a0db2cd4cff89bce5add79b4e73a10535}
+Helper function for BYDAY options.
+
+Creates options like -\/1SU and 2TU \hypertarget{date__repeat_8module_ac3359bf013cf5935d9e568b487ac998d}{
+\index{date\_\-repeat.module@{date\_\-repeat.module}!date\_\-repeat\_\-element\_\-info@{date\_\-repeat\_\-element\_\-info}}
+\index{date\_\-repeat\_\-element\_\-info@{date\_\-repeat\_\-element\_\-info}!date_repeat.module@{date\_\-repeat.module}}
+\subsubsection[{date\_\-repeat\_\-element\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-repeat\_\-element\_\-info ()}}
+\label{date__repeat_8module_ac3359bf013cf5935d9e568b487ac998d}
+Implements hook\_\-element\_\-info(). \hypertarget{date__repeat_8module_a8cfb8bcf609bee5a14b40fd7b6d918d1}{
+\index{date\_\-repeat.module@{date\_\-repeat.module}!date\_\-repeat\_\-form\_\-element\_\-radios\_\-process@{date\_\-repeat\_\-form\_\-element\_\-radios\_\-process}}
+\index{date\_\-repeat\_\-form\_\-element\_\-radios\_\-process@{date\_\-repeat\_\-form\_\-element\_\-radios\_\-process}!date_repeat.module@{date\_\-repeat.module}}
+\subsubsection[{date\_\-repeat\_\-form\_\-element\_\-radios\_\-process}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-repeat\_\-form\_\-element\_\-radios\_\-process (\$ {\em element})}}
+\label{date__repeat_8module_a8cfb8bcf609bee5a14b40fd7b6d918d1}
+Process function for 'date\_\-repeat\_\-form\_\-element\_\-radios'. \hypertarget{date__repeat_8module_af608a6efa0eeb6869465857d6d88b2d6}{
+\index{date\_\-repeat.module@{date\_\-repeat.module}!date\_\-repeat\_\-freq\_\-options@{date\_\-repeat\_\-freq\_\-options}}
+\index{date\_\-repeat\_\-freq\_\-options@{date\_\-repeat\_\-freq\_\-options}!date_repeat.module@{date\_\-repeat.module}}
+\subsubsection[{date\_\-repeat\_\-freq\_\-options}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-repeat\_\-freq\_\-options ()}}
+\label{date__repeat_8module_af608a6efa0eeb6869465857d6d88b2d6}
+Helper function for FREQ options. \hypertarget{date__repeat_8module_acaa5064a19a194c235a3616198da2071}{
+\index{date\_\-repeat.module@{date\_\-repeat.module}!date\_\-repeat\_\-rrule\_\-description@{date\_\-repeat\_\-rrule\_\-description}}
+\index{date\_\-repeat\_\-rrule\_\-description@{date\_\-repeat\_\-rrule\_\-description}!date_repeat.module@{date\_\-repeat.module}}
+\subsubsection[{date\_\-repeat\_\-rrule\_\-description}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-repeat\_\-rrule\_\-description (\$ {\em rrule}, \/  \$ {\em format} = {\ttfamily 'D~M~d~Y'})}}
+\label{date__repeat_8module_acaa5064a19a194c235a3616198da2071}
+Build a description of an iCal rule.
+
+Constructs a human-\/readable description of the rule. \hypertarget{date__repeat_8module_a45198dc27e593ee47661fc205a3e8d31}{
+\index{date\_\-repeat.module@{date\_\-repeat.module}!date\_\-repeat\_\-rrule\_\-process@{date\_\-repeat\_\-rrule\_\-process}}
+\index{date\_\-repeat\_\-rrule\_\-process@{date\_\-repeat\_\-rrule\_\-process}!date_repeat.module@{date\_\-repeat.module}}
+\subsubsection[{date\_\-repeat\_\-rrule\_\-process}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-repeat\_\-rrule\_\-process (\$ {\em element}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em form})}}
+\label{date__repeat_8module_a45198dc27e593ee47661fc205a3e8d31}
+Generate the repeat rule setting form. \hypertarget{date__repeat_8module_a4f7e5ba566b1e66abea72ccce5efcb64}{
+\index{date\_\-repeat.module@{date\_\-repeat.module}!date\_\-repeat\_\-split\_\-rrule@{date\_\-repeat\_\-split\_\-rrule}}
+\index{date\_\-repeat\_\-split\_\-rrule@{date\_\-repeat\_\-split\_\-rrule}!date_repeat.module@{date\_\-repeat.module}}
+\subsubsection[{date\_\-repeat\_\-split\_\-rrule}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-repeat\_\-split\_\-rrule (\$ {\em rrule})}}
+\label{date__repeat_8module_a4f7e5ba566b1e66abea72ccce5efcb64}
+Parse an iCal rule into a parsed RRULE array and an EXDATE array. 

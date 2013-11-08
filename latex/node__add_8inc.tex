@@ -1,0 +1,45 @@
+\hypertarget{node__add_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/node\_\-add.inc File Reference}
+\label{node__add_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/node\_\-add.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/node\_\-add.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{node__add_8inc_aa9987b51e06c79529fa64e63f41eb9de}{ctools\_\-node\_\-add\_\-context} (\$arg=NULL, \$conf=NULL, \$empty=FALSE)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{node__add_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide an argument handler for a Node add form 
+
+\subsection{Function Documentation}
+\hypertarget{node__add_8inc_aa9987b51e06c79529fa64e63f41eb9de}{
+\index{node\_\-add.inc@{node\_\-add.inc}!ctools\_\-node\_\-add\_\-context@{ctools\_\-node\_\-add\_\-context}}
+\index{ctools\_\-node\_\-add\_\-context@{ctools\_\-node\_\-add\_\-context}!node_add.inc@{node\_\-add.inc}}
+\subsubsection[{ctools\_\-node\_\-add\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-node\_\-add\_\-context (\$ {\em arg} = {\ttfamily NULL}, \/  \$ {\em conf} = {\ttfamily NULL}, \/  \$ {\em empty} = {\ttfamily FALSE})}}
+\label{node__add_8inc_aa9987b51e06c79529fa64e63f41eb9de}
+Discover if this argument gives us the node we crave. 
+
+\subsection{Variable Documentation}
+\hypertarget{node__add_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{node\_\-add.inc@{node\_\-add.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!node_add.inc@{node\_\-add.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{node__add_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t("Node add form: node type"),
+  
+  'keyword' => 'node_type',
+  'description' => t('Creates a node add form context from a node type argument.'
+      ),
+  'context' => 'ctools_node_add_context',
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

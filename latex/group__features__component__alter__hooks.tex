@@ -1,0 +1,125 @@
+\hypertarget{group__features__component__alter__hooks}{
+\section{Feature's component alter hooks}
+\label{group__features__component__alter__hooks}\index{Feature's component alter hooks@{Feature's component alter hooks}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__features__component__alter__hooks_ga3016751cc0cbd57d187bc995601b37f9}{hook\_\-field\_\-default\_\-fields\_\-alter} (\&\$fields)
+\item 
+\hyperlink{group__features__component__alter__hooks_ga627a5cda9de3fa0baa4091fbd798aa9a}{hook\_\-fieldgroup\_\-default\_\-groups\_\-alter} (\&\$groups)
+\item 
+\hyperlink{group__features__component__alter__hooks_gae14b73f67a50cd515cac9718d84014f4}{hook\_\-filter\_\-default\_\-formats\_\-alter} (\&\$formats)
+\item 
+\hyperlink{group__features__component__alter__hooks_gad81e139fd9584fcfbd5f9c1ece67e48b}{hook\_\-menu\_\-default\_\-menu\_\-custom\_\-alter} (\&\$menus)
+\item 
+\hyperlink{group__features__component__alter__hooks_ga86626f45ed4bf19d0cc56db05a1c045e}{hook\_\-menu\_\-default\_\-menu\_\-links\_\-alter} (\&\$links)
+\item 
+\hyperlink{group__features__component__alter__hooks_ga3b0718b5296604a189304b76378b0467}{hook\_\-menu\_\-default\_\-items\_\-alter} (\&\$items)
+\item 
+\hyperlink{group__features__component__alter__hooks_ga5e43b3c1b03d748e9da468c83d3a1efc}{hook\_\-taxonomy\_\-default\_\-vocabularies\_\-alter} (\&\$vocabularies)
+\item 
+\hyperlink{group__features__component__alter__hooks_ga905999267231b7418a89a4856dbbfc00}{hook\_\-user\_\-default\_\-permissions\_\-alter} (\&\$permissions)
+\item 
+\hyperlink{group__features__component__alter__hooks_gaad88a5479c355cebaa80b017f0a83a4d}{hook\_\-user\_\-default\_\-roles\_\-alter} (\&\$roles)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Hooks to modify components defined by other features. These come in the form hook\_\-COMPONENT\_\-alter where COMPONENT is the default\_\-hook declared by any of components within features.
+
+CTools also has a variety of hook\_\-FOO\_\-alters.
+
+Note: While views is a component of features, it declares it's own alter function which takes a similar form: hook\_\-views\_\-default\_\-views\_\-alter(\&\$views) 
+
+\subsection{Function Documentation}
+\hypertarget{group__features__component__alter__hooks_ga3016751cc0cbd57d187bc995601b37f9}{
+\index{features\_\-component\_\-alter\_\-hooks@{features\_\-component\_\-alter\_\-hooks}!hook\_\-field\_\-default\_\-fields\_\-alter@{hook\_\-field\_\-default\_\-fields\_\-alter}}
+\index{hook\_\-field\_\-default\_\-fields\_\-alter@{hook\_\-field\_\-default\_\-fields\_\-alter}!features_component_alter_hooks@{features\_\-component\_\-alter\_\-hooks}}
+\subsubsection[{hook\_\-field\_\-default\_\-fields\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-field\_\-default\_\-fields\_\-alter (\&\$ {\em fields})}}
+\label{group__features__component__alter__hooks_ga3016751cc0cbd57d187bc995601b37f9}
+Alter the default fields right before they are cached into the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \&\$fields}]By reference. The fields that have been declared by another feature. \end{DoxyParams}
+\hypertarget{group__features__component__alter__hooks_ga627a5cda9de3fa0baa4091fbd798aa9a}{
+\index{features\_\-component\_\-alter\_\-hooks@{features\_\-component\_\-alter\_\-hooks}!hook\_\-fieldgroup\_\-default\_\-groups\_\-alter@{hook\_\-fieldgroup\_\-default\_\-groups\_\-alter}}
+\index{hook\_\-fieldgroup\_\-default\_\-groups\_\-alter@{hook\_\-fieldgroup\_\-default\_\-groups\_\-alter}!features_component_alter_hooks@{features\_\-component\_\-alter\_\-hooks}}
+\subsubsection[{hook\_\-fieldgroup\_\-default\_\-groups\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-fieldgroup\_\-default\_\-groups\_\-alter (\&\$ {\em groups})}}
+\label{group__features__component__alter__hooks_ga627a5cda9de3fa0baa4091fbd798aa9a}
+Alter the default fieldgroup groups right before they are cached into the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \&\$groups}]By reference. The fieldgroup groups that have been declared by another feature. \end{DoxyParams}
+\hypertarget{group__features__component__alter__hooks_gae14b73f67a50cd515cac9718d84014f4}{
+\index{features\_\-component\_\-alter\_\-hooks@{features\_\-component\_\-alter\_\-hooks}!hook\_\-filter\_\-default\_\-formats\_\-alter@{hook\_\-filter\_\-default\_\-formats\_\-alter}}
+\index{hook\_\-filter\_\-default\_\-formats\_\-alter@{hook\_\-filter\_\-default\_\-formats\_\-alter}!features_component_alter_hooks@{features\_\-component\_\-alter\_\-hooks}}
+\subsubsection[{hook\_\-filter\_\-default\_\-formats\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-filter\_\-default\_\-formats\_\-alter (\&\$ {\em formats})}}
+\label{group__features__component__alter__hooks_gae14b73f67a50cd515cac9718d84014f4}
+Alter the default filter formats right before they are cached into the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \&\$formats}]By reference. The formats that have been declared by another feature. \end{DoxyParams}
+\hypertarget{group__features__component__alter__hooks_ga3b0718b5296604a189304b76378b0467}{
+\index{features\_\-component\_\-alter\_\-hooks@{features\_\-component\_\-alter\_\-hooks}!hook\_\-menu\_\-default\_\-items\_\-alter@{hook\_\-menu\_\-default\_\-items\_\-alter}}
+\index{hook\_\-menu\_\-default\_\-items\_\-alter@{hook\_\-menu\_\-default\_\-items\_\-alter}!features_component_alter_hooks@{features\_\-component\_\-alter\_\-hooks}}
+\subsubsection[{hook\_\-menu\_\-default\_\-items\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-menu\_\-default\_\-items\_\-alter (\&\$ {\em items})}}
+\label{group__features__component__alter__hooks_ga3b0718b5296604a189304b76378b0467}
+Alter the default menu items right before they are cached into the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \&\$items}]By reference. The menu items that have been declared by another feature. \end{DoxyParams}
+\hypertarget{group__features__component__alter__hooks_gad81e139fd9584fcfbd5f9c1ece67e48b}{
+\index{features\_\-component\_\-alter\_\-hooks@{features\_\-component\_\-alter\_\-hooks}!hook\_\-menu\_\-default\_\-menu\_\-custom\_\-alter@{hook\_\-menu\_\-default\_\-menu\_\-custom\_\-alter}}
+\index{hook\_\-menu\_\-default\_\-menu\_\-custom\_\-alter@{hook\_\-menu\_\-default\_\-menu\_\-custom\_\-alter}!features_component_alter_hooks@{features\_\-component\_\-alter\_\-hooks}}
+\subsubsection[{hook\_\-menu\_\-default\_\-menu\_\-custom\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-menu\_\-default\_\-menu\_\-custom\_\-alter (\&\$ {\em menus})}}
+\label{group__features__component__alter__hooks_gad81e139fd9584fcfbd5f9c1ece67e48b}
+Alter the default menus right before they are cached into the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \&\$menus}]By reference. The menus that have been declared by another feature. \end{DoxyParams}
+\hypertarget{group__features__component__alter__hooks_ga86626f45ed4bf19d0cc56db05a1c045e}{
+\index{features\_\-component\_\-alter\_\-hooks@{features\_\-component\_\-alter\_\-hooks}!hook\_\-menu\_\-default\_\-menu\_\-links\_\-alter@{hook\_\-menu\_\-default\_\-menu\_\-links\_\-alter}}
+\index{hook\_\-menu\_\-default\_\-menu\_\-links\_\-alter@{hook\_\-menu\_\-default\_\-menu\_\-links\_\-alter}!features_component_alter_hooks@{features\_\-component\_\-alter\_\-hooks}}
+\subsubsection[{hook\_\-menu\_\-default\_\-menu\_\-links\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-menu\_\-default\_\-menu\_\-links\_\-alter (\&\$ {\em links})}}
+\label{group__features__component__alter__hooks_ga86626f45ed4bf19d0cc56db05a1c045e}
+Alter the default menu links right before they are cached into the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \&\$links}]By reference. The menu links that have been declared by another feature. \end{DoxyParams}
+\hypertarget{group__features__component__alter__hooks_ga5e43b3c1b03d748e9da468c83d3a1efc}{
+\index{features\_\-component\_\-alter\_\-hooks@{features\_\-component\_\-alter\_\-hooks}!hook\_\-taxonomy\_\-default\_\-vocabularies\_\-alter@{hook\_\-taxonomy\_\-default\_\-vocabularies\_\-alter}}
+\index{hook\_\-taxonomy\_\-default\_\-vocabularies\_\-alter@{hook\_\-taxonomy\_\-default\_\-vocabularies\_\-alter}!features_component_alter_hooks@{features\_\-component\_\-alter\_\-hooks}}
+\subsubsection[{hook\_\-taxonomy\_\-default\_\-vocabularies\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-taxonomy\_\-default\_\-vocabularies\_\-alter (\&\$ {\em vocabularies})}}
+\label{group__features__component__alter__hooks_ga5e43b3c1b03d748e9da468c83d3a1efc}
+Alter the default vocabularies right before they are cached into the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \&\$vocabularies}]By reference. The vocabularies that have been declared by another feature. \end{DoxyParams}
+\hypertarget{group__features__component__alter__hooks_ga905999267231b7418a89a4856dbbfc00}{
+\index{features\_\-component\_\-alter\_\-hooks@{features\_\-component\_\-alter\_\-hooks}!hook\_\-user\_\-default\_\-permissions\_\-alter@{hook\_\-user\_\-default\_\-permissions\_\-alter}}
+\index{hook\_\-user\_\-default\_\-permissions\_\-alter@{hook\_\-user\_\-default\_\-permissions\_\-alter}!features_component_alter_hooks@{features\_\-component\_\-alter\_\-hooks}}
+\subsubsection[{hook\_\-user\_\-default\_\-permissions\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-user\_\-default\_\-permissions\_\-alter (\&\$ {\em permissions})}}
+\label{group__features__component__alter__hooks_ga905999267231b7418a89a4856dbbfc00}
+Alter the default permissions right before they are cached into the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \&\$permissions}]By reference. The permissions that have been declared by another feature. \end{DoxyParams}
+\hypertarget{group__features__component__alter__hooks_gaad88a5479c355cebaa80b017f0a83a4d}{
+\index{features\_\-component\_\-alter\_\-hooks@{features\_\-component\_\-alter\_\-hooks}!hook\_\-user\_\-default\_\-roles\_\-alter@{hook\_\-user\_\-default\_\-roles\_\-alter}}
+\index{hook\_\-user\_\-default\_\-roles\_\-alter@{hook\_\-user\_\-default\_\-roles\_\-alter}!features_component_alter_hooks@{features\_\-component\_\-alter\_\-hooks}}
+\subsubsection[{hook\_\-user\_\-default\_\-roles\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-user\_\-default\_\-roles\_\-alter (\&\$ {\em roles})}}
+\label{group__features__component__alter__hooks_gaad88a5479c355cebaa80b017f0a83a4d}
+Alter the default roles right before they are cached into the database.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \&\$roles}]By reference. The roles that have been declared by another feature. \end{DoxyParams}

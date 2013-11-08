@@ -1,0 +1,273 @@
+\hypertarget{group__hooks}{
+\section{Hooks}
+\label{group__hooks}\index{Hooks@{Hooks}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hooks_gacb27d27849a3374ddda0120603d549ac}{hook\_\-ctools\_\-plugin\_\-type} ()
+\item 
+\hyperlink{group__hooks_gaf17a0de7a7ca6e6c30c766ea1e44715e}{hook\_\-ctools\_\-plugin\_\-directory} (\$owner, \$plugin\_\-type)
+\item 
+\hyperlink{group__hooks_ga4ae530d112605c111f7bdead789ed91d}{hook\_\-ctools\_\-plugin\_\-pre\_\-alter} (\&\$plugin, \&\$info)
+\item 
+\hyperlink{group__hooks_ga2f8a7bad70a9bcb0748a13463a32d362}{hook\_\-ctools\_\-plugin\_\-post\_\-alter} (\&\$plugin, \&\$info)
+\item 
+\hyperlink{group__hooks_gad31fa7973a09a182d52fc1bda3bd95a0}{hook\_\-ctools\_\-api\_\-hook\_\-alter} (\&\$list)
+\item 
+\hyperlink{group__hooks_ga133fb5b53380291a3348feffb3dd3364}{hook\_\-ctools\_\-math\_\-expression\_\-functions\_\-alter} (\&\$functions)
+\item 
+\hyperlink{group__hooks_ga512e53c159fc6ea771d23b52d54b2f6a}{hook\_\-ctools\_\-render\_\-alter} (\&\$info, \&\$page, \&\$context)
+\item 
+\hyperlink{group__hooks_ga095e4e5a15a03861b5e708e3454bf154}{hook\_\-ctools\_\-content\_\-subtype\_\-alter} (\$subtype, \$plugin)
+\item 
+\hyperlink{group__hooks_gad8e0232b98d84d2347a3cc1e26c3df09}{hook\_\-ctools\_\-entity\_\-context\_\-alter} (\&\$plugin, \&\$entity, \$plugin\_\-id)
+\item 
+\hyperlink{group__hooks_gadc7f17dbf80ddbe90f66e7e9a0abb350}{hook\_\-ctools\_\-entity\_\-contexts\_\-alter} (\&\$plugins)
+\item 
+\hyperlink{group__hooks_ga8904abb33205b8553b560e08fd005e3a}{hook\_\-ctools\_\-cleanstring\_\-alter} (\&\$settings)
+\item 
+\hyperlink{group__hooks_gaa77de664d1ef915311e4f768eb6c62ea}{hook\_\-ctools\_\-cleanstring\_\-CLEAN\_\-ID\_\-alter} (\&\$settings)
+\item 
+\hyperlink{group__hooks_gadade57abdccc892f62ed6bc7f089ca29}{hook\_\-page\_\-manager\_\-operations\_\-alter} (\&\$result, \&\$page)
+\item 
+\hyperlink{group__hooks_gaf5d4ce054cae22b3bdca52011c6e8fbc}{hook\_\-page\_\-manager\_\-variant\_\-operations\_\-alter} (\&\$operations, \&\$handler)
+\item 
+\hyperlink{group__hooks_gaeedf3adea0813fb3631f26d0de83a68d}{hook\_\-node\_\-access\_\-explain} (\$row)
+\item 
+\hyperlink{group__hooks_gac5a197ac3564b867c2921fb496063ae6}{hook\_\-node\_\-access\_\-acknowledge} (\$grant)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__hooks_gad31fa7973a09a182d52fc1bda3bd95a0}{
+\index{hooks@{hooks}!hook\_\-ctools\_\-api\_\-hook\_\-alter@{hook\_\-ctools\_\-api\_\-hook\_\-alter}}
+\index{hook\_\-ctools\_\-api\_\-hook\_\-alter@{hook\_\-ctools\_\-api\_\-hook\_\-alter}!hooks@{hooks}}
+\subsubsection[{hook\_\-ctools\_\-api\_\-hook\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-ctools\_\-api\_\-hook\_\-alter (\&\$ {\em list})}}
+\label{group__hooks_gad31fa7973a09a182d52fc1bda3bd95a0}
+Alter the list of modules/themes which implement a certain api.
+
+The hook named here is just an example, as the real existing hooks are named for example 'hook\_\-views\_\-api\_\-alter'.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$list An array of informations about the implementors of a certain api. The key of this array are the module names/theme names. \end{DoxyParams}
+\hypertarget{group__hooks_ga8904abb33205b8553b560e08fd005e3a}{
+\index{hooks@{hooks}!hook\_\-ctools\_\-cleanstring\_\-alter@{hook\_\-ctools\_\-cleanstring\_\-alter}}
+\index{hook\_\-ctools\_\-cleanstring\_\-alter@{hook\_\-ctools\_\-cleanstring\_\-alter}!hooks@{hooks}}
+\subsubsection[{hook\_\-ctools\_\-cleanstring\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-ctools\_\-cleanstring\_\-alter (\&\$ {\em settings})}}
+\label{group__hooks_ga8904abb33205b8553b560e08fd005e3a}
+Change cleanstring settings.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$settings An associative array of cleanstring settings.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+ctools\_\-cleanstring() 
+\end{DoxySeeAlso}
+\hypertarget{group__hooks_gaa77de664d1ef915311e4f768eb6c62ea}{
+\index{hooks@{hooks}!hook\_\-ctools\_\-cleanstring\_\-CLEAN\_\-ID\_\-alter@{hook\_\-ctools\_\-cleanstring\_\-CLEAN\_\-ID\_\-alter}}
+\index{hook\_\-ctools\_\-cleanstring\_\-CLEAN\_\-ID\_\-alter@{hook\_\-ctools\_\-cleanstring\_\-CLEAN\_\-ID\_\-alter}!hooks@{hooks}}
+\subsubsection[{hook\_\-ctools\_\-cleanstring\_\-CLEAN\_\-ID\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-ctools\_\-cleanstring\_\-CLEAN\_\-ID\_\-alter (\&\$ {\em settings})}}
+\label{group__hooks_gaa77de664d1ef915311e4f768eb6c62ea}
+Change cleanstring settings for a specific clean ID.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$settings An associative array of cleanstring settings.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+ctools\_\-cleanstring() 
+\end{DoxySeeAlso}
+\hypertarget{group__hooks_ga095e4e5a15a03861b5e708e3454bf154}{
+\index{hooks@{hooks}!hook\_\-ctools\_\-content\_\-subtype\_\-alter@{hook\_\-ctools\_\-content\_\-subtype\_\-alter}}
+\index{hook\_\-ctools\_\-content\_\-subtype\_\-alter@{hook\_\-ctools\_\-content\_\-subtype\_\-alter}!hooks@{hooks}}
+\subsubsection[{hook\_\-ctools\_\-content\_\-subtype\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-ctools\_\-content\_\-subtype\_\-alter (\$ {\em subtype}, \/  \$ {\em plugin})}}
+\label{group__hooks_ga095e4e5a15a03861b5e708e3454bf154}
+Alter a content plugin subtype.
+
+While content types can be altered via \hyperlink{group__hooks_ga4ae530d112605c111f7bdead789ed91d}{hook\_\-ctools\_\-plugin\_\-pre\_\-alter()} or \hyperlink{group__hooks_ga2f8a7bad70a9bcb0748a13463a32d362}{hook\_\-ctools\_\-plugin\_\-post\_\-alter()}, the subtypes that content types rely on are special and require their own hook.
+
+This hook can be used to add things like 'render last' or change icons or categories or to rename content on specific sites. \hypertarget{group__hooks_gad8e0232b98d84d2347a3cc1e26c3df09}{
+\index{hooks@{hooks}!hook\_\-ctools\_\-entity\_\-context\_\-alter@{hook\_\-ctools\_\-entity\_\-context\_\-alter}}
+\index{hook\_\-ctools\_\-entity\_\-context\_\-alter@{hook\_\-ctools\_\-entity\_\-context\_\-alter}!hooks@{hooks}}
+\subsubsection[{hook\_\-ctools\_\-entity\_\-context\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-ctools\_\-entity\_\-context\_\-alter (\&\$ {\em plugin}, \/  \&\$ {\em entity}, \/  \$ {\em plugin\_\-id})}}
+\label{group__hooks_gad8e0232b98d84d2347a3cc1e26c3df09}
+Alter the definition of an entity context plugin.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$plugin An associative array defining a plugin. \item[{\em array}]\$entity The entity info array of a specific entity type. \item[{\em string}]\$plugin\_\-id The plugin ID, in the format NAME:KEY. \end{DoxyParams}
+\hypertarget{group__hooks_gadc7f17dbf80ddbe90f66e7e9a0abb350}{
+\index{hooks@{hooks}!hook\_\-ctools\_\-entity\_\-contexts\_\-alter@{hook\_\-ctools\_\-entity\_\-contexts\_\-alter}}
+\index{hook\_\-ctools\_\-entity\_\-contexts\_\-alter@{hook\_\-ctools\_\-entity\_\-contexts\_\-alter}!hooks@{hooks}}
+\subsubsection[{hook\_\-ctools\_\-entity\_\-contexts\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-ctools\_\-entity\_\-contexts\_\-alter (\&\$ {\em plugins})}}
+\label{group__hooks_gadc7f17dbf80ddbe90f66e7e9a0abb350}
+Alter the definition of entity context plugins.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$plugins An associative array of plugin definitions, keyed by plugin ID.\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__hooks_gad8e0232b98d84d2347a3cc1e26c3df09}{hook\_\-ctools\_\-entity\_\-context\_\-alter()} 
+\end{DoxySeeAlso}
+\hypertarget{group__hooks_ga133fb5b53380291a3348feffb3dd3364}{
+\index{hooks@{hooks}!hook\_\-ctools\_\-math\_\-expression\_\-functions\_\-alter@{hook\_\-ctools\_\-math\_\-expression\_\-functions\_\-alter}}
+\index{hook\_\-ctools\_\-math\_\-expression\_\-functions\_\-alter@{hook\_\-ctools\_\-math\_\-expression\_\-functions\_\-alter}!hooks@{hooks}}
+\subsubsection[{hook\_\-ctools\_\-math\_\-expression\_\-functions\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-ctools\_\-math\_\-expression\_\-functions\_\-alter (\&\$ {\em functions})}}
+\label{group__hooks_ga133fb5b53380291a3348feffb3dd3364}
+Alter the available functions to be used in ctools math expression api.
+
+One usecase would be to create your own function in your module and allow to use it in the math expression api.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$functions}]An array which has the functions as value. \end{DoxyParams}
+\hypertarget{group__hooks_gaf17a0de7a7ca6e6c30c766ea1e44715e}{
+\index{hooks@{hooks}!hook\_\-ctools\_\-plugin\_\-directory@{hook\_\-ctools\_\-plugin\_\-directory}}
+\index{hook\_\-ctools\_\-plugin\_\-directory@{hook\_\-ctools\_\-plugin\_\-directory}!hooks@{hooks}}
+\subsubsection[{hook\_\-ctools\_\-plugin\_\-directory}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-ctools\_\-plugin\_\-directory (\$ {\em owner}, \/  \$ {\em plugin\_\-type})}}
+\label{group__hooks_gaf17a0de7a7ca6e6c30c766ea1e44715e}
+This hook is used to inform the CTools plugin system about the location of a directory that should be searched for files containing plugins of a particular type. CTools invokes this same hook for all plugins, using the two passed parameters to indicate the specific type of plugin for which it is searching.
+
+The \$plugin\_\-type parameter is self-\/explanatory -\/ it is the string name of the plugin type (e.g., Panels' 'layouts' or 'styles'). The \$owner parameter is necessary because CTools internally namespaces plugins by the module that owns them. This is an extension of Drupal best practices on avoiding global namespace pollution by prepending your module name to all its functions. Consequently, it is possible for two different modules to create a plugin type with exactly the same name and have them operate in harmony. In fact, this system renders it impossible for modules to encroach on other modules' plugin namespaces.
+
+Given this namespacing, it is important that implementations of this hook check BOTH the \$owner and \$plugin\_\-type parameters before returning a path. If your module does not implement plugins for the requested module/plugin combination, it is safe to return nothing at all (or NULL). As a convenience, it is also safe to return a path that does not exist for plugins your module does not implement -\/ see form 2 for a use case.
+
+Note that modules implementing a plugin also must implement this hook to instruct CTools as to the location of the plugins. See form 3 for a use case.
+
+The conventional structure to return is \char`\"{}plugins/\$plugin\_\-type\char`\"{} -\/ that is, a 'plugins' subdirectory in your main module directory, with individual directories contained therein named for the plugin type they contain.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$owner The system name of the module owning the plugin type for which a base directory location is being requested. \item[{\em string}]\$plugin\_\-type The name of the plugin type for which a base directory is being requested. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The path where CTools' plugin system should search for plugin files, relative to your module's root. Omit leading and trailing slashes. 
+\end{DoxyReturn}
+\hypertarget{group__hooks_ga2f8a7bad70a9bcb0748a13463a32d362}{
+\index{hooks@{hooks}!hook\_\-ctools\_\-plugin\_\-post\_\-alter@{hook\_\-ctools\_\-plugin\_\-post\_\-alter}}
+\index{hook\_\-ctools\_\-plugin\_\-post\_\-alter@{hook\_\-ctools\_\-plugin\_\-post\_\-alter}!hooks@{hooks}}
+\subsubsection[{hook\_\-ctools\_\-plugin\_\-post\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-ctools\_\-plugin\_\-post\_\-alter (\&\$ {\em plugin}, \/  \&\$ {\em info})}}
+\label{group__hooks_ga2f8a7bad70a9bcb0748a13463a32d362}
+Alter a plugin after it has been processed.
+
+This hook is useful for overriding the final values for a plugin after it has been processed.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$plugin}]An associative array defining a plugin. \item[{\em \$info}]An associative array of plugin type info. \end{DoxyParams}
+\hypertarget{group__hooks_ga4ae530d112605c111f7bdead789ed91d}{
+\index{hooks@{hooks}!hook\_\-ctools\_\-plugin\_\-pre\_\-alter@{hook\_\-ctools\_\-plugin\_\-pre\_\-alter}}
+\index{hook\_\-ctools\_\-plugin\_\-pre\_\-alter@{hook\_\-ctools\_\-plugin\_\-pre\_\-alter}!hooks@{hooks}}
+\subsubsection[{hook\_\-ctools\_\-plugin\_\-pre\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-ctools\_\-plugin\_\-pre\_\-alter (\&\$ {\em plugin}, \/  \&\$ {\em info})}}
+\label{group__hooks_ga4ae530d112605c111f7bdead789ed91d}
+Alter a plugin before it has been processed.
+
+This hook is useful for altering flags or other information that will be used or possibly overriden by the process hook if defined.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$plugin}]An associative array defining a plugin. \item[{\em \$info}]An associative array of plugin type info. \end{DoxyParams}
+\hypertarget{group__hooks_gacb27d27849a3374ddda0120603d549ac}{
+\index{hooks@{hooks}!hook\_\-ctools\_\-plugin\_\-type@{hook\_\-ctools\_\-plugin\_\-type}}
+\index{hook\_\-ctools\_\-plugin\_\-type@{hook\_\-ctools\_\-plugin\_\-type}!hooks@{hooks}}
+\subsubsection[{hook\_\-ctools\_\-plugin\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-ctools\_\-plugin\_\-type ()}}
+\label{group__hooks_gacb27d27849a3374ddda0120603d549ac}
+Inform CTools about plugin types.
+
+\begin{DoxyReturn}{Returns}
+array An array of plugin types, keyed by the type name. See the advanced help topic 'plugins-\/creating' for details of the array properties. 
+\end{DoxyReturn}
+\hypertarget{group__hooks_ga512e53c159fc6ea771d23b52d54b2f6a}{
+\index{hooks@{hooks}!hook\_\-ctools\_\-render\_\-alter@{hook\_\-ctools\_\-render\_\-alter}}
+\index{hook\_\-ctools\_\-render\_\-alter@{hook\_\-ctools\_\-render\_\-alter}!hooks@{hooks}}
+\subsubsection[{hook\_\-ctools\_\-render\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-ctools\_\-render\_\-alter (\&\$ {\em info}, \/  \&\$ {\em page}, \/  \&\$ {\em context})}}
+\label{group__hooks_ga512e53c159fc6ea771d23b52d54b2f6a}
+Alter everything.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$info}]An associative array containing the following keys:
+\begin{DoxyItemize}
+\item content: The rendered content.
+\item title: The content's title.
+\item no\_\-blocks: A boolean to decide if blocks should be displayed. 
+\end{DoxyItemize}\item[{\em \$page}]If TRUE then this renderer owns the page and can use theme('page') for no blocks; if false, output is returned regardless of any no blocks settings. \item[{\em \$context}]An associative array containing the following keys:
+\begin{DoxyItemize}
+\item args: The raw arguments behind the contexts.
+\item contexts: The context objects in use.
+\item task: The task object in use.
+\item subtask: The subtask object in use.
+\item handler: The handler object in use. 
+\end{DoxyItemize}\end{DoxyParams}
+\hypertarget{group__hooks_gac5a197ac3564b867c2921fb496063ae6}{
+\index{hooks@{hooks}!hook\_\-node\_\-access\_\-acknowledge@{hook\_\-node\_\-access\_\-acknowledge}}
+\index{hook\_\-node\_\-access\_\-acknowledge@{hook\_\-node\_\-access\_\-acknowledge}!hooks@{hooks}}
+\subsubsection[{hook\_\-node\_\-access\_\-acknowledge}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-node\_\-access\_\-acknowledge (\$ {\em grant})}}
+\label{group__hooks_gac5a197ac3564b867c2921fb496063ae6}
+Acknowledge ownership of 'alien' grant records.
+
+Some node access modules store grant records directly into the \{node\_\-access\} table rather than returning them through hook\_\-node\_\-access\_\-records(). This practice is not recommended and DNA will flag all such records as 'alien'.
+
+If this is unavoidable, a module can confess to being the owner of these grant records, so that DNA can properly attribute them.
+
+\begin{DoxySeeAlso}{See also}
+hook\_\-node\_\-access\_\-records() 
+\end{DoxySeeAlso}
+\hypertarget{group__hooks_gaeedf3adea0813fb3631f26d0de83a68d}{
+\index{hooks@{hooks}!hook\_\-node\_\-access\_\-explain@{hook\_\-node\_\-access\_\-explain}}
+\index{hook\_\-node\_\-access\_\-explain@{hook\_\-node\_\-access\_\-explain}!hooks@{hooks}}
+\subsubsection[{hook\_\-node\_\-access\_\-explain}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-node\_\-access\_\-explain (\$ {\em row})}}
+\label{group__hooks_gaeedf3adea0813fb3631f26d0de83a68d}
+Explain your records in the \{node\_\-access\} table.
+
+In order to help developers and administrators understand the forces that control access to any given node, the DNA module provides the Devel Node Access block, which lists all the grant records in the \{node\_\-access\} table for that node.
+
+However, every Node Access module is free in how it defines and uses the 'realm' and 'gid' fields in its records in the \{node\_\-access\} table, and it's often difficult to interpret them. This hook passes each record that DNA wants to display, and the owning module is expected to return an explanation of that record.
+
+The explanation should not be localized (not be passed through t()), so that administrators seeking help can present English explanations.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$row}]The record from the \{node\_\-access\} table, as object. The member fields are: nid, gid, realm, grant\_\-view, grant\_\-update, grant\_\-delete.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string with a (short!) explanation of the given \{node\_\-access\} row, to be displayed in DNA's 'Devel Node Access' block. It will be displayed as HTML; any variable parts must already be sanitized.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+hook\_\-node\_\-access\_\-records() 
+
+\hyperlink{devel__node__access_8module_a7b594d5b01b220abc354695853569809}{devel\_\-node\_\-access\_\-node\_\-access\_\-explain()} 
+\end{DoxySeeAlso}
+\hypertarget{group__hooks_gadade57abdccc892f62ed6bc7f089ca29}{
+\index{hooks@{hooks}!hook\_\-page\_\-manager\_\-operations\_\-alter@{hook\_\-page\_\-manager\_\-operations\_\-alter}}
+\index{hook\_\-page\_\-manager\_\-operations\_\-alter@{hook\_\-page\_\-manager\_\-operations\_\-alter}!hooks@{hooks}}
+\subsubsection[{hook\_\-page\_\-manager\_\-operations\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-page\_\-manager\_\-operations\_\-alter (\&\$ {\em result}, \/  \&\$ {\em page})}}
+\label{group__hooks_gadade57abdccc892f62ed6bc7f089ca29}
+\begin{Desc}
+\item[\hyperlink{todo__todo000009}{Todo}]\end{Desc}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$result \end{DoxyParams}
+\begin{Desc}
+\item[\hyperlink{todo__todo000010}{Todo}]\end{Desc}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em object}]\$page \end{DoxyParams}
+\begin{Desc}
+\item[\hyperlink{todo__todo000011}{Todo}]\end{Desc}
+\hypertarget{group__hooks_gaf5d4ce054cae22b3bdca52011c6e8fbc}{
+\index{hooks@{hooks}!hook\_\-page\_\-manager\_\-variant\_\-operations\_\-alter@{hook\_\-page\_\-manager\_\-variant\_\-operations\_\-alter}}
+\index{hook\_\-page\_\-manager\_\-variant\_\-operations\_\-alter@{hook\_\-page\_\-manager\_\-variant\_\-operations\_\-alter}!hooks@{hooks}}
+\subsubsection[{hook\_\-page\_\-manager\_\-variant\_\-operations\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}hook\_\-page\_\-manager\_\-variant\_\-operations\_\-alter (\&\$ {\em operations}, \/  \&\$ {\em handler})}}
+\label{group__hooks_gaf5d4ce054cae22b3bdca52011c6e8fbc}
+\begin{Desc}
+\item[\hyperlink{todo__todo000012}{Todo}]\end{Desc}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$operations \end{DoxyParams}
+\begin{Desc}
+\item[\hyperlink{todo__todo000013}{Todo}]\end{Desc}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em object}]\$handler \end{DoxyParams}
+\begin{Desc}
+\item[\hyperlink{todo__todo000014}{Todo}]\end{Desc}

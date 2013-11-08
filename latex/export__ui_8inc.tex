@@ -1,0 +1,46 @@
+\hypertarget{export__ui_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/cache/export\_\-ui.inc File Reference}
+\label{export__ui_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/cache/export\_\-ui.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/cache/export\_\-ui.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{export__ui_8inc_abc6ec973c8a5c499a8b3c294ae76a44a}{
+{\bfseries ctools\_\-cache\_\-export\_\-ui\_\-cache\_\-get} (\$plugin\_\-name, \$key)}
+\label{export__ui_8inc_abc6ec973c8a5c499a8b3c294ae76a44a}
+
+\item 
+\hypertarget{export__ui_8inc_a471b7221c9c22a945dfb2d4f274c5ae5}{
+{\bfseries ctools\_\-cache\_\-export\_\-ui\_\-cache\_\-set} (\$plugin\_\-name, \$key, \$item)}
+\label{export__ui_8inc_a471b7221c9c22a945dfb2d4f274c5ae5}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A caching mechanism for use with subsystems that use the export ui. 
+
+\subsection{Variable Documentation}
+\hypertarget{export__ui_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{export\_\-ui.inc@{export\_\-ui.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!export_ui.inc@{export\_\-ui.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{export__ui_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  
+  
+  'title' => t('Export UI wizard cache'),
+  'cache get' => 'ctools_cache_export_ui_cache_get',
+  'cache set' => 'ctools_cache_export_ui_cache_set',
+  
+  
+  'cache finalize' => 'ctools_cache_export_ui_cache_set',
+)
+\end{DoxyCode}

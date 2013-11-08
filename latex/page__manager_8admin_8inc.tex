@@ -1,0 +1,402 @@
+\hypertarget{page__manager_8admin_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/page\_\-manager/page\_\-manager.admin.inc File Reference}
+\label{page__manager_8admin_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/page\_\-manager/page\_\-manager.admin.inc@{html/profiles/dosomething/modules/contrib/ctools/page\_\-manager/page\_\-manager.admin.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{page__manager_8admin_8inc_a4366f90c2f82cba288c4c41e98dc51aa}{page\_\-manager\_\-list\_\-page} (\$js=NULL)
+\item 
+\hyperlink{page__manager_8admin_8inc_a1dd523dbb3fdf5808af244fe67d95776}{page\_\-manager\_\-get\_\-pages} (\$tasks, \&\$pages, \$task\_\-id=NULL)
+\item 
+\hyperlink{page__manager_8admin_8inc_a69d5a1c5ff1ecf2d5b566dfaeeb2ae54}{page\_\-manager\_\-list\_\-pages\_\-form} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a148b43b1d53e788722edc7f8f1c8dc76}{page\_\-manager\_\-list\_\-pages\_\-form\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_aabc0ee81d4ff6bb8566ff3d67ff74798}{page\_\-manager\_\-edit\_\-page} (\$page)
+\item 
+\hyperlink{page__manager_8admin_8inc_a88fc713de52b4be208360499f8225ac1}{page\_\-manager\_\-edit\_\-page\_\-operation} ()
+\item 
+\hyperlink{page__manager_8admin_8inc_a660bf3462704812598b7af309477ac25}{page\_\-manager\_\-get\_\-operations} (\$page, \$operations=NULL)
+\item 
+\hyperlink{page__manager_8admin_8inc_ac5ec1413c03ea5e18480ba053b13295a}{page\_\-manager\_\-get\_\-handler\_\-operations} (\&\$page)
+\item 
+\hyperlink{page__manager_8admin_8inc_a92cff2e11d6dd0661ecc4f39cf57babf}{page\_\-manager\_\-get\_\-operation} (\$operations, \$trail)
+\item 
+\hyperlink{page__manager_8admin_8inc_a0e89fcc896c6d44a4b0559439d4a9689}{page\_\-manager\_\-get\_\-operation\_\-content} (\$js, \&\$page, \$trail, \$operations)
+\item 
+\hyperlink{page__manager_8admin_8inc_aa379143ef5ed68cc40f2a6dac3c5d456}{\_\-page\_\-manager\_\-get\_\-operation\_\-content} (\$js, \&\$page, \$active, \$operation, \$titles=array(), \$args=array())
+\item 
+\hypertarget{page__manager_8admin_8inc_ad205a90000dc004686cb26e4c85b63ee}{
+{\bfseries page\_\-manager\_\-operation\_\-wrapper} (\$form, \&\$form\_\-state)}
+\label{page__manager_8admin_8inc_ad205a90000dc004686cb26e4c85b63ee}
+
+\item 
+\hyperlink{page__manager_8admin_8inc_adda934adb211c15b7ffb8659158f4c8d}{page\_\-manager\_\-edit\_\-page\_\-finish} (\&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a50dd59f9db5cde973f5120337b6f4026}{page\_\-manager\_\-edit\_\-page\_\-next} (\&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_aec78e2899a33f799e9f4ebe0f3839711}{page\_\-manager\_\-edit\_\-page\_\-cancel} (\&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a64632eddea1e6b4a366b399fdc13e95a}{page\_\-manager\_\-render\_\-operations} (\&\$page, \$operations, \$active\_\-trail, \$attributes, \$location, \$parents=array())
+\item 
+\hyperlink{page__manager_8admin_8inc_a0cebbb105c27764a960d2acfacd484bf}{page\_\-manager\_\-save\_\-page\_\-form} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_aac2241c9cd0ac721d93f4c904a1a1293}{page\_\-manager\_\-save\_\-page\_\-form\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_ae247c3127a873439c9e6bed5fd4453be}{page\_\-manager\_\-save\_\-page\_\-form\_\-cancel} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_ac106674f4aa3ba8f1f3b8940f663e230}{page\_\-manager\_\-handler\_\-add} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a6d3b87ff0cfde1b8577f08f0ce1f96af}{page\_\-manager\_\-handler\_\-add\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a412bb20e91468909a7274c948887639d}{page\_\-manager\_\-handler\_\-add\_\-finish} (\&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a47ad5fa085b38af8dec0cc441fcc770f}{page\_\-manager\_\-handler\_\-add\_\-cancel} (\&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_ae375ef3886a3426e0c46da3e4c20fdf7}{page\_\-manager\_\-handler\_\-add\_\-form} (\$form, \$form\_\-state, \$features=array())
+\item 
+\hyperlink{page__manager_8admin_8inc_a5d79ab1672156c501390a36eed452c48}{page\_\-manager\_\-handler\_\-import} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a6963064ee84139a0bb64d9cc1b67c55e}{page\_\-manager\_\-handler\_\-import\_\-validate} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a7f17a14b067b7a3c64f31361e3c5426b}{page\_\-manager\_\-handler\_\-import\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a6e324bd1ae431f00d56ddb9ae5ceb280}{page\_\-manager\_\-handler\_\-rearrange} (\$form, \&\$form\_\-state)
+\item 
+\hypertarget{page__manager_8admin_8inc_af29fa18025a83bd65632b88a62b72fad}{
+{\bfseries page\_\-manager\_\-handler\_\-rearrange\_\-submit} (\&\$form, \&\$form\_\-state)}
+\label{page__manager_8admin_8inc_af29fa18025a83bd65632b88a62b72fad}
+
+\item 
+\hyperlink{page__manager_8admin_8inc_a5eacb554e7d98265ede82a0ae0c3a628}{\_\-page\_\-manager\_\-handler\_\-sort} (\$a, \$b)
+\item 
+\hyperlink{page__manager_8admin_8inc_aca261eee8f4678610ac48b7b039ff66e}{page\_\-manager\_\-handler\_\-delete} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_ad9484f3b9594148f813df78466ef32ae}{page\_\-manager\_\-handler\_\-delete\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a4ffce6578f5c43b1c89e6099fa711ea1}{page\_\-manager\_\-handler\_\-export} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_abba39e855406ab69c4b4bf6a3630d41f}{page\_\-manager\_\-handler\_\-clone} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a36671329908ef4a33149f1ae956c5d80}{page\_\-manager\_\-handler\_\-clone\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_ab7a195776d4f5b4947fe762f427c9eec}{page\_\-manager\_\-handler\_\-enable} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a82053012fe27041a8bc78da4b52405bf}{page\_\-manager\_\-handler\_\-enable\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a5a643ed98379483b2caf5b882a03aad4}{page\_\-manager\_\-handler\_\-disable} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a2b1cdfdd84993c9480b1032309fa8eb4}{page\_\-manager\_\-handler\_\-summary} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a852cb808507dacf147798447b0fcb381}{page\_\-manager\_\-handler\_\-disable\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a84d9035a181a37f694cd057c0269b3d5}{page\_\-manager\_\-break\_\-lock} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a8c7f274f66fb82c088351d36b1ac67c9}{page\_\-manager\_\-break\_\-lock\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_aeff4bbd8d593ad0f6880a9a029b4b7b6}{page\_\-manager\_\-enable\_\-form} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a1a0c114af3f35d42210cfe1bf4af2ca1}{page\_\-manager\_\-enable\_\-form\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a957c3f3d897ca05673da82bc212b2a27}{page\_\-manager\_\-disable\_\-form} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a371e6b2f2287ca725b866c1f2c6312d6}{page\_\-manager\_\-disable\_\-form\_\-submit} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a1151aa10f7c2d1f78f59c62716dd3958}{page\_\-manager\_\-page\_\-summary} (\$form, \&\$form\_\-state)
+\item 
+\hyperlink{page__manager_8admin_8inc_a4199dbaf2894cca0b20bccbd5a9f821b}{page\_\-manager\_\-enable\_\-page} (\$disable, \$js, \$page)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Administrative functions for the page manager.
+
+This provides the UI to list, create, edit and delete pages, though much of this is delegated through to individual tasks. 
+
+\subsection{Function Documentation}
+\hypertarget{page__manager_8admin_8inc_aa379143ef5ed68cc40f2a6dac3c5d456}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!\_\-page\_\-manager\_\-get\_\-operation\_\-content@{\_\-page\_\-manager\_\-get\_\-operation\_\-content}}
+\index{\_\-page\_\-manager\_\-get\_\-operation\_\-content@{\_\-page\_\-manager\_\-get\_\-operation\_\-content}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{\_\-page\_\-manager\_\-get\_\-operation\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}\_\-page\_\-manager\_\-get\_\-operation\_\-content (\$ {\em js}, \/  \&\$ {\em page}, \/  \$ {\em active}, \/  \$ {\em operation}, \/  \$ {\em titles} = {\ttfamily array()}, \/  \$ {\em args} = {\ttfamily array()})}}
+\label{page__manager_8admin_8inc_aa379143ef5ed68cc40f2a6dac3c5d456}
+Fetch the content for an operation, after it's been discovered from arguments.
+
+This system runs through the CTools form wizard. Each operation specifies a form or set of forms that it may use. Operations may also specify wrappers and can set their own next/finish handlers so that they can make additional things happen at the end. \hypertarget{page__manager_8admin_8inc_a5eacb554e7d98265ede82a0ae0c3a628}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!\_\-page\_\-manager\_\-handler\_\-sort@{\_\-page\_\-manager\_\-handler\_\-sort}}
+\index{\_\-page\_\-manager\_\-handler\_\-sort@{\_\-page\_\-manager\_\-handler\_\-sort}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{\_\-page\_\-manager\_\-handler\_\-sort}]{\setlength{\rightskip}{0pt plus 5cm}\_\-page\_\-manager\_\-handler\_\-sort (\$ {\em a}, \/  \$ {\em b})}}
+\label{page__manager_8admin_8inc_a5eacb554e7d98265ede82a0ae0c3a628}
+Used as a callback to uasort to sort the task cache by weight.
+
+The 'name' field is used as a backup when weights are the same, which can happen when multiple modules put items out there at the same weight. \hypertarget{page__manager_8admin_8inc_a84d9035a181a37f694cd057c0269b3d5}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-break\_\-lock@{page\_\-manager\_\-break\_\-lock}}
+\index{page\_\-manager\_\-break\_\-lock@{page\_\-manager\_\-break\_\-lock}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-break\_\-lock}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-break\_\-lock (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a84d9035a181a37f694cd057c0269b3d5}
+Break the lock on a page so that it can be edited. \hypertarget{page__manager_8admin_8inc_a8c7f274f66fb82c088351d36b1ac67c9}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-break\_\-lock\_\-submit@{page\_\-manager\_\-break\_\-lock\_\-submit}}
+\index{page\_\-manager\_\-break\_\-lock\_\-submit@{page\_\-manager\_\-break\_\-lock\_\-submit}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-break\_\-lock\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-break\_\-lock\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a8c7f274f66fb82c088351d36b1ac67c9}
+Submit to break the lock on a page. \hypertarget{page__manager_8admin_8inc_a957c3f3d897ca05673da82bc212b2a27}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-disable\_\-form@{page\_\-manager\_\-disable\_\-form}}
+\index{page\_\-manager\_\-disable\_\-form@{page\_\-manager\_\-disable\_\-form}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-disable\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-disable\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a957c3f3d897ca05673da82bc212b2a27}
+Form to disable a page. \hypertarget{page__manager_8admin_8inc_a371e6b2f2287ca725b866c1f2c6312d6}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-disable\_\-form\_\-submit@{page\_\-manager\_\-disable\_\-form\_\-submit}}
+\index{page\_\-manager\_\-disable\_\-form\_\-submit@{page\_\-manager\_\-disable\_\-form\_\-submit}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-disable\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-disable\_\-form\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a371e6b2f2287ca725b866c1f2c6312d6}
+Disable the page after it has been confirmed. \hypertarget{page__manager_8admin_8inc_aabc0ee81d4ff6bb8566ff3d67ff74798}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-edit\_\-page@{page\_\-manager\_\-edit\_\-page}}
+\index{page\_\-manager\_\-edit\_\-page@{page\_\-manager\_\-edit\_\-page}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-edit\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-edit\_\-page (\$ {\em page})}}
+\label{page__manager_8admin_8inc_aabc0ee81d4ff6bb8566ff3d67ff74798}
+Render the edit page for a a page, custom or system. \hypertarget{page__manager_8admin_8inc_aec78e2899a33f799e9f4ebe0f3839711}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-edit\_\-page\_\-cancel@{page\_\-manager\_\-edit\_\-page\_\-cancel}}
+\index{page\_\-manager\_\-edit\_\-page\_\-cancel@{page\_\-manager\_\-edit\_\-page\_\-cancel}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-edit\_\-page\_\-cancel}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-edit\_\-page\_\-cancel (\&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_aec78e2899a33f799e9f4ebe0f3839711}
+Callback generated when the 'cancel' button is clicked.
+
+All we do here is clear the cache. \hypertarget{page__manager_8admin_8inc_adda934adb211c15b7ffb8659158f4c8d}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-edit\_\-page\_\-finish@{page\_\-manager\_\-edit\_\-page\_\-finish}}
+\index{page\_\-manager\_\-edit\_\-page\_\-finish@{page\_\-manager\_\-edit\_\-page\_\-finish}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-edit\_\-page\_\-finish}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-edit\_\-page\_\-finish (\&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_adda934adb211c15b7ffb8659158f4c8d}
+Callback generated when the an operation edit finished. \hypertarget{page__manager_8admin_8inc_a50dd59f9db5cde973f5120337b6f4026}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-edit\_\-page\_\-next@{page\_\-manager\_\-edit\_\-page\_\-next}}
+\index{page\_\-manager\_\-edit\_\-page\_\-next@{page\_\-manager\_\-edit\_\-page\_\-next}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-edit\_\-page\_\-next}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-edit\_\-page\_\-next (\&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a50dd59f9db5cde973f5120337b6f4026}
+Callback generated when the 'next' button is clicked.
+
+All we do here is store the cache. \hypertarget{page__manager_8admin_8inc_a88fc713de52b4be208360499f8225ac1}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-edit\_\-page\_\-operation@{page\_\-manager\_\-edit\_\-page\_\-operation}}
+\index{page\_\-manager\_\-edit\_\-page\_\-operation@{page\_\-manager\_\-edit\_\-page\_\-operation}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-edit\_\-page\_\-operation}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-edit\_\-page\_\-operation ()}}
+\label{page__manager_8admin_8inc_a88fc713de52b4be208360499f8225ac1}
+Entry point to edit a single operation for a page.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$js}]Whether or not the page was called via javascript. \item[{\em \$page}]The cached page that is being edited. \item[{\em ...}]A number of items used to drill down into the actual operation called. \end{DoxyParams}
+\hypertarget{page__manager_8admin_8inc_aeff4bbd8d593ad0f6880a9a029b4b7b6}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-enable\_\-form@{page\_\-manager\_\-enable\_\-form}}
+\index{page\_\-manager\_\-enable\_\-form@{page\_\-manager\_\-enable\_\-form}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-enable\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-enable\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_aeff4bbd8d593ad0f6880a9a029b4b7b6}
+Form to enable a page. \hypertarget{page__manager_8admin_8inc_a1a0c114af3f35d42210cfe1bf4af2ca1}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-enable\_\-form\_\-submit@{page\_\-manager\_\-enable\_\-form\_\-submit}}
+\index{page\_\-manager\_\-enable\_\-form\_\-submit@{page\_\-manager\_\-enable\_\-form\_\-submit}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-enable\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-enable\_\-form\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a1a0c114af3f35d42210cfe1bf4af2ca1}
+Enable the page after it has been confirmed. \hypertarget{page__manager_8admin_8inc_a4199dbaf2894cca0b20bccbd5a9f821b}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-enable\_\-page@{page\_\-manager\_\-enable\_\-page}}
+\index{page\_\-manager\_\-enable\_\-page@{page\_\-manager\_\-enable\_\-page}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-enable\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-enable\_\-page (\$ {\em disable}, \/  \$ {\em js}, \/  \$ {\em page})}}
+\label{page__manager_8admin_8inc_a4199dbaf2894cca0b20bccbd5a9f821b}
+Menu callback to enable or disable a page \hypertarget{page__manager_8admin_8inc_ac5ec1413c03ea5e18480ba053b13295a}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-get\_\-handler\_\-operations@{page\_\-manager\_\-get\_\-handler\_\-operations}}
+\index{page\_\-manager\_\-get\_\-handler\_\-operations@{page\_\-manager\_\-get\_\-handler\_\-operations}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-get\_\-handler\_\-operations}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-handler\_\-operations (\&\$ {\em page})}}
+\label{page__manager_8admin_8inc_ac5ec1413c03ea5e18480ba053b13295a}
+Collect all the operations related to task handlers (variants) and build a menu. \hypertarget{page__manager_8admin_8inc_a92cff2e11d6dd0661ecc4f39cf57babf}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-get\_\-operation@{page\_\-manager\_\-get\_\-operation}}
+\index{page\_\-manager\_\-get\_\-operation@{page\_\-manager\_\-get\_\-operation}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-get\_\-operation}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-operation (\$ {\em operations}, \/  \$ {\em trail})}}
+\label{page__manager_8admin_8inc_a92cff2e11d6dd0661ecc4f39cf57babf}
+Get an operation from a trail.
+
+\begin{DoxyReturn}{Returns}
+array(\$operation, \$active, \$args) 
+\end{DoxyReturn}
+\hypertarget{page__manager_8admin_8inc_a0e89fcc896c6d44a4b0559439d4a9689}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-get\_\-operation\_\-content@{page\_\-manager\_\-get\_\-operation\_\-content}}
+\index{page\_\-manager\_\-get\_\-operation\_\-content@{page\_\-manager\_\-get\_\-operation\_\-content}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-get\_\-operation\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-operation\_\-content (\$ {\em js}, \/  \&\$ {\em page}, \/  \$ {\em trail}, \/  \$ {\em operations})}}
+\label{page__manager_8admin_8inc_a0e89fcc896c6d44a4b0559439d4a9689}
+Fetch the content for an operation.
+
+First, this drills down through the arguments to find the operation, and turns whatever it finds into the active trail which is then used to hilite where we are when rendering the operation list.
+
+The arguments are discovered from the URL, and are an exact match for where the operation is in the hierarchy. For example, handlers/foo/settings will be the operation to edit the settings for the handler named foo. This comes in as an array ('handlers', 'foo', 'settings') and is used to find where the data for that operation is in the array. \hypertarget{page__manager_8admin_8inc_a660bf3462704812598b7af309477ac25}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-get\_\-operations@{page\_\-manager\_\-get\_\-operations}}
+\index{page\_\-manager\_\-get\_\-operations@{page\_\-manager\_\-get\_\-operations}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-get\_\-operations}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-operations (\$ {\em page}, \/  \$ {\em operations} = {\ttfamily NULL})}}
+\label{page__manager_8admin_8inc_a660bf3462704812598b7af309477ac25}
+Take the operations array from a task and expand it.
+
+This allows some of the operations to be dynamic, based upon settings on the task or the task's handlers. Each operation should have a type. In addition to all the types allowed in page\_\-manager\_\-render\_\-operations, these types will be dynamically replaced with something else:
+\begin{DoxyItemize}
+\item 'handlers': An automatically created group that contains all the task's handlers and appropriate links.
+\item 'function': A callback (which will be placed in the 'function' parameter that should return an array of operations. This can be used to provide additional, dynamic links if needed. 
+\end{DoxyItemize}\hypertarget{page__manager_8admin_8inc_a1dd523dbb3fdf5808af244fe67d95776}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-get\_\-pages@{page\_\-manager\_\-get\_\-pages}}
+\index{page\_\-manager\_\-get\_\-pages@{page\_\-manager\_\-get\_\-pages}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-get\_\-pages}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-get\_\-pages (\$ {\em tasks}, \/  \&\$ {\em pages}, \/  \$ {\em task\_\-id} = {\ttfamily NULL})}}
+\label{page__manager_8admin_8inc_a1dd523dbb3fdf5808af244fe67d95776}
+Sort tasks into buckets based upon whether or not they have subtasks. \hypertarget{page__manager_8admin_8inc_ac106674f4aa3ba8f1f3b8940f663e230}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-handler\_\-add@{page\_\-manager\_\-handler\_\-add}}
+\index{page\_\-manager\_\-handler\_\-add@{page\_\-manager\_\-handler\_\-add}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-handler\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-add (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_ac106674f4aa3ba8f1f3b8940f663e230}
+Add a new task handler. \hypertarget{page__manager_8admin_8inc_a47ad5fa085b38af8dec0cc441fcc770f}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-handler\_\-add\_\-cancel@{page\_\-manager\_\-handler\_\-add\_\-cancel}}
+\index{page\_\-manager\_\-handler\_\-add\_\-cancel@{page\_\-manager\_\-handler\_\-add\_\-cancel}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-handler\_\-add\_\-cancel}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-add\_\-cancel (\&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a47ad5fa085b38af8dec0cc441fcc770f}
+Throw away a new handler and return to the add form \hypertarget{page__manager_8admin_8inc_a412bb20e91468909a7274c948887639d}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-handler\_\-add\_\-finish@{page\_\-manager\_\-handler\_\-add\_\-finish}}
+\index{page\_\-manager\_\-handler\_\-add\_\-finish@{page\_\-manager\_\-handler\_\-add\_\-finish}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-handler\_\-add\_\-finish}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-add\_\-finish (\&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a412bb20e91468909a7274c948887639d}
+Finish the add process and make the new handler official. \hypertarget{page__manager_8admin_8inc_ae375ef3886a3426e0c46da3e4c20fdf7}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-handler\_\-add\_\-form@{page\_\-manager\_\-handler\_\-add\_\-form}}
+\index{page\_\-manager\_\-handler\_\-add\_\-form@{page\_\-manager\_\-handler\_\-add\_\-form}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-handler\_\-add\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-add\_\-form (\$ {\em form}, \/  \$ {\em form\_\-state}, \/  \$ {\em features} = {\ttfamily array()})}}
+\label{page__manager_8admin_8inc_ae375ef3886a3426e0c46da3e4c20fdf7}
+Provide a consistent UI for adding handlers. \hypertarget{page__manager_8admin_8inc_a6d3b87ff0cfde1b8577f08f0ce1f96af}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-handler\_\-add\_\-submit@{page\_\-manager\_\-handler\_\-add\_\-submit}}
+\index{page\_\-manager\_\-handler\_\-add\_\-submit@{page\_\-manager\_\-handler\_\-add\_\-submit}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-handler\_\-add\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-add\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a6d3b87ff0cfde1b8577f08f0ce1f96af}
+Handler related forms. \hypertarget{page__manager_8admin_8inc_abba39e855406ab69c4b4bf6a3630d41f}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-handler\_\-clone@{page\_\-manager\_\-handler\_\-clone}}
+\index{page\_\-manager\_\-handler\_\-clone@{page\_\-manager\_\-handler\_\-clone}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-handler\_\-clone}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-clone (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_abba39e855406ab69c4b4bf6a3630d41f}
+Rearrange the order of variants. \hypertarget{page__manager_8admin_8inc_a36671329908ef4a33149f1ae956c5d80}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-handler\_\-clone\_\-submit@{page\_\-manager\_\-handler\_\-clone\_\-submit}}
+\index{page\_\-manager\_\-handler\_\-clone\_\-submit@{page\_\-manager\_\-handler\_\-clone\_\-submit}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-handler\_\-clone\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-clone\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a36671329908ef4a33149f1ae956c5d80}
+Clone an existing task handler into a new handler. \hypertarget{page__manager_8admin_8inc_aca261eee8f4678610ac48b7b039ff66e}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-handler\_\-delete@{page\_\-manager\_\-handler\_\-delete}}
+\index{page\_\-manager\_\-handler\_\-delete@{page\_\-manager\_\-handler\_\-delete}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-handler\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-delete (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_aca261eee8f4678610ac48b7b039ff66e}
+Rearrange the order of variants. \hypertarget{page__manager_8admin_8inc_ad9484f3b9594148f813df78466ef32ae}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-handler\_\-delete\_\-submit@{page\_\-manager\_\-handler\_\-delete\_\-submit}}
+\index{page\_\-manager\_\-handler\_\-delete\_\-submit@{page\_\-manager\_\-handler\_\-delete\_\-submit}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-handler\_\-delete\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-delete\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_ad9484f3b9594148f813df78466ef32ae}
+Submit handler to delete a \hyperlink{classview}{view}. \hypertarget{page__manager_8admin_8inc_a5a643ed98379483b2caf5b882a03aad4}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-handler\_\-disable@{page\_\-manager\_\-handler\_\-disable}}
+\index{page\_\-manager\_\-handler\_\-disable@{page\_\-manager\_\-handler\_\-disable}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-handler\_\-disable}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-disable (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a5a643ed98379483b2caf5b882a03aad4}
+Form to disable a page. \hypertarget{page__manager_8admin_8inc_a852cb808507dacf147798447b0fcb381}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-handler\_\-disable\_\-submit@{page\_\-manager\_\-handler\_\-disable\_\-submit}}
+\index{page\_\-manager\_\-handler\_\-disable\_\-submit@{page\_\-manager\_\-handler\_\-disable\_\-submit}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-handler\_\-disable\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-disable\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a852cb808507dacf147798447b0fcb381}
+Disable the page after it has been confirmed. \hypertarget{page__manager_8admin_8inc_ab7a195776d4f5b4947fe762f427c9eec}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-handler\_\-enable@{page\_\-manager\_\-handler\_\-enable}}
+\index{page\_\-manager\_\-handler\_\-enable@{page\_\-manager\_\-handler\_\-enable}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-handler\_\-enable}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-enable (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_ab7a195776d4f5b4947fe762f427c9eec}
+Form to enable a handler. \hypertarget{page__manager_8admin_8inc_a82053012fe27041a8bc78da4b52405bf}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-handler\_\-enable\_\-submit@{page\_\-manager\_\-handler\_\-enable\_\-submit}}
+\index{page\_\-manager\_\-handler\_\-enable\_\-submit@{page\_\-manager\_\-handler\_\-enable\_\-submit}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-handler\_\-enable\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-enable\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a82053012fe27041a8bc78da4b52405bf}
+Enable the page after it has been confirmed. \hypertarget{page__manager_8admin_8inc_a4ffce6578f5c43b1c89e6099fa711ea1}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-handler\_\-export@{page\_\-manager\_\-handler\_\-export}}
+\index{page\_\-manager\_\-handler\_\-export@{page\_\-manager\_\-handler\_\-export}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-handler\_\-export}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-export (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a4ffce6578f5c43b1c89e6099fa711ea1}
+Entry point to export a page. \hypertarget{page__manager_8admin_8inc_a5d79ab1672156c501390a36eed452c48}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-handler\_\-import@{page\_\-manager\_\-handler\_\-import}}
+\index{page\_\-manager\_\-handler\_\-import@{page\_\-manager\_\-handler\_\-import}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-handler\_\-import}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-import (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a5d79ab1672156c501390a36eed452c48}
+Rearrange the order of variants. \hypertarget{page__manager_8admin_8inc_a7f17a14b067b7a3c64f31361e3c5426b}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-handler\_\-import\_\-submit@{page\_\-manager\_\-handler\_\-import\_\-submit}}
+\index{page\_\-manager\_\-handler\_\-import\_\-submit@{page\_\-manager\_\-handler\_\-import\_\-submit}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-handler\_\-import\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-import\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a7f17a14b067b7a3c64f31361e3c5426b}
+Clone an existing task handler into a new handler. \hypertarget{page__manager_8admin_8inc_a6963064ee84139a0bb64d9cc1b67c55e}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-handler\_\-import\_\-validate@{page\_\-manager\_\-handler\_\-import\_\-validate}}
+\index{page\_\-manager\_\-handler\_\-import\_\-validate@{page\_\-manager\_\-handler\_\-import\_\-validate}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-handler\_\-import\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-import\_\-validate (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a6963064ee84139a0bb64d9cc1b67c55e}
+Make sure that an import actually provides a handler. \hypertarget{page__manager_8admin_8inc_a6e324bd1ae431f00d56ddb9ae5ceb280}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-handler\_\-rearrange@{page\_\-manager\_\-handler\_\-rearrange}}
+\index{page\_\-manager\_\-handler\_\-rearrange@{page\_\-manager\_\-handler\_\-rearrange}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-handler\_\-rearrange}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-rearrange (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a6e324bd1ae431f00d56ddb9ae5ceb280}
+Rearrange the order of variants. \hypertarget{page__manager_8admin_8inc_a2b1cdfdd84993c9480b1032309fa8eb4}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-handler\_\-summary@{page\_\-manager\_\-handler\_\-summary}}
+\index{page\_\-manager\_\-handler\_\-summary@{page\_\-manager\_\-handler\_\-summary}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-handler\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-handler\_\-summary (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a2b1cdfdd84993c9480b1032309fa8eb4}
+Form to disable a page. \hypertarget{page__manager_8admin_8inc_a4366f90c2f82cba288c4c41e98dc51aa}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-list\_\-page@{page\_\-manager\_\-list\_\-page}}
+\index{page\_\-manager\_\-list\_\-page@{page\_\-manager\_\-list\_\-page}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-list\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-list\_\-page (\$ {\em js} = {\ttfamily NULL})}}
+\label{page__manager_8admin_8inc_a4366f90c2f82cba288c4c41e98dc51aa}
+Output a list of pages that are managed. \hypertarget{page__manager_8admin_8inc_a69d5a1c5ff1ecf2d5b566dfaeeb2ae54}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-list\_\-pages\_\-form@{page\_\-manager\_\-list\_\-pages\_\-form}}
+\index{page\_\-manager\_\-list\_\-pages\_\-form@{page\_\-manager\_\-list\_\-pages\_\-form}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-list\_\-pages\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-list\_\-pages\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a69d5a1c5ff1ecf2d5b566dfaeeb2ae54}
+Provide a form for sorting and filtering the list of pages. \hypertarget{page__manager_8admin_8inc_a148b43b1d53e788722edc7f8f1c8dc76}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-list\_\-pages\_\-form\_\-submit@{page\_\-manager\_\-list\_\-pages\_\-form\_\-submit}}
+\index{page\_\-manager\_\-list\_\-pages\_\-form\_\-submit@{page\_\-manager\_\-list\_\-pages\_\-form\_\-submit}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-list\_\-pages\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-list\_\-pages\_\-form\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a148b43b1d53e788722edc7f8f1c8dc76}
+Accept submission from the page manager sort/filter form and apply it to the list of pages. \hypertarget{page__manager_8admin_8inc_a1151aa10f7c2d1f78f59c62716dd3958}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-page\_\-summary@{page\_\-manager\_\-page\_\-summary}}
+\index{page\_\-manager\_\-page\_\-summary@{page\_\-manager\_\-page\_\-summary}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-page\_\-summary}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-page\_\-summary (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a1151aa10f7c2d1f78f59c62716dd3958}
+Print the summary information for a page. \hypertarget{page__manager_8admin_8inc_a64632eddea1e6b4a366b399fdc13e95a}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-render\_\-operations@{page\_\-manager\_\-render\_\-operations}}
+\index{page\_\-manager\_\-render\_\-operations@{page\_\-manager\_\-render\_\-operations}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-render\_\-operations}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-render\_\-operations (\&\$ {\em page}, \/  \$ {\em operations}, \/  \$ {\em active\_\-trail}, \/  \$ {\em attributes}, \/  \$ {\em location}, \/  \$ {\em parents} = {\ttfamily array()})}}
+\label{page__manager_8admin_8inc_a64632eddea1e6b4a366b399fdc13e95a}
+Render an operations array.
+
+This renders an array of operations into a series of nested UL statements, with ajax automatically on unless specified otherwise. Operations will automatically have the URLs generated nested.
+
+Each operation should have a 'type', which tells the renderer how to deal with it:
+\begin{DoxyItemize}
+\item 'operation': An AJAX link to render. This is the default and is assumed if a type is not specified. Other fields for the operation:
+\item -\/ 'title': The text to display. Can be an image. Must be pre-\/sanitized.
+\item -\/ 'description': Text to place in the hover box over the link using the title attribute.
+\item -\/ 'arguments': Anything optional to put at the end of the URL.
+\item -\/ 'path': If set, overrides the default path.
+\item -\/ 'no operations': If set, the path will not have operations appended.
+\item -\/ 'no task': If set, the path will not have the task id.
+\item -\/ 'no link': If set, this item will just be text, not a link.
+\item -\/ 'ajax': If set to TRUE, ajax will be used. The default is TRUE.
+\item -\/ 'class': An optional class to specify for the link.
+\item -\/ 'form': The form to display for this operation, if using a single form.
+\item -\/ 'forms': An array of forms that must be paired with 'order' of this operation uses multiple forms. See wizard tool for details.
+\item -\/ 'order': The form order to use for multiple forms. See wizard tool for details.
+\item -\/ 'form info': Form info overrides for the wizard. See the wizard tool for available settings
+\item 'group':
+\item -\/ 'title': The title of the link. May be HTML.
+\item -\/ 'title class': A class to apply to the title.
+\item -\/ 'children': An array of more operations that this group represents. All operations within this group will have this group's ID as part of the AJAX url to make it easier to find.
+\item -\/ 'class': A class to apply to the UL of the children.
+\item -\/ 'collapsible': If TRUE the collapsible tool will be used. 
+\end{DoxyItemize}\hypertarget{page__manager_8admin_8inc_a0cebbb105c27764a960d2acfacd484bf}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-save\_\-page\_\-form@{page\_\-manager\_\-save\_\-page\_\-form}}
+\index{page\_\-manager\_\-save\_\-page\_\-form@{page\_\-manager\_\-save\_\-page\_\-form}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-save\_\-page\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-save\_\-page\_\-form (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_a0cebbb105c27764a960d2acfacd484bf}
+Provide a simple form for saving the page manager info out of the cache. \hypertarget{page__manager_8admin_8inc_ae247c3127a873439c9e6bed5fd4453be}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-save\_\-page\_\-form\_\-cancel@{page\_\-manager\_\-save\_\-page\_\-form\_\-cancel}}
+\index{page\_\-manager\_\-save\_\-page\_\-form\_\-cancel@{page\_\-manager\_\-save\_\-page\_\-form\_\-cancel}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-save\_\-page\_\-form\_\-cancel}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-save\_\-page\_\-form\_\-cancel (\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_ae247c3127a873439c9e6bed5fd4453be}
+Discard changes to the page. \hypertarget{page__manager_8admin_8inc_aac2241c9cd0ac721d93f4c904a1a1293}{
+\index{page\_\-manager.admin.inc@{page\_\-manager.admin.inc}!page\_\-manager\_\-save\_\-page\_\-form\_\-submit@{page\_\-manager\_\-save\_\-page\_\-form\_\-submit}}
+\index{page\_\-manager\_\-save\_\-page\_\-form\_\-submit@{page\_\-manager\_\-save\_\-page\_\-form\_\-submit}!page_manager.admin.inc@{page\_\-manager.admin.inc}}
+\subsubsection[{page\_\-manager\_\-save\_\-page\_\-form\_\-submit}]{\setlength{\rightskip}{0pt plus 5cm}page\_\-manager\_\-save\_\-page\_\-form\_\-submit (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{page__manager_8admin_8inc_aac2241c9cd0ac721d93f4c904a1a1293}
+Save the page. 

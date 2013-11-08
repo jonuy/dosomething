@@ -1,0 +1,65 @@
+\hypertarget{contexts_2terms_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/contexts/terms.inc File Reference}
+\label{contexts_2terms_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/contexts/terms.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/contexts/terms.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{contexts_2terms_8inc_a0a71790a760636b43936682e9f310ae2}{ctools\_\-context\_\-create\_\-terms} (\$empty, \$data=NULL, \$conf=FALSE)
+\item 
+\hyperlink{contexts_2terms_8inc_aa556c779179faa1c50963ec53ffc7320}{ctools\_\-context\_\-terms\_\-convert} (\$context, \$type)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{contexts_2terms_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide a terms context 
+
+\subsection{Function Documentation}
+\hypertarget{contexts_2terms_8inc_a0a71790a760636b43936682e9f310ae2}{
+\index{contexts/terms.inc@{contexts/terms.inc}!ctools\_\-context\_\-create\_\-terms@{ctools\_\-context\_\-create\_\-terms}}
+\index{ctools\_\-context\_\-create\_\-terms@{ctools\_\-context\_\-create\_\-terms}!contexts/terms.inc@{contexts/terms.inc}}
+\subsubsection[{ctools\_\-context\_\-create\_\-terms}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-create\_\-terms (\$ {\em empty}, \/  \$ {\em data} = {\ttfamily NULL}, \/  \$ {\em conf} = {\ttfamily FALSE})}}
+\label{contexts_2terms_8inc_a0a71790a760636b43936682e9f310ae2}
+It's important to remember that \$conf is optional here, because contexts are not always created from the UI. \hypertarget{contexts_2terms_8inc_aa556c779179faa1c50963ec53ffc7320}{
+\index{contexts/terms.inc@{contexts/terms.inc}!ctools\_\-context\_\-terms\_\-convert@{ctools\_\-context\_\-terms\_\-convert}}
+\index{ctools\_\-context\_\-terms\_\-convert@{ctools\_\-context\_\-terms\_\-convert}!contexts/terms.inc@{contexts/terms.inc}}
+\subsubsection[{ctools\_\-context\_\-terms\_\-convert}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-context\_\-terms\_\-convert (\$ {\em context}, \/  \$ {\em type})}}
+\label{contexts_2terms_8inc_aa556c779179faa1c50963ec53ffc7320}
+Convert a context into a string. 
+
+\subsection{Variable Documentation}
+\hypertarget{contexts_2terms_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{contexts/terms.inc@{contexts/terms.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!contexts/terms.inc@{contexts/terms.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{contexts_2terms_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t("Taxonomy terms"),
+  'description' => t('Multiple taxonomy terms, as a group.'),
+  'context' => 'ctools_context_create_terms',
+  'keyword' => 'terms',
+  
+  'no ui' => TRUE,
+  'context name' => 'terms',
+  'convert list' => array(
+    'tid' => t('Term ID of first term'),
+    'tids' => t('Term ID of all term, separated by + or ,'),
+    'name' => t('Term name of first term'),
+    'name_dashed' => t('Term name of first term, lowercased and spaces converted 
+      to dashes'),
+    'names' => t('Term name of all terms, separated by + or ,'),
+    'names_dashed' => t('Term name of all terms, separated by + or , and lowercas
+      ed and spaces converted to dashes'),
+    'vid' => t('Vocabulary ID of first term'),
+  ),
+  'convert' => 'ctools_context_terms_convert',
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

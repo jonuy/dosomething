@@ -1,0 +1,67 @@
+\hypertarget{classviews__handler__argument__null}{
+\section{views\_\-handler\_\-argument\_\-null Class Reference}
+\label{classviews__handler__argument__null}\index{views\_\-handler\_\-argument\_\-null@{views\_\-handler\_\-argument\_\-null}}
+}
+Inheritance diagram for views\_\-handler\_\-argument\_\-null::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classviews__handler__argument__null}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__handler__argument__null_a8ba4c40627657d548ad011a1e203d00f}{
+{\bfseries option\_\-definition} ()}
+\label{classviews__handler__argument__null_a8ba4c40627657d548ad011a1e203d00f}
+
+\item 
+\hyperlink{classviews__handler__argument__null_a414f383de12d08f6e1e5eccb572cf9c8}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__handler__argument__null_a82da8fd1448e1ce346aa38d5b6021e05}{default\_\-actions} (\$which=NULL)
+\item 
+\hyperlink{classviews__handler__argument__null_afc4fd62d96247a2ebebbd7e44f0742ce}{validate\_\-argument\_\-basic} (\$arg)
+\item 
+\hyperlink{classviews__handler__argument__null_ab2358d01dc1374da42a1ae45dff90dae}{query} (\$group\_\-by=FALSE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Argument handler that ignores the argument. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__handler__argument__null_a82da8fd1448e1ce346aa38d5b6021e05}{
+\index{views\_\-handler\_\-argument\_\-null@{views\_\-handler\_\-argument\_\-null}!default\_\-actions@{default\_\-actions}}
+\index{default\_\-actions@{default\_\-actions}!views_handler_argument_null@{views\_\-handler\_\-argument\_\-null}}
+\subsubsection[{default\_\-actions}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-argument\_\-null::default\_\-actions (\$ {\em which} = {\ttfamily NULL})}}
+\label{classviews__handler__argument__null_a82da8fd1448e1ce346aa38d5b6021e05}
+Override \hyperlink{classviews__handler__argument__null_a82da8fd1448e1ce346aa38d5b6021e05}{default\_\-actions()} to remove actions that don't make sense for a null argument. 
+
+Reimplemented from \hyperlink{classviews__handler__argument_abf38ef334b6e18e0aa43e5a829e3ce33}{views\_\-handler\_\-argument}.\hypertarget{classviews__handler__argument__null_a414f383de12d08f6e1e5eccb572cf9c8}{
+\index{views\_\-handler\_\-argument\_\-null@{views\_\-handler\_\-argument\_\-null}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_handler_argument_null@{views\_\-handler\_\-argument\_\-null}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-argument\_\-null::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__handler__argument__null_a414f383de12d08f6e1e5eccb572cf9c8}
+Override \hyperlink{classviews__handler__argument__null_a414f383de12d08f6e1e5eccb572cf9c8}{options\_\-form()} so that only the relevant options are displayed to the user. 
+
+Reimplemented from \hyperlink{classviews__handler__argument_a44f015a0d527983ae6df2689f66b2c24}{views\_\-handler\_\-argument}.\hypertarget{classviews__handler__argument__null_ab2358d01dc1374da42a1ae45dff90dae}{
+\index{views\_\-handler\_\-argument\_\-null@{views\_\-handler\_\-argument\_\-null}!query@{query}}
+\index{query@{query}!views_handler_argument_null@{views\_\-handler\_\-argument\_\-null}}
+\subsubsection[{query}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-argument\_\-null::query (\$ {\em group\_\-by} = {\ttfamily FALSE})}}
+\label{classviews__handler__argument__null_ab2358d01dc1374da42a1ae45dff90dae}
+Override the behavior of \hyperlink{classviews__handler__argument__null_ab2358d01dc1374da42a1ae45dff90dae}{query()} to prevent the query from being changed in any way. 
+
+Reimplemented from \hyperlink{classviews__handler__argument_af9ddabf5d386782c8ffc5785b7ae4263}{views\_\-handler\_\-argument}.\hypertarget{classviews__handler__argument__null_afc4fd62d96247a2ebebbd7e44f0742ce}{
+\index{views\_\-handler\_\-argument\_\-null@{views\_\-handler\_\-argument\_\-null}!validate\_\-argument\_\-basic@{validate\_\-argument\_\-basic}}
+\index{validate\_\-argument\_\-basic@{validate\_\-argument\_\-basic}!views_handler_argument_null@{views\_\-handler\_\-argument\_\-null}}
+\subsubsection[{validate\_\-argument\_\-basic}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-handler\_\-argument\_\-null::validate\_\-argument\_\-basic (\$ {\em arg})}}
+\label{classviews__handler__argument__null_afc4fd62d96247a2ebebbd7e44f0742ce}
+Provide a basic argument validation.
+
+This can be overridden for more complex types; the basic validator only checks to see if the argument is not NULL or is numeric if the definition says it's numeric. 
+
+Reimplemented from \hyperlink{classviews__handler__argument_ab2ca8b443e4b53e1ca532faf0f4565f5}{views\_\-handler\_\-argument}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/handlers/\hyperlink{views__handler__argument__null_8inc}{views\_\-handler\_\-argument\_\-null.inc}\end{DoxyCompactItemize}

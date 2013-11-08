@@ -1,0 +1,65 @@
+\hypertarget{taxonomy_8views_8inc}{
+\section{html/profiles/dosomething/modules/contrib/views/modules/taxonomy.views.inc File Reference}
+\label{taxonomy_8views_8inc}\index{html/profiles/dosomething/modules/contrib/views/modules/taxonomy.views.inc@{html/profiles/dosomething/modules/contrib/views/modules/taxonomy.views.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{taxonomy_8views_8inc_a7d924f539ca1e7da381929bec742e8fd}{taxonomy\_\-views\_\-data} ()
+\item 
+\hyperlink{taxonomy_8views_8inc_aa6aab8471715a703a640f25f9cfe8efb}{taxonomy\_\-views\_\-data\_\-alter} (\&\$data)
+\item 
+\hyperlink{taxonomy_8views_8inc_a7f2e2d6594659210bd8a72f80efd88e6}{taxonomy\_\-field\_\-views\_\-data} (\$field)
+\item 
+\hyperlink{taxonomy_8views_8inc_a3bc51da9827bc04f4afe696788e313bd}{taxonomy\_\-field\_\-views\_\-data\_\-views\_\-data\_\-alter} (\&\$data, \$field)
+\item 
+\hyperlink{taxonomy_8views_8inc_adf4c4ae0f65e3a97003ca804bfff4c9c}{taxonomy\_\-views\_\-plugins} ()
+\item 
+\hyperlink{taxonomy_8views_8inc_ae3ea861745bda984b3d544ac856012e0}{views\_\-taxonomy\_\-set\_\-breadcrumb} (\&\$breadcrumb, \&\$argument)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provide views data and handlers for taxonomy.module. 
+
+\subsection{Function Documentation}
+\hypertarget{taxonomy_8views_8inc_a7f2e2d6594659210bd8a72f80efd88e6}{
+\index{taxonomy.views.inc@{taxonomy.views.inc}!taxonomy\_\-field\_\-views\_\-data@{taxonomy\_\-field\_\-views\_\-data}}
+\index{taxonomy\_\-field\_\-views\_\-data@{taxonomy\_\-field\_\-views\_\-data}!taxonomy.views.inc@{taxonomy.views.inc}}
+\subsubsection[{taxonomy\_\-field\_\-views\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}taxonomy\_\-field\_\-views\_\-data (\$ {\em field})}}
+\label{taxonomy_8views_8inc_a7f2e2d6594659210bd8a72f80efd88e6}
+Implements hook\_\-field\_\-views\_\-data().
+
+Views integration for taxonomy\_\-term\_\-reference fields. Adds a term relationship to the default field data.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{field_8views_8inc_adbb71dc4cb1642151e243f305ba34223}{field\_\-views\_\-field\_\-default\_\-views\_\-data()} 
+\end{DoxySeeAlso}
+\hypertarget{taxonomy_8views_8inc_a3bc51da9827bc04f4afe696788e313bd}{
+\index{taxonomy.views.inc@{taxonomy.views.inc}!taxonomy\_\-field\_\-views\_\-data\_\-views\_\-data\_\-alter@{taxonomy\_\-field\_\-views\_\-data\_\-views\_\-data\_\-alter}}
+\index{taxonomy\_\-field\_\-views\_\-data\_\-views\_\-data\_\-alter@{taxonomy\_\-field\_\-views\_\-data\_\-views\_\-data\_\-alter}!taxonomy.views.inc@{taxonomy.views.inc}}
+\subsubsection[{taxonomy\_\-field\_\-views\_\-data\_\-views\_\-data\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}taxonomy\_\-field\_\-views\_\-data\_\-views\_\-data\_\-alter (\&\$ {\em data}, \/  \$ {\em field})}}
+\label{taxonomy_8views_8inc_a3bc51da9827bc04f4afe696788e313bd}
+Implements hook\_\-field\_\-views\_\-data\_\-views\_\-data\_\-alter().
+
+Views integration to provide reverse relationships on term references. \hypertarget{taxonomy_8views_8inc_a7d924f539ca1e7da381929bec742e8fd}{
+\index{taxonomy.views.inc@{taxonomy.views.inc}!taxonomy\_\-views\_\-data@{taxonomy\_\-views\_\-data}}
+\index{taxonomy\_\-views\_\-data@{taxonomy\_\-views\_\-data}!taxonomy.views.inc@{taxonomy.views.inc}}
+\subsubsection[{taxonomy\_\-views\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}taxonomy\_\-views\_\-data ()}}
+\label{taxonomy_8views_8inc_a7d924f539ca1e7da381929bec742e8fd}
+Implements \hyperlink{group__views__hooks_ga227057901681e4a33e33c199c7a8c989}{hook\_\-views\_\-data()}. \hypertarget{taxonomy_8views_8inc_aa6aab8471715a703a640f25f9cfe8efb}{
+\index{taxonomy.views.inc@{taxonomy.views.inc}!taxonomy\_\-views\_\-data\_\-alter@{taxonomy\_\-views\_\-data\_\-alter}}
+\index{taxonomy\_\-views\_\-data\_\-alter@{taxonomy\_\-views\_\-data\_\-alter}!taxonomy.views.inc@{taxonomy.views.inc}}
+\subsubsection[{taxonomy\_\-views\_\-data\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}taxonomy\_\-views\_\-data\_\-alter (\&\$ {\em data})}}
+\label{taxonomy_8views_8inc_aa6aab8471715a703a640f25f9cfe8efb}
+Implements \hyperlink{group__views__hooks_ga6ae0bb0d2385e03c32b57625b6d35826}{hook\_\-views\_\-data\_\-alter()}. \hypertarget{taxonomy_8views_8inc_adf4c4ae0f65e3a97003ca804bfff4c9c}{
+\index{taxonomy.views.inc@{taxonomy.views.inc}!taxonomy\_\-views\_\-plugins@{taxonomy\_\-views\_\-plugins}}
+\index{taxonomy\_\-views\_\-plugins@{taxonomy\_\-views\_\-plugins}!taxonomy.views.inc@{taxonomy.views.inc}}
+\subsubsection[{taxonomy\_\-views\_\-plugins}]{\setlength{\rightskip}{0pt plus 5cm}taxonomy\_\-views\_\-plugins ()}}
+\label{taxonomy_8views_8inc_adf4c4ae0f65e3a97003ca804bfff4c9c}
+Implements \hyperlink{group__views__hooks_ga23f6e9972b2ed84fc54b7ff63f44477d}{hook\_\-views\_\-plugins()}. \hypertarget{taxonomy_8views_8inc_ae3ea861745bda984b3d544ac856012e0}{
+\index{taxonomy.views.inc@{taxonomy.views.inc}!views\_\-taxonomy\_\-set\_\-breadcrumb@{views\_\-taxonomy\_\-set\_\-breadcrumb}}
+\index{views\_\-taxonomy\_\-set\_\-breadcrumb@{views\_\-taxonomy\_\-set\_\-breadcrumb}!taxonomy.views.inc@{taxonomy.views.inc}}
+\subsubsection[{views\_\-taxonomy\_\-set\_\-breadcrumb}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-taxonomy\_\-set\_\-breadcrumb (\&\$ {\em breadcrumb}, \/  \&\$ {\em argument})}}
+\label{taxonomy_8views_8inc_ae3ea861745bda984b3d544ac856012e0}
+Helper function to set a breadcrumb for taxonomy. 

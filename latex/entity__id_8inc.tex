@@ -1,0 +1,54 @@
+\hypertarget{entity__id_8inc}{
+\section{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/entity\_\-id.inc File Reference}
+\label{entity__id_8inc}\index{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/entity\_\-id.inc@{html/profiles/dosomething/modules/contrib/ctools/plugins/arguments/entity\_\-id.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{entity__id_8inc_a7eaf9f6cd9edba611eca7952400d6c5f}{
+{\bfseries ctools\_\-argument\_\-entity\_\-id\_\-get\_\-child} (\$plugin, \$parent, \$child)}
+\label{entity__id_8inc_a7eaf9f6cd9edba611eca7952400d6c5f}
+
+\item 
+\hypertarget{entity__id_8inc_a306a48136bba62c358256030959c4276}{
+{\bfseries ctools\_\-argument\_\-entity\_\-id\_\-get\_\-children} (\$original\_\-plugin, \$parent)}
+\label{entity__id_8inc_a306a48136bba62c358256030959c4276}
+
+\item 
+\hyperlink{entity__id_8inc_a760a7eddc5f2841801cc8fc1662c10ff}{ctools\_\-argument\_\-entity\_\-id\_\-context} (\$arg=NULL, \$conf=NULL, \$empty=FALSE)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{entity__id_8inc_ada8a7130088351710bb02ed622d6bf65}{\$plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin to provide an argument handler for all entity ids 
+
+\subsection{Function Documentation}
+\hypertarget{entity__id_8inc_a760a7eddc5f2841801cc8fc1662c10ff}{
+\index{entity\_\-id.inc@{entity\_\-id.inc}!ctools\_\-argument\_\-entity\_\-id\_\-context@{ctools\_\-argument\_\-entity\_\-id\_\-context}}
+\index{ctools\_\-argument\_\-entity\_\-id\_\-context@{ctools\_\-argument\_\-entity\_\-id\_\-context}!entity_id.inc@{entity\_\-id.inc}}
+\subsubsection[{ctools\_\-argument\_\-entity\_\-id\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-argument\_\-entity\_\-id\_\-context (\$ {\em arg} = {\ttfamily NULL}, \/  \$ {\em conf} = {\ttfamily NULL}, \/  \$ {\em empty} = {\ttfamily FALSE})}}
+\label{entity__id_8inc_a760a7eddc5f2841801cc8fc1662c10ff}
+Discover if this argument gives us the entity we crave. 
+
+\subsection{Variable Documentation}
+\hypertarget{entity__id_8inc_ada8a7130088351710bb02ed622d6bf65}{
+\index{entity\_\-id.inc@{entity\_\-id.inc}!\$plugin@{\$plugin}}
+\index{\$plugin@{\$plugin}!entity_id.inc@{entity\_\-id.inc}}
+\subsubsection[{\$plugin}]{\setlength{\rightskip}{0pt plus 5cm}\$plugin}}
+\label{entity__id_8inc_ada8a7130088351710bb02ed622d6bf65}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ array(
+  'title' => t("Entity: ID"),
+  'description' => t('Creates an entity context from an entity ID argument.'),
+  'context' => 'ctools_argument_entity_id_context',
+  'get child' => 'ctools_argument_entity_id_get_child',
+  'get children' => 'ctools_argument_entity_id_get_children',
+)
+\end{DoxyCode}
+Plugins are described by creating a \$plugin array which will be used by the system that includes this file. 

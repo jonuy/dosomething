@@ -1,0 +1,969 @@
+\hypertarget{date__api_8module}{
+\section{html/profiles/dosomething/modules/contrib/date/date\_\-api/date\_\-api.module File Reference}
+\label{date__api_8module}\index{html/profiles/dosomething/modules/contrib/date/date\_\-api/date\_\-api.module@{html/profiles/dosomething/modules/contrib/date/date\_\-api/date\_\-api.module}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDateObject}{DateObject}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{date__api_8module_a88a1cfe07f4c4957d11cf7860a95b21a}{DATE\_\-ISO} 
+\item 
+enum {\bfseries DATE\_\-UNIX} 
+\item 
+enum {\bfseries DATE\_\-DATETIME} 
+\item 
+enum {\bfseries DATE\_\-ARRAY} 
+\item 
+enum {\bfseries DATE\_\-OBJECT} 
+\item 
+enum {\bfseries DATE\_\-ICAL} 
+\item 
+enum {\bfseries DATE\_\-FORMAT\_\-ISO} 
+\item 
+enum {\bfseries DATE\_\-FORMAT\_\-UNIX} 
+\item 
+enum {\bfseries DATE\_\-FORMAT\_\-DATETIME} 
+\item 
+enum {\bfseries DATE\_\-FORMAT\_\-ICAL} 
+\item 
+enum {\bfseries DATE\_\-FORMAT\_\-ICAL\_\-DATE} 
+\item 
+enum {\bfseries DATE\_\-FORMAT\_\-DATE} 
+\item 
+enum {\bfseries DATE\_\-REGEX\_\-ISO} 
+\item 
+enum {\bfseries DATE\_\-REGEX\_\-DATETIME} 
+\item 
+enum {\bfseries DATE\_\-REGEX\_\-LOOSE} 
+\item 
+enum {\bfseries DATE\_\-REGEX\_\-ICAL\_\-DATE} 
+\item 
+enum {\bfseries DATE\_\-REGEX\_\-ICAL\_\-DATETIME} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{date__api_8module_a21d6be4e94853aa99a0bf6db821ef5f8}{date\_\-help} (\$path, \$arg)
+\item 
+\hyperlink{date__api_8module_a0dd6c7186e678394270216b9d241c729}{date\_\-api\_\-status} ()
+\item 
+\hyperlink{date__api_8module_a13080af83552f547918ec86a9027ef62}{date\_\-api\_\-menu} ()
+\item 
+\hyperlink{date__api_8module_adf08b59d3645c530612349f108b4a45d}{date\_\-hidden\_\-element} (\$element)
+\item 
+\hyperlink{date__api_8module_a9129ade471056bcb658af815dfbc3258}{date\_\-type\_\-format} (\$type)
+\item 
+\hyperlink{date__api_8module_a8203e4af78f056ba126604d32b17f49b}{date\_\-month\_\-names\_\-untranslated} ()
+\item 
+\hyperlink{date__api_8module_a4ab8ec4182c77747101651e9ce87a8ea}{date\_\-month\_\-names} (\$required=FALSE)
+\item 
+\hyperlink{date__api_8module_af6f2f2a2ec22415e16998419b0cca858}{date\_\-month\_\-names\_\-abbr} (\$required=FALSE, \$length=3)
+\item 
+\hyperlink{date__api_8module_a56d0686e065492539b9caa2e6d6dd5ed}{date\_\-week\_\-days\_\-untranslated} (\$refresh=TRUE)
+\item 
+\hyperlink{date__api_8module_a55bb6dd6b7339529dda05114c86634a8}{date\_\-week\_\-days} (\$required=FALSE, \$refresh=TRUE)
+\item 
+\hyperlink{date__api_8module_a8707af09814a3667fe2dc426ad1df671}{date\_\-week\_\-days\_\-abbr} (\$required=FALSE, \$refresh=TRUE, \$length=3)
+\item 
+\hyperlink{date__api_8module_a80ff7d0168bb360389773fa867f8e210}{date\_\-week\_\-days\_\-ordered} (\$weekdays)
+\item 
+\hyperlink{date__api_8module_a658020fa9056e86b43cef0d3679c8597}{date\_\-years} (\$min=0, \$max=0, \$required=FALSE)
+\item 
+\hyperlink{date__api_8module_a9dba2c8bbb9dba52e15626a75f53c4b3}{date\_\-days} (\$required=FALSE, \$month=NULL, \$year=NULL)
+\item 
+\hyperlink{date__api_8module_a1fcb343f239750316408995fb4ed6f88}{date\_\-hours} (\$format= 'H', \$required=FALSE)
+\item 
+\hyperlink{date__api_8module_ab545057ba7104d45f9a4424ba2c26227}{date\_\-minutes} (\$format= 'i', \$required=FALSE, \$increment=1)
+\item 
+\hyperlink{date__api_8module_aa5d254f03ee4a981113f8f9874d2915c}{date\_\-seconds} (\$format= 's', \$required=FALSE, \$increment=1)
+\item 
+\hyperlink{date__api_8module_a111c565d163ccc8078a24ef9ed9a642f}{date\_\-ampm} (\$required=FALSE)
+\item 
+\hyperlink{date__api_8module_a85d53d55109a56f5685f0c0ca0557a55}{date\_\-format\_\-patterns} (\$strict=FALSE)
+\item 
+\hyperlink{date__api_8module_ae1883963cdb47632622f313139f35839}{date\_\-granularity\_\-names} ()
+\item 
+\hyperlink{date__api_8module_ad1999b95cf5c3ceb6672adbe08260a24}{date\_\-granularity\_\-sorted} (\$granularity)
+\item 
+\hyperlink{date__api_8module_a25e9d06fc1a832df3fa5ce5989039dcf}{date\_\-granularity\_\-array\_\-from\_\-precision} (\$precision)
+\item 
+\hyperlink{date__api_8module_af1576bf465ba626636ebe74667618c55}{date\_\-granularity\_\-precision} (\$granularity\_\-array)
+\item 
+\hyperlink{date__api_8module_ab17bb31df64a3d11cf8bddb49f5e20fd}{date\_\-granularity\_\-format} (\$granularity)
+\item 
+\hyperlink{date__api_8module_ab90af298d216e34744c9d3ee7cf7d23a}{date\_\-timezone\_\-names} (\$required=FALSE, \$refresh=FALSE)
+\item 
+\hyperlink{date__api_8module_acc8ac7f6a9a71d3f679af4d130a97843}{date\_\-timezone\_\-abbr} (\$refresh=FALSE)
+\item 
+\hyperlink{date__api_8module_a1c866f42568c36b77ab275733dce0da4}{date\_\-format\_\-date} (\$date, \$type= 'medium', \$format= '', \$langcode=NULL)
+\item 
+\hyperlink{date__api_8module_a3a94e28f9a43be71c87afdf5e791b9a0}{date\_\-format\_\-interval} (\$date, \$granularity=2, \$display\_\-ago=TRUE)
+\item 
+\hyperlink{date__api_8module_aa5e548195859cb8de5c160dda99f1877}{date\_\-now} (\$timezone=NULL)
+\item 
+\hyperlink{date__api_8module_a319c7986532f87064916552af178c58c}{date\_\-timezone\_\-is\_\-valid} (\$timezone)
+\item 
+\hyperlink{date__api_8module_a0804735c8d110e91ba3129bef5d8ec78}{date\_\-default\_\-timezone} (\$check\_\-user=TRUE)
+\item 
+\hyperlink{date__api_8module_ab642766b1f0a98ed0c91e765e8e2085b}{date\_\-default\_\-timezone\_\-object} (\$check\_\-user=TRUE)
+\item 
+\hyperlink{date__api_8module_ab98127065d91ca887cbae1675622ca90}{date\_\-days\_\-in\_\-month} (\$year, \$month)
+\item 
+\hyperlink{date__api_8module_a37d190c0e72a50d069ba56ef8004730b}{date\_\-days\_\-in\_\-year} (\$date=NULL)
+\item 
+\hyperlink{date__api_8module_a87b3a294949c7309f5cfd29f39358015}{date\_\-iso\_\-weeks\_\-in\_\-year} (\$date=NULL)
+\item 
+\hyperlink{date__api_8module_aeba2cb02e4bee3560f69941fa4b2337a}{date\_\-day\_\-of\_\-week} (\$date=NULL)
+\item 
+\hyperlink{date__api_8module_a4d08b5abdf43cc6db86eb8ea3dfdbcba}{date\_\-day\_\-of\_\-week\_\-name} (\$date=NULL, \$abbr=TRUE)
+\item 
+\hyperlink{date__api_8module_a2616fe3c5af3b92fecfbc2c6240cf804}{date\_\-week\_\-range} (\$week, \$year)
+\item 
+\hyperlink{date__api_8module_a4219d571258d7d10f9874c7107a78c20}{date\_\-iso\_\-week\_\-range} (\$week, \$year)
+\item 
+\hyperlink{date__api_8module_a44b370ef2cba956130ea77bccb231ac5}{date\_\-weeks\_\-in\_\-year} (\$year)
+\item 
+\hyperlink{date__api_8module_aad517bbfed52d465074d1a880050f683}{date\_\-week} (\$date)
+\item 
+\hyperlink{date__api_8module_af51cb5e8020a77ecaa2925b3246c1576}{date\_\-pad} (\$value, \$size=2)
+\item 
+\hyperlink{date__api_8module_a86cfd92e64a544b228e916cd1b192c59}{date\_\-has\_\-time} (\$granularity)
+\item 
+\hyperlink{date__api_8module_adceab3322ab2c3d4375db8c974da9d7a}{date\_\-has\_\-date} (\$granularity)
+\item 
+\hyperlink{date__api_8module_abc007385b75d357bc72847b8aec3516e}{date\_\-part\_\-format} (\$part, \$format)
+\item 
+\hyperlink{date__api_8module_a9a2ae59466da6a43b3ff481b081f7096}{date\_\-limit\_\-format} (\$format, \$granularity)
+\item 
+\hyperlink{date__api_8module_afe15ee89e22483e9231870a55e689cbd}{date\_\-format\_\-order} (\$format)
+\item 
+\hyperlink{date__api_8module_a3ab0befc8508e23ad18062b5a6f8b84b}{date\_\-nongranularity} (\$granularity)
+\item 
+\hyperlink{date__api_8module_a6b1b048f77260adfcab2add33ded37ec}{date\_\-api\_\-element\_\-info} ()
+\item 
+\hyperlink{date__api_8module_a9a35f6b3d4939f8df7d17ba1758aff7f}{date\_\-api\_\-theme} (\$existing, \$type, \$theme, \$path)
+\item 
+\hyperlink{date__api_8module_a623c76f08925c3c7699ca6d07da0d176}{date\_\-get\_\-timezone} (\$handling, \$timezone= '')
+\item 
+\hyperlink{date__api_8module_ac541e9141accfab7c7ace5ea3b54b7f8}{date\_\-get\_\-timezone\_\-db} (\$handling, \$timezone= '')
+\item 
+\hyperlink{date__api_8module_aa8e424ca2cbdf83c3f16be8192370ed8}{date\_\-order\_\-translated} ()
+\item 
+\hyperlink{date__api_8module_a44f5858b603c1aa92edba8f3c4cb2f5f}{date\_\-order} ()
+\item 
+\hyperlink{date__api_8module_a309e79ef85633987ce9641647d2e30ba}{date\_\-range\_\-valid} (\$string)
+\item 
+\hyperlink{date__api_8module_ad70e453c5a043e53649a771c3a6713cf}{date\_\-range\_\-years} (\$string, \$date=NULL)
+\item 
+\hyperlink{date__api_8module_abf93ddac7557727dde44e458d4471821}{date\_\-range\_\-string} (\$years)
+\item 
+\hyperlink{date__api_8module_a53245efe16c2d5ae6063e784952ef164}{date\_\-api\_\-database\_\-info} (\$field, \$revision=FIELD\_\-LOAD\_\-CURRENT)
+\item 
+\hyperlink{date__api_8module_acbea03931dc33c56ac72db2c8042f7a5}{date\_\-api\_\-form\_\-system\_\-regional\_\-settings\_\-alter} (\&\$form, \&\$form\_\-state, \$form\_\-id)
+\item 
+\hyperlink{date__api_8module_affcb2404b858829a6c6f2ac740541948}{date\_\-api\_\-form\_\-system\_\-settings\_\-validate} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{date__api_8module_ac1f737576353f61bc4b608ceb7cf76dc}{date\_\-format\_\-type\_\-options} ()
+\item 
+\hyperlink{date__api_8module_a01fa4c61620fadb6556eebfe51839314}{date\_\-example\_\-date} ()
+\item 
+\hyperlink{date__api_8module_a7a70b1226d53abc183edbf3dd1d8e7c7}{date\_\-is\_\-all\_\-day} (\$string1, \$string2, \$granularity= 'second', \$increment=1)
+\item 
+\hyperlink{date__api_8module_aad7435d8e7bdaed55be4d4934436d35c}{date\_\-increment\_\-round} (\&\$date, \$increment)
+\item 
+\hyperlink{date__api_8module_a1b6599e19acaf15b43eddb03b748b496}{date\_\-is\_\-date} (\$date)
+\item 
+\hyperlink{date__api_8module_afef4f46bfc76d3242b4ad842aa0fd225}{date\_\-make\_\-iso\_\-valid} (\$iso\_\-string)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This module will make the date API available to other modules. Designed to provide a light but flexible assortment of functions and constants, with more functionality in additional files that are not loaded unless other modules specifically include them. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{date__api_8module_a88a1cfe07f4c4957d11cf7860a95b21a}{
+\index{date\_\-api.module@{date\_\-api.module}!DATE\_\-ISO@{DATE\_\-ISO}}
+\index{DATE\_\-ISO@{DATE\_\-ISO}!date_api.module@{date\_\-api.module}}
+\subsubsection[{DATE\_\-ISO}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DATE\_\-ISO}}}
+\label{date__api_8module_a88a1cfe07f4c4957d11cf7860a95b21a}
+Set up some constants.
+
+Includes standard date types, format strings, strict regex strings for ISO and DATETIME formats (seconds are optional).
+
+The loose regex will find any variety of ISO date and time, with or without time, with or without dashes and colons separating the elements, and with either a 'T' or a space separating date and time. 
+
+\subsection{Function Documentation}
+\hypertarget{date__api_8module_a111c565d163ccc8078a24ef9ed9a642f}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-ampm@{date\_\-ampm}}
+\index{date\_\-ampm@{date\_\-ampm}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-ampm}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-ampm (\$ {\em required} = {\ttfamily FALSE})}}
+\label{date__api_8module_a111c565d163ccc8078a24ef9ed9a642f}
+Constructs an array of AM and PM options.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em bool}]\$required (optional) If FALSE, the returned array will include a blank value. Defaults to FALSE.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of AM and PM options. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a53245efe16c2d5ae6063e784952ef164}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-api\_\-database\_\-info@{date\_\-api\_\-database\_\-info}}
+\index{date\_\-api\_\-database\_\-info@{date\_\-api\_\-database\_\-info}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-api\_\-database\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-api\_\-database\_\-info (\$ {\em field}, \/  \$ {\em revision} = {\ttfamily FIELD\_\-LOAD\_\-CURRENT})}}
+\label{date__api_8module_a53245efe16c2d5ae6063e784952ef164}
+Temporary helper to re-\/create equivalent of content\_\-database\_\-info(). \hypertarget{date__api_8module_a6b1b048f77260adfcab2add33ded37ec}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-api\_\-element\_\-info@{date\_\-api\_\-element\_\-info}}
+\index{date\_\-api\_\-element\_\-info@{date\_\-api\_\-element\_\-info}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-api\_\-element\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-api\_\-element\_\-info ()}}
+\label{date__api_8module_a6b1b048f77260adfcab2add33ded37ec}
+Implements hook\_\-element\_\-info(). \hypertarget{date__api_8module_acbea03931dc33c56ac72db2c8042f7a5}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-api\_\-form\_\-system\_\-regional\_\-settings\_\-alter@{date\_\-api\_\-form\_\-system\_\-regional\_\-settings\_\-alter}}
+\index{date\_\-api\_\-form\_\-system\_\-regional\_\-settings\_\-alter@{date\_\-api\_\-form\_\-system\_\-regional\_\-settings\_\-alter}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-api\_\-form\_\-system\_\-regional\_\-settings\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-api\_\-form\_\-system\_\-regional\_\-settings\_\-alter (\&\$ {\em form}, \/  \&\$ {\em form\_\-state}, \/  \$ {\em form\_\-id})}}
+\label{date__api_8module_acbea03931dc33c56ac72db2c8042f7a5}
+Implements hook\_\-form\_\-FORM\_\-ID\_\-alter() for system\_\-regional\_\-settings().
+
+Add a form element to configure whether or not week numbers are ISO-\/8601, the default is FALSE (US/UK/AUS norm). \hypertarget{date__api_8module_affcb2404b858829a6c6f2ac740541948}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-api\_\-form\_\-system\_\-settings\_\-validate@{date\_\-api\_\-form\_\-system\_\-settings\_\-validate}}
+\index{date\_\-api\_\-form\_\-system\_\-settings\_\-validate@{date\_\-api\_\-form\_\-system\_\-settings\_\-validate}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-api\_\-form\_\-system\_\-settings\_\-validate}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-api\_\-form\_\-system\_\-settings\_\-validate (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{date__api_8module_affcb2404b858829a6c6f2ac740541948}
+Validate that the option to use ISO weeks matches first day of week choice. \hypertarget{date__api_8module_a13080af83552f547918ec86a9027ef62}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-api\_\-menu@{date\_\-api\_\-menu}}
+\index{date\_\-api\_\-menu@{date\_\-api\_\-menu}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-api\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-api\_\-menu ()}}
+\label{date__api_8module_a13080af83552f547918ec86a9027ef62}
+Implements hook\_\-menu().
+
+Creates a 'Date API' section on the administration page for Date modules to use for their configuration and settings. \hypertarget{date__api_8module_a0dd6c7186e678394270216b9d241c729}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-api\_\-status@{date\_\-api\_\-status}}
+\index{date\_\-api\_\-status@{date\_\-api\_\-status}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-api\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-api\_\-status ()}}
+\label{date__api_8module_a0dd6c7186e678394270216b9d241c729}
+Helper function to retun the status of required date variables. \hypertarget{date__api_8module_a9a35f6b3d4939f8df7d17ba1758aff7f}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-api\_\-theme@{date\_\-api\_\-theme}}
+\index{date\_\-api\_\-theme@{date\_\-api\_\-theme}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-api\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-api\_\-theme (\$ {\em existing}, \/  \$ {\em type}, \/  \$ {\em theme}, \/  \$ {\em path})}}
+\label{date__api_8module_a9a35f6b3d4939f8df7d17ba1758aff7f}
+Implements hook\_\-theme(). \hypertarget{date__api_8module_aeba2cb02e4bee3560f69941fa4b2337a}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-day\_\-of\_\-week@{date\_\-day\_\-of\_\-week}}
+\index{date\_\-day\_\-of\_\-week@{date\_\-day\_\-of\_\-week}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-day\_\-of\_\-week}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-day\_\-of\_\-week (\$ {\em date} = {\ttfamily NULL})}}
+\label{date__api_8module_aeba2cb02e4bee3560f69941fa4b2337a}
+Returns day of week for a given date (0 = Sunday).
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em mixed}]\$date (optional) A date, default is current local day. Defaults to NULL.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The number of the day in the week. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a4d08b5abdf43cc6db86eb8ea3dfdbcba}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-day\_\-of\_\-week\_\-name@{date\_\-day\_\-of\_\-week\_\-name}}
+\index{date\_\-day\_\-of\_\-week\_\-name@{date\_\-day\_\-of\_\-week\_\-name}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-day\_\-of\_\-week\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-day\_\-of\_\-week\_\-name (\$ {\em date} = {\ttfamily NULL}, \/  \$ {\em abbr} = {\ttfamily TRUE})}}
+\label{date__api_8module_a4d08b5abdf43cc6db86eb8ea3dfdbcba}
+Returns translated name of the day of week for a given date.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em mixed}]\$date (optional) A date, default is current local day. Defaults to NULL. \item[{\em string}]\$abbr (optional) Whether to return the abbreviated name for that day. Defaults to TRUE.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The name of the day in the week for that date. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a9dba2c8bbb9dba52e15626a75f53c4b3}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-days@{date\_\-days}}
+\index{date\_\-days@{date\_\-days}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-days}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-days (\$ {\em required} = {\ttfamily FALSE}, \/  \$ {\em month} = {\ttfamily NULL}, \/  \$ {\em year} = {\ttfamily NULL})}}
+\label{date__api_8module_a9dba2c8bbb9dba52e15626a75f53c4b3}
+Constructs an array of days in a month.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em bool}]\$required (optional) If FALSE, the returned array will include a blank value. Defaults to FALSE. \item[{\em int}]\$month (optional) The month in which to find the number of days. \item[{\em int}]\$year (optional) The year in which to find the number of days.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of days for the selected month. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_ab98127065d91ca887cbae1675622ca90}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-days\_\-in\_\-month@{date\_\-days\_\-in\_\-month}}
+\index{date\_\-days\_\-in\_\-month@{date\_\-days\_\-in\_\-month}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-days\_\-in\_\-month}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-days\_\-in\_\-month (\$ {\em year}, \/  \$ {\em month})}}
+\label{date__api_8module_ab98127065d91ca887cbae1675622ca90}
+Identifies the number of days in a month for a date. \hypertarget{date__api_8module_a37d190c0e72a50d069ba56ef8004730b}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-days\_\-in\_\-year@{date\_\-days\_\-in\_\-year}}
+\index{date\_\-days\_\-in\_\-year@{date\_\-days\_\-in\_\-year}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-days\_\-in\_\-year}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-days\_\-in\_\-year (\$ {\em date} = {\ttfamily NULL})}}
+\label{date__api_8module_a37d190c0e72a50d069ba56ef8004730b}
+Identifies the number of days in a year for a date.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em mixed}]\$date (optional) The current date object, or a date string. Defaults to NULL.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer The number of days in the year. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a0804735c8d110e91ba3129bef5d8ec78}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-default\_\-timezone@{date\_\-default\_\-timezone}}
+\index{date\_\-default\_\-timezone@{date\_\-default\_\-timezone}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-default\_\-timezone}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-default\_\-timezone (\$ {\em check\_\-user} = {\ttfamily TRUE})}}
+\label{date__api_8module_a0804735c8d110e91ba3129bef5d8ec78}
+Returns a timezone name to use as a default.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em bool}]\$check\_\-user (optional) Whether or not to check for a user-\/configured timezone. Defaults to TRUE.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The default timezone for a user, if available, otherwise the site. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_ab642766b1f0a98ed0c91e765e8e2085b}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-default\_\-timezone\_\-object@{date\_\-default\_\-timezone\_\-object}}
+\index{date\_\-default\_\-timezone\_\-object@{date\_\-default\_\-timezone\_\-object}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-default\_\-timezone\_\-object}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-default\_\-timezone\_\-object (\$ {\em check\_\-user} = {\ttfamily TRUE})}}
+\label{date__api_8module_ab642766b1f0a98ed0c91e765e8e2085b}
+Returns a timezone object for the default timezone.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em bool}]\$check\_\-user (optional) Whether or not to check for a user-\/configured timezone. Defaults to TRUE.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object The default timezone for a user, if available, otherwise the site. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a01fa4c61620fadb6556eebfe51839314}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-example\_\-date@{date\_\-example\_\-date}}
+\index{date\_\-example\_\-date@{date\_\-example\_\-date}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-example\_\-date}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-example\_\-date ()}}
+\label{date__api_8module_a01fa4c61620fadb6556eebfe51839314}
+Creates an example date.
+
+This ensures a clear difference between month and day, and 12 and 24 hours. \hypertarget{date__api_8module_a1c866f42568c36b77ab275733dce0da4}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-format\_\-date@{date\_\-format\_\-date}}
+\index{date\_\-format\_\-date@{date\_\-format\_\-date}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-format\_\-date}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-format\_\-date (\$ {\em date}, \/  \$ {\em type} = {\ttfamily 'medium'}, \/  \$ {\em format} = {\ttfamily ''}, \/  \$ {\em langcode} = {\ttfamily NULL})}}
+\label{date__api_8module_a1c866f42568c36b77ab275733dce0da4}
+Formats a date, using a date type or a custom date format string.
+
+Reworked from Drupal's format\_\-date function to handle pre-\/1970 and post-\/2038 dates and accept a date object instead of a timestamp as input. Translates formatted date results, unlike PHP function date\_\-format(). Should only be used for display, not input, because it can't be parsed.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em object}]\$date A date object. \item[{\em string}]\$type (optional) The date format to use. Can be 'small', 'medium' or 'large' for the preconfigured date formats. If 'custom' is specified, then \$format is required as well. Defaults to 'medium'. \item[{\em string}]\$format (optional) A PHP date format string as required by date(). A backslash should be used before a character to avoid interpreting the character as part of a date format. Defaults to an empty string. \item[{\em string}]\$langcode (optional) Language code to translate to. Defaults to NULL.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string A translated date string in the requested format.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+format\_\-date() 
+\end{DoxySeeAlso}
+\hypertarget{date__api_8module_a3a94e28f9a43be71c87afdf5e791b9a0}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-format\_\-interval@{date\_\-format\_\-interval}}
+\index{date\_\-format\_\-interval@{date\_\-format\_\-interval}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-format\_\-interval}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-format\_\-interval (\$ {\em date}, \/  \$ {\em granularity} = {\ttfamily 2}, \/  \$ {\em display\_\-ago} = {\ttfamily TRUE})}}
+\label{date__api_8module_a3a94e28f9a43be71c87afdf5e791b9a0}
+Formats a time interval with granularity, including past and future context.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em object}]\$date The current date object. \item[{\em int}]\$granularity (optional) Number of units to display in the string. Defaults to 2.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string A translated string representation of the interval.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+format\_\-interval() 
+\end{DoxySeeAlso}
+\hypertarget{date__api_8module_afe15ee89e22483e9231870a55e689cbd}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-format\_\-order@{date\_\-format\_\-order}}
+\index{date\_\-format\_\-order@{date\_\-format\_\-order}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-format\_\-order}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-format\_\-order (\$ {\em format})}}
+\label{date__api_8module_afe15ee89e22483e9231870a55e689cbd}
+Converts a format to an ordered array of granularity parts.
+
+Example: date\_\-format\_\-order('m/d/Y H:i') returns array( 0 =$>$ 'month', 1 =$>$ 'day', 2 =$>$ 'year', 3 =$>$ 'hour', 4 =$>$ 'minute', );
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$format A date format string.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of ordered granularity elements from the given format string. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a85d53d55109a56f5685f0c0ca0557a55}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-format\_\-patterns@{date\_\-format\_\-patterns}}
+\index{date\_\-format\_\-patterns@{date\_\-format\_\-patterns}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-format\_\-patterns}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-format\_\-patterns (\$ {\em strict} = {\ttfamily FALSE})}}
+\label{date__api_8module_a85d53d55109a56f5685f0c0ca0557a55}
+Constructs an array of regex replacement strings for date format elements.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em bool}]\$strict Whether or not to force 2 digits for elements that sometimes allow either 1 or 2 digits.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of date() format letters and their regex equivalents. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_ac1f737576353f61bc4b608ceb7cf76dc}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-format\_\-type\_\-options@{date\_\-format\_\-type\_\-options}}
+\index{date\_\-format\_\-type\_\-options@{date\_\-format\_\-type\_\-options}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-format\_\-type\_\-options}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-format\_\-type\_\-options ()}}
+\label{date__api_8module_ac1f737576353f61bc4b608ceb7cf76dc}
+Creates an array of date format types for use as an options list. \hypertarget{date__api_8module_a623c76f08925c3c7699ca6d07da0d176}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-get\_\-timezone@{date\_\-get\_\-timezone}}
+\index{date\_\-get\_\-timezone@{date\_\-get\_\-timezone}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-get\_\-timezone}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-get\_\-timezone (\$ {\em handling}, \/  \$ {\em timezone} = {\ttfamily ''})}}
+\label{date__api_8module_a623c76f08925c3c7699ca6d07da0d176}
+Function to figure out which local timezone applies to a date and select it.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$handling The timezone handling. \item[{\em string}]\$timezone (optional) A timezone string. Defaults to an empty string.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The timezone string. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_ac541e9141accfab7c7ace5ea3b54b7f8}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-get\_\-timezone\_\-db@{date\_\-get\_\-timezone\_\-db}}
+\index{date\_\-get\_\-timezone\_\-db@{date\_\-get\_\-timezone\_\-db}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-get\_\-timezone\_\-db}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-get\_\-timezone\_\-db (\$ {\em handling}, \/  \$ {\em timezone} = {\ttfamily ''})}}
+\label{date__api_8module_ac541e9141accfab7c7ace5ea3b54b7f8}
+Function to figure out which db timezone applies to a date and select it.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$handling The timezone handling. \item[{\em string}]\$timezone (optional) A timezone string. Defaults to an empty string.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The timezone string. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a25e9d06fc1a832df3fa5ce5989039dcf}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-granularity\_\-array\_\-from\_\-precision@{date\_\-granularity\_\-array\_\-from\_\-precision}}
+\index{date\_\-granularity\_\-array\_\-from\_\-precision@{date\_\-granularity\_\-array\_\-from\_\-precision}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-granularity\_\-array\_\-from\_\-precision}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-granularity\_\-array\_\-from\_\-precision (\$ {\em precision})}}
+\label{date__api_8module_a25e9d06fc1a832df3fa5ce5989039dcf}
+Constructs an array of granularity based on a given precision.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$precision A granularity item.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array A granularity array containing the given precision and all those above it. For example, passing in 'month' will return array('year', 'month'). 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_ab17bb31df64a3d11cf8bddb49f5e20fd}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-granularity\_\-format@{date\_\-granularity\_\-format}}
+\index{date\_\-granularity\_\-format@{date\_\-granularity\_\-format}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-granularity\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-granularity\_\-format (\$ {\em granularity})}}
+\label{date__api_8module_ab17bb31df64a3d11cf8bddb49f5e20fd}
+Constructs a valid DATETIME format string for the granularity of an item.
+
+\begin{Desc}
+\item[\hyperlink{todo__todo000019}{Todo}]This function is no longer used as of \href{http://drupalcode.org/project/date.git/commit/07efbb5.}{\tt http://drupalcode.org/project/date.git/commit/07efbb5.} \end{Desc}
+\hypertarget{date__api_8module_ae1883963cdb47632622f313139f35839}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-granularity\_\-names@{date\_\-granularity\_\-names}}
+\index{date\_\-granularity\_\-names@{date\_\-granularity\_\-names}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-granularity\_\-names}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-granularity\_\-names ()}}
+\label{date__api_8module_ae1883963cdb47632622f313139f35839}
+Constructs an array of granularity options and their labels.
+
+\begin{DoxyReturn}{Returns}
+array An array of translated date parts, keyed by their machine name. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_af1576bf465ba626636ebe74667618c55}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-granularity\_\-precision@{date\_\-granularity\_\-precision}}
+\index{date\_\-granularity\_\-precision@{date\_\-granularity\_\-precision}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-granularity\_\-precision}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-granularity\_\-precision (\$ {\em granularity\_\-array})}}
+\label{date__api_8module_af1576bf465ba626636ebe74667618c55}
+Give a granularity array, return the highest precision.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$granularity\_\-array An array of date parts.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The most precise element in a granularity array. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_ad1999b95cf5c3ceb6672adbe08260a24}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-granularity\_\-sorted@{date\_\-granularity\_\-sorted}}
+\index{date\_\-granularity\_\-sorted@{date\_\-granularity\_\-sorted}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-granularity\_\-sorted}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-granularity\_\-sorted (\$ {\em granularity})}}
+\label{date__api_8module_ad1999b95cf5c3ceb6672adbe08260a24}
+Sorts a granularity array.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$granularity An array of date parts. \end{DoxyParams}
+\hypertarget{date__api_8module_adceab3322ab2c3d4375db8c974da9d7a}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-has\_\-date@{date\_\-has\_\-date}}
+\index{date\_\-has\_\-date@{date\_\-has\_\-date}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-has\_\-date}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-has\_\-date (\$ {\em granularity})}}
+\label{date__api_8module_adceab3322ab2c3d4375db8c974da9d7a}
+Determines if the granularity contains a date portion.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$granularity An array of allowed date parts, all others will be removed.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the granularity contains a date portion, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a86cfd92e64a544b228e916cd1b192c59}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-has\_\-time@{date\_\-has\_\-time}}
+\index{date\_\-has\_\-time@{date\_\-has\_\-time}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-has\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-has\_\-time (\$ {\em granularity})}}
+\label{date__api_8module_a86cfd92e64a544b228e916cd1b192c59}
+Determines if the granularity contains a time portion.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$granularity An array of allowed date parts, all others will be removed.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the granularity contains a time portion, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a21d6be4e94853aa99a0bf6db821ef5f8}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-help@{date\_\-help}}
+\index{date\_\-help@{date\_\-help}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-help (\$ {\em path}, \/  \$ {\em arg})}}
+\label{date__api_8module_a21d6be4e94853aa99a0bf6db821ef5f8}
+Core DateTime extension module used for as many date operations as possible. Implements hook\_\-help(). \hypertarget{date__api_8module_adf08b59d3645c530612349f108b4a45d}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-hidden\_\-element@{date\_\-hidden\_\-element}}
+\index{date\_\-hidden\_\-element@{date\_\-hidden\_\-element}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-hidden\_\-element}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-hidden\_\-element (\$ {\em element})}}
+\label{date__api_8module_adf08b59d3645c530612349f108b4a45d}
+Determines if the date element needs to be processed.
+
+Helper function to see if date element has been hidden by FAPI to see if it needs to be processed or just pass the value through. This is needed since normal date processing explands the date element into parts and then reconstructs it, which is not needed or desirable if the field is hidden.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$element The date element to check.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the element is effectively hidden, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a1fcb343f239750316408995fb4ed6f88}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-hours@{date\_\-hours}}
+\index{date\_\-hours@{date\_\-hours}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-hours}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-hours (\$ {\em format} = {\ttfamily 'H'}, \/  \$ {\em required} = {\ttfamily FALSE})}}
+\label{date__api_8module_a1fcb343f239750316408995fb4ed6f88}
+Constructs an array of hours.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$format A date format string. \item[{\em bool}]\$required (optional) If FALSE, the returned array will include a blank value. Defaults to FALSE.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of hours in the selected format. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_aad7435d8e7bdaed55be4d4934436d35c}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-increment\_\-round@{date\_\-increment\_\-round}}
+\index{date\_\-increment\_\-round@{date\_\-increment\_\-round}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-increment\_\-round}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-increment\_\-round (\&\$ {\em date}, \/  \$ {\em increment})}}
+\label{date__api_8module_aad7435d8e7bdaed55be4d4934436d35c}
+Helper function to round minutes and seconds to requested value. \hypertarget{date__api_8module_a7a70b1226d53abc183edbf3dd1d8e7c7}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-is\_\-all\_\-day@{date\_\-is\_\-all\_\-day}}
+\index{date\_\-is\_\-all\_\-day@{date\_\-is\_\-all\_\-day}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-is\_\-all\_\-day}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-is\_\-all\_\-day (\$ {\em string1}, \/  \$ {\em string2}, \/  \$ {\em granularity} = {\ttfamily 'second'}, \/  \$ {\em increment} = {\ttfamily 1})}}
+\label{date__api_8module_a7a70b1226d53abc183edbf3dd1d8e7c7}
+Determine if a start/end date combination qualify as 'All day'.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$string1 A string date in datetime format for the 'start' date. \item[{\em string}]\$string2 A string date in datetime format for the 'end' date. \item[{\em string}]\$granularity (optional) The granularity of the date. Defaults to 'second'. \item[{\em int}]\$increment (optional) The increment of the date. Defaults to 1.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the date is all day, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a1b6599e19acaf15b43eddb03b748b496}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-is\_\-date@{date\_\-is\_\-date}}
+\index{date\_\-is\_\-date@{date\_\-is\_\-date}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-is\_\-date}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-is\_\-date (\$ {\em date})}}
+\label{date__api_8module_a1b6599e19acaf15b43eddb03b748b496}
+Determines if a date object is valid.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em object}]\$date The date object to check.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the date is a valid date object, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a4219d571258d7d10f9874c7107a78c20}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-iso\_\-week\_\-range@{date\_\-iso\_\-week\_\-range}}
+\index{date\_\-iso\_\-week\_\-range@{date\_\-iso\_\-week\_\-range}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-iso\_\-week\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-iso\_\-week\_\-range (\$ {\em week}, \/  \$ {\em year})}}
+\label{date__api_8module_a4219d571258d7d10f9874c7107a78c20}
+Calculates the start and end dates for an ISO week.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em int}]\$week The week value. \item[{\em int}]\$year The year value.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array A numeric array containing the start and end dates of an ISO week. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a87b3a294949c7309f5cfd29f39358015}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-iso\_\-weeks\_\-in\_\-year@{date\_\-iso\_\-weeks\_\-in\_\-year}}
+\index{date\_\-iso\_\-weeks\_\-in\_\-year@{date\_\-iso\_\-weeks\_\-in\_\-year}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-iso\_\-weeks\_\-in\_\-year}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-iso\_\-weeks\_\-in\_\-year (\$ {\em date} = {\ttfamily NULL})}}
+\label{date__api_8module_a87b3a294949c7309f5cfd29f39358015}
+Identifies the number of ISO weeks in a year for a date.
+
+December 28 is always in the last ISO week of the year.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em mixed}]\$date (optional) The current date object, or a date string. Defaults to NULL.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer The number of ISO weeks in a year. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a9a2ae59466da6a43b3ff481b081f7096}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-limit\_\-format@{date\_\-limit\_\-format}}
+\index{date\_\-limit\_\-format@{date\_\-limit\_\-format}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-limit\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-limit\_\-format (\$ {\em format}, \/  \$ {\em granularity})}}
+\label{date__api_8module_a9a2ae59466da6a43b3ff481b081f7096}
+Limits a date format to include only elements from a given granularity array.
+
+Example: date\_\-limit\_\-format('F j, Y -\/ H:i', array('year', 'month', 'day')); returns 'F j, Y'
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$format A date format string. \item[{\em array}]\$granularity An array of allowed date parts, all others will be removed.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The format string with all other elements removed. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_afef4f46bfc76d3242b4ad842aa0fd225}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-make\_\-iso\_\-valid@{date\_\-make\_\-iso\_\-valid}}
+\index{date\_\-make\_\-iso\_\-valid@{date\_\-make\_\-iso\_\-valid}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-make\_\-iso\_\-valid}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-make\_\-iso\_\-valid (\$ {\em iso\_\-string})}}
+\label{date__api_8module_afef4f46bfc76d3242b4ad842aa0fd225}
+This function will replace ISO values that have the pattern 9999-\/00-\/00T00:00:00 with a pattern like 9999-\/01-\/01T00:00:00, to match the behavior of non-\/ISO dates and ensure that date objects created from this value contain a valid month and day. Without this fix, the ISO date '2020-\/00-\/00T00:00:00' would be created as November 30, 2019 (the previous day in the previous month).
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$iso\_\-string An ISO string that needs to be made into a complete, valid date.\end{DoxyParams}
+Expand on this to work with all sorts of partial ISO dates. \hypertarget{date__api_8module_ab545057ba7104d45f9a4424ba2c26227}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-minutes@{date\_\-minutes}}
+\index{date\_\-minutes@{date\_\-minutes}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-minutes}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-minutes (\$ {\em format} = {\ttfamily 'i'}, \/  \$ {\em required} = {\ttfamily FALSE}, \/  \$ {\em increment} = {\ttfamily 1})}}
+\label{date__api_8module_ab545057ba7104d45f9a4424ba2c26227}
+Constructs an array of minutes.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$format A date format string. \item[{\em bool}]\$required (optional) If FALSE, the returned array will include a blank value. Defaults to FALSE.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of minutes in the selected format. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a4ab8ec4182c77747101651e9ce87a8ea}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-month\_\-names@{date\_\-month\_\-names}}
+\index{date\_\-month\_\-names@{date\_\-month\_\-names}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-month\_\-names}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-month\_\-names (\$ {\em required} = {\ttfamily FALSE})}}
+\label{date__api_8module_a4ab8ec4182c77747101651e9ce87a8ea}
+Returns a translated array of month names.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em bool}]\$required (optional) If FALSE, the returned array will include a blank value. Defaults to FALSE.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of month names. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_af6f2f2a2ec22415e16998419b0cca858}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-month\_\-names\_\-abbr@{date\_\-month\_\-names\_\-abbr}}
+\index{date\_\-month\_\-names\_\-abbr@{date\_\-month\_\-names\_\-abbr}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-month\_\-names\_\-abbr}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-month\_\-names\_\-abbr (\$ {\em required} = {\ttfamily FALSE}, \/  \$ {\em length} = {\ttfamily 3})}}
+\label{date__api_8module_af6f2f2a2ec22415e16998419b0cca858}
+Constructs a translated array of month name abbreviations
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em bool}]\$required (optional) If FALSE, the returned array will include a blank value. Defaults to FALSE. \item[{\em int}]\$length (optional) The length of the abbreviation. Defaults to 3.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of month abbreviations. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a8203e4af78f056ba126604d32b17f49b}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-month\_\-names\_\-untranslated@{date\_\-month\_\-names\_\-untranslated}}
+\index{date\_\-month\_\-names\_\-untranslated@{date\_\-month\_\-names\_\-untranslated}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-month\_\-names\_\-untranslated}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-month\_\-names\_\-untranslated ()}}
+\label{date__api_8module_a8203e4af78f056ba126604d32b17f49b}
+Constructs an untranslated array of month names.
+
+Needed for CSS, translation functions, strtotime(), and other places that use the English versions of these words.
+
+\begin{DoxyReturn}{Returns}
+array An array of month names. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a3ab0befc8508e23ad18062b5a6f8b84b}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-nongranularity@{date\_\-nongranularity}}
+\index{date\_\-nongranularity@{date\_\-nongranularity}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-nongranularity}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-nongranularity (\$ {\em granularity})}}
+\label{date__api_8module_a3ab0befc8508e23ad18062b5a6f8b84b}
+Strips out unwanted granularity elements.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$granularity An array like ('year', 'month', 'day', 'hour', 'minute', 'second');\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array A reduced set of granularitiy elements. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_aa5e548195859cb8de5c160dda99f1877}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-now@{date\_\-now}}
+\index{date\_\-now@{date\_\-now}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-now}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-now (\$ {\em timezone} = {\ttfamily NULL})}}
+\label{date__api_8module_aa5e548195859cb8de5c160dda99f1877}
+A date object for the current time.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em object}]\$timezone (optional) Optionally force time to a specific timezone, defaults to user timezone, if set, otherwise site timezone. Defaults to NULL.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object The current time as a date object. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a44f5858b603c1aa92edba8f3c4cb2f5f}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-order@{date\_\-order}}
+\index{date\_\-order@{date\_\-order}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-order}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-order ()}}
+\label{date__api_8module_a44f5858b603c1aa92edba8f3c4cb2f5f}
+Creates an array of ordered strings, using English text when possible. \hypertarget{date__api_8module_aa8e424ca2cbdf83c3f16be8192370ed8}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-order\_\-translated@{date\_\-order\_\-translated}}
+\index{date\_\-order\_\-translated@{date\_\-order\_\-translated}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-order\_\-translated}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-order\_\-translated ()}}
+\label{date__api_8module_aa8e424ca2cbdf83c3f16be8192370ed8}
+Helper function for converting back and forth from '+1' to 'First'. \hypertarget{date__api_8module_af51cb5e8020a77ecaa2925b3246c1576}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-pad@{date\_\-pad}}
+\index{date\_\-pad@{date\_\-pad}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-pad}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-pad (\$ {\em value}, \/  \$ {\em size} = {\ttfamily 2})}}
+\label{date__api_8module_af51cb5e8020a77ecaa2925b3246c1576}
+Helper function to left pad date parts with zeros.
+
+Provided because this is needed so often with dates.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em int}]\$value The value to pad. \item[{\em int}]\$size (optional) Total size expected, usually 2 or 4. Defaults to 2.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The padded value. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_abc007385b75d357bc72847b8aec3516e}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-part\_\-format@{date\_\-part\_\-format}}
+\index{date\_\-part\_\-format@{date\_\-part\_\-format}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-part\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-part\_\-format (\$ {\em part}, \/  \$ {\em format})}}
+\label{date__api_8module_abc007385b75d357bc72847b8aec3516e}
+Helper function to get a format for a specific part of a date field.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$part The date field part, either 'time' or 'date'. \item[{\em string}]\$format A date format string.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The date format for the given part. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_abf93ddac7557727dde44e458d4471821}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-range\_\-string@{date\_\-range\_\-string}}
+\index{date\_\-range\_\-string@{date\_\-range\_\-string}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-range\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-range\_\-string (\$ {\em years})}}
+\label{date__api_8module_abf93ddac7557727dde44e458d4471821}
+Converts a min and max year into a string like '-\/3:+1'.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$years A numerically indexed array, containing a minimum and maximum year.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string A min and max year string like '-\/3:+1'. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a309e79ef85633987ce9641647d2e30ba}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-range\_\-valid@{date\_\-range\_\-valid}}
+\index{date\_\-range\_\-valid@{date\_\-range\_\-valid}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-range\_\-valid}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-range\_\-valid (\$ {\em string})}}
+\label{date__api_8module_a309e79ef85633987ce9641647d2e30ba}
+Tests validity of a date range string.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$string A min and max year string like '-\/3:+1'a.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the date range is valid, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_ad70e453c5a043e53649a771c3a6713cf}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-range\_\-years@{date\_\-range\_\-years}}
+\index{date\_\-range\_\-years@{date\_\-range\_\-years}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-range\_\-years}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-range\_\-years (\$ {\em string}, \/  \$ {\em date} = {\ttfamily NULL})}}
+\label{date__api_8module_ad70e453c5a043e53649a771c3a6713cf}
+Splits a string like -\/3:+3 or 2001:2010 into an array of min and max years.
+
+Center the range around the current year, if any, but expand it far enough so it will pick up the year value in the field in case the value in the field is outside the initial range.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$string A min and max year string like '-\/3:+1'. \item[{\em object}]\$date (optional) A date object. Defaults to NULL.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array A numerically indexed array, containing a minimum and maximum year. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_aa5d254f03ee4a981113f8f9874d2915c}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-seconds@{date\_\-seconds}}
+\index{date\_\-seconds@{date\_\-seconds}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-seconds}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-seconds (\$ {\em format} = {\ttfamily 's'}, \/  \$ {\em required} = {\ttfamily FALSE}, \/  \$ {\em increment} = {\ttfamily 1})}}
+\label{date__api_8module_aa5d254f03ee4a981113f8f9874d2915c}
+Constructs an array of seconds.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$format A date format string. \item[{\em bool}]\$required (optional) If FALSE, the returned array will include a blank value. Defaults to FALSE.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of seconds in the selected format. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_acc8ac7f6a9a71d3f679af4d130a97843}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-timezone\_\-abbr@{date\_\-timezone\_\-abbr}}
+\index{date\_\-timezone\_\-abbr@{date\_\-timezone\_\-abbr}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-timezone\_\-abbr}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-timezone\_\-abbr (\$ {\em refresh} = {\ttfamily FALSE})}}
+\label{date__api_8module_acc8ac7f6a9a71d3f679af4d130a97843}
+Returns an array of system-\/allowed timezone abbreviations.
+
+Cache an array of just the abbreviation names because the whole timezone\_\-abbreviations\_\-list() is huge, so we don't want to retrieve it more than necessary.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em bool}]\$refresh (optional) Whether to refresh the list. Defaults to TRUE.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of allowed timezone abbreviations. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a319c7986532f87064916552af178c58c}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-timezone\_\-is\_\-valid@{date\_\-timezone\_\-is\_\-valid}}
+\index{date\_\-timezone\_\-is\_\-valid@{date\_\-timezone\_\-is\_\-valid}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-timezone\_\-is\_\-valid}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-timezone\_\-is\_\-valid (\$ {\em timezone})}}
+\label{date__api_8module_a319c7986532f87064916552af178c58c}
+Determines if a timezone string is valid.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$timezone A potentially invalid timezone string.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the timezone is valid, FALSE otherwise. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_ab90af298d216e34744c9d3ee7cf7d23a}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-timezone\_\-names@{date\_\-timezone\_\-names}}
+\index{date\_\-timezone\_\-names@{date\_\-timezone\_\-names}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-timezone\_\-names}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-timezone\_\-names (\$ {\em required} = {\ttfamily FALSE}, \/  \$ {\em refresh} = {\ttfamily FALSE})}}
+\label{date__api_8module_ab90af298d216e34744c9d3ee7cf7d23a}
+Returns a translated array of timezone names.
+
+Cache the untranslated array, make the translated array a static variable.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em bool}]\$required (optional) If FALSE, the returned array will include a blank value. Defaults to FALSE. \item[{\em bool}]\$refresh (optional) Whether to refresh the list. Defaults to TRUE.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of timezone names. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a9129ade471056bcb658af815dfbc3258}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-type\_\-format@{date\_\-type\_\-format}}
+\index{date\_\-type\_\-format@{date\_\-type\_\-format}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-type\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-type\_\-format (\$ {\em type})}}
+\label{date__api_8module_a9129ade471056bcb658af815dfbc3258}
+Helper function for getting the format string for a date type.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$type A date type format name.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string A date type format, like 'Y-\/m-\/d H:i:s'. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_aad517bbfed52d465074d1a880050f683}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-week@{date\_\-week}}
+\index{date\_\-week@{date\_\-week}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-week}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-week (\$ {\em date})}}
+\label{date__api_8module_aad517bbfed52d465074d1a880050f683}
+The calendar week number for a date.
+
+PHP week functions return the ISO week, not the calendar week.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$date A date string in the format Y-\/m-\/d.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The calendar week number. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a55bb6dd6b7339529dda05114c86634a8}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-week\_\-days@{date\_\-week\_\-days}}
+\index{date\_\-week\_\-days@{date\_\-week\_\-days}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-week\_\-days}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-week\_\-days (\$ {\em required} = {\ttfamily FALSE}, \/  \$ {\em refresh} = {\ttfamily TRUE})}}
+\label{date__api_8module_a55bb6dd6b7339529dda05114c86634a8}
+Returns a translated array of week names.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em bool}]\$required (optional) If FALSE, the returned array will include a blank value. Defaults to FALSE.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of week day names 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a8707af09814a3667fe2dc426ad1df671}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-week\_\-days\_\-abbr@{date\_\-week\_\-days\_\-abbr}}
+\index{date\_\-week\_\-days\_\-abbr@{date\_\-week\_\-days\_\-abbr}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-week\_\-days\_\-abbr}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-week\_\-days\_\-abbr (\$ {\em required} = {\ttfamily FALSE}, \/  \$ {\em refresh} = {\ttfamily TRUE}, \/  \$ {\em length} = {\ttfamily 3})}}
+\label{date__api_8module_a8707af09814a3667fe2dc426ad1df671}
+Constructs a translated array of week day abbreviations.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em bool}]\$required (optional) If FALSE, the returned array will include a blank value. Defaults to FALSE. \item[{\em bool}]\$refresh (optional) Whether to refresh the list. Defaults to TRUE. \item[{\em int}]\$length (optional) The length of the abbreviation. Defaults to 3.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of week day abbreviations 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a80ff7d0168bb360389773fa867f8e210}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-week\_\-days\_\-ordered@{date\_\-week\_\-days\_\-ordered}}
+\index{date\_\-week\_\-days\_\-ordered@{date\_\-week\_\-days\_\-ordered}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-week\_\-days\_\-ordered}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-week\_\-days\_\-ordered (\$ {\em weekdays})}}
+\label{date__api_8module_a80ff7d0168bb360389773fa867f8e210}
+Reorders weekdays to match the first day of the week.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$weekdays An array of weekdays.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of weekdays reordered to match the first day of the week. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a56d0686e065492539b9caa2e6d6dd5ed}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-week\_\-days\_\-untranslated@{date\_\-week\_\-days\_\-untranslated}}
+\index{date\_\-week\_\-days\_\-untranslated@{date\_\-week\_\-days\_\-untranslated}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-week\_\-days\_\-untranslated}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-week\_\-days\_\-untranslated (\$ {\em refresh} = {\ttfamily TRUE})}}
+\label{date__api_8module_a56d0686e065492539b9caa2e6d6dd5ed}
+Constructs an untranslated array of week days.
+
+Needed for CSS, translation functions, strtotime(), and other places that use the English versions of these words.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em bool}]\$refresh (optional) Whether to refresh the list. Defaults to TRUE.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of week day names 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a2616fe3c5af3b92fecfbc2c6240cf804}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-week\_\-range@{date\_\-week\_\-range}}
+\index{date\_\-week\_\-range@{date\_\-week\_\-range}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-week\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-week\_\-range (\$ {\em week}, \/  \$ {\em year})}}
+\label{date__api_8module_a2616fe3c5af3b92fecfbc2c6240cf804}
+Calculates the start and end dates for a calendar week.
+
+The dates are adjusted to use the chosen first day of week for this site.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em int}]\$week The week value. \item[{\em int}]\$year The year value.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array A numeric array containing the start and end dates of a week. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a44b370ef2cba956130ea77bccb231ac5}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-weeks\_\-in\_\-year@{date\_\-weeks\_\-in\_\-year}}
+\index{date\_\-weeks\_\-in\_\-year@{date\_\-weeks\_\-in\_\-year}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-weeks\_\-in\_\-year}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-weeks\_\-in\_\-year (\$ {\em year})}}
+\label{date__api_8module_a44b370ef2cba956130ea77bccb231ac5}
+The number of calendar weeks in a year.
+
+PHP week functions return the ISO week, not the calendar week.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em int}]\$year A year value.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Number of calendar weeks in selected year. 
+\end{DoxyReturn}
+\hypertarget{date__api_8module_a658020fa9056e86b43cef0d3679c8597}{
+\index{date\_\-api.module@{date\_\-api.module}!date\_\-years@{date\_\-years}}
+\index{date\_\-years@{date\_\-years}!date_api.module@{date\_\-api.module}}
+\subsubsection[{date\_\-years}]{\setlength{\rightskip}{0pt plus 5cm}date\_\-years (\$ {\em min} = {\ttfamily 0}, \/  \$ {\em max} = {\ttfamily 0}, \/  \$ {\em required} = {\ttfamily FALSE})}}
+\label{date__api_8module_a658020fa9056e86b43cef0d3679c8597}
+Constructs an array of years.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em int}]\$min The minimum year in the array. \item[{\em int}]\$max The maximum year in the array. \item[{\em bool}]\$required (optional) If FALSE, the returned array will include a blank value. Defaults to FALSE.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of years in the selected range. 
+\end{DoxyReturn}

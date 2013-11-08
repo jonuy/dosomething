@@ -1,0 +1,96 @@
+\hypertarget{classviews__plugin__row__comment__rss}{
+\section{views\_\-plugin\_\-row\_\-comment\_\-rss Class Reference}
+\label{classviews__plugin__row__comment__rss}\index{views\_\-plugin\_\-row\_\-comment\_\-rss@{views\_\-plugin\_\-row\_\-comment\_\-rss}}
+}
+Inheritance diagram for views\_\-plugin\_\-row\_\-comment\_\-rss::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classviews__plugin__row__comment__rss}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__plugin__row__comment__rss_ae644bfd8ebe7cac3f31edb2b92d0cff7}{
+{\bfseries option\_\-definition} ()}
+\label{classviews__plugin__row__comment__rss_ae644bfd8ebe7cac3f31edb2b92d0cff7}
+
+\item 
+\hyperlink{classviews__plugin__row__comment__rss_a6901603f7a3b8765dff9ac0b5d8208e4}{options\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{classviews__plugin__row__comment__rss_a1c64dc0cd4f677ddb85a0dbedfae291e}{pre\_\-render} (\$result)
+\item 
+\hyperlink{classviews__plugin__row__comment__rss_a62f1381c8f5def6a790685208be61dae}{options\_\-form\_\-summary\_\-options} ()
+\item 
+\hyperlink{classviews__plugin__row__comment__rss_a89b115cbc1807d3b9659627f351b97e7}{render} (\$row)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classviews__plugin__row__comment__rss_a7b96301e4d4e2a8d6f9461dea688b16b}{
+{\bfseries \$base\_\-table} = 'comment'}
+\label{classviews__plugin__row__comment__rss_a7b96301e4d4e2a8d6f9461dea688b16b}
+
+\item 
+\hypertarget{classviews__plugin__row__comment__rss_a649761b2325dacc408e94765e7310367}{
+{\bfseries \$base\_\-field} = 'cid'}
+\label{classviews__plugin__row__comment__rss_a649761b2325dacc408e94765e7310367}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Plugin which formats the comments as RSS items. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classviews__plugin__row__comment__rss_a6901603f7a3b8765dff9ac0b5d8208e4}{
+\index{views\_\-plugin\_\-row\_\-comment\_\-rss@{views\_\-plugin\_\-row\_\-comment\_\-rss}!options\_\-form@{options\_\-form}}
+\index{options\_\-form@{options\_\-form}!views_plugin_row_comment_rss@{views\_\-plugin\_\-row\_\-comment\_\-rss}}
+\subsubsection[{options\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row\_\-comment\_\-rss::options\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{classviews__plugin__row__comment__rss_a6901603f7a3b8765dff9ac0b5d8208e4}
+Provide a form for setting options. 
+
+Reimplemented from \hyperlink{classviews__plugin__row_a6914c39d64977a0aa71da39cc1af004e}{views\_\-plugin\_\-row}.\hypertarget{classviews__plugin__row__comment__rss_a62f1381c8f5def6a790685208be61dae}{
+\index{views\_\-plugin\_\-row\_\-comment\_\-rss@{views\_\-plugin\_\-row\_\-comment\_\-rss}!options\_\-form\_\-summary\_\-options@{options\_\-form\_\-summary\_\-options}}
+\index{options\_\-form\_\-summary\_\-options@{options\_\-form\_\-summary\_\-options}!views_plugin_row_comment_rss@{views\_\-plugin\_\-row\_\-comment\_\-rss}}
+\subsubsection[{options\_\-form\_\-summary\_\-options}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row\_\-comment\_\-rss::options\_\-form\_\-summary\_\-options ()}}
+\label{classviews__plugin__row__comment__rss_a62f1381c8f5def6a790685208be61dae}
+Return the main options, which are shown in the summary title
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classviews__plugin__row__node__rss_a266e0776cfa7c86a98453b59215da8aa}{views\_\-plugin\_\-row\_\-node\_\-rss::options\_\-form\_\-summary\_\-options()} 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[\hyperlink{todo__todo000053}{Todo}]: Maybe provide a views\_\-plugin\_\-row\_\-rss\_\-entity and reuse this method in views\_\-plugin\_\-row\_\-comment$|$node\_\-rss.inc \end{Desc}
+\hypertarget{classviews__plugin__row__comment__rss_a1c64dc0cd4f677ddb85a0dbedfae291e}{
+\index{views\_\-plugin\_\-row\_\-comment\_\-rss@{views\_\-plugin\_\-row\_\-comment\_\-rss}!pre\_\-render@{pre\_\-render}}
+\index{pre\_\-render@{pre\_\-render}!views_plugin_row_comment_rss@{views\_\-plugin\_\-row\_\-comment\_\-rss}}
+\subsubsection[{pre\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row\_\-comment\_\-rss::pre\_\-render (\$ {\em result})}}
+\label{classviews__plugin__row__comment__rss_a1c64dc0cd4f677ddb85a0dbedfae291e}
+Allow the style to do stuff before each row is rendered.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$result}]The full array of results from the query. \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classviews__plugin__row_ae49a23f750874e4b3d294aa3a20ecd64}{views\_\-plugin\_\-row}.\hypertarget{classviews__plugin__row__comment__rss_a89b115cbc1807d3b9659627f351b97e7}{
+\index{views\_\-plugin\_\-row\_\-comment\_\-rss@{views\_\-plugin\_\-row\_\-comment\_\-rss}!render@{render}}
+\index{render@{render}!views_plugin_row_comment_rss@{views\_\-plugin\_\-row\_\-comment\_\-rss}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}views\_\-plugin\_\-row\_\-comment\_\-rss::render (\$ {\em row})}}
+\label{classviews__plugin__row__comment__rss_a89b115cbc1807d3b9659627f351b97e7}
+Render a row object. This usually passes through to a theme template of some form, but not always.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em stdClass}]\$row A single row of the query result, so an element of \$view-\/$>$result.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The rendered output of a single row, used by the style plugin. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classviews__plugin__row_a8243842e087dd28664b32cef0309f2a6}{views\_\-plugin\_\-row}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/views/modules/comment/\hyperlink{views__plugin__row__comment__rss_8inc}{views\_\-plugin\_\-row\_\-comment\_\-rss.inc}\end{DoxyCompactItemize}

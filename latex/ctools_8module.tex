@@ -1,0 +1,527 @@
+\hypertarget{ctools_8module}{
+\section{html/profiles/dosomething/modules/contrib/ctools/ctools.module File Reference}
+\label{ctools_8module}\index{html/profiles/dosomething/modules/contrib/ctools/ctools.module@{html/profiles/dosomething/modules/contrib/ctools/ctools.module}}
+}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries CTOOLS\_\-API\_\-VERSION} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ctools_8module_a68cd3b30d58f60bb475e83662282536c}{ctools\_\-api\_\-version} (\$minimum, \$maximum=NULL)
+\item 
+\hyperlink{ctools_8module_aab220ed5e60234f37c77bedbdb8a4905}{ctools\_\-include} (\$file, \$module= 'ctools', \$dir= 'includes')
+\item 
+\hyperlink{ctools_8module_a79f73d0cd92770dbcf2c40699631cb8d}{ctools\_\-form\_\-include} (\&\$form\_\-state, \$file, \$module= 'ctools', \$dir= 'includes')
+\item 
+\hyperlink{ctools_8module_a8ad74264a9f461ec5748e498f1e8c0c1}{ctools\_\-form\_\-include\_\-file} (\&\$form\_\-state, \$filename)
+\item 
+\hyperlink{ctools_8module_a8c2a362e0904c9014ef0bb33961cbd09}{ctools\_\-image\_\-path} (\$image, \$module= 'ctools', \$dir= 'images')
+\item 
+\hyperlink{ctools_8module_a7b78eac67e8823a71bee58235355be22}{ctools\_\-add\_\-css} (\$file, \$module= 'ctools', \$dir= 'css')
+\item 
+\hyperlink{ctools_8module_ac92693fc61e852535e2ff6adecd1d44d}{ctools\_\-attach\_\-css} (\$file, \$module= 'ctools', \$dir= 'css')
+\item 
+\hyperlink{ctools_8module_abfc334b854ec27961cfb3f07382fb370}{ctools\_\-add\_\-js} (\$file, \$module= 'ctools', \$dir= 'js')
+\item 
+\hyperlink{ctools_8module_a54e5865cad2e61ea2c4d5acd4640e7fb}{ctools\_\-attach\_\-js} (\$file, \$module= 'ctools', \$dir= 'js')
+\item 
+\hyperlink{ctools_8module_a3d56126c4b5208ea2d39019aeef57217}{ctools\_\-get\_\-roles} ()
+\item 
+\hypertarget{ctools_8module_adab3343460aef11e78323a1bbcfd74e9}{
+{\bfseries ctools\_\-break\_\-phrase} (\$str)}
+\label{ctools_8module_adab3343460aef11e78323a1bbcfd74e9}
+
+\item 
+\hyperlink{ctools_8module_a0a8283ac6186ae3c5f1075fd8a05dd64}{ctools\_\-set\_\-page\_\-token} (\$token=NULL, \$type=NULL, \$argument=NULL)
+\item 
+\hyperlink{ctools_8module_af50c57385ec72ff698a4292ce5b9cecd}{ctools\_\-set\_\-variable\_\-token} (\$token)
+\item 
+\hyperlink{ctools_8module_a75a083090c8f72d76a9e6378a911bc50}{ctools\_\-set\_\-callback\_\-token} (\$token, \$callback)
+\item 
+\hyperlink{ctools_8module_a03a4ac4bc4f550a72c5d661f9124c9a6}{ctools\_\-set\_\-no\_\-blocks} (\$blocks=FALSE)
+\item 
+\hyperlink{ctools_8module_ab5cc2ffd960a4d73767401993abbfaa4}{ctools\_\-class\_\-add} (\$classes, \$hook= 'html')
+\item 
+\hyperlink{ctools_8module_a3f5486d5ce6afc374f0131aa7a71387a}{ctools\_\-class\_\-remove} (\$classes, \$hook= 'html')
+\item 
+\hyperlink{ctools_8module_a27c07c71e495f2aacb20b8291dffc65a}{ctools\_\-init} ()
+\item 
+\hyperlink{ctools_8module_aa5bb2f555630d9f5eb2b695c2e3eb68c}{ctools\_\-shutdown\_\-handler} ()
+\item 
+\hyperlink{ctools_8module_aec20ea7c40c247f48eddb4073aa2a447}{ctools\_\-theme} ()
+\item 
+\hyperlink{ctools_8module_a2385dc0b63f4409bfda5056b1954c6d5}{ctools\_\-menu} ()
+\item 
+\hyperlink{ctools_8module_a6004ee8fa215743c49e011b33edbe843}{ctools\_\-cron} ()
+\item 
+\hyperlink{ctools_8module_aa00f403972d4b65170a3effe89eec22e}{ctools\_\-flush\_\-caches} ()
+\item 
+\hyperlink{ctools_8module_a555fb0b73704f629803ed07eff93f97d}{ctools\_\-element\_\-info\_\-alter} (\&\$type)
+\item 
+\hyperlink{ctools_8module_ae5e454efdea69c33f8faf0d461dce188}{ctools\_\-file\_\-download} (\$filepath)
+\item 
+\hyperlink{ctools_8module_ae64a38f412c2d9b9892b29551c27f104}{ctools\_\-registry\_\-files\_\-alter} (\&\$files, \$indexed\_\-modules)
+\item 
+\hyperlink{ctools_8module_a2b2ccbc9a1ae532cdf17e7d1836a40fb}{ctools\_\-ctools\_\-plugin\_\-directory} (\$owner, \$plugin\_\-type)
+\item 
+\hyperlink{ctools_8module_a76a9ad5ac309f0526af308e38aa3f574}{ctools\_\-ctools\_\-plugin\_\-type} ()
+\item 
+\hyperlink{ctools_8module_aacda26406250e7a22dbfce3c95e8a364}{ctools\_\-preprocess\_\-node} (\&\$vars)
+\item 
+\hypertarget{ctools_8module_aad5602367f85ec067b9ea0cdafb4ed5d}{
+{\bfseries ctools\_\-page\_\-alter} (\&\$page)}
+\label{ctools_8module_aad5602367f85ec067b9ea0cdafb4ed5d}
+
+\item 
+\hyperlink{ctools_8module_ada3893e7993e19022048e2b47b413baa}{ctools\_\-page\_\-token\_\-processing} (\$children, \$elements)
+\item 
+\hyperlink{ctools_8module_a2f9ba929f2bd627113c551823ac43afc}{ctools\_\-process} (\&\$variables, \$hook)
+\item 
+\hyperlink{ctools_8module_ae5b8ef5c7720e6aee33ff8e15d8dacbd}{ctools\_\-access\_\-menu} (\$access)
+\item 
+\hyperlink{ctools_8module_a5fa148b37edfc92192dcf6eb22299d5c}{ctools\_\-access\_\-multiperm} ()
+\item 
+\hyperlink{ctools_8module_a5d07b6c831cc85a1bde277a817d3675d}{ctools\_\-js\_\-load} (\$js)
+\item 
+\hyperlink{ctools_8module_a9aa80761de735e1b6d9d1fbac0da04ad}{ctools\_\-export\_\-ui\_\-load} (\$item\_\-name, \$plugin\_\-name)
+\item 
+\hyperlink{ctools_8module_a5e2e7c8a0fb252f056d980a6d6cc1e53}{ctools\_\-export\_\-ui\_\-task\_\-access} (\$plugin\_\-name, \$op, \$item=NULL)
+\item 
+\hyperlink{ctools_8module_a60ede52adc0e36252c48a28946187ca9}{ctools\_\-export\_\-ui\_\-ctools\_\-access\_\-get} (\$argument)
+\item 
+\hyperlink{ctools_8module_a816f35c4e895c69befa4afd787324880}{ctools\_\-export\_\-ui\_\-ctools\_\-access\_\-set} (\$argument, \$access)
+\item 
+\hyperlink{ctools_8module_a943750c628ffe3a20ece880e15a34240}{ctools\_\-menu\_\-local\_\-tasks\_\-alter} (\&\$data, \$router\_\-item, \$root\_\-path)
+\item 
+\hyperlink{ctools_8module_a75e6c439d7246bcab69763c612716c90}{ctools\_\-block\_\-list\_\-alter} (\&\$blocks)
+\item 
+\hyperlink{ctools_8module_aaad6f0b6ff8fd26cc15837b2f9620c98}{ctools\_\-modules\_\-enabled} (\$modules)
+\item 
+\hyperlink{ctools_8module_a270062e67835dc99cc4b57fba5f06289}{ctools\_\-ajax\_\-theme\_\-callback} ()
+\item 
+\hyperlink{ctools_8module_aa0eddd96e485a58f4259351b9f9cb918}{ctools\_\-ctools\_\-entity\_\-context\_\-alter} (\&\$plugin, \&\$entity, \$plugin\_\-id)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+CTools primary module file.
+
+Most of the CTools tools are in their own .inc files. This contains nothing more than a few convenience functions and some hooks that must be implemented in the module file. 
+
+\subsection{Function Documentation}
+\hypertarget{ctools_8module_ae5b8ef5c7720e6aee33ff8e15d8dacbd}{
+\index{ctools.module@{ctools.module}!ctools\_\-access\_\-menu@{ctools\_\-access\_\-menu}}
+\index{ctools\_\-access\_\-menu@{ctools\_\-access\_\-menu}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-access\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-access\_\-menu (\$ {\em access})}}
+\label{ctools_8module_ae5b8ef5c7720e6aee33ff8e15d8dacbd}
+Determine if the current user has access via a plugin.
+
+This function is meant to be embedded in the Drupal menu system, and therefore is in the .module file since sub files can't be loaded, and takes arguments a little bit more haphazardly than ctools\_\-access().
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$access}]An access control array which contains the following information:
+\begin{DoxyItemize}
+\item 'logic': and or or. Whether all tests must pass or one must pass.
+\item 'plugins': An array of access plugins. Each contains:
+\item -\/ 'name': The name of the plugin
+\item -\/ 'settings': The settings from the plugin UI.
+\item -\/ 'context': Which context to use. 
+\end{DoxyItemize}\item[{\em ...}]zero or more context arguments generated from argument plugins. These contexts must have an 'id' attached to them so that they can be properly associated. The argument plugin system should set this, but if the context is coming from elsewhere it will need to be set manually.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if access is granted, false if otherwise. 
+\end{DoxyReturn}
+\hypertarget{ctools_8module_a5fa148b37edfc92192dcf6eb22299d5c}{
+\index{ctools.module@{ctools.module}!ctools\_\-access\_\-multiperm@{ctools\_\-access\_\-multiperm}}
+\index{ctools\_\-access\_\-multiperm@{ctools\_\-access\_\-multiperm}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-access\_\-multiperm}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-access\_\-multiperm ()}}
+\label{ctools_8module_a5fa148b37edfc92192dcf6eb22299d5c}
+Determine if the current user has access via checks to multiple different permissions.
+
+This function is a thin wrapper around user\_\-access that allows multiple permissions to be easily designated for use on, for example, a menu callback.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em ...}]An indexed array of zero or more permission strings to be checked by user\_\-access().\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Iff all checks pass will this function return TRUE. If an invalid argument is passed (e.g., not a string), this function errs on the safe said and returns FALSE. 
+\end{DoxyReturn}
+\hypertarget{ctools_8module_a7b78eac67e8823a71bee58235355be22}{
+\index{ctools.module@{ctools.module}!ctools\_\-add\_\-css@{ctools\_\-add\_\-css}}
+\index{ctools\_\-add\_\-css@{ctools\_\-add\_\-css}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-add\_\-css}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-add\_\-css (\$ {\em file}, \/  \$ {\em module} = {\ttfamily 'ctools'}, \/  \$ {\em dir} = {\ttfamily 'css'})}}
+\label{ctools_8module_a7b78eac67e8823a71bee58235355be22}
+Include css files as necessary.
+
+This helper function is used by ctools but can also be used in other modules in the same way as explained in the comments of ctools\_\-include.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$file}]The base file name to be included. \item[{\em \$module}]Optional module containing the include. \item[{\em \$dir}]Optional subdirectory containing the include file. \end{DoxyParams}
+\hypertarget{ctools_8module_abfc334b854ec27961cfb3f07382fb370}{
+\index{ctools.module@{ctools.module}!ctools\_\-add\_\-js@{ctools\_\-add\_\-js}}
+\index{ctools\_\-add\_\-js@{ctools\_\-add\_\-js}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-add\_\-js}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-add\_\-js (\$ {\em file}, \/  \$ {\em module} = {\ttfamily 'ctools'}, \/  \$ {\em dir} = {\ttfamily 'js'})}}
+\label{ctools_8module_abfc334b854ec27961cfb3f07382fb370}
+Include js files as necessary.
+
+This helper function is used by ctools but can also be used in other modules in the same way as explained in the comments of ctools\_\-include.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$file}]The base file name to be included. \item[{\em \$module}]Optional module containing the include. \item[{\em \$dir}]Optional subdirectory containing the include file. \end{DoxyParams}
+\hypertarget{ctools_8module_a270062e67835dc99cc4b57fba5f06289}{
+\index{ctools.module@{ctools.module}!ctools\_\-ajax\_\-theme\_\-callback@{ctools\_\-ajax\_\-theme\_\-callback}}
+\index{ctools\_\-ajax\_\-theme\_\-callback@{ctools\_\-ajax\_\-theme\_\-callback}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-ajax\_\-theme\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-ajax\_\-theme\_\-callback ()}}
+\label{ctools_8module_a270062e67835dc99cc4b57fba5f06289}
+Menu theme callback.
+
+This simply ensures that Panels ajax calls are rendered in the same theme as the original page to prevent .css file confusion.
+
+To use this, set this as the theme callback on AJAX related menu items. Since the ajax page state won't be sent during ajax requests, it should be safe to use even if ajax isn't invoked. \hypertarget{ctools_8module_a68cd3b30d58f60bb475e83662282536c}{
+\index{ctools.module@{ctools.module}!ctools\_\-api\_\-version@{ctools\_\-api\_\-version}}
+\index{ctools\_\-api\_\-version@{ctools\_\-api\_\-version}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-api\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-api\_\-version (\$ {\em minimum}, \/  \$ {\em maximum} = {\ttfamily NULL})}}
+\label{ctools_8module_a68cd3b30d58f60bb475e83662282536c}
+Test the CTools API version.
+
+This function can always be used to safely test if CTools has the minimum API version that your module can use. It can also try to protect you from running if the CTools API version is too new, but if you do that you need to be very quick about watching CTools API releases and release new versions of your software as soon as the new release is made, or people might end up updating CTools and having your module shut down without any recourse.
+
+It is recommended that every hook of your module that might use CTools or might lead to a use of CTools be guarded like this:
+
+
+\begin{DoxyCode}
+ if (!module_invoke('ctools', 'api_version', '1.0')) {
+   return;
+ }
+\end{DoxyCode}
+
+
+Note that some hooks such as \_\-menu() or \_\-theme() must return an array().
+
+You can use it in your hook\_\-requirements to report this error condition like this:
+
+
+\begin{DoxyCode}
+ define('MODULENAME_MINIMUM_CTOOLS_API_VERSION', '1.0');
+ define('MODULENAME_MAXIMUM_CTOOLS_API_VERSION', '1.1');
+
+ function MODULENAME_requirements($phase) {
+   $requirements = array();
+   if (!module_invoke('ctools', 'api_version', MODULENAME_MINIMUM_CTOOLS_API_VERS
+      ION, MODULENAME_MAXIMUM_CTOOLS_API_VERSION)) {
+      $requirements['MODULENAME_ctools'] = array(
+        'title' => $t('MODULENAME required Chaos Tool Suite (CTools) API Version'
+      ),
+        'value' => t('Between @a and @b', array('@a' => MODULENAME_MINIMUM_CTOOLS
+      _API_VERSION, '@b' => MODULENAME_MAXIMUM_CTOOLS_API_VERSION)),
+        'severity' => REQUIREMENT_ERROR,
+      );
+   }
+   return $requirements;
+ }
+\end{DoxyCode}
+
+
+Please note that the version is a string, not an floating point number. This will matter once CTools reaches version 1.10.
+
+A CTools API changes history will be kept in API.txt. Not every new version of CTools will necessarily update the API version. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \$minimum}]The minimum version of CTools necessary for your software to run with it. \item[{\em \$maximum}]The maximum version of CTools allowed for your software to run with it. \end{DoxyParams}
+\hypertarget{ctools_8module_ac92693fc61e852535e2ff6adecd1d44d}{
+\index{ctools.module@{ctools.module}!ctools\_\-attach\_\-css@{ctools\_\-attach\_\-css}}
+\index{ctools\_\-attach\_\-css@{ctools\_\-attach\_\-css}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-attach\_\-css}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-attach\_\-css (\$ {\em file}, \/  \$ {\em module} = {\ttfamily 'ctools'}, \/  \$ {\em dir} = {\ttfamily 'css'})}}
+\label{ctools_8module_ac92693fc61e852535e2ff6adecd1d44d}
+Format a css file name for use with \$form\mbox{[}'attached'\mbox{]}\mbox{[}'css'\mbox{]}.
+
+This helper function is used by ctools but can also be used in other modules in the same way as explained in the comments of ctools\_\-include.
+
+
+\begin{DoxyCode}
+   $form['#attached']['css'] = array(ctools_attach_css('collapsible-div'));
+   $form['#attached']['css'][ctools_attach_css('collapsible-div')] = array('prepr
+      ocess' => FALSE);
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$file}]The base file name to be included. \item[{\em \$module}]Optional module containing the include. \item[{\em \$dir}]Optional subdirectory containing the include file. \end{DoxyParams}
+\hypertarget{ctools_8module_a54e5865cad2e61ea2c4d5acd4640e7fb}{
+\index{ctools.module@{ctools.module}!ctools\_\-attach\_\-js@{ctools\_\-attach\_\-js}}
+\index{ctools\_\-attach\_\-js@{ctools\_\-attach\_\-js}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-attach\_\-js}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-attach\_\-js (\$ {\em file}, \/  \$ {\em module} = {\ttfamily 'ctools'}, \/  \$ {\em dir} = {\ttfamily 'js'})}}
+\label{ctools_8module_a54e5865cad2e61ea2c4d5acd4640e7fb}
+Format a javascript file name for use with \$form\mbox{[}'attached'\mbox{]}\mbox{[}'js'\mbox{]}.
+
+This helper function is used by ctools but can also be used in other modules in the same way as explained in the comments of ctools\_\-include.
+
+
+\begin{DoxyCode}
+   $form['#attached']['js'] = array(ctools_attach_js('auto-submit'));
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$file}]The base file name to be included. \item[{\em \$module}]Optional module containing the include. \item[{\em \$dir}]Optional subdirectory containing the include file. \end{DoxyParams}
+\hypertarget{ctools_8module_a75e6c439d7246bcab69763c612716c90}{
+\index{ctools.module@{ctools.module}!ctools\_\-block\_\-list\_\-alter@{ctools\_\-block\_\-list\_\-alter}}
+\index{ctools\_\-block\_\-list\_\-alter@{ctools\_\-block\_\-list\_\-alter}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-block\_\-list\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-block\_\-list\_\-alter (\&\$ {\em blocks})}}
+\label{ctools_8module_a75e6c439d7246bcab69763c612716c90}
+Implement hook\_\-block\_\-list\_\-alter() to potentially remove blocks.
+
+This exists in order to replicate Drupal 6's \char`\"{}no blocks\char`\"{} functionality. \hypertarget{ctools_8module_ab5cc2ffd960a4d73767401993abbfaa4}{
+\index{ctools.module@{ctools.module}!ctools\_\-class\_\-add@{ctools\_\-class\_\-add}}
+\index{ctools\_\-class\_\-add@{ctools\_\-class\_\-add}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-class\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-class\_\-add (\$ {\em classes}, \/  \$ {\em hook} = {\ttfamily 'html'})}}
+\label{ctools_8module_ab5cc2ffd960a4d73767401993abbfaa4}
+Add an array of classes to the body.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em mixed}]\$classes A string or an array of class strings to add. \item[{\em string}]\$hook The theme hook to add the class to. The default is 'html' which will affect the body tag. \end{DoxyParams}
+\hypertarget{ctools_8module_a3f5486d5ce6afc374f0131aa7a71387a}{
+\index{ctools.module@{ctools.module}!ctools\_\-class\_\-remove@{ctools\_\-class\_\-remove}}
+\index{ctools\_\-class\_\-remove@{ctools\_\-class\_\-remove}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-class\_\-remove}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-class\_\-remove (\$ {\em classes}, \/  \$ {\em hook} = {\ttfamily 'html'})}}
+\label{ctools_8module_a3f5486d5ce6afc374f0131aa7a71387a}
+Remove an array of classes from the body.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em mixed}]\$classes A string or an array of class strings to remove. \item[{\em string}]\$hook The theme hook to remove the class from. The default is 'html' which will affect the body tag. \end{DoxyParams}
+\hypertarget{ctools_8module_a6004ee8fa215743c49e011b33edbe843}{
+\index{ctools.module@{ctools.module}!ctools\_\-cron@{ctools\_\-cron}}
+\index{ctools\_\-cron@{ctools\_\-cron}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-cron}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-cron ()}}
+\label{ctools_8module_a6004ee8fa215743c49e011b33edbe843}
+Implementation of hook\_\-cron. Clean up old caches. \hypertarget{ctools_8module_aa0eddd96e485a58f4259351b9f9cb918}{
+\index{ctools.module@{ctools.module}!ctools\_\-ctools\_\-entity\_\-context\_\-alter@{ctools\_\-ctools\_\-entity\_\-context\_\-alter}}
+\index{ctools\_\-ctools\_\-entity\_\-context\_\-alter@{ctools\_\-ctools\_\-entity\_\-context\_\-alter}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-ctools\_\-entity\_\-context\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-ctools\_\-entity\_\-context\_\-alter (\&\$ {\em plugin}, \/  \&\$ {\em entity}, \/  \$ {\em plugin\_\-id})}}
+\label{ctools_8module_aa0eddd96e485a58f4259351b9f9cb918}
+Implements \hyperlink{group__hooks_gad8e0232b98d84d2347a3cc1e26c3df09}{hook\_\-ctools\_\-entity\_\-context\_\-alter()}. \hypertarget{ctools_8module_a2b2ccbc9a1ae532cdf17e7d1836a40fb}{
+\index{ctools.module@{ctools.module}!ctools\_\-ctools\_\-plugin\_\-directory@{ctools\_\-ctools\_\-plugin\_\-directory}}
+\index{ctools\_\-ctools\_\-plugin\_\-directory@{ctools\_\-ctools\_\-plugin\_\-directory}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-ctools\_\-plugin\_\-directory}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-ctools\_\-plugin\_\-directory (\$ {\em owner}, \/  \$ {\em plugin\_\-type})}}
+\label{ctools_8module_a2b2ccbc9a1ae532cdf17e7d1836a40fb}
+Implementation of \hyperlink{group__hooks_gaf17a0de7a7ca6e6c30c766ea1e44715e}{hook\_\-ctools\_\-plugin\_\-directory()} to let the system know where all our own plugins are. \hypertarget{ctools_8module_a76a9ad5ac309f0526af308e38aa3f574}{
+\index{ctools.module@{ctools.module}!ctools\_\-ctools\_\-plugin\_\-type@{ctools\_\-ctools\_\-plugin\_\-type}}
+\index{ctools\_\-ctools\_\-plugin\_\-type@{ctools\_\-ctools\_\-plugin\_\-type}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-ctools\_\-plugin\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-ctools\_\-plugin\_\-type ()}}
+\label{ctools_8module_a76a9ad5ac309f0526af308e38aa3f574}
+Implements \hyperlink{group__hooks_gacb27d27849a3374ddda0120603d549ac}{hook\_\-ctools\_\-plugin\_\-type()}. \hypertarget{ctools_8module_a555fb0b73704f629803ed07eff93f97d}{
+\index{ctools.module@{ctools.module}!ctools\_\-element\_\-info\_\-alter@{ctools\_\-element\_\-info\_\-alter}}
+\index{ctools\_\-element\_\-info\_\-alter@{ctools\_\-element\_\-info\_\-alter}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-element\_\-info\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-element\_\-info\_\-alter (\&\$ {\em type})}}
+\label{ctools_8module_a555fb0b73704f629803ed07eff93f97d}
+Implements hook\_\-element\_\-info\_\-alter(). \hypertarget{ctools_8module_a60ede52adc0e36252c48a28946187ca9}{
+\index{ctools.module@{ctools.module}!ctools\_\-export\_\-ui\_\-ctools\_\-access\_\-get@{ctools\_\-export\_\-ui\_\-ctools\_\-access\_\-get}}
+\index{ctools\_\-export\_\-ui\_\-ctools\_\-access\_\-get@{ctools\_\-export\_\-ui\_\-ctools\_\-access\_\-get}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-export\_\-ui\_\-ctools\_\-access\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-export\_\-ui\_\-ctools\_\-access\_\-get (\$ {\em argument})}}
+\label{ctools_8module_a60ede52adc0e36252c48a28946187ca9}
+Callback for access control ajax form on behalf of export ui.
+
+Returns the cached access config and contexts used. Note that this is assuming that access will be in \$item-\/$>$access -\/-\/ if it is not, an export UI plugin will have to make its own callbacks. \hypertarget{ctools_8module_a816f35c4e895c69befa4afd787324880}{
+\index{ctools.module@{ctools.module}!ctools\_\-export\_\-ui\_\-ctools\_\-access\_\-set@{ctools\_\-export\_\-ui\_\-ctools\_\-access\_\-set}}
+\index{ctools\_\-export\_\-ui\_\-ctools\_\-access\_\-set@{ctools\_\-export\_\-ui\_\-ctools\_\-access\_\-set}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-export\_\-ui\_\-ctools\_\-access\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-export\_\-ui\_\-ctools\_\-access\_\-set (\$ {\em argument}, \/  \$ {\em access})}}
+\label{ctools_8module_a816f35c4e895c69befa4afd787324880}
+Callback for access control ajax form on behalf of export ui
+
+Returns the cached access config and contexts used. Note that this is assuming that access will be in \$item-\/$>$access -\/-\/ if it is not, an export UI plugin will have to make its own callbacks. \hypertarget{ctools_8module_a9aa80761de735e1b6d9d1fbac0da04ad}{
+\index{ctools.module@{ctools.module}!ctools\_\-export\_\-ui\_\-load@{ctools\_\-export\_\-ui\_\-load}}
+\index{ctools\_\-export\_\-ui\_\-load@{ctools\_\-export\_\-ui\_\-load}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-export\_\-ui\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-export\_\-ui\_\-load (\$ {\em item\_\-name}, \/  \$ {\em plugin\_\-name})}}
+\label{ctools_8module_a9aa80761de735e1b6d9d1fbac0da04ad}
+Menu \_\-load hook.
+
+This function will be called to load an object as a replacement for ctools\_\-export\_\-ui in menu paths. \hypertarget{ctools_8module_a5e2e7c8a0fb252f056d980a6d6cc1e53}{
+\index{ctools.module@{ctools.module}!ctools\_\-export\_\-ui\_\-task\_\-access@{ctools\_\-export\_\-ui\_\-task\_\-access}}
+\index{ctools\_\-export\_\-ui\_\-task\_\-access@{ctools\_\-export\_\-ui\_\-task\_\-access}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-export\_\-ui\_\-task\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-export\_\-ui\_\-task\_\-access (\$ {\em plugin\_\-name}, \/  \$ {\em op}, \/  \$ {\em item} = {\ttfamily NULL})}}
+\label{ctools_8module_a5e2e7c8a0fb252f056d980a6d6cc1e53}
+Menu access callback for various tasks of export-\/ui. \hypertarget{ctools_8module_ae5e454efdea69c33f8faf0d461dce188}{
+\index{ctools.module@{ctools.module}!ctools\_\-file\_\-download@{ctools\_\-file\_\-download}}
+\index{ctools\_\-file\_\-download@{ctools\_\-file\_\-download}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-file\_\-download}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-file\_\-download (\$ {\em filepath})}}
+\label{ctools_8module_ae5e454efdea69c33f8faf0d461dce188}
+Implementation of hook\_\-file\_\-download()
+
+When using the private file system, we have to let Drupal know it's ok to download CSS and image files from our temporary directory. \hypertarget{ctools_8module_aa00f403972d4b65170a3effe89eec22e}{
+\index{ctools.module@{ctools.module}!ctools\_\-flush\_\-caches@{ctools\_\-flush\_\-caches}}
+\index{ctools\_\-flush\_\-caches@{ctools\_\-flush\_\-caches}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-flush\_\-caches}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-flush\_\-caches ()}}
+\label{ctools_8module_aa00f403972d4b65170a3effe89eec22e}
+Ensure the CTools CSS cache is flushed whenever hook\_\-flush\_\-caches is invoked. \hypertarget{ctools_8module_a79f73d0cd92770dbcf2c40699631cb8d}{
+\index{ctools.module@{ctools.module}!ctools\_\-form\_\-include@{ctools\_\-form\_\-include}}
+\index{ctools\_\-form\_\-include@{ctools\_\-form\_\-include}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-form\_\-include}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-form\_\-include (\&\$ {\em form\_\-state}, \/  \$ {\em file}, \/  \$ {\em module} = {\ttfamily 'ctools'}, \/  \$ {\em dir} = {\ttfamily 'includes'})}}
+\label{ctools_8module_a79f73d0cd92770dbcf2c40699631cb8d}
+Include .inc files in a form context.
+
+This is a variant of ctools\_\-include that will save information in the the form\_\-state so that cached forms will properly include things. \hypertarget{ctools_8module_a8ad74264a9f461ec5748e498f1e8c0c1}{
+\index{ctools.module@{ctools.module}!ctools\_\-form\_\-include\_\-file@{ctools\_\-form\_\-include\_\-file}}
+\index{ctools\_\-form\_\-include\_\-file@{ctools\_\-form\_\-include\_\-file}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-form\_\-include\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-form\_\-include\_\-file (\&\$ {\em form\_\-state}, \/  \$ {\em filename})}}
+\label{ctools_8module_a8ad74264a9f461ec5748e498f1e8c0c1}
+Add an arbitrary path to the \$form\_\-state so it can work with form cache.
+
+module\_\-load\_\-include uses an unfortunately annoying syntax to work, making it difficult to translate the more simple \$path + \$file syntax. \hypertarget{ctools_8module_a3d56126c4b5208ea2d39019aeef57217}{
+\index{ctools.module@{ctools.module}!ctools\_\-get\_\-roles@{ctools\_\-get\_\-roles}}
+\index{ctools\_\-get\_\-roles@{ctools\_\-get\_\-roles}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-get\_\-roles}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-get\_\-roles ()}}
+\label{ctools_8module_a3d56126c4b5208ea2d39019aeef57217}
+Get a list of roles in the system.
+
+\begin{DoxyReturn}{Returns}
+An array of role names keyed by role ID.
+\end{DoxyReturn}
+\begin{Desc}
+\item[\hyperlink{deprecated__deprecated000001}{Deprecated}]user\_\-roles() should be used instead. \end{Desc}
+\hypertarget{ctools_8module_a8c2a362e0904c9014ef0bb33961cbd09}{
+\index{ctools.module@{ctools.module}!ctools\_\-image\_\-path@{ctools\_\-image\_\-path}}
+\index{ctools\_\-image\_\-path@{ctools\_\-image\_\-path}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-image\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-image\_\-path (\$ {\em image}, \/  \$ {\em module} = {\ttfamily 'ctools'}, \/  \$ {\em dir} = {\ttfamily 'images'})}}
+\label{ctools_8module_a8c2a362e0904c9014ef0bb33961cbd09}
+Provide the proper path to an image as necessary.
+
+This helper function is used by ctools but can also be used in other modules in the same way as explained in the comments of ctools\_\-include.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$image}]The base file name (with extension) of the image to be included. \item[{\em \$module}]Optional module containing the include. \item[{\em \$dir}]Optional subdirectory containing the include file. \end{DoxyParams}
+\hypertarget{ctools_8module_aab220ed5e60234f37c77bedbdb8a4905}{
+\index{ctools.module@{ctools.module}!ctools\_\-include@{ctools\_\-include}}
+\index{ctools\_\-include@{ctools\_\-include}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-include}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-include (\$ {\em file}, \/  \$ {\em module} = {\ttfamily 'ctools'}, \/  \$ {\em dir} = {\ttfamily 'includes'})}}
+\label{ctools_8module_aab220ed5e60234f37c77bedbdb8a4905}
+Include .inc files as necessary.
+
+This fuction is helpful for including .inc files for your module. The general case is including ctools funcitonality like this:
+
+
+\begin{DoxyCode}
+ ctools_include('plugins');
+\end{DoxyCode}
+
+
+Similar funcitonality can be used for other modules by providing the \$module and \$dir arguments like this:
+
+
+\begin{DoxyCode}
+ // include mymodule/includes/import.inc
+ ctools_include('import', 'mymodule');
+ // include mymodule/plugins/foobar.inc
+ ctools_include('foobar', 'mymodule', 'plugins');
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$file}]The base file name to be included. \item[{\em \$module}]Optional module containing the include. \item[{\em \$dir}]Optional subdirectory containing the include file. \end{DoxyParams}
+\hypertarget{ctools_8module_a27c07c71e495f2aacb20b8291dffc65a}{
+\index{ctools.module@{ctools.module}!ctools\_\-init@{ctools\_\-init}}
+\index{ctools\_\-init@{ctools\_\-init}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-init ()}}
+\label{ctools_8module_a27c07c71e495f2aacb20b8291dffc65a}
+Implement hook\_\-init to keep our global CSS at the ready. \hypertarget{ctools_8module_a5d07b6c831cc85a1bde277a817d3675d}{
+\index{ctools.module@{ctools.module}!ctools\_\-js\_\-load@{ctools\_\-js\_\-load}}
+\index{ctools\_\-js\_\-load@{ctools\_\-js\_\-load}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-js\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-js\_\-load (\$ {\em js})}}
+\label{ctools_8module_a5d07b6c831cc85a1bde277a817d3675d}
+Check to see if the incoming menu item is js capable or not.
+
+This can be used as ctools\_\-js as part of a path in hook menu. CTools ajax functions will automatically change the phrase 'nojs' to 'ajax' when it attaches ajax to a link. This can be used to autodetect if that happened. \hypertarget{ctools_8module_a2385dc0b63f4409bfda5056b1954c6d5}{
+\index{ctools.module@{ctools.module}!ctools\_\-menu@{ctools\_\-menu}}
+\index{ctools\_\-menu@{ctools\_\-menu}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-menu ()}}
+\label{ctools_8module_a2385dc0b63f4409bfda5056b1954c6d5}
+Implements hook\_\-menu(). \hypertarget{ctools_8module_a943750c628ffe3a20ece880e15a34240}{
+\index{ctools.module@{ctools.module}!ctools\_\-menu\_\-local\_\-tasks\_\-alter@{ctools\_\-menu\_\-local\_\-tasks\_\-alter}}
+\index{ctools\_\-menu\_\-local\_\-tasks\_\-alter@{ctools\_\-menu\_\-local\_\-tasks\_\-alter}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-menu\_\-local\_\-tasks\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-menu\_\-local\_\-tasks\_\-alter (\&\$ {\em data}, \/  \$ {\em router\_\-item}, \/  \$ {\em root\_\-path})}}
+\label{ctools_8module_a943750c628ffe3a20ece880e15a34240}
+Implements hook\_\-menu\_\-local\_\-tasks\_\-alter(). \hypertarget{ctools_8module_aaad6f0b6ff8fd26cc15837b2f9620c98}{
+\index{ctools.module@{ctools.module}!ctools\_\-modules\_\-enabled@{ctools\_\-modules\_\-enabled}}
+\index{ctools\_\-modules\_\-enabled@{ctools\_\-modules\_\-enabled}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-modules\_\-enabled}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-modules\_\-enabled (\$ {\em modules})}}
+\label{ctools_8module_aaad6f0b6ff8fd26cc15837b2f9620c98}
+Implement hook\_\-modules\_\-enabled to clear static caches for detecting new plugins \hypertarget{ctools_8module_ada3893e7993e19022048e2b47b413baa}{
+\index{ctools.module@{ctools.module}!ctools\_\-page\_\-token\_\-processing@{ctools\_\-page\_\-token\_\-processing}}
+\index{ctools\_\-page\_\-token\_\-processing@{ctools\_\-page\_\-token\_\-processing}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-page\_\-token\_\-processing}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-page\_\-token\_\-processing (\$ {\em children}, \/  \$ {\em elements})}}
+\label{ctools_8module_ada3893e7993e19022048e2b47b413baa}
+A theme post\_\-render callback to allow content type plugins to use page template variables which are not yet available when the content type is rendered. \hypertarget{ctools_8module_aacda26406250e7a22dbfce3c95e8a364}{
+\index{ctools.module@{ctools.module}!ctools\_\-preprocess\_\-node@{ctools\_\-preprocess\_\-node}}
+\index{ctools\_\-preprocess\_\-node@{ctools\_\-preprocess\_\-node}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-preprocess\_\-node}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-preprocess\_\-node (\&\$ {\em vars})}}
+\label{ctools_8module_aacda26406250e7a22dbfce3c95e8a364}
+A theme preprocess function to automatically allow panels-\/based node templates based upon input when the panel was configured. \hypertarget{ctools_8module_a2f9ba929f2bd627113c551823ac43afc}{
+\index{ctools.module@{ctools.module}!ctools\_\-process@{ctools\_\-process}}
+\index{ctools\_\-process@{ctools\_\-process}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-process}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-process (\&\$ {\em variables}, \/  \$ {\em hook})}}
+\label{ctools_8module_a2f9ba929f2bd627113c551823ac43afc}
+Implements hook\_\-process().
+
+Add and remove CSS classes from the variables array. We use process so that we alter anything added in the preprocess hooks. \hypertarget{ctools_8module_ae64a38f412c2d9b9892b29551c27f104}{
+\index{ctools.module@{ctools.module}!ctools\_\-registry\_\-files\_\-alter@{ctools\_\-registry\_\-files\_\-alter}}
+\index{ctools\_\-registry\_\-files\_\-alter@{ctools\_\-registry\_\-files\_\-alter}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-registry\_\-files\_\-alter}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-registry\_\-files\_\-alter (\&\$ {\em files}, \/  \$ {\em indexed\_\-modules})}}
+\label{ctools_8module_ae64a38f412c2d9b9892b29551c27f104}
+Implements hook\_\-registry\_\-files\_\-alter().
+
+Alter the registry of files to automagically include all classes in class-\/based plugins. \hypertarget{ctools_8module_a75a083090c8f72d76a9e6378a911bc50}{
+\index{ctools.module@{ctools.module}!ctools\_\-set\_\-callback\_\-token@{ctools\_\-set\_\-callback\_\-token}}
+\index{ctools\_\-set\_\-callback\_\-token@{ctools\_\-set\_\-callback\_\-token}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-set\_\-callback\_\-token}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-set\_\-callback\_\-token (\$ {\em token}, \/  \$ {\em callback})}}
+\label{ctools_8module_a75a083090c8f72d76a9e6378a911bc50}
+Easily set a token from the page variables.
+
+This function can be used like this: \$token = ctools\_\-set\_\-variable\_\-token('id', 'mymodule\_\-myfunction'); \hypertarget{ctools_8module_a03a4ac4bc4f550a72c5d661f9124c9a6}{
+\index{ctools.module@{ctools.module}!ctools\_\-set\_\-no\_\-blocks@{ctools\_\-set\_\-no\_\-blocks}}
+\index{ctools\_\-set\_\-no\_\-blocks@{ctools\_\-set\_\-no\_\-blocks}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-set\_\-no\_\-blocks}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-set\_\-no\_\-blocks (\$ {\em blocks} = {\ttfamily FALSE})}}
+\label{ctools_8module_a03a4ac4bc4f550a72c5d661f9124c9a6}
+Tell CTools that sidebar blocks should not be rendered.
+
+It is often desirable to not display sidebars when rendering a page, particularly when using Panels. This informs CTools to alter out any sidebar regions during block render. \hypertarget{ctools_8module_a0a8283ac6186ae3c5f1075fd8a05dd64}{
+\index{ctools.module@{ctools.module}!ctools\_\-set\_\-page\_\-token@{ctools\_\-set\_\-page\_\-token}}
+\index{ctools\_\-set\_\-page\_\-token@{ctools\_\-set\_\-page\_\-token}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-set\_\-page\_\-token}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-set\_\-page\_\-token (\$ {\em token} = {\ttfamily NULL}, \/  \$ {\em type} = {\ttfamily NULL}, \/  \$ {\em argument} = {\ttfamily NULL})}}
+\label{ctools_8module_a0a8283ac6186ae3c5f1075fd8a05dd64}
+Set a token/value pair to be replaced later in the request, specifically in ctools\_\-preprocess\_\-page().
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$token}]The token to be replaced later, during page rendering. This should ideally be a string inside of an HTML comment, so that if there is no replacement, the token will not render on the page. \item[{\em \$type}]The type of the token. Can be either 'variable', which will pull data directly from the page variables \item[{\em \$argument}]If \$type == 'variable' then argument should be the key to fetch from the \$variables. If \$type == 'callback' then it should either be the callback, or an array that will be sent to call\_\-user\_\-func\_\-array().\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A array of token/variable names to be replaced. 
+\end{DoxyReturn}
+\hypertarget{ctools_8module_af50c57385ec72ff698a4292ce5b9cecd}{
+\index{ctools.module@{ctools.module}!ctools\_\-set\_\-variable\_\-token@{ctools\_\-set\_\-variable\_\-token}}
+\index{ctools\_\-set\_\-variable\_\-token@{ctools\_\-set\_\-variable\_\-token}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-set\_\-variable\_\-token}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-set\_\-variable\_\-token (\$ {\em token})}}
+\label{ctools_8module_af50c57385ec72ff698a4292ce5b9cecd}
+Easily set a token from the page variables.
+
+This function can be used like this: \$token = ctools\_\-set\_\-variable\_\-token('tabs');
+
+\$token will then be a simple replacement for the 'tabs' about of the variables available in the page template. \hypertarget{ctools_8module_aa5bb2f555630d9f5eb2b695c2e3eb68c}{
+\index{ctools.module@{ctools.module}!ctools\_\-shutdown\_\-handler@{ctools\_\-shutdown\_\-handler}}
+\index{ctools\_\-shutdown\_\-handler@{ctools\_\-shutdown\_\-handler}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-shutdown\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-shutdown\_\-handler ()}}
+\label{ctools_8module_aa5bb2f555630d9f5eb2b695c2e3eb68c}
+Shutdown handler used during ajax operations to help catch fatal errors. \hypertarget{ctools_8module_aec20ea7c40c247f48eddb4073aa2a447}{
+\index{ctools.module@{ctools.module}!ctools\_\-theme@{ctools\_\-theme}}
+\index{ctools\_\-theme@{ctools\_\-theme}!ctools.module@{ctools.module}}
+\subsubsection[{ctools\_\-theme}]{\setlength{\rightskip}{0pt plus 5cm}ctools\_\-theme ()}}
+\label{ctools_8module_aec20ea7c40c247f48eddb4073aa2a447}
+Implements hook\_\-theme(). 

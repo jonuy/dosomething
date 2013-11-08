@@ -1,0 +1,160 @@
+\hypertarget{ckeditor_8inc}{
+\section{html/profiles/dosomething/modules/contrib/wysiwyg/editors/ckeditor.inc File Reference}
+\label{ckeditor_8inc}\index{html/profiles/dosomething/modules/contrib/wysiwyg/editors/ckeditor.inc@{html/profiles/dosomething/modules/contrib/wysiwyg/editors/ckeditor.inc}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ckeditor_8inc_a0cb339543d3ff4f4b42081c467fb1afe}{wysiwyg\_\-ckeditor\_\-editor} ()
+\item 
+\hyperlink{ckeditor_8inc_a72a39d7442d839515d6280eb5f5adbe3}{wysiwyg\_\-ckeditor\_\-install\_\-note} ()
+\item 
+\hyperlink{ckeditor_8inc_a3b5d7fe336c32260d82eb539340a5fff}{wysiwyg\_\-ckeditor\_\-version} (\$editor)
+\item 
+\hyperlink{ckeditor_8inc_a69108b6a32bbebf8a2e5de05de76c039}{wysiwyg\_\-ckeditor\_\-themes} (\$editor, \$profile)
+\item 
+\hyperlink{ckeditor_8inc_a99ea1c868cbd240643f8f9299b73be3f}{wysiwyg\_\-ckeditor\_\-settings\_\-form} (\&\$form, \&\$form\_\-state)
+\item 
+\hyperlink{ckeditor_8inc_a8b614c7b72178d43bc7028fbd35be0e2}{wysiwyg\_\-ckeditor\_\-settings\_\-form\_\-validate\_\-css\_\-classes} (\$element, \&\$form\_\-state)
+\item 
+\hyperlink{ckeditor_8inc_af59c8327a34782dc05851481f5b28008}{wysiwyg\_\-ckeditor\_\-init} (\$editor)
+\item 
+\hyperlink{ckeditor_8inc_a43ec7d691d35f31180b2d401fa3bde6d}{wysiwyg\_\-ckeditor\_\-settings} (\$editor, \$config, \$theme)
+\item 
+\hyperlink{ckeditor_8inc_a333ec4086966407d90ad5ab846f44f94}{wysiwyg\_\-ckeditor\_\-settings\_\-parse\_\-styles} (\$css\_\-classes)
+\item 
+\hyperlink{ckeditor_8inc_a5b4c9ea46e84b684291c1eebfa0496c9}{wysiwyg\_\-ckeditor\_\-plugin\_\-settings} (\$editor, \$profile, \$plugins)
+\item 
+\hyperlink{ckeditor_8inc_a5445976f1dfa660b7287237151bca2ad}{wysiwyg\_\-ckeditor\_\-proxy\_\-plugin\_\-settings} (\$editor, \$profile, \$plugins)
+\item 
+\hyperlink{ckeditor_8inc_ab92e1bed993d878f7258749b02d074a1}{wysiwyg\_\-ckeditor\_\-plugins} (\$editor)
+\item 
+\hyperlink{ckeditor_8inc_a9fc28d9baa8e7c55221045b2b554eabf}{wysiwyg\_\-ckeditor\_\-group} (\$button)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Editor integration functions for CKEditor. 
+
+\subsection{Function Documentation}
+\hypertarget{ckeditor_8inc_a0cb339543d3ff4f4b42081c467fb1afe}{
+\index{ckeditor.inc@{ckeditor.inc}!wysiwyg\_\-ckeditor\_\-editor@{wysiwyg\_\-ckeditor\_\-editor}}
+\index{wysiwyg\_\-ckeditor\_\-editor@{wysiwyg\_\-ckeditor\_\-editor}!ckeditor.inc@{ckeditor.inc}}
+\subsubsection[{wysiwyg\_\-ckeditor\_\-editor}]{\setlength{\rightskip}{0pt plus 5cm}wysiwyg\_\-ckeditor\_\-editor ()}}
+\label{ckeditor_8inc_a0cb339543d3ff4f4b42081c467fb1afe}
+Plugin implementation of hook\_\-editor(). \hypertarget{ckeditor_8inc_a9fc28d9baa8e7c55221045b2b554eabf}{
+\index{ckeditor.inc@{ckeditor.inc}!wysiwyg\_\-ckeditor\_\-group@{wysiwyg\_\-ckeditor\_\-group}}
+\index{wysiwyg\_\-ckeditor\_\-group@{wysiwyg\_\-ckeditor\_\-group}!ckeditor.inc@{ckeditor.inc}}
+\subsubsection[{wysiwyg\_\-ckeditor\_\-group}]{\setlength{\rightskip}{0pt plus 5cm}wysiwyg\_\-ckeditor\_\-group (\$ {\em button})}}
+\label{ckeditor_8inc_a9fc28d9baa8e7c55221045b2b554eabf}
+Define grouping for ckEditor buttons. \hypertarget{ckeditor_8inc_af59c8327a34782dc05851481f5b28008}{
+\index{ckeditor.inc@{ckeditor.inc}!wysiwyg\_\-ckeditor\_\-init@{wysiwyg\_\-ckeditor\_\-init}}
+\index{wysiwyg\_\-ckeditor\_\-init@{wysiwyg\_\-ckeditor\_\-init}!ckeditor.inc@{ckeditor.inc}}
+\subsubsection[{wysiwyg\_\-ckeditor\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}wysiwyg\_\-ckeditor\_\-init (\$ {\em editor})}}
+\label{ckeditor_8inc_af59c8327a34782dc05851481f5b28008}
+Returns an initialization JavaScript for this editor library.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em array}]\$editor The editor library definition. \item[{\em string}]\$library The library variant key from \$editor\mbox{[}'libraries'\mbox{]}. \item[{\em object}]\$profile The (first) wysiwyg editor profile.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string A string containing inline JavaScript to execute before the editor library script is loaded. 
+\end{DoxyReturn}
+\hypertarget{ckeditor_8inc_a72a39d7442d839515d6280eb5f5adbe3}{
+\index{ckeditor.inc@{ckeditor.inc}!wysiwyg\_\-ckeditor\_\-install\_\-note@{wysiwyg\_\-ckeditor\_\-install\_\-note}}
+\index{wysiwyg\_\-ckeditor\_\-install\_\-note@{wysiwyg\_\-ckeditor\_\-install\_\-note}!ckeditor.inc@{ckeditor.inc}}
+\subsubsection[{wysiwyg\_\-ckeditor\_\-install\_\-note}]{\setlength{\rightskip}{0pt plus 5cm}wysiwyg\_\-ckeditor\_\-install\_\-note ()}}
+\label{ckeditor_8inc_a72a39d7442d839515d6280eb5f5adbe3}
+Return an install note. \hypertarget{ckeditor_8inc_a5b4c9ea46e84b684291c1eebfa0496c9}{
+\index{ckeditor.inc@{ckeditor.inc}!wysiwyg\_\-ckeditor\_\-plugin\_\-settings@{wysiwyg\_\-ckeditor\_\-plugin\_\-settings}}
+\index{wysiwyg\_\-ckeditor\_\-plugin\_\-settings@{wysiwyg\_\-ckeditor\_\-plugin\_\-settings}!ckeditor.inc@{ckeditor.inc}}
+\subsubsection[{wysiwyg\_\-ckeditor\_\-plugin\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}wysiwyg\_\-ckeditor\_\-plugin\_\-settings (\$ {\em editor}, \/  \$ {\em profile}, \/  \$ {\em plugins})}}
+\label{ckeditor_8inc_a5b4c9ea46e84b684291c1eebfa0496c9}
+Build a JS settings array of native external plugins that need to be loaded separately. \hypertarget{ckeditor_8inc_ab92e1bed993d878f7258749b02d074a1}{
+\index{ckeditor.inc@{ckeditor.inc}!wysiwyg\_\-ckeditor\_\-plugins@{wysiwyg\_\-ckeditor\_\-plugins}}
+\index{wysiwyg\_\-ckeditor\_\-plugins@{wysiwyg\_\-ckeditor\_\-plugins}!ckeditor.inc@{ckeditor.inc}}
+\subsubsection[{wysiwyg\_\-ckeditor\_\-plugins}]{\setlength{\rightskip}{0pt plus 5cm}wysiwyg\_\-ckeditor\_\-plugins (\$ {\em editor})}}
+\label{ckeditor_8inc_ab92e1bed993d878f7258749b02d074a1}
+Return internal plugins for this editor; semi-\/implementation of \hyperlink{wysiwyg_8api_8php_abad2b35b32be0b20d73006b73205045c}{hook\_\-wysiwyg\_\-plugin()}. \hypertarget{ckeditor_8inc_a5445976f1dfa660b7287237151bca2ad}{
+\index{ckeditor.inc@{ckeditor.inc}!wysiwyg\_\-ckeditor\_\-proxy\_\-plugin\_\-settings@{wysiwyg\_\-ckeditor\_\-proxy\_\-plugin\_\-settings}}
+\index{wysiwyg\_\-ckeditor\_\-proxy\_\-plugin\_\-settings@{wysiwyg\_\-ckeditor\_\-proxy\_\-plugin\_\-settings}!ckeditor.inc@{ckeditor.inc}}
+\subsubsection[{wysiwyg\_\-ckeditor\_\-proxy\_\-plugin\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}wysiwyg\_\-ckeditor\_\-proxy\_\-plugin\_\-settings (\$ {\em editor}, \/  \$ {\em profile}, \/  \$ {\em plugins})}}
+\label{ckeditor_8inc_a5445976f1dfa660b7287237151bca2ad}
+Build a JS settings array for Drupal plugins loaded via the proxy plugin. \hypertarget{ckeditor_8inc_a43ec7d691d35f31180b2d401fa3bde6d}{
+\index{ckeditor.inc@{ckeditor.inc}!wysiwyg\_\-ckeditor\_\-settings@{wysiwyg\_\-ckeditor\_\-settings}}
+\index{wysiwyg\_\-ckeditor\_\-settings@{wysiwyg\_\-ckeditor\_\-settings}!ckeditor.inc@{ckeditor.inc}}
+\subsubsection[{wysiwyg\_\-ckeditor\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}wysiwyg\_\-ckeditor\_\-settings (\$ {\em editor}, \/  \$ {\em config}, \/  \$ {\em theme})}}
+\label{ckeditor_8inc_a43ec7d691d35f31180b2d401fa3bde6d}
+Return runtime editor settings for a given wysiwyg profile.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$editor}]A processed hook\_\-editor() array of editor properties. \item[{\em \$config}]An array containing wysiwyg editor profile settings. \item[{\em \$theme}]The name of a theme/GUI/skin to use.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A settings array to be populated in Drupal.settings.wysiwyg.configs.\{editor\} 
+\end{DoxyReturn}
+\hypertarget{ckeditor_8inc_a99ea1c868cbd240643f8f9299b73be3f}{
+\index{ckeditor.inc@{ckeditor.inc}!wysiwyg\_\-ckeditor\_\-settings\_\-form@{wysiwyg\_\-ckeditor\_\-settings\_\-form}}
+\index{wysiwyg\_\-ckeditor\_\-settings\_\-form@{wysiwyg\_\-ckeditor\_\-settings\_\-form}!ckeditor.inc@{ckeditor.inc}}
+\subsubsection[{wysiwyg\_\-ckeditor\_\-settings\_\-form}]{\setlength{\rightskip}{0pt plus 5cm}wysiwyg\_\-ckeditor\_\-settings\_\-form (\&\$ {\em form}, \/  \&\$ {\em form\_\-state})}}
+\label{ckeditor_8inc_a99ea1c868cbd240643f8f9299b73be3f}
+Enhances the editor profile settings form for CKEditor.
+
+Adds support for CKEditor's advanced stylesSets, which are a more advanced implementation and combination of block formats and font styles that allow to adjust the HTML element, attributes, and CSS styles at once.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Styles}{\tt http://docs.cksource.com/CKEditor\_\-3.x/Developers\_\-Guide/Styles} 
+
+\href{http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html#.stylesSet}{\tt http://docs.cksource.com/ckeditor\_\-api/symbols/CKEDITOR.config.html\#.stylesSet} 
+\end{DoxySeeAlso}
+\hypertarget{ckeditor_8inc_a8b614c7b72178d43bc7028fbd35be0e2}{
+\index{ckeditor.inc@{ckeditor.inc}!wysiwyg\_\-ckeditor\_\-settings\_\-form\_\-validate\_\-css\_\-classes@{wysiwyg\_\-ckeditor\_\-settings\_\-form\_\-validate\_\-css\_\-classes}}
+\index{wysiwyg\_\-ckeditor\_\-settings\_\-form\_\-validate\_\-css\_\-classes@{wysiwyg\_\-ckeditor\_\-settings\_\-form\_\-validate\_\-css\_\-classes}!ckeditor.inc@{ckeditor.inc}}
+\subsubsection[{wysiwyg\_\-ckeditor\_\-settings\_\-form\_\-validate\_\-css\_\-classes}]{\setlength{\rightskip}{0pt plus 5cm}wysiwyg\_\-ckeditor\_\-settings\_\-form\_\-validate\_\-css\_\-classes (\$ {\em element}, \/  \&\$ {\em form\_\-state})}}
+\label{ckeditor_8inc_a8b614c7b72178d43bc7028fbd35be0e2}
+element\_\-validate handler for CSS classes element altered by \hyperlink{ckeditor_8inc_a99ea1c868cbd240643f8f9299b73be3f}{wysiwyg\_\-ckeditor\_\-settings\_\-form()}. \hypertarget{ckeditor_8inc_a333ec4086966407d90ad5ab846f44f94}{
+\index{ckeditor.inc@{ckeditor.inc}!wysiwyg\_\-ckeditor\_\-settings\_\-parse\_\-styles@{wysiwyg\_\-ckeditor\_\-settings\_\-parse\_\-styles}}
+\index{wysiwyg\_\-ckeditor\_\-settings\_\-parse\_\-styles@{wysiwyg\_\-ckeditor\_\-settings\_\-parse\_\-styles}!ckeditor.inc@{ckeditor.inc}}
+\subsubsection[{wysiwyg\_\-ckeditor\_\-settings\_\-parse\_\-styles}]{\setlength{\rightskip}{0pt plus 5cm}wysiwyg\_\-ckeditor\_\-settings\_\-parse\_\-styles (\$ {\em css\_\-classes})}}
+\label{ckeditor_8inc_a333ec4086966407d90ad5ab846f44f94}
+Parses CSS classes settings string into a stylesSet JavaScript settings array.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$css\_\-classes A string containing CSS class definitions to add to the Style dropdown list, separated by newlines.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$|$false An array containing the parsed stylesSet definition, or FALSE on parse error.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{ckeditor_8inc_a99ea1c868cbd240643f8f9299b73be3f}{wysiwyg\_\-ckeditor\_\-settings\_\-form()} 
+
+\hyperlink{ckeditor_8inc_a8b614c7b72178d43bc7028fbd35be0e2}{wysiwyg\_\-ckeditor\_\-settings\_\-form\_\-validate\_\-css\_\-classes()}
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[\hyperlink{todo__todo000061}{Todo}]This should be a plugin setting, but Wysiwyg does not support plugin-\/specific settings yet. \end{Desc}
+\hypertarget{ckeditor_8inc_a69108b6a32bbebf8a2e5de05de76c039}{
+\index{ckeditor.inc@{ckeditor.inc}!wysiwyg\_\-ckeditor\_\-themes@{wysiwyg\_\-ckeditor\_\-themes}}
+\index{wysiwyg\_\-ckeditor\_\-themes@{wysiwyg\_\-ckeditor\_\-themes}!ckeditor.inc@{ckeditor.inc}}
+\subsubsection[{wysiwyg\_\-ckeditor\_\-themes}]{\setlength{\rightskip}{0pt plus 5cm}wysiwyg\_\-ckeditor\_\-themes (\$ {\em editor}, \/  \$ {\em profile})}}
+\label{ckeditor_8inc_a69108b6a32bbebf8a2e5de05de76c039}
+Determine available editor themes or check/reset a given one.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$editor}]A processed hook\_\-editor() array of editor properties. \item[{\em \$profile}]A wysiwyg editor profile.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of theme names. The first returned name should be the default theme name. 
+\end{DoxyReturn}
+\hypertarget{ckeditor_8inc_a3b5d7fe336c32260d82eb539340a5fff}{
+\index{ckeditor.inc@{ckeditor.inc}!wysiwyg\_\-ckeditor\_\-version@{wysiwyg\_\-ckeditor\_\-version}}
+\index{wysiwyg\_\-ckeditor\_\-version@{wysiwyg\_\-ckeditor\_\-version}!ckeditor.inc@{ckeditor.inc}}
+\subsubsection[{wysiwyg\_\-ckeditor\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}wysiwyg\_\-ckeditor\_\-version (\$ {\em editor})}}
+\label{ckeditor_8inc_a3b5d7fe336c32260d82eb539340a5fff}
+Detect editor version.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$editor}]An array containing editor properties as returned from hook\_\-editor().\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The installed editor version. 
+\end{DoxyReturn}

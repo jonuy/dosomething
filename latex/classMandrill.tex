@@ -1,0 +1,325 @@
+\hypertarget{classMandrill}{
+\section{Mandrill Class Reference}
+\label{classMandrill}\index{Mandrill@{Mandrill}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMandrill_a47e978ed08e12430e5d0f197fa71ad14}{\_\-\_\-construct} (\$api\_\-key, \$timeout=300)
+\item 
+\hyperlink{classMandrill_a589e70d0e68483c711ce6279e124bfc3}{users\_\-ping} ()
+\item 
+\hyperlink{classMandrill_aeafe039ea42e06ddf3218b8ae1dcf38b}{users\_\-info} ()
+\item 
+\hyperlink{classMandrill_a719dc7de06da90674792f38b03ff00f9}{users\_\-senders} ()
+\item 
+\hyperlink{classMandrill_ae0111c45de1b73c2d4023ba22093533e}{senders\_\-domains} ()
+\item 
+\hyperlink{classMandrill_a1a5194485cd5eb38dff8b78ed9f0b8a0}{senders\_\-list} ()
+\item 
+\hyperlink{classMandrill_a89e20ca0f9da8a3a32d46c59e4b2d49a}{senders\_\-info} (\$email)
+\item 
+\hyperlink{classMandrill_a06a09d53f06ab20095862543145f1587}{senders\_\-time\_\-series} (\$email)
+\item 
+\hyperlink{classMandrill_a10ffe6d8e7c50cdc2fdedc8071d39ddd}{tags\_\-list} ()
+\item 
+\hyperlink{classMandrill_a54d848f3ce34a1b0b12cbc78cfc2c2fa}{tags\_\-info} (\$tag)
+\item 
+\hyperlink{classMandrill_a541129f0740d60f5545db989367b14f0}{tags\_\-time\_\-series} (\$tag)
+\item 
+\hyperlink{classMandrill_a55ccf7721734dba3f5058206e0b6a4c9}{tags\_\-all\_\-time\_\-series} ()
+\item 
+\hyperlink{classMandrill_ab42ad92f550edc23e11fcdc79c8b8ab6}{templates\_\-add} (\$name, \$code)
+\item 
+\hyperlink{classMandrill_af70d4c7550167020579323e6162a1085}{templates\_\-update} (\$name, \$code)
+\item 
+\hyperlink{classMandrill_afcb53163cbbd1cf0b182e2f0ac7e993f}{templates\_\-delete} (\$name)
+\item 
+\hyperlink{classMandrill_afe7c0153786a77945db3331cdaee3db2}{templates\_\-info} (\$name)
+\item 
+\hyperlink{classMandrill_a595fb6cd72a0d7140a31067817edfbc9}{templates\_\-list} ()
+\item 
+\hyperlink{classMandrill_a50e66f854b7a2288c47bcdeb5a53838d}{templates\_\-time\_\-series} (\$name)
+\item 
+\hyperlink{classMandrill_a8a4335b49cb084ce69edee394e35e8fd}{urls\_\-list} ()
+\item 
+\hyperlink{classMandrill_ab6bd81f596083cdece40fb197331903c}{urls\_\-time\_\-series} (\$url)
+\item 
+\hyperlink{classMandrill_a2bb0ebc1c833d77b772cbb125b7c373b}{urls\_\-search} (\$q)
+\item 
+\hyperlink{classMandrill_adaaf77ceabe8df995f9d70292bf9f0d5}{webhooks\_\-add} (\$url, \$events)
+\item 
+\hyperlink{classMandrill_a90e6aec9588217c12f054e50ecee95ca}{webhooks\_\-update} (\$id, \$url, \$events)
+\item 
+\hyperlink{classMandrill_a6cd5f72008311d3f969963e4daa72666}{webhooks\_\-delete} (\$id)
+\item 
+\hyperlink{classMandrill_a2ee739c6d858cc0cbb9a4e9656c07ad2}{webhooks\_\-info} (\$id)
+\item 
+\hyperlink{classMandrill_a021fbb76c0635e5e97ecac14d65e72a6}{webhooks\_\-list} ()
+\item 
+\hyperlink{classMandrill_a95e3c655d8a59f87e1df15447baa1130}{messages\_\-search} (\$query, \$date\_\-from= '', \$date\_\-to= '', \$tags=array(), \$senders=array(), \$limit=100)
+\item 
+\hyperlink{classMandrill_a3254fb19f69dfec82493ee05bbab017d}{messages\_\-send} (\$message)
+\item 
+\hyperlink{classMandrill_ab694c84b3e13dacaf6357b09f124d72f}{messages\_\-send\_\-template} (\$template\_\-name, \$template\_\-content, \$message)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classMandrill_ae1d24c1776d5edb985752c5da0cc8e3a}{getAttachmentStruct} (\$path)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMandrill_aede0b9389f3ebaed9b5bbc705b7bbbd3}{
+const {\bfseries API\_\-VERSION} = '1.0'}
+\label{classMandrill_aede0b9389f3ebaed9b5bbc705b7bbbd3}
+
+\item 
+\hypertarget{classMandrill_a21d7cf54d512d5c548e907de4fdfd90e}{
+const {\bfseries END\_\-POINT} = 'https://mandrillapp.com/api/'}
+\label{classMandrill_a21d7cf54d512d5c548e907de4fdfd90e}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMandrill_aa521bfc424f451b295ded1c916801afb}{request} (\$method, \$args=array(), \$http= 'POST', \$output= 'json')
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classMandrill_a8a6b67834236ab37ad0e5c83b7bd2695}{isValidContentType} (\$ct)
+\item 
+static \hyperlink{classMandrill_aa3462b61a5d844683f4fdf0f0068869f}{getValidContentTypes} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMandrill_a5a2c64dc654c458e59994d976f2d421d}{
+{\bfseries \$api}}
+\label{classMandrill_a5a2c64dc654c458e59994d976f2d421d}
+
+\item 
+\hyperlink{classMandrill_ad122e3798f29ec32036cbe9d1f6f223c}{\$timeout} = 300
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class \hyperlink{classMandrill}{Mandrill}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMandrill_a47e978ed08e12430e5d0f197fa71ad14}{
+\index{Mandrill@{Mandrill}!\_\-\_\-construct@{\_\-\_\-construct}}
+\index{\_\-\_\-construct@{\_\-\_\-construct}!Mandrill@{Mandrill}}
+\subsubsection[{\_\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::\_\-\_\-construct (\$ {\em api\_\-key}, \/  \$ {\em timeout} = {\ttfamily 300})}}
+\label{classMandrill_a47e978ed08e12430e5d0f197fa71ad14}
+Constructor to set internal values.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$api\_\-key \hyperlink{classMandrill}{Mandrill} API key. \item[{\em int}]\$timeout Server timeout. \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMandrill_ae1d24c1776d5edb985752c5da0cc8e3a}{
+\index{Mandrill@{Mandrill}!getAttachmentStruct@{getAttachmentStruct}}
+\index{getAttachmentStruct@{getAttachmentStruct}!Mandrill@{Mandrill}}
+\subsubsection[{getAttachmentStruct}]{\setlength{\rightskip}{0pt plus 5cm}static Mandrill::getAttachmentStruct (\$ {\em path})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classMandrill_ae1d24c1776d5edb985752c5da0cc8e3a}
+Return an array structure for a message attachment.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]\$path Attachment path.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array Attachment structure.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{classMandrillException}{MandrillException}}]\item[{\em Exception}]\end{DoxyExceptions}
+\hypertarget{classMandrill_aa3462b61a5d844683f4fdf0f0068869f}{
+\index{Mandrill@{Mandrill}!getValidContentTypes@{getValidContentTypes}}
+\index{getValidContentTypes@{getValidContentTypes}!Mandrill@{Mandrill}}
+\subsubsection[{getValidContentTypes}]{\setlength{\rightskip}{0pt plus 5cm}static Mandrill::getValidContentTypes ()\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classMandrill_aa3462b61a5d844683f4fdf0f0068869f}
+Return an array of valid content types.
+
+\begin{DoxyReturn}{Returns}
+array Valid content types to attach to an email. 
+\end{DoxyReturn}
+\hypertarget{classMandrill_a8a6b67834236ab37ad0e5c83b7bd2695}{
+\index{Mandrill@{Mandrill}!isValidContentType@{isValidContentType}}
+\index{isValidContentType@{isValidContentType}!Mandrill@{Mandrill}}
+\subsubsection[{isValidContentType}]{\setlength{\rightskip}{0pt plus 5cm}static Mandrill::isValidContentType (\$ {\em ct})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classMandrill_a8a6b67834236ab37ad0e5c83b7bd2695}
+Helper to determine attachment is valid.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em \$ct}]\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\hypertarget{classMandrill_a95e3c655d8a59f87e1df15447baa1130}{
+\index{Mandrill@{Mandrill}!messages\_\-search@{messages\_\-search}}
+\index{messages\_\-search@{messages\_\-search}!Mandrill@{Mandrill}}
+\subsubsection[{messages\_\-search}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::messages\_\-search (\$ {\em query}, \/  \$ {\em date\_\-from} = {\ttfamily ''}, \/  \$ {\em date\_\-to} = {\ttfamily ''}, \/  \$ {\em tags} = {\ttfamily array()}, \/  \$ {\em senders} = {\ttfamily array()}, \/  \$ {\em limit} = {\ttfamily 100})}}
+\label{classMandrill_a95e3c655d8a59f87e1df15447baa1130}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_a3254fb19f69dfec82493ee05bbab017d}{
+\index{Mandrill@{Mandrill}!messages\_\-send@{messages\_\-send}}
+\index{messages\_\-send@{messages\_\-send}!Mandrill@{Mandrill}}
+\subsubsection[{messages\_\-send}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::messages\_\-send (\$ {\em message})}}
+\label{classMandrill_a3254fb19f69dfec82493ee05bbab017d}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_ab694c84b3e13dacaf6357b09f124d72f}{
+\index{Mandrill@{Mandrill}!messages\_\-send\_\-template@{messages\_\-send\_\-template}}
+\index{messages\_\-send\_\-template@{messages\_\-send\_\-template}!Mandrill@{Mandrill}}
+\subsubsection[{messages\_\-send\_\-template}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::messages\_\-send\_\-template (\$ {\em template\_\-name}, \/  \$ {\em template\_\-content}, \/  \$ {\em message})}}
+\label{classMandrill_ab694c84b3e13dacaf6357b09f124d72f}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_aa521bfc424f451b295ded1c916801afb}{
+\index{Mandrill@{Mandrill}!request@{request}}
+\index{request@{request}!Mandrill@{Mandrill}}
+\subsubsection[{request}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::request (\$ {\em method}, \/  \$ {\em args} = {\ttfamily array()}, \/  \$ {\em http} = {\ttfamily 'POST'}, \/  \$ {\em output} = {\ttfamily 'json'})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classMandrill_aa521bfc424f451b295ded1c916801afb}
+Make a request to Mandrill's API.
+
+Every API call uses this function to actually make the request to Mandrill's servers.
+
+\hyperlink{}{string \$method API method name  array \$args query arguments  string \$http GET or POST request type  string \$output API response format (json,php,xml,yaml). json and xml are decoded into arrays automatically.   array Array on success. }\hypertarget{classMandrill_ae0111c45de1b73c2d4023ba22093533e}{
+\index{Mandrill@{Mandrill}!senders\_\-domains@{senders\_\-domains}}
+\index{senders\_\-domains@{senders\_\-domains}!Mandrill@{Mandrill}}
+\subsubsection[{senders\_\-domains}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::senders\_\-domains ()}}
+\label{classMandrill_ae0111c45de1b73c2d4023ba22093533e}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_a89e20ca0f9da8a3a32d46c59e4b2d49a}{
+\index{Mandrill@{Mandrill}!senders\_\-info@{senders\_\-info}}
+\index{senders\_\-info@{senders\_\-info}!Mandrill@{Mandrill}}
+\subsubsection[{senders\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::senders\_\-info (\$ {\em email})}}
+\label{classMandrill_a89e20ca0f9da8a3a32d46c59e4b2d49a}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_a1a5194485cd5eb38dff8b78ed9f0b8a0}{
+\index{Mandrill@{Mandrill}!senders\_\-list@{senders\_\-list}}
+\index{senders\_\-list@{senders\_\-list}!Mandrill@{Mandrill}}
+\subsubsection[{senders\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::senders\_\-list ()}}
+\label{classMandrill_a1a5194485cd5eb38dff8b78ed9f0b8a0}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_a06a09d53f06ab20095862543145f1587}{
+\index{Mandrill@{Mandrill}!senders\_\-time\_\-series@{senders\_\-time\_\-series}}
+\index{senders\_\-time\_\-series@{senders\_\-time\_\-series}!Mandrill@{Mandrill}}
+\subsubsection[{senders\_\-time\_\-series}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::senders\_\-time\_\-series (\$ {\em email})}}
+\label{classMandrill_a06a09d53f06ab20095862543145f1587}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_a55ccf7721734dba3f5058206e0b6a4c9}{
+\index{Mandrill@{Mandrill}!tags\_\-all\_\-time\_\-series@{tags\_\-all\_\-time\_\-series}}
+\index{tags\_\-all\_\-time\_\-series@{tags\_\-all\_\-time\_\-series}!Mandrill@{Mandrill}}
+\subsubsection[{tags\_\-all\_\-time\_\-series}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::tags\_\-all\_\-time\_\-series ()}}
+\label{classMandrill_a55ccf7721734dba3f5058206e0b6a4c9}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_a54d848f3ce34a1b0b12cbc78cfc2c2fa}{
+\index{Mandrill@{Mandrill}!tags\_\-info@{tags\_\-info}}
+\index{tags\_\-info@{tags\_\-info}!Mandrill@{Mandrill}}
+\subsubsection[{tags\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::tags\_\-info (\$ {\em tag})}}
+\label{classMandrill_a54d848f3ce34a1b0b12cbc78cfc2c2fa}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_a10ffe6d8e7c50cdc2fdedc8071d39ddd}{
+\index{Mandrill@{Mandrill}!tags\_\-list@{tags\_\-list}}
+\index{tags\_\-list@{tags\_\-list}!Mandrill@{Mandrill}}
+\subsubsection[{tags\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::tags\_\-list ()}}
+\label{classMandrill_a10ffe6d8e7c50cdc2fdedc8071d39ddd}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_a541129f0740d60f5545db989367b14f0}{
+\index{Mandrill@{Mandrill}!tags\_\-time\_\-series@{tags\_\-time\_\-series}}
+\index{tags\_\-time\_\-series@{tags\_\-time\_\-series}!Mandrill@{Mandrill}}
+\subsubsection[{tags\_\-time\_\-series}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::tags\_\-time\_\-series (\$ {\em tag})}}
+\label{classMandrill_a541129f0740d60f5545db989367b14f0}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_ab42ad92f550edc23e11fcdc79c8b8ab6}{
+\index{Mandrill@{Mandrill}!templates\_\-add@{templates\_\-add}}
+\index{templates\_\-add@{templates\_\-add}!Mandrill@{Mandrill}}
+\subsubsection[{templates\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::templates\_\-add (\$ {\em name}, \/  \$ {\em code})}}
+\label{classMandrill_ab42ad92f550edc23e11fcdc79c8b8ab6}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_afcb53163cbbd1cf0b182e2f0ac7e993f}{
+\index{Mandrill@{Mandrill}!templates\_\-delete@{templates\_\-delete}}
+\index{templates\_\-delete@{templates\_\-delete}!Mandrill@{Mandrill}}
+\subsubsection[{templates\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::templates\_\-delete (\$ {\em name})}}
+\label{classMandrill_afcb53163cbbd1cf0b182e2f0ac7e993f}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_afe7c0153786a77945db3331cdaee3db2}{
+\index{Mandrill@{Mandrill}!templates\_\-info@{templates\_\-info}}
+\index{templates\_\-info@{templates\_\-info}!Mandrill@{Mandrill}}
+\subsubsection[{templates\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::templates\_\-info (\$ {\em name})}}
+\label{classMandrill_afe7c0153786a77945db3331cdaee3db2}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_a595fb6cd72a0d7140a31067817edfbc9}{
+\index{Mandrill@{Mandrill}!templates\_\-list@{templates\_\-list}}
+\index{templates\_\-list@{templates\_\-list}!Mandrill@{Mandrill}}
+\subsubsection[{templates\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::templates\_\-list ()}}
+\label{classMandrill_a595fb6cd72a0d7140a31067817edfbc9}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_a50e66f854b7a2288c47bcdeb5a53838d}{
+\index{Mandrill@{Mandrill}!templates\_\-time\_\-series@{templates\_\-time\_\-series}}
+\index{templates\_\-time\_\-series@{templates\_\-time\_\-series}!Mandrill@{Mandrill}}
+\subsubsection[{templates\_\-time\_\-series}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::templates\_\-time\_\-series (\$ {\em name})}}
+\label{classMandrill_a50e66f854b7a2288c47bcdeb5a53838d}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_af70d4c7550167020579323e6162a1085}{
+\index{Mandrill@{Mandrill}!templates\_\-update@{templates\_\-update}}
+\index{templates\_\-update@{templates\_\-update}!Mandrill@{Mandrill}}
+\subsubsection[{templates\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::templates\_\-update (\$ {\em name}, \/  \$ {\em code})}}
+\label{classMandrill_af70d4c7550167020579323e6162a1085}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_a8a4335b49cb084ce69edee394e35e8fd}{
+\index{Mandrill@{Mandrill}!urls\_\-list@{urls\_\-list}}
+\index{urls\_\-list@{urls\_\-list}!Mandrill@{Mandrill}}
+\subsubsection[{urls\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::urls\_\-list ()}}
+\label{classMandrill_a8a4335b49cb084ce69edee394e35e8fd}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_a2bb0ebc1c833d77b772cbb125b7c373b}{
+\index{Mandrill@{Mandrill}!urls\_\-search@{urls\_\-search}}
+\index{urls\_\-search@{urls\_\-search}!Mandrill@{Mandrill}}
+\subsubsection[{urls\_\-search}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::urls\_\-search (\$ {\em q})}}
+\label{classMandrill_a2bb0ebc1c833d77b772cbb125b7c373b}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_ab6bd81f596083cdece40fb197331903c}{
+\index{Mandrill@{Mandrill}!urls\_\-time\_\-series@{urls\_\-time\_\-series}}
+\index{urls\_\-time\_\-series@{urls\_\-time\_\-series}!Mandrill@{Mandrill}}
+\subsubsection[{urls\_\-time\_\-series}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::urls\_\-time\_\-series (\$ {\em url})}}
+\label{classMandrill_ab6bd81f596083cdece40fb197331903c}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_aeafe039ea42e06ddf3218b8ae1dcf38b}{
+\index{Mandrill@{Mandrill}!users\_\-info@{users\_\-info}}
+\index{users\_\-info@{users\_\-info}!Mandrill@{Mandrill}}
+\subsubsection[{users\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::users\_\-info ()}}
+\label{classMandrill_aeafe039ea42e06ddf3218b8ae1dcf38b}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_a589e70d0e68483c711ce6279e124bfc3}{
+\index{Mandrill@{Mandrill}!users\_\-ping@{users\_\-ping}}
+\index{users\_\-ping@{users\_\-ping}!Mandrill@{Mandrill}}
+\subsubsection[{users\_\-ping}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::users\_\-ping ()}}
+\label{classMandrill_a589e70d0e68483c711ce6279e124bfc3}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_a719dc7de06da90674792f38b03ff00f9}{
+\index{Mandrill@{Mandrill}!users\_\-senders@{users\_\-senders}}
+\index{users\_\-senders@{users\_\-senders}!Mandrill@{Mandrill}}
+\subsubsection[{users\_\-senders}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::users\_\-senders ()}}
+\label{classMandrill_a719dc7de06da90674792f38b03ff00f9}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_adaaf77ceabe8df995f9d70292bf9f0d5}{
+\index{Mandrill@{Mandrill}!webhooks\_\-add@{webhooks\_\-add}}
+\index{webhooks\_\-add@{webhooks\_\-add}!Mandrill@{Mandrill}}
+\subsubsection[{webhooks\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::webhooks\_\-add (\$ {\em url}, \/  \$ {\em events})}}
+\label{classMandrill_adaaf77ceabe8df995f9d70292bf9f0d5}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_a6cd5f72008311d3f969963e4daa72666}{
+\index{Mandrill@{Mandrill}!webhooks\_\-delete@{webhooks\_\-delete}}
+\index{webhooks\_\-delete@{webhooks\_\-delete}!Mandrill@{Mandrill}}
+\subsubsection[{webhooks\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::webhooks\_\-delete (\$ {\em id})}}
+\label{classMandrill_a6cd5f72008311d3f969963e4daa72666}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_a2ee739c6d858cc0cbb9a4e9656c07ad2}{
+\index{Mandrill@{Mandrill}!webhooks\_\-info@{webhooks\_\-info}}
+\index{webhooks\_\-info@{webhooks\_\-info}!Mandrill@{Mandrill}}
+\subsubsection[{webhooks\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::webhooks\_\-info (\$ {\em id})}}
+\label{classMandrill_a2ee739c6d858cc0cbb9a4e9656c07ad2}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_a021fbb76c0635e5e97ecac14d65e72a6}{
+\index{Mandrill@{Mandrill}!webhooks\_\-list@{webhooks\_\-list}}
+\index{webhooks\_\-list@{webhooks\_\-list}!Mandrill@{Mandrill}}
+\subsubsection[{webhooks\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::webhooks\_\-list ()}}
+\label{classMandrill_a021fbb76c0635e5e97ecac14d65e72a6}
+\hyperlink{}{array$|$MandrillException }\hypertarget{classMandrill_a90e6aec9588217c12f054e50ecee95ca}{
+\index{Mandrill@{Mandrill}!webhooks\_\-update@{webhooks\_\-update}}
+\index{webhooks\_\-update@{webhooks\_\-update}!Mandrill@{Mandrill}}
+\subsubsection[{webhooks\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::webhooks\_\-update (\$ {\em id}, \/  \$ {\em url}, \/  \$ {\em events})}}
+\label{classMandrill_a90e6aec9588217c12f054e50ecee95ca}
+\hyperlink{}{array$|$MandrillException }
+
+\subsection{Member Data Documentation}
+\hypertarget{classMandrill_ad122e3798f29ec32036cbe9d1f6f223c}{
+\index{Mandrill@{Mandrill}!\$timeout@{\$timeout}}
+\index{\$timeout@{\$timeout}!Mandrill@{Mandrill}}
+\subsubsection[{\$timeout}]{\setlength{\rightskip}{0pt plus 5cm}Mandrill::\$timeout = 300\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classMandrill_ad122e3798f29ec32036cbe9d1f6f223c}
+Default to a 300 second timeout on server calls 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+html/profiles/dosomething/modules/contrib/mandrill/lib/\hyperlink{mandrill_8inc}{mandrill.inc}\end{DoxyCompactItemize}

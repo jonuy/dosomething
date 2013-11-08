@@ -1,0 +1,401 @@
+\label{todo__todo000001}
+\hypertarget{todo__todo000001}{}
+ 
+\begin{DoxyDescription}
+\item[File \hyperlink{admin__menu_8map_8inc}{admin\_\-menu.map.inc} ]Replace all/most of those API functions with direct DB queries; we only need the menu arguments (keys), not fully loaded objects. 
+\end{DoxyDescription}
+
+\label{todo__todo000002}
+\hypertarget{todo__todo000002}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{admin__menu_8module_a6fe5151c8d300535152c76edffcf6f5d}{admin\_\-menu\_\-session\_\-count} ]There are mostly no anonymous sessions anymore. Split this into a separate module providing proper user statistics. 
+\end{DoxyDescription}
+
+\label{todo__todo000003}
+\hypertarget{todo__todo000003}{}
+ 
+\begin{DoxyDescription}
+\item[File \hyperlink{admin__menu__toolbar_8module}{admin\_\-menu\_\-toolbar.module} ]Separate shortcut functionality into own module/widget. 
+\end{DoxyDescription}
+
+\label{todo__todo000004}
+\hypertarget{todo__todo000004}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{ctools_2includes_2ajax_8inc_a00499a965fd0a192af2106a400c0e140}{ctools\_\-ajax\_\-image\_\-button} ]this should be a options array. 
+\end{DoxyDescription}
+
+\label{todo__todo000005}
+\hypertarget{todo__todo000005}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{ctools_2includes_2ajax_8inc_aa20aff28acfb85cc21e49727d3126aad}{ctools\_\-ajax\_\-text\_\-button} ]this should be a options array. 
+\end{DoxyDescription}
+
+\label{todo__todo000015}
+\hypertarget{todo__todo000015}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{php_8inc_ad173cf9e9891ef70924fad63a89396fa}{ctools\_\-php\_\-ctools\_\-access\_\-settings} ]Need a way to provide a list of all available contexts to be used by the eval-\/ed PHP. 
+\end{DoxyDescription}
+
+\label{todo__todo000007}
+\hypertarget{todo__todo000007}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{classctools__stylizer__image__processor_a1bb5df184af0c953ce5d12567ec4282f}{ctools\_\-stylizer\_\-image\_\-processor::command\_\-colorize}(\$color, \$x=NULL, \$y=NULL, \$width=NULL, \$height=NULL) ]it is possible that this colorize could allow different methods for determining how to blend colors? 
+\end{DoxyDescription}
+
+\label{todo__todo000008}
+\hypertarget{todo__todo000008}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{wizard_8inc_a0b42108018cbf45ee377a2fbbe980716}{ctools\_\-wizard\_\-multistep\_\-form} ]document the array. 
+\end{DoxyDescription}
+
+\label{todo__todo000019}
+\hypertarget{todo__todo000019}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__api_8module_ab17bb31df64a3d11cf8bddb49f5e20fd}{date\_\-granularity\_\-format} ]This function is no longer used as of \href{http://drupalcode.org/project/date.git/commit/07efbb5.}{\tt http://drupalcode.org/project/date.git/commit/07efbb5.} 
+\end{DoxyDescription}
+
+\label{todo__todo000021}
+\hypertarget{todo__todo000021}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__api__ical_8inc_a9c32ef84b7717c5f5b9333a14aab9e17}{date\_\-ical\_\-import} ]figure out how to handle this if subgroups are nested, like a VALARM nested inside a VEVENT.
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000022}
+\hypertarget{todo__todo000022}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__api__ical_8inc_a043a6a7b1c9724a27cd16750f01492c4}{date\_\-ical\_\-parse\_\-date} ]Another option for dates is the format PROPERTY;VALUE=PERIOD:XXXX. The period may include a duration, or a date and a duration, or two dates, so would have to be split into parts and run through \hyperlink{date__api__ical_8inc_a043a6a7b1c9724a27cd16750f01492c4}{date\_\-ical\_\-parse\_\-date()} and \hyperlink{date__api__ical_8inc_a8a63c8aa2158e701b01217637169440d}{date\_\-ical\_\-parse\_\-duration()}. This is not commonly used, so ignored for now. It will take more work to figure how to support that. 
+\end{DoxyDescription}
+
+\label{todo__todo000024}
+\hypertarget{todo__todo000024}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{classdate__sql__handler_add4b2f59b4d1da58336ffa0afcd97f03}{date\_\-sql\_\-handler::granularity\_\-form}(\$granularity) ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000023}
+\hypertarget{todo__todo000023}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{classdate__sql__handler_a3a8cc9c8c0f40515901e8a7bf6299439}{date\_\-sql\_\-handler::views\_\-formats}(\$granularity, \$type= 'sql') ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000025}
+\hypertarget{todo__todo000025}{}
+ 
+\begin{DoxyDescription}
+\item[File \hyperlink{date__tools_8module}{date\_\-tools.module} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000029}
+\hypertarget{todo__todo000029}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__tools_8wizard_8inc_ab7d7bbdde95f900b9b2a2eaaba98ec3f}{date\_\-tools\_\-wizard\_\-build} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000034}
+\hypertarget{todo__todo000034}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__tools_8wizard_8inc_ae162fcc781ba0aa2c1790ad4fa41cd4a}{date\_\-tools\_\-wizard\_\-create\_\-content\_\-type} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000031}
+\hypertarget{todo__todo000031}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__tools_8wizard_8inc_a7cb54be4dc0691f3869fb0d944c0a01a}{date\_\-tools\_\-wizard\_\-field\_\-types} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000026}
+\hypertarget{todo__todo000026}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__tools_8wizard_8inc_ac60f909f2de9f41bbe10fec1c67fa961}{date\_\-tools\_\-wizard\_\-form} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000028}
+\hypertarget{todo__todo000028}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__tools_8wizard_8inc_aa03335f62e6ddc5a937305158e624e14}{date\_\-tools\_\-wizard\_\-form\_\-submit} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000027}
+\hypertarget{todo__todo000027}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__tools_8wizard_8inc_abfe7527e089677e06b19dc331d5f1069}{date\_\-tools\_\-wizard\_\-form\_\-validate} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000030}
+\hypertarget{todo__todo000030}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__tools_8wizard_8inc_abbc536f1be44a6f130797f4961c5b5a0}{date\_\-tools\_\-wizard\_\-include} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000033}
+\hypertarget{todo__todo000033}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__tools_8wizard_8inc_a9e67a9593d1b2c9aeb64c1709961e4f7}{date\_\-tools\_\-wizard\_\-tz\_\-handling} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000032}
+\hypertarget{todo__todo000032}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{date__tools_8wizard_8inc_acfa16fe3944bb267117e0163a125679b}{date\_\-tools\_\-wizard\_\-widget\_\-types} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000020}
+\hypertarget{todo__todo000020}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{classDateObject_af83b95282617a2d2ec4dded415f84ed7}{DateObject::completeDate}() ]\$this-\/$>$completeDate does not actually exist? 
+\end{DoxyDescription}
+
+\label{todo__todo000064}
+\hypertarget{todo__todo000064}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{wysiwyg_8api_8php_ad3605f8cb948779e59e72c711a7ff843}{hook\_\-INCLUDE\_\-editor} ]Complete this documentation. 
+\end{DoxyDescription}
+
+\label{todo__todo000009}
+\hypertarget{todo__todo000009}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{group__hooks_gadade57abdccc892f62ed6bc7f089ca29}{hook\_\-page\_\-manager\_\-operations\_\-alter} ].
+
+
+
+. 
+
+. 
+\end{DoxyDescription}
+
+\label{todo__todo000012}
+\hypertarget{todo__todo000012}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{group__hooks_gaf5d4ce054cae22b3bdca52011c6e8fbc}{hook\_\-page\_\-manager\_\-variant\_\-operations\_\-alter} ].
+
+
+
+. 
+
+. 
+\end{DoxyDescription}
+
+\label{todo__todo000038}
+\hypertarget{todo__todo000038}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{libraries_8module_ae592b03bbea251cc7c008cd5ed10c861}{libraries\_\-info} ]Re-\/introduce support for include file plugin system -\/ either by copying Wysiwyg's code, or directly switching to CTools. 
+\end{DoxyDescription}
+
+\label{todo__todo000039}
+\hypertarget{todo__todo000039}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{mailsystem_8module_af55c024d345c05de91cddc64ca83b7f7}{mailsystem\_\-get\_\-mail\_\-theme} ]Add some kind of hook to let other modules alter this behavior. 
+\end{DoxyDescription}
+
+\label{todo__todo000016}
+\hypertarget{todo__todo000016}{}
+ 
+\begin{DoxyDescription}
+\item[File \hyperlink{profile__fields__pane_8tpl_8php}{profile\_\-fields\_\-pane.tpl.php} ]Need definition of what variables are available here. 
+\end{DoxyDescription}
+
+\label{todo__todo000043}
+\hypertarget{todo__todo000043}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{token__test_8module_ae5274fe6510bcb89e53bd7e66c7deb43}{token\_\-test\_\-date\_\-format\_\-types} ]Remove when \href{http://drupal.org/node/1173706}{\tt http://drupal.org/node/1173706} is fixed. 
+\end{DoxyDescription}
+
+\label{todo__todo000054}
+\hypertarget{todo__todo000054}{}
+ 
+\begin{DoxyDescription}
+\item[Group \hyperlink{group__views__access__plugins}{views\_\-access\_\-plugins} ].
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000055}
+\hypertarget{todo__todo000055}{}
+ 
+\begin{DoxyDescription}
+\item[Group \hyperlink{group__views__cache__plugins}{views\_\-cache\_\-plugins} ].
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000044}
+\hypertarget{todo__todo000044}{}
+ 
+\begin{DoxyDescription}
+\item[File \hyperlink{views__handler__argument_8inc}{views\_\-handler\_\-argument.inc} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000045}
+\hypertarget{todo__todo000045}{}
+ 
+\begin{DoxyDescription}
+\item[File \hyperlink{views__handler__field_8inc}{views\_\-handler\_\-field.inc} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000046}
+\hypertarget{todo__todo000046}{}
+ 
+\begin{DoxyDescription}
+\item[File \hyperlink{views__handler__filter_8inc}{views\_\-handler\_\-filter.inc} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000047}
+\hypertarget{todo__todo000047}{}
+ 
+\begin{DoxyDescription}
+\item[File \hyperlink{views__handler__sort_8inc}{views\_\-handler\_\-sort.inc} ]. 
+\end{DoxyDescription}
+
+\label{todo__todo000059}
+\hypertarget{todo__todo000059}{}
+ 
+\begin{DoxyDescription}
+\item[Group \hyperlink{group__views__lifetime}{views\_\-lifetime} ].
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000057}
+\hypertarget{todo__todo000057}{}
+ 
+\begin{DoxyDescription}
+\item[Group \hyperlink{group__views__localization__plugins}{views\_\-localization\_\-plugins} ].
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000052}
+\hypertarget{todo__todo000052}{}
+ 
+\begin{DoxyDescription}
+\item[Class \hyperlink{classviews__many__to__one__helper}{views\_\-many\_\-to\_\-one\_\-helper} ]This requires extensive documentation on how this class is to be used. For now, look at the arguments and filters that use it. Lots of stuff is just pass-\/through but there are definitely some interesting areas where they interact.
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000058}
+\hypertarget{todo__todo000058}{}
+ 
+\begin{DoxyDescription}
+\item[Group \hyperlink{group__views__pager__plugins}{views\_\-pager\_\-plugins} ].
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000056}
+\hypertarget{todo__todo000056}{}
+ 
+\begin{DoxyDescription}
+\item[Class \hyperlink{classviews__plugin__display__extender}{views\_\-plugin\_\-display\_\-extender} ].
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000053}
+\hypertarget{todo__todo000053}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{classviews__plugin__row__comment__rss_a62f1381c8f5def6a790685208be61dae}{views\_\-plugin\_\-row\_\-comment\_\-rss::options\_\-form\_\-summary\_\-options}() ]: Maybe provide a views\_\-plugin\_\-row\_\-rss\_\-entity and reuse this method in views\_\-plugin\_\-row\_\-comment$|$node\_\-rss.inc 
+\end{DoxyDescription}
+
+\label{todo__todo000060}
+\hypertarget{todo__todo000060}{}
+ 
+\begin{DoxyDescription}
+\item[Group \hyperlink{group__views__plugins}{views\_\-plugins} ]Finish this document.
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000050}
+\hypertarget{todo__todo000050}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{admin_8inc_a21c22d965161a3efb6b1f10570d3f9cd}{views\_\-ui\_\-add\_\-microweights} ]Submit a core patch to fix drupal\_\-render() to do this, so that all render arrays automatically preserve array insertion order, as forms do. 
+\end{DoxyDescription}
+
+\label{todo__todo000048}
+\hypertarget{todo__todo000048}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{admin_8inc_a3c7bbae87e55e6a531c04c8135bd1231}{views\_\-ui\_\-edit\_\-form} ]Remove as many prefix/suffix lines as possible. Use theme\_\-wrappers instead.
+
+
+
+Rename to views\_\-ui\_\-edit\_\-view\_\-form(). See that function for the \char`\"{}old\char`\"{} version.
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000051}
+\hypertarget{todo__todo000051}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{admin_8inc_a20b56808cc1c748e9a5d95b0753367b2}{views\_\-ui\_\-get\_\-display\_\-label} ]Remove this function once editing the display title is possible. 
+\end{DoxyDescription}
+
+\label{todo__todo000063}
+\hypertarget{todo__todo000063}{}
+ 
+\begin{DoxyDescription}
+\item[File \hyperlink{wysiwyg_8api_8php}{wysiwyg.api.php} ]Icon: Recommended size and type of image.
+
+
+\end{DoxyDescription}
+
+\label{todo__todo000065}
+\hypertarget{todo__todo000065}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{wysiwyg_8module_ab2d3844da95500eafb246c12e44593c3}{wysiwyg\_\-add\_\-plugin\_\-settings} ]Rewrite wysiwyg\_\-process\_\-form() to build a registry of effective profiles in use, so we can process plugins in multiple profiles in one shot and simplify this entire function. 
+\end{DoxyDescription}
+
+\label{todo__todo000066}
+\hypertarget{todo__todo000066}{}
+ 
+\begin{DoxyDescription}
+\item[Group \hyperlink{group__wysiwyg__api}{wysiwyg\_\-api} ]Forked from Panels; abstract into a separate API module that allows contrib modules to define supported include/plugin types. 
+\end{DoxyDescription}
+
+\label{todo__todo000061}
+\hypertarget{todo__todo000061}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{ckeditor_8inc_a333ec4086966407d90ad5ab846f44f94}{wysiwyg\_\-ckeditor\_\-settings\_\-parse\_\-styles} ]This should be a plugin setting, but Wysiwyg does not support plugin-\/specific settings yet. 
+\end{DoxyDescription}
+
+\label{todo__todo000062}
+\hypertarget{todo__todo000062}{}
+ 
+\begin{DoxyDescription}
+\item[Member \hyperlink{tinymce_8inc_a20ecffb8ac4c4df58bf2bcbada9dac13}{wysiwyg\_\-tinymce\_\-editor} ]wysiwyg\_\-$<$editor$>$\_\-alter() to add/inject optional libraries like gzip. 
+\end{DoxyDescription}
