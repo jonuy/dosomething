@@ -1,6 +1,0 @@
-.vagrant
-html/
-config/deploy_vars.yml
-docs
-doxy.sh
-Doxyfile
