@@ -110,12 +110,6 @@ function dosomething_sms_schema_alter(&$schema) {
 function dosomething_sms_uninstall() {
   db_drop_field('conductor_instance_pointer', 'timestamp');
   drupal_set_message('dosomething_sms: The "timestamp" field has been removed from the conductor_instance_pointer table.', 'status');
-
-  db_drop_table('sms_flow_game');
-  drupal_set_message('dosomething_sms: The "sms_flow_game" table has been dropped.');
-
-  db_drop_table('sms_flow_records');
-  drupal_set_message('dosomething_sms: The "sms_flow_records" table has been dropped.');
 }
 
 /**
