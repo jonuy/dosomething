@@ -63,7 +63,7 @@ function dosomething_sms_ctools_plugin_directory($owner, $plugin_type) {
 }
 
 /**
- * Impliments hook_cron().
+ * Implements hook_cron().
  */
 function dosomething_sms_cron() {
   dosomething_sms_cron_test();
@@ -72,7 +72,7 @@ function dosomething_sms_cron() {
 /**
  * hook_cron() functionality that can be called as a cron job or as a test.
  */
-function dosomething_sms_cron_test($manual_test=FALSE) {
+function dosomething_sms_cron_test($manual_test = FALSE) {
 
   $enabled = variable_get('dosomething_sms_cron_enable', FALSE);
 
@@ -255,7 +255,7 @@ function dosomething_sms_permission() {
 }
 
 /**
- * Impliments hook_theme().
+ * Implements hook_theme().
  */
 function dosomething_sms_theme($existing, $type, $theme, $path) {
   return array(
@@ -272,58 +272,65 @@ function dosomething_sms_theme($existing, $type, $theme, $path) {
  * campaign. Sends $variables (an array of custom variables, surprisingly) along
  * with those opt-ins. Apply this function in a form submit function.
  *
- * @param string $alpha_number
- *   The phone number of the alpha who invited the betas.
- * @param int $alpha_optin
- *   A campaign number on mobile commons that the ALPHA will be opted in to.
- * @param int $beta_optin
- *   A campaign on mobile commons that the BETA will be opted into.
- * @param array $beta_numbers
- *   Field keys that represent the phone numbers that the alpha invited through the form.
- *   ALTERNATELY: An array of valid phone numbers to opt in through the opt-in path.
- * @param array $form_values
- *   Form values from the submitted webform.
- * @param array $beta_variables
- *   Custom variables to send with the opt-in. Are only applied to the Beta profiles.
- *   These translate to {{variables}} on Mobile Commons.
- * @param int $beta_to_alpha_campaign
- *   (optional) A campaign that the beta (then Gamma, then whatever is after Gamma)
- *   should be opted into when they invite their friends.
- * @param string $type_override
- *   (optional) Set a custom value to the 'type' column. Particularly useful for
- *   cases where there is no appropriate NID or Drupal type for this invite. ex: the MLK day SMS game.
+ * @param array $variables
+ *   An associative array of variables.
+ *   string 'alpha_number'
+ *     The phone number of the alpha who invited the betas.
+ *   int 'alpha_optin'
+ *     A campaign number on mobile commons that the ALPHA will be opted in to.
+ *   int 'beta_optin'
+ *     A campaign on mobile commons that the BETA will be opted into.
+ *   array 'beta_numbers'
+ *     Field keys that represent the phone numbers that the alpha invited through the form.
+ *     ALTERNATELY: An array of valid phone numbers to opt in through the opt-in path.
+ *   array 'form_values'
+ *     Form values from the submitted webform.
+ *   array 'beta_variables'
+ *     Custom variables to send with the opt-in. Are only applied to the Beta profiles.
+ *     These translate to {{variables}} on Mobile Commons.
+ *   int 'beta_to_alpha_campaign'
+ *     (optional) A campaign that the beta (then Gamma, then whatever is after Gamma)
+ *     should be opted into when they invite their friends.
+ *   string 'type_override'
+ *     (optional) Set a custom value to the 'type' column. Particularly useful for
+ *     cases where there is no appropriate NID or Drupal type for this invite.
  *
- * Example (found in dosomething_clubs_preserve_shortform_email() in dosomething_clubs.module):
+ * Example:
  * @code
- * dosomething_sms_flow_start(
- *   '555-555-5555', 128441, 128441, array('field_webform_mobile'),
- *   $form_state['values'],
- *   array(
+ * $variables = array(
+ *   'alpha_number' => '555-555-5555',
+ *   'alpha_optin' => 123456,
+ *   'beta_optin' => 123456,
+ *   'beta_numbers' => array('555-555-5555'),
+ *   'form_values' => $form_state['values'],
+ *   'beta_variables' => array(
  *     'first_name' => 'Mike',
- *     'club_name' => "Mike's cool DoSomething.org Club."
- *   )
+ *     'club_name' => 'Mike\'s DS Club',
+ *   ),
  * );
+ *
+ * dosomething_sms_flow_start($variables);
  * @endcode
  */
-function dosomething_sms_flow_start($alpha_number, $alpha_optin, $beta_optin, $beta_numbers, $form_values, $beta_variables, $beta_to_alpha_campaign = FALSE, $type_override = NULL) {
+function dosomething_sms_flow_start($variables = array()) {
 
   $nid = 0;
-  if (!empty($form_values['details']['nid'])) {
-    $nid = $form_values['details']['nid'];
+  if (!empty($variables['form_values']['details']['nid'])) {
+    $nid = $variables['form_values']['details']['nid'];
   }
 
-  if (empty($type_override)) {
+  if (empty($variables['type_override'])) {
     $n = node_load($nid);
     $type = $n->type;
   }
   else {
-    $type = $type_override;
+    $type = $variables['type_override'];
   }
 
-  $alpha_number = preg_replace('#[^0-9]#', '', $alpha_number);
+  $alpha_number = preg_replace('#[^0-9]#', '', $variables['alpha_number']);
 
   $valid_beta_numbers = array();
-  foreach ($beta_numbers AS $key => $field) {
+  foreach ($variables['beta_numbers'] as $key => $field) {
     $beta_number = '';
 
     // Generic $form_state['values']['submitted_tree']
@@ -356,13 +363,13 @@ function dosomething_sms_flow_start($alpha_number, $alpha_optin, $beta_optin, $b
       drupal_write_record('sms_flow_records', $record);
 
       // Add beta number to args to send in the update request
-      if (!is_array($beta_variables)) {
-        $beta_variables = array();
+      if (!is_array($variables['beta_variables'])) {
+        $variables['beta_variables'] = array();
       }
-      $beta_variables['phone_number'] = $beta_number;
+      $variables['beta_variables']['phone_number'] = $beta_number;
 
       // Create and update the beta's Mobile Commons profile
-      mobilecommons_request('profiles_update', $beta_variables);
+      mobilecommons_request('profiles_update', $variables['beta_variables']);
     }
   }
 
@@ -370,9 +377,9 @@ function dosomething_sms_flow_start($alpha_number, $alpha_optin, $beta_optin, $b
   if (module_exists('dosomething_subscribe_mobilecommons')) {
     dosomething_subscribe_mobilecommons_referral_signup(
       $alpha_number,
-      (!$beta_to_alpha_campaign ? $alpha_optin : $beta_to_alpha_campaign),
+      (!$variables['beta_to_alpha_campaign'] ? $variables['alpha_optin'] : $variables['beta_to_alpha_campaign']),
       $valid_beta_numbers,
-      $beta_optin
+      $variables['beta_optin']
     );
   }
 }
@@ -437,18 +444,10 @@ function dosomething_sms_alpha_received_message($alpha, $nid, $type) {
       COUNT(*) AS sent
     FROM sms_flow_records
     WHERE `accepted_invite` = 1
-      AND REPLACE(
-        REPLACE(
-          REPLACE(
-            REPLACE(
-              `alpha`, ')', ''
-            ),
-          '(', ''),
-        ' ', ''),
-      '-', '') = '" . $alpha . "'
+      AND `alpha` = :alpha
       AND `type` = :type
       AND `nid` = :nid
-  ", array(':type' => $type, ':nid' => $nid));
+  ", array(':alpha' => $alpha, ':type' => $type, ':nid' => $nid));
 
   // Get just what we need...
   $r = reset($select->fetchAll());
