@@ -28,10 +28,16 @@ function campaign_form($form, &$form_state, $campaign, $op = 'edit') {
     '#description' => variable_get($desc_prefix . 'cta_text', ''),
     '#required' => TRUE,
   );
+  $form['url_internal_confirm_doc'] = array(
+    '#title' => t('Internal Confirmation Doc URL'),
+    '#type' => 'textfield',
+    '#default_value' => isset($campaign->url_internal_confirm_doc) ? $campaign->url_internal_confirm_doc : '',
+    '#description' => variable_get($desc_prefix . 'url_internal_confirm_doc', ''),
+  );
 
   // Timing:
   $form['timing'] = array(
-    '#type' => 'fieldset', 
+    '#type' => 'fieldset',
     '#title' => t('Timing'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
@@ -70,6 +76,70 @@ function campaign_form($form, &$form_state, $campaign, $op = 'edit') {
     '#attributes' =>array('placeholder' => t('MM/DD')),
     '#description' => variable_get($desc_prefix . 'season_low_end', ''),
   );
+
+  // Know It:
+  $form['know'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Know It'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#description' => variable_get($desc_prefix . 'know', ''),
+  );
+  $form['know']['stat_problem'] = array(
+    '#title' => t('Statement on the Problem'),
+    '#type' => 'textfield',
+    '#default_value' => isset($campaign->stat_problem) ? $campaign->stat_problem : '',
+    '#description' => variable_get($desc_prefix . 'stat_problem', ''),
+  );
+  $form['know']['stat_problem_source'] = array(
+    '#title' => t('Source for Problem Statement'),
+    '#type' => 'textfield',
+    '#default_value' => isset($campaign->stat_problem_source) ? $campaign->stat_problem_source : '',
+    '#description' => variable_get($desc_prefix . 'stat_problem_source', ''),
+  );
+  $form['know']['stat_solution'] = array(
+    '#title' => t('Statement on the Solution'),
+    '#type' => 'textfield',
+    '#default_value' => isset($campaign->stat_solution) ? $campaign->stat_solution : '',
+    '#description' => variable_get($desc_prefix . 'stat_solution', ''),
+  );
+  $form['know']['stat_solution_source'] = array(
+    '#title' => t('Source for Solution Statement'),
+    '#type' => 'textfield',
+    '#default_value' => isset($campaign->stat_solution_source) ? $campaign->stat_solution_source : '',
+    '#description' => variable_get($desc_prefix . 'stat_solution_source', ''),
+  );
+  $form['know']['url_psa'] = array(
+    '#title' => t('PSA'),
+    '#type' => 'textfield',
+    '#default_value' => isset($campaign->url_psa) ? $campaign->url_psa : '',
+    '#description' => variable_get($desc_prefix . 'url_psa', ''),
+  );
+
+  // Prep It:
+  $form['prep'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Prep It'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#description' => variable_get($desc_prefix . 'prep', ''),
+  );
+  $form['prep']['prep_intro'] = array(
+    '#title' => t('Campaign Specific Starter Statement'),
+    '#type' => 'textfield',
+    '#default_value' => isset($campaign->prep_intro) ? $campaign->prep_intro : '',
+    '#description' => variable_get($desc_prefix . 'prep_intro', ''),
+  );
+  $form['prep']['time_and_place'] = array(
+    '#title' => t('Time and Place'),
+    '#type' => 'textfield',
+    '#default_value' => isset($campaign->time_and_place) ? $campaign->time_and_place : '',
+    '#description' => variable_get($desc_prefix . 'time_and_place', ''),
+  );
+
+  field_attach_form('campaign', $campaign, $form, $form_state);
+
+  // Form actions:
   $form['actions'] = array(
     '#type' => 'actions',
     'submit' => array(
@@ -100,12 +170,22 @@ function dosomething_campaign_admin_settings_form($form, &$form_state) {
   // List all the campaign_form form element names for which we are storing help text for:
   $elements = array(
     'cta_text',
-    'season_high_low',
+    'know',
+    'prep',
+    'prep_intro',
     'season_high_start',
+    'season_high_end',
     'season_low_start',
     'season_low_end',
+    'stat_problem',
+    'stat_problem_source',
+    'stat_solution',
+    'stat_solution_source',
     'timing',
+    'time_and_place',
     'title',
+    'url_internal_confirm_doc',
+    'url_psa',
   );
   // For each element:
   foreach ($elements as $field_name) {
